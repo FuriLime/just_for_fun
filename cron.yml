@@ -1,0 +1,33 @@
+# the name
+TheName:
+
+    # required type (cron|worker)
+    type: cron
+
+    # required path to script, relative to home
+    script: htdocs/vendor/foo/bin/worker.php
+
+    # optional args
+    args:
+        - 'foo'
+        - '--bar'
+
+    # optional environment variables
+    env:
+        FOO: bar
+        BAZ: zoing
+
+    # optional worker startup settings
+    startup:
+        expect:  I have started
+        timeout: 10
+
+    # optional worker shutdown settings
+    shutdown:
+        signal:  SIGUSR1
+        timeout: 10
+
+    # required cron interval (if type cron)
+    interval:
+        minute: 0
+        hour:   4
