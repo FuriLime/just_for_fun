@@ -56,10 +56,10 @@ return [
 
        'mysql' => [
            'driver'    => 'mysql',
-           'host'      => env('DB_HOST', 'localhost'),
-           'database'  => env('DB_DATABASE', 'event_db'),
-           'username'  => env('DB_USERNAME', 'event_us'),
-           'password'  => env('DB_PASSWORD', 'WSRxmym7cwj3LQzq'),
+           'host'      => 'localhost',
+           'database'  => 'event_db',
+           'username'  => 'event_us',
+           'password'  => 'WSRxmym7cwj3LQzq',
            'charset'   => 'utf8',
            'collation' => 'utf8_unicode_ci',
            'prefix'    => '',
