@@ -72,7 +72,7 @@
                 Billing & Invoices
             </a>
         </li>
-        <li {!! (Request::is('admin/bonuses_and_free_stuff/index') ? 'class="active" id="active"' : '') !!}>
+        <li {!! (Request::is('admin/bonuses_and_free_stuff') ? 'class="active" id="active"' : '') !!}>
             <a href="{{ URL::to('admin/bonuses_and_free_stuff') }}">
                 <i class="fa fa-angle-double-right"></i>
                 Bonuses & Free Stuff

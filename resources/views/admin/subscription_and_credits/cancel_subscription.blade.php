@@ -1,4 +1,4 @@
-@extends('user.layouts.edit-default')
+@extends('admin.layouts.edit-default')
 @section('content')
         <div class="cancel-block">
             <div class="row">

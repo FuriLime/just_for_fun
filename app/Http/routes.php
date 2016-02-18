@@ -72,9 +72,12 @@ Route::group(array('prefix' => 'admin'), function () {
                 Route::get('{userId}/confirm-delete', array('as' => 'confirm-delete/user', 'uses' => 'UsersController@getModalDelete'));
                 Route::get('{userId}/restore', array('as' => 'restore/user', 'uses' => 'UsersController@getRestore'));
                 Route::get('{userId}', array('as' => 'users.show', 'uses' => 'UsersController@show'));
+                Route::get('index', 'UsersController@getBillingAndInvoices');
             });
             Route::get('deleted_users', array('as' => 'deleted_users', 'before' => 'Sentinel', 'uses' => 'UsersController@getDeletedUsers'));
-
+    Route::get('billing_and_invoices', 'UsersController@getBillingAndInvoices');
+    Route::get('subscription_and_credits','UsersController@getSubscriptionAndCredits');
+    Route::get('bonuses_and_free_staff','UsersController@getBonusesAndFreeStuff');
 
 	# Group Management
     Route::group(array('prefix' => 'groups','before' => 'Sentinel'), function () {

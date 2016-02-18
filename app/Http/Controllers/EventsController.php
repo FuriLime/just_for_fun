@@ -170,7 +170,6 @@ class EventsController extends Controller {
 		// $event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
 		$store_info['start'] = $event_start_zero->format('Y-m-d H:i');
 		$store_info['finish'] =$event_finish_zero->format('Y-m-d H:i');
-		$store_info['timezone'] ='UTC';
 
 		// Is the user logged in?
 		if (Sentinel::check()) {
@@ -279,7 +278,7 @@ class EventsController extends Controller {
 		// for bootstrap-datepicker
 		$event['start'] = date('Y/m/d H:i', strtotime($event['start']));
 		$event['finish'] = date('Y/m/d H:i', strtotime($event['finish']));
-        $event['timezone'] ='UTC';
+        $event['timezone'] =$event['timezone'];
 		return view('events.edit', compact('event'));
 	}
 
@@ -307,7 +306,7 @@ class EventsController extends Controller {
 		$store_info = $request->all();
 		$event['start'] = str_replace('/','-',$store_info['start']);
 		$event['finish'] = str_replace('/','-',$store_info['finish']);
-        $event['timezone'] ='UTC';
+        $event['timezone'] =$event['timezone'];
 		$event->update($request->all());
 
 		// Is the user logged in?
