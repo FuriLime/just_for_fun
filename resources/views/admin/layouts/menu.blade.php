@@ -63,19 +63,19 @@
         <li {!! (Request::is('admin/subscription_and_credits') ? 'class="active" id="active"' : '') !!}>
             <a href="{{ URL::to('admin/subscription_and_credits') }}">
                 <i class="fa fa-angle-double-right"></i>
-                Subscription & Credits 
+                Subscription & Credits
             </a>
         </li>
         <li {!! (Request::is('admin/billing_and_invoices') ? 'class="active" id="active"' : '') !!}>
             <a href="{{ URL::to('admin/billing_and_invoices') }}">
                 <i class="fa fa-angle-double-right"></i>
-                Billing & Invoices 
+                Billing & Invoices
             </a>
         </li>
         <li {!! (Request::is('admin/bonuses_and_free_stuff/index') ? 'class="active" id="active"' : '') !!}>
             <a href="{{ URL::to('admin/bonuses_and_free_stuff') }}">
                 <i class="fa fa-angle-double-right"></i>
-                Bonuses & Free Stuff 
+                Bonuses & Free Stuff
             </a>
         </li>
     </ul>
