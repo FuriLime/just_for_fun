@@ -45,7 +45,12 @@ Route::group(array('prefix' => 'admin'), function () {
 	//     return View::make('admin/register2');
 	// });
 	// Route::post('register2',array('as' => 'register2','uses' => 'AuthController@postRegister2'));
-
+//    Route::get('{userId}', array('as' => 'subscripltion_and_credits.index', 'uses' => 'UsersController@getSubscriptionAndCredits'));
+//    Route::get('index', 'UsersController@getBillingAndInvoices');
+//    Route::get('index','UsersController@getSubscriptionAndCredits');
+//    Route::get('{userId}', array('as' => 'bonuses_and_free_staff.index', 'uses' => 'UsersController@getBonusesAndFreeStuff'));
+//
+//    Route::get('/', array('as' => 'billing_and_invoices.index', 'uses' => 'UsersController@getBillingAndInvoices'));
 
     # Logout
 	Route::get('logout', array('as' => 'logout','uses' => 'AuthController@getLogout'));
@@ -55,7 +60,6 @@ Route::group(array('prefix' => 'admin'), function () {
 
     # Dashboard / Index
 	Route::get('/', array('as' => 'dashboard','uses' => 'JoshController@showHome'));
-
 
             # User Management
             Route::group(array('prefix' => 'users', 'before' => 'Sentinel'), function () {
@@ -70,6 +74,8 @@ Route::group(array('prefix' => 'admin'), function () {
                 Route::get('{userId}', array('as' => 'users.show', 'uses' => 'UsersController@show'));
             });
             Route::get('deleted_users', array('as' => 'deleted_users', 'before' => 'Sentinel', 'uses' => 'UsersController@getDeletedUsers'));
+
+
 	# Group Management
     Route::group(array('prefix' => 'groups','before' => 'Sentinel'), function () {
         Route::get('/', array('as' => 'groups', 'uses' => 'GroupsController@getIndex'));
@@ -83,6 +89,8 @@ Route::group(array('prefix' => 'admin'), function () {
 		Route::get('any_user', 'UsersController@getUserAccess');
 		Route::get('admin_only', 'UsersController@getAdminOnlyAccess');
     });
+
+
     /*routes for blog*/
 	Route::group(array('prefix' => 'blog','before' => 'Sentinel'), function () {
 		Route::get('/', array('as' => 'blogs', 'uses' => 'BlogController@getIndex'));

@@ -182,21 +182,21 @@ class AuthController extends JoshController
             }
         }
 
-//        $user = Sentinel::findById($userId);
-//        $activation = Activation::create($user);
-//
-//        if (Activation::complete($user, $activation->code))
-//        {
-//            // Activation was successful
-//            // Redirect to the login page
-//            return Redirect::route('dashboard')->with('success', Lang::get('auth/message.activate.success'));
-//        }
-//        else
-//        {
-//            // Activation not found or not completed.
-//            $error = Lang::get('auth/message.activate.error');
-//            return Redirect::route('signin')->with('error', $error);
-//        }
+        //$user = Sentinel::findById($userId);
+        /*$activation = Activation::create($user);
+
+        if (Activation::complete($user, $activation->code))
+        {
+            // Activation was successful
+            // Redirect to the login page
+            return Redirect::route('dashboard')->with('success', Lang::get('auth/message.activate.success'));
+        }
+        else
+        {
+            // Activation not found or not completed.
+            $error = Lang::get('auth/message.activate.error');
+            return Redirect::route('signin')->with('error', $error);
+        }*/
 
     }
 

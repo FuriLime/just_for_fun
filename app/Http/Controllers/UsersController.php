@@ -421,6 +421,7 @@ class UsersController extends JoshController
 
         // Show the page
         return View('admin/users/edit', compact('user', 'roles', 'userRoles','countries','status'));
+//        return View('admin/layouts/edit', compact('user', 'roles', 'userRoles','countries','status'));
     }
 
     /**
@@ -472,7 +473,7 @@ class UsersController extends JoshController
             $user->state   = Input::get('state');
             $user->city   = Input::get('city');
             $user->address   = Input::get('address');
-            $user->timezone   = Input::get('timezone');
+            $user->timezome   = Input::get('timezone');
 
             // Do we want to update the user password?
             if ($password) {
@@ -526,38 +527,38 @@ class UsersController extends JoshController
             }
 
             // Activate / De-activate user
-//            $status = $activation = Activation::completed($user);
-//            if(Input::get('activate') != $status)
-//            {
-//                if(Input::get('activate'))
-//                {
-//                    $activation = Activation::exists($user);
-//                    if($activation)
-//                    {
-//                        Activation::complete($user, $activation->code);
-//                    }
-//                }
-//                else
-//                {
-//                    //remove existing activation record
-//                    Activation::remove($user);
-//                    //add new record
-//                    Activation::create($user);
-//
-//                    //send activation mail
-//                    $data = array(
-//                        'user'          => $user,
-//                        'activationUrl' => URL::route('activate', $user->id, Activation::exists($user)->code),
-//                    );
-//
-//                    // Send the activation code through email
-//                    Mail::send('emails.register-activate', $data, function ($m) use ($user) {
-//                        $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-//                        $m->subject('Welcome ' . $user->first_name);
-//                    });
-//
-//                }
-//            }
+            $status = $activation = Activation::completed($user);
+            if(Input::get('activate') != $status)
+            {
+                if(Input::get('activate'))
+                {
+                    $activation = Activation::exists($user);
+                    if($activation)
+                    {
+                        Activation::complete($user, $activation->code);
+                    }
+                }
+                else
+                {
+                    //remove existing activation record
+                    Activation::remove($user);
+                    //add new record
+                    Activation::create($user);
+
+                    //send activation mail
+                    $data = array(
+                        'user'          => $user,
+                        'activationUrl' => URL::route('activate', $user->id, Activation::exists($user)->code),
+                    );
+
+                    // Send the activation code through email
+                    Mail::send('emails.register-activate', $data, function ($m) use ($user) {
+                        $m->to($user->email, $user->first_name . ' ' . $user->last_name);
+                        $m->subject('Welcome ' . $user->first_name);
+                    });
+
+                }
+            }
 
             // Was the user updated?
             if ($user->save()) {
@@ -737,6 +738,7 @@ class UsersController extends JoshController
         }
         else {
             $userAccess = "others";
+
         }
 
         // Show the page
@@ -764,32 +766,32 @@ class UsersController extends JoshController
 
     public function getSubscriptionAndCredits()
     {
-        return view('user.subscription_and_credits.index');
+        return View('admin.subscription_and_credits.index');
     }
 
     public function getBillingAndInvoices()
     {
-        return view('user.billing_and_invoices.index');
+        return view('admin/billing_and_invoices/index');
     }
 
     public function getBonusesAndFreeStuff()
     {
-        return view('user.bonuses_and_free_staff.index');
+        return view('admin.bonuses_and_free_staff.index');
     }
 
     public function getCancelSubscription()
     {
-        return view('user.subscription_and_credits.cancel_subscription');
+        return view('admin.subscription_and_credits.cancel_subscription');
     }
 
     public function getEditBillingDetails()
     {
-        return view('user.billing_and_invoices.edit_billing_details');
+        return view('admin.billing_and_invoices.edit_billing_details');
     }
 
     public function geteditPaymentMethod()
     {
-        return view('user.billing_and_invoices.edit_payment_method');
+        return view('admin.billing_and_invoices.edit_payment_method');
     }
 
 

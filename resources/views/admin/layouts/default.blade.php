@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>
         @section('title')
-        | {{ Sentinel::getUser()->first_name }} {{ Sentinel::getUser()->last_name }}
+        {{Sentinel::getUser()->first_name}}
         @show
     </title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
@@ -31,7 +31,7 @@
 
 <body class="skin-josh">
     <header class="header">
-        <a href="{{ route('member_home') }}" class="logo">
+        <a href="{{ route('dashboard') }}" class="logo">
             <img src="{{ asset('assets/img/logo.png') }}" alt="logo">
         </a>
         <nav class="navbar navbar-static-top" role="navigation">
@@ -71,7 +71,7 @@
                             </li>
                             <!-- Menu Body -->
                             <li>
-                                <a href="{{ URL::route('users.show',Sentinel::getUser()->id) }}">
+                                <a href="#">
                                     <i class="livicon" data-name="user" data-s="18"></i>
                                     My Profile
                                 </a>
@@ -86,13 +86,13 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="{{ URL::to('admin/lockscreen') }}">
+                                    <a href="{{ URL::to('user/lockscreen') }}">
                                         <i class="livicon" data-name="lock" data-s="18"></i>
                                         Lock
                                     </a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="{{ URL::to('admin/logout') }}">
+                                    <a href="{{ URL::to('user/logout') }}">
                                         <i class="livicon" data-name="sign-out" data-s="18"></i>
                                         Logout
                                     </a>
@@ -111,130 +111,92 @@
                 <div class="page-sidebar  sidebar-nav">
                     <!-- BEGIN SIDEBAR MENU -->
                     <ul id="menu" class="page-sidebar-menu">
-                        {{--<li {!! (Request::is('admin') ? 'class="active"' : '') !!}>--}}
-                            {{--<a href="{{ route('dashboard') }}">--}}
-                                {{--<i class="livicon" data-name="home" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>--}}
-                                {{--<span class="title">Dashboard</span>--}}
-                            {{--</a>--}}
-                        {{--</li>--}}
-
-                        {{--@if (Sentinel::check())--}}
-                        {{--@if (Sentinel::inRole('admin'))--}}
-                        <li {!! (Request::is('admin/users') || Request::is('admin/users/create') || Request::is('admin/users/*') || Request::is('admin/deleted_users') ? 'class="active"' : '') !!}>
+                        <li {!! (Request::is('user') ? 'class="active"' : '') !!}>
+                            <a href="{{ route('dashboard') }}">
+                                <i class="livicon" data-name="home" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>
+                                <span class="title">Dashboard</span>
+                            </a>
+                        </li>
+                        <li {!! (Request::is('user/users') || Request::is('user/users/create') || Request::is('user/users/*') || Request::is('user/deleted_users') ? 'class="active"' : '') !!}>
                             <a href="#">
                                 <i class="livicon" data-name="user" data-size="18" data-c="#6CC66C" data-hc="#6CC66C" data-loop="true"></i>
                                 <span class="title">You</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
-                                {{--<li {!! (Request::is('admin/users') ? 'class="active" id="active"' : '') !!}>--}}
-                                <li>
-                                    <a href="{{ URL::to('admin/users') }}">
+                               <!--  <li {!! (Request::is('user/users') ? 'class="active" id="active"' : '') !!}>
+                                    <a href="{{ URL::to('user/users') }}">
                                         <i class="fa fa-angle-double-right"></i>
-                                        Favorite Events
+                                        Users
                                     </a>
-                                </li>
-                                {{--<li {!! (Request::is('admin/users/create') ? 'class="active" id="active"' : '') !!}>--}}
-                                    {{--<a href="{{ URL::to('admin/users/create') }}">--}}
-                                        {{--<i class="fa fa-angle-double-right"></i>--}}
-                                        {{--Personal Profile--}}
-                                    {{--</a>--}}
-                                {{--</li>--}}
-                                <li {!! ((Request::is('admin/users/*')) && !(Request::is('admin/users/create')) ? 'class="active" id="active"' : '') !!}>
+                                </li> -->
+                                <!-- <li {!! (Request::is('user/users/create') ? 'class="active" id="active"' : '') !!}>
+                                    <a href="{{ URL::to('user/users/create') }}">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        Add New User
+                                    </a>
+                                </li> -->
+
+                                 <li>
                                     <a href="{{ URL::route('users.show',Sentinel::getUser()->id) }}">
                                         <i class="fa fa-angle-double-right"></i>
-                                        Personal Profile
+                                        Favorite events
                                     </a>
                                 </li>
-                                <li>
-                                {{--<li {!! (Request::is('admin/deleted_users') ? 'class="active" id="active"' : '') !!}>--}}
-                                    <a href="{{ URL::to('admin/deleted_users') }}">
+                                <li {!! ((Request::is('user/users/*')) && !(Request::is('user/users/create')) ? 'class="active" id="active"' : '') !!}>
+                                    <a href="{{ URL::route('users.show',Sentinel::getUser()->id) }}">
                                         <i class="fa fa-angle-double-right"></i>
-                                        Notisfactions
+                                        Personal profile
+                                    </a>
+                                </li>
+                                <li >
+                                    <a href="{{ URL::to('user/deleted_users') }}">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        Notisfaction
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        {{--@endif--}}
-                        {{--@endif--}}
-
-                        <li {!! (Request::is('admin/groups') || Request::is('admin/groups/create') || Request::is('admin/groups/*') ? 'class="active"' : '') !!}>
+                        <li {!! (Request::is('user/groups') || Request::is('user/groups/create') || Request::is('user/groups/*') ? 'class="active"' : '') !!}>
                             <a href="#">
                                 <i class="livicon" data-name="users" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>
                                 <span class="title">Groups</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
-                                <li {!! (Request::is('admin/groups') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('admin/groups') }}">
+                                <li {!! (Request::is('user/groups') ? 'class="active" id="active"' : '') !!}>
+                                    <a href="{{ URL::to('user/groups') }}">
                                         <i class="fa fa-angle-double-right"></i>
                                         Groups
                                     </a>
                                 </li>
-                                <li {!! (Request::is('admin/groups/create') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('admin/groups/create') }}">
+                                <li {!! (Request::is('user/groups/create') ? 'class="active" id="active"' : '') !!}>
+                                    <a href="{{ URL::to('user/groups/create') }}">
                                         <i class="fa fa-angle-double-right"></i>
                                         Add New Group
                                     </a>
                                 </li>
-                                <li {!! (Request::is('admin/groups/any_user') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('admin/groups/any_user') }}">
+                                <li {!! (Request::is('user/groups/any_user') ? 'class="active" id="active"' : '') !!}>
+                                    <a href="{{ URL::to('user/groups/any_user') }}">
                                         <i class="fa fa-angle-double-right"></i>
                                         Any User Access
                                     </a>
                                 </li>
-                                <!-- @if (Sentinel::getUser()->inRole('admin')) -->
-                                    <li {!! (Request::is('admin/groups/admin_only') ? 'class="active" id="active"' : '') !!}>
-                                        <a href="{{ URL::to('admin/groups/admin_only') }}">
+                                <!-- @if (Sentinel::getUser()->inRole('user')) -->
+                                    <li {!! (Request::is('user/groups/user_only') ? 'class="active" id="active"' : '') !!}>
+                                        <a href="{{ URL::to('user/groups/user_only') }}">
                                             <i class="fa fa-angle-double-right"></i>
-                                            Admin Only Access
+                                            user Only Access
                                         </a>
                                     </li>
                                 <!-- @endif -->
                             </ul>
                         </li>
-
                         <!-- Menus generated by CRUD generator -->
-                        @include('admin/layouts/menu')
-                        @if (Sentinel::check())
-                        @if (Sentinel::inRole('admin'))
-                        <li {!! (Request::is('admin/users') || Request::is('admin/users/create') || Request::is('admin/users/*') || Request::is('admin/deleted_users') ? 'class="active"' : '') !!}>
-                            <a href="#">
-                                <i class="livicon" data-name="user" data-size="18" data-c="#6CC66C" data-hc="#6CC66C" data-loop="true"></i>
-                                <span class="title">Site Administration</span>
-                                <span class="fa arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li {!! (Request::is('admin/users') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('admin/users') }}">
-                                        <i class="fa fa-angle-double-right"></i>
-                                        Users
-                                    </a>
-                                </li>
-                                <li {!! (Request::is('admin/users/create') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('admin/users/create') }}">
-                                        <i class="fa fa-angle-double-right"></i>
-                                        Add New User
-                                    </a>
-                                </li>
-                                <li {!! ((Request::is('admin/users/*')) && !(Request::is('admin/users/create')) ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::route('users.show',Sentinel::getUser()->id) }}">
-                                        <i class="fa fa-angle-double-right"></i>
-                                        View Profile
-                                    </a>
-                                </li>
-                                <li {!! (Request::is('admin/deleted_users') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('admin/deleted_users') }}">
-                                        <i class="fa fa-angle-double-right"></i>
-                                        Deleted Users
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        @endif
-                        @endif
+                        @include('user/layouts/menu')
                     </ul>
                     <!-- END SIDEBAR MENU -->
+
                 </div>
             </section>
             <div class="permament-links">
@@ -259,7 +221,7 @@
     </a>
     <!-- global js -->
     <script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
-    @if (Request::is('admin/form_builder2') || Request::is('admin/gridmanager') || Request::is('admin/portlet_draggable') || Request::is('admin/calendar'))
+    @if (Request::is('user/form_builder2') || Request::is('user/gridmanager') || Request::is('user/portlet_draggable') || Request::is('user/calendar'))
         <script src="{{ asset('assets/vendors/form_builder1/js/jquery.ui.min.js') }}"></script>
     @endif
     <script src="{{ asset('assets/js/bootstrap.min.js') }}" type="text/javascript"></script>

@@ -8,13 +8,6 @@ Route::group(array('prefix' => 'admin'), function () {Route::resource('events', 
 	Route::get('events/{id}/confirm-delete', array('as' => 'admin.events.confirm-delete', 'uses' => 'EventsController@getModalDelete'));
 });
 
-
-Route::group(array('prefix' => 'user'), function () {Route::resource('events', 'EventsController');
-	Route::get('events/{id}/delete', array('as' => 'user.events.delete', 'uses' => 'EventsController@getDelete'));
-	Route::get('events/{id}/confirm-delete', array('as' => 'user.events.confirm-delete', 'uses' => 'EventsController@getModalDelete'));
-});
-
-
 Route::group(array('prefix' => 'admin'), function () {Route::resource('usergroups', 'UsergroupsController');
 	Route::get('usergroups/{id}/delete', array('as' => 'admin.usergroups.delete', 'uses' => 'UsergroupsController@getDelete'));
 	Route::get('usergroups/{id}/confirm-delete', array('as' => 'admin.usergroups.confirm-delete', 'uses' => 'UsergroupsController@getModalDelete'));
@@ -24,11 +17,4 @@ Route::group(array('prefix' => 'admin'), function () {
 	Route::resource('eventcategories', 'EventcategoriesController');
 	Route::get('eventcategories/{id}/delete', array('as' => 'admin.eventcategories.delete', 'uses' => 'EventcategoriesController@getDelete'));
 	Route::get('eventcategories/{id}/confirm-delete', array('as' => 'admin.eventcategories.confirm-delete', 'uses' => 'EventcategoriesController@getModalDelete'));
-});
-
-
-Route::group(array('prefix' => 'user'), function () {
-	Route::resource('eventcategories', 'EventcategoriesController');
-	Route::get('eventcategories/{id}/delete', array('as' => 'user.eventcategories.delete', 'uses' => 'EventcategoriesController@getDelete'));
-	Route::get('eventcategories/{id}/confirm-delete', array('as' => 'user.eventcategories.confirm-delete', 'uses' => 'EventcategoriesController@getModalDelete'));
 });

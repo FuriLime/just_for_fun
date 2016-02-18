@@ -220,8 +220,8 @@ Edit User
                                 
                                 <!-- fourth tab -->
 
-                                @if(Sentinel::check())
-                                    @if(Sentinel::inRole('admin'))
+                                {{--@if(Sentinel::check())--}}
+                                    {{--@if(Sentinel::inRole('admin'))--}}
                                 <h1>User Group</h1>
 
                                 <section>
@@ -249,8 +249,8 @@ Edit User
                                     
                                 
                                 </section>
-                            @endif
-                                    @endif
+                            {{--@endif--}}
+                                    {{--@endif--}}
                             </form>
                             <!-- END FORM WIZARD WITH VALIDATION --> 
                         </div>
