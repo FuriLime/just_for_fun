@@ -78,18 +78,18 @@ return [
         //     'strict'    => false,
         // ],
 
-        'mysql-tunnel' => [
-            'driver'    => 'mysql',
-            'host'      => '127.0.0.1',
-            'port'      => '13306',
-            'database'  => 'ef-test',
-            'username'  => 'ef-test',
-            'password'  => env('DB_PASSWORD', 'qfiZcVlcYTTN9MXy.DJiP6GD'),
-            'charset'   => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
-            'strict'    => false,
-        ],
+        // 'mysql-tunnel' => [
+        //     'driver'    => 'mysql',
+        //     'host'      => '127.0.0.1',
+        //     'port'      => '13306',
+        //     'database'  => 'ef-test',
+        //     'username'  => 'ef-test',
+        //     'password'  => env('DB_PASSWORD', 'qfiZcVlcYTTN9MXy.DJiP6GD'),
+        //     'charset'   => 'utf8',
+        //     'collation' => 'utf8_unicode_ci',
+        //     'prefix'    => '',
+        //     'strict'    => false,
+        // ],
 
         'pgsql' => [
             'driver'   => 'pgsql',
