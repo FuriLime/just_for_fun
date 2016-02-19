@@ -58,12 +58,13 @@ class EventsController extends Controller {
 			$events = Event::latest()->get();
 					foreach ($events as $event) {
 						$date = new \DateTime($event->start, new \DateTimeZone('UTC'));
-						$ip = $_SERVER["REMOTE_ADDR"];
+//						$ip = $_SERVER["REMOTE_ADDR"];
 //						$ip = '178.136.229.229';
-						$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
-						if($query && $query['status'] == 'success') {
- 							$my_time_zone = $query['timezone'];
-						}
+//						$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
+//						if($query && $query['status'] == 'success') {
+// 							$my_time_zone = $query['timezone'];
+//						}
+                        $my_time_zone = 'Europe/Kiev';
 						$date->setTimezone(new \DateTimeZone($my_time_zone));
 						$event_start_zero = $date;
 						$date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
