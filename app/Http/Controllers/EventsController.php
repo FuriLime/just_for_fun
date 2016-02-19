@@ -545,7 +545,7 @@ class EventsController extends Controller {
         $structure .= '</optgroup></select>';
 
 		// restore current timezone
-		date_default_timezone_set($current_timezone);
+		date_default_timezone_set($my_time_zone);
         return $structure;
     }
 
