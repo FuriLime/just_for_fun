@@ -23,14 +23,14 @@ class EventsController extends Controller {
 	 */
 
 	public function index()
-	{
-		// Is the user logged in?
-		if (Sentinel::check()) {
-			if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
+    {
+        // Is the user logged in?
+        if (Sentinel::check()) {
+            if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
                 $events = Event::latest()->get();
                 foreach ($events as $event) {
                     $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
-                    if(Sentinel::getUser()->timezone){
+                    if (Sentinel::getUser()->timezone) {
                         $my_time_zone = Sentinel::getUser()->timezone;
                     } else {
                         $my_time_zone = 'Asia/Tokyo';
@@ -46,28 +46,29 @@ class EventsController extends Controller {
                 }
                 return view('events.index', compact('events'));
 
-			} else {
-			//show all events for unregister user
-			$events = Event::latest()->get();
-					foreach ($events as $event) {
-                        $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
-                        $ip = $_SERVER["REMOTE_ADDR"];
-                        $location = GeoIP::getLocation($ip);
-                        foreach($location as $timezone){
-                            $my_time_zone=$timezone;
-                        }
+            } else {
+                //show all events for unregister user
+                $events = Event::latest()->get();
+                foreach ($events as $event) {
+                    $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
+                    $ip = $_SERVER["REMOTE_ADDR"];
+                    $location = GeoIP::getLocation($ip);
+                    foreach ($location as $timezone) {
+                        $my_time_zone = $timezone;
+                    }
 //                        $my_time_zone = $location['timezone'];
-                        $date->setTimezone(new \DateTimeZone($my_time_zone));
-                        $event_start_zero = $date;
-                        $date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
-                        $date->setTimezone(new \DateTimeZone($my_time_zone));
-                        $event_finish_zero = $date;
-                        $event->startt = date($event_start_zero->format('Y-m-d H:i'));
-                        $event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
-					}
-					return view('events.index', compact('events'));
-		}
-	}
+                    $date->setTimezone(new \DateTimeZone($my_time_zone));
+                    $event_start_zero = $date;
+                    $date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
+                    $date->setTimezone(new \DateTimeZone($my_time_zone));
+                    $event_finish_zero = $date;
+                    $event->startt = date($event_start_zero->format('Y-m-d H:i'));
+                    $event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
+                }
+                return view('events.index', compact('events'));
+            }
+        }
+    }
 
 	/**
 	 * Show the form for creating a new resource.
