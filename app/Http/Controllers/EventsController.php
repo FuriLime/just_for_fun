@@ -35,14 +35,12 @@ class EventsController extends Controller {
                         if(Sentinel::getUser()->timezone){
                             $my_time_zone = Sentinel::getUser()->timezone;
                         } else {
-                            $ip = $_SERVER["REMOTE_ADDR"];
-                            $json   = file_get_contents( 'http://smart-ip.net/geoip-json/' . $ip);
-                            $ipData = json_decode( $json, true);
-//						$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
-//						if($query && $query['status'] == 'success') {
-// 							$my_time_zone = $query['timezone'];
-//						}
-                            $my_time_zone = $ipData['timezone'];
+                          $ip = $_SERVER["REMOTE_ADDR"];
+//                            $ip = '178.136.229.229';
+                            $query = @unserialize(file_get_contents('http://ip-api.com/php/' + $ip));
+                            if ($query && $query['status'] == 'success') {
+                                $my_time_zone = $query['timezone'];
+                            }
                         }
 					$date->setTimezone(new \DateTimeZone($my_time_zone));
 					$event_start_zero = $date;
@@ -61,13 +59,11 @@ class EventsController extends Controller {
 					foreach ($events as $event) {
 						$date = new \DateTime($event->start, new \DateTimeZone('UTC'));
 						$ip = $_SERVER["REMOTE_ADDR"];
-                        $json   = file_get_contents( 'http://smart-ip.net/geoip-json/' . $ip);
-                        $ipData = json_decode( $json, true);
-//						$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
-//						if($query && $query['status'] == 'success') {
-// 							$my_time_zone = $query['timezone'];
-//						}
-                        $my_time_zone = $ipData['timezone'];
+//						$ip = '178.136.229.229';
+						$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
+						if($query && $query['status'] == 'success') {
+ 							$my_time_zone = $query['timezone'];
+						}
 						$date->setTimezone(new \DateTimeZone($my_time_zone));
 						$event_start_zero = $date;
 						$date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
@@ -103,14 +99,12 @@ class EventsController extends Controller {
                 if(Sentinel::getUser()->timezone){
                     $user_timezone = Sentinel::getUser()->timezone;
                 } else{
-                   $ip = $_SERVER["REMOTE_ADDR"];
-                    $json   = file_get_contents( 'http://smart-ip.net/geoip-json/' . $ip);
-                    $ipData = json_decode( $json, true);
-//						$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
-//						if($query && $query['status'] == 'success') {
-// 							$my_time_zone = $query['timezone'];
-//						}
-                    $user_timezone = $ipData['timezone'];
+//                    $ip = $_SERVER["REMOTE_ADDR"];
+						$ip = '178.136.229.229';
+                    $query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
+                    if($query && $query['status'] == 'success') {
+                        $user_timezone = $query['timezone'];
+                    }
                 }
 				return view('events.create', array(
 					'timezone_select' => $timezone_select,
@@ -128,19 +122,19 @@ class EventsController extends Controller {
 			$finish_date = date('Y/m/d 20:00:00', $start_date_tmp);
 			$default_timezone = date_default_timezone_get();
 			$timezone_select = self::getTimeZoneSelect();
-            $ip = $_SERVER["REMOTE_ADDR"];
-            $json   = file_get_contents( 'http://smart-ip.net/geoip-json/' . $ip);
-            $ipData = json_decode( $json, true);
-//						$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
-//						if($query && $query['status'] == 'success') {
-// 							$my_time_zone = $query['timezone'];
-//						}
-            $user_timezone = $ipData['timezone'];
+			$ip = $_SERVER["REMOTE_ADDR"];
+//			$ip = '178.136.229.229';
+			$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
+			if($query && $query['status'] == 'success') {
+ 			$sdf = $query['timezone'];
+			} else {
+  				$sdf ='Unable to get location';
+  			}
 			return view('events.create', array(
 				'timezone_select' => $timezone_select,
 				'start_date' => $start_date,
 				'finish_date' => $finish_date,
-				'user_timezone'=>$user_timezone));
+				'user_timezone'=>$sdf));
 		}
 	}
 
@@ -218,13 +212,11 @@ class EventsController extends Controller {
                     $my_time_zone = Sentinel::getUser()->timezone;
                 }else {
                     $ip = $_SERVER["REMOTE_ADDR"];
-                    $json   = file_get_contents( 'http://smart-ip.net/geoip-json/' . $ip);
-                    $ipData = json_decode( $json, true);
-//						$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
-//						if($query && $query['status'] == 'success') {
-// 							$my_time_zone = $query['timezone'];
-//						}
-                    $my_time_zone = $ipData['timezone'];
+//                    $ip = '178.136.229.229';
+                    $query = @unserialize(file_get_contents('http://ip-api.com/php/' . $ip));
+                    if ($query && $query['status'] == 'success') {
+                        $my_time_zone = $query['timezone'];
+                    }
                 }
 			$date->setTimezone(new \DateTimeZone($my_time_zone));
 			$event_start_zero = $date;
@@ -252,14 +244,13 @@ class EventsController extends Controller {
 
  			//изменить в зависимоси от настроет пользователя
 			$date = new \DateTime($event['start'], new \DateTimeZone($event['timezone']));
-            $ip = $_SERVER["REMOTE_ADDR"];
-            $json   = file_get_contents( 'http://smart-ip.net/geoip-json/' . $ip);
-            $ipData = json_decode( $json, true);
-//						$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
-//						if($query && $query['status'] == 'success') {
-// 							$my_time_zone = $query['timezone'];
-//						}
-            $my_time_zone = $ipData['timezone'];
+//            $ip = '178.136.229.229';
+			$ip = $_SERVER["REMOTE_ADDR"];
+			$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
+
+			if($query && $query['status'] == 'success') {
+ 			$my_time_zone = $query['timezone'];
+			}
 
 			$date->setTimezone(new \DateTimeZone($my_time_zone));
 			$event_start_zero = $date;
@@ -496,29 +487,25 @@ class EventsController extends Controller {
                }
                else {
                    $ip = $_SERVER["REMOTE_ADDR"];
-                   $json   = file_get_contents( 'http://smart-ip.net/geoip-json/' . $ip);
-                   $ipData = json_decode( $json, true);
-//						$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
-//						if($query && $query['status'] == 'success') {
-// 							$my_time_zone = $query['timezone'];
-//						}
-                   $my_time_zone = $ipData['timezone'];
+//               $ip = '178.136.229.229';
+                   $query = @unserialize(file_get_contents('http://ip-api.com/php/' . $ip));
+                   if ($query && $query['status'] == 'success') {
+                       $my_time_zone = $query['timezone'];
+                   }
                }
            }
             else {
                 $ip = $_SERVER["REMOTE_ADDR"];
-                $json   = file_get_contents( 'http://smart-ip.net/geoip-json/' . $ip);
-                $ipData = json_decode( $json, true);
-//						$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
-//						if($query && $query['status'] == 'success') {
-// 							$my_time_zone = $query['timezone'];
-//						}
-                $my_time_zone = $ipData['timezone'];
+//               $ip = '178.136.229.229';
+                $query = @unserialize(file_get_contents('http://ip-api.com/php/' . $ip));
+                if ($query && $query['status'] == 'success') {
+                    $my_time_zone = $query['timezone'];
+                }
             }
 
 
         $structure = '<select class="form-control timezone" name="timezone" id="timezone">';
-        $structure .= '<option value="">sdfsdfsdfds</option>';
+        $structure .= '<option value="">'.$my_time_zone.'</option>';
 
         foreach ($regions as $mask) {
             $zones = \DateTimeZone::listIdentifiers($mask);
