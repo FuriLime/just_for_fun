@@ -82,33 +82,30 @@ class EventsController extends Controller {
 	{
 		// Is the user logged in?
 		if (Sentinel::check()) {
-			if (Sentinel::inRole('admin')) {
-				return view('admin.events.create');
-			} else
-		//$user_timezone = Sentinel::getUser();
-			if (Sentinel::inRole('user')){
-				// for bootstrap-datepicker
-				//registered user
-				$start_date_tmp = strtotime("+1 day");
-				$start_date = date('Y/m/d 19:00');
-				$finish_date = date('Y/m/d 20:00', $start_date_tmp);
-				$timezone_select = self::getTimeZoneSelect();
+			if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
+                // for bootstrap-datepicker
+                //registered user
+                $start_date_tmp = strtotime("+1 day");
+                $start_date = date('Y/m/d 19:00');
+                $finish_date = date('Y/m/d 20:00', $start_date_tmp);
+                $timezone_select = self::getTimeZoneSelect();
                 if(Sentinel::getUser()->timezone){
                     $my_time_zone = Sentinel::getUser()->timezone;
                 } else{
-                    $timezone_select = self::getTimeZoneSelect();
-                    $ip = $_SERVER["REMOTE_ADDR"];
-                    $location = GeoIP::getLatitude();
-                    dd($location);
-//                    $location = GeoIP::getLocation($ip);
-                    $my_time_zone = $location['timezone'];
+//                    $timezone_select = self::getTimeZoneSelect();
+//                    $ip = $_SERVER["REMOTE_ADDR"];
+//                    $location = GeoIP::getLatitude();
+//                    dd($location);
+////                    $location = GeoIP::getLocation($ip);
+//                    $my_time_zone = $location['timezone'];
+                    $my_time_zone = 'Asia/Tokyo';
                 }
-				return view('events.create', array(
-					'timezone_select' => $timezone_select,
-					'start_date' => $start_date,
-					'finish_date' => $finish_date,
-					'user_timezone' => $ip
-					));
+                return view('events.create', array(
+                    'timezone_select' => $timezone_select,
+                    'start_date' => $start_date,
+                    'finish_date' => $finish_date,
+                    'user_timezone' => $my_time_zone
+                ));
 			}
 		} else {
 			// for bootstrap-datepicker
@@ -120,10 +117,6 @@ class EventsController extends Controller {
 			$default_timezone = date_default_timezone_get();
 			$timezone_select = self::getTimeZoneSelect();
             $ip = $_SERVER["REMOTE_ADDR"];
-            GeoIP::setIp($ip);
-//            $location = GeoIP::getLatitude();
-            \Cookie::get('tz');
-            dd(\Cookie::get('tz'));
 //            dd(GeoIP::getTimezone());
 //            $location = GeoIP::getLocation($ip);
 //            $my_time_zone = $location['timezone'];
