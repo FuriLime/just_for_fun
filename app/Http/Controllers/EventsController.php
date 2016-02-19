@@ -103,6 +103,7 @@ class EventsController extends Controller {
                 } else{
                     $timezone_select = self::getTimeZoneSelect();
                     $ip = $_SERVER["REMOTE_ADDR"];
+                    dd($ip);
                     $location = GeoIP::getLocation($ip);
                     $my_time_zone = $location['timezone'];
                 }
@@ -123,6 +124,7 @@ class EventsController extends Controller {
 			$default_timezone = date_default_timezone_get();
 			$timezone_select = self::getTimeZoneSelect();
             $ip = $_SERVER["REMOTE_ADDR"];
+            dd($ip);
             $location = GeoIP::getLocation($ip);
             $my_time_zone = $location['timezone'];
 //            $my_time_zone = 'Asia/Tokyo';
