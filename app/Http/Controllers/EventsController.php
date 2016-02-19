@@ -96,22 +96,18 @@ class EventsController extends Controller {
 				$finish_date = date('Y/m/d 20:00', $start_date_tmp);
 				$timezone_select = self::getTimeZoneSelect();
                 if(Sentinel::getUser()->timezone){
-                    $user_timezone = Sentinel::getUser()->timezone;
+                    $my_time_zone = Sentinel::getUser()->timezone;
                 } else{
-//                    $ip = $_SERVER["REMOTE_ADDR"];
-////						$ip = '178.136.229.229';
-//                    $query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
-//                    if($query && $query['status'] == 'success') {
-//                        $user_timezone = $query['timezone'];
-//                    }
-
-                    $user_timezone = 'Ukrain/Kiev';
+                    $timezone_select = self::getTimeZoneSelect();
+                    $ip = $_SERVER["REMOTE_ADDR"];
+                    $location = GeoIP::getLocation($ip);
+                    $my_time_zone = $location['timezone'];
                 }
 				return view('events.create', array(
 					'timezone_select' => $timezone_select,
 					'start_date' => $start_date,
 					'finish_date' => $finish_date,
-					'user_timezone' => $user_timezone
+					'user_timezone' => $my_time_zone
 					));
 			}
 		} else {
