@@ -107,7 +107,7 @@ class EventsController extends Controller {
 					'timezone_select' => $timezone_select,
 					'start_date' => $start_date,
 					'finish_date' => $finish_date,
-					'user_timezone' => $my_time_zone
+					'user_timezone' => $ip
 					));
 			}
 		} else {
