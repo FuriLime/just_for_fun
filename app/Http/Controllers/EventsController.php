@@ -14,6 +14,7 @@ use Uuid;
 use App\User;
 use Torann\GeoIP\GeoIPServiceProvider;
 use Torann\GeoIP\GeoIPFacade;
+use Torann\GeoIP;
 class EventsController extends Controller {
 
 	/**
