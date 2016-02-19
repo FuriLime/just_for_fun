@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "75f107cc23249bc2ea1e12a6fa5949ea",
-    "content-hash": "1b220f5b54c615251cb2a9ac62dbca73",
+    "hash": "d5c6c11193456c2c65f453f7d1e2e53c",
+    "content-hash": "7ce04f983662b5571aea29b85b1ce87f",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -2581,6 +2581,64 @@
             "time": "2015-11-12 16:18:56"
         },
         {
+            "name": "pulkitjalan/geoip",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pulkitjalan/geoip.git",
+                "reference": "7ecec5c5d5abc2fb306dbee6d428ea6063cec57e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pulkitjalan/geoip/zipball/7ecec5c5d5abc2fb306dbee6d428ea6063cec57e",
+                "reference": "7ecec5c5d5abc2fb306dbee6d428ea6063cec57e",
+                "shasum": ""
+            },
+            "require": {
+                "geoip2/geoip2": "2.*",
+                "guzzlehttp/guzzle": "~6",
+                "illuminate/console": "~5",
+                "illuminate/support": "~5",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PulkitJalan\\GeoIP\\": "src"
+                },
+                "files": [
+                    "helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pulkit Jalan"
+                }
+            ],
+            "description": "Geoip Wrapper with Laravel 4 & 5 Support",
+            "homepage": "https://github.com/pulkitjalan/geoip",
+            "keywords": [
+                "geoip",
+                "ip-api",
+                "maxmind",
+                "telize"
+            ],
+            "time": "2015-11-29 10:50:44"
+        },
+        {
             "name": "skovmand/mailchimp-laravel",
             "version": "1.0.4",
             "source": {
@@ -3643,64 +3701,6 @@
                 "dump"
             ],
             "time": "2016-01-07 11:12:32"
-        },
-        {
-            "name": "torann/geoip",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Torann/laravel-geoip.git",
-                "reference": "f16f839160b1ab1fe41382e18ec9a32dd09b10fd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Torann/laravel-geoip/zipball/f16f839160b1ab1fe41382e18ec9a32dd09b10fd",
-                "reference": "f16f839160b1ab1fe41382e18ec9a32dd09b10fd",
-                "shasum": ""
-            },
-            "require": {
-                "geoip2/geoip2": "~2.1",
-                "illuminate/config": "~5.0",
-                "illuminate/console": "~5.0",
-                "illuminate/session": "~5.0",
-                "illuminate/support": "~5.0",
-                "monolog/monolog": "~1.11",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpspec/phpspec": "~2.1",
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Torann\\GeoIP\\": "src/Torann/GeoIP"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD 2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel Stainback",
-                    "email": "daniel@lyften.com"
-                }
-            ],
-            "description": "Supports the two main GeoIP services (infoDB and Maxmind).",
-            "keywords": [
-                "geoip",
-                "geolocation",
-                "laravel",
-                "laravel 5",
-                "location"
-            ],
-            "time": "2015-06-30 16:13:35"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -5026,8 +5026,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "cviebrock/eloquent-sluggable": 20,
-        "cviebrock/eloquent-taggable": 20,
-        "torann/geoip": 20
+        "cviebrock/eloquent-taggable": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
