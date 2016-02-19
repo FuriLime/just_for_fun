@@ -455,7 +455,7 @@ class EventsController extends Controller {
 	 *
 	 */
 
-	public static function getTimeZoneSelect($selectedZone = NULL)
+	public static function getTimeZoneSelect()
     {
         $regions = array(
             'Africa' => \DateTimeZone::AFRICA,
