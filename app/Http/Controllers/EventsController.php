@@ -60,7 +60,6 @@ class EventsController extends Controller {
 						$date = new \DateTime($event->start, new \DateTimeZone('UTC'));
 						$ip = $_SERVER["REMOTE_ADDR"];
                         $location = GeoIP::getLocation($ip);
-
                         $my_time_zone = $location['timezone'];
 						$date->setTimezone(new \DateTimeZone($my_time_zone));
 						$event_start_zero = $date;
