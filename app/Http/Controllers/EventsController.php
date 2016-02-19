@@ -46,7 +46,8 @@ class EventsController extends Controller {
                 }
                 return view('events.index', compact('events'));
 
-            } else {
+            }
+        }else {
                 //show all events for unregister user
                 $events = Event::latest()->get();
                 foreach ($events as $event) {
@@ -68,7 +69,7 @@ class EventsController extends Controller {
                 return view('events.index', compact('events'));
             }
         }
-    }
+    
 
 	/**
 	 * Show the form for creating a new resource.
