@@ -12,7 +12,7 @@ use Carbon\Carbon;
 use Lang;
 use Uuid;
 use App\User;
-use PulkitJalan\GeoIP\GeoIP;
+use GeoIP;
 
 class EventsController extends Controller {
 
