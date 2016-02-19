@@ -151,7 +151,6 @@ class EventsController extends Controller {
 			// 'type' => 'required',
 			'location' => 'required|max:255',
 			'url' => 'max:255',
-            'eventzone' => 'max:255',
 			'timezone' => 'required',
 			'start' => 'required',
 			'finish' => 'required',
@@ -160,10 +159,10 @@ class EventsController extends Controller {
 		$store_info = $request->all();
 		$store_info['uuid'] = Uuid::generate(4)->string;
 		// for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
-		$date = new \DateTime($store_info['start'], new \DateTimeZone($store_info['eventzone']));
+		$date = new \DateTime($store_info['start'], new \DateTimeZone($store_info['timezone']));
 		$date->setTimezone(new \DateTimeZone('UTC'));
 		$event_start_zero = $date;
-		$date = new \DateTime($store_info['finish'], new \DateTimeZone($store_info['eventzone']));
+		$date = new \DateTime($store_info['finish'], new \DateTimeZone($store_info['timezone']));
 		$date->setTimezone(new \DateTimeZone('UTC'));
 		$event_finish_zero = $date;
 
@@ -171,7 +170,6 @@ class EventsController extends Controller {
 		// $event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
 		$store_info['start'] = $event_start_zero->format('Y-m-d H:i');
 		$store_info['finish'] =$event_finish_zero->format('Y-m-d H:i');
-        $store_info['eventzone'] ='UTC';
 
 		// Is the user logged in?
 		if (Sentinel::check()) {
