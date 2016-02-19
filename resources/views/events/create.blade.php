@@ -248,7 +248,12 @@ Create New event
 
  });
     </script>
-
+    <script language="javascript">
+        function getTimezoneName() {
+            timezone = jstz.determine()
+            console.log(timezone.name());
+        }
+    </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 	<script type="text/javascript">//<![CDATA[
 //        $("#show_hide").click(function () {
