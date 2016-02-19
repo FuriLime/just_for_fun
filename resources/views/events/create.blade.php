@@ -245,10 +245,10 @@ Create New event
 
         var offset = new Date().getTimezoneOffset();
         console.log(offset);
-        function getTimezoneName() {
+
             timezone = jstz.determine()
             console.log(timezone.name());
-        }
+        
 
  });
     </script>
