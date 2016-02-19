@@ -21,41 +21,32 @@ class EventsController extends Controller {
 	 *
 	 * @return Response
 	 */
+
 	public function index()
 	{
 		// Is the user logged in?
 		if (Sentinel::check()) {
-			if (Sentinel::inRole('admin')) {
-				$events = Event::latest()->get();
-				return view('admin.events.index', compact('events'));
+			if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
+                $events = Event::latest()->get();
+                foreach ($events as $event) {
+                    $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
+                    if(Sentinel::getUser()->timezone){
+                        $my_time_zone = Sentinel::getUser()->timezone;
+                    } else {
+                        $my_time_zone = 'Asia/Tokyo';
+                    }
+                    $date->setTimezone(new \DateTimeZone($my_time_zone));
+                    $event_start_zero = $date;
 
-			} else if (Sentinel::inRole('user')) {
-					// show all events for registered users
-					$events = Event::latest()->get();
-					foreach ($events as $event) {
-						$date = new \DateTime($event->start, new \DateTimeZone('UTC'));
-                        if(Sentinel::getUser()->timezone){
-                            $my_time_zone = Sentinel::getUser()->timezone;
-                        } else {
-                          $ip = $_SERVER["REMOTE_ADDR"];
-//                            $ip = '178.136.229.229';
-                            $query = @unserialize(file_get_contents('http://ip-api.com/php/' + $ip));
-                            if ($query && $query['status'] == 'success') {
-                                $my_time_zone = $query['timezone'];
-                            }
-                        }
-					$date->setTimezone(new \DateTimeZone($my_time_zone));
-					$event_start_zero = $date;
+                    $date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
+                    $date->setTimezone(new \DateTimeZone($my_time_zone));
+                    $event_finish_zero = $date;
+                    $event->startt = date($event_start_zero->format('Y-m-d H:i'));
+                    $event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
+                }
+                return view('events.index', compact('events'));
 
-					$date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
-					$date->setTimezone(new \DateTimeZone($my_time_zone));
-					$event_finish_zero = $date;
-					$event->startt = date($event_start_zero->format('Y-m-d H:i'));
-					$event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
-					}
-					return view('events.index', compact('events'));
-				}
-		} else {
+			} else {
 			//show all events for unregister user
 			$events = Event::latest()->get();
 					foreach ($events as $event) {
