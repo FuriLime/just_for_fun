@@ -323,8 +323,8 @@ Edit a event
 		//locale: 'ru',
 		//extraFormats: true,
 		ignoreReadonly: true, 
-		allowInputToggle: true, 
-		format: 'YYYY/MM/DD HH:mm', // hh for AM/PM
+		allowInputToggle: true,
+        format: 'yyyy/mm/dd hh:ii',
 		stepping: 5,
 		sideBySide: true,
 		showClose: true,
@@ -336,8 +336,8 @@ Edit a event
 		//locale: 'ru',
 		//extraFormats: true,
 		ignoreReadonly: true, 
-		allowInputToggle: true, 
-		format: 'YYYY/MM/DD HH:mm', // hh for AM/PM
+		allowInputToggle: true,
+        format: 'yyyy/mm/dd hh:ii',
 		stepping: 5,
 		sideBySide: true,
 		showClose: true,
