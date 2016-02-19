@@ -123,20 +123,15 @@ class EventsController extends Controller {
 			$finish_date = date('Y/m/d 20:00:00', $start_date_tmp);
 			$default_timezone = date_default_timezone_get();
 			$timezone_select = self::getTimeZoneSelect();
-//			$ip = $_SERVER["REMOTE_ADDR"];
-////			$ip = '178.136.229.229';
-//			$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
-//			if($query && $query['status'] == 'success') {
-// 			$sdf = $query['timezone'];
-//			} else {
-//  				$sdf ='Unable to get location';
-//  			}
-            $sdf= 'Europe/Kiev';
+            $ip = $_SERVER["REMOTE_ADDR"];
+            $location = GeoIP::getLocation($ip);
+            $my_time_zone = $location['timezone'];
+
 			return view('events.create', array(
 				'timezone_select' => $timezone_select,
 				'start_date' => $start_date,
 				'finish_date' => $finish_date,
-				'user_timezone'=>$sdf));
+				'user_timezone'=>$my_time_zone));
 		}
 	}
 
