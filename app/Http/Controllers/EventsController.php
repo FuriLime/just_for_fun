@@ -59,17 +59,17 @@ class EventsController extends Controller {
 			//show all events for unregister user
 			$events = Event::latest()->get();
 					foreach ($events as $event) {
-						$date = new \DateTime($event->start, new \DateTimeZone('UTC'));
-						$ip = $_SERVER["REMOTE_ADDR"];
+                        $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
+                        $ip = $_SERVER["REMOTE_ADDR"];
                         $location = GeoIP::getLocation($ip);
                         $my_time_zone = $location['timezone'];
-						$date->setTimezone(new \DateTimeZone($my_time_zone));
-						$event_start_zero = $date;
-						$date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
-						$date->setTimezone(new \DateTimeZone($my_time_zone));
-						$event_finish_zero = $date;
-						$event->startt = date($event_start_zero->format('Y-m-d H:i'));
-						$event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
+                        $date->setTimezone(new \DateTimeZone($my_time_zone));
+                        $event_start_zero = $date;
+                        $date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
+                        $date->setTimezone(new \DateTimeZone($my_time_zone));
+                        $event_finish_zero = $date;
+                        $event->startt = date($event_start_zero->format('Y-m-d H:i'));
+                        $event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
 					}
 					return view('events.index', compact('events'));
 		}
