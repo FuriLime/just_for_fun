@@ -531,7 +531,7 @@ class EventsController extends Controller {
 					//$location = $tz->getLocation();
 
 					// DST
-					date_default_timezone_set($my_time_zone);
+					date_default_timezone_set($timeZone);
 					$dst = date('I'); // this will be 1 in DST or else 0
 
 //                     $structure .= "<option data-countrycode='".$location['country_code']."' data-offset='".$utc_offset."' ".(($timeZone == $selectedZone) ? 'selected="selected "':'') . " value=\"".($timeZone)."\">(".$p. " UTC) " .str_replace('_',' ',$city)."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( ".$timeZone." | DST ".$dst.")</option>";
@@ -545,7 +545,7 @@ class EventsController extends Controller {
         $structure .= '</optgroup></select>';
 
 		// restore current timezone
-		date_default_timezone_set($my_time_zone);
+		date_default_timezone_set($current_timezone);
         return $structure;
     }
 
