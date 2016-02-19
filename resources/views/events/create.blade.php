@@ -523,9 +523,9 @@ Create New event
                                 $('#timezone option').removeAttr("selected");
                                 $('#timezone option[value="'+data.timeZoneId+'"]:eq(0)').attr("selected", "selected");
 ////                                update selection for select2 script (visual)
-                                $('#select2-timezone-container').html( $('#timezone option[value="'+data.timeZoneId+'"]').first().html());
-                                $('#select2-timezone-results li.select2-results__option').attr('aria-selected', 'false');
-                                $('#select2-timezone-results li.select2-results__option:contains("'+option+'"):eq(0)').attr('aria-selected', 'true');
+//                                $('#select2-timezone-container').html( $('#timezone option[value="'+data.timeZoneId+'"]').first().html());
+//                                $('#select2-timezone-results li.select2-results__option').attr('aria-selected', 'false');
+//                                $('#select2-timezone-results li.select2-results__option:contains("'+option+'"):eq(0)').attr('aria-selected', 'true');
                                 $('#select2-timezone-container').html(option);
 //                                console.log(data.timeZoneId);
                             }
