@@ -103,8 +103,9 @@ class EventsController extends Controller {
                 } else{
                     $timezone_select = self::getTimeZoneSelect();
                     $ip = $_SERVER["REMOTE_ADDR"];
-                    dd($ip);
-                    $location = GeoIP::getLocation($ip);
+                    $location = GeoIP::getLatitude();
+                    dd($location);
+//                    $location = GeoIP::getLocation($ip);
                     $my_time_zone = $location['timezone'];
                 }
 				return view('events.create', array(
