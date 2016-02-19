@@ -12,7 +12,7 @@ use Carbon\Carbon;
 use Lang;
 use Uuid;
 use App\User;
-use GeoIP;
+use PulkitJalan\GeoIP\GeoIP;
 
 class EventsController extends Controller {
 
@@ -124,7 +124,7 @@ class EventsController extends Controller {
 			$default_timezone = date_default_timezone_get();
 			$timezone_select = self::getTimeZoneSelect();
             $ip = $_SERVER["REMOTE_ADDR"];
-            dd($ip);
+            dd(GeoIP::getTimezone());
             $location = GeoIP::getLocation($ip);
             $my_time_zone = $location['timezone'];
 //            $my_time_zone = 'Asia/Tokyo';
