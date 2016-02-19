@@ -31,7 +31,7 @@ class EventsController extends Controller {
 					// show all events for registered users
 					$events = Event::latest()->get();
 					foreach ($events as $event) {
-						$date = new \DateTime($event->start, new \DateTimeZone($event->timezone));
+						$date = new \DateTime($event->start, new \DateTimeZone('UTC'));
                         if(Sentinel::getUser()->timezone){
                             $my_time_zone = Sentinel::getUser()->timezone;
                         } else {
@@ -45,7 +45,7 @@ class EventsController extends Controller {
 					$date->setTimezone(new \DateTimeZone($my_time_zone));
 					$event_start_zero = $date;
 
-					$date = new \DateTime($event->finish, new \DateTimeZone($event->timezone));
+					$date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
 					$date->setTimezone(new \DateTimeZone($my_time_zone));
 					$event_finish_zero = $date;
 					$event->startt = date($event_start_zero->format('Y-m-d H:i'));
@@ -57,7 +57,7 @@ class EventsController extends Controller {
 			//show all events for unregister user
 			$events = Event::latest()->get();
 					foreach ($events as $event) {
-						$date = new \DateTime($event->start, new \DateTimeZone($event->timezone));
+						$date = new \DateTime($event->start, new \DateTimeZone('UTC'));
 						$ip = $_SERVER["REMOTE_ADDR"];
 //						$ip = '178.136.229.229';
 						$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
@@ -66,7 +66,7 @@ class EventsController extends Controller {
 						}
 						$date->setTimezone(new \DateTimeZone($my_time_zone));
 						$event_start_zero = $date;
-						$date = new \DateTime($event->finish, new \DateTimeZone($event->timezone));
+						$date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
 						$date->setTimezone(new \DateTimeZone($my_time_zone));
 						$event_finish_zero = $date;
 						$event->startt = date($event_start_zero->format('Y-m-d H:i'));
