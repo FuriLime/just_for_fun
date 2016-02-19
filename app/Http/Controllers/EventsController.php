@@ -503,7 +503,7 @@ class EventsController extends Controller {
                 }
             }
 
-
+        $my_time_zone = self::getTimeZoneSelect($my_time_zone);
         $structure = '<select class="form-control timezone" name="timezone" id="timezone">';
         $structure .= '<option value="">'.$my_time_zone.'</option>';
 
