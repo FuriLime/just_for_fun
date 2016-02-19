@@ -124,7 +124,8 @@ class EventsController extends Controller {
 			$default_timezone = date_default_timezone_get();
 			$timezone_select = self::getTimeZoneSelect();
             $ip = $_SERVER["REMOTE_ADDR"];
-            GeoIP::setIp($ip);
+            $sdfdf = GeoIP::setIp($ip);
+            dd($sdfdf);
 //            dd(GeoIP::getTimezone());
 //            $location = GeoIP::getLocation($ip);
 //            $my_time_zone = $location['timezone'];
