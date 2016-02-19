@@ -22,6 +22,7 @@ class CreateEventTable extends Migration
             $table->string('location');
             $table->string('url');	   
             $table->string('timezone');
+            $table->string('event_zone');
 	    $table->timestamp('start');
 	    $table->timestamp('finish');
 	    $table->integer('active');
