@@ -136,6 +136,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Torann\GeoIP\GeoIPServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -228,6 +229,7 @@ return [
         'GoogleTagManager' => Spatie\GoogleTagManager\GoogleTagManagerFacade::class,
         'Share'=>Chencha\Share\ShareFacade::class,
         'Newsletter' => Spatie\Newsletter\NewsletterFacade::class,
+        'GeoIP' => Torann\GeoIP\GeoIPFacade::class,
     ],
 
 ];
