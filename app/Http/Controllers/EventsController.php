@@ -128,7 +128,7 @@ class EventsController extends Controller {
             GeoIP::setIp($ip);
 //            $location = GeoIP::getLatitude();
             \Cookie::get('tz');
-//            dd($location);
+            dd(\Cookie::get('tz'));
 //            dd(GeoIP::getTimezone());
 //            $location = GeoIP::getLocation($ip);
 //            $my_time_zone = $location['timezone'];
