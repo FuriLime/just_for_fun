@@ -123,7 +123,7 @@ class EventsController extends Controller {
 			$finish_date = date('Y/m/d 20:00:00', $start_date_tmp);
 			$default_timezone = date_default_timezone_get();
 			$timezone_select = self::getTimeZoneSelect();
-            $ip = $_SERVER["REMOTE_ADDR"];
+            $ip = '66.45.227.90';
             $location = GeoIP::getLocation($ip);
             dd($location);
             $my_time_zone = $location['timezone'];
