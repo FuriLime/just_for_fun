@@ -20,58 +20,61 @@ class EventsController extends Controller {
 	 * @return Response
 	 */
 	public function index()
-    {
-        // Is the user logged in?
-        if (Sentinel::check()) {
-            if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
-                $events = Event::latest()->get();
-                foreach ($events as $event) {
-                    $date = new \DateTime($event->start, new \DateTimeZone($event->timezone));
-                    if (Sentinel::getUser()->timezone) {
-                        $my_time_zone = Sentinel::getUser()->timezone;
-                    } else {
-                        $ip = $_SERVER["REMOTE_ADDR"];
+	{
+		// Is the user logged in?
+		if (Sentinel::check()) {
+			if (Sentinel::inRole('admin')) {
+				$events = Event::latest()->get();
+				return view('admin.events.index', compact('events'));
+
+			} else if (Sentinel::inRole('user')) {
+					// show all events for registered users
+					$events = Event::latest()->get();
+					foreach ($events as $event) {
+						$date = new \DateTime($event->start, new \DateTimeZone($event->timezone));
+                        if(Sentinel::getUser()->timezone){
+                            $my_time_zone = Sentinel::getUser()->timezone;
+                        } else {
+                          $ip = $_SERVER["REMOTE_ADDR"];
 //                            $ip = '178.136.229.229';
-                        $query = @unserialize(file_get_contents('http://ip-api.com/php/' . $ip));
-                        if ($query && $query['status'] == 'success') {
-                            $my_time_zone = $query['timezone'];
+                            $query = @unserialize(file_get_contents('http://ip-api.com/php/' . $ip));
+                            if ($query && $query['status'] == 'success') {
+                                $my_time_zone = $query['timezone'];
+                            }
                         }
-                    }
-                    $date->setTimezone(new \DateTimeZone($my_time_zone));
-                    $event_start_zero = $date;
+					$date->setTimezone(new \DateTimeZone($my_time_zone));
+					$event_start_zero = $date;
 
-                    $date = new \DateTime($event->finish, new \DateTimeZone($event->timezone));
-                    $date->setTimezone(new \DateTimeZone($my_time_zone));
-                    $event_finish_zero = $date;
-                    $event->startt = date($event_start_zero->format('Y-m-d H:i'));
-                    $event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
-                }
-                return view('events.index', compact('events'));
-
-
-            } else {
-                //show all events for unregister user
-                $events = Event::latest()->get();
-                foreach ($events as $event) {
-                    $date = new \DateTime($event->start, new \DateTimeZone($event->timezone));
-                    $ip = $_SERVER["REMOTE_ADDR"];
+					$date = new \DateTime($event->finish, new \DateTimeZone($event->timezone));
+					$date->setTimezone(new \DateTimeZone($my_time_zone));
+					$event_finish_zero = $date;
+					$event->startt = date($event_start_zero->format('Y-m-d H:i'));
+					$event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
+					}
+					return view('events.index', compact('events'));
+				}
+		} else {
+			//show all events for unregister user
+			$events = Event::latest()->get();
+					foreach ($events as $event) {
+						$date = new \DateTime($event->start, new \DateTimeZone($event->timezone));
+						$ip = $_SERVER["REMOTE_ADDR"];
 //						$ip = '178.136.229.229';
-                    $query = @unserialize(file_get_contents('http://ip-api.com/php/' . $ip));
-                    if ($query && $query['status'] == 'success') {
-                        $my_time_zone = $query['timezone'];
-                    }
-                    $date->setTimezone(new \DateTimeZone($my_time_zone));
-                    $event_start_zero = $date;
-                    $date = new \DateTime($event->finish, new \DateTimeZone($event->timezone));
-                    $date->setTimezone(new \DateTimeZone($my_time_zone));
-                    $event_finish_zero = $date;
-                    $event->startt = date($event_start_zero->format('Y-m-d H:i'));
-                    $event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
-                }
-                return view('events.index', compact('events'));
-            }
-        }
-    }
+						$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
+						if($query && $query['status'] == 'success') {
+ 							$my_time_zone = $query['timezone'];
+						}
+						$date->setTimezone(new \DateTimeZone($my_time_zone));
+						$event_start_zero = $date;
+						$date = new \DateTime($event->finish, new \DateTimeZone($event->timezone));
+						$date->setTimezone(new \DateTimeZone($my_time_zone));
+						$event_finish_zero = $date;
+						$event->startt = date($event_start_zero->format('Y-m-d H:i'));
+						$event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
+					}
+					return view('events.index', compact('events'));
+		}
+	}
 
 	/**
 	 * Show the form for creating a new resource.
@@ -82,28 +85,37 @@ class EventsController extends Controller {
 	{
 		// Is the user logged in?
 		if (Sentinel::check()) {
-			if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
-                $start_date_tmp = strtotime("+1 day");
-                $start_date = date('Y/m/d 19:00');
-                $finish_date = date('Y/m/d 20:00', $start_date_tmp);
-                $timezone_select = self::getTimeZoneSelect();
+			if (Sentinel::inRole('admin')) {
+				return view('admin.events.create');
+			} else
+		//$user_timezone = Sentinel::getUser();
+			if (Sentinel::inRole('user')){
+				// for bootstrap-datepicker
+				//registered user
+				$start_date_tmp = strtotime("+1 day");
+				$start_date = date('Y/m/d 19:00');
+				$finish_date = date('Y/m/d 20:00', $start_date_tmp);
+				$timezone_select = self::getTimeZoneSelect();
                 if(Sentinel::getUser()->timezone){
                     $user_timezone = Sentinel::getUser()->timezone;
                 } else{
-                    $ip = $_SERVER["REMOTE_ADDR"];
+//                    $ip = $_SERVER["REMOTE_ADDR"];
+						$ip = '178.136.229.229';
                     $query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
                     if($query && $query['status'] == 'success') {
                         $user_timezone = $query['timezone'];
                     }
                 }
-                return view('events.create', array(
-                    'timezone_select' => $timezone_select,
-                    'start_date' => $start_date,
-                    'finish_date' => $finish_date,
-                    'user_timezone' => $user_timezone
-                ));
-            }
-			}  else {
+				return view('events.create', array(
+					'timezone_select' => $timezone_select,
+					'start_date' => $start_date,
+					'finish_date' => $finish_date,
+					'user_timezone' => $user_timezone
+					));
+			}
+		} else {
+			// for bootstrap-datepicker
+
 			//create events unregister user
 			$start_date_tmp = strtotime("+1 day");
 			$start_date = date('Y/m/d 19:00:00');
@@ -111,17 +123,18 @@ class EventsController extends Controller {
 			$default_timezone = date_default_timezone_get();
 			$timezone_select = self::getTimeZoneSelect();
 			$ip = $_SERVER["REMOTE_ADDR"];
+//			$ip = '178.136.229.229';
 			$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
 			if($query && $query['status'] == 'success') {
- 			$user_timezone = $query['timezone'];
+ 			$sdf = $query['timezone'];
 			} else {
-  				$user_timezone ='Unable to get location';
+  				$sdf ='Unable to get location';
   			}
 			return view('events.create', array(
 				'timezone_select' => $timezone_select,
 				'start_date' => $start_date,
 				'finish_date' => $finish_date,
-				'user_timezone'=>$user_timezone));
+				'user_timezone'=>$sdf));
 		}
 	}
 
