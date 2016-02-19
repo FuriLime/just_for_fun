@@ -66,7 +66,7 @@ class EventsController extends Controller {
 //						}
 //                        $region = geoip_region_by_name($ip);
 
-                        $my_time_zone = date_default_timezone_get();
+                        $my_time_zone = date_default_timezone_get($ip);
 						$date->setTimezone(new \DateTimeZone($my_time_zone));
 						$event_start_zero = $date;
 						$date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
