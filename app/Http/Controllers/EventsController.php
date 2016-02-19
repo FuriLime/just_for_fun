@@ -113,7 +113,7 @@ class EventsController extends Controller {
 			$ip = $_SERVER["REMOTE_ADDR"];
 			$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
 			if($query && $query['status'] == 'success') {
- 			$user_timezone = 'Asia/Tokyo';
+ 			$user_timezone = $query['timezone'];
 			} else {
   				$user_timezone ='Unable to get location';
   			}
