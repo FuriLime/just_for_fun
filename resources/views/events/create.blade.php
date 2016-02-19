@@ -517,7 +517,7 @@ Create New event
                                     case 'Pacific/Ponape': data.timeZoneId = 'Pacific/Pohnpei'; break;
                                     case 'Pacific/Samoa': data.timeZoneId = 'Pacific/Pago_Pago'; break;
                                     case 'Pacific/Truk': data.timeZoneId = 'Pacific/Chuuk'; break;
-                                    default : data.timeZoneId = '{!!$user_timezone!!}';
+                                    {{--default : data.timeZoneId = '{!!$user_timezone!!}';--}}
                                 }
 
                                 $('#timezone option').removeAttr("selected");
