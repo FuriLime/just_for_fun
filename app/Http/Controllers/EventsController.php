@@ -64,7 +64,7 @@ class EventsController extends Controller {
 //						if($query && $query['status'] == 'success') {
 // 							$my_time_zone = $query['timezone'];
 //						}
-                        $region = geoip_region_by_name('$ip');
+                        $region = geoip_region_by_name($ip);
 
                         $my_time_zone = 'Europe/Kiev';
 						$date->setTimezone(new \DateTimeZone($my_time_zone));
