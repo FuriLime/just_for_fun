@@ -100,11 +100,13 @@ class EventsController extends Controller {
                     $user_timezone = Sentinel::getUser()->timezone;
                 } else{
 //                    $ip = $_SERVER["REMOTE_ADDR"];
-						$ip = '178.136.229.229';
-                    $query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
-                    if($query && $query['status'] == 'success') {
-                        $user_timezone = $query['timezone'];
-                    }
+////						$ip = '178.136.229.229';
+//                    $query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
+//                    if($query && $query['status'] == 'success') {
+//                        $user_timezone = $query['timezone'];
+//                    }
+
+                    $user_timezone = 'Ukrain/Kiev';
                 }
 				return view('events.create', array(
 					'timezone_select' => $timezone_select,
