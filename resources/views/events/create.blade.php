@@ -248,7 +248,7 @@ Create New event
 
             timezone = jstz.determine()
             console.log(timezone.name());
-        
+
 
  });
     </script>
