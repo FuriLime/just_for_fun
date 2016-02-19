@@ -58,7 +58,8 @@ class EventsController extends Controller {
 //                        $my_time_zone = $timezone;
 //                    }
 ////                        $my_time_zone = $location['timezone'];
-//                    dd(Session::has('timezone'));
+//                    dd(Session::has('timezone'))
+var_dump(Carbon::now()->local);
                     $my_time_zone = 'Asia/Tokyo';
                     $date->setTimezone(new \DateTimeZone($my_time_zone));
                     $event_start_zero = $date;
