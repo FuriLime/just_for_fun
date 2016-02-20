@@ -347,7 +347,8 @@ Create New event
                             locale = results[0].formatted_address;
                             splits = locale.split(',');
                             console.log(splits.length);
-//                            if(splits.length <3){
+//
+//                                if(splits.length <3){
 //                                sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
 //                                $('#city').val(sity);
 //                                country = splits[1];
@@ -371,15 +372,16 @@ Create New event
                                 console.log(num_house);
                                 $('#street').val(num_house + ' ' + street);
                                 console.log($('#street').val(num_house + ' ' + street));
-
                                 sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#city').val(sity);
-
                                 state = splits[2].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#state').val(state);
-
                                 country = splits[3];
                                 $('#country').val(country);
+                                $('#country').attr('style', 'display:block');
+                                $('#state').attr('style', 'display:block');
+                                $('#city').attr('style', 'display:block');
+                                $('#street').attr('style', 'display:block');
 
                             }
 
