@@ -365,6 +365,9 @@ Create New event
                                 country = splits[2];
                                 $('#country').val(country);
                                 $('#state').attr('style', 'display:none');
+                                $('#city').attr('style', 'display:block');
+                                $('#street').attr('style', 'display:block');
+                                $('#country').attr('style', 'display:block');
                             }
 
                             if(splits.length >3 && splits.length <5){
