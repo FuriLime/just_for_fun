@@ -346,7 +346,7 @@ Create New event
                         if (results[0]) {
                             locale = results[0].formatted_address;
                             splits = locale.split(',');
-                            console.log(splits.length);
+                            console.log(locale);
 //
 //                                if(splits.length <3){
 //                                sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
