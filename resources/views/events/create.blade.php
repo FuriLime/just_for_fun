@@ -348,14 +348,14 @@ Create New event
                             splits = locale.split(',');
                             console.log(locale);
 //
-//                                if(splits.length <3){
-//                                sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
-//                                $('#city').val(sity);
-//                                country = splits[1];
-//                                $('#country').val(country);
-//                                $('#street').attr('style', 'display:none');
-//                                $('#state').attr('style', 'display:none');
-//                            }
+                                if(splits.length <3){
+                                sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
+                                $('#city').val(sity);
+                                country = splits[1];
+                                $('#country').val(country);
+                                $('#street').attr('style', 'display:none');
+                                $('#state').attr('style', 'display:none');
+                            }
 
                             if(splits.length <4){
                                 street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
