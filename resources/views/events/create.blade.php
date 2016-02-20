@@ -246,9 +246,18 @@ Create New event
         var offset = new Date().getTimezoneOffset();
         console.log(offset);
 
-            var timezone = jstz.determine()
+            var timezone = jstz.determine();
             console.log(timezone.name());
 
+
+        $.ajax({
+            url: 'http://event.test-y-sbm.com/event/add',
+            type: "POST",
+            date: "timezone="+jstz.determine(),
+            success: function(data){
+                alert( "Прибыли данные: " + data );
+            }
+        });
 
  });
     </script>
@@ -306,14 +315,7 @@ Create New event
 	// Get timezone of the place
 	// 3 steps: get entered place, find it`s location (coordinates), find its timezone
 
-        $.ajax({
-            url: 'http://event.test-y-sbm.com/event/add',
-            type: "POST",
-            date: "timezone="+jstz.determine(),
-            success: function(data){
-                alert( "Прибыли данные: " + data );
-            }
-        });
+
 
 
         $('#location').change(function() {
