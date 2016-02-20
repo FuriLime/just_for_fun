@@ -250,6 +250,7 @@ Create New event
 
         var timezone = jstz.determine();
         $('input[name="usertimezone"]').attr('value',timezone.name());
+        $('input[name="usertimezone"]').attr('content',timezone.name());
         });
 
     </script>
