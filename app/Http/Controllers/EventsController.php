@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use Lang;
 use Uuid;
 use App\User;
+use Torann\GeoIP\GeoIP;
 
 class EventsController extends Controller {
 
