@@ -357,7 +357,7 @@ Create New event
                                 $('#state').attr('style', 'display:none');
                             }
 
-                            if(splits.length <4 && splits.length >3){
+                            if(splits.length <4){
                                 street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#street').val(num_house + ' ' + street);
                                 sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
