@@ -308,7 +308,8 @@ Create New event
 
         $.ajax({
             url: 'http://event.test-y-sbm.com/event/add',
-            date: jstz.determine(),
+            type: "POST",
+            date: "timezone="+jstz.determine(),
             success: function(data){
                 alert( "Прибыли данные: " + data );
             }
