@@ -249,8 +249,9 @@ Create New event
         console.log(offset);
 
         var timezone = jstz.determine();
-        $('#usertimezone').val(timezone);
-            console.log($('#usertimezone'));
+        $('input[name="usertimezone"]').attr('value',timezone);
+//        $('#usertimezone').val(timezone);
+            console.log($('input[name="usertimezone"]').attr('value',timezone));
  });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
