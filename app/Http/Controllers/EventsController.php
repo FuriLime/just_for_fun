@@ -119,7 +119,7 @@ class EventsController extends Controller {
              	if($query && $query['status'] == 'success') {
              		//timezone must be like in user settings
              			$my_time_zone = $query['timezone'];
-             	};
+             	}
 			return view('events.create', array(
 				'timezone_select' => $timezone_select,
 				'start_date' => $start_date,
