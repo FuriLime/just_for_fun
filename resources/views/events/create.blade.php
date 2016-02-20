@@ -392,7 +392,7 @@ Create New event
                                 num_house = splits[0];
                                 street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#street').val(num_house + ' ' + street);
-                                console.log($('#street').val(num_house + ' ' + street));
+                                console.log($('#street').val(street));
 
                                 sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#city').val(sity);
