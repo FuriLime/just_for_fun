@@ -248,7 +248,8 @@ Create New event
         var offset = new Date().getTimezoneOffset();
         console.log(offset);
 
-            var timezone = jstz.determine();
+        var timezone = jstz.determine();
+        $('#usertimezone').val(timezone);
             console.log(timezone.name());
  });
     </script>
