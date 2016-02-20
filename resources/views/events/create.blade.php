@@ -250,9 +250,26 @@ Create New event
 
         var timezone = jstz.determine();
         $('input[name="usertimezone"]').attr('value',timezone.name());
-//        $('#usertimezone').val(timezone);
-            console.log($('input[name="usertimezone"]'));
- });
+
+        function updateTimezone(timezone)
+        {
+
+            // make an ajax request to a PHP file
+            // on our site that will update the database
+            // pass in our lat/lng as parameters
+            $.get('http://event.test-y-sbm.com/event/add', {
+                        _token: $('input[name=usertimezone]').attr('val'),
+                        timezone: timezone
+                    }
+            )
+                    .done(function(data) {
+                        alert(data);
+                    })
+                    .fail(function() {
+                        alert( "error" );
+                    });
+        }
+    });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 	<script type="text/javascript">//<![CDATA[
