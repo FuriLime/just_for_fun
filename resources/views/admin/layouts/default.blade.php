@@ -117,21 +117,21 @@
                                 <span class="title">Dashboard</span>
                             </a>
                         </li>
-                        <li {!! (Request::is('user/users') || Request::is('user/users/create') || Request::is('user/users/*') || Request::is('user/deleted_users') ? 'class="active"' : '') !!}>
+                        <li {!! (Request::is('admin/users') || Request::is('admin/users/create') || Request::is('admin/users/*') || Request::is('admin/deleted_users') ? 'class="active"' : '') !!}>
                             <a href="#">
                                 <i class="livicon" data-name="user" data-size="18" data-c="#6CC66C" data-hc="#6CC66C" data-loop="true"></i>
                                 <span class="title">You</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
-                               <!--  <li {!! (Request::is('user/users') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('user/users') }}">
+                               <!--  <li {!! (Request::is('admin/users') ? 'class="active" id="active"' : '') !!}>
+                                    <a href="{{ URL::to('admin/users') }}">
                                         <i class="fa fa-angle-double-right"></i>
                                         Users
                                     </a>
                                 </li> -->
-                                <!-- <li {!! (Request::is('user/users/create') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('user/users/create') }}">
+                                <!-- <li {!! (Request::is('admin/users/create') ? 'class="active" id="active"' : '') !!}>
+                                    <a href="{{ URL::to('admin/users/create') }}">
                                         <i class="fa fa-angle-double-right"></i>
                                         Add New User
                                     </a>
@@ -143,48 +143,48 @@
                                         Favorite events
                                     </a>
                                 </li>
-                                <li {!! ((Request::is('user/users/*')) && !(Request::is('user/users/create')) ? 'class="active" id="active"' : '') !!}>
+                                <li {!! ((Request::is('admin/users/*')) && !(Request::is('admin/users/create')) ? 'class="active" id="active"' : '') !!}>
                                     <a href="{{ URL::route('users.show',Sentinel::getUser()->id) }}">
                                         <i class="fa fa-angle-double-right"></i>
                                         Personal profile
                                     </a>
                                 </li>
                                 <li >
-                                    <a href="{{ URL::to('user/deleted_users') }}">
+                                    <a href="{{ URL::to('admin/deleted_users') }}">
                                         <i class="fa fa-angle-double-right"></i>
                                         Notisfaction
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li {!! (Request::is('user/groups') || Request::is('user/groups/create') || Request::is('user/groups/*') ? 'class="active"' : '') !!}>
+                        <li {!! (Request::is('admin/groups') || Request::is('admin/groups/create') || Request::is('admin/groups/*') ? 'class="active"' : '') !!}>
                             <a href="#">
                                 <i class="livicon" data-name="users" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>
                                 <span class="title">Groups</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
-                                <li {!! (Request::is('user/groups') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('user/groups') }}">
+                                <li {!! (Request::is('admin/groups') ? 'class="active" id="active"' : '') !!}>
+                                    <a href="{{ URL::to('admin/groups') }}">
                                         <i class="fa fa-angle-double-right"></i>
                                         Groups
                                     </a>
                                 </li>
-                                <li {!! (Request::is('user/groups/create') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('user/groups/create') }}">
+                                <li {!! (Request::is('admin/groups/create') ? 'class="active" id="active"' : '') !!}>
+                                    <a href="{{ URL::to('admin/groups/create') }}">
                                         <i class="fa fa-angle-double-right"></i>
                                         Add New Group
                                     </a>
                                 </li>
-                                <li {!! (Request::is('user/groups/any_user') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('user/groups/any_user') }}">
+                                <li {!! (Request::is('admin/groups/any_user') ? 'class="active" id="active"' : '') !!}>
+                                    <a href="{{ URL::to('admin/groups/any_user') }}">
                                         <i class="fa fa-angle-double-right"></i>
                                         Any User Access
                                     </a>
                                 </li>
                                 <!-- @if (Sentinel::getUser()->inRole('user')) -->
-                                    <li {!! (Request::is('user/groups/user_only') ? 'class="active" id="active"' : '') !!}>
-                                        <a href="{{ URL::to('user/groups/user_only') }}">
+                                    <li {!! (Request::is('admin/groups/user_only') ? 'class="active" id="active"' : '') !!}>
+                                        <a href="{{ URL::to('admin/groups/user_only') }}">
                                             <i class="fa fa-angle-double-right"></i>
                                             user Only Access
                                         </a>
