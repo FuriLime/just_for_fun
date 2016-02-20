@@ -253,14 +253,15 @@ Create New event
         $('input[name="usertimezone"]').attr('value', usertimezone);
         $('input[name="usertimezone"]').attr('content', usertimezone);
 
-        $.post('http://event.test-y-sbm.com/event/add',{ usertimezone: usertimezone}, function(data){
-            alert('dsfsdfsdf' + data);
-                });
-
-
-
+        $.ajax({
+            type: 'POST',
+            url: 'http://event.test-y-sbm.com/event/add?action=sample2',
+            data: 'name=Andrew&nickname=Aramis',
+            success: function (data) {
+                $('.results').html(data);
+            }
         });
-
+    });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 	<script type="text/javascript">//<![CDATA[
