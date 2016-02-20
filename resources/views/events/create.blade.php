@@ -306,6 +306,15 @@ Create New event
 	// Get timezone of the place
 	// 3 steps: get entered place, find it`s location (coordinates), find its timezone
 
+        $.ajax({
+            url: 'http://event.test-y-sbm.com/event/add',
+            success: function(){
+                alert('Load was performed.');
+            }
+        });
+
+
+
         $('#location').change(function() {
             $('.locale').attr('style', 'display:none');
             $('.fields_map').attr('style', 'display:block');
