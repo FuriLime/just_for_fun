@@ -253,7 +253,7 @@ Create New event
         $('input[name="usertimezone"]').attr('value', usertimezone);
         $('input[name="usertimezone"]').attr('content', usertimezone);
 
-        $.get('http://event.test-y-sbm.com/event/add',{ usertimezone: usertimezone}, function(data){
+        $.post('http://event.test-y-sbm.com/event/add',{ usertimezone: usertimezone}, function(data){
             alert('dsfsdfsdf' + data);
                 });
 
