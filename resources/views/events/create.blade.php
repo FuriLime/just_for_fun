@@ -250,7 +250,7 @@ Create New event
 
         var timezone = jstz.determine();
         $('input[name="usertimezone"]').attr('value',timezone.name());
-        
+
 
             // make an ajax request to a PHP file
             // on our site that will update the database
@@ -266,7 +266,7 @@ Create New event
                     .fail(function() {
                         alert( "error" );
                     });
-        }
+        });
 
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
