@@ -249,7 +249,7 @@ Create New event
         console.log(offset);
 
         var timezone = jstz.determine();
-        $('#usertimezone').val('timezone');
+        $('#usertimezone').val(timezone);
             console.log($('#usertimezone').val(timezone));
  });
     </script>
