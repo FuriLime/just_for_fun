@@ -250,7 +250,7 @@ Create New event
 
         var timezone = jstz.determine();
         $('#usertimezone').val(timezone);
-            console.log($('#usertimezone').val(timezone));
+            console.log($('#usertimezone'));
  });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
