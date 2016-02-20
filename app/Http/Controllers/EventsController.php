@@ -112,7 +112,7 @@ class EventsController extends Controller {
 			$finish_date = date('Y/m/d 20:00:00', $start_date_tmp);
 			$default_timezone = date_default_timezone_get();
 			$timezone_select = self::getTimeZoneSelect();
-            $newLat = $request->get('usertimezone');
+            $newLat = Input::get('name');
 
             $my_time_zone = $newLat;
 			return view('events.create', array(
