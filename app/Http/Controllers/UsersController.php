@@ -766,7 +766,7 @@ class UsersController extends JoshController
 
     public function getSubscriptionAndCredits()
     {
-        return View('admin.subscription_and_credits.index');
+        return View('admin.bonuses_and_free_staff.index');
     }
 
     public function getBillingAndInvoices()
