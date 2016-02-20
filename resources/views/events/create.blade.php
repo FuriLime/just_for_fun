@@ -388,7 +388,7 @@ Create New event
 //
 //                            }
 
-                            if(splits.length==4){
+                            if(splits.length >= 4){
                                 num_house = splits[0];
                                 street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#street').val(num_house + ' ' + street);
