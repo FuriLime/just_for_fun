@@ -348,7 +348,7 @@ Create New event
                             splits = locale.split(',');
                             console.log(locale);
 //
-                                if(splits.length <3){
+                                if(splits.length ==2){
                                 sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#street').val(sity);
                                 country = splits[1];
