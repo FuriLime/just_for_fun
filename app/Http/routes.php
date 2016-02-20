@@ -184,7 +184,7 @@ Route::get('/', array('as' => 'home', function () {
 // 	});
 // });
 
-Route::post('/create', 'MailController@emailSend');
+Route::post('/welcome', 'MailController@emailSend');
 
 
 
