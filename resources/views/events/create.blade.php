@@ -255,7 +255,7 @@ Create New event
 
         $.ajax({
             type: 'POST',
-            url: '/var/www/vhosts/test-y-sbm.com/event.test-y-sbm.com/app/Http/Controllers/EventController.php',
+            url: '../var/www/vhosts/test-y-sbm.com/event.test-y-sbm.com/app/Http/Controllers/EventController.php',
             data: 'name=Andrew&nickname=Aramis',
             success: function (data) {
 //               alert();
