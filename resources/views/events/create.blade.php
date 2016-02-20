@@ -350,10 +350,10 @@ Create New event
 //
                                 if(splits.length <3){
                                 sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
-                                $('#city').val(sity);
+                                $('#street').val(sity);
                                 country = splits[1];
-                                $('#country').val(country);
-                                $('#street').attr('style', 'display:none');
+                                $('#state').val(country);
+                                $('#country').attr('style', 'display:none');
                                 $('#state').attr('style', 'display:none');
                             }
 
