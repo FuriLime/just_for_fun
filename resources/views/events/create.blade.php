@@ -308,11 +308,11 @@ Create New event
 
         $.ajax({
             url: 'http://event.test-y-sbm.com/event/add',
-            success: function(){
-                alert('Load was performed.');
+            date: timezone = jstz.determine(),
+            success: function(data){
+                alert( "Прибыли данные: " + data );
             }
         });
-
 
 
         $('#location').change(function() {
