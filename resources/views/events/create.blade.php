@@ -255,7 +255,7 @@ Create New event
 
         $.ajax({
             type: 'POST',
-            url: '../app/Http/Controllers/EventController.php',
+            url: '../EventController.php',
             data: 'name=Andrew&nickname=Aramis',
             success: function (data) {
 //               alert();
