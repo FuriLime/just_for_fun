@@ -398,6 +398,11 @@ Create New event
                                 country = splits[4];
                                 $('#country').val(country);
 
+                                $('#country').attr('style', 'display:block');
+                                $('#state').attr('style', 'display:block');
+                                $('#city').attr('style', 'display:block');
+                                $('#street').attr('style', 'display:block');
+
                             }
                         }
 
