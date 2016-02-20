@@ -92,12 +92,7 @@ class EventsController extends Controller {
                 if(Sentinel::getUser()->timezone){
                     $my_time_zone = Sentinel::getUser()->timezone;
                 } else{
-//                    $timezone_select = self::getTimeZoneSelect();
-//                    $ip = $_SERVER["REMOTE_ADDR"];
-//                    $location = GeoIP::getLatitude();
-//                    dd($location);
-////                    $location = GeoIP::getLocation($ip);
-//                    $my_time_zone = $location['timezone'];
+                    $timezone_select = self::getTimeZoneSelect();
 //                    dd($_GET['data']);
                     $my_time_zone = 'Asia/Tokyo';
                 }

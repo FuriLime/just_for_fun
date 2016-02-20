@@ -250,14 +250,14 @@ Create New event
             console.log(timezone.name());
 
 
-        $.ajax({
-//            url: 'http://event.test-y-sbm.com/event/add',
-            type: "GET",
-            date: "timezone="+jstz.determine(),
-            success: function(data){
-                alert( "Прибыли данные: " + data );
-            }
-        });
+//        $.ajax({
+////            url: 'http://event.test-y-sbm.com/event/add',
+//            type: "GET",
+//            date: "timezone="+jstz.determine(),
+//            success: function(data){
+//                alert( "Прибыли данные: " + data );
+//            }
+//        });
 
  });
     </script>
