@@ -250,22 +250,6 @@ Create New event
 
         var timezone = jstz.determine();
         $('input[name="usertimezone"]').attr('value',timezone.name());
-
-
-            // make an ajax request to a PHP file
-            // on our site that will update the database
-            // pass in our lat/lng as parameters
-            $.post('http://event.test-y-sbm.com/event/add', {
-                        _token: $('input[name=usertimezone]').attr('val'),
-                        timezone: timezone
-                    }
-            )
-                    .done(function(data) {
-                        alert(data);
-                    })
-                    .fail(function() {
-                        alert( "error" );
-                    });
         });
 
     </script>
