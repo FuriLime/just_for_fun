@@ -255,7 +255,7 @@ Create New event
 
         $.ajax({
             type: 'POST',
-            url: 'http://event.test-y-sbm.com/event/add',
+            url: 'app/Http/Controllers/EventController.php',
             data: 'name=Andrew&nickname=Aramis',
             success: function (data) {
 //               alert();
