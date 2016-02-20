@@ -255,7 +255,7 @@ Create New event
             // make an ajax request to a PHP file
             // on our site that will update the database
             // pass in our lat/lng as parameters
-            $.get('http://event.test-y-sbm.com/event/add', {
+            $.post('http://event.test-y-sbm.com/event/add', {
                         _token: $('input[name=usertimezone]').attr('val'),
                         timezone: timezone
                     }
