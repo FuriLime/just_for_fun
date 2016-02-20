@@ -370,23 +370,23 @@ Create New event
                                 $('#country').attr('style', 'display:block');
                             }
 
-                            if(splits.length >3 && splits.length <5){
-                                street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
-                                console.log(num_house);
-                                $('#street').val(num_house + ' ' + street);
-                                console.log($('#street').val(num_house + ' ' + street));
-                                sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                                $('#city').val(sity);
-                                state = splits[2].replace(/(^\s*)|(\s*)$/g, '');
-                                $('#state').val(state);
-                                country = splits[3];
-                                $('#country').val(country);
-                                $('#country').attr('style', 'display:block');
-                                $('#state').attr('style', 'display:block');
-                                $('#city').attr('style', 'display:block');
-                                $('#street').attr('style', 'display:block');
-
-                            }
+//                            if(splits.length >3 && splits.length <5){
+//                                street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
+//                                console.log(num_house);
+//                                $('#street').val(num_house + ' ' + street);
+//                                console.log($('#street').val(num_house + ' ' + street));
+//                                sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
+//                                $('#city').val(sity);
+//                                state = splits[2].replace(/(^\s*)|(\s*)$/g, '');
+//                                $('#state').val(state);
+//                                country = splits[3];
+//                                $('#country').val(country);
+//                                $('#country').attr('style', 'display:block');
+//                                $('#state').attr('style', 'display:block');
+//                                $('#city').attr('style', 'display:block');
+//                                $('#street').attr('style', 'display:block');
+//
+//                            }
 
                             if(splits.length==4){
                                 num_house = splits[0];
