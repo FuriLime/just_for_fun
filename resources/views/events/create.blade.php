@@ -251,7 +251,7 @@ Create New event
 
 
         $.ajax({
-            url: 'http://event.test-y-sbm.com/event/add',
+//            url: 'http://event.test-y-sbm.com/event/add',
             type: "GET",
             date: "timezone="+jstz.determine(),
             success: function(data){
