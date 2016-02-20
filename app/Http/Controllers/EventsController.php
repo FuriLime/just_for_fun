@@ -104,12 +104,10 @@ class EventsController extends Controller {
                 ));
 			}
 		} else {
-			// for bootstrap-datepicker
-
 			//create events unregister user
 			$start_date_tmp = strtotime("+1 day");
-			$start_date = date('Y/m/d 19:00:00');
-			$finish_date = date('Y/m/d 20:00:00', $start_date_tmp);
+			$start_date = date('Y/m/d 19:00');
+			$finish_date = date('Y/m/d 20:00', $start_date_tmp);
 			$default_timezone = date_default_timezone_get();
 			$timezone_select = self::getTimeZoneSelect();
             $newLat = Input::get('usertimezone');
