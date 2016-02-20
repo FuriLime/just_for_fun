@@ -225,32 +225,40 @@ Create New event
 
     <script>
     $( document ).ready(function() {
-            var date = new Date('{{ $start_date }}');
-            $("#datestart").datetimepicker({
-                format: 'yyyy/mm/dd hh:ii',
-                autoclose: true,
-                todayBtn: true,
-                startDate: date,
-                minuteStep: 10,
-                minDate: date
-            });
-            var datef = new Date('{{ $finish_date }}');
-            $("#datefinish").datetimepicker({
+        var date = new Date('{{ $start_date }}');
+        $("#datestart").datetimepicker({
+            format: 'yyyy/mm/dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            startDate: date,
+            minuteStep: 10,
+            minDate: date
+        });
+        var datef = new Date('{{ $finish_date }}');
+        $("#datefinish").datetimepicker({
 //                defaultDate: date,
-                format: 'yyyy/mm/dd hh:ii',
-                autoclose: true,
-                todayBtn: true,
-                startDate: datef,
-                minDate: datef,
-                minuteStep: 10
-            });
+            format: 'yyyy/mm/dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            startDate: datef,
+            minDate: datef,
+            minuteStep: 10
+        });
 
         var offset = new Date().getTimezoneOffset();
         console.log(offset);
 
         var timezone = jstz.determine();
-        $('input[name="usertimezone"]').attr('value',timezone.name());
-        $('input[name="usertimezone"]').attr('content',timezone.name());
+        var usertimezone = timezone.name();
+        $('input[name="usertimezone"]').attr('value', usertimezone);
+        $('input[name="usertimezone"]').attr('content', usertimezone);
+
+        $.get('http://event.test-y-sbm.com/event/add',{ usertimezone: usertimezone}, function(data){
+            alert('dsfsdfsdf' + data);
+                });
+
+
+
         });
 
     </script>

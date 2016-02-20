@@ -194,7 +194,7 @@ class EventsController extends Controller {
                 if(Sentinel::getUser()->timezone){
                     $my_time_zone = Sentinel::getUser()->timezone;
                 }else {
-                    $my_time_zone = 'Asia/TOkyo';
+                    $my_time_zone = 'Asia/Tokyo';
                 }
 			$date->setTimezone(new \DateTimeZone($my_time_zone));
 			$event_start_zero = $date;
