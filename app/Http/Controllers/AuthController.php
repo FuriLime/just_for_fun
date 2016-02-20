@@ -405,18 +405,4 @@ class AuthController extends JoshController
         return Redirect::back()->withInput()->withErrors($this->messageBag);
     }
 
-    public function facebook()
-    {
-        return Socialite::driver('facebook')->redirect();
-    }
-
-    public function callback()
-    {
-        $user = Socialite::driver('facebook')->user();
-
-        return "<h2>" .$user->getName()->first_name. "</h2>";
-
-        // $user->token;
-    }
-
 }

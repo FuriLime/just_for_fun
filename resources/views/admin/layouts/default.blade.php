@@ -86,13 +86,13 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="{{ URL::to('user/lockscreen') }}">
+                                    <a href="{{ URL::to('admin/lockscreen') }}">
                                         <i class="livicon" data-name="lock" data-s="18"></i>
                                         Lock
                                     </a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="{{ URL::to('user/logout') }}">
+                                    <a href="{{ URL::to('admin/logout') }}">
                                         <i class="livicon" data-name="sign-out" data-s="18"></i>
                                         Logout
                                     </a>
@@ -221,7 +221,7 @@
     </a>
     <!-- global js -->
     <script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
-    @if (Request::is('user/form_builder2') || Request::is('user/gridmanager') || Request::is('user/portlet_draggable') || Request::is('user/calendar'))
+    @if (Request::is('admin/form_builder2') || Request::is('admin/gridmanager') || Request::is('admin/portlet_draggable') || Request::is('admin/calendar'))
         <script src="{{ asset('assets/vendors/form_builder1/js/jquery.ui.min.js') }}"></script>
     @endif
     <script src="{{ asset('assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
