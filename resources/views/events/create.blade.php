@@ -246,7 +246,7 @@ Create New event
         var offset = new Date().getTimezoneOffset();
         console.log(offset);
 
-            timezone = jstz.determine()
+            var timezone = jstz.determine()
             console.log(timezone.name());
 
 
