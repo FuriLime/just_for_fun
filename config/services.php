@@ -63,10 +63,16 @@ return [
     'redirect' => $secrets['CUSTOM']['TWITTER_CALLBACK_URL'],
 ],
 
+//    'linkedin' => [
+//        'client_id' => '77bj3kk8z6hl05',
+//        'client_secret' => 'JnOR7C1ws93aVerA',
+//        'redirect' => 'http://event.test-y-sbm.com/oauthlinked',
+//    ],
+
     'linkedin' => [
-        'client_id' => '77bj3kk8z6hl05',
-        'client_secret' => 'JnOR7C1ws93aVerA',
-        'redirect' => 'http://event.test-y-sbm.com/oauthlinked',
+        'client_id' => $secrets['CUSTOM']['LINKEDIN_ID'],
+        'client_secret' => $secrets['CUSTOM']['LINKEDIN_SECRET'],
+        'redirect' => $secrets['CUSTOM']['LINKEDIN_CALLBACK_URL'],
     ],
 
 //'twitter' => [
