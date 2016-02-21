@@ -167,6 +167,9 @@ Route::get('/event/add', 'EventsController@create', function(){
     if(Request::ajax()){
         return "AJAX";
     }
+    else{
+        return "no AJAX";
+    }
 });
 Route::post('/event/add', 'EventsController@store');
 Route::get('events/{uuid}/delete', array('as' => 'events.delete', 'uses' => 'EventsController@getDelete'));
