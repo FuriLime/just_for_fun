@@ -254,11 +254,15 @@ Create New event
         $('input[name="usertimezone"]').attr('content', usertimezone);
         var div = document.getElementById('usertimezone');
 
-        $.ajaxSetup({
-            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
-        });
+//        $.ajaxSetup({
+//            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+//        });
         $.get('/event/add', function(){
-            console.log('response');
+            var timezone = jstz.determine();
+            var usertimezone = timezone.name();
+            $('input[name="usertimezone"]').attr('value', usertimezone);
+            $('input[name="usertimezone"]').attr('content', usertimezone);
+            console.log(usertimezone);
         });
 //        $.ajax({
 //            url:'/event/add',
