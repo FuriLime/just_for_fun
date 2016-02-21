@@ -273,7 +273,7 @@ Create New event
             },
             success: function( data ){
 
-                console.log($("input[name=usertimezone]").val());
+                console.log(data);
             },
             error: function (xhr, b, c) {
                 console.log("xhr=" + xhr + " b=" + b + " c=" + c);
