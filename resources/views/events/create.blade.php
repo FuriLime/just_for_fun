@@ -254,14 +254,6 @@ Create New event
         $('input[name="usertimezone"]').attr('content', usertimezone);
         var div = document.getElementById('usertimezone');
 
-//        $.ajax({
-////            method: 'POST',
-//            url: '/event/add',
-//            data: {'usertimezone' : usertimezone},
-//            success: function (usertimezone) {
-//               console.log(div);
-//            }
-//        });
         $.ajaxSetup({
             headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
         });
