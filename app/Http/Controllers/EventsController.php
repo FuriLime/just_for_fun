@@ -112,7 +112,8 @@ class EventsController extends Controller {
 			$default_timezone = date_default_timezone_get();
             $timezone_select = self::getTimeZoneSelect();
             $my_time_zone = 'Asia/Tokyo';
-
+            $data = $request->all();
+            dd($data);
 			return view('events.create', array(
 				'timezone_select' => $timezone_select,
 				'start_date' => $start_date,
@@ -167,6 +168,7 @@ class EventsController extends Controller {
 			}
 
 		} else {
+
 			event::create($store_info);
 			return redirect('events')->with('success', Lang::get('message.success.create'));
 		}
