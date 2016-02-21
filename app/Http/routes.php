@@ -168,7 +168,7 @@ Route::get('/event/add', 'EventsController@create', function(){
         return "AJAX";
     }
     else{
-        dd();
+        return dd();
     }
 });
 Route::post('/event/add', 'EventsController@store');
