@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40413535" vertical-offset="2260" max-vertical-offset="3165">
+            <state vertical-scroll-proportion="-5.8653846" vertical-offset="2170" max-vertical-offset="3165">
               <caret line="165" column="52" selection-start-line="165" selection-start-column="52" selection-end-line="165" selection-end-column="52" />
               <folding>
                 <element signature="e#6#66#0#PHP" expanded="true" />
@@ -49,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.0701754" vertical-offset="3530" max-vertical-offset="9405">
-              <caret line="247" column="35" selection-start-line="247" selection-start-column="32" selection-end-line="247" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.5313093" vertical-offset="3530" max-vertical-offset="9405">
+              <caret line="254" column="0" selection-start-line="254" selection-start-column="2" selection-end-line="262" selection-end-column="13" />
               <folding>
                 <element signature="e#2668#2689#0#HTML" expanded="true" />
                 <element signature="e#3464#3485#0#HTML" expanded="true" />
@@ -130,8 +130,8 @@
         <option value="$PROJECT_DIR$/vendor/torann/geoip/src/config/geoip.php" />
         <option value="$PROJECT_DIR$/vendor/torann/geoip/tests/GeoIPUpdaterTest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
-        <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
       </list>
     </option>
   </component>
@@ -722,17 +722,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0701754" vertical-offset="3530" max-vertical-offset="9405">
-          <caret line="247" column="35" selection-start-line="247" selection-start-column="32" selection-end-line="247" selection-end-column="35" />
+        <state vertical-scroll-proportion="-5.8653846" vertical-offset="2170" max-vertical-offset="3165">
+          <caret line="165" column="52" selection-start-line="165" selection-start-column="52" selection-end-line="165" selection-end-column="52" />
           <folding>
-            <element signature="e#2668#2689#0#HTML" expanded="true" />
-            <element signature="e#3464#3485#0#HTML" expanded="true" />
-            <element signature="e#5058#5078#0#HTML" expanded="true" />
-            <element signature="e#6322#6342#0#HTML" expanded="true" />
-            <element signature="e#7395#7416#0#HTML" expanded="true" />
-            <element signature="e#8741#8772#0#HTML" expanded="true" />
+            <element signature="e#6#66#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -747,12 +742,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40413535" vertical-offset="2260" max-vertical-offset="3165">
-          <caret line="165" column="52" selection-start-line="165" selection-start-column="52" selection-end-line="165" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.5313093" vertical-offset="3530" max-vertical-offset="9405">
+          <caret line="254" column="0" selection-start-line="254" selection-start-column="2" selection-end-line="262" selection-end-column="13" />
           <folding>
-            <element signature="e#6#66#0#PHP" expanded="true" />
+            <element signature="e#2668#2689#0#HTML" expanded="true" />
+            <element signature="e#3464#3485#0#HTML" expanded="true" />
+            <element signature="e#5058#5078#0#HTML" expanded="true" />
+            <element signature="e#6322#6342#0#HTML" expanded="true" />
+            <element signature="e#7395#7416#0#HTML" expanded="true" />
+            <element signature="e#8741#8772#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

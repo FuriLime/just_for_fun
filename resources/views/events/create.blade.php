@@ -252,15 +252,15 @@ Create New event
         var usertimezone = timezone.name();
         $('input[name="usertimezone"]').attr('value', usertimezone);
         $('input[name="usertimezone"]').attr('content', usertimezone);
-
-        $.ajax({
-            method: 'POST',
-            url: '/event/add',
-            data: {'usertimezone' : usertimezone},
-            success: function (data) {
-               console.log(data);
-            }
-        });
+//
+//        $.ajax({
+//            method: 'POST',
+//            url: '/event/add',
+//            data: {'usertimezone' : usertimezone},
+//            success: function (data) {
+//               console.log(data);
+//            }
+//        });
     });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
