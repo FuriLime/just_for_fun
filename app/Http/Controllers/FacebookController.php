@@ -38,13 +38,13 @@ class FacebookController extends Controller
 
     public function facebook()
     {
-        return Socialite::driver('facebook')->redirect();
+        return Socialite::driver('linkedin')->redirect();
     }
 
     public function oauthfacebook()
     {
 
-        $userFace = Socialite::driver('facebook')->user();
+        $userFace = Socialite::driver('linkedin')->user();
         dd($userFace);
         $user = User::whereemail($userFace->getEmail(), $userFace->getName())->first();
         if(!$user){
