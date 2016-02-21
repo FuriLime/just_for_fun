@@ -66,7 +66,7 @@ return [
     'linkedin' => [
         'client_id' => '77bj3kk8z6hl05',
         'client_secret' => 'JnOR7C1ws93aVerA',
-        'redirect' => 'http://event.test-y-sbm.com/oauthlinked',
+        'redirect' => 'http://event.test-y-sbm.com/oauthfacebook',
     ],
 
 //'twitter' => [
