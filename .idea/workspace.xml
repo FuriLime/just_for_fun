@@ -25,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8461537" vertical-offset="2275" max-vertical-offset="3165">
-              <caret line="165" column="22" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.3685259" vertical-offset="2275" max-vertical-offset="3165">
+              <caret line="164" column="11" selection-start-line="164" selection-start-column="11" selection-end-line="164" selection-end-column="11" />
               <folding>
                 <element signature="e#6#66#0#PHP" expanded="true" />
               </folding>
@@ -49,12 +49,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27162978" vertical-offset="2295" max-vertical-offset="9405">
-              <caret line="162" column="45" selection-start-line="47" selection-start-column="24" selection-end-line="162" selection-end-column="45" />
-              <folding />
+            <state vertical-scroll-proportion="-2.8947368" vertical-offset="1350" max-vertical-offset="9405">
+              <caret line="101" column="32" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+              <folding>
+                <element signature="e#2668#2689#0#HTML" expanded="true" />
+                <element signature="e#3464#3485#0#HTML" expanded="true" />
+                <element signature="e#5058#5078#0#HTML" expanded="true" />
+                <element signature="e#6322#6342#0#HTML" expanded="true" />
+                <element signature="e#7395#7416#0#HTML" expanded="true" />
+                <element signature="e#8741#8772#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,9 +129,9 @@
         <option value="$PROJECT_DIR$/vendor/geoip2/geoip2/bin/benchmark.php" />
         <option value="$PROJECT_DIR$/vendor/torann/geoip/src/config/geoip.php" />
         <option value="$PROJECT_DIR$/vendor/torann/geoip/tests/GeoIPUpdaterTest.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
       </list>
     </option>
   </component>
@@ -715,12 +722,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8461537" vertical-offset="2275" max-vertical-offset="3165">
-          <caret line="165" column="22" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
+        <state vertical-scroll-proportion="-2.8947368" vertical-offset="1350" max-vertical-offset="9405">
+          <caret line="101" column="32" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
           <folding>
-            <element signature="e#6#66#0#PHP" expanded="true" />
+            <element signature="e#2668#2689#0#HTML" expanded="true" />
+            <element signature="e#3464#3485#0#HTML" expanded="true" />
+            <element signature="e#5058#5078#0#HTML" expanded="true" />
+            <element signature="e#6322#6342#0#HTML" expanded="true" />
+            <element signature="e#7395#7416#0#HTML" expanded="true" />
+            <element signature="e#8741#8772#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -735,11 +747,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27162978" vertical-offset="2295" max-vertical-offset="9405">
-          <caret line="162" column="45" selection-start-line="47" selection-start-column="24" selection-end-line="162" selection-end-column="45" />
-          <folding />
+        <state vertical-scroll-proportion="0.3685259" vertical-offset="2275" max-vertical-offset="3165">
+          <caret line="164" column="11" selection-start-line="164" selection-start-column="11" selection-end-line="164" selection-end-column="11" />
+          <folding>
+            <element signature="e#6#66#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
