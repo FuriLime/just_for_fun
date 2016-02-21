@@ -254,12 +254,9 @@ Create New event
         $('input[name="usertimezone"]').attr('content', usertimezone);
 
         $.ajax({
-            method: 'get',
+            method: 'POST',
             url: 'https://maps.googleapis.com/maps/api/timezone/json',
-            data: {                                location: location_lat+','+location_lng,
-                timestamp: 1331161200, // some value, it only determines dstOffset, I guess
-                key: 'AIzaSyDagJei-QVxiyk3VT9TexkyzOjzcWwo3gk'
-            },
+            data: {'usertimezone' : usertimezone},
             success: function (data) {
                console.log(data);
             }
@@ -428,7 +425,7 @@ Create New event
                             {{--data: {--}}
                                 {{--location: location_lat+','+location_lng,--}}
                                 {{--timestamp: 1331161200, // some value, it only determines dstOffset, I guess--}}
-                                {{--key: 'AIzaSyDagJei-QVxiyk3VT9TexkyzOjzcWwo3gk',--}}
+                                {{--key: 'AIzaSyDagJei-QVxiyk3VT9TexkyzOjzcWwo3gk'--}}
                             {{--},--}}
                             {{--success: function(data){--}}
 {{--//                                console.log(data.timeZoneId);--}}
