@@ -13,6 +13,7 @@ use Lang;
 use Uuid;
 use App\User;
 use GeoIP;
+use App\Http\Controllers\Log;
 
 class EventsController extends Controller {
 
