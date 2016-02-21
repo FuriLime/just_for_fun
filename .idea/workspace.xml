@@ -59,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FacebookController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FacebookController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FacebookController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.83827496" vertical-offset="1009" max-vertical-offset="1440">
-              <caret line="88" column="7" selection-start-line="36" selection-start-column="6" selection-end-line="88" selection-end-column="7" />
+            <state vertical-scroll-proportion="-11.708333" vertical-offset="379" max-vertical-offset="1440">
+              <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -81,21 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.1153846" vertical-offset="430" max-vertical-offset="6000">
-              <caret line="50" column="27" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="services.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/services.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25" vertical-offset="720" max-vertical-offset="1260">
-              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.32345015" vertical-offset="855" max-vertical-offset="1260">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="2" selection-end-line="69" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -162,11 +152,11 @@
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/secrets.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/config/services.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/linkedController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
+        <option value="$PROJECT_DIR$/config/services.php" />
       </list>
     </option>
   </component>
@@ -747,30 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25" vertical-offset="720" max-vertical-offset="1260">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AccountController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="360">
-          <caret line="9" column="0" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1153846" vertical-offset="430" max-vertical-offset="6000">
-          <caret line="50" column="27" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.1346154" vertical-offset="2740" max-vertical-offset="3210">
@@ -801,11 +767,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FacebookController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83827496" vertical-offset="1009" max-vertical-offset="1440">
-          <caret line="88" column="7" selection-start-line="36" selection-start-column="6" selection-end-line="88" selection-end-column="7" />
+        <state vertical-scroll-proportion="-11.708333" vertical-offset="379" max-vertical-offset="1440">
+          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="430" max-vertical-offset="6000">
+          <caret line="50" column="27" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AccountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="360">
+          <caret line="9" column="0" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32345015" vertical-offset="855" max-vertical-offset="1260">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="2" selection-end-line="69" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
