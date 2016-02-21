@@ -119,7 +119,7 @@ class EventsController extends Controller {
 //            }
 
 
-
+            var_dump($request->ajax());
             if($request->ajax()){
                 var_dump('sdfsdf');
             }
