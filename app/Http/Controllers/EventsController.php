@@ -118,7 +118,7 @@ class EventsController extends Controller {
 //                var_dump($request->is('ajax'));
 //            }
             $ip = $_SERVER["REMOTE_ADDR"];
-            $location = GeoIP::getLocation($ip);
+            $location = GeoIP::getLocation('232.223.11.11');
             var_dump($location);
             var_dump($request->ajax());
             if($request->ajax()){
