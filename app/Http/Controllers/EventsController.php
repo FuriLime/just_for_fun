@@ -111,8 +111,6 @@ class EventsController extends Controller {
 			$finish_date = date('Y/m/d 20:00', $start_date_tmp);
 			$default_timezone = date_default_timezone_get();
             $timezone_select = self::getTimeZoneSelect();
-            $ip=$_SERVER["REMOTE_ADDR"];
-			$location = GeoIP::getLocation($ip);
             $my_time_zone = 'Asia/Tokyo';
             $data = $request->all();
             dd($data);
