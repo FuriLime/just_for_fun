@@ -257,20 +257,23 @@ Create New event
         $.ajaxSetup({
             headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
         });
-        $.ajax({
-            url:'/event/add',
-            type: 'GET',
-            data: {
-                value: $("input[name=usertimezone]").val()
-            },
-            success: function( data ){
-                data = $("input[name=usertimezone]").val();
-                console.log(data);
-            },
-            error: function (xhr, b, c) {
-                console.log("xhr=" + xhr + " b=" + b + " c=" + c);
-            }
+        $.get('/event/add', function(){
+            console.log('response');
         });
+//        $.ajax({
+//            url:'/event/add',
+//            type: 'GET',
+//            data: {
+//                value: $("input[name=usertimezone]").val()
+//            },
+//            success: function( data ){
+//                data = $("input[name=usertimezone]").val();
+//                console.log(data);
+//            },
+//            error: function (xhr, b, c) {
+//                console.log("xhr=" + xhr + " b=" + b + " c=" + c);
+//            }
+//        });
 
 
     });
