@@ -255,7 +255,7 @@ Create New event
 
         $.ajax({
             method: 'POST',
-            url: 'https://maps.googleapis.com/maps/api/timezone/json',
+            url: '/event/add',
             data: {'usertimezone' : usertimezone},
             success: function (data) {
                console.log(data);
