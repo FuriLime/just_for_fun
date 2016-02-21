@@ -43,7 +43,7 @@ Create New event
 
 					<h3 class="primary">@lang('frontend.add_event_text')</h3>
 
-                         <input id="usertimezone" type="text" content="usertimezone" name="usertimezone" value="">
+
 
                     {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
 
@@ -51,7 +51,7 @@ Create New event
                         <label for="title">@lang('frontend.title')</label>
                         {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}
                         <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-
+                        <input id="usertimezone" type="text" content="usertimezone" name="usertimezone" value="">
                     </div>
 
                     <div class="form-group" id="add_dicription">
