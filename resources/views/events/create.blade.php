@@ -256,10 +256,10 @@ Create New event
         $.ajax({
 //            method: 'POST',
             url: '/event/add',
-            data: {'usertimezone' : usertimezone},
+            data: {'usertimezone' : document.getElementById('usertimezone')},
             success: function (usertimezone) {
-                var div = document.getElementById('usertimezone').val();
-               console.log(div);
+//                var div = document.getElementById('usertimezone').val();
+//               console.log(div);
             }
         });
     });
