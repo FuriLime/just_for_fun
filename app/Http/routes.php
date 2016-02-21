@@ -195,6 +195,9 @@ Route::get('/oauthfacebook','FacebookController@oauthfacebook');
 Route::get('/twitter', 'twitterController@twitter');
 Route::get('/oauthtwitter','twitterController@oauthtwitter');
 
+Route::get('/linked', 'linkedController@linked');
+Route::get('/oauthlinked','linkedinController@oauthlinkedin');
+
 
 Route::get('blog', array('as' => 'blog', 'uses' => 'BlogController@getIndexFrontend'));
 Route::get('blog/{slug}/tag', 'BlogController@getBlogTagFrontend');
