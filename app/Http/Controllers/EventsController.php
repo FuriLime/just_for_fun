@@ -125,7 +125,7 @@ class EventsController extends Controller {
             }
             var_dump($request->is('ajax'));
 //            $name = $_GET['name'];
-            $newLat = $request->input('data');
+            $newLat = $request->input('usertimezone');
 //            var_dump($name);
             $my_time_zone = $newLat;
 			return view('events.create', array(
