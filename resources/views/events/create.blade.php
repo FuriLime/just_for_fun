@@ -258,27 +258,27 @@ Create New event
 //        $.ajaxSetup({
 //            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
 //        });
-        $.get('/event/add', function(){
-            var timezone = jstz.determine();
-            var usertimezone = timezone.name();
-            $('input[name="usertimezone"]').attr('value', usertimezone);
-            $('input[name="usertimezone"]').attr('content', usertimezone);
-            console.log(usertimezone);
-        });
-//        $.ajax({
-//            url:'/event/add',
-//            type: 'GET',
-//            data: {
-//                value: $("input[name=usertimezone]").val()
-//            },
-//            success: function( data ){
-//                data = $("input[name=usertimezone]").val();
-//                console.log(data);
-//            },
-//            error: function (xhr, b, c) {
-//                console.log("xhr=" + xhr + " b=" + b + " c=" + c);
-//            }
+//        $.get('/event/add', function(){
+//            var timezone = jstz.determine();
+//            var usertimezone = timezone.name();
+//            $('input[name="usertimezone"]').attr('value', usertimezone);
+//            $('input[name="usertimezone"]').attr('content', usertimezone);
+//            console.log(usertimezone);
 //        });
+        $.ajax({
+            url:'/event/add',
+            type: 'GET',
+            data: {
+                value: $("input[name=usertimezone]").val()
+            },
+            success: function( data ){
+                data = $("input[name=usertimezone]").val();
+                console.log(data);
+            },
+            error: function (xhr, b, c) {
+                console.log("xhr=" + xhr + " b=" + b + " c=" + c);
+            }
+        });
 
 
     });
