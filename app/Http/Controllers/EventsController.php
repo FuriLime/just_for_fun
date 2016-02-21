@@ -13,7 +13,6 @@ use Lang;
 use Uuid;
 use App\User;
 use GeoIP;
-use App\Http\Controllers\Log;
 
 class EventsController extends Controller {
 
@@ -117,7 +116,7 @@ class EventsController extends Controller {
 //            if ($request->isMethod('get')){
 //                var_dump($request->is('ajax'));
 //            }
-            Log::info(Input::all());
+
 
 
             if($request->is('ajax')) {
@@ -127,7 +126,7 @@ class EventsController extends Controller {
                 var_dump('http');
             }
             else{
-                var_dump($request->is());
+                var_dump(Input::all());
             }
 //            var_dump($request->is('ajax'));
 //            $name = $_GET['name'];
