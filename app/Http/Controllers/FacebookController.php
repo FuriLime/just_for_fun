@@ -17,7 +17,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUser;
 use Sentinel;
 use Activation;
 
-class FacebookController extends Controller
+class linkedController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,59 +34,57 @@ class FacebookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
- 
-
-    public function facebook()
-    {
-        return Socialite::driver('facebook')->redirect();
-    }
-
-    public function oauthfacebook()
-    {
-        
-        $userFace = Socialite::driver('facebook')->user();
-        $user = User::whereemail($userFace->getEmail(), $userFace->getName())->first();
-        if(!$user){
-            $user = new User;
-            $user->first_name = $userFace->getName();
-            $user->email = $userFace->getEmail();
-            $user->save();
-            $role = Sentinel::findRoleById(2);
-            $role->users()->attach($user); 
-            $user = Sentinel::findById($user->id);
-            $activation = Activation::create($user);
-
-            if (Activation::complete($user, $activation->code))
-            {
-            Sentinel::authenticate($user);
-              if(Sentinel::authenticate($user))
-            {
-                $user = Sentinel::check();
-                if (Sentinel::inRole('admin')) {
-                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-                } else if (Sentinel::inRole('user'))  {
-                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-                }
-            }
-        } 
-      
-        }
-          
-
-        if (Activation::completed($user))
-        {
-            Sentinel::authenticate($user);
-            if(Sentinel::authenticate($user))
-            {
-                $user = Sentinel::check();                
-                if (Sentinel::inRole('admin')) {
-                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-                } else if (Sentinel::inRole('user'))  {
-                    
-                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-                }
-            }
-        }
-        return Redirect::route("/")->with('success', Lang::get('auth/message.signin.fail'));
-    }
+//    public function facebook()
+//    {
+//        return Socialite::driver('linkedin')->redirect();
+//    }
+//
+//    public function oauthfacebook()
+//    {
+//
+//        $userFace = Socialite::driver('linkedin')->user();
+//        $user = User::whereemail($userFace->getEmail(), $userFace->getName())->first();
+//        if(!$user){
+//            $user = new User;
+//            $user->first_name = $userFace->getName();
+//            $user->email = $userFace->getEmail();
+//            $user->save();
+//            $role = Sentinel::findRoleById(2);
+//            $role->users()->attach($user);
+//            $user = Sentinel::findById($user->id);
+//            $activation = Activation::create($user);
+//
+//            if (Activation::complete($user, $activation->code))
+//            {
+//                Sentinel::authenticate($user);
+//                if(Sentinel::authenticate($user))
+//                {
+//                    $user = Sentinel::check();
+//                    if (Sentinel::inRole('admin')) {
+//                        return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
+//                    } else if (Sentinel::inRole('user'))  {
+//                        return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
+//                    }
+//                }
+//            }
+//
+//        }
+//
+//
+//        if (Activation::completed($user))
+//        {
+//            Sentinel::authenticate($user);
+//            if(Sentinel::authenticate($user))
+//            {
+//                $user = Sentinel::check();
+//                if (Sentinel::inRole('admin')) {
+//                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
+//                } else if (Sentinel::inRole('user'))  {
+//
+//                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
+//                }
+//            }
+//        }
+//        return Redirect::route("/")->with('success', Lang::get('auth/message.signin.fail'));
+//    }
 }
