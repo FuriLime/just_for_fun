@@ -265,7 +265,7 @@ Create New event
         $.ajaxSetup({
             headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
         });
-        jQuery.ajax({
+        $.ajax({
             url:'/event/add',
             type: 'GET',
             data: {
