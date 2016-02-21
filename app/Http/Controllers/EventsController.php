@@ -116,6 +116,9 @@ class EventsController extends Controller {
 //            if ($request->isMethod('get')){
 //                var_dump($request->is('ajax'));
 //            }
+            Log::info(Input::all());
+
+
             if($request->is('ajax')) {
                 var_dump('ajax');
             }
