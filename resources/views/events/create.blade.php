@@ -246,7 +246,6 @@ Create New event
         });
 
         var offset = new Date().getTimezoneOffset();
-        console.log(offset);
 
         var timezone = jstz.determine();
         var usertimezone = timezone.name();
@@ -254,32 +253,33 @@ Create New event
         $('input[name="usertimezone"]').attr('content', usertimezone);
         var div = document.getElementById('usertimezone');
 
-        $.ajax({
-//            method: 'POST',
-            url: '/event/add',
-            data: {'usertimezone' : usertimezone},
-            success: function (usertimezone) {
-               console.log(div);
+//        $.ajax({
+////            method: 'POST',
+//            url: '/event/add',
+//            data: {'usertimezone' : usertimezone},
+//            success: function (usertimezone) {
+//               console.log(div);
+//            }
+//        });
+        $.ajaxSetup({
+            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+        });
+        jQuery.ajax({
+            url:'/event/add',
+            type: 'GET',
+            data: {
+                name: usertimezone
+            },
+            success: function( data ){
+
+                console.log(data);
+            },
+            error: function (xhr, b, c) {
+                console.log("xhr=" + xhr + " b=" + b + " c=" + c);
             }
         });
 
 
-//        var URL_ROOT = "http://event.test-y-sbm.com/";    /* Your website root URL */
-//
-//        // make an ajax request to a PHP file
-//        // on our site that will update the database
-//        // pass in our lat/lng as parameters
-//        $.get(URL_ROOT + 'event/add', {
-//                    '_token': $('meta[name=csrf-token]').attr('content'),
-//                    'newLat': document.getElementById('usertimezone')
-//                }
-//        )
-//                .done(function(data) {
-//                    alert("Database updated");
-//                })
-//                .fail(function() {
-//                    alert( "error" );
-//                });
     });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
