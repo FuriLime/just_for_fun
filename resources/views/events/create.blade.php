@@ -255,12 +255,7 @@ Create New event
         $('input[name="usertimezone"]').attr('content', usertimezone);
         var div = document.getElementById('usertimezone');
 
-
-
-    });
-
-
-    $('#addevent').click(function(){
+        
         $.ajaxSetup({
             headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
         });
