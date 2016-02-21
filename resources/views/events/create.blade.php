@@ -270,10 +270,10 @@ Create New event
             url:'event/add',
             type: 'GET',
             data: {
-                value: $("input[name=finish]").val()
+                value: $("input[name=usertimezone]").val()
             },
             success: function( data ){
-                data = $("input[name=finish]").val();
+                data = $("input[name=usertimezone]").val();
                 console.log(data);
             },
             error: function (xhr, b, c) {
