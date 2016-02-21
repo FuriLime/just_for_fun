@@ -255,7 +255,7 @@ Create New event
 
         $.ajax({
             type: 'POST',
-            url: '/event/add',
+            url: url,
             data: 'name=Andrew&nickname=Aramis',
             success: function (data) {
                alert();
