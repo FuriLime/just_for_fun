@@ -189,7 +189,7 @@ Route::post('/welcome', 'MailController@emailSend');
 
 
 Route::get('/facebook','FacebookController@facebook');
-Route::get('/oauthfacebook','FacebookController@oauthfacebook');
+//Route::get('/oauthfacebook','FacebookController@oauthfacebook');
 
 
 Route::get('/twitter', 'twitterController@twitter');

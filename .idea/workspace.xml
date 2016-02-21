@@ -25,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8846154" vertical-offset="2768" max-vertical-offset="3210">
-              <caret line="198" column="59" selection-start-line="198" selection-start-column="59" selection-end-line="198" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.47575757" vertical-offset="2723" max-vertical-offset="3210">
+              <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
               <folding>
                 <element signature="e#6#66#0#PHP" expanded="true" />
               </folding>
@@ -47,10 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="linkedController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="linkedController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/linkedController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.7466307" vertical-offset="162" max-vertical-offset="1275">
+            <state vertical-scroll-proportion="-27.0" vertical-offset="162" max-vertical-offset="1275">
               <caret line="57" column="15" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
               <folding />
             </state>
@@ -137,12 +137,12 @@
         <option value="$PROJECT_DIR$/vendor/torann/geoip/tests/GeoIPUpdaterTest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/linkedController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/secrets.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/config/services.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
       </list>
     </option>
   </component>
@@ -683,16 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8846154" vertical-offset="2768" max-vertical-offset="3210">
-          <caret line="198" column="59" selection-start-line="198" selection-start-column="59" selection-end-line="198" selection-end-column="59" />
-          <folding>
-            <element signature="e#6#66#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FacebookController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="15.0" vertical-offset="360" max-vertical-offset="1275">
@@ -735,9 +725,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/linkedController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7466307" vertical-offset="162" max-vertical-offset="1275">
+        <state vertical-scroll-proportion="-27.0" vertical-offset="162" max-vertical-offset="1275">
           <caret line="57" column="15" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47575757" vertical-offset="2723" max-vertical-offset="3210">
+          <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#66#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
