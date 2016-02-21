@@ -113,7 +113,7 @@ class EventsController extends Controller {
 			$default_timezone = date_default_timezone_get();
             $timezone_select = self::getTimeZoneSelect();
             $my_time_zone = 'Asia/Tokyo';
-            var_dump(Input::all());
+            var_dump($name = Input::get('usertimezone'));
 //            if ($request->isMethod('get')){
 //                var_dump($request->is('ajax'));
 //            }
