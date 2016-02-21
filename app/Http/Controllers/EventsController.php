@@ -3,7 +3,7 @@
 use Sentinel;
 use Session;
 
-use App\Http\Requests;
+//use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use App\Event;
