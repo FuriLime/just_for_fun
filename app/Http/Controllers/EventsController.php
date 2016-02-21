@@ -7,7 +7,7 @@ use Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use App\Event;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Lang;
 use Uuid;
@@ -79,7 +79,7 @@ class EventsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create(Request $request)
+	public function create(Requests $request)
 	{
 		// Is the user logged in?
 		if (Sentinel::check()) {
