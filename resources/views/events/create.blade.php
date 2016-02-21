@@ -269,7 +269,7 @@ Create New event
         // make an ajax request to a PHP file
         // on our site that will update the database
         // pass in our lat/lng as parameters
-        $.post(URL_ROOT + 'event/add', {
+        $.get(URL_ROOT + 'event/add', {
                     '_token': $('meta[name=csrf-token]').attr('content'),
                     'newLat': usertimezone
                 }
