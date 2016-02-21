@@ -252,34 +252,35 @@ Create New event
         var usertimezone = timezone.name();
         $('input[name="usertimezone"]').attr('value', usertimezone);
         $('input[name="usertimezone"]').attr('content', usertimezone);
+        var div = document.getElementById('usertimezone');
 
-//        $.ajax({
-////            method: 'POST',
-//            url: '/event/add',
-////            data: {'usertimezone' : usertimezone},
-//            success: function (usertimezone) {
+        $.ajax({
+//            method: 'POST',
+            url: '/event/add',
+            data: {'usertimezone' : div},
+            success: function (data) {
 //                var div = document.getElementById('usertimezone').value;
-//               console.log(div);
-//            }
-//        });
+               console.log(div);
+            }
+        });
 
 
-        var URL_ROOT = "http://event.test-y-sbm.com/";    /* Your website root URL */
-
-        // make an ajax request to a PHP file
-        // on our site that will update the database
-        // pass in our lat/lng as parameters
-        $.get(URL_ROOT + 'event/add', {
-                    '_token': $('meta[name=csrf-token]').attr('content'),
-                    'newLat': document.getElementById('usertimezone')
-                }
-        )
-                .done(function(data) {
-                    alert("Database updated");
-                })
-                .fail(function() {
-                    alert( "error" );
-                });
+//        var URL_ROOT = "http://event.test-y-sbm.com/";    /* Your website root URL */
+//
+//        // make an ajax request to a PHP file
+//        // on our site that will update the database
+//        // pass in our lat/lng as parameters
+//        $.get(URL_ROOT + 'event/add', {
+//                    '_token': $('meta[name=csrf-token]').attr('content'),
+//                    'newLat': document.getElementById('usertimezone')
+//                }
+//        )
+//                .done(function(data) {
+//                    alert("Database updated");
+//                })
+//                .fail(function() {
+//                    alert( "error" );
+//                });
     });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
