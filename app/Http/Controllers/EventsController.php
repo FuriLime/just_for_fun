@@ -113,8 +113,8 @@ class EventsController extends Controller {
             $timezone_select = self::getTimeZoneSelect();
             $my_time_zone = 'Asia/Tokyo';
             $name = Input::all();
-            $data = $request->all();
-//            dd($data);
+            $newLat = $request->input('usertimezone');
+            dd($newLat);
 //            $my_time_zone = $name['usertimezone'];
 			return view('events.create', array(
 				'timezone_select' => $timezone_select,
