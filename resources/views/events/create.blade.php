@@ -45,122 +45,122 @@ Create New event
                          <input id="usertimezone" type="text" content="usertimezone" name="usertimezone" value="" hidden>
 
 
-                    {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
+                    {{--{!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}--}}
 
-                    <div class="form-group">
-                        <label for="title">@lang('frontend.title')</label>
-                        {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}
-                        <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                    {{--<div class="form-group">--}}
+                        {{--<label for="title">@lang('frontend.title')</label>--}}
+                        {{--{!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}--}}
+                        {{--<i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>--}}
 
-                    </div>
+                    {{--</div>--}}
 
-                    <div class="form-group" id="add_dicription">
-                        <i class="fa fa-fw fa-comment"></i>
-                        <a >Add Description</a>
-                    </div>
+                    {{--<div class="form-group" id="add_dicription">--}}
+                        {{--<i class="fa fa-fw fa-comment"></i>--}}
+                        {{--<a >Add Description</a>--}}
+                    {{--</div>--}}
 
-					<div class="form-group" id="descprip" style="display: none">
-                        <label for="description">@lang('frontend.description')</label>
+					{{--<div class="form-group" id="descprip" style="display: none">--}}
+                        {{--<label for="description">@lang('frontend.description')</label>--}}
 
-						{!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}
-                        <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+						{{--{!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}--}}
+                        {{--<i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>--}}
                         {{--<button type="button" class="btn btn-warning " title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title">!</button>--}}
-                    </div>
-                         <div id="hide_dicription" style="display: none">
-                            <i class="fa fa-fw fa-stop"></i>
-                            <a class="show_hide" >Hide Description</a>
-                         </div>
-					<div class="form-group">
-                            <label for="start">@lang('frontend.date')</label>
-                        <div class="form-group form_datetime">
-                            <div class="input-group date form_datetime3 col-md-12"  id="datestart">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-remove"></span>
-                                </span>
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
-                                <input class="form-control" size="16" id="start" name="start" type="text" value="{{$start_date}}">
+                    {{--</div>--}}
+                         {{--<div id="hide_dicription" style="display: none">--}}
+                            {{--<i class="fa fa-fw fa-stop"></i>--}}
+                            {{--<a class="show_hide" >Hide Description</a>--}}
+                         {{--</div>--}}
+					{{--<div class="form-group">--}}
+                            {{--<label for="start">@lang('frontend.date')</label>--}}
+                        {{--<div class="form-group form_datetime">--}}
+                            {{--<div class="input-group date form_datetime3 col-md-12"  id="datestart">--}}
+                                {{--<span class="input-group-addon">--}}
+                                    {{--<span class="glyphicon glyphicon-remove"></span>--}}
+                                {{--</span>--}}
+                                {{--<span class="input-group-addon">--}}
+                                    {{--<span class="glyphicon glyphicon-calendar"></span>--}}
+                                {{--</span>--}}
+                                {{--<input class="form-control" size="16" id="start" name="start" type="text" value="{{$start_date}}">--}}
 
-                            </div>
-                        </div>
-                                    <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-                    </div>
-
-
-                         <div class="form-group" id="change_time_zone">
-                            <span>Timezone is {{$user_timezone}}. Default duration is 1h.<a id="time_change">Change here.</a></span>
-                         </div>
-        		<div class="form-group" id="end_time_event" style="display:none" >
-                        <label for="start">@lang('frontend.enddate')</label>
-						 <div class="form-group form_datetime">
-                                        <div class="input-group date form_datetime3 col-md-12" id="datefinish">
-                                             <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-remove"></span>
-                                            </span>
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-th"></span>
-                                            </span>
-                                            <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{$finish_date}}">
-
-                                        </div>
-                                    </div>
-                        <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-                    </div>
+                            {{--</div>--}}
+                        {{--</div>--}}
+                                    {{--<i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>--}}
+                    {{--</div>--}}
 
 
-                    <div class="form-group"  id="time_zone_change" style="display:none">
-                             <label for="timezone">@lang('frontend.timezone')</label>
-                             {!! $timezone_select !!}
-                             <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-                    </div>
+                         {{--<div class="form-group" id="change_time_zone">--}}
+                            {{--<span>Timezone is {{$user_timezone}}. Default duration is 1h.<a id="time_change">Change here.</a></span>--}}
+                         {{--</div>--}}
+        		{{--<div class="form-group" id="end_time_event" style="display:none" >--}}
+                        {{--<label for="start">@lang('frontend.enddate')</label>--}}
+						 {{--<div class="form-group form_datetime">--}}
+                                        {{--<div class="input-group date form_datetime3 col-md-12" id="datefinish">--}}
+                                             {{--<span class="input-group-addon">--}}
+                                                {{--<span class="glyphicon glyphicon-remove"></span>--}}
+                                            {{--</span>--}}
+                                            {{--<span class="input-group-addon">--}}
+                                                {{--<span class="glyphicon glyphicon-th"></span>--}}
+                                            {{--</span>--}}
+                                            {{--<input class="form-control" size="16" id="finish" name="finish" type="text" value="{{$finish_date}}">--}}
 
-                    <input type="hidden" value="1" name="active" id="active" readonly>
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                        {{--<i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>--}}
+                    {{--</div>--}}
 
 
-                    <div class="form-group locale">
-                        <label for="location">@lang('frontend.location')</label>
-                        {!! Form::text('location', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'location']) !!}
-                        <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-                    </div>
+                    {{--<div class="form-group"  id="time_zone_change" style="display:none">--}}
+                             {{--<label for="timezone">@lang('frontend.timezone')</label>--}}
+                             {{--{!! $timezone_select !!}--}}
+                             {{--<i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>--}}
+                    {{--</div>--}}
 
-                        <div class="fields_map" style="display: none">
-                         <div class="map_event_loc" id="map"></div>
-                         <div class="form-group fields_loc">
-                             {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street']) !!}
-                         </div>
+                    {{--<input type="hidden" value="1" name="active" id="active" readonly>--}}
 
-                         <div class="form-group fields_loc">
-                             {!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city']) !!}
-                         </div>
 
-                         <div class="form-group fields_loc">
-                             {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state']) !!}
-                         </div>
+                    {{--<div class="form-group locale">--}}
+                        {{--<label for="location">@lang('frontend.location')</label>--}}
+                        {{--{!! Form::text('location', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'location']) !!}--}}
+                        {{--<i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>--}}
+                    {{--</div>--}}
 
-                         <div class="form-group fields_loc">
-                             {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country']) !!}
-                         </div>
-                        <a id="reset_loc">Reset Address</a>
-                        </div>
+                        {{--<div class="fields_map" style="display: none">--}}
+                         {{--<div class="map_event_loc" id="map"></div>--}}
+                         {{--<div class="form-group fields_loc">--}}
+                             {{--{!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street']) !!}--}}
+                         {{--</div>--}}
 
-                        <div class="">
-                            <i class="fa fa-fw fa-gears"></i>
-                            <a>Advansed Options</a>
-                         </div>
-                         <div class="form-group" style='float:right; left: -5%;'>
-                        <div class="col-sm-offset-0 col-sm-12" id="btn_group">
-                            <button type="button" class="btn" onclick="(function($) { $('#active').val('0'); $('#btn_group .btn-primary').click(); })(jQuery);">
-                                @lang('frontend.save_as_draft')
-                            </button>
-                            <button class="btn btn-primary text-white test submit">
-                                @lang('frontend.save_and_publish')
-                            </button>
-                        </div>
+                         {{--<div class="form-group fields_loc">--}}
+                             {{--{!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city']) !!}--}}
+                         {{--</div>--}}
 
-                    </div>
+                         {{--<div class="form-group fields_loc">--}}
+                             {{--{!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state']) !!}--}}
+                         {{--</div>--}}
 
-                    {!! Form::close() !!}
+                         {{--<div class="form-group fields_loc">--}}
+                             {{--{!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country']) !!}--}}
+                         {{--</div>--}}
+                        {{--<a id="reset_loc">Reset Address</a>--}}
+                        {{--</div>--}}
+
+                        {{--<div class="">--}}
+                            {{--<i class="fa fa-fw fa-gears"></i>--}}
+                            {{--<a>Advansed Options</a>--}}
+                         {{--</div>--}}
+                         {{--<div class="form-group" style='float:right; left: -5%;'>--}}
+                        {{--<div class="col-sm-offset-0 col-sm-12" id="btn_group">--}}
+                            {{--<button type="button" class="btn" onclick="(function($) { $('#active').val('0'); $('#btn_group .btn-primary').click(); })(jQuery);">--}}
+                                {{--@lang('frontend.save_as_draft')--}}
+                            {{--</button>--}}
+                            {{--<button class="btn btn-primary text-white test submit">--}}
+                                {{--@lang('frontend.save_and_publish')--}}
+                            {{--</button>--}}
+                        {{--</div>--}}
+
+                    {{--</div>--}}
+
+                    {{--{!! Form::close() !!}--}}
                 </div>
                     <div class="checkbox">
 
@@ -254,7 +254,7 @@ Create New event
         $('input[name="usertimezone"]').attr('content', usertimezone);
 
         $.ajax({
-            method: 'GET',
+            method: 'POST',
             url: '/event/add',
             data: {'usertimezone' : usertimezone},
             success: function (data) {
