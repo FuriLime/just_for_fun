@@ -261,23 +261,23 @@ Create New event
 //               console.log(div);
 //            }
 //        });
-//        $.ajaxSetup({
-//            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
-//        });
-//        jQuery.ajax({
-//            url:'/event/add',
-//            type: 'GET',
-//            data: {
-//                name: usertimezone
-//            },
-//            success: function( data ){
-//
-//                console.log(data);
-//            },
-//            error: function (xhr, b, c) {
-//                console.log("xhr=" + xhr + " b=" + b + " c=" + c);
-//            }
-//        });
+        $.ajaxSetup({
+            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+        });
+        jQuery.ajax({
+            url:'/event/add',
+            type: 'GET',
+            data: {
+                name: usertimezone
+            },
+            success: function( data ){
+
+                console.log(data);
+            },
+            error: function (xhr, b, c) {
+                console.log("xhr=" + xhr + " b=" + b + " c=" + c);
+            }
+        });
 
 
     });
