@@ -269,7 +269,7 @@ Create New event
             url:'/event/add',
             type: 'GET',
             data: {
-                name: usertimezone
+                value: $("input[name=usertimezone]").val()
             },
             success: function( data ){
 
