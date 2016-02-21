@@ -7,7 +7,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use App\Event;
-use Request;
+use Illuminate\Http\Request;
+
 use Carbon\Carbon;
 use Lang;
 use Uuid;
