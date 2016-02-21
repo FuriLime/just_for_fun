@@ -256,9 +256,9 @@ Create New event
         $.ajax({
 //            method: 'POST',
             url: '/event/add',
-            data: {'usertimezone' : usertimezone},
+            data: {'usertimezoneqw' : usertimezone},
             success: function (data) {
-               console.log(usertimezone);
+               console.log(usertimezoneqw);
             }
         });
     });
