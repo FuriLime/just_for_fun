@@ -7,8 +7,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use App\Event;
-//use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Request;
+use Illuminate\Http\Request;
 
 use Carbon\Carbon;
 use Lang;
@@ -121,9 +120,8 @@ class EventsController extends Controller {
 
 
 
-            if (Request::ajax())
-            {
-                //
+            if($request->ajax()){
+                return "AJAX";
             }
 //            var_dump($request->is('ajax'));
 //            $name = $_GET['name'];
