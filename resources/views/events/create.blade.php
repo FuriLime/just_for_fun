@@ -271,7 +271,7 @@ Create New event
         // pass in our lat/lng as parameters
         $.get(URL_ROOT + 'event/add', {
                     '_token': $('meta[name=csrf-token]').attr('content'),
-                    'newLat': usertimezone
+                    'newLat': document.getElementById('usertimezone')
                 }
         )
                 .done(function(data) {
