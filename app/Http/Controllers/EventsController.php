@@ -114,7 +114,7 @@ class EventsController extends Controller {
             $my_time_zone = 'Asia/Tokyo';
             $name = Input::all();
             if ($request->isMethod('get')){
-                var_dump($userID = Input::get('value'));
+                var_dump($name);
             }
 //            $name = $_GET['name'];
             $newLat = $request->input('data');
