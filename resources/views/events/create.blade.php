@@ -259,7 +259,7 @@ Create New event
             data: {'usertimezone' : usertimezone},
             success: function (usertimezone) {
                 var div = document.getElementById('usertimezone');
-               console.log(div);
+               console.log(div.val());
             }
         });
     });
