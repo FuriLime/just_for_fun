@@ -258,7 +258,8 @@ Create New event
             url: '/event/add',
             data: {'usertimezone' : usertimezone},
             success: function (usertimezone) {
-               console.log(usertimezone);
+                var div = document.getElementById('usertimezone');
+               console.log(div);
             }
         });
     });
