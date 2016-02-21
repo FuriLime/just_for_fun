@@ -120,11 +120,7 @@ class EventsController extends Controller {
             $ip = $_SERVER["REMOTE_ADDR"];
             $location = GeoIP::getLocation('232.223.11.11');
             var_dump($location);
-            var_dump($request->ajax());
-            if($request->ajax()){
-                var_dump('sdfsdf');
-            }
-            var_dump($request->is('ajax'));
+            $my_time_zone = $location['timezone'];
 			return view('events.create', array(
 				'timezone_select' => $timezone_select,
 				'start_date' => $start_date,
