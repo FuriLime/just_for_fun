@@ -275,7 +275,7 @@ Create New event
                 }
         )
                 .done(function(data) {
-                    alert("Database updated");
+                    console.log(newLat);
                 })
                 .fail(function() {
                     alert( "error" );
