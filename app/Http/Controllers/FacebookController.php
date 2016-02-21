@@ -17,7 +17,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUser;
 use Sentinel;
 use Activation;
 
-class linkedController extends Controller
+class FacebookController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,16 +34,17 @@ class linkedController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function facebook()
     {
-        return Socialite::driver('linkedin')->redirect();
+        return Socialite::driver('facebook')->redirect();
     }
 
     public function oauthfacebook()
     {
 
-        $userFace = Socialite::driver('linkedin')->user();
-        dd($userFace);
+        $userFace = Socialite::driver('facebook')->user();
         $user = User::whereemail($userFace->getEmail(), $userFace->getName())->first();
         if(!$user){
             $user = new User;
@@ -57,17 +58,17 @@ class linkedController extends Controller
 
             if (Activation::complete($user, $activation->code))
             {
-                Sentinel::authenticate($user);
-                if(Sentinel::authenticate($user))
-                {
-                    $user = Sentinel::check();
-                    if (Sentinel::inRole('admin')) {
-                        return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-                    } else if (Sentinel::inRole('user'))  {
-                        return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-                    }
+            Sentinel::authenticate($user);
+              if(Sentinel::authenticate($user))
+            {
+                $user = Sentinel::check();
+                if (Sentinel::inRole('admin')) {
+                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
+                } else if (Sentinel::inRole('user'))  {
+                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
                 }
             }
+        }
 
         }
 
