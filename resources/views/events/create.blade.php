@@ -257,7 +257,7 @@ Create New event
         $.ajax({
 //            method: 'POST',
             url: '/event/add',
-//            data: {'usertimezone' : usertimezone},
+            data: {'usertimezone' : usertimezone},
             success: function (usertimezone) {
                console.log(div);
             }
