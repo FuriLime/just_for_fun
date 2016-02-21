@@ -45,7 +45,6 @@ class FacebookController extends Controller
     {
 
         $userFace = Socialite::driver('facebook')->user();
-        dd($userFace);
         $user = User::whereemail($userFace->getEmail(), $userFace->getName())->first();
         if(!$user){
             $user = new User;
