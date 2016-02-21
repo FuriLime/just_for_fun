@@ -258,7 +258,7 @@ Create New event
             url: '/event/add',
             data: {'usertimezone' : usertimezone},
             success: function (data) {
-               alert();
+               console.log(data);
             }
         });
     });
