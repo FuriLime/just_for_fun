@@ -254,7 +254,7 @@ Create New event
         $('input[name="usertimezone"]').attr('content', usertimezone);
 
         $.ajax({
-            method: 'GET',
+            method: 'POST',
             url: 'event/add',
             data: 'name=Andrew&nickname=Aramis',
             success: function (data) {
