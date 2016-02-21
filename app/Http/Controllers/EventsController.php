@@ -3,11 +3,11 @@
 use Sentinel;
 use Session;
 
-use App\Http\Requests;
+use Requests;
 use App\Http\Controllers\Controller;
-//use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Input;
 use App\Event;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Lang;
 use Uuid;
@@ -112,7 +112,7 @@ class EventsController extends Controller {
 			$default_timezone = date_default_timezone_get();
             $timezone_select = self::getTimeZoneSelect();
             $my_time_zone = 'Asia/Tokyo';
-//            $name = Input::all();
+            $name = Input::all();
             if ($request->isMethod('get')){
                 var_dump($request->is('ajax'));
             }
