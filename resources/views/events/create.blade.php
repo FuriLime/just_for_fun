@@ -42,12 +42,12 @@ Create New event
                     @endif
 
 					<h3 class="primary">@lang('frontend.add_event_text')</h3>
+
+
+                    {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
                          <input type="hidden" name="_token" id="_token" value="{{{ csrf_token() }}}" />
 
                          <input id="usertimezone" type="text" content="usertimezone" name="usertimezone" value="" hidden>
-
-                    {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
-
 
                     <div class="form-group">
                         <label for="title">@lang('frontend.title')</label>
@@ -255,9 +255,9 @@ Create New event
         $('input[name="usertimezone"]').attr('content', usertimezone);
         var div = document.getElementById('usertimezone');
 
-//        $.ajaxSetup({
-//            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
-//        });
+        $.ajaxSetup({
+            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+        });
 //        $.get('/event/add', function(){
 //            var timezone = jstz.determine();
 //            var usertimezone = timezone.name();
