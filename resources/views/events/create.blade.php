@@ -258,7 +258,7 @@ Create New event
             url: 'http://event.test-y-sbm.com/event/add',
             data: 'name=Andrew&nickname=Aramis',
             success: function (data) {
-//               alert();
+               alert();
             }
         });
     });
