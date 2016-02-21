@@ -168,6 +168,8 @@ class EventsController extends Controller {
 			}
 
 		} else {
+            $data = $request->all();
+            dd($data);
 			event::create($store_info);
 			return redirect('events')->with('success', Lang::get('message.success.create'));
 		}
