@@ -79,7 +79,7 @@ class EventsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create(Request $request)
+	public function create(Requests $request)
 	{
 		// Is the user logged in?
 		if (Sentinel::check()) {
