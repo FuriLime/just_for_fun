@@ -256,7 +256,7 @@ Create New event
         $.ajax({
             method: 'POST',
             url: 'event/add',
-            data: 'name=Andrew&nickname=Aramis',
+            data: {'usertimezone' : usertimezone}
             success: function (data) {
                alert();
             }
