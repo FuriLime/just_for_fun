@@ -63,11 +63,11 @@ return [
     'redirect' => $secrets['CUSTOM']['TWITTER_CALLBACK_URL'],
 ],
 
-//    'linkedin' => [
-//        'client_id' => '77bj3kk8z6hl05',
-//        'client_secret' => 'JnOR7C1ws93aVerA',
-//        'redirect' => 'http://event.test-y-sbm.com/oauthfacebook',
-//    ],
+    'linkedin' => [
+        'client_id' => '77bj3kk8z6hl05',
+        'client_secret' => 'JnOR7C1ws93aVerA',
+        'redirect' => 'http://event.test-y-sbm.com/oauthfacebook',
+    ],
 
 //'twitter' => [
 //    'client_id' => '48TYSJN1jhKnqqilnwxSfLmmu',
