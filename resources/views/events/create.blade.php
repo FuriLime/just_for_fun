@@ -82,7 +82,7 @@ Create New event
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
-                                <input class="form-control" size="16" id="start" name="start" type="datetime" dataformatas="Y/m/d H:i"  min="{{$start_date}}" value="{{$start_date}}">
+                                <input class="form-control" size="16" id="start" name="start" type="datetime" dataformat="yyyy/mm/dd hh:ii"  min="{{$start_date}}" value="{{$start_date}}">
 
                             </div>
                         </div>
@@ -229,7 +229,7 @@ Create New event
     $( document ).ready(function() {
         var date = new Date('{{ $start_date }}');
         $("#datestart").datetimepicker({
-            format: 'Y/m/d H:i',
+            format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
             startDate: date,
@@ -239,7 +239,7 @@ Create New event
         var datef = new Date('{{ $finish_date }}');
         $("#datefinish").datetimepicker({
 //                defaultDate: date,
-            format: 'Y/m/d H:i',
+            format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
             startDate: datef,
