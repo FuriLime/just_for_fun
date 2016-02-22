@@ -21,13 +21,13 @@ class EventcategoriesController extends Controller {
 	{
 		if (Sentinel::check()) {
 			if (Sentinel::inRole('admin')) {
-				$eventcategories = Event_Channels::latest()->get();
+				$eventcategories = event_channels::latest()->get();
 				return view('admin.eventcategories.index', compact('eventcategories'));
 			}
 		}
 		else if (Sentinel::check()) {
 			if (Sentinel::inRole('user')) {
-				$eventcategories = Event_Channels::latest()->get();
+				$eventcategories = Eventcategory::latest()->get();
 				return view('admin.eventcategories.index', compact('eventcategories'));
 			}
 		}
@@ -62,7 +62,7 @@ class EventcategoriesController extends Controller {
 	 */
 	public function show($id)
 	{
-		$eventcategory = Event_Channels::findOrFail($id);
+		$eventcategory = Eventcategory::findOrFail($id);
 		return view('admin.eventcategories.show', compact('eventcategory'));
 	}
 
@@ -74,7 +74,7 @@ class EventcategoriesController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$eventcategory = Event_Channels::findOrFail($id);
+		$eventcategory = Eventcategory::findOrFail($id);
 		return view('admin.eventcategories.edit', compact('eventcategory'));
 	}
 
@@ -87,7 +87,7 @@ class EventcategoriesController extends Controller {
 	public function update($id, Request $request)
 	{
 		//$this->validate($request, ['name' => 'required']); // Uncomment and modify if needed.
-		$eventcategory = Event_Channels::findOrFail($id);
+		$eventcategory = Eventcategory::findOrFail($id);
 		$eventcategory->update($request->all());
 		return redirect('admin/eventcategories')->with('success', Lang::get('message.success.update'));
 	}
@@ -115,7 +115,7 @@ class EventcategoriesController extends Controller {
     	 */
     	public function getDelete($id = null)
     	{
-    		$eventcategory = Event_Channels::destroy($id);
+    		$eventcategory = Eventcategory::destroy($id);
 
             // Redirect to the group management page
             return redirect('admin/eventcategories')->with('success', Lang::get('message.success.delete'));
