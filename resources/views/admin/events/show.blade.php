@@ -33,14 +33,14 @@ event
                 <table class="table">
 
                     <tr><td>id</td><td>{{ $event->id }}</td></tr>
-                     <tr><td>title</td><td>{{ $event['title'] }}</td></tr>
-					<tr><td>type</td><td>{{ $event['type'] }}</td></tr>
-					<tr><td>description</td><td>{{ $event['description'] }}</td></tr>
-					<tr><td>location</td><td>{{ $event['location'] }}</td></tr>
-					<tr><td>url</td><td>{{ $event['url'] }}</td></tr>
-					<tr><td>timezone</td><td>{{ $event['timezone'] }}</td></tr>
-					<tr><td>date</td><td>{{ $event['start'] }}</td></tr>
-					<tr><td>time</td><td>{{ $event['finish'] }}</td></tr>
+                     {{--<tr><td>title</td><td>{{ $event['title'] }}</td></tr>--}}
+					{{--<tr><td>type</td><td>{{ $event['type'] }}</td></tr>--}}
+					{{--<tr><td>description</td><td>{{ $event['description'] }}</td></tr>--}}
+					{{--<tr><td>location</td><td>{{ $event['location'] }}</td></tr>--}}
+					{{--<tr><td>url</td><td>{{ $event['url'] }}</td></tr>--}}
+					{{--<tr><td>timezone</td><td>{{ $event['timezone'] }}</td></tr>--}}
+					{{--<tr><td>date</td><td>{{ $event['start'] }}</td></tr>--}}
+					{{--<tr><td>time</td><td>{{ $event['finish'] }}</td></tr>--}}
 
 					
                 </table>
