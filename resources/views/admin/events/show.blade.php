@@ -32,7 +32,7 @@ event
             <div class="panel-body">
                 <table class="table">
 
-                    <tr><td>id</td><td>{{ $event->id }}</td></tr>
+                    {{--<tr><td>id</td><td>{{ $event->id }}</td></tr>--}}
                      {{--<tr><td>title</td><td>{{ $event['title'] }}</td></tr>--}}
 					{{--<tr><td>type</td><td>{{ $event['type'] }}</td></tr>--}}
 					{{--<tr><td>description</td><td>{{ $event['description'] }}</td></tr>--}}
