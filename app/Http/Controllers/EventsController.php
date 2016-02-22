@@ -233,8 +233,6 @@ class EventsController extends Controller {
             $my_time_zone = $location['timezone'];
  			//изменить в зависимоси от настроет пользователя
 			$date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
-
-            var_dump($my_time_zone);
 			$date->setTimezone(new \DateTimeZone($my_time_zone));
 			$event_start_zero = $date;
 
