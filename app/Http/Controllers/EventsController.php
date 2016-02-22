@@ -88,8 +88,8 @@ class EventsController extends Controller {
 	{
         if ($request->ajax())
         {
-            var_dump('sadfsdfdsf');
-            return true;
+            var_dump("sadfsdfdsf");
+//            return true;
         }
 		// Is the user logged in?
 		if (Sentinel::check()) {
