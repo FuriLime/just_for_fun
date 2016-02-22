@@ -218,7 +218,7 @@ class EventsController extends Controller {
 			$event_finish_zero = $date;
 
 			$event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
-			return view('events.show', compact('event'));
+			return view('admin.events.show', compact('event'));
 
 		}
 		}
