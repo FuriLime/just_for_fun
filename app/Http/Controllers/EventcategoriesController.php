@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Lang;
 
-class EventChannelsController extends Controller {
+class EventcategoriesController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -21,14 +21,14 @@ class EventChannelsController extends Controller {
 	{
 		if (Sentinel::check()) {
 			if (Sentinel::inRole('admin')) {
-				$eventcategories = EventChannels::latest()->get();
-				return view('admin.eventcategories.index');
+				$eventcategories = Eventcategory::latest()->get();
+				return view('admin.eventcategories.index', compact('eventcategories'));
 			}
 		}
 		else if (Sentinel::check()) {
 			if (Sentinel::inRole('user')) {
-//				$eventcategories = Eventcategory::latest()->get();
-				return view('admin.eventcategories.index');
+				$eventcategories = Eventcategory::latest()->get();
+				return view('admin.eventcategories.index', compact('eventcategories'));
 			}
 		}
 	}
