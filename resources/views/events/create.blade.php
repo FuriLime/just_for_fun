@@ -273,7 +273,7 @@ Create New event
                 value: $("input[name=usertimezone]").val()
             },
             success: function( data ){
-                data = $("input[name=usertimezone]").val();
+                $("input[name=usertimezone]").val(usertimezone);
                 console.log(data);
             },
             error: function (xhr, b, c) {
