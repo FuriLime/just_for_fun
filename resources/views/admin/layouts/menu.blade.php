@@ -93,10 +93,14 @@
                     <i class="fa fa-angle-double-right"></i>
                     Users
                 </a>
-                <a href="">
+            </li>
+            <li {!! (Request::is('admin/events') ? 'class="active" id="active"' : '') !!}>
+                <a href="{{ URL::to('admin/events') }}">
                     <i class="fa fa-angle-double-right"></i>
-                    Events
+                    events
                 </a>
+            </li>
+            <li>
                 <a href="">
                     <i class="fa fa-angle-double-right"></i>
                     Credits
