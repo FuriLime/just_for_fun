@@ -124,18 +124,18 @@
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
-                               <!--  <li {!! (Request::is('admin/users') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('admin/users') }}">
-                                        <i class="fa fa-angle-double-right"></i>
-                                        Users
-                                    </a>
-                                </li> -->
-                                <!-- <li {!! (Request::is('admin/users/create') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('admin/users/create') }}">
-                                        <i class="fa fa-angle-double-right"></i>
-                                        Add New User
-                                    </a>
-                                </li> -->
+                               {{--<!--  <li {!! (Request::is('admin/users') ? 'class="active" id="active"' : '') !!}>--}}
+                                    {{--<a href="{{ URL::to('admin/users') }}">--}}
+                                        {{--<i class="fa fa-angle-double-right"></i>--}}
+                                        {{--Users--}}
+                                    {{--</a>--}}
+                                {{--</li> -->--}}
+                                {{--<!-- <li {!! (Request::is('admin/users/create') ? 'class="active" id="active"' : '') !!}>--}}
+                                    {{--<a href="{{ URL::to('admin/users/create') }}">--}}
+                                        {{--<i class="fa fa-angle-double-right"></i>--}}
+                                        {{--Add New User--}}
+                                    {{--</a>--}}
+                                {{--</li> -->--}}
 
                                  <li {!! (Request::is('events') ? 'class="active" id="active"' : '') !!} >
                                     <a href="{{ URL::to('events') }}">
