@@ -22,13 +22,13 @@ class EventcategoriesController extends Controller {
 		if (Sentinel::check()) {
 			if (Sentinel::inRole('admin')) {
 //				$eventcategories = Eventcategory::latest()->get();
-				return view('admin.eventcategories.index', compact('eventcategories'));
+				return view('admin.eventcategories.index');
 			}
 		}
 		else if (Sentinel::check()) {
 			if (Sentinel::inRole('user')) {
 //				$eventcategories = Eventcategory::latest()->get();
-				return view('admin.eventcategories.index', compact('eventcategories'));
+				return view('admin.eventcategories.index');
 			}
 		}
 	}
