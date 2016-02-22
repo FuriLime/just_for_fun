@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-{{ $event['title'] }}
+{{ $event->title }}
 @parent
 @stop
 
