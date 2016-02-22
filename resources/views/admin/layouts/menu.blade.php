@@ -88,8 +88,8 @@
             <span class="fa arrow"></span>
         </a>
         <ul class="sub-menu">
-            <li>
-                <a href="">
+            <li {!! (Request::is('admin/users') ? 'class="active" id="active"' : '') !!}>
+                <a href="{{ URL::to('admin/users') }}">
                     <i class="fa fa-angle-double-right"></i>
                     Users
                 </a>
