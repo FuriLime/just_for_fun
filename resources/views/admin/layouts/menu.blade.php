@@ -48,18 +48,18 @@
         <span class="fa arrow"></span>
     </a>
     <ul class="sub-menu">
-        <li {!! (Request::is('admin/eventcategories') ? 'class="active" id="active"' : '') !!}>
-            <a href="{{ URL::to('admin/eventcategories') }}">
-                <i class="fa fa-angle-double-right"></i>
-                Event Channels
-            </a>
-        </li>
-       <!--  <li {!! (Request::is('admin/eventcategories/create') ? 'class="active" id="active"' : '') !!}>
-            <a href="{{ URL::to('admin/eventcategories/create') }}">
-                <i class="fa fa-angle-double-right"></i>
-                Add New Eventcategory
-            </a>
-        </li> -->
+        {{--<li {!! (Request::is('admin/eventcategories') ? 'class="active" id="active"' : '') !!}>--}}
+            {{--<a href="{{ URL::to('admin/eventcategories') }}">--}}
+                {{--<i class="fa fa-angle-double-right"></i>--}}
+                {{--Event Channels--}}
+            {{--</a>--}}
+        {{--</li>--}}
+       {{--<!--  <li {!! (Request::is('admin/eventcategories/create') ? 'class="active" id="active"' : '') !!}>--}}
+            {{--<a href="{{ URL::to('admin/eventcategories/create') }}">--}}
+                {{--<i class="fa fa-angle-double-right"></i>--}}
+                {{--Add New Eventcategory--}}
+            {{--</a>--}}
+        {{--</li> -->--}}
         <li {!! (Request::is('admin/subscription_and_credits') ? 'class="active" id="active"' : '') !!}>
             <a href="{{ URL::to('admin/subscription_and_credits') }}">
                 <i class="fa fa-angle-double-right"></i>
@@ -80,32 +80,32 @@
         </li>
     </ul>
 </li>
-{{--@if(Sentinel::inRole('admin'))--}}
-    {{--<li >--}}
-        {{--<a href="#">--}}
-            {{--<i class="livicon" data-name="gear" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>--}}
-            {{--<span class="title">Site Administration</span>--}}
-            {{--<span class="fa arrow"></span>--}}
-        {{--</a>--}}
-        {{--<ul class="sub-menu">--}}
-            {{--<li {!! (Request::is('admin/users') ? 'class="active" id="active"' : '') !!}>--}}
-                {{--<a href="{{ URL::to('admin/users') }}">--}}
-                    {{--<i class="fa fa-angle-double-right"></i>--}}
-                    {{--Users--}}
-                {{--</a>--}}
-            {{--</li>--}}
-            {{--<li {!! (Request::is('admin/events') ? 'class="active" id="active"' : '') !!}>--}}
-                {{--<a href="{{ URL::to('admin/events') }}">--}}
-                    {{--<i class="fa fa-angle-double-right"></i>--}}
-                    {{--events--}}
-                {{--</a>--}}
-            {{--</li>--}}
-            {{--<li>--}}
-                {{--<a href="">--}}
-                    {{--<i class="fa fa-angle-double-right"></i>--}}
-                    {{--Credits--}}
-                {{--</a>--}}
-            {{--</li>--}}
-        {{--</ul>--}}
-    {{--</li>--}}
-{{--@endif--}}
+@if(Sentinel::inRole('admin'))
+    <li >
+        <a href="#">
+            <i class="livicon" data-name="gear" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>
+            <span class="title">Site Administration</span>
+            <span class="fa arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li {!! (Request::is('admin/users') ? 'class="active" id="active"' : '') !!}>
+                <a href="{{ URL::to('admin/users') }}">
+                    <i class="fa fa-angle-double-right"></i>
+                    Users
+                </a>
+            </li>
+            <li {!! (Request::is('admin/events') ? 'class="active" id="active"' : '') !!}>
+                <a href="{{ URL::to('admin/events') }}">
+                    <i class="fa fa-angle-double-right"></i>
+                    events
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa fa-angle-double-right"></i>
+                    Credits
+                </a>
+            </li>
+        </ul>
+    </li>
+@endif
