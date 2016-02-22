@@ -44,24 +44,24 @@ eventcategories List
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach ($eventcategories as $eventcategory)
-                        <tr>
-                            <td>{{{ $eventcategory->id }}}</td>
-                            <td>{{{ $eventcategory->title }}}</td>
-								<td>{{{ $eventcategory->description }}}</td>
-                            <td>
-                                <a href="{{ route('admin.eventcategories.show', $eventcategory->id) }}">
-                                    <i class="livicon" data-name="info" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="view eventcategory"></i>
-                                </a>
-                                <a href="{{ route('admin.eventcategories.edit', $eventcategory->id) }}">
-                                    <i class="livicon" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="edit eventcategory"></i>
-                                </a>
-                                <a href="{{ route('admin.eventcategories.confirm-delete', $eventcategory->id) }}" data-toggle="modal" data-target="#delete_confirm">
-                                    <i class="livicon" data-name="remove-alt" data-size="18" data-loop="true" data-c="#f56954" data-hc="#f56954" title="delete eventcategory"></i>
-                                </a>
-                            </td>
-                        </tr>
-                    @endforeach
+                    {{--@foreach ($eventcategories as $eventcategory)--}}
+                        {{--<tr>--}}
+                            {{--<td>{{{ $eventcategory->id }}}</td>--}}
+                            {{--<td>{{{ $eventcategory->title }}}</td>--}}
+								{{--<td>{{{ $eventcategory->description }}}</td>--}}
+                            {{--<td>--}}
+                                {{--<a href="{{ route('admin.eventcategories.show', $eventcategory->id) }}">--}}
+                                    {{--<i class="livicon" data-name="info" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="view eventcategory"></i>--}}
+                                {{--</a>--}}
+                                {{--<a href="{{ route('admin.eventcategories.edit', $eventcategory->id) }}">--}}
+                                    {{--<i class="livicon" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="edit eventcategory"></i>--}}
+                                {{--</a>--}}
+                                {{--<a href="{{ route('admin.eventcategories.confirm-delete', $eventcategory->id) }}" data-toggle="modal" data-target="#delete_confirm">--}}
+                                    {{--<i class="livicon" data-name="remove-alt" data-size="18" data-loop="true" data-c="#f56954" data-hc="#f56954" title="delete eventcategory"></i>--}}
+                                {{--</a>--}}
+                            {{--</td>--}}
+                        {{--</tr>--}}
+                    {{--@endforeach--}}
 
                     </tbody>
                 </table>
