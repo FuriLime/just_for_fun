@@ -229,7 +229,7 @@ Create New event
     $( document ).ready(function() {
         var date = new Date('{{ $start_date }}');
         $("#datestart").datetimepicker({
-            format: 'yyyy/mm/dd hh:ii',
+            format: 'Y/m/d H:i',
             autoclose: true,
             todayBtn: true,
             startDate: date,
@@ -239,7 +239,7 @@ Create New event
         var datef = new Date('{{ $finish_date }}');
         $("#datefinish").datetimepicker({
 //                defaultDate: date,
-            format: 'yyyy/mm/dd hh:ii',
+            format: 'Y/m/d H:i',
             autoclose: true,
             todayBtn: true,
             startDate: datef,
