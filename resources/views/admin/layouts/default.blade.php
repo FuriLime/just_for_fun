@@ -137,8 +137,8 @@
                                     </a>
                                 </li> -->
 
-                                 <li {!! (Request::is('admin/events') ? 'class="active" id="active"' : '') !!} >
-                                    <a href="{{ URL::to('admin/events') }}">
+                                 <li {!! (Request::is('events') ? 'class="active" id="active"' : '') !!} >
+                                    <a href="{{ URL::to('events') }}">
                                         {{--<a href="{{ URL::to('admin/events') }}">--}}
                                         <i class="fa fa-angle-double-right"></i>
                                         Favorite events
