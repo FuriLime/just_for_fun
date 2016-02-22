@@ -57,11 +57,11 @@ return [
 //    'redirect' => $secrets['CUSTOM']['FACEBOOK_CALLBACK_URL'],
 //],
 
-'twitter' => [
-    'client_id' => $secrets['CUSTOM']['TWITTER_API_KEY'],
-    'client_secret' => $secrets['CUSTOM']['TWITTER_API_SECRET'],
-    'redirect' => $secrets['CUSTOM']['TWITTER_CALLBACK_URL'],
-],
+//'twitter' => [
+//    'client_id' => $secrets['CUSTOM']['TWITTER_API_KEY'],
+//    'client_secret' => $secrets['CUSTOM']['TWITTER_API_SECRET'],
+//    'redirect' => $secrets['CUSTOM']['TWITTER_CALLBACK_URL'],
+//],
 
 //    'linkedin' => [
 //        'client_id' => '77bj3kk8z6hl05',
@@ -75,10 +75,10 @@ return [
         'redirect' => $secrets['CUSTOM']['LINKEDIN_CALLBACK_URL'],
     ],
 
-//'twitter' => [
-//    'client_id' => '48TYSJN1jhKnqqilnwxSfLmmu',
-//    'client_secret' => 'iqHoKwYhKICQcgvkIoaNJVMpvvipraHJf8mJ7nXl1lDPw6g7v5',
-//    'redirect' => 'http://test-ef.com/logintwit',
-//],
+'twitter' => [
+    'client_id' => '48TYSJN1jhKnqqilnwxSfLmmu',
+    'client_secret' => 'iqHoKwYhKICQcgvkIoaNJVMpvvipraHJf8mJ7nXl1lDPw6g7v5',
+    'redirect' => 'http://event.test-y-sbm.com/logintwit',
+],
 
 ];
