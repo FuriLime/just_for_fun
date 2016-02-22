@@ -86,11 +86,6 @@ class EventsController extends Controller {
 	 */
 	public function create(Request $request)
 	{
-        if ($request->ajax())
-        {
-            var_dump("sadfsdfdsf");
-            return true;
-        }
 		// Is the user logged in?
 		if (Sentinel::check()) {
 			if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
