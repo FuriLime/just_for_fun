@@ -21,7 +21,7 @@ class EventcategoriesController extends Controller {
 	{
 		if (Sentinel::check()) {
 			if (Sentinel::inRole('admin')) {
-				$eventcategories = event_channels::latest()->get();
+				$eventcategories = Eventcategory::latest()->get();
 				return view('admin.eventcategories.index', compact('eventcategories'));
 			}
 		}
