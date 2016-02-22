@@ -40,7 +40,7 @@ Edit a eventcategory
                         </ul>
                     @endif
 
-                    {!! Form::model($eventcategory, ['method' => 'PATCH', 'action' => ['EventChannelsController@update', $eventcategory->id]]) !!}
+                    {!! Form::model($eventcategory, ['method' => 'PATCH', 'action' => ['EventcategoriesController@update', $eventcategory->id]]) !!}
 
                     <div class="form-group">
                         {!! Form::label('title', 'Title: ') !!}
