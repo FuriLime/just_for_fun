@@ -138,7 +138,8 @@
                                 </li> -->
 
                                  <li>
-                                    <a href="{{ URL::route('users.show',Sentinel::getUser()->id) }}">
+                                    <a href="{!! (Request::is('admin/events') ? 'class="active" id="active"' : '') !!}">
+                                        {{--<a href="{{ URL::to('admin/events') }}">--}}
                                         <i class="fa fa-angle-double-right"></i>
                                         Favorite events
                                     </a>
