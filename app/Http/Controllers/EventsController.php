@@ -202,7 +202,7 @@ class EventsController extends Controller {
 					//$event = Event::findOrFail($uuid);
 			$event = Event::whereUuid($uuid)->first();
  			//изменить в зависимоси от настроет пользователя
-			$date = new \DateTime($event['start'], new \DateTimeZone($event['timezone']));
+			$date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
                 if(Sentinel::getUser()->timezone){
                     $my_time_zone = Sentinel::getUser()->timezone;
                 }else {
@@ -213,7 +213,7 @@ class EventsController extends Controller {
 			$date->setTimezone(new \DateTimeZone($my_time_zone));
 			$event_start_zero = $date;
 
-			$date = new \DateTime($event['finish'], new \DateTimeZone($event['timezone']));
+			$date = new \DateTime($event['finish'], new \DateTimeZone('UTC'));
 			$date->setTimezone(new \DateTimeZone($my_time_zone));
 			$event_finish_zero = $date;
 
