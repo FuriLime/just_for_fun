@@ -42,13 +42,26 @@ Edit a eventcategory
 
                     {!! Form::model($eventcategory, ['method' => 'PATCH', 'action' => ['EventcategoriesController@update', $eventcategory->id]]) !!}
 
-                    <div class="form-group">
-                        {!! Form::label('title', 'Title: ') !!}
-                        {!! Form::text('title', null, ['class' => 'form-control']) !!}
-                    </div><div class="form-group">
-                        {!! Form::label('description', 'Description: ') !!}
-                        {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
-                    </div>
+                         <div class="form-group">
+                             {!! Form::label('channel_name', 'Title: ') !!}
+                             {!! Form::text('channel_name', null, ['class' => 'form-control']) !!}
+                         </div>
+
+                         <div class="form-group">
+                             {!! Form::label('channel_url', 'URL: ') !!}
+                             {!! Form::text('channel_url', null, ['class' => 'form-control']) !!}
+                         </div>
+
+                         <div class="form-group">
+                             {!! Form::label('status', 'Status: ') !!}
+                             {!! Form::text('status', null, ['class' => 'form-control']) !!}
+                         </div>
+
+
+                         <div class="form-group">
+                             {!! Form::label('channel_description', 'Description: ') !!}
+                             {!! Form::textarea('channel_description', null, ['class' => 'form-control']) !!}
+                         </div>
 
                     <div class="form-group">
                         {!! Form::submit('Update', ['class' => 'btn btn-primary form-control']) !!}
