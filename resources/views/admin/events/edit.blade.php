@@ -60,14 +60,18 @@ Edit a event
                     </div><div class="form-group">
                         {!! Form::label('timezone', 'Timezone: ') !!}
                         {!! Form::text('timezone', null, ['class' => 'form-control']) !!}
-                    </div><div class="form-group">
-                        {!! Form::label('date', 'Date: ') !!}
-                        {!! Form::text('date', null, ['class' => 'form-control']) !!}
-                    </div><div class="form-group">
-                        {!! Form::label('time', 'Time: ') !!}
-                        {!! Form::text('time', null, ['class' => 'form-control']) !!}
-                    </div><div class="form-group">
-                        {!! Form::label('enddate', 'Enddate: ') !!}
+                    </div>
+
+                         {{--<div class="form-group">--}}
+                        {{--{!! Form::label('date', 'Date: ') !!}--}}
+                        {{--{!! Form::text('date', null, ['class' => 'form-control']) !!}--}}
+                    {{--</div><div class="form-group">--}}
+                        {{--{!! Form::label('time', 'Time: ') !!}--}}
+                        {{--{!! Form::text('time', null, ['class' => 'form-control']) !!}--}}
+                    {{--</div>--}}
+
+                         <div class="form-group">
+                        {!! Form::label('start', 'Enddate: ') !!}
                         {!! Form::text('enddate', null, ['class' => 'form-control']) !!}
                     </div><div class="form-group">
                         {!! Form::label('endtime', 'Endtime: ') !!}
