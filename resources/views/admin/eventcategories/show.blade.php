@@ -32,8 +32,8 @@ eventcategory
             <div class="panel-body">
                 <table class="table">
                     <tr><td>id</td><td>{{ $eventcategory->id }}</td></tr>
-                     <tr><td>title</td><td>{{ $eventcategory['title'] }}</td></tr>
-					<tr><td>description</td><td>{{ $eventcategory['description'] }}</td></tr>
+                     <tr><td>channel_name</td><td>{{ $eventcategory['channel_name'] }}</td></tr>
+					<tr><td>description</td><td>{{ $eventcategory['channel_description'] }}</td></tr>
 					
                 </table>
             </div>
