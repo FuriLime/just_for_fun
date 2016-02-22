@@ -51,8 +51,18 @@
       <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38909775" vertical-offset="2598" max-vertical-offset="3690">
-              <caret line="187" column="79" selection-start-line="187" selection-start-column="79" selection-end-line="187" selection-end-column="79" />
+            <state vertical-scroll-proportion="0.69924814" vertical-offset="2463" max-vertical-offset="3690">
+              <caret line="189" column="49" selection-start-line="189" selection-start-column="49" selection-end-line="189" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_only.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/groups/admin_only.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.9166667" vertical-offset="70" max-vertical-offset="945">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -362,12 +372,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-00100" summary="cxhx">
-      <created>1456142124041</created>
-      <option name="number" value="00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1456142124041</updated>
-    </task>
     <task id="LOCAL-00101" summary="cxhx">
       <created>1456142168066</created>
       <option name="number" value="00101" />
@@ -656,7 +660,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456149946647</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="cxhx">
+      <created>1456150300519</created>
+      <option name="number" value="00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1456150300519</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -711,13 +721,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20215634" vertical-offset="0" max-vertical-offset="840">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/geoip2/geoip2/bin/benchmark.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32345015" vertical-offset="0" max-vertical-offset="465">
@@ -1099,10 +1102,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/groups/admin_only.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.9166667" vertical-offset="70" max-vertical-offset="945">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38909775" vertical-offset="2598" max-vertical-offset="3690">
-          <caret line="187" column="79" selection-start-line="187" selection-start-column="79" selection-end-line="187" selection-end-column="79" />
+        <state vertical-scroll-proportion="0.69924814" vertical-offset="2463" max-vertical-offset="3690">
+          <caret line="189" column="49" selection-start-line="189" selection-start-column="49" selection-end-line="189" selection-end-column="49" />
           <folding />
         </state>
       </provider>

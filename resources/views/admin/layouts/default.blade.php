@@ -187,7 +187,7 @@
                                     <li {!! (Request::is('admin/groups/admin_only') ? 'class="active" id="active"' : '') !!}>
                                         <a href="{{ URL::to('admin/groups/admin_only') }}">
                                             <i class="fa fa-angle-double-right"></i>
-                                            user Only Access
+                                            Admin Only Access
                                         </a>
                                     </li>
                                 <!-- @endif -->
