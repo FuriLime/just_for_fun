@@ -43,12 +43,20 @@ Create New eventcategory
                     {!! Form::open(['url' => 'admin/eventcategories']) !!}
 
                     <div class="form-group">
-                        {!! Form::label('title', 'Title: ') !!}
+                        {!! Form::label('channel_name', 'Title: ') !!}
                         {!! Form::text('title', null, ['class' => 'form-control']) !!}
                     </div><div class="form-group">
-                        {!! Form::label('description', 'Description: ') !!}
+                        {!! Form::label('channel_description', 'Description: ') !!}
                         {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
                     </div>
+                         <div class="form-group">
+                             {!! Form::label('channel_url', 'URL: ') !!}
+                             {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
+                         </div>
+                         <div class="form-group">
+                             {!! Form::label('status', 'URL: ') !!}
+                             {!! Form::textarea('status', null, ['class' => 'form-control']) !!}
+                         </div>
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-4">
