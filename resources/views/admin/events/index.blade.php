@@ -64,7 +64,7 @@ events List
 								{{--<td>{{{ $event->description }}}</td>--}}
 
 								{{--<td>{{{ $event->url }}}</td>--}}
-								{{--<td>{{{ $event->timezone }}}</td>--}}
+								<td>{{{ $event->timezone }}}</td>
 								<td>{{{ $event->start }}}</td>
 								<td>{{{ $event->finish }}}</td>
 								{{--<td>{{{ $event->enddate }}}</td>--}}
