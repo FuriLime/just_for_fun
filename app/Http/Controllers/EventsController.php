@@ -233,8 +233,8 @@ class EventsController extends Controller {
 			$date = new \DateTime($event['start'], new \DateTimeZone($event['timezone']));
             $ip = $_SERVER["REMOTE_ADDR"];
             $location = GeoIP::getLocation($ip);
-            $location['timezone'];
-            var_dump( $location);
+            $my_time_zone = $location['timezone'];
+            var_dump($my_time_zone);
 			$date->setTimezone(new \DateTimeZone($my_time_zone));
 			$event_start_zero = $date;
 
