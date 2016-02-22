@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/billing_and_invoices/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/billing_and_invoices/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -31,8 +32,8 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.958333" vertical-offset="940" max-vertical-offset="3180">
-              <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+            <state vertical-scroll-proportion="-10.208333" vertical-offset="940" max-vertical-offset="3180">
+              <caret line="83" column="63" selection-start-line="83" selection-start-column="63" selection-end-line="83" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -41,8 +42,8 @@
       <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.875" vertical-offset="11277" max-vertical-offset="11895">
-              <caret line="786" column="41" selection-start-line="786" selection-start-column="20" selection-end-line="786" selection-end-column="41" />
+            <state vertical-scroll-proportion="-15.125" vertical-offset="11277" max-vertical-offset="11895">
+              <caret line="788" column="68" selection-start-line="788" selection-start-column="21" selection-end-line="788" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -52,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/admin/billing_and_invoices/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.32142857" vertical-offset="945" max-vertical-offset="2340">
-              <caret line="75" column="144" selection-start-line="75" selection-start-column="144" selection-end-line="75" selection-end-column="144" />
+              <caret line="75" column="165" selection-start-line="75" selection-start-column="165" selection-end-line="75" selection-end-column="165" />
               <folding />
             </state>
           </provider>
@@ -339,12 +340,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-00071" summary="cxhx">
-      <created>1456137970529</created>
-      <option name="number" value="00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1456137970529</updated>
     </task>
     <task id="LOCAL-00072" summary="cxhx">
       <created>1456138002159</created>
@@ -634,7 +629,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456143361387</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="cxhx">
+      <created>1456143393795</created>
+      <option name="number" value="00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1456143393795</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1048,14 +1049,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.875" vertical-offset="11277" max-vertical-offset="11895">
-          <caret line="786" column="41" selection-start-line="786" selection-start-column="20" selection-end-line="786" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/events/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.583333" vertical-offset="310" max-vertical-offset="1635">
@@ -1064,10 +1057,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.125" vertical-offset="11277" max-vertical-offset="11895">
+          <caret line="788" column="68" selection-start-line="788" selection-start-column="21" selection-end-line="788" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.958333" vertical-offset="940" max-vertical-offset="3180">
-          <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+        <state vertical-scroll-proportion="-10.208333" vertical-offset="940" max-vertical-offset="3180">
+          <caret line="83" column="63" selection-start-line="83" selection-start-column="63" selection-end-line="83" selection-end-column="63" />
           <folding />
         </state>
       </provider>
@@ -1075,7 +1076,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/admin/billing_and_invoices/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32142857" vertical-offset="945" max-vertical-offset="2340">
-          <caret line="75" column="144" selection-start-line="75" selection-start-column="144" selection-end-line="75" selection-end-column="144" />
+          <caret line="75" column="165" selection-start-line="75" selection-start-column="165" selection-end-line="75" selection-end-column="165" />
           <folding />
         </state>
       </provider>
