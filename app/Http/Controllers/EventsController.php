@@ -121,6 +121,10 @@ class EventsController extends Controller {
 //            if ($request->isMethod('get')){
 //                var_dump($request->is('ajax'));
 //            }
+            if (Request::ajax())
+            {
+                var_dump('sadfsdfdsf');
+            }
             $ip = $_SERVER["REMOTE_ADDR"];
             $location = GeoIP::getLocation($ip);
             $my_time_zone = $location['timezone'];
