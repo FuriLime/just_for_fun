@@ -25,7 +25,7 @@ event
         <div class="panel panel-primary ">
             <div class="panel-heading clearfix">
                 <h4 class="panel-title"> <i class="livicon" data-name="list-ul" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-                    {{--event {{ $event['id'] }}'s details--}}
+                    event {{ $event->id }}'s details
                 </h4>
             </div>
             <br />
