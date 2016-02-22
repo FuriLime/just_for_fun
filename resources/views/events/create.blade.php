@@ -45,7 +45,7 @@ Create New event
 
 
                     {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
-                         <input type="hidden" name="_token" id="_token" value="{{{ csrf_token() }}}" />
+                         <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }} " />
 
                          <input id="usertimezone" type="text" content="usertimezone" name="usertimezone" value="" hidden>
 
