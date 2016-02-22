@@ -31,7 +31,7 @@
 
 <body class="skin-josh">
     <header class="header">
-        <a href="{{ route('/') }}" class="logo">
+        <a href="{{ route('home') }}" class="logo">
             <img src="{{ asset('assets/img/logo.png') }}" alt="logo">
         </a>
         <nav class="navbar navbar-static-top" role="navigation">
