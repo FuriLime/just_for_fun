@@ -78,7 +78,7 @@ return [
 'twitter' => [
     'client_id' => '48TYSJN1jhKnqqilnwxSfLmmu',
     'client_secret' => 'iqHoKwYhKICQcgvkIoaNJVMpvvipraHJf8mJ7nXl1lDPw6g7v5',
-    'redirect' => 'http://event.test-y-sbm.com/logintwit',
+    'redirect' => 'http://event.test-y-sbm.com/oauthtwitter',
 ],
 
 ];
