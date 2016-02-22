@@ -14,7 +14,7 @@ Route::group(array('prefix' => 'admin'), function () {Route::resource('usergroup
 });
 
 Route::group(array('prefix' => 'admin'), function () {
-	Route::resource('eventcategories', 'EventcategoriesController');
-	Route::get('eventcategories/{id}/delete', array('as' => 'admin.eventcategories.delete', 'uses' => 'EventcategoriesController@getDelete'));
-	Route::get('eventcategories/{id}/confirm-delete', array('as' => 'admin.eventcategories.confirm-delete', 'uses' => 'EventcategoriesController@getModalDelete'));
+	Route::resource('eventcategories', 'EventChannelsController');
+	Route::get('eventcategories/{id}/delete', array('as' => 'admin.eventcategories.delete', 'uses' => 'EventChannelsController@getDelete'));
+	Route::get('eventcategories/{id}/confirm-delete', array('as' => 'admin.eventcategories.confirm-delete', 'uses' => 'EventChannelsController@getModalDelete'));
 });
