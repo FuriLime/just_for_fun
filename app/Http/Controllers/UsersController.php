@@ -771,7 +771,7 @@ class UsersController extends JoshController
 
     public function getBillingAndInvoices()
     {
-        return view('admin/billing_and_invoices/edit_billing_details');
+        return view('admin.billing_and_invoices.edit_billing_details');
 //        return view('admin/billing_and_invoices/index');
     }
 
