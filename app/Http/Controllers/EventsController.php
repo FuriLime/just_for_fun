@@ -228,17 +228,17 @@ class EventsController extends Controller {
 
 			//show event for unregister user
 			$event = Event::whereUuid($uuid)->first();
-
- 			//изменить в зависимоси от настроет пользователя
-			$date = new \DateTime($event['start'], new \DateTimeZone($event['timezone']));
             $ip = $_SERVER["REMOTE_ADDR"];
             $location = GeoIP::getLocation($ip);
             $my_time_zone = $location['timezone'];
+ 			//изменить в зависимоси от настроет пользователя
+			$date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
+
             var_dump($my_time_zone);
 			$date->setTimezone(new \DateTimeZone($my_time_zone));
 			$event_start_zero = $date;
 
-			$date = new \DateTime($event['finish'], new \DateTimeZone($event['timezone']));
+			$date = new \DateTime($event['finish'], new \DateTimeZone('UTC'));
 			$date->setTimezone(new \DateTimeZone($my_time_zone));
 			$event_finish_zero = $date;
 			$event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
