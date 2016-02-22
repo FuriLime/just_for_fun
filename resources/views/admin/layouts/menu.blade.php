@@ -67,7 +67,7 @@
             </a>
         </li>
         <li {!! (Request::is('admin/billing_and_invoices') ? 'class="active" id="active"' : '') !!}>
-            <a href="{{ URL::to('admin/billing_and_invoices') }}">
+            <a href="{{ URL::to('admin/billing_and_invoices/edit_billing_details') }}">
                 <i class="fa fa-angle-double-right"></i>
                 Billing & Invoices
             </a>
