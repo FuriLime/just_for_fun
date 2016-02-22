@@ -183,9 +183,9 @@
                                         Any User Access
                                     </a>
                                 </li>
-                                <!-- @if (Sentinel::getUser()->inRole('user')) -->
-                                    <li {!! (Request::is('admin/groups/user_only') ? 'class="active" id="active"' : '') !!}>
-                                        <a href="{{ URL::to('admin/groups/user_only') }}">
+                                <!-- @if (Sentinel::getUser()->inRole('admin')) -->
+                                    <li {!! (Request::is('admin/groups/admin_only') ? 'class="active" id="active"' : '') !!}>
+                                        <a href="{{ URL::to('admin/groups/admin_only') }}">
                                             <i class="fa fa-angle-double-right"></i>
                                             user Only Access
                                         </a>
