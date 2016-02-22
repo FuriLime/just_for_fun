@@ -78,7 +78,7 @@ Route::group(array('prefix' => 'admin'), function () {
     Route::get('deleted_users', array('as' => 'deleted_users', 'before' => 'Sentinel', 'uses' => 'UsersController@getDeletedUsers'));
 
 
-    Route::get('billing_and_invoices', 'UsersController@getBillingAndInvoices');
+//    Route::get('billing_and_invoices', 'UsersController@getBillingAndInvoices');
     Route::get('subscription_and_credits','UsersController@getSubscriptionAndCredits');
     Route::get('bonuses_and_free_staff','UsersController@getBonusesAndFreeStuff');
     Route::get('billing_and_invoices','UsersController@getEditBillingDetails');
