@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Lang;
 
-class EventcategoriesController extends Controller {
+class EventChannelsController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
