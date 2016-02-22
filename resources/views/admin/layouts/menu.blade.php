@@ -48,12 +48,12 @@
         <span class="fa arrow"></span>
     </a>
     <ul class="sub-menu">
-        {{--<li {!! (Request::is('admin/eventcategories') ? 'class="active" id="active"' : '') !!}>--}}
-            {{--<a href="{{ URL::to('admin/eventcategories') }}">--}}
-                {{--<i class="fa fa-angle-double-right"></i>--}}
-                {{--Event Channels--}}
-            {{--</a>--}}
-        {{--</li>--}}
+        <li {!! (Request::is('admin/eventcategories') ? 'class="active" id="active"' : '') !!}>
+            <a href="{{ URL::to('admin/eventcategories') }}">
+                <i class="fa fa-angle-double-right"></i>
+                Event Channels
+            </a>
+        </li>
        {{--<!--  <li {!! (Request::is('admin/eventcategories/create') ? 'class="active" id="active"' : '') !!}>--}}
             {{--<a href="{{ URL::to('admin/eventcategories/create') }}">--}}
                 {{--<i class="fa fa-angle-double-right"></i>--}}
