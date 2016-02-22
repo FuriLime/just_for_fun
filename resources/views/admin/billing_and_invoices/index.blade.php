@@ -73,7 +73,7 @@ Josh user Template
                     </tr>
                   </tbody>
                 </table>
-                <button class="btn btn-primary text-white"><i class='glyphicon glyphicon-edit'></i><a href="{{ route('admin.billing_and_invoices.edit_billing_details') }}">Edit Billing Details</a></button>
+                <button class="btn btn-primary text-white"><i class='glyphicon glyphicon-edit'></i><a href="{{ route('admin.billing_and_invoices') }}">Edit Billing Details</a></button>
                 <button class="btn btn-default text-white">Edit Payment Method</button>
               </div>
               <div id="payment_method_panel" class="tab-pane fade">
