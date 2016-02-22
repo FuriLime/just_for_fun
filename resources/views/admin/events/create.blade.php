@@ -42,37 +42,37 @@ Create New event
 
                     {!! Form::open(['url' => 'admin/events']) !!}
 
-                    <div class="form-group">
-                        {!! Form::label('title', 'Title: ') !!}
-                        {!! Form::text('title', null, ['class' => 'form-control']) !!}
-                    </div><div class="form-group">
-                        {!! Form::label('type', 'Type: ') !!}
-                        {!! Form::text('type', null, ['class' => 'form-control']) !!}
-                    </div><div class="form-group">
-                        {!! Form::label('description', 'Description: ') !!}
-                        {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
-                    </div><div class="form-group">
-                        {!! Form::label('location', 'Location: ') !!}
-                        {!! Form::text('location', null, ['class' => 'form-control']) !!}
-                    </div><div class="form-group">
-                        {!! Form::label('url', 'Url: ') !!}
-                        {!! Form::text('url', null, ['class' => 'form-control']) !!}
-                    </div><div class="form-group">
-                        {!! Form::label('timezone', 'Timezone: ') !!}
-                        {!! Form::text('timezone', null, ['class' => 'form-control']) !!}
-                    </div><div class="form-group">
-                        {!! Form::label('date', 'Date: ') !!}
-                        {!! Form::text('date', null, ['class' => 'form-control']) !!}
-                    </div><div class="form-group">
-                        {!! Form::label('time', 'Time: ') !!}
-                        {!! Form::text('time', null, ['class' => 'form-control']) !!}
-                    </div><div class="form-group">
-                        {!! Form::label('enddate', 'Enddate: ') !!}
-                        {!! Form::text('enddate', null, ['class' => 'form-control']) !!}
-                    </div><div class="form-group">
-                        {!! Form::label('endtime', 'Endtime: ') !!}
-                        {!! Form::text('endtime', null, ['class' => 'form-control']) !!}
-                    </div>
+                    {{--<div class="form-group">--}}
+                        {{--{!! Form::label('title', 'Title: ') !!}--}}
+                        {{--{!! Form::text('title', null, ['class' => 'form-control']) !!}--}}
+                    {{--</div><div class="form-group">--}}
+                        {{--{!! Form::label('type', 'Type: ') !!}--}}
+                        {{--{!! Form::text('type', null, ['class' => 'form-control']) !!}--}}
+                    {{--</div><div class="form-group">--}}
+                        {{--{!! Form::label('description', 'Description: ') !!}--}}
+                        {{--{!! Form::textarea('description', null, ['class' => 'form-control']) !!}--}}
+                    {{--</div><div class="form-group">--}}
+                        {{--{!! Form::label('location', 'Location: ') !!}--}}
+                        {{--{!! Form::text('location', null, ['class' => 'form-control']) !!}--}}
+                    {{--</div><div class="form-group">--}}
+                        {{--{!! Form::label('url', 'Url: ') !!}--}}
+                        {{--{!! Form::text('url', null, ['class' => 'form-control']) !!}--}}
+                    {{--</div><div class="form-group">--}}
+                        {{--{!! Form::label('timezone', 'Timezone: ') !!}--}}
+                        {{--{!! Form::text('timezone', null, ['class' => 'form-control']) !!}--}}
+                    {{--</div><div class="form-group">--}}
+                        {{--{!! Form::label('date', 'Date: ') !!}--}}
+                        {{--{!! Form::text('date', null, ['class' => 'form-control']) !!}--}}
+                    {{--</div><div class="form-group">--}}
+                        {{--{!! Form::label('time', 'Time: ') !!}--}}
+                        {{--{!! Form::text('time', null, ['class' => 'form-control']) !!}--}}
+                    {{--</div><div class="form-group">--}}
+                        {{--{!! Form::label('enddate', 'Enddate: ') !!}--}}
+                        {{--{!! Form::text('enddate', null, ['class' => 'form-control']) !!}--}}
+                    {{--</div><div class="form-group">--}}
+                        {{--{!! Form::label('endtime', 'Endtime: ') !!}--}}
+                        {{--{!! Form::text('endtime', null, ['class' => 'form-control']) !!}--}}
+                    {{--</div>--}}
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-4">
