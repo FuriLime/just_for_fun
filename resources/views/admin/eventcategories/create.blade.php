@@ -54,7 +54,7 @@ Create New eventcategory
                              {!! Form::textarea('channel_url', null, ['class' => 'form-control']) !!}
                          </div>
                          <div class="form-group">
-                             {!! Form::label('status', 'URL: ') !!}
+                             {!! Form::label('status', 'Status: ') !!}
                              {!! Form::textarea('status', null, ['class' => 'form-control']) !!}
                          </div>
 
