@@ -81,7 +81,7 @@ Route::group(array('prefix' => 'admin'), function () {
     Route::get('billing_and_invoices', 'UsersController@getBillingAndInvoices');
     Route::get('subscription_and_credits','UsersController@getSubscriptionAndCredits');
     Route::get('bonuses_and_free_staff','UsersController@getBonusesAndFreeStuff');
-    Route::get('edit_billing_details','UsersController@getEditBillingDetails');
+    Route::get('billing_and_invoices/edit_billing_details','UsersController@getEditBillingDetails');
 
 	# Group Management
     Route::group(array('prefix' => 'groups','before' => 'Sentinel'), function () {
