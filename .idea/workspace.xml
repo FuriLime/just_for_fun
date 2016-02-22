@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/eventcategories/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/eventcategories/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/eventcategories/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/eventcategories/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/eventcategories/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/eventcategories/create.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -76,8 +75,8 @@
       <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/eventcategories/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.0833335" vertical-offset="550" max-vertical-offset="1290">
-              <caret line="48" column="60" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="60" />
+            <state vertical-scroll-proportion="-13.958333" vertical-offset="520" max-vertical-offset="1410">
+              <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -106,7 +105,7 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/eventcategories/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.04464286" vertical-offset="775" max-vertical-offset="1335">
+            <state vertical-scroll-proportion="0.7589286" vertical-offset="325" max-vertical-offset="1335">
               <caret line="50" column="75" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
               <folding />
             </state>
@@ -179,9 +178,9 @@
         <option value="$PROJECT_DIR$/resources/views/admin/eventcategories/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/eventcategories/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventcategoriesController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/eventcategories/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/eventcategories/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/eventcategories/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/eventcategories/create.blade.php" />
       </list>
     </option>
   </component>
@@ -380,12 +379,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-00033" summary="cxhx">
-      <created>1456125550114</created>
-      <option name="number" value="00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1456125550114</updated>
     </task>
     <task id="LOCAL-00034" summary="cxhx">
       <created>1456125620633</created>
@@ -675,7 +668,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456139026512</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="cxhx">
+      <created>1456139206299</created>
+      <option name="number" value="00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1456139206299</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1092,14 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/eventcategories/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.0833335" vertical-offset="550" max-vertical-offset="1290">
-          <caret line="48" column="60" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/eventcategories/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.208334" vertical-offset="136" max-vertical-offset="720">
@@ -1108,9 +1099,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/eventcategories/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.958333" vertical-offset="520" max-vertical-offset="1410">
+          <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/eventcategories/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.04464286" vertical-offset="775" max-vertical-offset="1335">
+        <state vertical-scroll-proportion="0.7589286" vertical-offset="325" max-vertical-offset="1335">
           <caret line="50" column="75" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
           <folding />
         </state>
