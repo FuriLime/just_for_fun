@@ -268,7 +268,7 @@ Create New event
 //        });
         $.ajax({
             url:'event/add',
-            type: 'POST',
+            type: 'GET',
             data: {
                 value: $("input[name=usertimezone]").val()
             },
