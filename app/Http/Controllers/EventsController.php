@@ -121,7 +121,7 @@ class EventsController extends Controller {
 //            if ($request->isMethod('get')){
 //                var_dump($request->is('ajax'));
 //            }
-            if (Request::ajax())
+            if ($request::ajax())
             {
                 var_dump('sadfsdfdsf');
             }
