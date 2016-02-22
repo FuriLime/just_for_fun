@@ -82,7 +82,7 @@ Create New event
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
-                                <input class="form-control" size="16" id="start" name="start" type="text" value="{{$start_date}}">
+                                <input class="form-control" size="16" id="start" name="start" type="data" value="{{$start_date}}">
 
                             </div>
                         </div>
