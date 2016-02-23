@@ -171,6 +171,10 @@ Route::get('events/{uuid}/delete', array('as' => 'events.delete', 'uses' => 'Eve
 Route::get('events/{uuid}/confirm-delete', array('as' => 'events.confirm-delete', 'uses' => 'EventsController@getModalDelete'));
 Route::post('event/addtocalendar', array('as' => 'event.addtocalendar', 'uses' => 'EventsController@addToCalendar'));
 
+
+Route::resource('users', 'UsersControlle');
+
+
 Route::get('/', array('as' => 'home', function () {
     return View::make('index');
 }));

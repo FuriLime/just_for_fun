@@ -256,8 +256,8 @@
 										{!! $errors->first('email_confirm', '<span class="help-block">:message</span>') !!}
 									</div>
                                     <p class="keeplogin">
-                                        <input type="checkbox" name="subscribe-me" id="subscribe-me" value="subscribe-me" />
-                                        <label for="subscribe-me">Subscribe</label>
+                                        {{Form::label('notify')}}
+                                        {{Form::check('notify', null, null, ['id'=>'notify'])}}
                                     </p>
 								</div>
 
