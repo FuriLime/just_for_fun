@@ -297,12 +297,14 @@
 								<div class="col-sm-12">
 									{!! $errors->first('email', '<span class="help-block">:message</span>') !!}
 								</div>
+
+                                <p class="keeplogin">
+                                    <input type="checkbox" name="subscribe-me" id="subscribe-me" value="subscribe-me" />
+                                    <label for="subscribe-me">Subscribe</label>
+                                </p>
 							</div>
 
-                            <p class="keeplogin">
-                                <input type="checkbox" name="subscribe-me" id="subscribe-me" value="subscribe-me" />
-                                <label for="subscribe-me">Keep me logged in</label>
-                            </p>
+
 
 							<p class="login button">
 								<input type="submit" value="Submit" class="btn btn-success" />
