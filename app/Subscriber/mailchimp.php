@@ -16,79 +16,33 @@ use App\User;
 
 class Mailchimp
 {
-
     protected $mailchimp;
-    protected $listener;
-    protected $listid;
+    protected $listId = '1234567890';        // Id of newsletter list
 
-    public function __construct($listener)
+    /**
+     * Pull the Mailchimp-instance (including API-key) from the IoC-container.
+     */
+    public function __construct(Mailchimp $mailchimp)
     {
-        $this->mailchimp = '26dd8bfcf2dab1dfa670441d9e3a611f-us1';
-        $this->lsitid = '3b2e9de273';
-        $this->listener = $listener;
-
+        $this->mailchimp = $mailchimp;
     }
 
-    public function saveNewSubscriber(array $data)
-    {
-        return User::create(['email' => $data['email']]);
-    }
-
-    protected function validate(Request $request)
-    {
-        return Validator::make($request->all(), [
-            'email' => 'required|email|max:255|unique:users'
-        ]);
-    }
-
-    public function subscribe(Request $request)
-    {
-
-        if ($this->validate($request)->fails()) {
-            return $this->listener->subscription_failed('You have already subscribed to our mailing list');
-        }
-
-        $subscriberAdded = $this->saveNewSubscriber($request->all());
-
-        if ($subscriberAdded) {
-            $addedToProviderList = $this->subscribeToList($request->get('email'));
-
-            if ($addedToProviderList) {
-                return $this->listener->subscription_succeed('Thank you for subscribing');
-            }
-        }
-
-
-    }
-
-    public function subscribeToList($email)
+    /**
+     * Access the mailchimp lists API
+     */
+    public function addEmailToList($email)
     {
         try {
-            $status = $this->mailchimp->lists->subscribe(
-                $this->listid,
-                compact('email'),
-                null, // merge vars
-                'html', // email type
-                false, // requires double optin
-                false, // update existing members
-                true
-            );
-
-        } catch (Exception $e) {
-            return false;
-            // if 214 then already subscribed
-            //var_dump($e->getCode());
+            $this->mailchimp
+                ->lists
+                ->subscribe(
+                    $this->listId,
+                    ['email' => $email]
+                );
+        } catch (\Mailchimp_List_AlreadySubscribed $e) {
+            // do something
+        } catch (\Mailchimp_Error $e) {
+            // do something
         }
-    }
-
-    public function unsubscribeFromList($email)
-    {
-        return $this->mailchimp->lists->unsubscribe(
-            $this->listid,
-            compact('email'),
-            false, //delete permanently
-            false, //send goodbye emails
-            false //send unsubscribe notification email
-        );
     }
 }
