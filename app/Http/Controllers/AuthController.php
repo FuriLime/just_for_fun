@@ -109,7 +109,7 @@ class AuthController extends JoshController
         $rules = array(
             // 'first_name'       => 'required|min:3',
             // 'last_name'        => 'required|min:3',
-            'email'            => 'required|email|unique:users',
+//            'email'            => 'required|email|unique:users',
             // 'email_confirm'    => 'required|email|same:email',
             'password'         => 'required|between:3,32',
             // 'password_confirm' => 'required|same:password',
