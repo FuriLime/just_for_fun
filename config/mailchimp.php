@@ -11,5 +11,5 @@ return [
     |
     */
 
-    'apikey' => 'a5ffc98dfd04b26741be43831bf6fb79-us12',
+    'apikey' => '901e50791519fce4886a3e84f2087ff9-us1',
 ];
