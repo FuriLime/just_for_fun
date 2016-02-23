@@ -16,7 +16,7 @@ use Socialite;
 use App\User;
 use App\Activate;
 use Mailchimp;
-use Spatie\Newsletter\MailChimp\Newsletter;
+use Newsletter;
 
 
 class AuthController extends JoshController
