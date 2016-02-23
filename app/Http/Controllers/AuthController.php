@@ -1,4 +1,5 @@
 <?php namespace App\Http\Controllers;
+use GuzzleHttp\Psr7\Request;
 use Sentinel;
 use View;
 use Validator;
@@ -103,7 +104,7 @@ class AuthController extends JoshController
      *
      * @return Redirect
      */
-    public function postSignup()
+    public function postSignup(Request $request)
     {
         // Declare the rules for the form validation
         $rules = array(
@@ -132,13 +133,8 @@ class AuthController extends JoshController
                 'email'      => Input::get('email'),
                 'password'   => Input::get('password'),
             ));
-            $this->mailchimp
-                ->lists
-                ->subscribe(
-                    $this->listId,
-                    ['email' => $email]
-                );
-dd($this);
+            Newsletter::subscribe($request->input('email'));
+dd(Newsletter::subscribe($request->input('email')));
             //add user to 'User' group
             $role = Sentinel::findRoleById(2);
             $role->users()->attach($user);
