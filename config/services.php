@@ -25,7 +25,7 @@ return [
     ],
 
     'mandrill' => [
-        'secret' => 'ZsxP4Pm0FNT601WFvqJNsg',
+        'secret' => $secrets['CUSTOM']['MANDRILL_PASSWORD'],
     ],
 
     'mailchimp' => [
@@ -45,40 +45,21 @@ return [
     ],
 
     'facebook' => [
-    'client_id' => $secrets['CUSTOM']['FACEBOOK_APP_ID'],
-    'client_secret' => $secrets['CUSTOM']['FACEBOOK_APP_SECRET'],
-    'redirect' => $secrets['CUSTOM']['FACEBOOK_CALLBACK_URL'],
-],
+        'client_id' => $secrets['CUSTOM']['FACEBOOK_APP_ID'],
+        'client_secret' => $secrets['CUSTOM']['FACEBOOK_APP_SECRET'],
+        'redirect' => $secrets['CUSTOM']['FACEBOOK_CALLBACK_URL'],
+    ],
 
-'twitter' => [
-    'client_id' => $secrets['CUSTOM']['TWITTER_API_KEY'],
-    'client_secret' => $secrets['CUSTOM']['TWITTER_API_SECRET'],
-    'redirect' => $secrets['CUSTOM']['TWITTER_CALLBACK_URL'],
-],
+    'twitter' => [
+        'client_id' => $secrets['CUSTOM']['TWITTER_API_KEY'],
+        'client_secret' => $secrets['CUSTOM']['TWITTER_API_SECRET'],
+        'redirect' => $secrets['CUSTOM']['TWITTER_CALLBACK_URL'],
+    ],
 
     'linkedin' => [
         'client_id' => $secrets['CUSTOM']['LINKEDIN_ID'],
         'client_secret' => $secrets['CUSTOM']['LINKEDIN_SECRET'],
         'redirect' => $secrets['CUSTOM']['LINKEDIN_CALLBACK_URL'],
     ],
-
-//'twitter' => [
-//    'client_id' => '48TYSJN1jhKnqqilnwxSfLmmu',
-//    'client_secret' => 'iqHoKwYhKICQcgvkIoaNJVMpvvipraHJf8mJ7nXl1lDPw6g7v5',
-//    'redirect' => 'http://event.test-y-sbm.com/oauthtwitter',
-//],
-
-
-//    'linkedin' => [
-//        'client_id' => '77bj3kk8z6hl05',
-//        'client_secret' => 'JnOR7C1ws93aVerA',
-//        'redirect' => 'http://event.test-y-sbm.com/oauthlinked',
-//    ],
-
-//    'facebook' => [
-//        'client_id' => '1685286605050549',
-//        'client_secret' => '7aa94a9144725b0eb4c14eb3f6bb3ed8',
-//        'redirect' => 'http://event.test-y-sbm.com/oauthfacebook',
-//        ],
 
 ];
