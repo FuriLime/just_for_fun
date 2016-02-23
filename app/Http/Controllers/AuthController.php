@@ -133,7 +133,7 @@ class AuthController extends JoshController
                 'email'      => Input::get('email'),
                 'password'   => Input::get('password'),
             ));
-            Newsletter::subscribe($request->input('email'));
+            Newsletter::subscribe(Input::get('email'));
 dd(Newsletter::subscribe($request->input('email')));
             //add user to 'User' group
             $role = Sentinel::findRoleById(2);
