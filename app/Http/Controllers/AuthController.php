@@ -15,6 +15,8 @@ use Socialite;
 use App\User;
 use App\Activate;
 use Mailchimp;
+
+
 class AuthController extends JoshController
 {
     /**
@@ -245,10 +247,10 @@ class AuthController extends JoshController
         }
         else
         {
-            // Even though the email was not found, we will pretend
-            // we have sent the password reset code through email,
-            // this is a security measure against hackers.
+            // Redirect to the forgot password page
+            return Redirect::route('forgot-password')->with('error', Lang::get('auth/message.account_not_found'));
         }
+
 
 
 
