@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/en/general.php" afterPath="$PROJECT_DIR$/resources/lang/en/general.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/emails/register-activate.blade.php" afterPath="$PROJECT_DIR$/resources/views/emails/register-activate.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -68,20 +68,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register-activate.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="register-activate.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/emails/register-activate.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="285">
-              <caret line="11" column="27" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.2840909" vertical-offset="0" max-vertical-offset="285">
+              <caret line="5" column="119" selection-start-line="5" selection-start-column="119" selection-end-line="5" selection-end-column="119" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="general.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="general.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37906137" vertical-offset="0" max-vertical-offset="277">
+            <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="240">
               <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
               <folding />
             </state>
@@ -96,7 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_02_05_142502_update_users_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/AdminSeeder.php" />
         <option value="$PROJECT_DIR$/public/assets/vendors/tags/bower_components/typeahead.js/test/typeahead/plugin_spec.js" />
@@ -147,6 +146,7 @@
         <option value="$PROJECT_DIR$/config/services.php" />
         <option value="$PROJECT_DIR$/secrets.json" />
         <option value="$PROJECT_DIR$/resources/lang/en/general.php" />
+        <option value="$PROJECT_DIR$/resources/views/emails/register-activate.blade.php" />
       </list>
     </option>
   </component>
@@ -333,12 +333,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-00109" summary="cxhx">
-      <created>1456142478778</created>
-      <option name="number" value="00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1456142478778</updated>
     </task>
     <task id="LOCAL-00110" summary="cxhx">
       <created>1456142582211</created>
@@ -628,7 +622,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456219283283</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="cxhx">
+      <created>1456219607930</created>
+      <option name="number" value="00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1456219607930</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1040,18 +1040,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/emails/register-activate.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="285">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="27" />
+        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="240">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/emails/register-activate.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37906137" vertical-offset="0" max-vertical-offset="277">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.2840909" vertical-offset="0" max-vertical-offset="285">
+          <caret line="5" column="119" selection-start-line="5" selection-start-column="119" selection-end-line="5" selection-end-column="119" />
           <folding />
         </state>
       </provider>
