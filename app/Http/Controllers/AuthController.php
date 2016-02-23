@@ -14,6 +14,7 @@ use Mail;
 use Socialite;
 use App\User;
 use App\Activate;
+use Mailchimp;
 class AuthController extends JoshController
 {
     /**
