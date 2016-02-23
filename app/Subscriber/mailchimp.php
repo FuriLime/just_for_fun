@@ -9,7 +9,6 @@
 
 namespace App\Subscriber;
 
-use Mailchimp as ListProvider;
 use Illuminate\Http\Request;
 use Validator;
 use App\User;
