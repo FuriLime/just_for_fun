@@ -248,7 +248,7 @@ class AuthController extends JoshController
         else
         {
             // Redirect to the forgot password page
-            return Redirect::to(URL::previous() . '#toforgot')->with('error', Lang::get('auth/message.forgot-password.fail'));
+            return Redirect::to(URL::previous() . '#toforgot')->with('error', Lang::get('auth/message.forgot-password.error'));
         }
 
 
