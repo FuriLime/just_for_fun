@@ -205,7 +205,7 @@
                                                                             <tbody>
                                                                             <tr>
                                                                                 <td style="font-family: Arial; font-size: 12px; padding: 12px;" class="mcnButtonContent" align="center" valign="middle">
-                                                                                    <a class="mcnButton " title="SIGN UP NOW" href="http://" target="_self" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">SIGN UP NOW</a>
+                                                                                    <a class="mcnButton " title="SIGN UP NOW" href="{!! $activationUrl !!}">{!! $activationUrl !!} target="_self" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">SIGN UP NOW</a>
                                                                                 </td>
                                                                             </tr>
                                                                             </tbody>
