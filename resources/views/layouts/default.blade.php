@@ -180,10 +180,7 @@
 								<input type="checkbox" name="remember-me" id="remember-me" value="remember-me" />
 								<label for="remember-me">Keep me logged in</label>
 							</p>
-                            <p class="keeplogin">
-                                <input type="checkbox" name="subscribe-me" id="subscribe-me" value="subscribe-me" />
-                                <label for="subscribe-me">Keep me logged in</label>
-                            </p>
+
 							<p class="login button">
 								<input type="submit" value="Login" class="btn btn-success" />
 							</p>
@@ -301,6 +298,12 @@
 									{!! $errors->first('email', '<span class="help-block">:message</span>') !!}
 								</div>
 							</div>
+
+                            <p class="keeplogin">
+                                <input type="checkbox" name="subscribe-me" id="subscribe-me" value="subscribe-me" />
+                                <label for="subscribe-me">Keep me logged in</label>
+                            </p>
+
 							<p class="login button">
 								<input type="submit" value="Submit" class="btn btn-success" />
 							</p>
