@@ -26,7 +26,7 @@ class AuthController extends JoshController
      */
 
     protected $mailchimp;
-    protected $listId = '4e4fbb0d19';        // Id of newsletter list
+    protected $listId = '3b2e9de273';        // Id of newsletter list
 
     public function __construct(Mailchimp $mailchimp)
     {
