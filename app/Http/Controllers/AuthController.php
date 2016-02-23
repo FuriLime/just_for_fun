@@ -14,8 +14,7 @@ use Mail;
 use Socialite;
 use App\User;
 use App\Activate;
-
-use App\Subscriber\Mailchimp;
+use Skovmand\Mailchimp;
 
 
 class AuthController extends JoshController
@@ -25,6 +24,17 @@ class AuthController extends JoshController
      *
      * @return View
      */
+
+    protected $mailchimp;
+    protected $listId = '3b2e9de273';        // Id of newsletter list
+
+    public function __construct(Mailchimp $mailchimp)
+    {
+        $this->mailchimp = $mailchimp;
+    }
+
+
+
     public function getSignin()
     {
         // Is the user logged in?
