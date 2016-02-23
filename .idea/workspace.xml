@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Subscriber/mailchimp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Subscriber/mailchimp.php" afterPath="$PROJECT_DIR$/app/Subscriber/mailchimp.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -44,9 +43,12 @@
       <file leaf-file-name="mailchimp.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Subscriber/mailchimp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="573">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-0.9371728" vertical-offset="912" max-vertical-offset="1485">
+              <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+              <folding>
+                <element signature="e#6#88#0#PHP" expanded="true" />
+                <element signature="e#118#148#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,7 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/user/layouts/modal_confirmation.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/bonuses_and_free_staff/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/events/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/billing_and_invoices/edit_billing_details.blade.php" />
@@ -135,6 +136,7 @@
         <option value="$PROJECT_DIR$/vendor/skovmand/mailchimp-laravel/config/mailchimp.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
+        <option value="$PROJECT_DIR$/app/Subscriber/mailchimp.php" />
       </list>
     </option>
   </component>
@@ -285,12 +287,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-00137" summary="cxhx">
-      <created>1456149432542</created>
-      <option name="number" value="00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1456149432542</updated>
     </task>
     <task id="LOCAL-00138" summary="cxhx">
       <created>1456149477080</created>
@@ -580,7 +576,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456230690901</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="cxhx">
+      <created>1456231184809</created>
+      <option name="number" value="00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1456231184809</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1044,9 +1046,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Subscriber/mailchimp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-0.9371728" vertical-offset="912" max-vertical-offset="1485">
+          <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+          <folding>
+            <element signature="e#6#88#0#PHP" expanded="true" />
+            <element signature="e#118#148#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
