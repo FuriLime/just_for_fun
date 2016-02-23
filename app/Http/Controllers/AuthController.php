@@ -103,7 +103,7 @@ class AuthController extends JoshController
      *
      * @return Redirect
      */
-    public function postSignup()
+    public function postSignup($email)
     {
         // Declare the rules for the form validation
         $rules = array(
@@ -136,7 +136,7 @@ class AuthController extends JoshController
                 ->lists
                 ->subscribe(
                     $this->listId,
-                    ['email' => Input::get('email')]
+                    ['email' => $email]
                 );
 dd($this);
             //add user to 'User' group
