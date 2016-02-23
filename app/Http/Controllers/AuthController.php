@@ -156,8 +156,8 @@ class AuthController extends JoshController
             //Sentinel::login($user, false);
 //            dd($mailchimp);
             // Redirect to the home page with success menu
-//            return Redirect::back()->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
-return $mailchimp;
+            return Redirect::back()->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
+//return $mailchimp;
         } catch (UserExistsException $e) {
             $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
         }
