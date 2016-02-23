@@ -40,9 +40,9 @@ class Mailchimp
                     ['email' => $email]
                 );
         } catch (\Mailchimp_List_AlreadySubscribed $e) {
-            // do something
+           var_dump('sdfsdfsdf');
         } catch (\Mailchimp_Error $e) {
-            // do something
+            var_dump('erroe');
         }
     }
 }
