@@ -101,7 +101,6 @@ class AuthController extends JoshController
             'email'            => 'required|email|unique:users',
             // 'email_confirm'    => 'required|email|same:email',
             'password'         => 'required|between:3,32',
-            'notify'           => '',
             // 'password_confirm' => 'required|same:password',
         );
 
@@ -121,7 +120,6 @@ class AuthController extends JoshController
                 'last_name'  => Input::get('last_name'),
                 'email'      => Input::get('email'),
                 'password'   => Input::get('password'),
-                'notify'       =>Input::get('notify'),
             ));
 
             //add user to 'User' group
