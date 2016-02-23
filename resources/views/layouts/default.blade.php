@@ -255,6 +255,10 @@
 									<div class="col-sm-12">
 										{!! $errors->first('email_confirm', '<span class="help-block">:message</span>') !!}
 									</div>
+                                    <p class="keeplogin">
+                                        <input type="checkbox" name="subscribe-me" id="subscribe-me" value="subscribe-me" />
+                                        <label for="subscribe-me">Subscribe</label>
+                                    </p>
 								</div>
 
 								<!-- <div class="form-group {{ $errors->first('password_confirm', 'has-error') }}">
