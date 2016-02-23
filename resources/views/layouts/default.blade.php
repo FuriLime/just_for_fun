@@ -256,7 +256,7 @@
 										{!! $errors->first('email_confirm', '<span class="help-block">:message</span>') !!}
 									</div>
                                     <p class="keeplogin">
-                                        {!!Form::label('notify')!!}
+                                        {!!Form::label('notify', 'Subscribe')!!}
                                         {!!Form::checkbox('notify', null, null, ['id'=>'notify'])!!}
                                     </p>
 								</div>
