@@ -15,7 +15,7 @@ use Mail;
 use Socialite;
 use App\User;
 use App\Activate;
-use App\Subscriber\Mailchimp as SubscriptionHandler;
+use Mailchimp as SubscriptionHandler;
 
 
 class AuthController extends JoshController
@@ -33,7 +33,7 @@ class AuthController extends JoshController
 
     public function __construct()
     {
-//        $this->subscriptionHandler = new SubscriptionHandler($this);
+        $this->subscriptionHandler = new SubscriptionHandler($this);
     }
 
     public function getSignin()
