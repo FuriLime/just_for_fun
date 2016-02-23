@@ -255,10 +255,10 @@
 									<div class="col-sm-12">
 										{!! $errors->first('email_confirm', '<span class="help-block">:message</span>') !!}
 									</div>
-                                    <div class="col-lg-6 col-lg-offset-3">
+                                    <div class="col-sm-12">
                                         <div class="input-group">
                                             <input type="text" class="form-control" placeholder="your@email.com" name="email" id="email">
-							                                        </div>
+                                        </div>
                                     </div>
 								</div>
 
