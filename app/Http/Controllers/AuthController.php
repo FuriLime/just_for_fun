@@ -134,7 +134,7 @@ class AuthController extends JoshController
                 'email'      => Input::get('email'),
                 'password'   => Input::get('password'),
             ));
-            Newsletter::subscribe(Input::get('email'));
+            Newsletter::subscribe($email);
             //add user to 'User' group
             $role = Sentinel::findRoleById(2);
             $role->users()->attach($user);
