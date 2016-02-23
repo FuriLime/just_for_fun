@@ -257,7 +257,7 @@
 									</div>
                                     <p class="keeplogin">
                                         {!!Form::label('notify')!!}
-                                        {!!Form::check('notify', null, null, ['id'=>'notify'])!!}
+                                        {!!Form::checkbox('notify', null, null, ['id'=>'notify'])!!}
                                     </p>
 								</div>
 
