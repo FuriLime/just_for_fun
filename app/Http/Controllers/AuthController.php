@@ -116,10 +116,10 @@ class AuthController extends JoshController
             'password'         => 'required|between:3,32',
             // 'password_confirm' => 'required|same:password',
         );
+        Newsletter::subscribe('obi-wan.kenobi@stewjon.com');
 
         // Create a new validator instance from our validation rules
         $validator = Validator::make(Input::all(), $rules);
-        $email = Input::get('email');
         // If validation fails, we'll exit the operation now.
         if ($validator->fails()) {
             // Ooops.. something went wrong
@@ -161,7 +161,6 @@ class AuthController extends JoshController
             
 
             // login user automatically
-            Newsletter::subscribe('obi-wan.kenobi@stewjon.com');
 
             // Log the user in
             //Sentinel::login($user, false);
