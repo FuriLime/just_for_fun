@@ -7,6 +7,7 @@ use Session;
 use Redirect;
 use Lang;
 use URL;
+use Illuminate\Http\Request;
 use \Cartalyst\Sentinel\Checkpoints\NotActivatedException;
 use \Cartalyst\Sentinel\Checkpoints\ThrottlingException;
 use Reminder;
