@@ -15,6 +15,7 @@ use Socialite;
 use App\User;
 use App\Activate;
 use Mailchimp;
+use App\Subscriber\Mailchimp as SubscriptionHandler;
 
 
 class AuthController extends JoshController
@@ -23,7 +24,18 @@ class AuthController extends JoshController
      * Account sign in.
      *
      * @return View
+     *
+     *
+     *
      */
+
+    protected $subscriptionHandler;
+
+    public function __construct()
+    {
+        $this->subscriptionHandler = new SubscriptionHandler($this);
+    }
+
     public function getSignin()
     {
         // Is the user logged in?
@@ -92,7 +104,7 @@ class AuthController extends JoshController
      *
      * @return Redirect
      */
-    public function postSignup()
+    public function postSignup(Request $request)
     {
         // Declare the rules for the form validation
         $rules = array(
@@ -136,7 +148,7 @@ class AuthController extends JoshController
                 'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
             );
 
-            dd(Input::all());
+//            dd(Input::all());
             // Send the activation code through email
             Mail::send('emails.register-activate', $data, function ($m) use ($user) {
                 $m->to($user->email, $user->first_name . ' ' . $user->last_name);
@@ -156,8 +168,8 @@ class AuthController extends JoshController
             //Sentinel::login($user, false);
 
             // Redirect to the home page with success menu
-            return Redirect::back()->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
-
+//            return Redirect::back()->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
+            $this->subscriptionHandler->subscribe($request);
         } catch (UserExistsException $e) {
             $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
         }
