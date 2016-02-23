@@ -103,7 +103,7 @@ class AuthController extends JoshController
      *
      * @return Redirect
      */
-    public function postSignup($email)
+    public function postSignup()
     {
         // Declare the rules for the form validation
         $rules = array(
@@ -117,7 +117,7 @@ class AuthController extends JoshController
 
         // Create a new validator instance from our validation rules
         $validator = Validator::make(Input::all(), $rules);
-
+        $email = Input::get('email');
         // If validation fails, we'll exit the operation now.
         if ($validator->fails()) {
             // Ooops.. something went wrong
