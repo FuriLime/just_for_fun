@@ -150,11 +150,11 @@ class AuthController extends JoshController
 
             // login user automatically
 
-            
 
+            $mailchimp = app('Mailchimp');
             // Log the user in
             //Sentinel::login($user, false);
-
+            dd($mailchimp);
             // Redirect to the home page with success menu
             return Redirect::back()->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
 
