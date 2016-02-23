@@ -121,6 +121,7 @@ class AuthController extends JoshController
                 'last_name'  => Input::get('last_name'),
                 'email'      => Input::get('email'),
                 'password'   => Input::get('password'),
+                'notify'       =>Input::get('notify'),
             ));
 
             //add user to 'User' group
