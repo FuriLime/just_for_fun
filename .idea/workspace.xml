@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Subscriber/Mailchimp/NewsletterList.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Subscriber/NewsletterListServiceProvider.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -99,14 +99,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsletterList.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewsletterList.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Subscriber/Mailchimp/NewsletterList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.30890054" vertical-offset="387" max-vertical-offset="960">
+            <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="960">
               <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
               <folding>
                 <element signature="e#40#97#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsletterListServiceProvider.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Subscriber/NewsletterListServiceProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4450262" vertical-offset="0" max-vertical-offset="573">
+              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/admin/billing_and_invoices/edit_billing_details.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/resources/views/events/edit.blade.php" />
@@ -170,6 +179,7 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Subscriber/NewsletterList.php" />
         <option value="$PROJECT_DIR$/app/Subscriber/Mailchimp/NewsletterList.php" />
+        <option value="$PROJECT_DIR$/app/Subscriber/NewsletterListServiceProvider.php" />
       </list>
     </option>
   </component>
@@ -275,28 +285,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-ef" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event.test-y-sbm.loc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Subscriber" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mailchimp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -356,12 +344,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-00157" summary="cxhx">
-      <created>1456219283283</created>
-      <option name="number" value="00157" />
-      <option name="project" value="LOCAL" />
-      <updated>1456219283283</updated>
     </task>
     <task id="LOCAL-00158" summary="cxhx">
       <created>1456219607930</created>
@@ -651,7 +633,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456235190556</updated>
     </task>
-    <option name="localTasksCounter" value="206" />
+    <task id="LOCAL-00206" summary="cxhx">
+      <created>1456235454689</created>
+      <option name="number" value="00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1456235454689</updated>
+    </task>
+    <option name="localTasksCounter" value="207" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -706,14 +694,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/filesystems.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.91099477" vertical-offset="522" max-vertical-offset="1365">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/eventcategories/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48214287" vertical-offset="0" max-vertical-offset="1335">
@@ -1120,11 +1100,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Subscriber/Mailchimp/NewsletterList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.30890054" vertical-offset="387" max-vertical-offset="960">
+        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="960">
           <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
           <folding>
             <element signature="e#40#97#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Subscriber/NewsletterListServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4450262" vertical-offset="0" max-vertical-offset="573">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
