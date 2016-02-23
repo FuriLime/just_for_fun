@@ -105,7 +105,7 @@ class AuthController extends JoshController
      *
      * @return Redirect
      */
-    public function postSignup()
+    public function postSignup(Request $request)
     {
         // Declare the rules for the form validation
         $rules = array(
@@ -134,8 +134,8 @@ class AuthController extends JoshController
                 'email'      => Input::get('email'),
                 'password'   => Input::get('password'),
             ));
-            Newsletter::subscribe(Input::get('email'));
-dd(Newsletter::subscribe(Input::get('email')));
+            Newsletter::subscribe($request->input('email'));
+dd(Newsletter::subscribe($request->input('email')));
             //add user to 'User' group
             $role = Sentinel::findRoleById(2);
             $role->users()->attach($user);
