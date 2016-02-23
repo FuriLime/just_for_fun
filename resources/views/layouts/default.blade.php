@@ -258,10 +258,7 @@
                                     <div class="col-lg-6 col-lg-offset-3">
                                         <div class="input-group">
                                             <input type="text" class="form-control" placeholder="your@email.com" name="email" id="email">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="submit">Subscribe</button>
-							</span>
-                                        </div>
+							                                        </div>
                                     </div>
 								</div>
 
