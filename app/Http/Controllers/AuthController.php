@@ -32,7 +32,7 @@ class AuthController extends JoshController
 
     public function __construct()
     {
-        $this->subscriptionHandler = new SubscriptionHandler($this);
+//        $this->subscriptionHandler = new SubscriptionHandler($this);
     }
 
     public function getSignin()
