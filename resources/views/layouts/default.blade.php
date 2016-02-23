@@ -255,10 +255,14 @@
 									<div class="col-sm-12">
 										{!! $errors->first('email_confirm', '<span class="help-block">:message</span>') !!}
 									</div>
-                                    <p class="keeplogin">
-                                        {!!Form::label('notify', 'Subscribe')!!}
-                                        {!!Form::checkbox('notify', null, null, ['id'=>'notify'])!!}
-                                    </p>
+                                    <div class="col-lg-6 col-lg-offset-3">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="your@email.com" name="email" id="email">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="submit">Subscribe</button>
+							</span>
+                                        </div>
+                                    </div>
 								</div>
 
 								<!-- <div class="form-group {{ $errors->first('password_confirm', 'has-error') }}">
