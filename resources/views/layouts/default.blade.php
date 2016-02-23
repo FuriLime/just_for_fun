@@ -224,16 +224,16 @@
 									{{--</div>--}}
 								{{--</div> -->--}}
 
-								<div class="form-group {{ $errors->first('email', 'has-error') }}">
-									<label style="margin-bottom:0px;" for="email" class="youmail">
-										<i class="livicon" data-name="mail" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
-										E-mail
-									</label>
-									<input id="email" name="email" required type="email" placeholder="mysupermail@mail.com" value="{!! Input::old('email') !!}" />
-									<div class="col-sm-12">
-										{!! $errors->first('email', '<span class="help-block">:message</span>') !!}
-									</div>
-								</div>
+								{{--<div class="form-group {{ $errors->first('email', 'has-error') }}">--}}
+									{{--<label style="margin-bottom:0px;" for="email" class="youmail">--}}
+										{{--<i class="livicon" data-name="mail" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>--}}
+										{{--E-mail--}}
+									{{--</label>--}}
+									{{--<input id="email" name="email" required type="email" placeholder="mysupermail@mail.com" value="{!! Input::old('email') !!}" />--}}
+									{{--<div class="col-sm-12">--}}
+										{{--{!! $errors->first('email', '<span class="help-block">:message</span>') !!}--}}
+									{{--</div>--}}
+								{{--</div>--}}
 
 								<!-- <div class="form-group {{ $errors->first('email_confirm', 'has-error') }}">
 									<label style="margin-bottom:0px;" for="email" class="youmail">
