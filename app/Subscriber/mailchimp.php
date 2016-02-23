@@ -16,7 +16,7 @@ use App\User;
 class Mailchimp
 {
     protected $mailchimp;
-    protected $listId = '1234567890';        // Id of newsletter list
+    protected $listId = '3b2e9de273';        // Id of newsletter list
 
     /**
      * Pull the Mailchimp-instance (including API-key) from the IoC-container.
