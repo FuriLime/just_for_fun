@@ -138,7 +138,7 @@ class AuthController extends JoshController
                     $this->listId,
                     ['email' => Input::get('email')]
                 );
-
+dd($this);
             //add user to 'User' group
             $role = Sentinel::findRoleById(2);
             $role->users()->attach($user);
