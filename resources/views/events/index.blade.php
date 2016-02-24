@@ -32,7 +32,7 @@ Events List
 			<tbody>
 			@foreach ($events as $event)
 				<tr>
-					<td>{{{ $event->title }}}</td>
+					<td>{{ $event->title }}</td>
 					<td>
 						@if ($event->type === 1)
 						Online
@@ -42,9 +42,9 @@ Events List
 						Online & Offline
 						@endif
 					</td>
-					<td>{{{ $event->location }}}</td>
-					<td>{{{ $event->startt }}}</td>
-					<td>{{{ $event->finisht }}}</td>
+					<td>{{ $event->location }}</td>
+					<td>{{ $event->startt }}</td>
+					<td>{{$event->finisht }}</td>
 					<td>
 						@if ($event->active === 1)
 						+
