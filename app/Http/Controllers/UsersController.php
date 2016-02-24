@@ -826,14 +826,9 @@ class UsersController extends JoshController
 //                dd($data['merges']['GROUPINGS']);
             foreach($data['merges']['GROUPINGS'] as $merges){
                 foreach($merges['groups'] as $group){
-                    var_dump($group);
+                    $info_group = $group;
                 }
-//                    $user_email = $merges['email'];
-//////                    foreach($merges as $group){
-//////
-//////                    }
             }
-//                $subemail = $data['email'];
         }
         return view('admin.notisfaction');
     }
