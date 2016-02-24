@@ -1,5 +1,7 @@
 <?php
 
+$secrets = json_decode(file_get_contents($_SERVER['APP_SECRETS']), true);
+
 return [
     /*
     |--------------------------------------------------------------------------
@@ -11,5 +13,5 @@ return [
     |
     */
 
-    'apikey' => '901e50791519fce4886a3e84f2087ff9-us1',
+    'apikey' => $secrets['CUSTOM']['MAILCHIMP_SECRET'],
 ];
