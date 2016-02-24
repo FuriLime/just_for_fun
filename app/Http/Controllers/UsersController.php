@@ -803,7 +803,7 @@ class UsersController extends JoshController
 
     public function getNotisfaction()
     {
-        return view('admin.notifications');
+        return view('admin.notisfaction');
     }
 
 
