@@ -185,7 +185,8 @@ class AuthController extends JoshController
     public function getActivate($userId, $activationCode)
     {
         $activate = new Activate();
-        $email = Input::get('email');
+        $user = User::find($userId);
+        $email = $user->email;
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
             $this->mailchimp
