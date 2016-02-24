@@ -151,7 +151,7 @@
                                     </a>
                                 </li>
                                 <li >
-                                    <a href="{{ URL::to('admin/notifications') }}">
+                                    <a href="{{ URL::to('admin/deleted_users') }}">
                                         <i class="fa fa-angle-double-right"></i>
                                         Notisfaction
                                     </a>
