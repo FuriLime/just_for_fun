@@ -12,6 +12,7 @@ use File;
 use App\User;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Hash;
+use Mailchimp;
 
 class UsersController extends JoshController
 {
@@ -267,6 +268,14 @@ class UsersController extends JoshController
         'password_confirm' => 'required|same:password',
         'pic' => 'mimes:jpg,jpeg,bmp,png|max:10000'
     );
+
+    protected $mailchimp;
+    protected $listId = '3b2e9de273';        // Id of newsletter list
+
+    public function __construct(Mailchimp $mailchimp)
+    {
+        $this->mailchimp = $mailchimp;
+    }
 
     /**
      * Show a list of all the users.
@@ -803,6 +812,29 @@ class UsersController extends JoshController
 
     public function getNotisfaction()
     {
+
+        $params = array(
+            'id' => $this->listId,
+            'emails' => array(
+                0 => array(
+                    'email' => 'limewax333@mail.ru',
+                ),
+            ),
+        );
+        $infos = $this->mailchimp->call('lists/member-info', $params);
+        foreach($infos['data'] as $data){
+//                dd($data['merges']['GROUPINGS']);
+            foreach($data['merges']['GROUPINGS'] as $merges){
+                foreach($merges['groups'] as $group){
+                    var_dump($group);
+                }
+//                    $user_email = $merges['email'];
+//////                    foreach($merges as $group){
+//////
+//////                    }
+            }
+//                $subemail = $data['email'];
+        }
         return view('admin.notisfaction');
     }
 

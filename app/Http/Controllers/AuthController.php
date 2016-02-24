@@ -202,29 +202,6 @@ class AuthController extends JoshController
                 // do something
             }
 //            $result = Mailchimp::get('lists');
-            $params = array(
-                'id' => $this->listId,
-                'emails' => array(
-                    0 => array(
-                        'email' => 'limewax333@mail.ru',
-                    ),
-                ),
-            );
-            $infos = $this->mailchimp->call('lists/member-info', $params);
-            foreach($infos['data'] as $data){
-//                dd($data['merges']['GROUPINGS']);
-                foreach($data['merges']['GROUPINGS'] as $merges){
-                    foreach($merges['groups'] as $group){
-                        var_dump($group);
-                    }
-//                    $user_email = $merges['email'];
-//////                    foreach($merges as $group){
-//////
-//////                    }
-                }
-//                $subemail = $data['email'];
-            }
-dd();
 //            dd(member-info('901e50791519fce4886a3e84f2087ff9-us1', '3b2e9de273'));
             if($activate->isUserActivate($userId)){
                 $user = User::find($userId);
