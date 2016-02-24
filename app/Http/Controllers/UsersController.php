@@ -836,13 +836,13 @@ class UsersController extends JoshController
                     $info_group[] = $group['name'];
 
 //                    $group_name = $info_group['name'];
-                    var_dump($info_group);
+
 
 //                    return View('admin.notisfaction', compact('info_group'));
                 }
             }
         }
-
+        var_dump($info_group);
     }
 
 
