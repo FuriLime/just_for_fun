@@ -814,17 +814,18 @@ class UsersController extends JoshController
     {
 //        $user = new User;
         $user = Sentinel::findById($userId);
-        var_dump($user);
+        $email = $user['email'];
+//        var_dump($user);
         $params = array(
             'id' => $this->listId,
             'emails' => array(
                 0 => array(
-                    'email' => 'limewax333@mail.ru',
+                    'email' => '$email',
                 ),
             ),
         );
         $infos = $this->mailchimp->call('lists/member-info', $params);
-//        var_dump($infos['data']);
+        var_dump($infos['data']);
         foreach($infos['data'] as $data){
                 var_dump($data['email']);
             foreach($data['merges']['GROUPINGS'] as $merges){
