@@ -830,7 +830,7 @@ class UsersController extends JoshController
                 }
             }
         }
-        return view('admin.notisfaction',compact('user'));
+        return View::make('admin.notisfaction',$info_group);
     }
 
 

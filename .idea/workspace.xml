@@ -41,7 +41,7 @@
       <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4615386" vertical-offset="2925" max-vertical-offset="8475">
+            <state vertical-scroll-proportion="93.03846" vertical-offset="7943" max-vertical-offset="8475">
               <caret line="220" column="53" selection-start-line="220" selection-start-column="39" selection-end-line="220" selection-end-column="55" />
               <folding />
             </state>
@@ -51,8 +51,8 @@
       <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70535713" vertical-offset="12085" max-vertical-offset="12660">
-              <caret line="832" column="54" selection-start-line="832" selection-start-column="54" selection-end-line="832" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.5714286" vertical-offset="12100" max-vertical-offset="12660">
+              <caret line="828" column="20" selection-start-line="828" selection-start-column="20" selection-end-line="828" selection-end-column="20" />
               <folding>
                 <element signature="e#38#51#0#PHP" expanded="true" />
               </folding>
@@ -366,12 +366,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-00271" summary="cxhx">
-      <created>1456311044661</created>
-      <option name="number" value="00271" />
-      <option name="project" value="LOCAL" />
-      <updated>1456311044662</updated>
-    </task>
     <task id="LOCAL-00272" summary="cxhx">
       <created>1456311061604</created>
       <option name="number" value="00272" />
@@ -660,7 +654,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456320015974</updated>
     </task>
-    <option name="localTasksCounter" value="320" />
+    <task id="LOCAL-00320" summary="cxhx">
+      <created>1456320066643</created>
+      <option name="number" value="00320" />
+      <option name="project" value="LOCAL" />
+      <updated>1456320066643</updated>
+    </task>
+    <option name="localTasksCounter" value="321" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1086,14 +1086,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4615386" vertical-offset="2925" max-vertical-offset="8475">
-          <caret line="220" column="53" selection-start-line="220" selection-start-column="39" selection-end-line="220" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.625" vertical-offset="540" max-vertical-offset="2010">
@@ -1102,10 +1094,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="93.03846" vertical-offset="7943" max-vertical-offset="8475">
+          <caret line="220" column="53" selection-start-line="220" selection-start-column="39" selection-end-line="220" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70535713" vertical-offset="12085" max-vertical-offset="12660">
-          <caret line="832" column="54" selection-start-line="832" selection-start-column="54" selection-end-line="832" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.5714286" vertical-offset="12100" max-vertical-offset="12660">
+          <caret line="828" column="20" selection-start-line="828" selection-start-column="20" selection-end-line="828" selection-end-column="20" />
           <folding>
             <element signature="e#38#51#0#PHP" expanded="true" />
           </folding>
