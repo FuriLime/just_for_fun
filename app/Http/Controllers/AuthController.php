@@ -1,5 +1,4 @@
 <?php namespace App\Http\Controllers;
-use GuzzleHttp\Psr7\Request;
 use Sentinel;
 use View;
 use Validator;
@@ -16,7 +15,6 @@ use Socialite;
 use App\User;
 use App\Activate;
 use Mailchimp;
-use Newsletter;
 
 
 class AuthController extends JoshController
@@ -75,16 +73,16 @@ class AuthController extends JoshController
             if(Sentinel::authenticate(Input::only('email', 'password'), Input::get('remember-me', false)))
             {
                 // Redirect to the dashboard page
-				
-				$user = Sentinel::check();
-				$user_email = $user["attributes"]["email"];
-				
-				//if (Sentinel::inRole('admin')) {
-					return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-				/*} else {
-					//return Redirect::route("members/".$user_email)->with('success', Lang::get('auth/message.signin.success'));
-					return Redirect::route("member_home")->with('success', Lang::get('auth/message.signin.success'));
-				}*/
+
+                $user = Sentinel::check();
+                $user_email = $user["attributes"]["email"];
+
+                //if (Sentinel::inRole('admin')) {
+                return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
+                /*} else {
+                    //return Redirect::route("members/".$user_email)->with('success', Lang::get('auth/message.signin.success'));
+                    return Redirect::route("member_home")->with('success', Lang::get('auth/message.signin.success'));
+                }*/
             }
 
             $this->messageBag->add('email', Lang::get('auth/message.account_not_found'));
@@ -116,10 +114,10 @@ class AuthController extends JoshController
             'password'         => 'required|between:3,32',
             // 'password_confirm' => 'required|same:password',
         );
-        Newsletter::subscribe('obi-wan.kenobi@stewjon.com');
 
         // Create a new validator instance from our validation rules
         $validator = Validator::make(Input::all(), $rules);
+
         // If validation fails, we'll exit the operation now.
         if ($validator->fails()) {
             // Ooops.. something went wrong
@@ -134,13 +132,19 @@ class AuthController extends JoshController
                 'email'      => Input::get('email'),
                 'password'   => Input::get('password'),
             ));
+            $this->mailchimp
+                ->lists
+                ->subscribe(
+                    $this->listId,
+                    ['email' => Input::get('email')]
+                );
 
             //add user to 'User' group
             $role = Sentinel::findRoleById(2);
             $role->users()->attach($user);
 
 
-            
+
             //un-comment below code incase if user have to activate manually
 
             // Data to be used on the email view
@@ -157,11 +161,13 @@ class AuthController extends JoshController
 
             //Redirect to login page
             //return Redirect::to("admin/login")->with('success', Lang::get('auth/message.signup.success'));
-           // return 'ok';
-            
+            // return 'ok';
+
 
             // login user automatically
 
+
+            $mailchimp = app('Mailchimp');
             // Log the user in
             //Sentinel::login($user, false);
 //            dd($mailchimp);
@@ -188,18 +194,6 @@ class AuthController extends JoshController
         $activate = new Activate();
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
-            try {
-                $this->mailchimp
-                    ->lists
-                    ->subscribe(
-                        $this->listId,
-                        ['email' => 'ssdfsdfs@dfdf.com']
-                    );
-            } catch (\Mailchimp_List_AlreadySubscribed $e) {
-                // do something
-            } catch (\Mailchimp_Error $e) {
-                // do something
-            }
             if($activate->isUserActivate($userId)){
                 $user = User::find($userId);
                 Sentinel::login($user, false);
@@ -416,7 +410,7 @@ class AuthController extends JoshController
 
             // login user automatically
 
-            
+
 
             // Log the user in
             Sentinel::login($user, false);
