@@ -196,9 +196,10 @@ class AuthController extends JoshController
                         $this->listId,
                         ['email' => $email]
                     );
-            } catch (\Mailchimp_List_AlreadySubscribed $e){
-                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
             }
+// catch (\Mailchimp_List_AlreadySubscribed $e){
+////                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
+//            }
              catch (\Mailchimp_Error $e) {
                 // do something
             }
