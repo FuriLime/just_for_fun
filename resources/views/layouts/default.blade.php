@@ -255,26 +255,27 @@
 									<div class="col-sm-12">
 										{!! $errors->first('email_confirm', '<span class="help-block">:message</span>') !!}
 									</div>
-                                    <div class="col-sm-12">
-                                        {!!Form::label('notify', 'Subscribe')!!}
-                                        {!!Form::checkbox('notify', null, null, ['id'=>'notify'])!!}
-                                    </div>
+                                    {{--<div class="col-sm-12">--}}
+                                        {{--{!!Form::label('notify', 'Subscribe')!!}--}}
+                                        {{--{!!Form::checkbox('notify', null, null, ['id'=>'notify'])!!}--}}
+                                    {{--</div>--}}
 								</div>
-                            <div class="col-sm-12"><a href="{{ URL::to('facebook') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a>
-                            <a href="{{ URL::to('twitter') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/twitter.png" border="0" alt="Facebook"/></a>
-                            <a href="{{ URL::to('linked') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/linkedin.png" border="0" alt="Linked"/></a>
+                            <div class="col-sm-12">
+                                <a href="{{ URL::to('facebook') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a>
+                                <a href="{{ URL::to('twitter') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/twitter.png" border="0" alt="Facebook"/></a>
+                                <a href="{{ URL::to('linked') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/linkedin.png" border="0" alt="Linked"/></a>
                             {{--<li><a href="{{ URL::to('facebook') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/google.png" border="0" alt="Google"/></a></li>--}}
                             </div>
-								<!-- <div class="form-group {{ $errors->first('password_confirm', 'has-error') }}">
-									<label style="margin-bottom:0px;" for="passwor_confirm" class="youpasswd">
-										<i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
-										Confirm Password
-									</label>
-									<input id="password_confirm" name="password_confirm" required type="password" placeholder="eg. X8df!90EO" />
-									<div class="col-sm-12">
-										{!! $errors->first('email_confirm', '<span class="help-block">:message</span>') !!}
-									</div>
-								</div> -->
+								{{--<!-- <div class="form-group {{ $errors->first('password_confirm', 'has-error') }}">--}}
+									{{--<label style="margin-bottom:0px;" for="passwor_confirm" class="youpasswd">--}}
+										{{--<i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>--}}
+										{{--Confirm Password--}}
+									{{--</label>--}}
+									{{--<input id="password_confirm" name="password_confirm" required type="password" placeholder="eg. X8df!90EO" />--}}
+									{{--<div class="col-sm-12">--}}
+										{{--{!! $errors->first('email_confirm', '<span class="help-block">:message</span>') !!}--}}
+									{{--</div>--}}
+								{{--</div> -->--}}
 							<p class="signin button">
 								<input type="submit" class="btn btn-success" value="Sign up" />
 							</p>
