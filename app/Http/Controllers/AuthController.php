@@ -132,12 +132,7 @@ class AuthController extends JoshController
                 'email'      => Input::get('email'),
                 'password'   => Input::get('password'),
             ));
-            $this->mailchimp
-                ->lists
-                ->subscribe(
-                    $this->listId,
-                    ['email' => Input::get('email')]
-                );
+
 
             //add user to 'User' group
             $role = Sentinel::findRoleById(2);
@@ -194,6 +189,12 @@ class AuthController extends JoshController
         $activate = new Activate();
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
+            $this->mailchimp
+                ->lists
+                ->subscribe(
+                    $this->listId,
+                    ['email' => Input::get('email')]
+                );
             if($activate->isUserActivate($userId)){
                 $user = User::find($userId);
                 Sentinel::login($user, false);
