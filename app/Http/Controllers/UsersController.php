@@ -830,6 +830,8 @@ class UsersController extends JoshController
                 var_dump($data['email']);
             foreach($data['merges']['GROUPINGS'] as $merges){
 
+                $merges_name[] = $merges['name'];
+
 //                  //groups names
                 foreach($merges['groups'] as $group){
 
@@ -839,7 +841,7 @@ class UsersController extends JoshController
 
             }
         }
-        var_dump($merges);
+        var_dump($merges_name);
 //        return View('admin.notisfaction', compact('info_group'));
 //        var_dump($info_group);
     }
