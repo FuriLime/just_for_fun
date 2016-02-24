@@ -829,7 +829,7 @@ class UsersController extends JoshController
 
                     $info_group = $group;
                     var_dump($info_group);
-                    return View('admin.notisfaction', compact($info_group));
+                    return View('admin.notisfaction', compact('infos'));
                 }
             }
         }
