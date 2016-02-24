@@ -21,7 +21,7 @@
 @section('content')
 
     <section class="content-header">
-        <h1>Billing & Invoices</h1>
+        <h1>My Notifications</h1>
         <ol class="breadcrumb">
             <li class="active">
                 <a href="#">
@@ -72,8 +72,7 @@
                             </tr>
                             </tbody>
                         </table>
-                        <button class="btn btn-primary text-white"><i class='glyphicon glyphicon-edit'></i>Edit Billing Details</button>
-                        <button class="btn btn-default text-white">Edit Payment Method</button>
+                        <button class="btn btn-primary text-white"><i class='glyphicon glyphicon-edit'></i>Update Subscriptions</button>
                     </div>
 
 
@@ -90,7 +89,7 @@
                             </tr>
                             </tbody>
                         </table>
-                        <button class="btn btn-primary text-white"><i class='glyphicon glyphicon-edit'></i> &nbsp;Edit Payment Method</button>
+                        <button class="btn btn-primary text-white"><i class='glyphicon glyphicon-edit'></i>Update Subscriptions</button>
                     </div>
                 </div>
             </div>
