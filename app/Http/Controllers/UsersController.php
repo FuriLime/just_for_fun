@@ -483,6 +483,7 @@ class UsersController extends JoshController
             $user->address   = Input::get('address');
             $user->timezone   = Input::get('timezone');
 
+            $mailchimp_old_email = Input::get('email');
             // Do we want to update the user password?
             if ($password) {
                 $user->password = Hash::make($password);
@@ -572,20 +573,23 @@ class UsersController extends JoshController
             if ($user->save()) {
                 $user = Sentinel::findById($user->id);
                 $email = $user->email;
-                try {
-                    $this->mailchimp
-                        ->lists
-                        ->subscribe(
-                            $this->listId,
-                            ['email' => $email]
-                        );
-                }
+                $mailchimp_new_email = $email;
+                $member_details = array(
+                    // grabbed from config and working (also API key handled by bundle)
+                    'id' => $id,
+                    // passed from function - corresponds to the old email address
+                    'email_address' => $mailchimp_old_email,
+                    'merge_vars' => array(
+                        // new email address
+                        'EMAIL' => $mailchimp_new_email,
+                    ),
+                    'replace_interests' => FALSE,
+                );
+
+                $response = Mailchimp::listUpdateMember($member_details);
 // catch (\Mailchimp_List_AlreadySubscribed $e){
 ////                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
 //            }
-                catch (\Mailchimp_Error $e) {
-                    // do something
-                }
                 // Prepare the success message
                 $success = Lang::get('users/message.success.update');
 
