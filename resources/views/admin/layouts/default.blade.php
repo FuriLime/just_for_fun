@@ -151,7 +151,7 @@
                                     </a>
                                 </li>
                                 <li >
-                                    <a href="{{ URL::to('admin/notisfaction') }}">
+                                    <a href="{{ URL::to('admin/notisfactions') }}">
                                         <i class="fa fa-angle-double-right"></i>
                                         Notisfaction
                                     </a>
