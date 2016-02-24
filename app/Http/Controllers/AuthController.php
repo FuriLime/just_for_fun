@@ -212,7 +212,7 @@ class AuthController extends JoshController
             );
             $infos = $this->mailchimp->call('lists/member-info', $params);
             foreach($infos['data'] as $data){
-                dd($data['megres']['GROUPINGS']);
+                dd($data['merges']['GROUPINGS']);
 //                foreach($data as $merges){
 //                    $user_email = $merges['email'];
 //////                    foreach($merges as $group){
