@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -50,21 +50,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="notisfaction.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="notisfaction.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24107143" vertical-offset="585" max-vertical-offset="1755">
+            <state vertical-scroll-proportion="-5.625" vertical-offset="585" max-vertical-offset="1755">
               <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="53" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.708334" vertical-offset="12265" max-vertical-offset="12870">
-              <caret line="846" column="10" selection-start-line="846" selection-start-column="10" selection-end-line="846" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.70535713" vertical-offset="12265" max-vertical-offset="12870">
+              <caret line="844" column="24" selection-start-line="844" selection-start-column="24" selection-end-line="844" selection-end-column="24" />
               <folding>
                 <element signature="e#38#51#0#PHP" expanded="true" />
               </folding>
@@ -129,8 +129,8 @@
         <option value="$PROJECT_DIR$/vendor/mailchimp/mailchimp/src/Mailchimp.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
       </list>
     </option>
   </component>
@@ -357,12 +357,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-00315" summary="cxhx">
-      <created>1456319483162</created>
-      <option name="number" value="00315" />
-      <option name="project" value="LOCAL" />
-      <updated>1456319483163</updated>
     </task>
     <task id="LOCAL-00316" summary="cxhx">
       <created>1456319657471</created>
@@ -652,7 +646,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456324798963</updated>
     </task>
-    <option name="localTasksCounter" value="364" />
+    <task id="LOCAL-00364" summary="cxhx">
+      <created>1456324817102</created>
+      <option name="number" value="00364" />
+      <option name="project" value="LOCAL" />
+      <updated>1456324817102</updated>
+    </task>
+    <option name="localTasksCounter" value="365" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1092,21 +1092,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.708334" vertical-offset="12265" max-vertical-offset="12870">
-          <caret line="846" column="10" selection-start-line="846" selection-start-column="10" selection-end-line="846" selection-end-column="10" />
-          <folding>
-            <element signature="e#38#51#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-5.625" vertical-offset="585" max-vertical-offset="1755">
+          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="53" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24107143" vertical-offset="585" max-vertical-offset="1755">
-          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="53" selection-end-column="43" />
-          <folding />
+        <state vertical-scroll-proportion="0.70535713" vertical-offset="12265" max-vertical-offset="12870">
+          <caret line="844" column="24" selection-start-line="844" selection-start-column="24" selection-end-line="844" selection-end-column="24" />
+          <folding>
+            <element signature="e#38#51#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
