@@ -211,7 +211,15 @@ class AuthController extends JoshController
                 ),
             );
             $infos = $this->mailchimp->call('lists/member-info', $params);
-            dd($infos);
+            foreach($infos as $data){
+                foreach($data as $merges){
+                    $user_email = $merges['email'];
+                    foreach($merges as $group){
+
+                    }
+                }
+            }
+            dd($user_email);
 //            dd(member-info('901e50791519fce4886a3e84f2087ff9-us1', '3b2e9de273'));
             if($activate->isUserActivate($userId)){
                 $user = User::find($userId);
