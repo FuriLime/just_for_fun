@@ -589,10 +589,10 @@ class UsersController extends JoshController
                     // do something
                 }
                  Mailchimp::run('lists/subscribe', array(
-                    'apikey' => 'abcdefg-us2',
-                    'id' => '123456',
+                    'apikey' => '901e50791519fce4886a3e84f2087ff9-us1',
+                    'id' => '3b2e9de273',
                     'email' => array(
-                        'email' => 'foobar@gmail.com',
+                        'email' => $email,
                     ),
                     'double_optin' => false,
                     'update_existing' => true,
