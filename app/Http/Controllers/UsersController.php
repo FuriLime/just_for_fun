@@ -826,11 +826,12 @@ class UsersController extends JoshController
 //                dd($data['merges']['GROUPINGS']);
             foreach($data['merges']['GROUPINGS'] as $merges){
                 foreach($merges['groups'] as $group){
+                    var_dump($info_group);
                     $info_group = $group;
                 }
             }
         }
-        return View::make('admin.notisfaction',$info_group);
+        return View::make('admin.notisfaction');
     }
 
 
