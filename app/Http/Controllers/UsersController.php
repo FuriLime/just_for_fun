@@ -562,6 +562,22 @@ class UsersController extends JoshController
 
             // Was the user updated?
             if ($user->save()) {
+                $user = Sentinel::findById($user->id);
+                $email = $user->email;
+                try {
+                    $this->mailchimp
+                        ->lists
+                        ->subscribe(
+                            $this->listId,
+                            ['email' => $email]
+                        );
+                }
+// catch (\Mailchimp_List_AlreadySubscribed $e){
+////                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
+//            }
+                catch (\Mailchimp_Error $e) {
+                    // do something
+                }
                 // Prepare the success message
                 $success = Lang::get('users/message.success.update');
 
