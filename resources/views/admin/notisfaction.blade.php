@@ -38,13 +38,12 @@
         <div class="row ">
             <div class="col-lg-10 col-sm-14 col-md-14 margin_10">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#billing_overview_panel">Billing Overview</a></li>
-                    <li><a data-toggle="tab" href="#payment_method_panel">PaymentMethod</a></li>
-                    <li><a data-toggle="tab" href="#invoices_panel">Invoices</a></li>
+                    <li class="active"><a data-toggle="tab" href="#email_subscribes_panel">E-Mail Subscriptions</a></li>
+                    <li><a data-toggle="tab" href="#system_notifications_panel">System Notifications</a></li>
                 </ul>
 
                 <div class="tab-content nav-tab">
-                    <div id="billing_overview_panel" class="tab-pane fade in active ">
+                    <div id="email_subscribes_panel" class="tab-pane fade in active ">
                         <table class="table">
                             <tbody>
                             <tr>
@@ -76,7 +75,9 @@
                         <button class="btn btn-primary text-white"><i class='glyphicon glyphicon-edit'></i>Edit Billing Details</button>
                         <button class="btn btn-default text-white">Edit Payment Method</button>
                     </div>
-                    <div id="payment_method_panel" class="tab-pane fade">
+
+
+                    <div id="system_notifications_panel" class="tab-pane fade">
                         <table class="table">
                             <tbody>
                             <tr>
@@ -90,28 +91,6 @@
                             </tbody>
                         </table>
                         <button class="btn btn-primary text-white"><i class='glyphicon glyphicon-edit'></i> &nbsp;Edit Payment Method</button>
-                    </div>
-                    <div id="invoices_panel" class="tab-pane fade">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th style="width: 50px;">Date</th>
-                                <th style="width: 50px;">Amount</th>
-                                <th style="width: 50px;">Status</th>
-                                <th></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>
-                                    <button type="button" class="btn btn-default"><i class='glyphicon glyphicon-download'></i> &nbsp;Download</button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
