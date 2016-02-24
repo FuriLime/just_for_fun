@@ -31,8 +31,8 @@
       <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45535713" vertical-offset="2790" max-vertical-offset="6690">
-              <caret line="203" column="12" selection-start-line="203" selection-start-column="12" selection-end-line="203" selection-end-column="12" />
+            <state vertical-scroll-proportion="-4.167857" vertical-offset="2739" max-vertical-offset="6690">
+              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
               <folding>
                 <element signature="e#38#51#0#PHP" expanded="true" />
               </folding>
@@ -88,7 +88,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/linkedController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" />
         <option value="$PROJECT_DIR$/config/geoip.php" />
@@ -138,6 +137,7 @@
         <option value="$PROJECT_DIR$/resources/lang/en/general.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
+        <option value="$PROJECT_DIR$/vendor/mailchimp/mailchimp/src/Mailchimp.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
       </list>
     </option>
@@ -428,12 +428,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-00232" summary="cxhx">
-      <created>1456240189988</created>
-      <option name="number" value="00232" />
-      <option name="project" value="LOCAL" />
-      <updated>1456240189988</updated>
-    </task>
     <task id="LOCAL-00233" summary="cxhx">
       <created>1456240239289</created>
       <option name="number" value="00233" />
@@ -722,7 +716,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456315541128</updated>
     </task>
-    <option name="localTasksCounter" value="281" />
+    <task id="LOCAL-00281" summary="cxhx">
+      <created>1456315688729</created>
+      <option name="number" value="00281" />
+      <option name="project" value="LOCAL" />
+      <updated>1456315688729</updated>
+    </task>
+    <option name="localTasksCounter" value="282" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -997,14 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/mailchimp/mailchimp/src/Mailchimp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33211008" vertical-offset="2234" max-vertical-offset="4035">
-          <caret line="161" column="43" selection-start-line="161" selection-start-column="39" selection-end-line="161" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/mail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4973822" vertical-offset="0" max-vertical-offset="1995">
@@ -1159,10 +1151,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/mailchimp/mailchimp/src/Mailchimp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0183487" vertical-offset="2080" max-vertical-offset="2625">
+          <caret line="123" column="49" selection-start-line="123" selection-start-column="49" selection-end-line="123" selection-end-column="49" />
+          <folding>
+            <element signature="e#750#7105#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45535713" vertical-offset="2790" max-vertical-offset="6690">
-          <caret line="203" column="12" selection-start-line="203" selection-start-column="12" selection-end-line="203" selection-end-column="12" />
+        <state vertical-scroll-proportion="-4.167857" vertical-offset="2739" max-vertical-offset="6690">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
           <folding>
             <element signature="e#38#51#0#PHP" expanded="true" />
           </folding>
