@@ -830,9 +830,7 @@ class UsersController extends JoshController
                 }
             }
         }
-        return view('admin.notisfaction', array(
-            'info_group' => $info_group
-        ));
+        return view('admin.notisfaction',$info_group);
     }
 
 
