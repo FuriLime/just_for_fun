@@ -12,7 +12,6 @@ use File;
 use App\User;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Hash;
-use Mailchimp;
 
 class UsersController extends JoshController
 {
@@ -268,13 +267,6 @@ class UsersController extends JoshController
         'password_confirm' => 'required|same:password',
         'pic' => 'mimes:jpg,jpeg,bmp,png|max:10000'
     );
-    protected $mailchimp;
-    protected $listId = '3b2e9de273';        // Id of newsletter list
-
-    public function __construct(Mailchimp $mailchimp)
-    {
-        $this->mailchimp = $mailchimp;
-    }
 
     /**
      * Show a list of all the users.
@@ -483,7 +475,6 @@ class UsersController extends JoshController
             $user->address   = Input::get('address');
             $user->timezone   = Input::get('timezone');
 
-            $mailchimp_old_email = Input::get('email');
             // Do we want to update the user password?
             if ($password) {
                 $user->password = Hash::make($password);
@@ -571,37 +562,6 @@ class UsersController extends JoshController
 
             // Was the user updated?
             if ($user->save()) {
-                $user = Sentinel::findById($user->id);
-                $email = $user->email;
-                $mailchimp_new_email = $email;
-                try {
-                    $this->mailchimp
-                        ->lists
-                        ->subscribe(
-                            $this->listId,
-                            ['email' => $email]
-                        );
-                }
-// catch (\Mailchimp_List_AlreadySubscribed $e){
-////                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
-//            }
-                catch (\Mailchimp_Error $e) {
-                    // do something
-                }
-                 Mailchimp::run('lists/subscribe', array(
-                    'apikey' => '901e50791519fce4886a3e84f2087ff9-us1',
-                    'id' => '3b2e9de273',
-                    'email' => array(
-                        'email' => $email,
-                    ),
-                    'double_optin' => false,
-                    'update_existing' => true,
-                    'replace_interests' => false,
-                    'send_welcome' => false,
-                ));
-// catch (\Mailchimp_List_AlreadySubscribed $e){
-////                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
-//            }
                 // Prepare the success message
                 $success = Lang::get('users/message.success.update');
 
