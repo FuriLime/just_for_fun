@@ -52,26 +52,7 @@
                                 <td>{{$group['name']}}</td>
                             </tr>
                             @endforeach
-                            <tr>
-                                <td class="weight-td">CompanyName</td>
-                                <td>test</td>
-                            </tr>
-                            <tr>
-                                <td class="weight-td">VAT ID</td>
-                                <td>test</td>
-                            </tr>
-                            <tr>
-                                <td class="weight-td">Industry</td>
-                                <td>test</td>
-                            </tr>
-                            <tr>
-                                <td class="weight-td">Billing Address</td>
-                                <td>test</td>
-                            </tr>
-                            <tr>
-                                <td class="weight-td">Payment Method</td>
-                                <td>test</td>
-                            </tr>
+
                             </tbody>
                         </table>
                         <button class="btn btn-primary text-white"><i class='glyphicon glyphicon-edit'></i>Update Subscriptions</button>
