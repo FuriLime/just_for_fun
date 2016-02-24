@@ -825,10 +825,12 @@ class UsersController extends JoshController
             ),
         );
         $infos = $this->mailchimp->call('lists/member-info', $params);
-        var_dump($infos['data']);
+//        var_dump($infos['data']);
         foreach($infos['data'] as $data){
                 var_dump($data['email']);
             foreach($data['merges']['GROUPINGS'] as $merges){
+
+                var_dump($merges);
                 foreach($merges['groups'] as $group){
 
                     $info_group = $group;
