@@ -202,8 +202,16 @@ class AuthController extends JoshController
                 // do something
             }
 //            $result = Mailchimp::get('lists');
-
-            dd($this->mailchimp->users);
+            $params = array(
+                'id' => $this->listId,
+                'emails' => array(
+                    0 => array(
+//                        'euid' => $member_id,
+                    ),
+                ),
+            );
+            $infos = $this->mailchimp->call('lists/member-info', $params);
+            dd($infos);
 //            dd(member-info('901e50791519fce4886a3e84f2087ff9-us1', '3b2e9de273'));
             if($activate->isUserActivate($userId)){
                 $user = User::find($userId);
