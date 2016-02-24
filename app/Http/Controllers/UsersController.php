@@ -834,7 +834,7 @@ class UsersController extends JoshController
                     $info_group = $group;
                     $group_name = $info_group['name'];
 
-                    return View('admin.notisfaction', compact('group_name'));
+                    return View('admin.notisfaction', compact('info_group'));
                 }
             }
         }
