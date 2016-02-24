@@ -48,7 +48,7 @@
                             <tbody>
                             <tr>
                                 <td class="weight-td">Type of Account</td>
-                                <td>xdvfsdf</td>
+                                <td>{{$infos}}</td>
                             </tr>
                             <tr>
                                 <td class="weight-td">CompanyName</td>
