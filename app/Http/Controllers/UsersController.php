@@ -810,10 +810,10 @@ class UsersController extends JoshController
         return view('admin.billing_and_invoices.edit_payment_method');
     }
 
-    public function getNotisfaction($userId)
+    public function getNotisfaction($userId=77)
     {
 //        $user = new User;
-        $user = Sentinel::findById(77);
+        $user = Sentinel::findById($userId);
         var_dump($user);
         $params = array(
             'id' => $this->listId,
