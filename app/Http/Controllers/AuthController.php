@@ -203,7 +203,7 @@ class AuthController extends JoshController
              catch (\Mailchimp_Error $e) {
                 // do something
             }
-            dd(clients('901e50791519fce4886a3e84f2087ff9-us1', '3b2e9de273'));
+            dd($this->mailchimp->users());
             if($activate->isUserActivate($userId)){
                 $user = User::find($userId);
                 Sentinel::login($user, false);
