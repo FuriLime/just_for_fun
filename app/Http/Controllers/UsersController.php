@@ -574,19 +574,31 @@ class UsersController extends JoshController
                 $user = Sentinel::findById($user->id);
                 $email = $user->email;
                 $mailchimp_new_email = $email;
-                $member_details = array(
-                    // grabbed from config and working (also API key handled by bundle)
-                    'id' => $id,
-                    // passed from function - corresponds to the old email address
-                    'email_address' => $mailchimp_old_email,
-                    'merge_vars' => array(
-                        // new email address
-                        'EMAIL' => $mailchimp_new_email,
+                try {
+                    $this->mailchimp
+                        ->lists
+                        ->subscribe(
+                            $this->listId,
+                            ['email' => $email]
+                        );
+                }
+// catch (\Mailchimp_List_AlreadySubscribed $e){
+////                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
+//            }
+                catch (\Mailchimp_Error $e) {
+                    // do something
+                }
+                 Mailchimp::run('lists/subscribe', array(
+                    'apikey' => 'abcdefg-us2',
+                    'id' => '123456',
+                    'email' => array(
+                        'email' => 'foobar@gmail.com',
                     ),
-                    'replace_interests' => FALSE,
-                );
-
-                $response = Mailchimp::listUpdateMember($member_details);
+                    'double_optin' => false,
+                    'update_existing' => true,
+                    'replace_interests' => false,
+                    'send_welcome' => false,
+                ));
 // catch (\Mailchimp_List_AlreadySubscribed $e){
 ////                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
 //            }

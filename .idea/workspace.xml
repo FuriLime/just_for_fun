@@ -31,8 +31,8 @@
       <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="44.692307" vertical-offset="2729" max-vertical-offset="6675">
-              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+            <state vertical-scroll-proportion="-3.1730769" vertical-offset="2700" max-vertical-offset="6675">
+              <caret line="191" column="13" selection-start-line="191" selection-start-column="12" selection-end-line="204" selection-end-column="13" />
               <folding>
                 <element signature="e#38#51#0#PHP" expanded="true" />
               </folding>
@@ -43,11 +43,21 @@
       <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45535713" vertical-offset="8490" max-vertical-offset="12600">
-              <caret line="583" column="56" selection-start-line="583" selection-start-column="56" selection-end-line="583" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.51428574" vertical-offset="8637" max-vertical-offset="12780">
+              <caret line="595" column="22" selection-start-line="595" selection-start-column="22" selection-end-line="595" selection-end-column="22" />
               <folding>
                 <element signature="e#38#51#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mailchimp.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/mailchimp/mailchimp/src/Mailchimp.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.4807692" vertical-offset="2234" max-vertical-offset="4035">
+              <caret line="161" column="43" selection-start-line="161" selection-start-column="39" selection-end-line="161" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -338,12 +348,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-00211" summary="cxhx">
-      <created>1456236395551</created>
-      <option name="number" value="00211" />
-      <option name="project" value="LOCAL" />
-      <updated>1456236395551</updated>
-    </task>
     <task id="LOCAL-00212" summary="cxhx">
       <created>1456236428051</created>
       <option name="number" value="00212" />
@@ -632,7 +636,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456304188503</updated>
     </task>
-    <option name="localTasksCounter" value="260" />
+    <task id="LOCAL-00260" summary="cxhx">
+      <created>1456305417647</created>
+      <option name="number" value="00260" />
+      <option name="project" value="LOCAL" />
+      <updated>1456305417647</updated>
+    </task>
+    <option name="localTasksCounter" value="261" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -883,14 +893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/mailchimp/mailchimp/src/Mailchimp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65445024" vertical-offset="3420" max-vertical-offset="4035">
-          <caret line="253" column="5" selection-start-line="253" selection-start-column="5" selection-end-line="253" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/emails/register-activate.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4642857" vertical-offset="2845" max-vertical-offset="4620">
@@ -1048,10 +1050,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/mailchimp/mailchimp/src/Mailchimp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4807692" vertical-offset="2234" max-vertical-offset="4035">
+          <caret line="161" column="43" selection-start-line="161" selection-start-column="39" selection-end-line="161" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="44.692307" vertical-offset="2729" max-vertical-offset="6675">
-          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+        <state vertical-scroll-proportion="-3.1730769" vertical-offset="2700" max-vertical-offset="6675">
+          <caret line="191" column="13" selection-start-line="191" selection-start-column="12" selection-end-line="204" selection-end-column="13" />
           <folding>
             <element signature="e#38#51#0#PHP" expanded="true" />
           </folding>
@@ -1060,8 +1070,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45535713" vertical-offset="8490" max-vertical-offset="12600">
-          <caret line="583" column="56" selection-start-line="583" selection-start-column="56" selection-end-line="583" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.51428574" vertical-offset="8637" max-vertical-offset="12780">
+          <caret line="595" column="22" selection-start-line="595" selection-start-column="22" selection-end-line="595" selection-end-column="22" />
           <folding>
             <element signature="e#38#51#0#PHP" expanded="true" />
           </folding>
