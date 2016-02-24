@@ -48,7 +48,7 @@
                             <tbody>
                             <tr>
                                 <td class="weight-td">Type of Account</td>
-                                <td>{{$info_group}}</td>
+                                <td>{{$group_name}}</td>
                             </tr>
                             <tr>
                                 <td class="weight-td">CompanyName</td>
