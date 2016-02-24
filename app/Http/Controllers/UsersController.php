@@ -527,38 +527,38 @@ class UsersController extends JoshController
             }
 
             // Activate / De-activate user
-            $status = $activation = Activation::completed($user);
-            if(Input::get('activate') != $status)
-            {
-                if(Input::get('activate'))
-                {
-                    $activation = Activation::exists($user);
-                    if($activation)
-                    {
-                        Activation::complete($user, $activation->code);
-                    }
-                }
-                else
-                {
-                    //remove existing activation record
-                    Activation::remove($user);
-                    //add new record
-                    Activation::create($user);
-
-                    //send activation mail
-                    $data = array(
-                        'user'          => $user,
-                        'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
-                    );
-
-                    // Send the activation code through email
-                    Mail::send('emails.register-activate', $data, function ($m) use ($user) {
-                        $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-                        $m->subject('Welcome ' . $user->first_name);
-                    });
-
-                }
-            }
+//            $status = $activation = Activation::completed($user);
+//            if(Input::get('activate') != $status)
+//            {
+//                if(Input::get('activate'))
+//                {
+//                    $activation = Activation::exists($user);
+//                    if($activation)
+//                    {
+//                        Activation::complete($user, $activation->code);
+//                    }
+//                }
+//                else
+//                {
+//                    //remove existing activation record
+//                    Activation::remove($user);
+//                    //add new record
+//                    Activation::create($user);
+//
+//                    //send activation mail
+//                    $data = array(
+//                        'user'          => $user,
+//                        'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
+//                    );
+//
+//                    // Send the activation code through email
+//                    Mail::send('emails.register-activate', $data, function ($m) use ($user) {
+//                        $m->to($user->email, $user->first_name . ' ' . $user->last_name);
+//                        $m->subject('Welcome ' . $user->first_name);
+//                    });
+//
+//                }
+//            }
 
             // Was the user updated?
             if ($user->save()) {
