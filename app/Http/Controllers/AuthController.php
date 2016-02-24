@@ -214,9 +214,9 @@ class AuthController extends JoshController
             foreach($infos as $data){
                 foreach($data as $merges){
                     $user_email = $merges['email'];
-                    foreach($merges as $group){
-
-                    }
+//                    foreach($merges as $group){
+//
+//                    }
                 }
             }
             dd($user_email);
