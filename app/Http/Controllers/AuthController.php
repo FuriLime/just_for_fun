@@ -215,7 +215,7 @@ class AuthController extends JoshController
 //                dd($data['merges']['GROUPINGS']);
                 foreach($data['merges']['GROUPINGS'] as $merges){
                     foreach($merges['groups'] as $group){
-                        dd($group);
+                        var_dump($group);
                     }
 //                    $user_email = $merges['email'];
 //////                    foreach($merges as $group){
@@ -224,7 +224,7 @@ class AuthController extends JoshController
                 }
 //                $subemail = $data['email'];
             }
-
+dd();
 //            dd(member-info('901e50791519fce4886a3e84f2087ff9-us1', '3b2e9de273'));
             if($activate->isUserActivate($userId)){
                 $user = User::find($userId);
