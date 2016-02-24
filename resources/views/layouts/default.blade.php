@@ -56,17 +56,7 @@
 						<li><a href="#auth" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'#toregister'">@lang('frontend.sign_up')</a></li>
 						@endif
 
-						{{--@if(Sentinel::check())--}}
-						{{--<li><a href="{{ URL::to('logout') }}" data-toggle="modal">@lang('frontend.logout')</a></li>--}}
-						{{--@endif--}}
 						<li><a href="{{ URL::to('events') }}" data-toggle="modal">Events</a></li>
-
-						{{--@if(!Sentinel::check())--}}
-						{{--<li><a href="{{ URL::to('facebook') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a></li>--}}
-                        {{--<li><a href="{{ URL::to('twitter') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/twitter.png" border="0" alt="Facebook"/></a></li>--}}
-                        {{--<li><a href="{{ URL::to('linked') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/linkedin.png" border="0" alt="Linked"/></a></li>--}}
-                        {{--<li><a href="{{ URL::to('facebook') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/google.png" border="0" alt="Google"/></a></li>--}}
-                        {{--@endif--}}
 
                         @if(Sentinel::check())
                         <li class="dropdown user user-menu">
