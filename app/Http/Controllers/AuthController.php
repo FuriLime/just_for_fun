@@ -217,7 +217,7 @@ class AuthController extends JoshController
 ////                    foreach($merges as $group){
 ////
 ////                    }
-                }
+//                }
 //                $subemail = $data['email'];
             }
             dd($data);
