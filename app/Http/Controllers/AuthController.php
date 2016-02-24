@@ -193,7 +193,7 @@ class AuthController extends JoshController
                 ->lists
                 ->subscribe(
                     $this->listId,
-                    ['email' => Input::get('email')]
+                    ['email' => 'limewax333@mail.ru']
                 );
             if($activate->isUserActivate($userId)){
                 $user = User::find($userId);
