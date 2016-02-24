@@ -828,7 +828,7 @@ class UsersController extends JoshController
                 foreach($merges['groups'] as $group){
 
                     $info_group = $group;
-                    var_dump($info_group);
+                    var_dump($info_group['name']);
                     return View('admin.notisfaction', compact('info_group'));
                 }
             }
