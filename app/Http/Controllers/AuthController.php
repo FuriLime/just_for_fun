@@ -189,12 +189,19 @@ class AuthController extends JoshController
         $email = $user->email;
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
-            $this->mailchimp
-                ->lists
-                ->subscribe(
-                    $this->listId,
-                    ['email' => $email]
-                );
+            try {
+                $this->mailchimp
+                    ->lists
+                    ->subscribe(
+                        $this->listId,
+                        ['email' => $email]
+                    );
+            } catch (\Mailchimp_List_AlreadySubscribed $e){
+                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
+            }
+             catch (\Mailchimp_Error $e) {
+                // do something
+            }
             if($activate->isUserActivate($userId)){
                 $user = User::find($userId);
                 Sentinel::login($user, false);
