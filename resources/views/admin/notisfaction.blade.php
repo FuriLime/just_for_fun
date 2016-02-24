@@ -47,7 +47,7 @@
                         <table class="table">
                             <tbody>
                             <tr>
-                                <td class="weight-td">Type of Account</td>
+                                <td><input type="checkbox" checked /></td>
                                 <td>{{$group_name}}</td>
                             </tr>
                             <tr>
