@@ -832,7 +832,7 @@ class UsersController extends JoshController
                 }
             }
         }
-        return View::make('admin.notisfaction');
+        return View::make('admin.notisfaction', $infos);
     }
 
 
