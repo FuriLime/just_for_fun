@@ -37,7 +37,7 @@ Deleted users
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <i class="livicon" data-name="users-remove" data-size="18" data-c="#ffffff" data-hc="#ffffff"></i>
-                    Deleted Users List ooooopppsss
+                    Deleted Users List
                 </h4>
             </div>
             <div class="panel-body">
