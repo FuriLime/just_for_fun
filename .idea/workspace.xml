@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -29,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="144.16667" vertical-offset="5950" max-vertical-offset="6510">
-              <caret line="166" column="44" selection-start-line="166" selection-start-column="44" selection-end-line="166" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.2767857" vertical-offset="2710" max-vertical-offset="6510">
+              <caret line="191" column="28" selection-start-line="191" selection-start-column="28" selection-end-line="191" selection-end-column="28" />
               <folding>
                 <element signature="e#38#51#0#PHP" expanded="true" />
               </folding>
@@ -41,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37321427" vertical-offset="3646" max-vertical-offset="7080">
-              <caret line="257" column="35" selection-start-line="257" selection-start-column="35" selection-end-line="260" selection-end-column="46" />
+            <state vertical-scroll-proportion="-12.083333" vertical-offset="4795" max-vertical-offset="6930">
+              <caret line="339" column="55" selection-start-line="339" selection-start-column="55" selection-end-line="339" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -148,8 +147,8 @@
         <option value="$PROJECT_DIR$/resources/views/emails/register-activate.blade.php" />
         <option value="$PROJECT_DIR$/config/laravel-newsletter.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
       </list>
     </option>
   </component>
@@ -322,18 +321,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-00196" summary="cxhx">
-      <created>1456233063819</created>
-      <option name="number" value="00196" />
-      <option name="project" value="LOCAL" />
-      <updated>1456233063819</updated>
-    </task>
-    <task id="LOCAL-00197" summary="cxhx">
-      <created>1456233362380</created>
-      <option name="number" value="00197" />
-      <option name="project" value="LOCAL" />
-      <updated>1456233362380</updated>
     </task>
     <task id="LOCAL-00198" summary="cxhx">
       <created>1456233435058</created>
@@ -617,7 +604,19 @@
       <option name="project" value="LOCAL" />
       <updated>1456296208266</updated>
     </task>
-    <option name="localTasksCounter" value="245" />
+    <task id="LOCAL-00245" summary="cxhx">
+      <created>1456296588856</created>
+      <option name="number" value="00245" />
+      <option name="project" value="LOCAL" />
+      <updated>1456296588856</updated>
+    </task>
+    <task id="LOCAL-00246" summary="cxhx">
+      <created>1456296893916</created>
+      <option name="number" value="00246" />
+      <option name="project" value="LOCAL" />
+      <updated>1456296893916</updated>
+    </task>
+    <option name="localTasksCounter" value="247" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1028,21 +1027,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="144.16667" vertical-offset="5950" max-vertical-offset="6510">
-          <caret line="166" column="44" selection-start-line="166" selection-start-column="44" selection-end-line="166" selection-end-column="44" />
-          <folding>
-            <element signature="e#38#51#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-12.083333" vertical-offset="4795" max-vertical-offset="6930">
+          <caret line="339" column="55" selection-start-line="339" selection-start-column="55" selection-end-line="339" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37321427" vertical-offset="3646" max-vertical-offset="7080">
-          <caret line="257" column="35" selection-start-line="257" selection-start-column="35" selection-end-line="260" selection-end-column="46" />
-          <folding />
+        <state vertical-scroll-proportion="0.2767857" vertical-offset="2710" max-vertical-offset="6510">
+          <caret line="191" column="28" selection-start-line="191" selection-start-column="28" selection-end-line="191" selection-end-column="28" />
+          <folding>
+            <element signature="e#38#51#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

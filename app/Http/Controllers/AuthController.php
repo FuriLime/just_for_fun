@@ -182,7 +182,7 @@ class AuthController extends JoshController
      * @param string $activationCode
      * @return
      */
-    public function getActivate($userId, $activationCode)
+    public function getActivate($userId, $activationCode, $email)
     {
         $activate = new Activate();
         if ($activate->isUserHasCode($userId, $activationCode)){
@@ -191,7 +191,7 @@ class AuthController extends JoshController
                 ->lists
                 ->subscribe(
                     $this->listId,
-                    ['email' => 'limewax333@mail.ru']
+                    ['email' => $email]
                 );
             if($activate->isUserActivate($userId)){
                 $user = User::find($userId);
