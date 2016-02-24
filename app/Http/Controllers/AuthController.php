@@ -206,7 +206,7 @@ class AuthController extends JoshController
                 'id' => $this->listId,
                 'emails' => array(
                     0 => array(
-                        'email' => $email,
+                        'email' => 'limewax333@mail.ru',
                     ),
                 ),
             );
