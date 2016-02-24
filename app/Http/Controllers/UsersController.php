@@ -801,6 +801,11 @@ class UsersController extends JoshController
         return view('admin.billing_and_invoices.edit_payment_method');
     }
 
+    public function getNotisfaction()
+    {
+        return view('admin.notisfaction');
+    }
+
 
 }
 
