@@ -839,7 +839,7 @@ class UsersController extends JoshController
 
             }
         }
-        var_dump($group);
+        var_dump($merges);
 //        return View('admin.notisfaction', compact('info_group'));
 //        var_dump($info_group);
     }
