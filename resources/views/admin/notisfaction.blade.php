@@ -49,7 +49,7 @@
                             @foreach($info_group as $group)
                             <tr>
                                 <td><input type="checkbox" checked /></td>
-                                <td>{{$group['name']}}</td>
+                                <td>{{$group}}</td>
                             </tr>
                             @endforeach
 
