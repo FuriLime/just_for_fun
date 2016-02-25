@@ -826,7 +826,7 @@ class UsersController extends JoshController
         ]);
 
         foreach($result['interests'] as $key=>$interes){
-            var_dump($result['interests']); die;
+//            var_dump($result['interests']); die;
             $val_name[$key]['name'] = $interes->name;
             foreach($result1['interests'] as $k=>$check){
                 if($interes->id == $k){
@@ -847,7 +847,7 @@ class UsersController extends JoshController
 //        die;
         $this->mailchimp->patch("lists/'.$this->listId.'/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
-            'interests'    => ['2s3a384h' => true],
+            'interests'    => ['d87b536f5e' => false],
         ]);
     }
 }
