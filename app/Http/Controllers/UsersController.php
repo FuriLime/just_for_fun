@@ -830,7 +830,7 @@ class UsersController extends JoshController
 //                $sdfsdf[] =$inter_name;
 //            }
         }
-        dd($user_inter);
+//        dd($user_inter);
 //        dd($result);
 //        $email = Sentinel::getUser()->email;
 //        $params = array(
