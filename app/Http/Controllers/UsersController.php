@@ -845,7 +845,7 @@ class UsersController extends JoshController
 //            }
 //        }
 //
-        return View('admin.notisfaction', compact($result));
+        return View('admin.notisfaction', compact('result'));
 //        var_dump($info_group);
     }
 
