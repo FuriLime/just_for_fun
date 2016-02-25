@@ -188,10 +188,11 @@ class AuthController extends JoshController
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
             try {
-                dd($this->listId);
+                dd($this->mailchimp->post("lists/'.$this->listId.'/members", [
+                    'email_address' => $email
+                ]));
                 $this->mailchimp->post("lists/'.$this->listId.'/members", [
-                    'email_address' => $email,
-                    'status'        => 'subscribed',
+                    'email_address' => $email
                 ]);
             }
 // catch (\Mailchimp_List_AlreadySubscribed $e){
