@@ -835,7 +835,7 @@ class UsersController extends JoshController
         $result1 = $this->mailchimp->get("lists/$this->listId/members/$email",[
             'fields' => 'id,interests,email_address'
         ]);
-        dd($result1);
+        dd($result1 = $this->mailchimp->get("lists/$this->listId/members/$email"));
         $result = $this->mailchimp->get("lists/$this->listId/interest-categories/d8186972a7/interests",[
             'fields' => ['interests'=>['name']]
         ]);
