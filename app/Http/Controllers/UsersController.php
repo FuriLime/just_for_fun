@@ -820,7 +820,10 @@ class UsersController extends JoshController
         $result = $this->mailchimp->get('lists/'.$this->listId.'/members/'.$email,[
             'fields' => 'id,interests'
         ]);
-        dd($result->toArray());
+//        dd($result->toArray());
+        foreach($result as $interes){
+            $user_inter[] = $interes['name'];
+        }
 //        $email = Sentinel::getUser()->email;
 //        $params = array(
 //            'id' => $this->listId,
