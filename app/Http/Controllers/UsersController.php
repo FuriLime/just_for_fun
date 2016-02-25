@@ -874,9 +874,9 @@ class UsersController extends JoshController
 //            dd($_POST['check']);
 //        }
         foreach($_POST['check'] as $check_true){
-            if(count($check_true)>3){
+//            if(count($check_true)>3){
                 dd($check_true);
-            }
+//            }
         }
 //        die;
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
