@@ -814,8 +814,8 @@ class UsersController extends JoshController
     {
 
         $userID = Sentinel::getUser()->email;
-        $user = Sentinel::findUserById($userID);
-        $email = $user->email;
+//        $user = Sentinel::findUserById($userID);
+//        $email = $user->email;
         var_dump($userID);
         $params = array(
             'id' => $this->listId,
