@@ -101,9 +101,9 @@ View User Details
                                                         </tr>
                                                         <tr>
                                                             <td>Type Account</td>
-                                                            <td><input type="password">
+                                                            <td>
                                                                 {{ $user->password }}
-                                                                </input>
+
                                                             </td>
                                                         </tr>
 
