@@ -575,7 +575,8 @@ class UsersController extends JoshController
             if ($user->save()) {
                 $email = md5(Sentinel::getUser()->email);
                 $this->mailchimp->patch("lists/$this->listId/members/$email", [
-                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>'Jones'],
+                    'email' => $user->email,
+                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name],
 
                 ]);
 
