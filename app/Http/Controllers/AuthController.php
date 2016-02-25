@@ -189,17 +189,13 @@ class AuthController extends JoshController
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
             try {
-                dd($this->mailchimp->post("lists/$this->listId/members", [
-                    'email_address' => 'asdfghj@gmail.com',
-                    'status'        => 'subscribed',
-                ]));
-               $result= $this->mailchimp->post("lists/'.$this->listId.'/members", [
-                    'email_address' => 'sergey.ch.ysbm@gmail.com'
+              $this->mailchimp->post("lists/$this->listId/members", [
+                    'email_address' => $email,
+                  'status'        => 'subscribed',
                 ]);
 //                $result = $this->mailchimp->request('lists', [
 //                    'fields' => 'lists.id,lists.name,lists.stats.member_count'
 //                ]);
-                dd($result);
             }
 // catch (\Mailchimp_List_AlreadySubscribed $e){
 ////                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
