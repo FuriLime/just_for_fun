@@ -51,7 +51,10 @@
                                 @if($group==true)
                                 <td><input type="checkbox" checked /></td>
                                 <td>{{$group}}</td>
-                                    @endif
+                                    @else
+                                    <td><input type="checkbox"/></td>
+                                    <td>{{$group}}</td>
+                                @endif
                             </tr>
                             @endforeach
 
