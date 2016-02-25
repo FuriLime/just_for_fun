@@ -828,7 +828,7 @@ class UsersController extends JoshController
 //            $user_inter[] = $interes;
             $sdfsdf[$key]['name'] = $interes->name;
             foreach($result1['interests'] as $k=>$aaa){
-                if($interes->name == $k){
+                if($interes->id == $k){
                     $sdfsdf[$key]['check'] = $aaa;
                 }
             }
