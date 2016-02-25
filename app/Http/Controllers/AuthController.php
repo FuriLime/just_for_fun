@@ -190,8 +190,7 @@ class AuthController extends JoshController
             $activate->activateUser($userId);
             try {
                $result= $this->mailchimp->post("lists/'.$this->listId.'/members", [
-                    'email_address' => 'sergey.ch.ysbm@gmail.com',
-                    'status'        => 'subscribed',
+                    'email_address' => 'sergey.ch.ysbm@gmail.com'
                 ]);
 //                $result = $this->mailchimp->request('lists', [
 //                    'fields' => 'lists.id,lists.name,lists.stats.member_count'
