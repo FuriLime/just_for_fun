@@ -875,7 +875,7 @@ class UsersController extends JoshController
 //        }
         foreach($_POST['check'] as $check_true){
             //if(count($check_true)>3){
-                var_dump($check_true);
+                var_dump($check_true['check']);
            //}
         }
 //        die;
