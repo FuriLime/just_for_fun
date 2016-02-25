@@ -206,7 +206,7 @@ class AuthController extends JoshController
 
             $result = $this->mailchimp->post("lists/'.$this->listId.'/members", [
                     'email_address' => $email,
-                    'status'        => 'subscribed',
+                    'status_if_new'        => 'subscribed',
                 ]);
 
                 dd($result);
