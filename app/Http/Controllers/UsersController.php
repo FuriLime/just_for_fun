@@ -833,7 +833,7 @@ class UsersController extends JoshController
                 }
             }
         }
-        return View('admin.notisfaction', compact('$val_name'));
+        return View('admin.notisfaction', compact('val_name'));
     }
 
 
