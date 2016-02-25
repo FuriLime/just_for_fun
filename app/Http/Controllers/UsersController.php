@@ -12,7 +12,7 @@ use File;
 use App\User;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Hash;
-//use Mailchimp;
+use Mailchimp;
 
 class UsersController extends JoshController
 {
@@ -269,13 +269,13 @@ class UsersController extends JoshController
         'pic' => 'mimes:jpg,jpeg,bmp,png|max:10000'
     );
 
-//    protected $mailchimp;
-//    protected $listId = '3b2e9de273';        // Id of newsletter list
-//
-//    public function __construct(Mailchimp $mailchimp)
-//    {
-//        $this->mailchimp = $mailchimp;
-//    }
+    protected $mailchimp;
+    protected $listId = '3b2e9de273';        // Id of newsletter list
+
+    public function __construct(Mailchimp $mailchimp)
+    {
+        $this->mailchimp = $mailchimp;
+    }
 
     /**
      * Show a list of all the users.
