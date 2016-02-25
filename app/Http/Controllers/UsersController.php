@@ -820,7 +820,7 @@ class UsersController extends JoshController
         $result = $this->mailchimp->get('lists/'.$this->listId.'/members/'.$email,[
             'fields' => 'id,interests'
         ]);
-//        dd($result->toArray());
+        dd($result['interests']);
         foreach($result as $interes){
             $user_inter[] = $interes['interests'];
         }
