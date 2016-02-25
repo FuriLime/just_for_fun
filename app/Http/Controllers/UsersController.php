@@ -831,12 +831,12 @@ class UsersController extends JoshController
 //            }
         }
 //        dd($user_inter);
-        foreach($user_inter as $inter_name){
-            $sdfsdf =$inter_name['name'];
-            dd($inter_name['name']);
-
-        }
-        dd($user_inter);
+//        foreach($user_inter as $inter_name){
+//            $sdfsdf =$inter_name['name'];
+////            dd($inter_name['name']);
+//
+//        }
+        dd(gettype($user_inter));
 //        dd($result);
 //        $email = Sentinel::getUser()->email;
 //        $params = array(
