@@ -814,59 +814,59 @@ class UsersController extends JoshController
 
     public function getNotisfaction()
     {
-//        $email = md5(Sentinel::getUser()->email);
-//        $result1 = $this->mailchimp->get('lists/'.$this->listId.'/members/'.$email,[
-//            'fields' => 'id,interests'
-//        ]);
-//        $result = $this->mailchimp->get('lists/'.$this->listId.'/interest-categories/d8186972a7/interests',[
-//            'fields' => ['interests'=>['name']]
-//        ]);
-////        var_dump($result->toArray()); die;
-//        foreach($result['interests'] as $key=>$interes){
-////            $user_inter[] = $interes;
-//            $sdfsdf[$key]['name'] = $interes->name;
-//            foreach($result1['interests'] as $k=>$aaa){
-//                if($interes->id == $k){
-//                    $sdfsdf[$key]['check'] = $aaa;
+        $email = md5(Sentinel::getUser()->email);
+        $result1 = $this->mailchimp->get('lists/'.$this->listId.'/members/'.$email,[
+            'fields' => 'id,interests'
+        ]);
+        $result = $this->mailchimp->get('lists/'.$this->listId.'/interest-categories/d8186972a7/interests',[
+            'fields' => ['interests'=>['name']]
+        ]);
+//        var_dump($result->toArray()); die;
+        foreach($result['interests'] as $key=>$interes){
+//            $user_inter[] = $interes;
+            $sdfsdf[$key]['name'] = $interes->name;
+            foreach($result1['interests'] as $k=>$aaa){
+                if($interes->id == $k){
+                    $sdfsdf[$key]['check'] = $aaa;
+                }
+            }
+
+//            dd($interes->name);
+//            foreach($interes as $inter_name){
+//
+//                $sdfsdf[] =$inter_name['name'];
+//                dd($inter_name);
+//            }
+        }
+//        dd($sdfsdf);
+//        foreach($user_inter as $inter_name){
+//            $sdfsdf =$inter_name['name'];
+////            dd($inter_name['name']);
+//
+//        }
+//        dd(gettype($user_inter));
+//        dd($result);
+//        $email = Sentinel::getUser()->email;
+//        $params = array(
+//            'id' => $this->listId,
+//            'emails' => array(
+//                0 => array(
+//                    'email' => $email,
+//                ),
+//            ),
+//        );
+//        $infos = $this->mailchimp->request('lists/member-info', $params);
+////        var_dump($infos['data']);
+//        foreach($infos['data'] as $data){
+//            foreach($data['merges']['GROUPINGS'] as $merges){
+//                foreach($merges['groups'] as $group){
+//
+//                    $info_group[] = $group['name'];
 //                }
 //            }
-//
-////            dd($interes->name);
-////            foreach($interes as $inter_name){
-////
-////                $sdfsdf[] =$inter_name['name'];
-////                dd($inter_name);
-////            }
 //        }
-////        dd($sdfsdf);
-////        foreach($user_inter as $inter_name){
-////            $sdfsdf =$inter_name['name'];
-//////            dd($inter_name['name']);
-////
-////        }
-////        dd(gettype($user_inter));
-////        dd($result);
-////        $email = Sentinel::getUser()->email;
-////        $params = array(
-////            'id' => $this->listId,
-////            'emails' => array(
-////                0 => array(
-////                    'email' => $email,
-////                ),
-////            ),
-////        );
-////        $infos = $this->mailchimp->request('lists/member-info', $params);
-//////        var_dump($infos['data']);
-////        foreach($infos['data'] as $data){
-////            foreach($data['merges']['GROUPINGS'] as $merges){
-////                foreach($merges['groups'] as $group){
-////
-////                    $info_group[] = $group['name'];
-////                }
-////            }
-////        }
-////
-//        return View('admin.notisfaction', compact('sdfsdf'));
+//
+        return View('admin.notisfaction', compact('sdfsdf'));
 //        var_dump($info_group);
     }
 

@@ -187,30 +187,29 @@ class AuthController extends JoshController
         $email = $user->email;
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
-//            try {
-//                $this->mailchimp
-//                    ->lists
-//                    ->subscribe(
-//                        $this->listId,
-//                        ['email' => $email]
-//                    );
+            try {
+                $this->mailchimp
+                    ->lists
+                    ->subscribe(
+                        $this->listId,
+                        ['email' => $email]
+                    );
+            }
+// catch (\Mailchimp_List_AlreadySubscribed $e){
+////                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
 //            }
-//// catch (\Mailchimp_List_AlreadySubscribed $e){
-//////                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
-////            }
-//             catch (\Mailchimp_Error $e) {
-//                // do something
-//            }
+             catch (\Mailchimp_Error $e) {
+                // do something
+            }
 //            $result = Mailchimp::get('lists');
 //            dd(member-info('901e50791519fce4886a3e84f2087ff9-us1', '3b2e9de273'));
 
-            $result = $this->mailchimp->post("lists/'.$this->listId.'/members", [
-                    'title' => '',
-                    'email_address' => $email,
-                    'status_if_new'        => 'subscribed',
-                ]);
+//            $result = $this->mailchimp->post("lists/'.$this->listId.'/members", [
+//                    'email_address' => $email,
+//                    'status'        => 'subscribed',
+//                ]);
 
-                dd($result);
+//                dd($result);
 
 
 
