@@ -816,7 +816,9 @@ class UsersController extends JoshController
     {
 
 //        $mc = new \Mailchimp\Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
-        $result = $this->mailchimp->get('lists/3b2e9de273', 'campaign-folders');
+        $result = $this->mailchimp->get('lists/3b2e9de273', [
+            'fields' => 'merge-fields'
+        ]);
         var_dump($result->toArray());
 //        $email = Sentinel::getUser()->email;
 //        $params = array(
