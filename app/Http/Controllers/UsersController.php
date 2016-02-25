@@ -448,8 +448,8 @@ class UsersController extends JoshController
         try {
             // Get the user information
             $user = Sentinel::findById($id);
-//            $email = md5(Sentinel::getUser()->email);
-//            $this->mailchimp->delete("lists/$this->listId/members/$email");
+            $email = md5(Sentinel::getUser()->email);
+            $this->mailchimp->delete("lists/$this->listId/members/$email");
         } catch (UserNotFoundException $e) {
             // Prepare the error message
             $error = Lang::get('users/message.user_not_found', compact('id'));
