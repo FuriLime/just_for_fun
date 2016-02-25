@@ -53,11 +53,21 @@
       <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16607143" vertical-offset="2712" max-vertical-offset="6795">
-              <caret line="187" column="10" selection-start-line="187" selection-start-column="10" selection-end-line="187" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.3" vertical-offset="2712" max-vertical-offset="6795">
+              <caret line="192" column="64" selection-start-line="192" selection-start-column="64" selection-end-line="192" selection-end-column="64" />
               <folding>
                 <element signature="e#38#51#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mailchimp.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/pacely/mailchimp-apiv3/src/Mailchimp.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.791667" vertical-offset="2090" max-vertical-offset="3210">
+              <caret line="162" column="39" selection-start-line="161" selection-start-column="29" selection-end-line="162" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -191,11 +201,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -209,15 +215,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="pacely" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="mailchimp-apiv3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -231,7 +237,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pacely" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mailchimp-apiv3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -293,12 +311,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-00536" summary="cxhx">
-      <created>1456393614381</created>
-      <option name="number" value="00536" />
-      <option name="project" value="LOCAL" />
-      <updated>1456393614382</updated>
     </task>
     <task id="LOCAL-00537" summary="cxhx">
       <created>1456393633138</created>
@@ -588,7 +600,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456398125731</updated>
     </task>
-    <option name="localTasksCounter" value="585" />
+    <task id="LOCAL-00585" summary="cxhx">
+      <created>1456399206300</created>
+      <option name="number" value="00585" />
+      <option name="project" value="LOCAL" />
+      <updated>1456399206300</updated>
+    </task>
+    <option name="localTasksCounter" value="586" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -933,16 +951,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/pacely/mailchimp-apiv3/src/Mailchimp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5497382" vertical-offset="0" max-vertical-offset="3315">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-          <folding>
-            <element signature="e#29#56#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/pacely/mailchimp-apiv3/src/MailchimpFacade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05235602" vertical-offset="0" max-vertical-offset="573">
@@ -1001,10 +1009,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/pacely/mailchimp-apiv3/src/Mailchimp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.791667" vertical-offset="2090" max-vertical-offset="3210">
+          <caret line="162" column="39" selection-start-line="161" selection-start-column="29" selection-end-line="162" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16607143" vertical-offset="2712" max-vertical-offset="6795">
-          <caret line="187" column="10" selection-start-line="187" selection-start-column="10" selection-end-line="187" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.3" vertical-offset="2712" max-vertical-offset="6795">
+          <caret line="192" column="64" selection-start-line="192" selection-start-column="64" selection-end-line="192" selection-end-column="64" />
           <folding>
             <element signature="e#38#51#0#PHP" expanded="true" />
           </folding>
