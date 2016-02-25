@@ -49,10 +49,10 @@
                             @foreach($sdfsdf as $group)
                             <tr>
                                 @if($group['check']==true)
-                                <td><input type="checkbox" checked /></td>
+                                <td><input type="checkbox" checked value="1"/></td>
                                 <td>{{$group['name']}}</td>
                                     @else
-                                    <td><input type="checkbox"/></td>
+                                    <td><input type="checkbox" value="0"/></td>
                                     <td>{{$group['name']}}</td>
                                 @endif
                             </tr>
