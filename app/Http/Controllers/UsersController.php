@@ -574,17 +574,25 @@ class UsersController extends JoshController
             // Was the user updated?
             if ($user->save()) {
                 $email = md5(Sentinel::getUser()->email);
+
 //                var_dump($this->mailchimp->patch("lists/$this->listId/members/$email", [
 //                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name],
 //
 //                ]));
 //
 //                $user_email = md5($user->email);
-                $this->mailchimp->patch("lists/$this->listId/members/$email", [
+
+                $this->mailchimp->delete("lists/$this->listId/members/$email");
+                $this->mailchimp->post("lists/$this->listId/members", [
                     'email_address' => $user->email,
                     'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name],
-
+                    'status'        => 'subscribed',
                 ]);
+//                $this->mailchimp->patch("lists/$this->listId/members/$email", [
+//                    'email_address' => $user->email,
+//                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name],
+//
+//                ]);
 
 
                 // Prepare the success message
