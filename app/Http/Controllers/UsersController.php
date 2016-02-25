@@ -840,6 +840,8 @@ class UsersController extends JoshController
 
     public function updateNotisfaction(){
         $email = md5(Sentinel::getUser()->email);
+        var_dump($_POST);
+        die;
     }
 }
 
