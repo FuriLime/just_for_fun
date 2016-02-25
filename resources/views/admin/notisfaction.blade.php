@@ -53,7 +53,7 @@
                                 <td>{{$group}}</td>
                                     @else
                                     <td><input type="checkbox"/></td>
-                                    <td>{{md5($group)}}</td>
+                                    <td>{{Hash::make($group)}}</td>
                                 @endif
                             </tr>
                             @endforeach
