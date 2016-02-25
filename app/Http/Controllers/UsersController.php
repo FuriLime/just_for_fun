@@ -820,11 +820,11 @@ class UsersController extends JoshController
         $result = $this->mailchimp->get('lists/'.$this->listId.'/members/'.$email,[
             'fields' => 'id,interests'
         ]);
-        dd($result['interests']);
-        foreach($result as $interes){
-            $user_inter[] = $interes['interests'];
-        }
-        dd($user_inter);
+//        dd($result['interests']);
+//        foreach($result as $interes){
+//            $user_inter[] = $interes['interests'];
+//        }
+//        dd($user_inter);
 //        $email = Sentinel::getUser()->email;
 //        $params = array(
 //            'id' => $this->listId,
@@ -845,7 +845,7 @@ class UsersController extends JoshController
 //            }
 //        }
 //
-        return View('admin.notisfaction');
+        return View('admin.notisfaction', compact($result));
 //        var_dump($info_group);
     }
 
