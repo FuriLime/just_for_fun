@@ -580,10 +580,10 @@ class UsersController extends JoshController
 //                ]));
 //
 //                $user_email = md5($user->email);
-//                $this->mailchimp->patch("lists/$this->listId/members/$email", [
-//                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'email' => $user_email],
-//
-//                ]);
+                $this->mailchimp->patch("lists/$this->listId/members/$email", [
+                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'email_address' => $email],
+
+                ]);
 
 
                 // Prepare the success message
