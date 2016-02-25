@@ -824,8 +824,9 @@ class UsersController extends JoshController
         $result = $this->mailchimp->get('lists/'.$this->listId.'/interest-categories/d8186972a7/interests',[
             'fields' => ['interests'=>['name']]
         ]);
-        var_dump($result->toArray()); die;
+
         foreach($result['interests'] as $key=>$interes){
+            var_dump($result['interests']); die;
             $val_name[$key]['name'] = $interes->name;
             foreach($result1['interests'] as $k=>$check){
                 if($interes->id == $k){
