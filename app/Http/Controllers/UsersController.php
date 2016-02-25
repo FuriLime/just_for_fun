@@ -845,7 +845,7 @@ class UsersController extends JoshController
 //        }
 //        dd($_POST);
 //        die;
-        $this->mailchimp->patch("lists/'.$this->listId.'/members/$email", [
+        $this->mailchimp->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
             'interests'    => ['d87b536f5e' => false],
         ]);
