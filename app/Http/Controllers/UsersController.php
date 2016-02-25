@@ -876,7 +876,8 @@ class UsersController extends JoshController
         foreach($_POST['check'] as $key=>$check_true){
             //if(count($check_true)>3){
 //            $dfd[] = $check_true['check'];
-                var_dump($check_true);
+            $val_name[$key]['id'] = $check_true;
+                var_dump($val_name);
            //}
         }
 //        die;
