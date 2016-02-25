@@ -840,13 +840,13 @@ class UsersController extends JoshController
 //                dd($inter_name);
 //            }
         }
-        dd($sdfsdf);
+//        dd($sdfsdf);
 //        foreach($user_inter as $inter_name){
 //            $sdfsdf =$inter_name['name'];
 ////            dd($inter_name['name']);
 //
 //        }
-        dd(gettype($user_inter));
+//        dd(gettype($user_inter));
 //        dd($result);
 //        $email = Sentinel::getUser()->email;
 //        $params = array(
@@ -868,7 +868,7 @@ class UsersController extends JoshController
 //            }
 //        }
 //
-        return View('admin.notisfaction', compact('user_inter'));
+        return View('admin.notisfaction', compact('sdfsdf'));
 //        var_dump($info_group);
     }
 

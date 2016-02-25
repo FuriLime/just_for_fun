@@ -46,14 +46,14 @@
                     <div id="email_subscribes_panel" class="tab-pane fade in active ">
                         <table class="table">
                             <tbody>
-                            @foreach($user_inter as $group)
+                            @foreach($sdfsdf as $group)
                             <tr>
-                                @if($group==true)
+                                @if($group['check']==true)
                                 <td><input type="checkbox" checked /></td>
-                                <td>{{$group}}</td>
+                                <td>{{$group['name']}}</td>
                                     @else
                                     <td><input type="checkbox"/></td>
-                                    <td>{{$group}}</td>
+                                    <td>{{$group['name']}}</td>
                                 @endif
                             </tr>
                             @endforeach
