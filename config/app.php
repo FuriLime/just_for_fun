@@ -164,6 +164,7 @@ return [
         Spatie\Newsletter\NewsletterServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
 //        Skovmand\Mailchimp\MailchimpServiceProvider::class,
+        Mailchimp\MailchimpServiceProvider::class,
         Torann\GeoIP\GeoIPServiceProvider::class,
     ],
 
@@ -230,6 +231,7 @@ return [
         'Share'=>Chencha\Share\ShareFacade::class,
         'Newsletter' => Spatie\Newsletter\NewsletterFacade::class,
         'GeoIP' => Torann\GeoIP\GeoIPFacade::class,
+        'MC' => Mailchimp\MailchimpFacade::class,
     ],
 
 ];

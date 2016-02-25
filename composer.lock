@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bb0a035152582813defd51603a12140b",
-    "content-hash": "aeb6e190542011681411b6c8d7d6b08f",
+    "hash": "bd034990ffc7c25bc37324ca8fafb2c1",
+    "content-hash": "9603564a286361f43156d75f21702c83",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -2372,6 +2372,58 @@
                 "php"
             ],
             "time": "2015-12-04 15:28:43"
+        },
+        {
+            "name": "pacely/mailchimp-apiv3",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pacely/mailchimp-api-v3.git",
+                "reference": "db8065b69539dbfa874d775c229108b853a2e9ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pacely/mailchimp-api-v3/zipball/db8065b69539dbfa874d775c229108b853a2e9ee",
+                "reference": "db8065b69539dbfa874d775c229108b853a2e9ee",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~5.0|~6.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mailchimp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Magnussen",
+                    "email": "chris@hirvi.no"
+                }
+            ],
+            "description": "Simple API wrapper for Mailchimp API V3",
+            "keywords": [
+                "api",
+                "mailchimp",
+                "php",
+                "v3"
+            ],
+            "time": "2016-01-24 20:49:50"
         },
         {
             "name": "paragonie/random_compat",
@@ -4996,6 +5048,7 @@
     "stability-flags": {
         "cviebrock/eloquent-sluggable": 20,
         "cviebrock/eloquent-taggable": 20,
+        "pacely/mailchimp-apiv3": 20,
         "torann/geoip": 20
     },
     "prefer-stable": false,
