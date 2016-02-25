@@ -12,7 +12,7 @@ use File;
 use App\User;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Hash;
-use Mailchimp;
+//use Mailchimp;
 
 class UsersController extends JoshController
 {
@@ -269,13 +269,13 @@ class UsersController extends JoshController
         'pic' => 'mimes:jpg,jpeg,bmp,png|max:10000'
     );
 
-    protected $mailchimp;
-    protected $listId = '3b2e9de273';        // Id of newsletter list
-
-    public function __construct(Mailchimp $mailchimp)
-    {
-        $this->mailchimp = $mailchimp;
-    }
+//    protected $mailchimp;
+//    protected $listId = '3b2e9de273';        // Id of newsletter list
+//
+//    public function __construct(Mailchimp $mailchimp)
+//    {
+//        $this->mailchimp = $mailchimp;
+//    }
 
     /**
      * Show a list of all the users.
@@ -813,27 +813,27 @@ class UsersController extends JoshController
     public function getNotisfaction()
     {
 
-        $email = Sentinel::getUser()->email;
-        $params = array(
-            'id' => $this->listId,
-            'emails' => array(
-                0 => array(
-                    'email' => $email,
-                ),
-            ),
-        );
-        $infos = $this->mailchimp->call('lists/member-info', $params);
-//        var_dump($infos['data']);
-        foreach($infos['data'] as $data){
-            foreach($data['merges']['GROUPINGS'] as $merges){
-                foreach($merges['groups'] as $group){
-
-                    $info_group[] = $group['name'];
-                }
-            }
-        }
-
-        return View('admin.notisfaction', compact('info_group'));
+//        $email = Sentinel::getUser()->email;
+//        $params = array(
+//            'id' => $this->listId,
+//            'emails' => array(
+//                0 => array(
+//                    'email' => $email,
+//                ),
+//            ),
+//        );
+//        $infos = $this->mailchimp->call('lists/member-info', $params);
+////        var_dump($infos['data']);
+//        foreach($infos['data'] as $data){
+//            foreach($data['merges']['GROUPINGS'] as $merges){
+//                foreach($merges['groups'] as $group){
+//
+//                    $info_group[] = $group['name'];
+//                }
+//            }
+//        }
+//
+//        return View('admin.notisfaction', compact('info_group'));
 //        var_dump($info_group);
     }
 
