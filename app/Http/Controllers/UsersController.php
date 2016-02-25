@@ -827,7 +827,7 @@ class UsersController extends JoshController
         foreach($result['interests'] as $interes){
             $user_inter[] = $interes;
             foreach($user_inter as $inter_name){
-                $sdfsdf =$inter_name['name'];
+                $sdfsdf[] =$inter_name['name'];
             }
         }
         dd($sdfsdf);
