@@ -578,12 +578,19 @@ class UsersController extends JoshController
             // Was the user updated?
             if ($user->save()) {
 
-                $user_email = md5($user->email);
+//                $user_email = md5($user->email);
+//                $this->mailchimp->post("lists/$this->listId/members", [
+//                    'email_address' => $user_email,
+//                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name],
+//                    'status'        => 'subscribed',
+//                ]);
+
                 $this->mailchimp->post("lists/$this->listId/members", [
-                    'email_address' => $user_email,
+                    'email_address' => $user->email,
                     'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name],
                     'status'        => 'subscribed',
                 ]);
+
 //                $this->mailchimp->patch("lists/$this->listId/members/$email", [
 //                    'email_address' => $user->email,
 //                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name],
@@ -839,7 +846,6 @@ class UsersController extends JoshController
         $result1 = $this->mailchimp->get("lists/$this->listId/members/$email",[
             'fields' => 'id,interests,email_address'
         ]);
-        dd($result1 = $this->mailchimp->get("lists/$this->listId/members/$email"));
         $result = $this->mailchimp->get("lists/$this->listId/interest-categories/d8186972a7/interests",[
             'fields' => ['interests'=>['name']]
         ]);
