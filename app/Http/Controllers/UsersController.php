@@ -573,6 +573,13 @@ class UsersController extends JoshController
 
             // Was the user updated?
             if ($user->save()) {
+                $email = md5(Sentinel::getUser()->email);
+                $this->mailchimp->patch("lists/$this->listId/members/$email", [
+                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>'Jones'],
+
+                ]);
+
+
                 // Prepare the success message
                 $success = Lang::get('users/message.success.update');
 
