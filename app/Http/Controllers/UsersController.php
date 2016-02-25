@@ -822,7 +822,7 @@ class UsersController extends JoshController
         ]);
 //        dd($result->toArray());
         foreach($result as $interes){
-            $user_inter[] = $interes;
+            $user_inter[] = $interes['interests'];
         }
         dd($user_inter);
 //        $email = Sentinel::getUser()->email;
