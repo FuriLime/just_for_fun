@@ -854,7 +854,7 @@ class UsersController extends JoshController
 
             $val_name[$key]['id'] = $interes->id;
             $val_name[$key]['name'] = $interes->name;
-            var_dump($val_name); die;
+//            var_dump($val_name); die;
             foreach($result1['interests'] as $k=>$check){
                 if($interes->id == $k){
                     $val_name[$key]['check'] = $check;
