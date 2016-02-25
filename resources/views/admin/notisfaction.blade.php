@@ -48,8 +48,10 @@
                             <tbody>
                             @foreach($user_inter as $group)
                             <tr>
+                                @if($group==true)
                                 <td><input type="checkbox" checked /></td>
                                 <td>{{$group}}</td>
+                                    @endif
                             </tr>
                             @endforeach
 
