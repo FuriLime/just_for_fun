@@ -184,37 +184,21 @@ class AuthController extends JoshController
     {
         $activate = new Activate();
         $user = User::find($userId);
-//        dd(gettype($user));
         $email = $user->email;
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
             try {
               $this->mailchimp->post("lists/$this->listId/members", [
                     'email_address' => $email,
-                  'status'        => 'subscribed',
+                    'status'        => 'subscribed',
                 ]);
-//                $result = $this->mailchimp->request('lists', [
-//                    'fields' => 'lists.id,lists.name,lists.stats.member_count'
-//                ]);
             }
-// catch (\Mailchimp_List_AlreadySubscribed $e){
-////                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
-//            }
+ catch (\Mailchimp_List_AlreadySubscribed $e){
+//                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
+            }
              catch (\Mailchimp_Error $e) {
                 // do something
             }
-//            $result = Mailchimp::get('lists');
-//            dd(member-info('901e50791519fce4886a3e84f2087ff9-us1', '3b2e9de273'));
-
-//            $result = $this->mailchimp->post("lists/'.$this->listId.'/members", [
-//                    'email_address' => $email,
-//                    'status'        => 'subscribed',
-//                ]);
-
-//                dd($result);
-
-
-
             if($activate->isUserActivate($userId)){
                 $user = User::find($userId);
                 Sentinel::login($user, false);
