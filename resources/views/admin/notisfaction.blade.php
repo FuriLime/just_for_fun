@@ -45,6 +45,7 @@
                 <div class="tab-content nav-tab">
                     <div id="email_subscribes_panel" class="tab-pane fade in active ">
                         <form method="POST" action="">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                         <table class="table">
                             <tbody>
                             @foreach($sdfsdf as $key=>$group)
