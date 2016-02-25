@@ -870,7 +870,7 @@ class UsersController extends JoshController
 //        if($group['check']==1){
 //
 //        }
-        if(count($_POST['check'])>2) {
+        if(count($_POST['check'])<3) {
             dd($_POST['check']);
         }
 //        die;
