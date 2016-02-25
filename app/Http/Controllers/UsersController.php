@@ -824,7 +824,7 @@ class UsersController extends JoshController
         $result = $this->mailchimp->get('lists/'.$this->listId.'/interest-categories/d8186972a7/interests',[
             'fields' => ['interests'=>['name']]
         ]);
-//        var_dump($result->toArray()); die;
+        var_dump($result->toArray()); die;
         foreach($result['interests'] as $key=>$interes){
             $val_name[$key]['name'] = $interes->name;
             foreach($result1['interests'] as $k=>$check){
@@ -839,8 +839,15 @@ class UsersController extends JoshController
 
     public function updateNotisfaction(){
         $email = md5(Sentinel::getUser()->email);
-        dd($_POST);
-        die;
+//        if($group['check']==1){
+//
+//        }
+//        dd($_POST);
+//        die;
+        $this->mailchimp->patch("lists/'.$this->listId.'/members/$email", [
+            'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
+            'interests'    => ['2s3a384h' => true],
+        ]);
     }
 }
 
