@@ -815,7 +815,7 @@ class UsersController extends JoshController
     public function getNotisfaction()
     {
 
-        $mc = new Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
+        $mc = new Mailchimp\Client('901e50791519fce4886a3e84f2087ff9-us1');
         $result = $mc->request('lists', [
             'fields' => 'lists.id,lists.name,lists.stats.member_count',
             'offset' => 10,
