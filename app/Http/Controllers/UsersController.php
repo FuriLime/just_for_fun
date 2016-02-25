@@ -868,7 +868,7 @@ class UsersController extends JoshController
 //        if($group['check']==1){
 //
 //        }
-//        dd($_POST);
+        var_dump($_POST);
 //        die;
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
