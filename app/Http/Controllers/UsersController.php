@@ -814,10 +814,10 @@ class UsersController extends JoshController
 
     public function getNotisfaction()
     {
-        $email = Sentinel::getUser()->email;
+        $email = Hash::make(Sentinel::getUser()->email);
 //        dd($email);
 //        $mc = new \Mailchimp\Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
-        $result = $this->mailchimp->get('lists/'.$this->listId.'/members/3e0794e957684d33a69d4ed88779bdb0',[
+        $result = $this->mailchimp->get('lists/'.$this->listId.'/members/'.$email,[
             'field' => 'interests'
         ]);
         dd($result->toArray());
