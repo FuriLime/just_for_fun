@@ -44,15 +44,18 @@
 
                 <div class="tab-content nav-tab">
                     <div id="email_subscribes_panel" class="tab-pane fade in active ">
+                        <form method="POST" action="">
                         <table class="table">
                             <tbody>
                             @foreach($sdfsdf as $key=>$group)
                             <tr>
                                 @if($group['check']==true)
                                 <td><input type="checkbox" checked name="check[{{$key}}][]" value="1"/></td>
+                                <td><input  name="check[{{$key}}][]" type="hidden"/></td>
                                 <td>{{$group['name']}}</td>
                                     @else
                                     <td><input type="checkbox" name="check[{{$key}}][]" value="0"/></td>
+                                    <td><input  name="check[{{$key}}][]" type="hidden"/></td>
                                     <td>{{$group['name']}}</td>
                                 @endif
                             </tr>
@@ -60,7 +63,9 @@
 
                             </tbody>
                         </table>
-                        <button class="btn btn-primary text-white"><i class='glyphicon glyphicon-edit'></i>Update Subscriptions</button>
+
+                        <button type="submit" class="btn btn-primary text-white"><i class='glyphicon glyphicon-edit'></i>Update Subscriptions</button>
+                        </form>
                     </div>
 
 
