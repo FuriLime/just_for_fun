@@ -46,7 +46,7 @@
                     <div id="email_subscribes_panel" class="tab-pane fade in active ">
                         <table class="table">
                             <tbody>
-                            @foreach($result as $group)
+                            @foreach($user_inter as $group)
                             <tr>
                                 <td><input type="checkbox" checked /></td>
                                 <td>{{$group}}</td>

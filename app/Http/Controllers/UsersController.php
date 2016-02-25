@@ -821,9 +821,9 @@ class UsersController extends JoshController
             'fields' => 'id,interests'
         ]);
 //        dd($result['interests']);
-//        foreach($result as $interes){
-//            $user_inter[] = $interes['interests'];
-//        }
+        foreach($result['interests'] as $interes){
+            $user_inter[] = $interes;
+        }
 //        dd($user_inter);
 //        $email = Sentinel::getUser()->email;
 //        $params = array(
@@ -845,7 +845,7 @@ class UsersController extends JoshController
 //            }
 //        }
 //
-        return View('admin.notisfaction', compact('result'));
+        return View('admin.notisfaction', compact('user_inter'));
 //        var_dump($info_group);
     }
 
