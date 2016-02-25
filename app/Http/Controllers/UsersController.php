@@ -817,12 +817,12 @@ class UsersController extends JoshController
         $email = md5(Sentinel::getUser()->email);
 //        dd($email);
 //        $mc = new \Mailchimp\Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
-//        $result = $this->mailchimp->get('lists/'.$this->listId.'/members/'.$email,[
-//            'fields' => 'id,interests'
-//        ]);
-        $result = $this->mailchimp->get('lists/'.$this->listId.'/interest-categories/d8186972a7/interests',[
-            'fields' => ['interests'=>['name']]
+        $result = $this->mailchimp->get('lists/'.$this->listId.'/members/'.$email,[
+            'fields' => 'id,interests'
         ]);
+//        $result = $this->mailchimp->get('lists/'.$this->listId.'/interest-categories/d8186972a7/interests',[
+//            'fields' => ['interests'=>['name']]
+//        ]);
         var_dump($result->toArray()); die;
         foreach($result['interests'] as $interes){
 //            $user_inter[] = $interes;
