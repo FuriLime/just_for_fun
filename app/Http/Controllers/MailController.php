@@ -8,7 +8,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
-use Mail;
+//use Mail;
 
 class MailController extends Controller
 {
@@ -18,11 +18,11 @@ class MailController extends Controller
 
     	$all = $request->all();
 
-    	Mail::queue('mailchimp', compact('all'), function($message) use($all){
-    		$message->from($all['sender_email'])
-    				->to($all['recipient_email'])
-    				->subject($all['subject']);
-    	});
+//    	Mail::queue('mailchimp', compact('all'), function($message) use($all){
+//    		$message->from($all['sender_email'])
+//    				->to($all['recipient_email'])
+//    				->subject($all['subject']);
+//    	});
 
     	return redirect('/');
 
