@@ -815,8 +815,6 @@ class UsersController extends JoshController
     public function getNotisfaction()
     {
         $email = md5(Sentinel::getUser()->email);
-//        dd($email);
-//        $mc = new \Mailchimp\Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
         $result1 = $this->mailchimp->get('lists/'.$this->listId.'/members/'.$email,[
             'fields' => 'id,interests'
         ]);
