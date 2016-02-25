@@ -830,9 +830,10 @@ class UsersController extends JoshController
 //                $sdfsdf[] =$inter_name;
 //            }
         }
-        dd($user_inter);
+//        dd($user_inter);
         foreach($user_inter as $inter_name){
             $sdfsdf[] =$inter_name['name'];
+            dd($inter_name['name']);
 
         }
         dd($user_inter);
