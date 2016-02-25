@@ -50,7 +50,7 @@
                             <tr>
                                 @if($group==true)
                                 <td><input type="checkbox" checked /></td>
-                                <td>{{$group}}</td>
+                                <td>{{md5($group)}}</td>
                                     @else
                                     <td><input type="checkbox"/></td>
                                     <td>{{$group}}</td>
