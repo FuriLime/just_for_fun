@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_02_18_065623_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_02_18_065623_create_users_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_02_18_070739_soft_delete_user_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_02_18_070739_soft_delete_user_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_02_18_070858_create_password_reset_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_02_18_070858_create_password_reset_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_02_18_071006_create_event_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_02_18_071006_create_event_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_02_18_072406_create_event_Channels_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_02_18_072406_create_event_Channels_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_02_18_074103_create_usergroups_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_02_18_074103_create_usergroups_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_02_22_103506_create_eventcategories_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_02_22_103506_create_eventcategories_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/eventcategories/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/eventcategories/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/eventcategories/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/eventcategories/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/event.test-y-sbm.loc.iml" afterPath="$PROJECT_DIR$/.idea/event.test-y-sbm.loc.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/geoip.php" afterPath="$PROJECT_DIR$/config/geoip.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/googletagmanager.php" afterPath="$PROJECT_DIR$/config/googletagmanager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/eventcategories/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/eventcategories/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/laravel-newsletter.php" afterPath="$PROJECT_DIR$/config/laravel-newsletter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/linkedController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/linkedController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/vendor/googletagmanager/script.blade.php" afterPath="$PROJECT_DIR$/resources/views/vendor/googletagmanager/script.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/eventcategories/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/eventcategories/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -59,10 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7905759" vertical-offset="2037" max-vertical-offset="3645">
+            <state vertical-scroll-proportion="-18.875" vertical-offset="2037" max-vertical-offset="3645">
               <caret line="166" column="10" selection-start-line="166" selection-start-column="10" selection-end-line="166" selection-end-column="10" />
               <folding />
             </state>
@@ -81,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0833333" vertical-offset="12160" max-vertical-offset="12720">
-              <caret line="814" column="0" selection-start-line="814" selection-start-column="0" selection-end-line="814" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.65178573" vertical-offset="12160" max-vertical-offset="12720">
+              <caret line="835" column="40" selection-start-line="835" selection-start-column="40" selection-end-line="835" selection-end-column="40" />
               <folding>
                 <element signature="e#38#51#0#PHP" expanded="true" />
               </folding>
@@ -148,10 +129,10 @@
         <option value="$PROJECT_DIR$/resources/views/events/index.blade.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MailController.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
       </list>
     </option>
   </component>
@@ -284,12 +265,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-00351" summary="cxhx">
-      <created>1456323589962</created>
-      <option name="number" value="00351" />
-      <option name="project" value="LOCAL" />
-      <updated>1456323589962</updated>
     </task>
     <task id="LOCAL-00352" summary="cxhx">
       <created>1456323692903</created>
@@ -579,7 +554,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456382942944</updated>
     </task>
-    <option name="localTasksCounter" value="400" />
+    <task id="LOCAL-00400" summary="cxhx">
+      <created>1456383744542</created>
+      <option name="number" value="00400" />
+      <option name="project" value="LOCAL" />
+      <updated>1456383744542</updated>
+    </task>
+    <option name="localTasksCounter" value="401" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -715,6 +696,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2617801" vertical-offset="0" max-vertical-offset="1050">
           <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -987,6 +969,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/mailchimp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41884816" vertical-offset="0" max-vertical-offset="573">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.875" vertical-offset="2037" max-vertical-offset="3645">
+          <caret line="166" column="10" selection-start-line="166" selection-start-column="10" selection-end-line="166" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.125" vertical-offset="630" max-vertical-offset="1755">
@@ -997,29 +995,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/mailchimp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41884816" vertical-offset="0" max-vertical-offset="573">
-          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0833333" vertical-offset="12160" max-vertical-offset="12720">
-          <caret line="814" column="0" selection-start-line="814" selection-start-column="0" selection-end-line="814" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.65178573" vertical-offset="12160" max-vertical-offset="12720">
+          <caret line="835" column="40" selection-start-line="835" selection-start-column="40" selection-end-line="835" selection-end-column="40" />
           <folding>
             <element signature="e#38#51#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7905759" vertical-offset="2037" max-vertical-offset="3645">
-          <caret line="166" column="10" selection-start-line="166" selection-start-column="10" selection-end-line="166" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
