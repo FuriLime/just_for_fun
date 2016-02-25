@@ -849,7 +849,7 @@ class UsersController extends JoshController
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
             'interests'    => ['d87b536f5e' => false, '8fd65feb6a'=>false],
         ]);
-        return View('admin.notisfaction', compact('val_name'));
+        return Redirect::route('notisfaction');
     }
 }
 
