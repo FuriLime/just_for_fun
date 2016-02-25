@@ -812,6 +812,9 @@ class UsersController extends JoshController
         return view('admin.billing_and_invoices.edit_payment_method');
     }
 
+
+
+    //get membre`s interests
     public function getNotisfaction()
     {
         $email = md5(Sentinel::getUser()->email);
@@ -830,46 +833,8 @@ class UsersController extends JoshController
                     $sdfsdf[$key]['check'] = $aaa;
                 }
             }
-
-//            dd($interes->name);
-//            foreach($interes as $inter_name){
-//
-//                $sdfsdf[] =$inter_name['name'];
-//                dd($inter_name);
-//            }
         }
-//        dd($sdfsdf);
-//        foreach($user_inter as $inter_name){
-//            $sdfsdf =$inter_name['name'];
-////            dd($inter_name['name']);
-//
-//        }
-//        dd(gettype($user_inter));
-//        dd($result);
-//        $email = Sentinel::getUser()->email;
-//        $params = array(
-//            'id' => $this->listId,
-//            'emails' => array(
-//                0 => array(
-//                    'email' => $email,
-//                ),
-//            ),
-//        );
-//        $infos = $this->mailchimp->request('lists/member-info', $params);
-////        var_dump($infos['data']);
-//        foreach($infos['data'] as $data){
-//            foreach($data['merges']['GROUPINGS'] as $merges){
-//                foreach($merges['groups'] as $group){
-//
-//                    $info_group[] = $group['name'];
-//                }
-//            }
-//        }
-//
         return View('admin.notisfaction', compact('sdfsdf'));
-//        var_dump($info_group);
     }
-
-
 }
 
