@@ -189,7 +189,7 @@ class AuthController extends JoshController
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
             try {
-                dd($this->mailchimp->post("lists/'.$this->listId.'/members"));
+                dd($this->mailchimp->post("lists/$this->listId/members"));
                $result= $this->mailchimp->post("lists/'.$this->listId.'/members", [
                     'email_address' => 'sergey.ch.ysbm@gmail.com'
                 ]);
