@@ -46,12 +46,12 @@
                     <div id="email_subscribes_panel" class="tab-pane fade in active ">
                         <table class="table">
                             <tbody>
-                            {{--@foreach($info_group as $group)--}}
-                            {{--<tr>--}}
-                                {{--<td><input type="checkbox" checked /></td>--}}
-                                {{--<td>{{$group}}</td>--}}
-                            {{--</tr>--}}
-                            {{--@endforeach--}}
+                            @foreach($info_group as $group)
+                            <tr>
+                                <td><input type="checkbox" checked /></td>
+                                <td>{{$group}}</td>
+                            </tr>
+                            @endforeach
 
                             </tbody>
                         </table>

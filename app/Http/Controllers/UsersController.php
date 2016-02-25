@@ -813,27 +813,27 @@ class UsersController extends JoshController
     public function getNotisfaction()
     {
 
-//        $email = Sentinel::getUser()->email;
-//        $params = array(
-//            'id' => $this->listId,
-//            'emails' => array(
-//                0 => array(
-//                    'email' => $email,
-//                ),
-//            ),
-//        );
-//        $infos = $this->mailchimp->call('lists/member-info', $params);
-////        var_dump($infos['data']);
-//        foreach($infos['data'] as $data){
-//            foreach($data['merges']['GROUPINGS'] as $merges){
-//                foreach($merges['groups'] as $group){
+        $email = Sentinel::getUser()->email;
+        $params = array(
+            'id' => $this->listId,
+            'emails' => array(
+                0 => array(
+                    'email' => $email,
+                ),
+            ),
+        );
+        $infos = $this->mailchimp->call('lists/member-info', $params);
+//        var_dump($infos['data']);
+        foreach($infos['data'] as $data){
+            foreach($data['merges']['GROUPINGS'] as $merges){
+                foreach($merges['groups'] as $group){
+
+                    $info_group[] = $group['name'];
+                }
+            }
+        }
 //
-//                    $info_group[] = $group['name'];
-//                }
-//            }
-//        }
-//
-        return View('admin.notisfaction');
+        return View('admin.notisfaction', compact('info_group'));
 //        var_dump($info_group);
     }
 
