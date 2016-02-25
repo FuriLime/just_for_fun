@@ -810,12 +810,12 @@ class UsersController extends JoshController
         return view('admin.billing_and_invoices.edit_payment_method');
     }
 
-    public function getNotisfaction($userId=78)
+    public function getNotisfaction()
     {
-//        $user = new User;
-        $user = Sentinel::findById($userId);
+
+        $user = Sentinel::User();
         $email = $user['email'];
-//        var_dump($user);
+        var_dump($user);
         $params = array(
             'id' => $this->listId,
             'emails' => array(
@@ -827,19 +827,16 @@ class UsersController extends JoshController
         $infos = $this->mailchimp->call('lists/member-info', $params);
 //        var_dump($infos['data']);
         foreach($infos['data'] as $data){
-                var_dump($data['email']);
             foreach($data['merges']['GROUPINGS'] as $merges){
-
-//                    var_dump($merges);
                 foreach($merges['groups'] as $group){
 
                     $info_group[] = $group['name'];
                 }
-                var_dump($info_group);
             }
         }
 
         return View('admin.notisfaction', compact('info_group'));
+        return View('admin.notisfaction');
 //        var_dump($info_group);
     }
 
