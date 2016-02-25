@@ -52,11 +52,11 @@
                             <tr>
                                 @if($group['check']==true)
                                 <td><input type="checkbox" checked name="check[{{$key}}][]" value="1"/></td>
-                                <td><input  name="check[{{$key}}][]" type="text" style="display: none"/></td>
+                                <td><input  name="check[{{$key}}][]" type="hidden" value="{{$group['name']}}"/></td>
                                 <td>{{$group['name']}}</td>
                                     @else
                                     <td><input type="checkbox" name="check[{{$key}}][]" value="0"/></td>
-                                    <td><input  name="check[{{$key}}][]" type="text" style="display: none"/></td>
+                                    <td><input  name="check[{{$key}}][]" type="hidden" value="{{$group['name']}}" /></td>
                                     <td>{{$group['name']}}</td>
                                 @endif
                             </tr>
