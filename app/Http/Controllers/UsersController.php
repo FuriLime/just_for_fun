@@ -816,31 +816,31 @@ class UsersController extends JoshController
     {
 
 //        $mc = new \Mailchimp\Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
-//        $result = $mc->request('lists', [
-//            'fields' => 'lists.id,lists.name,lists.stats.member_count',
-//            'offset' => 10,
-//            'count' => 10
-//        ]);
-//        var_dump($result);
-        $email = Sentinel::getUser()->email;
-        $params = array(
-            'id' => $this->listId,
-            'emails' => array(
-                0 => array(
-                    'email' => $email,
-                ),
-            ),
-        );
-        $infos = $this->mailchimp->request('lists/member-info', $params);
-//        var_dump($infos['data']);
-        foreach($infos['data'] as $data){
-            foreach($data['merges']['GROUPINGS'] as $merges){
-                foreach($merges['groups'] as $group){
-
-                    $info_group[] = $group['name'];
-                }
-            }
-        }
+        $result = $this->mailchimp->request('lists', [
+            'fields' => 'lists.id,lists.name,lists.stats.member_count',
+            'offset' => 10,
+            'count' => 10
+        ]);
+        var_dump($result->toArray());
+//        $email = Sentinel::getUser()->email;
+//        $params = array(
+//            'id' => $this->listId,
+//            'emails' => array(
+//                0 => array(
+//                    'email' => $email,
+//                ),
+//            ),
+//        );
+//        $infos = $this->mailchimp->request('lists/member-info', $params);
+////        var_dump($infos['data']);
+//        foreach($infos['data'] as $data){
+//            foreach($data['merges']['GROUPINGS'] as $merges){
+//                foreach($merges['groups'] as $group){
+//
+//                    $info_group[] = $group['name'];
+//                }
+//            }
+//        }
 //
         return View('admin.notisfaction');
 //        var_dump($info_group);
