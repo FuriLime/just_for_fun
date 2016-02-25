@@ -826,15 +826,14 @@ class UsersController extends JoshController
         ]);
 //        var_dump($result->toArray()); die;
         foreach($result['interests'] as $key=>$interes){
-//            $user_inter[] = $interes;
-            $sdfsdf[$key]['name'] = $interes->name;
-            foreach($result1['interests'] as $k=>$aaa){
+            $val_name[$key]['name'] = $interes->name;
+            foreach($result1['interests'] as $k=>$check){
                 if($interes->id == $k){
-                    $sdfsdf[$key]['check'] = $aaa;
+                    $val_name[$key]['check'] = $check;
                 }
             }
         }
-        return View('admin.notisfaction', compact('sdfsdf'));
+        return View('admin.notisfaction', compact('$val_name'));
     }
 
 

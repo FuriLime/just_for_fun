@@ -48,7 +48,7 @@
                             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                         <table class="table">
                             <tbody>
-                            @foreach($sdfsdf as $key=>$group)
+                            @foreach($val_name as $key=>$group)
                             <tr>
                                 @if($group['check']==true)
                                 <td><input type="checkbox" checked name="check[{{$key}}]['check']" value="1"/></td>
