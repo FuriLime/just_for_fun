@@ -848,7 +848,7 @@ class UsersController extends JoshController
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
             'interests'    => ['d87b536f5e' => false,
-                               '8fd65feb6a' =>1
+                               '8fd65feb6a' =>true
                               ],
         ]);
 //        return Redirect::route('admin.notisfaction');
