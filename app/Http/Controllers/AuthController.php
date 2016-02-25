@@ -184,7 +184,7 @@ class AuthController extends JoshController
     {
         $activate = new Activate();
         $user = User::find($userId);
-        dd(gettype($user));
+//        dd(gettype($user));
         $email = $user->email;
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
