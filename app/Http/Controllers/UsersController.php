@@ -873,13 +873,7 @@ class UsersController extends JoshController
 //        if(count($_POST['check'])>3) {
 //            dd($_POST['check']);
 //        }
-        foreach($_POST['check'] as $key=>$check_true){
-            //if(count($check_true)>3){
-//            $dfd[] = $check_true['check'];
-            $val_name[$key]['id'] = $check_true;
-                var_dump($val_name);
-           //}
-        }
+
 //        die;
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
