@@ -836,5 +836,10 @@ class UsersController extends JoshController
         }
         return View('admin.notisfaction', compact('sdfsdf'));
     }
+
+
+    public function updateNotisfaction(){
+        $email = md5(Sentinel::getUser()->email);
+    }
 }
 
