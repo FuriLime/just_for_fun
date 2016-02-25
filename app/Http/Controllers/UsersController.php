@@ -824,14 +824,14 @@ class UsersController extends JoshController
             'fields' => ['interests'=>['name']]
         ]);
 //        dd($result->toArray());
-//        foreach($result['interests'] as $interes){
-//            $user_inter[] = $interes;
+        foreach($result['interests'] as $interes){
+            $user_inter[] = $interes;
 //            foreach($user_inter as $inter_name){
 //                $name[] = $inter_name['name'];
 //            }
-//        }
-//        dd($name);
-        dd($result);
+        }
+        dd($user_inter);
+//        dd($result);
 //        $email = Sentinel::getUser()->email;
 //        $params = array(
 //            'id' => $this->listId,
