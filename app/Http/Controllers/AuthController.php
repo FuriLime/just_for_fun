@@ -208,6 +208,8 @@ class AuthController extends JoshController
                     'email_address' => $email,
                     'status'        => 'subscribed',
                 ]);
+
+                dd($this);
             }catch (\Mailchimp_List_AlreadySubscribed $e) {
 
             }
