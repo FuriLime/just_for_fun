@@ -831,7 +831,7 @@ class UsersController extends JoshController
                 ),
             ),
         );
-        $infos = $this->mailchimp->call('lists/member-info', $params);
+        $infos = $this->mailchimp->request('lists/member-info', $params);
 //        var_dump($infos['data']);
         foreach($infos['data'] as $data){
             foreach($data['merges']['GROUPINGS'] as $merges){
