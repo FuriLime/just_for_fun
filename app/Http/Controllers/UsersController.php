@@ -832,7 +832,7 @@ class UsersController extends JoshController
     {
         $email = md5(Sentinel::getUser()->email);
         $result1 = $this->mailchimp->get("lists/$this->listId/members/$email",[
-            'fields' => 'id,interests,email'
+            'fields' => 'id,interests,email_address'
         ]);
         dd($result1);
         $result = $this->mailchimp->get("lists/$this->listId/interest-categories/d8186972a7/interests",[
