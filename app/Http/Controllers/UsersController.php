@@ -813,7 +813,8 @@ class UsersController extends JoshController
     public function getNotisfaction()
     {
 
-        $user = Sentinel::getUser()->id;
+        $userID = Sentinel::getUser()->id;
+        $user = Sentinel::findUserById($userID);
         $email = $user['email'];
         var_dump($user);
         $params = array(
