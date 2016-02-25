@@ -101,79 +101,12 @@ View User Details
                                                         </tr>
                                                         <tr>
                                                             <td>Type Account</td>
-                                                            <td>
+                                                            <td><input type="password">
                                                                 {{ $user->password }}
+                                                                </input>
                                                             </td>
                                                         </tr>
-                                                        {{--<tr>--}}
-                                                            {{--<td>--}}
-                                                                {{--@lang('users/title.gender')--}}
-                                                            {{--</td>--}}
-                                                            {{--<td>--}}
-                                                                {{--{{ $user->gender }}--}}
-                                                            {{--</td>--}}
-                                                        {{--</tr>--}}
-                                                        {{--<tr>--}}
-                                                            {{--<td>@lang('users/title.dob')</td>--}}
-                                                            {{--<td>--}}
-                                                                {{--{{ $user->dob }}--}}
-                                                            {{--</td>--}}
-                                                        {{--</tr>--}}
-                                                        {{--<tr>--}}
-                                                            {{--<td>@lang('users/title.country')</td>--}}
-                                                            {{--<td>--}}
-                                                                {{--{{ $user->country }}--}}
-                                                            {{--</td>--}}
-                                                        {{--</tr>--}}
-                                                        {{--<tr>--}}
-                                                            {{--<td>@lang('users/title.state')</td>--}}
-                                                            {{--<td>--}}
-                                                                {{--{{ $user->state }}--}}
-                                                            {{--</td>--}}
-                                                        {{--</tr>--}}
-                                                        {{--<tr>--}}
-                                                            {{--<td>@lang('users/title.city')</td>--}}
-                                                            {{--<td>--}}
-                                                                {{--{{ $user->city }}--}}
-                                                            {{--</td>--}}
-                                                        {{--</tr>--}}
-                                                        {{--<tr>--}}
-                                                            {{--<td>@lang('users/title.address')</td>--}}
-                                                            {{--<td>--}}
-                                                                {{--{{ $user->address }}--}}
-                                                            {{--</td>--}}
-                                                        {{--</tr>--}}
-                                                        {{--<tr>--}}
-                                                            {{--<td>@lang('users/title.postal')</td>--}}
-                                                            {{--<td>--}}
-                                                                {{--{{ $user->postal }}--}}
-                                                            {{--</td>--}}
-                                                        {{--</tr>--}}
-                                                        {{--<tr>--}}
-                                                            {{--<td>@lang('users/title.timezone')</td>--}}
-                                                            {{--<td>--}}
-                                                                {{--{{ $user->timezone }}--}}
-                                                            {{--</td>--}}
-                                                        {{--</tr>--}}
-                                                        {{--<tr>--}}
-                                                            {{--<td>@lang('users/title.status')</td>--}}
-                                                            {{--<td>--}}
 
-                                                                {{--@if($user->deleted_at)--}}
-                                                                    {{--Deleted--}}
-                                                                {{--@elseif($user->activated)--}}
-                                                                    {{--Activated--}}
-                                                                {{--@else--}}
-                                                                    {{--Pending--}}
-                                                                {{--@endif--}}
-                                                            {{--</td>--}}
-                                                        {{--</tr>--}}
-                                                        {{--<tr>--}}
-                                                            {{--<td>@lang('users/title.created_at')</td>--}}
-                                                            {{--<td>--}}
-                                                                {{--{!! $user->created_at->diffForHumans() !!}--}}
-                                                            {{--</td>--}}
-                                                        {{--</tr>--}}
                                                     </table>
                                                 </div>
                                             </div>
