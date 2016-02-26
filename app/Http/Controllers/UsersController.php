@@ -12,7 +12,7 @@ use File;
 use App\User;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Hash;
-use MC;
+use \Mailchimp;
 
 class UsersController extends JoshController
 {
@@ -276,6 +276,7 @@ class UsersController extends JoshController
     {
         $this->mailchimp = $mailchimp;
     }
+
 
 
     /**
