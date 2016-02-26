@@ -889,17 +889,17 @@ class UsersController extends JoshController
     public function updateInterests(){
         $email = md5(Sentinel::getUser()->email);
         $check_true= array();
-foreach($_POST['check'] as $check){
-    $check_id[] = $check["'id'"];
-    if(in_array("0", $check)){
-        $check_true[] = 'true';
+        foreach($_POST['check'] as $check){
+            $check_id[] = $check["'id'"];
+            if(in_array("0", $check)){
+                $check_true[] = true;
 
-    }
-    else{
-        $check_true[] = 'false';
-    }
+            }
+            else{
+                $check_true[] = false;
+            }
 
-}
+        }
         foreach ($check_id as $key=>$value){
             $data[$value] = $check_true[$key];
 //            var_dump($data);
