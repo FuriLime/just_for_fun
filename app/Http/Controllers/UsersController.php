@@ -896,7 +896,9 @@ class UsersController extends JoshController
 //        }
 foreach($_POST['check'] as $check){
     $check_id[] = $check["'id'"];
-    $check_true[] = $check["'check'"];
+    if(in_array('check', $check)){
+        $check_true[] = $check["'check'"];
+    }
 
 }
         dd($check_true);
