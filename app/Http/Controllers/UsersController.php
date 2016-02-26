@@ -899,9 +899,9 @@ foreach($_POST['check'] as $check){
     if(in_array('check', $check)){
         $check_true[] = $check["'check'"];
     }
-
+    dd($check_true);
 }
-        dd($check_true);
+
         dd($_POST['check']);
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
