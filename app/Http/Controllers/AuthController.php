@@ -192,6 +192,7 @@ class AuthController extends JoshController
             foreach($result_member['members'] as $email_user){
                 $member_user[] = $email_user->email_address;
             }
+            dd($member_user);
             if (in_array($email, $member_user)) {
                 $this->mailchimp->patch("lists/$this->listId/members/$hash_email", [
                     'email_address' => $email,
