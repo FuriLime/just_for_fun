@@ -900,9 +900,10 @@ foreach($_POST['check'] as $check){
     var_dump($check_id);
     if(in_array('check', $check)){
         $check_true[] = $check["'check'"];
+        var_dump($check_true);
     }
     else{
-        var_dump($check_true);
+//        var_dump($check_true);
     }
 
 }
