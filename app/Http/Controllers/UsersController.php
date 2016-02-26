@@ -897,8 +897,6 @@ class UsersController extends JoshController
 //        }
 foreach($_POST['check'] as $check){
     $check_id[] = $check["'id'"];
-//    var_dump($check);
-    var_dump(in_array("true", $check));
     if(in_array("true", $check)){
         $check_true[] = $check["'check'"];
 
@@ -908,7 +906,10 @@ foreach($_POST['check'] as $check){
     }
 
 }
-        var_dump($check_true);
+        $data[] = array(
+            $check_id => $check_true
+        );
+        var_dump($data);
         dd($_POST['check']);
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
