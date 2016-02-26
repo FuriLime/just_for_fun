@@ -844,10 +844,10 @@ class UsersController extends JoshController
     {
         $email = md5(Sentinel::getUser()->email);
         $result_member = $this->mailchimp->get("lists/$this->listId/members");
-//        foreach($result_member as $email_user){
-//            $member_mail[] =
-//        }
-        dd($result_member);
+        foreach($result_member['email_address'] as $email_user){
+            $member_mail[] = $email_user;
+        }
+        dd($member_mail);
         try {
             $result1 = $this->mailchimp->get("lists/$this->listId/members/$email", [
                 'fields' => 'id,interests,email_address'
