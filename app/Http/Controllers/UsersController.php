@@ -849,7 +849,6 @@ class UsersController extends JoshController
             $member_user[] = $email_user->email_address;
         }
         if (in_array($user_email, $member_user)){
-//            dd('true');
             $result1 = $this->mailchimp->get("lists/$this->listId/members/$email", [
                 'fields' => 'id,interests,email_address'
             ]);
@@ -862,7 +861,6 @@ class UsersController extends JoshController
 
                 $val_name[$key]['id'] = $interes->id;
                 $val_name[$key]['name'] = $interes->name;
-//            var_dump($val_name); die;
                 foreach ($result1['interests'] as $k => $check) {
                     if ($interes->id == $k) {
                         $val_name[$key]['check'] = $check;
@@ -883,7 +881,6 @@ class UsersController extends JoshController
             catch (\Mailchimp_Error $e) {
                 // do something
             }
-//            return View('admin.notisfaction', compact('val_name'));
         }
         return View('admin.notisfaction', compact('val_name'));
     }
