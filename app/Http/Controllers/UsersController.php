@@ -851,14 +851,7 @@ class UsersController extends JoshController
 //            }
 
         }
-        if (in_array('sergey.ch.ysbm@gmail.com', $member_user)){
-            dd('sdfsdf');
-        }
-        else{
-            dd($member_user);
-        }
-
-        try {
+        if (in_array($email, $member_user)){
             $result1 = $this->mailchimp->get("lists/$this->listId/members/$email", [
                 'fields' => 'id,interests,email_address'
             ]);
@@ -878,13 +871,12 @@ class UsersController extends JoshController
                     }
                 }
             }
-        }catch (\Mailchimp_List_AlreadySubscribed $e){
+            return View('admin.notisfaction', compact('val_name'));
+        }
+        else{
             return View('admin.notisfaction');
         }
-        catch (\Mailchimp_Error $e) {
-            return View('admin.notisfaction');
-        }
-        return View('admin.notisfaction', compact('val_name'));
+
     }
 
 
