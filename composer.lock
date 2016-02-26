@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8471f33d40d32a9a5375d0863904910e",
-    "content-hash": "b9df3b35a4709cc7761ccd99db824c99",
+    "hash": "e0cd5be1d629693fef9dda998945310f",
+    "content-hash": "91fe740f523de87a59e6d8aab8a63837",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.15.4",
+            "version": "3.15.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "b1e854697f57b8376cf27a150fb452c45d495411"
+                "reference": "e6d8b291b45009b310a174bcabad3de1c864e176"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/b1e854697f57b8376cf27a150fb452c45d495411",
-                "reference": "b1e854697f57b8376cf27a150fb452c45d495411",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e6d8b291b45009b310a174bcabad3de1c864e176",
+                "reference": "e6d8b291b45009b310a174bcabad3de1c864e176",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +85,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2016-02-23 21:45:03"
+            "time": "2016-02-25 22:52:38"
         },
         {
             "name": "aws/aws-sdk-php-laravel",
@@ -2131,6 +2131,55 @@
             "time": "2015-10-14 12:51:02"
         },
         {
+            "name": "msurguy/honeypot",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/msurguy/Honeypot.git",
+                "reference": "1ae75cfa11cc02fdc3b1e53363d3122203e7e7f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/msurguy/Honeypot/zipball/1ae75cfa11cc02fdc3b1e53363d3122203e7e7f9",
+                "reference": "1ae75cfa11cc02fdc3b1e53363d3122203e7e7f9",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "4.*|5.*",
+                "illuminate/support": "4.*|5.*",
+                "illuminate/translation": "4.*|5.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Msurguy\\Honeypot\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maksim Surguy",
+                    "email": "m.surguy@gmail.com"
+                }
+            ],
+            "description": "Honeypot spam prevention",
+            "keywords": [
+                "Forms",
+                "Honeypot",
+                "laravel",
+                "spam"
+            ],
+            "time": "2016-01-31 23:09:00"
+        },
+        {
             "name": "mtdowling/cron-expression",
             "version": "v1.1.0",
             "source": {
@@ -2588,16 +2637,16 @@
         },
         {
             "name": "spatie/laravel-backup",
-            "version": "2.9.2",
+            "version": "2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-backup.git",
-                "reference": "500636666443bccac9447eae0417551f2841c857"
+                "reference": "f62f211dca9e506069e43586cc362da9cba446b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-backup/zipball/500636666443bccac9447eae0417551f2841c857",
-                "reference": "500636666443bccac9447eae0417551f2841c857",
+                "url": "https://api.github.com/repos/spatie/laravel-backup/zipball/f62f211dca9e506069e43586cc362da9cba446b6",
+                "reference": "f62f211dca9e506069e43586cc362da9cba446b6",
                 "shasum": ""
             },
             "require": {
@@ -2641,7 +2690,7 @@
                 "mysql",
                 "spatie"
             ],
-            "time": "2016-01-08 19:41:17"
+            "time": "2016-02-25 20:33:38"
         },
         {
             "name": "spatie/laravel-googletagmanager",
@@ -4643,16 +4692,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "1.3.3",
+            "version": "1.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "6e7133793a8e5a5714a551a8324337374be209df"
+                "reference": "22aa49baa48886f40b060e061a7967436f44a249"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/6e7133793a8e5a5714a551a8324337374be209df",
-                "reference": "6e7133793a8e5a5714a551a8324337374be209df",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/22aa49baa48886f40b060e061a7967436f44a249",
+                "reference": "22aa49baa48886f40b060e061a7967436f44a249",
                 "shasum": ""
             },
             "require": {
@@ -4689,7 +4738,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2015-12-02 08:37:27"
+            "time": "2016-02-26 11:40:57"
         },
         {
             "name": "sebastian/exporter",
@@ -4952,6 +5001,7 @@
         "cviebrock/eloquent-sluggable": 20,
         "cviebrock/eloquent-taggable": 20,
         "pacely/mailchimp-apiv3": 20,
+        "msurguy/honeypot": 20,
         "torann/geoip": 20
     },
     "prefer-stable": false,
