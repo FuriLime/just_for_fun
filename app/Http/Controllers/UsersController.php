@@ -908,7 +908,7 @@ class UsersController extends JoshController
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
             'interests'    => $data
         ]);
-        return redirect('admin/notisfaction')->with('success', Lang::get('message.success.create'));
+        return redirect('admin/notisfaction')->with('success', Lang::get('message.success.update'));
     }
 }
 
