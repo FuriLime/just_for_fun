@@ -112,6 +112,8 @@ class AuthController extends JoshController
             'email'            => 'required|email|unique:users',
             // 'email_confirm'    => 'required|email|same:email',
             'password'         => 'required|between:3,32',
+            'my_name'   => 'honeypot',
+            'my_time'   => 'required|honeytime:5'
             // 'password_confirm' => 'required|same:password',
         );
 
