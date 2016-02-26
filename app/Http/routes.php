@@ -79,8 +79,8 @@ Route::group(array('prefix' => 'admin'), function () {
 
 
     Route::get('billing_and_invoices', 'UsersController@getBillingAndInvoices');
-    Route::get('notisfaction', 'UsersController@getNotisfaction');
-    Route::post('notisfaction', 'UsersController@updateNotisfaction');
+    Route::get('notisfaction', 'UsersController@getInterests');
+    Route::post('notisfaction', 'UsersController@updateInterests');
     Route::get('subscription_and_credits','UsersController@getSubscriptionAndCredits');
     Route::get('bonuses_and_free_staff','UsersController@getBonusesAndFreeStuff');
 //    Route::get('billing_and_invoices','UsersController@getEditBillingDetails');

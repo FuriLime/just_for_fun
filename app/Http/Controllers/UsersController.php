@@ -840,7 +840,7 @@ class UsersController extends JoshController
 
 
     //get membre`s interests
-    public function getNotisfaction()
+    public function getInterests()
     {
         $email = md5(Sentinel::getUser()->email);
         $user_email = Sentinel::getUser()->email;
@@ -889,7 +889,7 @@ class UsersController extends JoshController
     }
 
 
-    public function updateNotisfaction(){
+    public function updateInterests(){
         $email = md5(Sentinel::getUser()->email);
 //        if($group['check']==1){
 //
