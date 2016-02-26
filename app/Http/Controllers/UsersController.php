@@ -846,10 +846,10 @@ class UsersController extends JoshController
         $user_email = Sentinel::getUser()->email;
         $result_member = $this->mailchimp->get("lists/$this->listId/members");
         $categories = $this->mailchimp->get("lists/$this->listId/interest-categories");
-//        foreach($categories as ){
-//
-//        }
-        dd($categories['categories']);
+        foreach($categories['categories'] as $cat_id){
+                $new_cat_id[] = $cat_id['id'];
+        }
+        dd($new_cat_id);
         foreach($result_member['members'] as $email_user){
             $member_user[] = $email_user->email_address;
         }
