@@ -913,6 +913,7 @@ foreach($_POST['check'] as $check){
 //        var_dump($check_id);
 //        var_dump($check_true);
 //        dd($check_true);
+        var_dump($data);
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
             'interests'    => $data
