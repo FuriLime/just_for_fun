@@ -849,7 +849,7 @@ class UsersController extends JoshController
 //            foreach($member_user as $key=>$email_member){
 //                $email_member[$key]['id'] = $member_user;
 //            }
-            dd($member_user == 'sergey.ch.ysbm@gmail.com');
+            dd($member_user);
         }
 
         try {
