@@ -868,7 +868,7 @@ class UsersController extends JoshController
                     }
                 }
             }
-            return View('admin.notisfaction', compact('val_name'));
+
         }
         else{
             $email = Sentinel::getUser()->email;
@@ -885,9 +885,9 @@ class UsersController extends JoshController
             catch (\Mailchimp_Error $e) {
                 // do something
             }
-            return View('admin.notisfaction', compact('val_name'));
+//            return View('admin.notisfaction', compact('val_name'));
         }
-
+        return View('admin.notisfaction', compact('val_name'));
     }
 
 
