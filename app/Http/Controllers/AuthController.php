@@ -188,24 +188,23 @@ class AuthController extends JoshController
         $hash_email = md5($email);
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
-
-            //add member to list
-//            dd($this->mailchimp->post("lists/$this->listId/members"));
-            try {
+            $result_member = $this->mailchimp->get("lists/$this->listId/members");
+            foreach($result_member['members'] as $email_user){
+                $member_user[] = $email_user->email_address;
+            }
+            if (in_array($email, $member_user)) {
+                $this->mailchimp->patch("lists/$this->listId/members/$hash_email", [
+                    'email_address' => $email,
+                    'status' => 'subscribed',
+                ]);
+            }
+            else {
               $this->mailchimp->post("lists/$this->listId/members", [
                     'email_address' => $email,
                     'status'        => 'subscribed',
                 ]);
             }
-            catch (\Mailchimp_List_AlreadySubscribed $e){
-                 $this->mailchimp->patch("lists/$this->listId/members/$hash_email", [
-                'email_address' => $email,
-                 'status'        => 'subscribed',
-                ]);
-            }
-             catch (\Mailchimp_Error $e) {
-                // do something
-            }
+
             if($activate->isUserActivate($userId)){
                 $user = User::find($userId);
                 Sentinel::login($user, false);
