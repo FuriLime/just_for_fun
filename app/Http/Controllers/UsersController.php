@@ -915,8 +915,7 @@ foreach($_POST['check'] as $check){
 //        dd($check_true);
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
-            'interests'    => [$data
-                              ],
+            'interests'    => $data
         ]);
 //        return Redirect::route('admin.notisfaction');
     }
