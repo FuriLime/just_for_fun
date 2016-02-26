@@ -906,7 +906,7 @@ foreach($_POST['check'] as $check){
     }
 
 }
-        $data[] = array(
+        $data = array(
             $check_id => $check_true
         );
         var_dump($data);
