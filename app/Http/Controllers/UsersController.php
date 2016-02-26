@@ -888,6 +888,7 @@ class UsersController extends JoshController
 
     public function updateInterests(){
         $email = md5(Sentinel::getUser()->email);
+        $check_true= array();
 //        if($group['check']==1){
 //
 //        }
