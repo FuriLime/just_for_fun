@@ -863,7 +863,10 @@ class UsersController extends JoshController
                 }
             }
         }catch (\Mailchimp_List_AlreadySubscribed $e){
-
+            return View('admin.notisfaction');
+        }
+        catch (\Mailchimp_Error $e) {
+            return View('admin.notisfaction');
         }
         return View('admin.notisfaction', compact('val_name'));
     }
