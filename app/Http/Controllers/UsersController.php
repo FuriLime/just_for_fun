@@ -900,9 +900,10 @@ foreach($_POST['check'] as $check){
     }
 
 }
-//        foreach ($check_id as $key=>$value){
-//            $data[$value] = $check_true[$key];
-//        }
+        foreach ($check_id as $key=>$value){
+            $data[$value] = $check_true[$key];
+            var_dump($data);
+        }
 
 //        $data = array(
 //            $check_id => $check_true
@@ -911,10 +912,11 @@ foreach($_POST['check'] as $check){
 //        var_dump($data);
         var_dump($check_id);
         var_dump($check_true);
-
+        dd($check_true);
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
-            'interests'    => [$check_id => $check_true
+            'interests'    => ['d87b536f5e' => false,
+                               '8fd65feb6a' =>true
                               ],
         ]);
 //        return Redirect::route('admin.notisfaction');
