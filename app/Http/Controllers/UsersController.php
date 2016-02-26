@@ -902,7 +902,7 @@ foreach($_POST['check'] as $check){
 }
         foreach ($check_id as $key=>$value){
             $data[$value] = $check_true[$key];
-            var_dump($data);
+//            var_dump($data);
         }
 
 //        $data = array(
@@ -910,8 +910,8 @@ foreach($_POST['check'] as $check){
 //        );
 //$data = array($check_id => $check_true);
 //        var_dump($data);
-        var_dump($check_id);
-        var_dump($check_true);
+//        var_dump($check_id);
+//        var_dump($check_true);
 //        dd($check_true);
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
