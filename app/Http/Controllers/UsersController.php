@@ -843,23 +843,27 @@ class UsersController extends JoshController
     public function getNotisfaction()
     {
         $email = md5(Sentinel::getUser()->email);
-        $result1 = $this->mailchimp->get("lists/$this->listId/members/$email",[
-            'fields' => 'id,interests,email_address'
-        ]);
-        $result = $this->mailchimp->get("lists/$this->listId/interest-categories/d8186972a7/interests",[
-            'fields' => ['interests'=>['name']]
-        ]);
+        try {
+            $result1 = $this->mailchimp->get("lists/$this->listId/members/$email", [
+                'fields' => 'id,interests,email_address'
+            ]);
+            $result = $this->mailchimp->get("lists/$this->listId/interest-categories/d8186972a7/interests", [
+                'fields' => ['interests' => ['name']]
+            ]);
 
-        foreach($result['interests'] as $key=>$interes){
+            foreach ($result['interests'] as $key => $interes) {
 
-            $val_name[$key]['id'] = $interes->id;
-            $val_name[$key]['name'] = $interes->name;
+                $val_name[$key]['id'] = $interes->id;
+                $val_name[$key]['name'] = $interes->name;
 //            var_dump($val_name); die;
-            foreach($result1['interests'] as $k=>$check){
-                if($interes->id == $k){
-                    $val_name[$key]['check'] = $check;
+                foreach ($result1['interests'] as $k => $check) {
+                    if ($interes->id == $k) {
+                        $val_name[$key]['check'] = $check;
+                    }
                 }
             }
+        }catch (\Mailchimp_List_AlreadySubscribed $e){
+
         }
         return View('admin.notisfaction', compact('val_name'));
     }
