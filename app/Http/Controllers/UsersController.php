@@ -900,20 +900,19 @@ foreach($_POST['check'] as $check){
     }
 
 }
-        foreach ($check_id as $key=>$value){
-            $data[$value] = $check_true[$key];
-        }
+//        foreach ($check_id as $key=>$value){
+//            $data[$value] = $check_true[$key];
+//        }
 
 //        $data = array(
 //            $check_id => $check_true
 //        );
 //$data = array($check_id => $check_true);
 //        var_dump($data);
-        dd($check_true[$key]);
+//        dd($check_true[$key]);
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
-            'interests'    => ['d87b536f5e' => false,
-                               '8fd65feb6a' =>true
+            'interests'    => [$check_id => $check_true
                               ],
         ]);
 //        return Redirect::route('admin.notisfaction');
