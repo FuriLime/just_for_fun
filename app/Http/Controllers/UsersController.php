@@ -901,6 +901,7 @@ foreach($_POST['check'] as $check){
     if(in_array("'true'", $check)){
         $check_true[] = $check["'check'"];
         var_dump($check_true);
+        dd();
     }
     else{
 //        var_dump($check_true);
