@@ -850,7 +850,7 @@ class UsersController extends JoshController
 //                $email_member[$key]['id'] = $member_user;
 //            }
         }
-        dd($member_user == 'sergey.ch.ysbm@gmail.com');
+        dd($member_user['email_address'] == 'sergey.ch.ysbm@gmail.com');
         try {
             $result1 = $this->mailchimp->get("lists/$this->listId/members/$email", [
                 'fields' => 'id,interests,email_address'
