@@ -899,6 +899,8 @@ foreach($_POST['check'] as $check){
     $check_id[] = $check["'id'"];
     if(in_array('check', $check)){
         $check_true[] = $check["'check'"];
+    }
+    else{
         dd($check_true);
     }
 
