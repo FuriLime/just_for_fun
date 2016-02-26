@@ -448,6 +448,7 @@ class UsersController extends JoshController
         try {
             // Get the user information
             $user = Sentinel::findById($id);
+            $us_email = Sentinel::getUser()->email;
             $email = md5(Sentinel::getUser()->email);
             $this->mailchimp->delete("lists/$this->listId/members/$email");
         } catch (UserNotFoundException $e) {
@@ -580,7 +581,7 @@ class UsersController extends JoshController
 
                $this->mailchimp->post("lists/$this->listId/members", [
                     'email_address' => $user->email,
-                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name],
+                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>'$us_email'],
                     'status'        => 'subscribed',
                 ]);
 
