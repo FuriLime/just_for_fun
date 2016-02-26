@@ -234,7 +234,7 @@
             success: function(data) {
                 data = $.parseJSON(data);
                 if (data.result == 'success') {
-					window.open( data.calendar_link, '_blank');
+					         window.open( data.calendar_link, '_blank');
 				}
 				else if (data.result == 'register') {
 					// tmp
