@@ -197,7 +197,7 @@ class AuthController extends JoshController
                 ]);
             }
             catch (\Mailchimp_List_AlreadySubscribed $e){
-                 $this->mailchimp->update("lists/$this->listId/members", [
+                 $this->mailchimp->patch("lists/$this->listId/members", [
                 'email_address' => $email,
                     'status'        => 'subscribed',
                 ]);
