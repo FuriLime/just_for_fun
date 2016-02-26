@@ -15,6 +15,10 @@
 		.daterangepicker .ranges li:last-child { display: none; }
 		#events_details { display: none; }
 		#hidden_address { position: absolute; left: -9000px; }
+    .share42init {
+      margin-top: 10px; 
+      margin-bottom: 5px
+    }
 	</style>
 @stop
 
@@ -69,11 +73,13 @@
 
 				<!-- <a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=http%3A%2F%2F{{$event->title}}&pubid=USERNAME&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a> -->
 			</div>
-			<div class="fb-share-button" data-href="http://test-ef.com/events/{{$event->uuid}}" data-layout="button_count"></div>
-<g:plus action="share"></g:plus>
+			<!-- <div class="fb-share-button" data-href="http://test-ef.com/events/{{$event->uuid}}" data-layout="button_count"></div>
+      <g:plus action="share"></g:plus>
+      <a href="http://test-ef.com/events/{{$event->uuid}}"  text = '{{$event->title}}'class="twitter-share-button"{count} data-via="LimeFuri">Tweet</a> -->
+      <script>/*!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');*/</script>
 
-<a href="http://test-ef.com/events/{{$event->uuid}}"  text = '{{$event->title}}'class="twitter-share-button"{count} data-via="LimeFuri">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <div class="share42init"></div>
+
 			<div class="input-group">
 				<button id="see-details-btn" class="btn btn-default">
 					<span class="toggle"><i class="fa fa-search"></i>&nbsp;See event details</span>
@@ -124,11 +130,10 @@
 @section('footer_scripts')
 	<script src="{{ asset('assets/vendors/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/vendors/daterangepicker/daterangepicker.js') }}" type="text/javascript"></script>
-	
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-	
 	<script src="{{ asset('assets/vendors/livicons/minified/raphael-min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('assets/vendors/livicons/minified/livicons-1.4.min.js') }}" type="text/javascript"></script>
+  <script src="{{ asset('assets/vendors/livicons/minified/livicons-1.4.min.js') }}" type="text/javascript"></script>
+  <script type="text/javascript" src="{{ asset('assets/js/share42/share42.js') }}"></script>
   
 
    <div id="fb-root"></div>
