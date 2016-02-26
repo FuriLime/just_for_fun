@@ -581,7 +581,7 @@ class UsersController extends JoshController
 
                $this->mailchimp->post("lists/$this->listId/members", [
                     'email_address' => $user->email,
-                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>'$us_email'],
+                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
                     'status'        => 'subscribed',
                 ]);
 
