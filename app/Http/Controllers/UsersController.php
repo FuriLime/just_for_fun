@@ -874,7 +874,19 @@ class UsersController extends JoshController
             return View('admin.notisfaction', compact('val_name'));
         }
         else{
-            return View('admin.notisfaction');
+            try {
+                $this->mailchimp->post("lists/$this->listId/members", [
+                    'email_address' => $email,
+                    'status'        => 'subscribed',
+                ]);
+            }
+            catch (\Mailchimp_List_AlreadySubscribed $e){
+//                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
+            }
+            catch (\Mailchimp_Error $e) {
+                // do something
+            }
+            return View('admin.notisfaction', compact('val_name'));
         }
 
     }
