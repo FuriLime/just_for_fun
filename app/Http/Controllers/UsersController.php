@@ -843,8 +843,12 @@ class UsersController extends JoshController
     public function getNotisfaction()
     {
         $email = md5(Sentinel::getUser()->email);
-        $result_member = $this->mailchimp->get("lists/$this->listId/members");
-        dd($result_member['email_address']);
+        $result_member = $this->mailchimp->get("lists/$this->listId/members",[
+            'fields' => 'email_address']);
+//        foreach($result_member as $email_user){
+//            $member_mail[] =
+//        }
+        dd($result_member);
         try {
             $result1 = $this->mailchimp->get("lists/$this->listId/members/$email", [
                 'fields' => 'id,interests,email_address'
