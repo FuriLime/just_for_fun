@@ -578,25 +578,11 @@ class UsersController extends JoshController
             // Was the user updated?
             if ($user->save()) {
 
-//                $user_email = md5($user->email);
-//                $this->mailchimp->post("lists/$this->listId/members", [
-//                    'email_address' => $user_email,
-//                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name],
-//                    'status'        => 'subscribed',
-//                ]);
-
-                $this->mailchimp->post("lists/$this->listId/members", [
+               $this->mailchimp->post("lists/$this->listId/members", [
                     'email_address' => $user->email,
                     'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name],
                     'status'        => 'subscribed',
                 ]);
-
-//                $this->mailchimp->patch("lists/$this->listId/members/$email", [
-//                    'email_address' => $user->email,
-//                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name],
-//
-//                ]);
-
 
                 // Prepare the success message
                 $success = Lang::get('users/message.success.update');
@@ -628,9 +614,6 @@ class UsersController extends JoshController
         // Show the page
         return View('admin/deleted_users', compact('users'));
     }
-
-    
-
 
     /**
      * Delete Confirm
