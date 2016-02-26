@@ -51,12 +51,12 @@
                             @foreach($val_name as $key=>$group)
                             <tr>
                                 @if($group['check']==true)
-                                <td><input type="checkbox" checked name="check[{{$key}}]['check']" value="1"/></td>
+                                <td><input type="checkbox" checked name="check[{{$key}}]['check']"/></td>
                                 <td><input  name="check[{{$key}}]['id']" type="hidden" value="{{$group['id']}}"/></td>
                                 <td><input  name="check[{{$key}}]['name']" type="hidden" value="{{$group['name']}}"/></td>
                                 <td>{{$group['name']}}</td>
                                     @else
-                                    <td><input type="checkbox" name="check[{{$key}}]['check']" value="0"/></td>
+                                    <td><input type="checkbox" name="check[{{$key}}]['check']"/></td>
                                     <td><input  name="check[{{$key}}]['id']" type="hidden" value="{{$group['id']}}" /></td>
                                     <td><input  name="check[{{$key}}]['name']" type="hidden" value="{{$group['name']}}" /></td>
                                     <td>{{$group['name']}}</td>
