@@ -843,6 +843,7 @@ class UsersController extends JoshController
     public function getNotisfaction()
     {
         $email = md5(Sentinel::getUser()->email);
+
         if($this->mailchimp->get("lists/$this->listId/members/$email")){
 
         $result1 = $this->mailchimp->get("lists/$this->listId/members/$email",[
