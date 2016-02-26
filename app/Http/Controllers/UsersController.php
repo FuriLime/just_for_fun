@@ -908,7 +908,7 @@ class UsersController extends JoshController
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
             'interests'    => $data
         ]);
-        return View('admin.notisfaction');
+        return View('admin.notisfaction',compact('val_name'));
     }
 }
 
