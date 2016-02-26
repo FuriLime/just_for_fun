@@ -847,7 +847,7 @@ class UsersController extends JoshController
         foreach($result_member['members'] as $email_user){
             $member_user[] = $email_user;
             foreach($member_user as $key=>$email_member){
-                $email_member[$key]['id'] = $member_user->id;
+                $email_member[$key]['id'] = $member_user;
             }
         }
         dd($email_member);
