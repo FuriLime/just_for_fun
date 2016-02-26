@@ -843,6 +843,8 @@ class UsersController extends JoshController
     public function getNotisfaction()
     {
         $email = md5(Sentinel::getUser()->email);
+        if($this->mailchimp->get("lists/$this->listId/members/$email")){
+
         $result1 = $this->mailchimp->get("lists/$this->listId/members/$email",[
             'fields' => 'id,interests,email_address'
         ]);
@@ -860,6 +862,7 @@ class UsersController extends JoshController
                     $val_name[$key]['check'] = $check;
                 }
             }
+        }
         }
         return View('admin.notisfaction', compact('val_name'));
     }
