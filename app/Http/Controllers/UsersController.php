@@ -849,7 +849,7 @@ class UsersController extends JoshController
         foreach($categories['categories'] as $cat_id){
                 $new_cat_id[] = $cat_id->id;
         }
-        dd($new_cat_id[0]);
+//        dd($new_cat_id[0]);
         foreach($result_member['members'] as $email_user){
             $member_user[] = $email_user->email_address;
         }
@@ -858,7 +858,7 @@ class UsersController extends JoshController
                 'fields' => 'id,interests,email_address'
             ]);
 
-            $result = $this->mailchimp->get("lists/$this->listId/interest-categories/d8186972a7/interests", [
+            $result = $this->mailchimp->get("lists/$this->listId/interest-categories/$new_cat_id[0]/interests", [
                 'fields' => ['interests' => ['name']]
             ]);
 
