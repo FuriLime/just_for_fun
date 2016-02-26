@@ -849,7 +849,7 @@ class UsersController extends JoshController
         foreach($categories['categories'] as $cat_id){
                 $new_cat_id[] = $cat_id->id;
         }
-        dd($new_cat_id);
+        dd($new_cat_id[0]);
         foreach($result_member['members'] as $email_user){
             $member_user[] = $email_user->email_address;
         }
