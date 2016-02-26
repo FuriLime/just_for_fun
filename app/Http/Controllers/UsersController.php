@@ -895,7 +895,7 @@ class UsersController extends JoshController
 //            dd($_POST['check']);
 //        }
 
-        dd($_POST);
+        dd($_POST['check']);
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
             'interests'    => ['d87b536f5e' => false,
