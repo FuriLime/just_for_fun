@@ -854,6 +854,9 @@ class UsersController extends JoshController
         if (in_array($email, $member_user)){
             dd($email);
         }
+        else{
+            dd($member_user);
+        }
 
         try {
             $result1 = $this->mailchimp->get("lists/$this->listId/members/$email", [
