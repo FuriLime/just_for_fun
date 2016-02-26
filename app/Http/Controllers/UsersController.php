@@ -846,11 +846,11 @@ class UsersController extends JoshController
         $result_member = $this->mailchimp->get("lists/$this->listId/members");
         foreach($result_member['members'] as $email_user){
             $member_mail[] = $email_user;
-//            foreach($member_mail){
+//            foreach($member_mail as $email_member){
 //
 //            }
         }
-        dd($member_mail['email_address']);
+        dd($member_mail);
         try {
             $result1 = $this->mailchimp->get("lists/$this->listId/members/$email", [
                 'fields' => 'id,interests,email_address'
