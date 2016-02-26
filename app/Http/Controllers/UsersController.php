@@ -843,13 +843,10 @@ class UsersController extends JoshController
     public function getNotisfaction()
     {
         $email = md5(Sentinel::getUser()->email);
+
         $result_member = $this->mailchimp->get("lists/$this->listId/members");
         foreach($result_member['members'] as $email_user){
             $member_user[] = $email_user->email_address;
-//            foreach($member_user as $key=>$email_member){
-//                $email_member[$key]['id'] = $member_user;
-//            }
-
         }
         if (in_array($email, $member_user)){
             $result1 = $this->mailchimp->get("lists/$this->listId/members/$email", [
@@ -874,6 +871,8 @@ class UsersController extends JoshController
             return View('admin.notisfaction', compact('val_name'));
         }
         else{
+            $email = md5(Sentinel::getUser()->email);
+            var_dump($email);
             try {
                 $this->mailchimp->post("lists/$this->listId/members", [
                     'email_address' => $email,
