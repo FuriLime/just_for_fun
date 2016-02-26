@@ -871,10 +871,9 @@ class UsersController extends JoshController
             }
         }
         else{
-            $email = Sentinel::getUser()->email;
             try {
                 $this->mailchimp->post("lists/$this->listId/members", [
-                    'email_address' => $email,
+                    'email_address' => $user_email,
                     'status'        => 'subscribed',
                 ]);
             }
