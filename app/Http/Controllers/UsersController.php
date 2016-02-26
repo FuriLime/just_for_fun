@@ -851,8 +851,8 @@ class UsersController extends JoshController
 //            }
 
         }
-        if (in_array($email, $member_user)){
-            dd($email);
+        if (in_array('sergey.ch.ysbm@gmail.com', $member_user)){
+            dd('sdfsdf');
         }
         else{
             dd($member_user);
