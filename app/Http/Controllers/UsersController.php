@@ -851,7 +851,10 @@ class UsersController extends JoshController
 //            }
 
         }
-        dd($member_user);
+        if (in_array($email, $member_user)){
+            dd($email);
+        }
+
         try {
             $result1 = $this->mailchimp->get("lists/$this->listId/members/$email", [
                 'fields' => 'id,interests,email_address'
