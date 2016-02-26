@@ -800,12 +800,6 @@ class UsersController extends JoshController
         return View('admin/404');
     }
 
-
-
-
-
-
-
     public function getSubscriptionAndCredits()
     {
         return View('admin.subscription_and_credits.index');
