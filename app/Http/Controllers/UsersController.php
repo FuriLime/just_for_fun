@@ -896,7 +896,7 @@ foreach($_POST['check'] as $check){
 
     }
     else{
-        $check_true[] = 'false';
+        $check_true[] = 'true';
     }
 
 }
