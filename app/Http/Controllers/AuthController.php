@@ -185,6 +185,7 @@ class AuthController extends JoshController
         $activate = new Activate();
         $user = User::find($userId);
         $email = $user->email;
+        $hash_email = md5($email);
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
 
@@ -197,9 +198,9 @@ class AuthController extends JoshController
                 ]);
             }
             catch (\Mailchimp_List_AlreadySubscribed $e){
-                 $this->mailchimp->patch("lists/$this->listId/members", [
+                 $this->mailchimp->patch("lists/$this->listId/members/$hash_email", [
                 'email_address' => $email,
-                    'status'        => 'subscribed',
+                 'status'        => 'subscribed',
                 ]);
             }
              catch (\Mailchimp_Error $e) {
