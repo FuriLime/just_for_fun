@@ -871,7 +871,7 @@ class UsersController extends JoshController
             return View('admin.notisfaction', compact('val_name'));
         }
         else{
-            $email = md5(Sentinel::getUser()->email);
+            $email = Sentinel::getUser()->email;
             var_dump($email);
             try {
                 $this->mailchimp->post("lists/$this->listId/members", [
