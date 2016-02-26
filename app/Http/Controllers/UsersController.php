@@ -902,24 +902,13 @@ class UsersController extends JoshController
         }
         foreach ($check_id as $key=>$value){
             $data[$value] = $check_true[$key];
-//            var_dump($data);
         }
 
-//        $data = array(
-//            $check_id => $check_true
-//        );
-//$data = array($check_id => $check_true);
-//        var_dump($data);
-//        var_dump($check_id);
-//        var_dump($check_true);
-////        dd($check_true);
-//        var_dump($data);
-//        dd($_POST);
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
             'interests'    => $data
         ]);
-//        return Redirect::route('admin.notisfaction');
+        return Redirect::route('admin.notisfaction');
     }
 }
 
