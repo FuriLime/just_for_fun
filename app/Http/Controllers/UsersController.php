@@ -889,12 +889,6 @@ class UsersController extends JoshController
     public function updateInterests(){
         $email = md5(Sentinel::getUser()->email);
         $check_true= array();
-//        if($group['check']==1){
-//
-//        }
-//        if(count($_POST['check'])>3) {
-//            dd($_POST['check']);
-//        }
 foreach($_POST['check'] as $check){
     $check_id[] = $check["'id'"];
     if(in_array("true", $check)){
@@ -902,16 +896,16 @@ foreach($_POST['check'] as $check){
 
     }
     else{
-//        var_dump($check_true);
+        $check_true[] = 'false';
     }
 
 }
-        $data = array(
-            $check_id => $check_true
-        );
-
-        var_dump(typeOf($data));
-        dd($_POST['check']);
+//        $data = array(
+//            $check_id => $check_true
+//        );
+$data = [$check_id => $check_true];
+        var_dump($data);
+        dd();
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
             'interests'    => ['d87b536f5e' => false,
