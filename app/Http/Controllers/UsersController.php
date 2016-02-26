@@ -910,8 +910,8 @@ foreach($_POST['check'] as $check){
 //        );
 //$data = array($check_id => $check_true);
 //        var_dump($data);
-//        var_dump($check_id);
-//        var_dump($check_true);
+        var_dump($check_id);
+        var_dump($check_true);
 //        dd($check_true);
         var_dump($data);
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
