@@ -272,10 +272,12 @@ class UsersController extends JoshController
     protected $mailchimp;
     protected $listId = '3b2e9de273';        // Id of newsletter list
 
-//    public function __construct(\Mailchimp\Mailchimp $mailchimp)
-//    {
-//        $this->mailchimp = $mailchimp;
-//    }
+    public function __construct(\Mailchimp\Mailchimp $mailchimp)
+    {
+        $this->mailchimp = $mailchimp;
+    }
+
+
 
     /**
      * Show a list of all the users.
@@ -841,9 +843,6 @@ class UsersController extends JoshController
     public function getNotisfaction()
     {
         $email = md5(Sentinel::getUser()->email);
-
-        if($this->mailchimp->get("lists/$this->listId/members/$email")){
-
         $result1 = $this->mailchimp->get("lists/$this->listId/members/$email",[
             'fields' => 'id,interests,email_address'
         ]);
@@ -861,7 +860,6 @@ class UsersController extends JoshController
                     $val_name[$key]['check'] = $check;
                 }
             }
-        }
         }
         return View('admin.notisfaction', compact('val_name'));
     }
