@@ -882,7 +882,6 @@ class UsersController extends JoshController
                 // do something
             }
         }
-        dd($val_name);
         return View('admin.notisfaction', compact('val_name'));
     }
 
@@ -896,7 +895,7 @@ class UsersController extends JoshController
 //            dd($_POST['check']);
 //        }
 
-//        die;
+        dd($_POST);
         $this->mailchimp->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
             'interests'    => ['d87b536f5e' => false,
