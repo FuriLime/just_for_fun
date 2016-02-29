@@ -598,6 +598,7 @@ Create New event
 	{{--// 	defaultDate: '{{ $finish_date }}'--}}
 	// });
 	$("#datestart").on("dp.change", function (e) {
+        alert();
 		$('#datefinish').data("DateTimePicker").minDate(e.date);
 	});
 	// run second calendar after closing of first

@@ -12,11 +12,11 @@ if (isset($ID) && $ID != "") {
 	header('Pragma: public');
 	header('Content-Charset: utf8');
 
-	if (!CModule::IncludeModule("iblock"))
-			return;
+	/*if (!CModule::IncludeModule("iblock"))
+			return;*/
 
-	$obElement = CIBlockElement::GetByID($ID);
-	$arEl = $obElement->GetNext();
+/*	$obElement = CIBlockElement::GetByID($ID);
+	$arEl = $obElement->GetNext();*/
 
 	$date = strip_tags($_GET['sd']);
 	$time = strip_tags($_GET['st']);
@@ -29,10 +29,10 @@ if (isset($ID) && $ID != "") {
 
 	$file .= "DTSTART:" . $date . "T" . $time . "Z\r\n";
 	$file .= "DTEND:" . $date_end . "T" . $time_end . "Z\r\n";
-	$file .= "LOCATION:" . $_SERVER['SERVER_NAME'] . $arEl['DETAIL_PAGE_URL'] . "\r\n";
+	$file .= "LOCATION:" . strip_tags($_GET['loc']) . "\r\n";
 	$file .= "DESCRIPTION:" . iconv('windows-1251', 'UTF-8', trim(strip_tags(html_entity_decode
-			($arEl['DETAIL_TEXT'], ENT_QUOTES, 'windows-1251')))) . "\r\n";
-	$file .= "SUMMARY:" . iconv('windows-1251', 'UTF-8', $arEl['NAME']) . "\r\n";
+			(strip_tags($_GET['desc']), ENT_QUOTES, 'windows-1251')))) . "\r\n";
+	$file .= "SUMMARY:" . iconv('windows-1251', 'UTF-8', strip_tags($_GET['name'])) . "\r\n";
 	$file .= "PRIORITY:3
 		BEGIN:VALARM
 		ACTION:DISPLAY

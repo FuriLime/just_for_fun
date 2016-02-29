@@ -424,9 +424,8 @@ class EventsController extends Controller {
 			
 			case 'iCal':
 				$result = 'success_load';
-				$calendar_link = '/assets/ical.php?name='. $event['title'] .'&sd='. $event_start_zero->format('Ymd') .'&st='. $event_start_zero->format('His') .'&fd='. $event_finish_zero->format('Ymd') .'&ft='. $event_finish_zero->format('His');
+				$calendar_link = '/assets/ical.php?name='. $event['title'] .'&sd='. $event_start_zero->format('Ymd') .'&st='. $event_start_zero->format('His') .'&fd='. $event_finish_zero->format('Ymd') .'&ft='. $event_finish_zero->format('His') .'&loc='. $event['location'] .'&desc='. $event['description'];
 				break;
-						
       /* end */
         
 			default:
