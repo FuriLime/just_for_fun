@@ -1,6 +1,7 @@
 <?php 
 
 $ID =  strip_tags($_GET['name']);
+
 if (isset($ID) && $ID != "") {
 	header('Content-Description: File Transfer');
 	header('Content-Type: application/octet-stream; charset=utf-8');
@@ -28,7 +29,7 @@ if (isset($ID) && $ID != "") {
 
 	$file .= "DTSTART:" . $date . "T" . $time . "Z\r\n";
 	$file .= "DTEND:" . $date_end . "T" . $time_end . "Z\r\n";
-	$file .= "LOCATION:http://3info.by" . $arEl['DETAIL_PAGE_URL'] . "\r\n";
+	$file .= "LOCATION:" . $_SERVER['SERVER_NAME'] . $arEl['DETAIL_PAGE_URL'] . "\r\n";
 	$file .= "DESCRIPTION:" . iconv('windows-1251', 'UTF-8', trim(strip_tags(html_entity_decode
 			($arEl['DETAIL_TEXT'], ENT_QUOTES, 'windows-1251')))) . "\r\n";
 	$file .= "SUMMARY:" . iconv('windows-1251', 'UTF-8', $arEl['NAME']) . "\r\n";
