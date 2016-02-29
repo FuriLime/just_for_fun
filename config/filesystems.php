@@ -1,5 +1,7 @@
 <?php
 
+$secrets = json_decode(file_get_contents($_SERVER['APP_SECRETS']), true);
+
 return [
 
     /*
@@ -64,10 +66,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key'    => 'your-key',
-            'secret' => 'your-secret',
-            'region' => 'your-region',
-            'bucket' => 'your-bucket',
+            'key'    => $secrets['CUSTOM']['S3_KEY'],
+            'secret' => $secrets['CUSTOM']['S3_SECRET'],
+            'region' => $secrets['CUSTOM']['S3_REGION_USERDATA'],
+            'bucket' => $secrets['CUSTOM']['S3_BUCKET_USERDATA'],
         ],
 
         'rackspace' => [
