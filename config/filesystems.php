@@ -1,6 +1,5 @@
 <?php
 
-$secrets = json_decode(file_get_contents($_SERVER['APP_SECRETS']), true);
 
 return [
 
