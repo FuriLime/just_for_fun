@@ -91,9 +91,9 @@ class EventsController extends Controller {
 			if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
                 // for bootstrap-datepicker
                 //registered user
-                $start_date_tmp = strtotime("+1 day");
+//                $start_date_tmp = strtotime("+1 day");
                 $start_date = date('Y/m/d 19:00');
-                $finish_date = date('Y/m/d 20:00', $start_date_tmp);
+                $finish_date = date('Y/m/d 20:00');
                 $timezone_select = self::getTimeZoneSelect();
                 if(Sentinel::getUser()->timezone){
                     $my_time_zone = Sentinel::getUser()->timezone;
@@ -111,20 +111,11 @@ class EventsController extends Controller {
 			}
 		} else {
 			//create events unregister user
-			$start_date_tmp = strtotime("+1 day");
+			$start_date_tmp = strtotime("+1 hour");
 			$start_date = date('Y/m/d 19:00');
-			$finish_date = date('Y/m/d 20:00', $start_date_tmp);
+			$finish_date = date('Y/m/d 20:00');
 			$default_timezone = date_default_timezone_get();
             $timezone_select = self::getTimeZoneSelect();
-            $my_time_zone = 'Asia/Tokyo';
-            $my_time_zone = Input::get('value');
-//            if ($request->isMethod('get')){
-//                var_dump($request->is('ajax'));
-//            }
-            if ($request->ajax())
-            {
-                var_dump('sadfsdfdsf');
-            }
             $ip = $_SERVER["REMOTE_ADDR"];
             $location = GeoIP::getLocation($ip);
             $my_time_zone = $location['timezone'];
