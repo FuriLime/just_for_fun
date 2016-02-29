@@ -566,7 +566,7 @@ Create New event
                     });
 
         $( document ).ready(function() {
-if(!$('#location').val()) {
+if($('#location').val()) {
 //            $('#location').change(function () {
     $('.locale').attr('style', 'display:none');
     $('.fields_map').attr('style', 'display:block');
