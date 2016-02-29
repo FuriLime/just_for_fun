@@ -111,8 +111,9 @@ class EventsController extends Controller {
 			}
 		} else {
 			//create events unregister user
-			$start_date_tmp = strtotime("+1 hour");
+
 			$start_date = date('Y/m/d 19:00');
+            $start_date_tmp = strtotime($start_date) + 60*60;
 			$finish_date = date($start_date, $start_date_tmp);
 			$default_timezone = date_default_timezone_get();
             $timezone_select = self::getTimeZoneSelect();
