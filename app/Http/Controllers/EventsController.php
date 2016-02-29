@@ -427,10 +427,16 @@ class EventsController extends Controller {
 				break;
 
       /* YSBM-DC */
-      case 'Outlook':
+      case 'Microsoft':
         $result = 'success';
         $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='. $event_start_zero->format('Ymd').'T'.$event_start_zero->format('His') .'&dtend='. $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His') .'&summary='. $event['title'] .'&location='. $event['location'] .'&description='. $event['description'];
         break;
+			
+			case 'iCal':
+				$result = 'success_load';
+				$calendar_link = '/assets/ical.php?name='. $event['title'] .'&sd='. $event_start_zero->format('Ymd') .'&st='. $event_start_zero->format('His') .'&fd='. $event_finish_zero->format('Ymd') .'&ft='. $event_finish_zero->format('His');
+				break;
+						
       /* end */
         
 			default:
@@ -442,11 +448,11 @@ class EventsController extends Controller {
 		echo json_encode(array(
 	        'result' => $result,
 	        'calendar_link' => $calendar_link,
-			'error_massage' => $error_massage,
+					'error_massage' => $error_massage,
 	    ));
 		exit(0);
 	}
-
+	
 	/**
 	 * Timezone select - generator.
 	 *

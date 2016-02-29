@@ -166,13 +166,12 @@ Route::get('member', array('as' => 'member_home', 'uses' => 'AccountController@i
 
 # Events
 Route::resource('events', 'EventsController');
-        Route::get('event/add', 'EventsController@create');
-        Route::post('event/add', 'EventsController@store');
+Route::get('event/add', 'EventsController@create');
+Route::post('event/add', 'EventsController@store');
 
 Route::get('events/{uuid}/delete', array('as' => 'events.delete', 'uses' => 'EventsController@getDelete'));
 Route::get('events/{uuid}/confirm-delete', array('as' => 'events.confirm-delete', 'uses' => 'EventsController@getModalDelete'));
 Route::post('event/addtocalendar', array('as' => 'event.addtocalendar', 'uses' => 'EventsController@addToCalendar'));
-
 
 Route::get('/', array('as' => 'home', function () {
     return View::make('index');
@@ -191,8 +190,6 @@ Route::get('/', array('as' => 'home', function () {
 
 Route::post('/welcome', 'MailController@emailSend');
 
-
-
 Route::get('/facebook','FacebookController@facebook');
 Route::get('/oauthfacebook','FacebookController@oauthfacebook');
 
@@ -205,7 +202,6 @@ Route::get('/oauthtwitter','twitterController@oauthtwitter');
 
 Route::get('/linked', 'LinkedController@linked');
 Route::get('/oauthlinked','LinkedController@oauthlinked');
-
 
 Route::get('blog', array('as' => 'blog', 'uses' => 'BlogController@getIndexFrontend'));
 Route::get('blog/{slug}/tag', 'BlogController@getBlogTagFrontend');

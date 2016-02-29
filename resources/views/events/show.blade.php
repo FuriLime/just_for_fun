@@ -211,7 +211,8 @@
 			ranges: {
 				'Google': [moment(), moment()],
 				'Yahoo': [moment().subtract('days', 1), moment().subtract('days', 1)],
-				'Outlook': [moment().subtract('days', 2), moment().subtract('days', 2)]
+				'Microsoft': [moment().subtract('days', 2), moment().subtract('days', 2)],
+				'iCal': [moment().subtract('days', 2), moment().subtract('days', 2)],
 			},
 			startDate: moment().subtract('days', 29),
 			endDate: moment()
@@ -229,29 +230,30 @@
 	$('.daterangepicker li').click(function() {
 		$('#add-to-calendar-btn .toggle').show();
 		$.ajax({
-            url:  '{{ route('event.addtocalendar') }}',
-            type: 'post',
-            data: {
-            	uuid: '{{ $event['uuid'] }}',
+			url:  '{{ route('event.addtocalendar') }}',
+			type: 'post',
+			data: {
+				uuid: '{{ $event['uuid'] }}',
 				calendar: $(this).html(),
 				_token: $('#token_for_ajax').val(),
-            },
-            success: function(data) {
-                data = $.parseJSON(data);
-                if (data.result == 'success') {
-					         window.open( data.calendar_link, '_blank');
-				}
-				else if (data.result == 'register') {
+			},
+			success: function(data) {
+				data = $.parseJSON(data);
+				if (data.result == 'success') {
+					window.open(data.calendar_link, '_blank');
+				} else if (data.result == 'success_load') {
+					window.location.href = data.calendar_link;
+				} else if (data.result == 'register') {
 					// tmp
 					alert('This event cant be added by unregistered users anymore. Please, Sign up.');
-				}
-				else if (data.result == 'error') {
+				} else if (data.result == 'error') {
 					// tmp
 					alert(data.error_massage);
 				}
+				
 				$('#add-to-calendar-btn .toggle').hide();
-            }
-        });
+			}
+    });
 		
 	});
 	</script>
