@@ -346,7 +346,7 @@ Create New event
 
         $( document ).ready(function() {
 
-            $('#location').change(function () {
+//            $('#location').change(function () {
                 $('.locale').attr('style', 'display:none');
                 $('.fields_map').attr('style', 'display:block');
                 setTimeout(function get_timezone() {
@@ -567,7 +567,7 @@ Create New event
 
                     initialize2();
                 }, 200);
-            });
+//            });
         });
 	</script>
 
