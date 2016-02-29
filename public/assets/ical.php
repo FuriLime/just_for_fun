@@ -12,12 +12,6 @@ if (isset($ID) && $ID != "") {
 	header('Pragma: public');
 	header('Content-Charset: utf8');
 
-	/*if (!CModule::IncludeModule("iblock"))
-			return;*/
-
-/*	$obElement = CIBlockElement::GetByID($ID);
-	$arEl = $obElement->GetNext();*/
-
 	$date = strip_tags($_GET['sd']);
 	$time = strip_tags($_GET['st']);
 
