@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ical.php" afterPath="$PROJECT_DIR$/public/assets/ical.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/create.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -41,28 +41,35 @@
       <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.2083335" vertical-offset="1616" max-vertical-offset="8520">
-              <caret line="114" column="32" selection-start-line="114" selection-start-column="12" selection-end-line="115" selection-end-column="47" />
+            <state vertical-scroll-proportion="4.2083335" vertical-offset="1601" max-vertical-offset="8505">
+              <caret line="113" column="32" selection-start-line="114" selection-start-column="12" selection-end-line="115" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.903846" vertical-offset="8553" max-vertical-offset="9780">
-              <caret line="608" column="24" selection-start-line="608" selection-start-column="24" selection-end-line="608" selection-end-column="24" />
-              <folding />
+            <state vertical-scroll-proportion="0.42372882" vertical-offset="6390" max-vertical-offset="11385">
+              <caret line="441" column="0" selection-start-line="441" selection-start-column="0" selection-end-line="441" selection-end-column="0" />
+              <folding>
+                <element signature="e#2780#2801#0#HTML" expanded="true" />
+                <element signature="e#3576#3597#0#HTML" expanded="true" />
+                <element signature="e#5197#5217#0#HTML" expanded="true" />
+                <element signature="e#6461#6481#0#HTML" expanded="true" />
+                <element signature="e#7534#7555#0#HTML" expanded="true" />
+                <element signature="e#8880#8911#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ical.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ical.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36713287" vertical-offset="0" max-vertical-offset="750">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="19" />
+            <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="660">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -128,8 +135,8 @@
         <option value="$PROJECT_DIR$/config/filesystems.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/googleController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
-        <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/ical.php" />
+        <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
       </list>
     </option>
   </component>
@@ -271,7 +278,9 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="UPDATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Http/Controllers/EventsController.php</PATH>
             <PATH vcs="Git" revision="">$PROJECT_DIR$/public/assets/ical.php</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/events/create.blade.php</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Created" />
@@ -407,60 +416,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-00816" summary="cxhx">
-      <created>1456484735546</created>
-      <option name="number" value="00816" />
-      <option name="project" value="LOCAL" />
-      <updated>1456484735546</updated>
-    </task>
-    <task id="LOCAL-00817" summary="cxhx">
-      <created>1456484791137</created>
-      <option name="number" value="00817" />
-      <option name="project" value="LOCAL" />
-      <updated>1456484791137</updated>
-    </task>
-    <task id="LOCAL-00818" summary="cxhx">
-      <created>1456484822322</created>
-      <option name="number" value="00818" />
-      <option name="project" value="LOCAL" />
-      <updated>1456484822322</updated>
-    </task>
-    <task id="LOCAL-00819" summary="cxhx">
-      <created>1456485021632</created>
-      <option name="number" value="00819" />
-      <option name="project" value="LOCAL" />
-      <updated>1456485021632</updated>
-    </task>
-    <task id="LOCAL-00820" summary="cxhx">
-      <created>1456485069106</created>
-      <option name="number" value="00820" />
-      <option name="project" value="LOCAL" />
-      <updated>1456485069106</updated>
-    </task>
-    <task id="LOCAL-00821" summary="cxhx">
-      <created>1456485177902</created>
-      <option name="number" value="00821" />
-      <option name="project" value="LOCAL" />
-      <updated>1456485177902</updated>
-    </task>
-    <task id="LOCAL-00822" summary="cxhx">
-      <created>1456485231370</created>
-      <option name="number" value="00822" />
-      <option name="project" value="LOCAL" />
-      <updated>1456485231370</updated>
-    </task>
-    <task id="LOCAL-00823" summary="cxhx">
-      <created>1456485307737</created>
-      <option name="number" value="00823" />
-      <option name="project" value="LOCAL" />
-      <updated>1456485307737</updated>
-    </task>
-    <task id="LOCAL-00824" summary="cxhx">
-      <created>1456485370499</created>
-      <option name="number" value="00824" />
-      <option name="project" value="LOCAL" />
-      <updated>1456485370499</updated>
     </task>
     <task id="LOCAL-00825" summary="cxhx">
       <created>1456485462999</created>
@@ -702,7 +657,61 @@
       <option name="project" value="LOCAL" />
       <updated>1456754962353</updated>
     </task>
-    <option name="localTasksCounter" value="865" />
+    <task id="LOCAL-00865" summary="google auth">
+      <created>1456755021938</created>
+      <option name="number" value="00865" />
+      <option name="project" value="LOCAL" />
+      <updated>1456755021938</updated>
+    </task>
+    <task id="LOCAL-00866" summary="google auth">
+      <created>1456756165186</created>
+      <option name="number" value="00866" />
+      <option name="project" value="LOCAL" />
+      <updated>1456756165186</updated>
+    </task>
+    <task id="LOCAL-00867" summary="google auth">
+      <created>1456756224832</created>
+      <option name="number" value="00867" />
+      <option name="project" value="LOCAL" />
+      <updated>1456756224833</updated>
+    </task>
+    <task id="LOCAL-00868" summary="google auth">
+      <created>1456756491982</created>
+      <option name="number" value="00868" />
+      <option name="project" value="LOCAL" />
+      <updated>1456756491982</updated>
+    </task>
+    <task id="LOCAL-00869" summary="google auth">
+      <created>1456756569428</created>
+      <option name="number" value="00869" />
+      <option name="project" value="LOCAL" />
+      <updated>1456756569428</updated>
+    </task>
+    <task id="LOCAL-00870" summary="google auth">
+      <created>1456756671328</created>
+      <option name="number" value="00870" />
+      <option name="project" value="LOCAL" />
+      <updated>1456756671328</updated>
+    </task>
+    <task id="LOCAL-00871" summary="google auth">
+      <created>1456756805422</created>
+      <option name="number" value="00871" />
+      <option name="project" value="LOCAL" />
+      <updated>1456756805422</updated>
+    </task>
+    <task id="LOCAL-00872" summary="google auth">
+      <created>1456756905574</created>
+      <option name="number" value="00872" />
+      <option name="project" value="LOCAL" />
+      <updated>1456756905574</updated>
+    </task>
+    <task id="LOCAL-00873" summary="google auth">
+      <created>1456756980664</created>
+      <option name="number" value="00873" />
+      <option name="project" value="LOCAL" />
+      <updated>1456756980664</updated>
+    </task>
+    <option name="localTasksCounter" value="874" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1096,6 +1105,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.2083335" vertical-offset="1601" max-vertical-offset="8505">
+          <caret line="113" column="32" selection-start-line="114" selection-start-column="12" selection-end-line="115" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-25.25" vertical-offset="2289" max-vertical-offset="3210">
@@ -1104,27 +1121,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+    <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.2083335" vertical-offset="1616" max-vertical-offset="8520">
-          <caret line="114" column="32" selection-start-line="114" selection-start-column="12" selection-end-line="115" selection-end-column="47" />
+        <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="660">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.903846" vertical-offset="8553" max-vertical-offset="9780">
-          <caret line="608" column="24" selection-start-line="608" selection-start-column="24" selection-end-line="608" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36713287" vertical-offset="0" max-vertical-offset="750">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="19" />
-          <folding />
+        <state vertical-scroll-proportion="0.42372882" vertical-offset="6390" max-vertical-offset="11385">
+          <caret line="441" column="0" selection-start-line="441" selection-start-column="0" selection-end-line="441" selection-end-column="0" />
+          <folding>
+            <element signature="e#2780#2801#0#HTML" expanded="true" />
+            <element signature="e#3576#3597#0#HTML" expanded="true" />
+            <element signature="e#5197#5217#0#HTML" expanded="true" />
+            <element signature="e#6461#6481#0#HTML" expanded="true" />
+            <element signature="e#7534#7555#0#HTML" expanded="true" />
+            <element signature="e#8880#8911#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
