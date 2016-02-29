@@ -12,8 +12,8 @@ if (isset($ID) && $ID != "") {
 	header('Pragma: public');
 	header('Content-Charset: utf8');
 
-//	if (!CModule::IncludeModule("iblock"))
-//			return;
+	if (!CModule::IncludeModule("iblock"))
+			return;
 
 	$obElement = CIBlockElement::GetByID($ID);
 	$arEl = $obElement->GetNext();
