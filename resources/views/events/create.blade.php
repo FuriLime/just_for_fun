@@ -247,10 +247,6 @@ Create New event
             minuteStep: 10
         });
 
-
-
-
-
         var offset = new Date().getTimezoneOffset();
 
         var timezone = jstz.determine();
@@ -602,7 +598,6 @@ Create New event
 	{{--// 	defaultDate: '{{ $finish_date }}'--}}
 	// });
 	$("#datestart").on("dp.change", function (e) {
-        alert();
 		$('#datefinish').data("DateTimePicker").minDate(e.date);
 	});
 	// run second calendar after closing of first
@@ -614,6 +609,23 @@ Create New event
 		$('#datestart').data("DateTimePicker").maxDate(e.date);
 	});
 	*/
+    
+    $('#start').on('change', function() {
+        var d1 = new Date ($('#start').val());
+        var d2 = new Date (d1);
+        d2.setHours(d1.getHours() + 1);
+        
+        console.log(d2);
+
+        $("#datefinish").datetimepicker({
+            format: 'yyyy/mm/dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            startDate: d2,
+            minDate: d2,
+            minuteStep: 10
+        });
+    });
 
 	$('input#title').maxlength({
 		//alwaysShow: true,
