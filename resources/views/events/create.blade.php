@@ -247,6 +247,10 @@ Create New event
             minuteStep: 10
         });
 
+
+
+
+
         var offset = new Date().getTimezoneOffset();
 
         var timezone = jstz.determine();
