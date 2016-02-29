@@ -17,7 +17,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUser;
 use Sentinel;
 use Activation;
 
-class linkedController extends Controller
+class LinkedController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -45,7 +45,6 @@ class linkedController extends Controller
     {
 
         $userFace = Socialite::driver('linkedin')->user();
-        dd($userFace);
         $user = User::whereemail($userFace->getEmail(), $userFace->getName())->first();
         if(!$user){
             $user = new User;
