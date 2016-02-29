@@ -62,4 +62,11 @@ return [
         'redirect' => $secrets['CUSTOM']['LINKEDIN_CALLBACK_URL'],
     ],
 
+    'google' => [
+        'client_id' => $secrets['CUSTOM']['GOOGLE_CLIENT_ID'],
+        'client_secret' => $secrets['CUSTOM']['GOOGLE_SECRET'],
+        'redirect' => $secrets['CUSTOM']['GOOGLE_CALLBACK_URL'],
+    ],
+
+
 ];
