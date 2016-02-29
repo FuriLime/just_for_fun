@@ -41,6 +41,7 @@ class googleController extends Controller
     {
 
         $userFace = Socialite::driver('google')->user();
+        dd($userFace);
         $user = User::whereemail($userFace->getEmail(), $userFace->getName())->first();
         if(!$user){
             $user = new User;
