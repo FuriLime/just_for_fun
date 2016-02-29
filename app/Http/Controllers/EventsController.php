@@ -113,7 +113,7 @@ class EventsController extends Controller {
 			//create events unregister user
 			$start_date_tmp = strtotime("+1 hour");
 			$start_date = date('Y/m/d 19:00');
-			$finish_date = date($start_date, strtotime("+1 hour"));
+			$finish_date = date('Y/m/d 19:00', strtotime("+1 hour"));
 			$default_timezone = date_default_timezone_get();
             $timezone_select = self::getTimeZoneSelect();
             $ip = $_SERVER["REMOTE_ADDR"];
