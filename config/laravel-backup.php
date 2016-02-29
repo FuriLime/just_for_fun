@@ -47,7 +47,7 @@ return [
          * be automatically placed in this directory so you don't
          * accidentally end up committing these backups.
          */
-        'path' => 'backup',
+        'path' => 'backups',
 
         /*
          * By default the backups will be stored as a zipfile with a
