@@ -413,7 +413,6 @@
     $( document ).ready(function() {
         var tz = jstz.determine();
         $.cookie('time_zone', tz.name(), { path: '/' });
-        alert( $.browser.version );
         $.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase());
 
         /* Detect Chrome */
