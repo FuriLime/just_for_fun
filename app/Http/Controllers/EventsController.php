@@ -116,7 +116,7 @@ class EventsController extends Controller {
 			$start_date = date('Y/m/d 19:00');
 			$finish_date = date('Y/m/d 20:00');
             $timezone_select = self::getTimeZoneSelect();
-            $input = $request->hasCookie('time_zone');
+            $input = $request->hasCookie('laravel_session');
             var_dump($input);
             $name = $request->cookie('time_zone');
             var_dump($name);
