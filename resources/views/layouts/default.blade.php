@@ -411,7 +411,7 @@
 <script type="text/javascript" src="{{ asset('assets/js/jstz.min.js') }}"></script>
 <script>
     $( document ).ready(function() {
-        var usertimezone = jstz.determine().name();
-        $.cookie('time_zone', usertimezone);
+        var tz = jstz.determine();
+        $.cookie('time_zone', tz.name(), { path: '/' });
     });
     </script>
