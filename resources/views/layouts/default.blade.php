@@ -409,7 +409,7 @@
 
 <script src="{{ asset('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('assets/js/jstz.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets/js/jquery.browser.js') }}"></script>
+
 <script>
     $( document ).ready(function() {
         var tz = jstz.determine();
