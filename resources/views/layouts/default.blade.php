@@ -407,6 +407,7 @@
 
 </html>
 
+<script src="{{ asset('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
 <script>
     $( document ).ready(function() {
         $.cookie('time_zone', usertimezone);
