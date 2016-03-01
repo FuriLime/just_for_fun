@@ -323,6 +323,7 @@ Create New event
                         if (splits.length == 2) {
                             sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
                             $('#street').val(sity);
+                            console.log($('#street').val(sity));
                             country = splits[1];
                             $('#state').val(country);
                             $('#country').attr('style', 'display:none');
