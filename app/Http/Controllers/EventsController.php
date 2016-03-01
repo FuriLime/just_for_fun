@@ -33,7 +33,9 @@ class EventsController extends Controller {
                     if (Sentinel::getUser()->timezone) {
                         $my_time_zone = Sentinel::getUser()->timezone;
                     } else {
-                        $my_time_zone = $_COOKIE['time_zone'];
+                        $ip = $_SERVER["REMOTE_ADDR"];
+                        $location = GeoIP::getLocation($ip);
+                        $my_time_zone = $location['timezone'];
                     }
                     $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
                     $date->setTimezone(new \DateTimeZone($my_time_zone));
@@ -54,7 +56,16 @@ class EventsController extends Controller {
                 $events = Event::latest()->get();
                 foreach ($events as $event) {
                     $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
-                    $my_time_zone = $_COOKIE['time_zone'];
+                    $ip = $_SERVER["REMOTE_ADDR"];
+//                    $location = GeoIP::getLocation($ip);
+//                    foreach ($location as $timezone) {
+//                        $my_time_zone = $timezone;
+//                    }
+////                        $my_time_zone = $location['timezone'];
+//                    dd(Session::has('timezone'))
+                    $ip = $_SERVER["REMOTE_ADDR"];
+                    $location = GeoIP::getLocation($ip);
+                    $my_time_zone = $location['timezone'];
                     $date->setTimezone(new \DateTimeZone($my_time_zone));
                     $event_start_zero = $date;
                     $date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
@@ -87,6 +98,10 @@ class EventsController extends Controller {
                 if(Sentinel::getUser()->timezone){
                     $my_time_zone = Sentinel::getUser()->timezone;
                 } else{
+
+//                    $ip = $_SERVER["REMOTE_ADDR"];
+//                    $location = GeoIP::getLocation($ip);
+//                    $my_time_zone = $location['timezone'];
                     $my_time_zone = $_COOKIE['time_zone'];
                 }
                 return view('events.create', array(
