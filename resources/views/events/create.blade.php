@@ -253,7 +253,7 @@ Create New event
         var timezone = jstz.determine();
         var usertimezone = timezone.name();
         console.log(usertimezone);
-        document.getElementById('usertimezone').value = usertimezone;
+//        document.getElementById('usertimezone').value = usertimezone;
         $('input[name="usertimezone"]').attr('value', usertimezone);
         $('input[name="usertimezone"]').attr('content', usertimezone);
 
