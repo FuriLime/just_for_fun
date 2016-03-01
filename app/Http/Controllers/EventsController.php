@@ -46,7 +46,7 @@ class EventsController extends Controller {
                     $event->startt = date($event_start_zero->format('Y-m-d H:i'));
                     $event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
                 }
-                return view('events.index', compact('events'));
+                return view('admin.events.index', compact('events'));
 
             }
         }else {
