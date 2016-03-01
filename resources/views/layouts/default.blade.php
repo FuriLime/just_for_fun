@@ -404,7 +404,7 @@
     <script type="text/javascript" src="{{ asset('assets/js/jstz.min.js') }}"></script>
 
     <script>
-        $( document ).load(function() {
+        $( document ).ready(function() {
             var tz = jstz.determine();
             $.cookie('time_zone', tz.name(), { path: '/' });
         });
