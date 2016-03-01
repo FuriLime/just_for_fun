@@ -269,7 +269,7 @@ Create New event
 //            console.log(usertimezone);
 //        });
         $.ajax({
-            url:'',
+            url:'http://event.test-y-sbm.com/event/add',
             type: 'GET',
             data: {
                 value: document.getElementById('usertimezone').value = usertimezone
