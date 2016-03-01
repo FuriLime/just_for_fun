@@ -417,8 +417,5 @@
         if ( $.browser.webkit ) {
             alert( $.browser.version );
         }
-        if ( $.browser.mozilla) {
-            alert( $.browser.version );
-        }
     });
     </script>
