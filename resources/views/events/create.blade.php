@@ -218,7 +218,7 @@ Create New event
     <script type="text/javascript" src="{{ asset('assets/vendors/switchery/switchery.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/vendors/switch/js/bootstrap-switch.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/frontend/advfeatures.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/jstz.min.js') }}"></script>
+
     <script type="text/javascript" src="{{ asset('assets/js/moment.js') }}"></script>
 	<script src="{{ asset('assets/vendors/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/vendors/maxlength/bootstrap-maxlength.min.js') }}" type="text/javascript"></script>
