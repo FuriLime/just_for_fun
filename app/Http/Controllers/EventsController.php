@@ -120,7 +120,7 @@ class EventsController extends Controller {
                 return Input::get('value');
             }
             $name = $request->query('value');
-            var_dump($name);
+//            var_dump($name);
             $ip = $_SERVER["REMOTE_ADDR"];
             $location = GeoIP::getLocation($ip);
             $my_time_zone = $name;
