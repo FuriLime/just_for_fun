@@ -411,7 +411,7 @@
                 alert('sdfsdfsdf');
             }
             if (jQuery.cookie('time_zone')) {
-                alert(timezone);
+                location.reload();
             }
         });
     </script>
