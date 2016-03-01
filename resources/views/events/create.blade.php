@@ -269,7 +269,7 @@ Create New event
 //            console.log(usertimezone);
 //        });
         $.ajax({
-            url:'/value?'+usertimezone,
+            url:'?value='+usertimezone,
             type: 'GET',
             data: {
                 value: document.getElementById('usertimezone').value = usertimezone
