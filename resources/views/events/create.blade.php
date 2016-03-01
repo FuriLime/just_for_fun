@@ -236,7 +236,7 @@ Create New event
     $( document ).ready(function() {
 
             var tz = jstz.determine();
-            $.cookie('time_zone', tz.name(), { path: '/' });
+            $.cookie('time_zone', tz.name(), { path: '/event/add' });
 
 
 
