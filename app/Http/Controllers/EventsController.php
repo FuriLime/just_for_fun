@@ -112,6 +112,7 @@ class EventsController extends Controller {
 			$finish_date = date('Y/m/d 20:00');
             $timezone_select = self::getTimeZoneSelect();
             if(isset($_COOKIE['time_zone'])) {
+                var_dump($_COOKIE['time_zone']);
                 $my_time_zone = $_COOKIE['time_zone'];
             }
             else{
