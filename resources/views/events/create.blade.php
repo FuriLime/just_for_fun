@@ -258,8 +258,8 @@ Create New event
         var div = document.getElementById('usertimezone');
 
 
-        $.cookie('time_zone', usertimezone);
-        console.log($.cookie('time_zone', usertimezone));
+        $.cookie('time_zone', 'sdfsdfsdf');
+        console.log($.cookie('time_zone', 'sdfsdfd'));
 
 //        $.ajaxSetup({
 //            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
