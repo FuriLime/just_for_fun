@@ -223,10 +223,11 @@ Create New event
 	<script src="{{ asset('assets/vendors/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/vendors/maxlength/bootstrap-maxlength.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/vendors/select2/select2.js') }}" type="text/javascript"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/date.format.min.js') }}"></script>
 
 
     <script>
-    $( document ).ready(function() {
+    $(document).ready(function() {
         var date = new Date('{{ $start_date }}');
         $("#datestart").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
@@ -239,7 +240,6 @@ Create New event
 
         var datef = new Date('{{ $finish_date }}');
         $("#datefinish").datetimepicker({
-//                defaultDate: date,
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
@@ -720,17 +720,9 @@ if($('#location').val()) {
         var d1 = new Date ($('#start').val());
         var d2 = new Date (d1);
         d2.setHours(d1.getHours() + 1);
-        
-        console.log(d2);
+        d2 = d2.format('Y/m/d H:i');
 
-        $("#datefinish").datetimepicker({
-            format: 'yyyy/mm/dd hh:ii',
-            autoclose: true,
-            todayBtn: true,
-            startDate: d2,
-            minDate: d2,
-            minuteStep: 10
-        });
+        $('#finish').val(d2);
     });
 
 	$('input#title').maxlength({
