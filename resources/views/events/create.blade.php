@@ -223,6 +223,7 @@ Create New event
 	<script src="{{ asset('assets/vendors/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/vendors/maxlength/bootstrap-maxlength.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/vendors/select2/select2.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
 
 
     <script>
