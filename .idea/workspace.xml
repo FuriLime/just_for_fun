@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/create.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -53,8 +52,15 @@
         <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.47678572" vertical-offset="393" max-vertical-offset="11550">
-              <caret line="44" column="117" selection-start-line="44" selection-start-column="117" selection-end-line="44" selection-end-column="117" />
-              <folding />
+              <caret line="44" column="112" selection-start-line="44" selection-start-column="112" selection-end-line="44" selection-end-column="112" />
+              <folding>
+                <element signature="e#2780#2801#0#HTML" expanded="true" />
+                <element signature="e#3576#3597#0#HTML" expanded="true" />
+                <element signature="e#5197#5217#0#HTML" expanded="true" />
+                <element signature="e#6461#6481#0#HTML" expanded="true" />
+                <element signature="e#7534#7555#0#HTML" expanded="true" />
+                <element signature="e#8880#8911#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -287,12 +293,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-00880" summary="google auth">
-      <created>1456817691511</created>
-      <option name="number" value="00880" />
-      <option name="project" value="LOCAL" />
-      <updated>1456817691511</updated>
     </task>
     <task id="LOCAL-00881" summary="google auth">
       <created>1456817770284</created>
@@ -582,7 +582,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456821329392</updated>
     </task>
-    <option name="localTasksCounter" value="929" />
+    <task id="LOCAL-00929" summary="google auth">
+      <created>1456821431603</created>
+      <option name="number" value="00929" />
+      <option name="project" value="LOCAL" />
+      <updated>1456821431603</updated>
+    </task>
+    <option name="localTasksCounter" value="930" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -997,8 +1003,15 @@
     <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47678572" vertical-offset="393" max-vertical-offset="11550">
-          <caret line="44" column="117" selection-start-line="44" selection-start-column="117" selection-end-line="44" selection-end-column="117" />
-          <folding />
+          <caret line="44" column="112" selection-start-line="44" selection-start-column="112" selection-end-line="44" selection-end-column="112" />
+          <folding>
+            <element signature="e#2780#2801#0#HTML" expanded="true" />
+            <element signature="e#3576#3597#0#HTML" expanded="true" />
+            <element signature="e#5197#5217#0#HTML" expanded="true" />
+            <element signature="e#6461#6481#0#HTML" expanded="true" />
+            <element signature="e#7534#7555#0#HTML" expanded="true" />
+            <element signature="e#8880#8911#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
