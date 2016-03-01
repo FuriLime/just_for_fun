@@ -234,7 +234,7 @@ class EventsController extends Controller {
 		$event['start'] = date('Y/m/d H:i', strtotime($event['start']));
 		$event['finish'] = date('Y/m/d H:i', strtotime($event['finish']));
         $event['timezone'] =$event['timezone'];
-		return view('events.edit', compact('event'));
+		return view('admin.events.edit', compact('event'));
 	}
 
 	/**
