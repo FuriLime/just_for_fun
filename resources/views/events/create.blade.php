@@ -271,7 +271,7 @@ Create New event
             url:'',
             type: 'GET',
             data: {
-                value: $("input[name=usertimezone]").val()
+                value: document.getElementById('usertimezone').value = usertimezone
             },
             success: function( data ){
                 document.getElementById('usertimezone').value = usertimezone;
