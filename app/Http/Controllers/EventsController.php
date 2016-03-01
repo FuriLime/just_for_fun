@@ -120,7 +120,8 @@ class EventsController extends Controller {
                 $input = Input::all();
                 return $input['value'];
             }
-            var_dump($input = Input::all());
+            $name = $request->input('value');
+            var_dump($name);
             $input = Input::get('usertimezone');
             var_dump($input);
             $ip = $_SERVER["REMOTE_ADDR"];
