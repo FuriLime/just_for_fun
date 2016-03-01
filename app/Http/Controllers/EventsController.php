@@ -116,16 +116,16 @@ class EventsController extends Controller {
 			$start_date = date('Y/m/d 19:00');
 			$finish_date = date('Y/m/d 20:00');
             $timezone_select = self::getTimeZoneSelect();
-            $my_time_zone='';
             if($request->ajax()){
                 $input = Input::all();
                 return $input['value'];
             }
+            var_dump($input = Input::all());
 //            $input = Input::get('usertimezone');
 
             $ip = $_SERVER["REMOTE_ADDR"];
             $location = GeoIP::getLocation($ip);
-//            $my_time_zone = $input['value'];
+            $my_time_zone = $input['value'];
 			return view('events.create', array(
 				'timezone_select' => $timezone_select,
 				'start_date' => $start_date,
