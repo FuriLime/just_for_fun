@@ -166,7 +166,11 @@ Route::get('member', array('as' => 'member_home', 'uses' => 'AccountController@i
 
 # Events
 Route::resource('events', 'EventsController');
-Route::get('event/add', 'EventsController@create');
+Route::get('event/add', 'EventsController@create', function(){
+    if(Request::ajax()){
+        return Request::input('value');
+    }
+});
 Route::post('event/add', 'EventsController@store');
 
 Route::get('events/{uuid}/delete', array('as' => 'events.delete', 'uses' => 'EventsController@getDelete'));
