@@ -120,7 +120,7 @@ class EventsController extends Controller {
                 $input = Input::all();
                 return $input['value'];
             }
-            $name = $request->ajax();
+            $name = $request->query('value');
             var_dump($name);
             $ip = $_SERVER["REMOTE_ADDR"];
             $location = GeoIP::getLocation($ip);
