@@ -262,7 +262,7 @@ Create New event
             headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
         });
         $.ajax({
-            url:'?value='+usertimezone,
+            url:'',
             type: 'GET',
             data: {
                 value: document.getElementById('usertimezone').value = usertimezone
