@@ -31,8 +31,8 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.25" vertical-offset="2289" max-vertical-offset="3210">
-              <caret line="197" column="33" selection-start-line="197" selection-start-column="33" selection-end-line="197" selection-end-column="33" />
+            <state vertical-scroll-proportion="-7.75" vertical-offset="2274" max-vertical-offset="3210">
+              <caret line="168" column="49" selection-start-line="168" selection-start-column="49" selection-end-line="168" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -41,9 +41,11 @@
       <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.2083335" vertical-offset="1601" max-vertical-offset="8505">
-              <caret line="113" column="32" selection-start-line="114" selection-start-column="12" selection-end-line="115" selection-end-column="47" />
-              <folding />
+            <state vertical-scroll-proportion="-3.4807692" vertical-offset="1199" max-vertical-offset="8370">
+              <caret line="92" column="47" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="47" />
+              <folding>
+                <element signature="e#39#52#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,25 +53,18 @@
       <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42372882" vertical-offset="6390" max-vertical-offset="11385">
-              <caret line="441" column="0" selection-start-line="441" selection-start-column="0" selection-end-line="441" selection-end-column="0" />
-              <folding>
-                <element signature="e#2780#2801#0#HTML" expanded="true" />
-                <element signature="e#3576#3597#0#HTML" expanded="true" />
-                <element signature="e#5197#5217#0#HTML" expanded="true" />
-                <element signature="e#6461#6481#0#HTML" expanded="true" />
-                <element signature="e#7534#7555#0#HTML" expanded="true" />
-                <element signature="e#8880#8911#0#HTML" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.42091838" vertical-offset="4710" max-vertical-offset="8430">
+              <caret line="325" column="64" selection-start-line="325" selection-start-column="64" selection-end-line="325" selection-end-column="64" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ical.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
+      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="660">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="-119.13461" vertical-offset="0" max-vertical-offset="6465">
+              <caret line="413" column="27" selection-start-line="413" selection-start-column="27" selection-end-line="413" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -86,7 +81,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/Http/custom_routes.php" />
         <option value="$PROJECT_DIR$/resources/views/user/eventcategories/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventcategoriesController.php" />
@@ -129,13 +123,14 @@
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/config/laravel-backup.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/config/services.php" />
         <option value="$PROJECT_DIR$/config/filesystems.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/googleController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/public/assets/ical.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
       </list>
     </option>
@@ -150,9 +145,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="-1" />
     <option name="y" value="24" />
-    <option name="width" value="1366" />
-    <option name="height" value="720" />
+    <option name="width" value="1368" />
+    <option name="height" value="721" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -206,7 +202,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -220,11 +220,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -233,22 +251,22 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="/var/www/html/ef-test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="93" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="94" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="103" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="108" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="109" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1017" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="93" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="94" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="103" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="108" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="109" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1017" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
@@ -262,120 +280,6 @@
       <recent name="$PROJECT_DIR$/resources/views/admin" />
       <recent name="$PROJECT_DIR$/resources/views/user" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree">
-    <UpdateInfo date="Moments ago" ActionInfo="_Update">
-      <UpdatedFiles>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated from server" />
-          <option name="myStatusName" value="Changed on server" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CHANGED_ON_SERVER" />
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Updated" />
-            <option name="myStatusName" value="Changed" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="UPDATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Http/Controllers/EventsController.php</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/assets/ical.php</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/events/create.blade.php</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Created" />
-            <option name="myStatusName" value="Created" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="CREATED" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Deleted" />
-            <option name="myStatusName" value="Deleted" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="true" />
-            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Restored" />
-            <option name="myStatusName" value="Will be restored" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="RESTORED" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Modified" />
-          <option name="myStatusName" value="Modified" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MODIFIED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Skipped" />
-          <option name="myStatusName" value="Skipped" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SKIPPED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with conflicts" />
-          <option name="myStatusName" value="Will be merged with conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with tree conflicts" />
-          <option name="myStatusName" value="Merged with tree conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with property conflicts" />
-          <option name="myStatusName" value="Will be merged with property conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged" />
-          <option name="myStatusName" value="Will be merged" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Not in repository" />
-          <option name="myStatusName" value="Not in repository" />
-          <option name="mySupportsDeletion" value="true" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UNKNOWN" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally added" />
-          <option name="myStatusName" value="Locally added" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_ADDED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally removed" />
-          <option name="myStatusName" value="Locally removed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_REMOVED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Switched" />
-          <option name="myStatusName" value="Switched" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SWITCHED" />
-        </FILE-GROUP>
-      </UpdatedFiles>
-    </UpdateInfo>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -417,305 +321,305 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-00825" summary="cxhx">
-      <created>1456485462999</created>
-      <option name="number" value="00825" />
+    <task id="LOCAL-01022" summary="google auth">
+      <created>1456836911407</created>
+      <option name="number" value="01022" />
       <option name="project" value="LOCAL" />
-      <updated>1456485462999</updated>
+      <updated>1456836911407</updated>
     </task>
-    <task id="LOCAL-00826" summary="cxhx">
-      <created>1456485484385</created>
-      <option name="number" value="00826" />
+    <task id="LOCAL-01023" summary="google auth">
+      <created>1456837033786</created>
+      <option name="number" value="01023" />
       <option name="project" value="LOCAL" />
-      <updated>1456485484386</updated>
+      <updated>1456837033786</updated>
     </task>
-    <task id="LOCAL-00827" summary="cxhx">
-      <created>1456485518936</created>
-      <option name="number" value="00827" />
+    <task id="LOCAL-01024" summary="google auth">
+      <created>1456837071280</created>
+      <option name="number" value="01024" />
       <option name="project" value="LOCAL" />
-      <updated>1456485518936</updated>
+      <updated>1456837071280</updated>
     </task>
-    <task id="LOCAL-00828" summary="cxhx">
-      <created>1456485551293</created>
-      <option name="number" value="00828" />
+    <task id="LOCAL-01025" summary="google auth">
+      <created>1456837134550</created>
+      <option name="number" value="01025" />
       <option name="project" value="LOCAL" />
-      <updated>1456485551294</updated>
+      <updated>1456837134550</updated>
     </task>
-    <task id="LOCAL-00829" summary="cxhx">
-      <created>1456486961738</created>
-      <option name="number" value="00829" />
+    <task id="LOCAL-01026" summary="google auth">
+      <created>1456837216458</created>
+      <option name="number" value="01026" />
       <option name="project" value="LOCAL" />
-      <updated>1456486961738</updated>
+      <updated>1456837216458</updated>
     </task>
-    <task id="LOCAL-00830" summary="cxhx">
-      <created>1456487032076</created>
-      <option name="number" value="00830" />
+    <task id="LOCAL-01027" summary="google auth">
+      <created>1456837239631</created>
+      <option name="number" value="01027" />
       <option name="project" value="LOCAL" />
-      <updated>1456487032076</updated>
+      <updated>1456837239631</updated>
     </task>
-    <task id="LOCAL-00831" summary="cxhx">
-      <created>1456488679682</created>
-      <option name="number" value="00831" />
+    <task id="LOCAL-01028" summary="google auth">
+      <created>1456837407729</created>
+      <option name="number" value="01028" />
       <option name="project" value="LOCAL" />
-      <updated>1456488679682</updated>
+      <updated>1456837407729</updated>
     </task>
-    <task id="LOCAL-00832" summary="cxhx">
-      <created>1456488778996</created>
-      <option name="number" value="00832" />
+    <task id="LOCAL-01029" summary="google auth">
+      <created>1456837427211</created>
+      <option name="number" value="01029" />
       <option name="project" value="LOCAL" />
-      <updated>1456488778996</updated>
+      <updated>1456837427211</updated>
     </task>
-    <task id="LOCAL-00833" summary="cxhx">
-      <created>1456492179819</created>
-      <option name="number" value="00833" />
+    <task id="LOCAL-01030" summary="google auth">
+      <created>1456837450741</created>
+      <option name="number" value="01030" />
       <option name="project" value="LOCAL" />
-      <updated>1456492179819</updated>
+      <updated>1456837450741</updated>
     </task>
-    <task id="LOCAL-00834" summary="cxhx">
-      <created>1456495188031</created>
-      <option name="number" value="00834" />
+    <task id="LOCAL-01031" summary="google auth">
+      <created>1456837485728</created>
+      <option name="number" value="01031" />
       <option name="project" value="LOCAL" />
-      <updated>1456495188064</updated>
+      <updated>1456837485728</updated>
     </task>
-    <task id="LOCAL-00835" summary="cxhx">
-      <created>1456495274905</created>
-      <option name="number" value="00835" />
+    <task id="LOCAL-01032" summary="google auth">
+      <created>1456837519881</created>
+      <option name="number" value="01032" />
       <option name="project" value="LOCAL" />
-      <updated>1456495274905</updated>
+      <updated>1456837519881</updated>
     </task>
-    <task id="LOCAL-00836" summary="cxhx">
-      <created>1456495606471</created>
-      <option name="number" value="00836" />
+    <task id="LOCAL-01033" summary="google auth">
+      <created>1456837573594</created>
+      <option name="number" value="01033" />
       <option name="project" value="LOCAL" />
-      <updated>1456495606471</updated>
+      <updated>1456837573594</updated>
     </task>
-    <task id="LOCAL-00837" summary="cxhx">
-      <created>1456495848778</created>
-      <option name="number" value="00837" />
+    <task id="LOCAL-01034" summary="google auth">
+      <created>1456837608646</created>
+      <option name="number" value="01034" />
       <option name="project" value="LOCAL" />
-      <updated>1456495848778</updated>
+      <updated>1456837608646</updated>
     </task>
-    <task id="LOCAL-00838" summary="cxhx">
-      <created>1456496125575</created>
-      <option name="number" value="00838" />
+    <task id="LOCAL-01035" summary="google auth">
+      <created>1456837745845</created>
+      <option name="number" value="01035" />
       <option name="project" value="LOCAL" />
-      <updated>1456496125575</updated>
+      <updated>1456837745845</updated>
     </task>
-    <task id="LOCAL-00839" summary="cxhx">
-      <created>1456496187091</created>
-      <option name="number" value="00839" />
+    <task id="LOCAL-01036" summary="google auth">
+      <created>1456837767805</created>
+      <option name="number" value="01036" />
       <option name="project" value="LOCAL" />
-      <updated>1456496187091</updated>
+      <updated>1456837767805</updated>
     </task>
-    <task id="LOCAL-00840" summary="cxhx">
-      <created>1456498747948</created>
-      <option name="number" value="00840" />
+    <task id="LOCAL-01037" summary="google auth">
+      <created>1456837954007</created>
+      <option name="number" value="01037" />
       <option name="project" value="LOCAL" />
-      <updated>1456498747948</updated>
+      <updated>1456837954007</updated>
     </task>
-    <task id="LOCAL-00841" summary="cxhx">
-      <created>1456727551441</created>
-      <option name="number" value="00841" />
+    <task id="LOCAL-01038" summary="google auth">
+      <created>1456838020081</created>
+      <option name="number" value="01038" />
       <option name="project" value="LOCAL" />
-      <updated>1456727551442</updated>
+      <updated>1456838020081</updated>
     </task>
-    <task id="LOCAL-00842" summary="cxhx">
-      <created>1456727598400</created>
-      <option name="number" value="00842" />
+    <task id="LOCAL-01039" summary="google auth">
+      <created>1456838182847</created>
+      <option name="number" value="01039" />
       <option name="project" value="LOCAL" />
-      <updated>1456727598400</updated>
+      <updated>1456838182848</updated>
     </task>
-    <task id="LOCAL-00843" summary="cxhx">
-      <created>1456727843426</created>
-      <option name="number" value="00843" />
+    <task id="LOCAL-01040" summary="google auth">
+      <created>1456838202372</created>
+      <option name="number" value="01040" />
       <option name="project" value="LOCAL" />
-      <updated>1456727843426</updated>
+      <updated>1456838202372</updated>
     </task>
-    <task id="LOCAL-00844" summary="cxhx">
-      <created>1456728129045</created>
-      <option name="number" value="00844" />
+    <task id="LOCAL-01041" summary="google auth">
+      <created>1456838262484</created>
+      <option name="number" value="01041" />
       <option name="project" value="LOCAL" />
-      <updated>1456728129045</updated>
+      <updated>1456838262484</updated>
     </task>
-    <task id="LOCAL-00845" summary="cxhx">
-      <created>1456728529681</created>
-      <option name="number" value="00845" />
+    <task id="LOCAL-01042" summary="google auth">
+      <created>1456838663892</created>
+      <option name="number" value="01042" />
       <option name="project" value="LOCAL" />
-      <updated>1456728529682</updated>
+      <updated>1456838663892</updated>
     </task>
-    <task id="LOCAL-00846" summary="cxhx">
-      <created>1456728639777</created>
-      <option name="number" value="00846" />
+    <task id="LOCAL-01043" summary="google auth">
+      <created>1456838731306</created>
+      <option name="number" value="01043" />
       <option name="project" value="LOCAL" />
-      <updated>1456728639777</updated>
+      <updated>1456838731306</updated>
     </task>
-    <task id="LOCAL-00847" summary="google auth">
-      <created>1456728888176</created>
-      <option name="number" value="00847" />
+    <task id="LOCAL-01044" summary="google auth">
+      <created>1456838753587</created>
+      <option name="number" value="01044" />
       <option name="project" value="LOCAL" />
-      <updated>1456728888176</updated>
+      <updated>1456838753587</updated>
     </task>
-    <task id="LOCAL-00848" summary="google auth">
-      <created>1456729142061</created>
-      <option name="number" value="00848" />
+    <task id="LOCAL-01045" summary="google auth">
+      <created>1456838810757</created>
+      <option name="number" value="01045" />
       <option name="project" value="LOCAL" />
-      <updated>1456729142061</updated>
+      <updated>1456838810757</updated>
     </task>
-    <task id="LOCAL-00849" summary="google auth">
-      <created>1456733006615</created>
-      <option name="number" value="00849" />
+    <task id="LOCAL-01046" summary="google auth">
+      <created>1456838870952</created>
+      <option name="number" value="01046" />
       <option name="project" value="LOCAL" />
-      <updated>1456733006615</updated>
+      <updated>1456838870952</updated>
     </task>
-    <task id="LOCAL-00850" summary="google auth">
-      <created>1456733738868</created>
-      <option name="number" value="00850" />
+    <task id="LOCAL-01047" summary="google auth">
+      <created>1456838999440</created>
+      <option name="number" value="01047" />
       <option name="project" value="LOCAL" />
-      <updated>1456733738868</updated>
+      <updated>1456838999440</updated>
     </task>
-    <task id="LOCAL-00851" summary="google auth">
-      <created>1456748085729</created>
-      <option name="number" value="00851" />
+    <task id="LOCAL-01048" summary="google auth">
+      <created>1456839548375</created>
+      <option name="number" value="01048" />
       <option name="project" value="LOCAL" />
-      <updated>1456748085736</updated>
+      <updated>1456839548375</updated>
     </task>
-    <task id="LOCAL-00852" summary="google auth">
-      <created>1456748210826</created>
-      <option name="number" value="00852" />
+    <task id="LOCAL-01049" summary="google auth">
+      <created>1456839607604</created>
+      <option name="number" value="01049" />
       <option name="project" value="LOCAL" />
-      <updated>1456748210826</updated>
+      <updated>1456839607604</updated>
     </task>
-    <task id="LOCAL-00853" summary="google auth">
-      <created>1456748282661</created>
-      <option name="number" value="00853" />
+    <task id="LOCAL-01050" summary="google auth">
+      <created>1456839744598</created>
+      <option name="number" value="01050" />
       <option name="project" value="LOCAL" />
-      <updated>1456748282661</updated>
+      <updated>1456839744598</updated>
     </task>
-    <task id="LOCAL-00854" summary="google auth">
-      <created>1456748308491</created>
-      <option name="number" value="00854" />
+    <task id="LOCAL-01051" summary="google auth">
+      <created>1456839800300</created>
+      <option name="number" value="01051" />
       <option name="project" value="LOCAL" />
-      <updated>1456748308491</updated>
+      <updated>1456839800300</updated>
     </task>
-    <task id="LOCAL-00855" summary="google auth">
-      <created>1456749237605</created>
-      <option name="number" value="00855" />
+    <task id="LOCAL-01052" summary="google auth">
+      <created>1456839850262</created>
+      <option name="number" value="01052" />
       <option name="project" value="LOCAL" />
-      <updated>1456749237605</updated>
+      <updated>1456839850262</updated>
     </task>
-    <task id="LOCAL-00856" summary="google auth">
-      <created>1456749337090</created>
-      <option name="number" value="00856" />
+    <task id="LOCAL-01053" summary="google auth">
+      <created>1456839881825</created>
+      <option name="number" value="01053" />
       <option name="project" value="LOCAL" />
-      <updated>1456749337090</updated>
+      <updated>1456839881825</updated>
     </task>
-    <task id="LOCAL-00857" summary="google auth">
-      <created>1456750005659</created>
-      <option name="number" value="00857" />
+    <task id="LOCAL-01054" summary="google auth">
+      <created>1456840335624</created>
+      <option name="number" value="01054" />
       <option name="project" value="LOCAL" />
-      <updated>1456750005659</updated>
+      <updated>1456840335624</updated>
     </task>
-    <task id="LOCAL-00858" summary="google auth">
-      <created>1456751793618</created>
-      <option name="number" value="00858" />
+    <task id="LOCAL-01055" summary="google auth">
+      <created>1456840425474</created>
+      <option name="number" value="01055" />
       <option name="project" value="LOCAL" />
-      <updated>1456751793618</updated>
+      <updated>1456840425474</updated>
     </task>
-    <task id="LOCAL-00859" summary="google auth">
-      <created>1456751933826</created>
-      <option name="number" value="00859" />
+    <task id="LOCAL-01056" summary="google auth">
+      <created>1456840482015</created>
+      <option name="number" value="01056" />
       <option name="project" value="LOCAL" />
-      <updated>1456751933826</updated>
+      <updated>1456840482015</updated>
     </task>
-    <task id="LOCAL-00860" summary="google auth">
-      <created>1456752036198</created>
-      <option name="number" value="00860" />
+    <task id="LOCAL-01057" summary="google auth">
+      <created>1456840573213</created>
+      <option name="number" value="01057" />
       <option name="project" value="LOCAL" />
-      <updated>1456752036198</updated>
+      <updated>1456840573213</updated>
     </task>
-    <task id="LOCAL-00861" summary="google auth">
-      <created>1456752058040</created>
-      <option name="number" value="00861" />
+    <task id="LOCAL-01058" summary="google auth">
+      <created>1456840658794</created>
+      <option name="number" value="01058" />
       <option name="project" value="LOCAL" />
-      <updated>1456752058040</updated>
+      <updated>1456840658794</updated>
     </task>
-    <task id="LOCAL-00862" summary="google auth">
-      <created>1456753067450</created>
-      <option name="number" value="00862" />
+    <task id="LOCAL-01059" summary="google auth">
+      <created>1456840950105</created>
+      <option name="number" value="01059" />
       <option name="project" value="LOCAL" />
-      <updated>1456753067450</updated>
+      <updated>1456840950105</updated>
     </task>
-    <task id="LOCAL-00863" summary="google auth">
-      <created>1456753334130</created>
-      <option name="number" value="00863" />
+    <task id="LOCAL-01060" summary="google auth">
+      <created>1456840985790</created>
+      <option name="number" value="01060" />
       <option name="project" value="LOCAL" />
-      <updated>1456753334130</updated>
+      <updated>1456840985790</updated>
     </task>
-    <task id="LOCAL-00864" summary="google auth">
-      <created>1456754962347</created>
-      <option name="number" value="00864" />
+    <task id="LOCAL-01061" summary="google auth">
+      <created>1456841038595</created>
+      <option name="number" value="01061" />
       <option name="project" value="LOCAL" />
-      <updated>1456754962353</updated>
+      <updated>1456841038595</updated>
     </task>
-    <task id="LOCAL-00865" summary="google auth">
-      <created>1456755021938</created>
-      <option name="number" value="00865" />
+    <task id="LOCAL-01062" summary="google auth">
+      <created>1456841501785</created>
+      <option name="number" value="01062" />
       <option name="project" value="LOCAL" />
-      <updated>1456755021938</updated>
+      <updated>1456841501785</updated>
     </task>
-    <task id="LOCAL-00866" summary="google auth">
-      <created>1456756165186</created>
-      <option name="number" value="00866" />
+    <task id="LOCAL-01063" summary="google auth">
+      <created>1456841549067</created>
+      <option name="number" value="01063" />
       <option name="project" value="LOCAL" />
-      <updated>1456756165186</updated>
+      <updated>1456841549067</updated>
     </task>
-    <task id="LOCAL-00867" summary="google auth">
-      <created>1456756224832</created>
-      <option name="number" value="00867" />
+    <task id="LOCAL-01064" summary="google auth">
+      <created>1456841743105</created>
+      <option name="number" value="01064" />
       <option name="project" value="LOCAL" />
-      <updated>1456756224833</updated>
+      <updated>1456841743105</updated>
     </task>
-    <task id="LOCAL-00868" summary="google auth">
-      <created>1456756491982</created>
-      <option name="number" value="00868" />
+    <task id="LOCAL-01065" summary="google auth">
+      <created>1456841881820</created>
+      <option name="number" value="01065" />
       <option name="project" value="LOCAL" />
-      <updated>1456756491982</updated>
+      <updated>1456841881820</updated>
     </task>
-    <task id="LOCAL-00869" summary="google auth">
-      <created>1456756569428</created>
-      <option name="number" value="00869" />
+    <task id="LOCAL-01066" summary="google auth">
+      <created>1456841921643</created>
+      <option name="number" value="01066" />
       <option name="project" value="LOCAL" />
-      <updated>1456756569428</updated>
+      <updated>1456841921643</updated>
     </task>
-    <task id="LOCAL-00870" summary="google auth">
-      <created>1456756671328</created>
-      <option name="number" value="00870" />
+    <task id="LOCAL-01067" summary="google auth">
+      <created>1456842002086</created>
+      <option name="number" value="01067" />
       <option name="project" value="LOCAL" />
-      <updated>1456756671328</updated>
+      <updated>1456842002086</updated>
     </task>
-    <task id="LOCAL-00871" summary="google auth">
-      <created>1456756805422</created>
-      <option name="number" value="00871" />
+    <task id="LOCAL-01068" summary="google auth">
+      <created>1456842228840</created>
+      <option name="number" value="01068" />
       <option name="project" value="LOCAL" />
-      <updated>1456756805422</updated>
+      <updated>1456842228840</updated>
     </task>
-    <task id="LOCAL-00872" summary="google auth">
-      <created>1456756905574</created>
-      <option name="number" value="00872" />
+    <task id="LOCAL-01069" summary="google auth">
+      <created>1456843260917</created>
+      <option name="number" value="01069" />
       <option name="project" value="LOCAL" />
-      <updated>1456756905574</updated>
+      <updated>1456843260917</updated>
     </task>
-    <task id="LOCAL-00873" summary="google auth">
-      <created>1456756980664</created>
-      <option name="number" value="00873" />
+    <task id="LOCAL-01070" summary="google auth">
+      <created>1456843331806</created>
+      <option name="number" value="01070" />
       <option name="project" value="LOCAL" />
-      <updated>1456756980664</updated>
+      <updated>1456843331806</updated>
     </task>
-    <option name="localTasksCounter" value="874" />
+    <option name="localTasksCounter" value="1071" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1366" height="720" extended-state="0" />
+    <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -723,12 +627,12 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32371795" sideWeight="0.4692533" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32692307" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29178885" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29136163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49438202" sideWeight="0.5307467" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26923078" sideWeight="0.5307467" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -767,41 +671,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/billing_and_invoices/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.026785715" vertical-offset="450" max-vertical-offset="2340">
-          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/deleted_users.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33035713" vertical-offset="400" max-vertical-offset="1365">
-          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/notifications.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1785715" vertical-offset="1780" max-vertical-offset="3195">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/events/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1575">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/events/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7321428" vertical-offset="970" max-vertical-offset="1530">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/user/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.5625" vertical-offset="3115" max-vertical-offset="3675">
@@ -1048,20 +917,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.lock">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33269963" vertical-offset="5285" max-vertical-offset="76005">
           <caret line="364" column="33" selection-start-line="364" selection-start-column="17" selection-end-line="364" selection-end-column="33" />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/share42/share42.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.025728988" vertical-offset="0" max-vertical-offset="583">
           <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1069,7 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5244755" vertical-offset="0" max-vertical-offset="1185">
           <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1077,7 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.108391605" vertical-offset="823" max-vertical-offset="1395">
           <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1085,15 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3409091" vertical-offset="2068" max-vertical-offset="3675">
           <caret line="189" column="63" selection-start-line="189" selection-start-column="63" selection-end-line="189" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4633274" vertical-offset="2767" max-vertical-offset="6210">
-          <caret line="239" column="92" selection-start-line="239" selection-start-column="92" selection-end-line="239" selection-end-column="92" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1101,46 +958,88 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.60314685" vertical-offset="135" max-vertical-offset="1260">
           <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="660">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+    <entry file="file://$PROJECT_DIR$/config/session.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.2083335" vertical-offset="1601" max-vertical-offset="8505">
-          <caret line="113" column="32" selection-start-line="114" selection-start-column="12" selection-end-line="115" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.36239782" vertical-offset="1532" max-vertical-offset="2385">
+          <caret line="111" column="17" selection-start-line="111" selection-start-column="17" selection-end-line="111" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35422343" vertical-offset="1130" max-vertical-offset="1995">
+          <caret line="88" column="54" selection-start-line="88" selection-start-column="54" selection-end-line="88" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/vendors/tags/bower_components/angular/angular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13869864" vertical-offset="139374" max-vertical-offset="420750">
+          <caret line="9297" column="21" selection-start-line="9297" selection-start-column="21" selection-end-line="9297" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.482143" vertical-offset="1390" max-vertical-offset="3975">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.25" vertical-offset="2289" max-vertical-offset="3210">
-          <caret line="197" column="33" selection-start-line="197" selection-start-column="33" selection-end-line="197" selection-end-column="33" />
+        <state vertical-scroll-proportion="-7.75" vertical-offset="2274" max-vertical-offset="3210">
+          <caret line="168" column="49" selection-start-line="168" selection-start-column="49" selection-end-line="168" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="660">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="11.851648" vertical-offset="3951" max-vertical-offset="8460">
+          <caret line="551" column="20" selection-start-line="551" selection-start-column="20" selection-end-line="551" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4807692" vertical-offset="1199" max-vertical-offset="8370">
+          <caret line="92" column="47" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="47" />
+          <folding>
+            <element signature="e#39#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-119.13461" vertical-offset="0" max-vertical-offset="6465">
+          <caret line="413" column="27" selection-start-line="413" selection-start-column="27" selection-end-line="413" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42372882" vertical-offset="6390" max-vertical-offset="11385">
-          <caret line="441" column="0" selection-start-line="441" selection-start-column="0" selection-end-line="441" selection-end-column="0" />
-          <folding>
-            <element signature="e#2780#2801#0#HTML" expanded="true" />
-            <element signature="e#3576#3597#0#HTML" expanded="true" />
-            <element signature="e#5197#5217#0#HTML" expanded="true" />
-            <element signature="e#6461#6481#0#HTML" expanded="true" />
-            <element signature="e#7534#7555#0#HTML" expanded="true" />
-            <element signature="e#8880#8911#0#HTML" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.42091838" vertical-offset="4710" max-vertical-offset="8430">
+          <caret line="325" column="64" selection-start-line="325" selection-start-column="64" selection-end-line="325" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -42,12 +42,12 @@ Create New event
                     @endif
 
 					<h3 class="primary">@lang('frontend.add_event_text')</h3>
-
+                         <input id="usertimezone" type="text" content="usertimezone" name="usertimezone" value="" hidden>
 
                     {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
                          {{--<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }} " />--}}
 
-                         <input id="usertimezone" type="text" content="usertimezone" name="usertimezone" value="" hidden>
+
 
                     <div class="form-group">
                         <label for="title">@lang('frontend.title')</label>
@@ -218,13 +218,12 @@ Create New event
     <script type="text/javascript" src="{{ asset('assets/vendors/switchery/switchery.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/vendors/switch/js/bootstrap-switch.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/frontend/advfeatures.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/jstz.min.js') }}"></script>
+
     <script type="text/javascript" src="{{ asset('assets/js/moment.js') }}"></script>
 	<script src="{{ asset('assets/vendors/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/vendors/maxlength/bootstrap-maxlength.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/vendors/select2/select2.js') }}" type="text/javascript"></script>
     <script type="text/javascript" src="{{ asset('assets/js/date.format.min.js') }}"></script>
-
 
     <script>
     $(document).ready(function() {
@@ -247,61 +246,10 @@ Create New event
             minDate: datef,
             minuteStep: 10
         });
-
-        var offset = new Date().getTimezoneOffset();
-
-        var timezone = jstz.determine();
-        var usertimezone = timezone.name();
-        $('input[name="usertimezone"]').attr('value', usertimezone);
-        $('input[name="usertimezone"]').attr('content', usertimezone);
-        var div = document.getElementById('usertimezone');
-
-
-        $.ajaxSetup({
-            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
-        });
-//        $.get('/event/add', function(){
-//            var timezone = jstz.determine();
-//            var usertimezone = timezone.name();
-//            $('input[name="usertimezone"]').attr('value', usertimezone);
-//            $('input[name="usertimezone"]').attr('content', usertimezone);
-//            console.log(usertimezone);
-//        });
-//        $.ajax({
-//            url:'event/add',
-//            type: 'GET',
-//            data: {
-//                value: $("input[name=usertimezone]").val()
-//            },
-//            success: function( data ){
-//                $("input[name=usertimezone]").val(usertimezone);
-//                console.log(data);
-//            },
-//            error: function (xhr, b, c) {
-//                console.log("xhr=" + xhr + " b=" + b + " c=" + c);
-//            }
-//        });
-
-
     });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 	<script type="text/javascript">//<![CDATA[
-//        $("#show_hide").click(function () {
-////            alert('sddd');
-//            $('#descprip').toggle();
-//        });
-//        $("#time_change").click(function () {
-////            alert('sddd');
-//            $('#time_zone_change').toggle();
-//        });
-
-//        $('#location').click(function(){
-//            $('.fields_map').attr('style', 'display:block');
-//        })
-
-        var location_lat;
-        var location_lng;
 
         $("#add_dicription").click(function () {
             $('#descprip').attr('style', 'display:block');
@@ -325,8 +273,6 @@ Create New event
 
        window.onload=function(){
 	       var autocomplete = new google.maps.places.Autocomplete(document.getElementById('location'), {
-		//componentRestrictions: {country: 'ru'}
-		//language: 'ru'
 	});
 	}//]]>
         $('#reset_loc').click(function(){
@@ -377,6 +323,7 @@ Create New event
                         if (splits.length == 2) {
                             sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
                             $('#street').val(sity);
+                            console.log($('#street').val(sity));
                             country = splits[1];
                             $('#state').val(country);
                             $('#country').attr('style', 'display:none');
@@ -541,168 +488,17 @@ if($('#location').val()) {
                     map: map
                 });
                 service = new google.maps.places.PlacesService(map);
-
-                // https://developers.google.com/maps/documentation/timezone/intro
-                {{--$.ajax({--}}
-                {{--url: 'https://maps.googleapis.com/maps/api/timezone/json',--}}
-                {{--method: 'get',--}}
-                {{--data: {--}}
-                {{--location: location_lat+','+location_lng,--}}
-                {{--timestamp: 1331161200, // some value, it only determines dstOffset, I guess--}}
-                {{--key: 'AIzaSyDagJei-QVxiyk3VT9TexkyzOjzcWwo3gk'--}}
-                {{--},--}}
-                {{--success: function(data){--}}
-                {{--//                                console.log(data.timeZoneId);--}}
-                {{--//                                offset = new Date().getTimezoneId();--}}
-                {{--// some mismatches between google and PHP in timezones--}}
-                {{--// https://en.wikipedia.org/wiki/List_of_tz_database_time_zones--}}
-                {{--switch (data.timeZoneId) {--}}
-                {{--case 'Africa/Asmera': data.timeZoneId = 'Africa/Asmara'; break;--}}
-                {{--case 'Africa/Juba': data.timeZoneId = 'Africa/Khartoum'; break;--}}
-                {{--case 'Africa/Timbuktu': data.timeZoneId = 'Africa/Bamako'; break;--}}
-                {{--case 'America/Argentina/ComodRivadavia': data.timeZoneId = 'America/Argentina/Catamarca'; break;--}}
-                {{--case 'America/Atka': data.timeZoneId = 'America/Adak'; break;--}}
-                {{--case 'America/Buenos_Aires': data.timeZoneId = 'America/Argentina/Buenos_Aires'; break;--}}
-                {{--case 'America/Catamarca': data.timeZoneId = 'America/Argentina/Catamarca'; break;--}}
-                {{--case 'America/Coral_Harbour': data.timeZoneId = 'America/Atikokan'; break;--}}
-                {{--case 'America/Cordoba': data.timeZoneId = 'America/Argentina/Cordoba'; break;--}}
-                {{--case 'America/Ensenada': data.timeZoneId = 'America/Tijuana'; break;--}}
-                {{--case 'America/Fort_Wayne': data.timeZoneId = 'America/Indiana/Indianapolis'; break;--}}
-                {{--case 'America/Indianapolis': data.timeZoneId = 'America/Indiana/Indianapolis'; break;--}}
-                {{--case 'America/Jujuy': data.timeZoneId = 'America/Argentina/Jujuy'; break;--}}
-                {{--case 'America/Knox_IN': data.timeZoneId = 'America/Indiana/Knox'; break;--}}
-                {{--case 'America/Kralendijk': data.timeZoneId = 'America/Curacao'; break;--}}
-                {{--case 'America/Louisville': data.timeZoneId = 'America/Kentucky/Louisville'; break;--}}
-                {{--case 'America/Lower_Princes': data.timeZoneId = 'America/Curacao'; break;--}}
-                {{--case 'America/Marigot': data.timeZoneId = 'America/Guadeloupe'; break;--}}
-                {{--case 'America/Mendoza': data.timeZoneId = 'America/Argentina/Mendoza'; break;--}}
-                {{--case 'America/Porto_Acre': data.timeZoneId = 'America/Rio_Branco'; break;--}}
-                {{--case 'America/Rosario': data.timeZoneId = 'America/Argentina/Cordoba'; break;--}}
-                {{--case 'America/Shiprock': data.timeZoneId = 'America/Denver'; break;--}}
-                {{--case 'America/St_Barthelemy': data.timeZoneId = 'America/Guadeloupe'; break;--}}
-                {{--case 'America/Virgin': data.timeZoneId = 'America/St_Thomas'; break;--}}
-                {{--case 'Antarctica/McMurdo': data.timeZoneId = 'Pacific/Auckland'; break;--}}
-                {{--case 'Antarctica/South_Pole': data.timeZoneId = 'Pacific/Auckland'; break;--}}
-                {{--case 'Arctic/Longyearbyen': data.timeZoneId = 'Europe/Oslo'; break;--}}
-                {{--case 'Asia/Ashkhabad': data.timeZoneId = 'Asia/Ashgabat'; break;--}}
-                {{--case 'Asia/Calcutta': data.timeZoneId = 'Asia/Kolkata'; break;--}}
-                {{--case 'Asia/Chungking': data.timeZoneId = 'Asia/Chongqing'; break;--}}
-                {{--case 'Asia/Dacca': data.timeZoneId = 'Asia/Dhaka'; break;--}}
-                {{--case 'Asia/Istanbul': data.timeZoneId = 'Europe/Istanbul'; break;--}}
-                {{--case 'Asia/Katmandu': data.timeZoneId = 'Asia/Kathmandu'; break;--}}
-                {{--case 'Asia/Macao': data.timeZoneId = 'Asia/Macau'; break;--}}
-                {{--case 'Asia/Saigon': data.timeZoneId = 'Asia/Ho_Chi_Minh'; break;--}}
-                {{--case 'Asia/Tel_Aviv': data.timeZoneId = 'Asia/Jerusalem'; break;--}}
-                {{--case 'Asia/Thimbu': data.timeZoneId = 'Asia/Thimphu'; break;--}}
-                {{--case 'Asia/Ujung_Pandang': data.timeZoneId = 'Asia/Makassar'; break;--}}
-                {{--case 'Asia/Ulan_Bator': data.timeZoneId = 'Asia/Ulaanbaatar'; break;--}}
-                {{--case 'Atlantic/Faeroe': data.timeZoneId = 'Atlantic/Faroe'; break;--}}
-                {{--case 'Atlantic/Jan_Mayen': data.timeZoneId = 'Europe/Oslo'; break;--}}
-                {{--case 'Australia/ACT': data.timeZoneId = 'Australia/Sydney'; break;--}}
-                {{--case 'Australia/Canberra': data.timeZoneId = 'Australia/Sydney'; break;--}}
-                {{--case 'Australia/LHI': data.timeZoneId = 'Australia/Lord_Howe'; break;--}}
-                {{--case 'Australia/North': data.timeZoneId = 'Australia/Darwin'; break;--}}
-                {{--case 'Australia/NSW': data.timeZoneId = 'Australia/Sydney'; break;--}}
-                {{--case 'Australia/Queensland': data.timeZoneId = 'Australia/Brisbane'; break;--}}
-                {{--case 'Australia/South': data.timeZoneId = 'Australia/Adelaide'; break;--}}
-                {{--case 'Australia/Tasmania': data.timeZoneId = 'Australia/Hobart'; break;--}}
-                {{--case 'Australia/Victoria': data.timeZoneId = 'Australia/Melbourne'; break;--}}
-                {{--case 'Australia/West': data.timeZoneId = 'Australia/Perth'; break;--}}
-                {{--case 'Australia/Yancowinna': data.timeZoneId = 'Australia/Broken_Hill'; break;--}}
-                {{--case 'Brazil/Acre': data.timeZoneId = 'America/Rio_Branco'; break;--}}
-                {{--case 'Brazil/DeNoronha': data.timeZoneId = 'America/Noronha'; break;--}}
-                {{--case 'Brazil/East': data.timeZoneId = 'America/Sao_Paulo'; break;--}}
-                {{--case 'Brazil/West': data.timeZoneId = 'America/Manaus'; break;--}}
-                {{--case 'Canada/Atlantic': data.timeZoneId = 'America/Halifax'; break;--}}
-                {{--case 'Canada/Central': data.timeZoneId = 'America/Winnipeg'; break;--}}
-                {{--case 'Canada/Eastern': data.timeZoneId = 'America/Toronto'; break;--}}
-                {{--case 'Canada/East-Saskatchewan': data.timeZoneId = 'America/Regina'; break;--}}
-                {{--case 'Canada/Mountain': data.timeZoneId = 'America/Edmonton'; break;--}}
-                {{--case 'Canada/Newfoundland': data.timeZoneId = 'America/St_Johns'; break;--}}
-                {{--case 'Canada/Pacific': data.timeZoneId = 'America/Vancouver'; break;--}}
-                {{--case 'Canada/Saskatchewan': data.timeZoneId = 'America/Regina'; break;--}}
-                {{--case 'Canada/Yukon': data.timeZoneId = 'America/Whitehorse'; break;--}}
-                {{--case 'Chile/Continental': data.timeZoneId = 'America/Santiago'; break;--}}
-                {{--case 'Chile/EasterIsland': data.timeZoneId = 'Pacific/Easter'; break;--}}
-                {{--case 'Cuba': data.timeZoneId = 'America/Havana'; break;--}}
-                {{--case 'Egypt': data.timeZoneId = 'Africa/Cairo'; break;--}}
-                {{--case 'Eire': data.timeZoneId = 'Europe/Dublin'; break;--}}
-                {{--case 'Europe/Belfast': data.timeZoneId = 'Europe/London'; break;--}}
-                {{--case 'Europe/Bratislava': data.timeZoneId = 'Europe/Prague'; break;--}}
-                {{--case 'Europe/Busingen': data.timeZoneId = 'Europe/Zurich'; break;--}}
-                {{--case 'Europe/Guernsey': data.timeZoneId = 'Europe/London'; break;--}}
-                {{--case 'Europe/Isle_of_Man': data.timeZoneId = 'Europe/London'; break;--}}
-                {{--case 'Europe/Jersey': data.timeZoneId = 'Europe/London'; break;--}}
-                {{--case 'Europe/Ljubljana': data.timeZoneId = 'Europe/Belgrade'; break;--}}
-                {{--case 'Europe/Mariehamn': data.timeZoneId = 'Europe/Helsinki'; break;--}}
-                {{--case 'Europe/Nicosia': data.timeZoneId = 'Asia/Nicosia'; break;--}}
-                {{--case 'Europe/Podgorica': data.timeZoneId = 'Europe/Belgrade'; break;--}}
-                {{--case 'Europe/San_Marino': data.timeZoneId = 'Europe/Rome'; break;--}}
-                {{--case 'Europe/Sarajevo': data.timeZoneId = 'Europe/Belgrade'; break;--}}
-                {{--case 'Europe/Skopje': data.timeZoneId = 'Europe/Belgrade'; break;--}}
-                {{--case 'Europe/Tiraspol': data.timeZoneId = 'Europe/Chisinau'; break;--}}
-                {{--case 'Europe/Vatican': data.timeZoneId = 'Europe/Rome'; break;--}}
-                {{--case 'Europe/Zagreb': data.timeZoneId = 'Europe/Belgrade'; break;--}}
-                {{--case 'Pacific/Ponape': data.timeZoneId = 'Pacific/Pohnpei'; break;--}}
-                {{--case 'Pacific/Samoa': data.timeZoneId = 'Pacific/Pago_Pago'; break;--}}
-                {{--case 'Pacific/Truk': data.timeZoneId = 'Pacific/Chuuk'; break;--}}
-                {{--default : data.timeZoneId = '{!!$user_timezone!!}';--}}
-                {{--}--}}
-
-                {{--$('#timezone option').removeAttr("selected");--}}
-                {{--$('#timezone option[value="'+data.timeZoneId+'"]:eq(0)').attr("selected", "selected");--}}
-                {{--////                                update selection for select2 script (visual)--}}
-                {{--//                                $('#select2-timezone-container').html( $('#timezone option[value="'+data.timeZoneId+'"]').first().html());--}}
-                {{--//                                $('#select2-timezone-results li.select2-results__option').attr('aria-selected', 'false');--}}
-                {{--//                                $('#select2-timezone-results li.select2-results__option:contains("'+option+'"):eq(0)').attr('aria-selected', 'true');--}}
-                {{--//                                $('#select2-timezone-container').html(option);--}}
-                {{--//                                console.log(data.timeZoneId);--}}
-                {{--}--}}
-                {{--});--}}
-
             }
         }
 
         initialize2();
     }, 200);
-//            });
 }
         });
 	</script>
 
 	<script type="text/javascript">
 	$('#timezone').select2();
-
-
-
-	// http://eonasdan.github.io/bootstrap-datetimepicker/Options/#locale
-	// $('#datestart').datetimepicker({
-	// 	//locale: 'ru',
-	// 	//extraFormats: true,
-	// 	ignoreReadonly: true,
-	// 	allowInputToggle: true,
-	// 	format: 'YYYY/MM/DD HH:mm', // hh for AM/PM
-	// 	stepping: 5,
-	// 	sideBySide: true,
-	// 	showClose: true,
-	// 	showClear: true,
-	// 	showTodayButton: true,
-	{{--// 	defaultDate: '{{ $start_date }}'--}}
-
-	// });
-	// $('#datefinish').datetimepicker({
-	// 	//locale: 'ru',
-	// 	//extraFormats: true,
-	// 	ignoreReadonly: true,
-	// 	allowInputToggle: true,
-	// 	format: 'YYYY/MM/DD HH:mm', // hh for AM/PM
-	// 	stepping: 5,
-	// 	sideBySide: true,
-	// 	showClose: true,
-	// 	showClear: true,
-	// 	showTodayButton: true,
-	{{--// 	defaultDate: '{{ $finish_date }}'--}}
-	// });
 	$("#datestart").on("dp.change", function (e) {
 		$('#datefinish').data("DateTimePicker").minDate(e.date);
 	});
@@ -710,12 +506,7 @@ if($('#location').val()) {
 	$("#datestart").on("dp.hide", function (e) {
 		$('#datefinish .glyphicon-calendar').click();
 	});
-	/*
-	$("#datefinish").on("dp.change", function (e) {
-		$('#datestart').data("DateTimePicker").maxDate(e.date);
-	});
-	*/
-    
+
     $('#start').on('change', function() {
         var d1 = new Date ($('#start').val());
         var d2 = new Date (d1);

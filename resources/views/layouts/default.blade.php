@@ -11,7 +11,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-	
+
 	<link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}" type="image/vnd.microsoft.icon" />
 	
     <title>
@@ -399,6 +399,23 @@
     <script src="{{ asset('assets/vendors/livicons/minified/raphael-min.js') }}"></script>
     <script src="{{ asset('assets/vendors/livicons/minified/livicons-1.4.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/frontend/josh_frontend.js') }}"></script>
+
+    <script src="{{ asset('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jstz.min.js') }}"></script>
+
+    <script>
+        $( document ).ready(function() {
+            var tz = jstz.determine();
+            var timezone = $.cookie('time_zone', tz.name(), { path: '/' });
+            if (timezone == null) {
+                alert('sdfsdfsdf');
+            }
+            if (jQuery.cookie('time_zone')) {
+                var count =
+                $.cookie('time_zone', tz.name(), { path: '/' });
+            }
+        });
+    </script>
     <!--global js end-->
     <!-- begin page level js -->
     @yield('footer_scripts')
