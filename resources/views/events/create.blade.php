@@ -223,17 +223,9 @@ Create New event
 	<script src="{{ asset('assets/vendors/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/vendors/maxlength/bootstrap-maxlength.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/vendors/select2/select2.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/jstz.min.js') }}"></script>
 
     <script>
     $( document ).ready(function() {
-
-            var tz = jstz.determine();
-            $.cookie('time_zone', tz.name());
-
-
-
         var date = new Date('{{ $start_date }}');
         $("#datestart").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
