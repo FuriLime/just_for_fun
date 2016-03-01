@@ -33,7 +33,11 @@ class EventsController extends Controller {
                     if (Sentinel::getUser()->timezone) {
                         $my_time_zone = Sentinel::getUser()->timezone;
                     } else {
-                        $my_time_zone = $_COOKIE['time_zone'];
+                        if(isset($_COOKIE['time_zone'])){
+                            $my_time_zone = $_COOKIE['time_zone'];
+                        }else{
+                            $my_time_zone= $_COOKIE['time_zone']='';
+                        }
                     }
                     $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
                     $date->setTimezone(new \DateTimeZone($my_time_zone));
@@ -54,7 +58,12 @@ class EventsController extends Controller {
                 $events = Event::latest()->get();
                 foreach ($events as $event) {
                     $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
-                    $my_time_zone = $_COOKIE['time_zone'];
+
+                    if(isset($_COOKIE['time_zone'])){
+                        $my_time_zone = $_COOKIE['time_zone'];
+                    }else{
+                        $my_time_zone= $_COOKIE['time_zone']='';
+                    }
                     $date->setTimezone(new \DateTimeZone($my_time_zone));
                     $event_start_zero = $date;
                     $date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
