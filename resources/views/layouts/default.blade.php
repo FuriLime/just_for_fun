@@ -412,7 +412,7 @@
 <script>
     $( document ).ready(function() {
         var timezone = jstz.determine();
-        var usertimezone = new Date().getTimezoneOffset().name();
+        var usertimezone = new Date().getTimezoneOffset();
         $.cookie('time_zone', usertimezone);
     });
     </script>
