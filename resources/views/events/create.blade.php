@@ -253,7 +253,6 @@ Create New event
         var timezone = jstz.determine();
         var usertimezone = timezone.name();
         console.log(usertimezone);
-//        document.getElementById('usertimezone').value = usertimezone;
         $('input[name="usertimezone"]').attr('value', usertimezone);
         $('input[name="usertimezone"]').attr('content', usertimezone);
 
@@ -276,7 +275,7 @@ Create New event
             },
             success: function( data ){
                 document.getElementById('usertimezone').value = usertimezone;
-//                console.log(data);
+                console.log(data);
             },
             error: function (xhr, b, c) {
                 console.log("xhr=" + xhr + " b=" + b + " c=" + c);
