@@ -115,7 +115,7 @@ class EventsController extends Controller {
                 $my_time_zone = $_COOKIE['time_zone'];
             }
             else{
-                $_COOKIE['time_zone']='';
+                var_dump($_COOKIE['time_zone']);
                 $my_time_zone = $_COOKIE['time_zone'];
             }
 			return view('events.create', array(
