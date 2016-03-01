@@ -412,6 +412,7 @@
             }
             if (jQuery.cookie('time_zone')) {
                 location.reload();
+                return false;
             }
         });
     </script>
