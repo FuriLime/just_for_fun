@@ -102,7 +102,9 @@ class EventsController extends Controller {
 			$start_date = date('Y/m/d 19:00');
 			$finish_date = date('Y/m/d 20:00');
             $timezone_select = self::getTimeZoneSelect();
-            $my_time_zone = $_COOKIE['time_zone'];
+            if(!isset($_COOKIE['time_zone'])) {
+                $my_time_zone = $_COOKIE['time_zone'];
+            }
 			return view('events.create', array(
 				'timezone_select' => $timezone_select,
 				'start_date' => $start_date,
