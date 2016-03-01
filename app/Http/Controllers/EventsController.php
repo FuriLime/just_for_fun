@@ -117,9 +117,9 @@ class EventsController extends Controller {
 			$finish_date = date('Y/m/d 20:00');
             $timezone_select = self::getTimeZoneSelect();
             if($request->ajax()){
-                var_dump("AJAX");
+                $input = Input::get('usertimezone');
             }
-            $input = Input::get('usertimezone');
+//            $input = Input::get('usertimezone');
             var_dump($input);
             $ip = $_SERVER["REMOTE_ADDR"];
             $location = GeoIP::getLocation($ip);
