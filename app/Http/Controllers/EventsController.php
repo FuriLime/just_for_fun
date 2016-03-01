@@ -451,7 +451,7 @@ class EventsController extends Controller {
             else if(isset($_COOKIE['time_zone'])){
                 $my_time_zone = $_COOKIE['time_zone'];
             }else{
-                $my_time_zone= $_COOKIE['time_zone']=$_COOKIE['time_zone'];
+                $my_time_zone= $_COOKIE['time_zone']='';
             }
 
 
