@@ -409,26 +409,10 @@
 
 <script src="{{ asset('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('assets/js/jstz.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/jquery.browser.js') }}"></script>
 <script>
     $( document ).ready(function() {
         var tz = jstz.determine();
         $.cookie('time_zone', tz.name(), { path: '/' });
-        $.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase());
-
-        /* Detect Chrome */
-        if($.browser.chrome){
-            /* Do something for Chrome at this point */
-            alert("You are using Chrome!");
-
-            /* Finally, if it is Chrome then jQuery thinks it's
-             Safari so we have to tell it isn't */
-            $.browser.safari = false;
-        }
-
-        /* Detect Safari */
-        if($.browser.safari){
-            /* Do something for Safari */
-            alert("You are using Safari!");
-        }
     });
     </script>
