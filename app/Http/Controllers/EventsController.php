@@ -124,7 +124,7 @@ class EventsController extends Controller {
 
             $ip = $_SERVER["REMOTE_ADDR"];
             $location = GeoIP::getLocation($ip);
-            $my_time_zone = $location['timezone'];
+            $my_time_zone = $input['value'];
 			return view('events.create', array(
 				'timezone_select' => $timezone_select,
 				'start_date' => $start_date,
