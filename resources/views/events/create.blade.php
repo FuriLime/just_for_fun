@@ -266,20 +266,20 @@ Create New event
 //            $('input[name="usertimezone"]').attr('content', usertimezone);
 //            console.log(usertimezone);
 //        });
-//        $.ajax({
-//            url:'',
-//            type: 'GET',
-//            data: {
-//                value: document.getElementById('usertimezone').value = usertimezone
-//            },
-//            success: function( data ){
-//                document.getElementById('usertimezone').value = usertimezone;
-//                console.log(data);
-//            },
-//            error: function (xhr, b, c) {
-//                console.log("xhr=" + xhr + " b=" + b + " c=" + c);
-//            }
-//        });
+        $.ajax({
+            url:'',
+            type: 'GET',
+            data: {
+                value: document.getElementById('usertimezone').value = usertimezone
+            },
+            success: function( data ){
+                document.getElementById('usertimezone').value = usertimezone;
+                console.log(data);
+            },
+            error: function (xhr, b, c) {
+                console.log("xhr=" + xhr + " b=" + b + " c=" + c);
+            }
+        });
 
 
     });
