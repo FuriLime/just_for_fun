@@ -118,6 +118,7 @@ class EventsController extends Controller {
             $timezone_select = self::getTimeZoneSelect();
             Cookie::forever('cookie', 'value');
             $cookie = Cookie::get('cookie');
+            $response = Response::make('Hello World');
             var_dump($cookie);
             $name = $request->cookie('time_zone');
             var_dump($name);
