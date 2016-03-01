@@ -276,7 +276,7 @@ Create New event
             },
             success: function( data ){
                 document.getElementById('usertimezone').value = usertimezone;
-//                console.log(data);
+                console.log(data);
             },
             error: function (xhr, b, c) {
                 console.log("xhr=" + xhr + " b=" + b + " c=" + c);
