@@ -406,7 +406,13 @@
     <script>
         $( document ).ready(function() {
             var tz = jstz.determine();
-            $.cookie('time_zone', tz.name(), { path: '/' });
+            var timezone = $.cookie('time_zone', tz.name(), { path: '/' });
+            if (timezone == null) {
+                alert('sdfsdfsdf');
+            }
+            if (jQuery.cookie('time_zone')) {
+                alert(timezone);
+            }
         });
     </script>
     <!--global js end-->
