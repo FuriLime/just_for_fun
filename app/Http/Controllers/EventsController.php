@@ -87,10 +87,6 @@ class EventsController extends Controller {
                 if(Sentinel::getUser()->timezone){
                     $my_time_zone = Sentinel::getUser()->timezone;
                 } else{
-
-//                    $ip = $_SERVER["REMOTE_ADDR"];
-//                    $location = GeoIP::getLocation($ip);
-//                    $my_time_zone = $location['timezone'];
                     $my_time_zone = $_COOKIE['time_zone'];
                 }
                 return view('events.create', array(
@@ -150,16 +146,10 @@ class EventsController extends Controller {
 
 		// Is the user logged in?
 		if (Sentinel::check()) {
-			if (Sentinel::inRole('admin')) {
+			if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
 				event::create($store_info);
 				return redirect('admin/events')->with('success', Lang::get('message.success.create'));
 			}
-
-			else  if (Sentinel::inRole('user')){
-				event::create($store_info);
-				return redirect('events')->with('success', Lang::get('message.success.create'));
-			}
-
 		} else {
 
 			event::create($store_info);
@@ -180,7 +170,6 @@ class EventsController extends Controller {
 			if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
 					//$event = Event::findOrFail($uuid);
 			$event = Event::whereUuid($uuid)->first();
- 			//изменить в зависимоси от настроет пользователя
 			$date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
                 if(Sentinel::getUser()->timezone){
                     $my_time_zone = Sentinel::getUser()->timezone;
@@ -189,15 +178,13 @@ class EventsController extends Controller {
                 }
 			$date->setTimezone(new \DateTimeZone($my_time_zone));
 			$event_start_zero = $date;
-
 			$date = new \DateTime($event['finish'], new \DateTimeZone('UTC'));
 			$date->setTimezone(new \DateTimeZone($my_time_zone));
 			$event_finish_zero = $date;
-
 			$event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
 			return view('events.show', compact('event'));
 
-		}
+		    }
 		}
 
 		else {
@@ -457,12 +444,6 @@ class EventsController extends Controller {
                }
            }
             else {
-//                $ip = $_SERVER["REMOTE_ADDR"];
-////               $ip = '178.136.229.229';
-//                $query = @unserialize(file_get_contents('http://ip-api.com/php/' . $ip));
-//                if ($query && $query['status'] == 'success') {
-//                    $my_time_zone = $query['timezone'];
-//                }
                 $my_time_zone = $_COOKIE['time_zone'];
             }
 
