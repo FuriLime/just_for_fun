@@ -116,7 +116,7 @@ class EventsController extends Controller {
 			$start_date = date('Y/m/d 19:00');
 			$finish_date = date('Y/m/d 20:00');
             $timezone_select = self::getTimeZoneSelect();
-            Cookie::make('cookie', 'value');
+            Cookie::forever('cookie', 'value');
             $cookie = Cookie::get('cookie');
             var_dump($cookie);
             $name = $request->cookie('time_zone');
