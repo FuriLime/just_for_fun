@@ -227,12 +227,6 @@ Create New event
     <script type="text/javascript" src="{{ asset('assets/js/jstz.min.js') }}"></script>
 
     <script>
-
-    </script>
-
-
-
-    <script>
     $( document ).ready(function() {
 
             var tz = jstz.determine();
@@ -264,21 +258,6 @@ Create New event
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 	<script type="text/javascript">//<![CDATA[
-//        $("#show_hide").click(function () {
-////            alert('sddd');
-//            $('#descprip').toggle();
-//        });
-//        $("#time_change").click(function () {
-////            alert('sddd');
-//            $('#time_zone_change').toggle();
-//        });
-
-//        $('#location').click(function(){
-//            $('.fields_map').attr('style', 'display:block');
-//        })
-
-        var location_lat;
-        var location_lng;
 
         $("#add_dicription").click(function () {
             $('#descprip').attr('style', 'display:block');
