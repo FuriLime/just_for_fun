@@ -259,7 +259,7 @@ Create New event
 
 
         $.cookie('time_zone', 'usertimezone');
-        console.log($.cookie('time_zone', 'usertimezone'));
+        console.log($.cookie('time_zone', usertimezone));
 
 //        $.ajaxSetup({
 //            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
