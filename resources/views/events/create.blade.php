@@ -248,11 +248,6 @@ Create New event
             minDate: datef,
             minuteStep: 10
         });
-
-        var offset = new Date().getTimezoneOffset();
-
-
-
     });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>

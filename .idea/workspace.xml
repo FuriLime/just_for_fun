@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/create.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -38,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5" vertical-offset="6960" max-vertical-offset="8550">
-              <caret line="476" column="54" selection-start-line="476" selection-start-column="54" selection-end-line="476" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.18928571" vertical-offset="764" max-vertical-offset="8415">
+              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
               </folding>
@@ -50,21 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angular.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/vendors/tags/bower_components/angular/angular.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="139374" max-vertical-offset="420750">
-              <caret line="9297" column="21" selection-start-line="9297" selection-start-column="21" selection-end-line="9297" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.0416667" vertical-offset="3227" max-vertical-offset="11115">
-              <caret line="220" column="0" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+            <state vertical-scroll-proportion="-44.291668" vertical-offset="2687" max-vertical-offset="11040">
+              <caret line="250" column="0" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
               <folding>
                 <element signature="e#2780#2801#0#HTML" expanded="true" />
                 <element signature="e#3576#3597#0#HTML" expanded="true" />
@@ -77,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7589286" vertical-offset="5785" max-vertical-offset="6345">
+            <state vertical-scroll-proportion="-17.708334" vertical-offset="5785" max-vertical-offset="6345">
               <caret line="414" column="50" selection-start-line="414" selection-start-column="50" selection-end-line="414" selection-end-column="50" />
               <folding />
             </state>
@@ -146,9 +137,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/googleController.php" />
         <option value="$PROJECT_DIR$/public/assets/ical.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
-        <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
       </list>
     </option>
   </component>
@@ -337,12 +328,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-00951" summary="google auth">
-      <created>1456823773422</created>
-      <option name="number" value="00951" />
-      <option name="project" value="LOCAL" />
-      <updated>1456823773422</updated>
     </task>
     <task id="LOCAL-00952" summary="google auth">
       <created>1456823864053</created>
@@ -632,7 +617,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456829672694</updated>
     </task>
-    <option name="localTasksCounter" value="1000" />
+    <task id="LOCAL-01000" summary="google auth">
+      <created>1456829879058</created>
+      <option name="number" value="01000" />
+      <option name="project" value="LOCAL" />
+      <updated>1456829879058</updated>
+    </task>
+    <option name="localTasksCounter" value="1001" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1024,28 +1015,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/vendors/tags/bower_components/angular/angular.js">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="139374" max-vertical-offset="420750">
-          <caret line="9297" column="21" selection-start-line="9297" selection-start-column="21" selection-end-line="9297" selection-end-column="21" />
+        <state vertical-scroll-proportion="-17.708334" vertical-offset="5785" max-vertical-offset="6345">
+          <caret line="414" column="50" selection-start-line="414" selection-start-column="50" selection-end-line="414" selection-end-column="50" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5" vertical-offset="6960" max-vertical-offset="8550">
-          <caret line="476" column="54" selection-start-line="476" selection-start-column="54" selection-end-line="476" selection-end-column="54" />
-          <folding>
-            <element signature="e#39#52#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0416667" vertical-offset="3227" max-vertical-offset="11115">
-          <caret line="220" column="0" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+        <state vertical-scroll-proportion="-44.291668" vertical-offset="2687" max-vertical-offset="11040">
+          <caret line="250" column="0" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
           <folding>
             <element signature="e#2780#2801#0#HTML" expanded="true" />
             <element signature="e#3576#3597#0#HTML" expanded="true" />
@@ -1057,11 +1038,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/assets/vendors/tags/bower_components/angular/angular.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7589286" vertical-offset="5785" max-vertical-offset="6345">
-          <caret line="414" column="50" selection-start-line="414" selection-start-column="50" selection-end-line="414" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.13869864" vertical-offset="139374" max-vertical-offset="420750">
+          <caret line="9297" column="21" selection-start-line="9297" selection-start-column="21" selection-end-line="9297" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18928571" vertical-offset="764" max-vertical-offset="8415">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="e#39#52#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
