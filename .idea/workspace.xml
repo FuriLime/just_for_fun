@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -38,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.775" vertical-offset="1799" max-vertical-offset="8355">
+            <state vertical-scroll-proportion="18.083334" vertical-offset="1799" max-vertical-offset="8355">
               <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
@@ -67,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.708334" vertical-offset="5785" max-vertical-offset="6345">
-              <caret line="414" column="50" selection-start-line="414" selection-start-column="50" selection-end-line="414" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.73214287" vertical-offset="5770" max-vertical-offset="6330">
+              <caret line="412" column="36" selection-start-line="412" selection-start-column="36" selection-end-line="412" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -136,9 +136,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/googleController.php" />
         <option value="$PROJECT_DIR$/public/assets/ical.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
       </list>
     </option>
   </component>
@@ -327,12 +327,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-00953" summary="google auth">
-      <created>1456823912453</created>
-      <option name="number" value="00953" />
-      <option name="project" value="LOCAL" />
-      <updated>1456823912453</updated>
     </task>
     <task id="LOCAL-00954" summary="google auth">
       <created>1456823933786</created>
@@ -622,7 +616,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456830019208</updated>
     </task>
-    <option name="localTasksCounter" value="1002" />
+    <task id="LOCAL-01002" summary="google auth">
+      <created>1456830120729</created>
+      <option name="number" value="01002" />
+      <option name="project" value="LOCAL" />
+      <updated>1456830120729</updated>
+    </task>
+    <option name="localTasksCounter" value="1003" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1014,14 +1014,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.708334" vertical-offset="5785" max-vertical-offset="6345">
-          <caret line="414" column="50" selection-start-line="414" selection-start-column="50" selection-end-line="414" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/vendors/tags/bower_components/angular/angular.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13869864" vertical-offset="139374" max-vertical-offset="420750">
@@ -1047,11 +1039,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.775" vertical-offset="1799" max-vertical-offset="8355">
+        <state vertical-scroll-proportion="18.083334" vertical-offset="1799" max-vertical-offset="8355">
           <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
             <element signature="e#39#52#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73214287" vertical-offset="5770" max-vertical-offset="6330">
+          <caret line="412" column="36" selection-start-line="412" selection-start-column="36" selection-end-line="412" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
