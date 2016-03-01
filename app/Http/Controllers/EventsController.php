@@ -117,21 +117,20 @@ class EventsController extends Controller {
 			$finish_date = date('Y/m/d 20:00');
             $timezone_select = self::getTimeZoneSelect();
             $my_time_zone='';
-            if($request->ajax()){
+//            if($request->ajax()){
                 $input = Input::all();
                 $my_time_zone = $input['value'];
-                return view('events.create', array(
-                    'timezone_select' => $timezone_select,
-                    'start_date' => $start_date,
-                    'finish_date' => $finish_date,
-                    'user_timezone'=>$my_time_zone));
-            }
+//            }
 //            $input = Input::get('usertimezone');
 
             $ip = $_SERVER["REMOTE_ADDR"];
             $location = GeoIP::getLocation($ip);
 //            $my_time_zone = $input['value'];
-
+			return view('events.create', array(
+				'timezone_select' => $timezone_select,
+				'start_date' => $start_date,
+				'finish_date' => $finish_date,
+				'user_timezone'=>$my_time_zone));
 		}
 	}
 
