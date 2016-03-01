@@ -413,6 +413,7 @@
 <script>
     $( document ).ready(function() {
         var usertimezone = tzdetect.matches()[0];
+        console.log(usertimezone);
         $.cookie('time_zone', usertimezone);
     });
     </script>
