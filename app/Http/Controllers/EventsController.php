@@ -93,7 +93,7 @@ class EventsController extends Controller {
 //                    $my_time_zone = $location['timezone'];
                     $my_time_zone = $_COOKIE['time_zone'];
                 }
-                return view('events.create', array(
+                return view('admin.events.create', array(
                     'timezone_select' => $timezone_select,
                     'start_date' => $start_date,
                     'finish_date' => $finish_date,
