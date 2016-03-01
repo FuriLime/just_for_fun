@@ -42,8 +42,6 @@ Create New event
                     @endif
 
 					<h3 class="primary">@lang('frontend.add_event_text')</h3>
-
-
                          <input id="usertimezone" type="text" content="usertimezone" name="usertimezone" value="" hidden>
 
                     {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
@@ -256,25 +254,36 @@ Create New event
         var usertimezone = timezone.name();
         $('input[name="usertimezone"]').attr('value', usertimezone);
         $('input[name="usertimezone"]').attr('content', usertimezone);
+        var div = document.getElementById('usertimezone');
 
-//        $('#addevent')
-        $.ajaxSetup({
-            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
-        });
-        $.ajax({
-            url:'',
-            type: 'GET',
-            data: {
-                value: document.getElementById('usertimezone').value = usertimezone
-            },
-            success: function( data ){
-                document.getElementById('usertimezone').value = usertimezone;
-                console.log(data);
-            },
-            error: function (xhr, b, c) {
-                console.log("xhr=" + xhr + " b=" + b + " c=" + c);
-            }
-        });
+
+        $.cookie('time_zone', 'usertimezone');
+        console.log($.cookie('time_zone', 'usertimezone'));
+
+//        $.ajaxSetup({
+//            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+//        });
+//        $.get('/event/add', function(){
+//            var timezone = jstz.determine();
+//            var usertimezone = timezone.name();
+//            $('input[name="usertimezone"]').attr('value', usertimezone);
+//            $('input[name="usertimezone"]').attr('content', usertimezone);
+//            console.log(usertimezone);
+//        });
+//        $.ajax({
+//            url:'',
+//            type: 'GET',
+//            data: {
+//                value: $("input[name=usertimezone]").val()
+//            },
+//            success: function( data ){
+//                $("input[name=usertimezone]").val(usertimezone);
+//                console.log(data);
+//            },
+//            error: function (xhr, b, c) {
+//                console.log("xhr=" + xhr + " b=" + b + " c=" + c);
+//            }
+//        });
 
 
     });
