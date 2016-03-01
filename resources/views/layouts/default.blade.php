@@ -413,8 +413,6 @@
     $( document ).ready(function() {
         var tz = jstz.determine();
         $.cookie('time_zone', tz.name(), { path: '/' });
-        if ( $.browser.webkit ) {
-            alert( "This is WebKit!" );
-        }
+        alert( $.browser.version );
     });
     </script>
