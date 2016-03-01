@@ -406,3 +406,7 @@
 </body>
 
 </html>
+
+<script>
+    $.cookie('time_zone', usertimezone);
+    </script>

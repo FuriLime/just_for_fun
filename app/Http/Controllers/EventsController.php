@@ -99,9 +99,10 @@ class EventsController extends Controller {
                     $my_time_zone = Sentinel::getUser()->timezone;
                 } else{
 
-                    $ip = $_SERVER["REMOTE_ADDR"];
-                    $location = GeoIP::getLocation($ip);
-                    $my_time_zone = $location['timezone'];
+//                    $ip = $_SERVER["REMOTE_ADDR"];
+//                    $location = GeoIP::getLocation($ip);
+//                    $my_time_zone = $location['timezone'];
+                    $my_time_zone = $_COOKIE['time_zone'];
                 }
                 return view('events.create', array(
                     'timezone_select' => $timezone_select,
@@ -195,9 +196,7 @@ class EventsController extends Controller {
                 if(Sentinel::getUser()->timezone){
                     $my_time_zone = Sentinel::getUser()->timezone;
                 }else {
-                    $ip = $_SERVER["REMOTE_ADDR"];
-                    $location = GeoIP::getLocation($ip);
-                    $my_time_zone = $location['timezone'];
+                    $my_time_zone = $_COOKIE['time_zone'];
                 }
 			$date->setTimezone(new \DateTimeZone($my_time_zone));
 			$event_start_zero = $date;
@@ -217,10 +216,7 @@ class EventsController extends Controller {
 
 			//show event for unregister user
 			$event = Event::whereUuid($uuid)->first();
-            $ip = $_SERVER["REMOTE_ADDR"];
-            $location = GeoIP::getLocation($ip);
-            $my_time_zone = $location['timezone'];
- 			//изменить в зависимоси от настроет пользователя
+            $my_time_zone = $_COOKIE['time_zone'];
 			$date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
 			$date->setTimezone(new \DateTimeZone($my_time_zone));
 			$event_start_zero = $date;
@@ -468,10 +464,7 @@ class EventsController extends Controller {
                    $my_time_zone = Sentinel::getUser()->timezone;
                }
                else {
-
-                   $ip = $_SERVER["REMOTE_ADDR"];
-                   $location = GeoIP::getLocation($ip);
-                   $my_time_zone = $location['timezone'];
+                   $my_time_zone = $_COOKIE['time_zone'];
                }
            }
             else {
@@ -481,9 +474,7 @@ class EventsController extends Controller {
 //                if ($query && $query['status'] == 'success') {
 //                    $my_time_zone = $query['timezone'];
 //                }
-                $ip = $_SERVER["REMOTE_ADDR"];
-                $location = GeoIP::getLocation($ip);
-                $my_time_zone = $location['timezone'];
+                $my_time_zone = $_COOKIE['time_zone'];
             }
 
 
