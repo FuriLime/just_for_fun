@@ -43,7 +43,7 @@ Create New event
 
 					<h3 class="primary">@lang('frontend.add_event_text')</h3>
 
-                         {!! Form::open(['url' => 'event/add', 'id' => 'add_event']) !!}
+                         {!! Form::open(['url' => 'event/add', 'method' =>'get', 'id' => 'add_event']) !!}
                          <input id="usertimezone" type="text" content="usertimezone" name="usertimezone" value="" hidden>
                          {!! Form::close() !!}
                     {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
