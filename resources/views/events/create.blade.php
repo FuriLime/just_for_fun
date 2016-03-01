@@ -273,8 +273,6 @@ Create New event
 
        window.onload=function(){
 	       var autocomplete = new google.maps.places.Autocomplete(document.getElementById('location'), {
-		//componentRestrictions: {country: 'ru'}
-		//language: 'ru'
 	});
 	}//]]>
         $('#reset_loc').click(function(){
