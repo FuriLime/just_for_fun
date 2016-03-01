@@ -234,10 +234,10 @@ Create New event
 
     <script>
     $( document ).ready(function() {
-        $( document ).ready(function() {
+
             var tz = jstz.determine();
             $.cookie('time_zone', tz.name(), { path: '/' });
-        });
+
 
 
         var date = new Date('{{ $start_date }}');
