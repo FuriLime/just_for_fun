@@ -46,7 +46,7 @@ class EventsController extends Controller {
                     $event->startt = date($event_start_zero->format('Y-m-d H:i'));
                     $event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
                 }
-                return view('admin.events.index', compact('events'));
+                return view('events.index', compact('events'));
 
             }
         }else {
@@ -93,7 +93,7 @@ class EventsController extends Controller {
 //                    $my_time_zone = $location['timezone'];
                     $my_time_zone = $_COOKIE['time_zone'];
                 }
-                return view('admin.events.create', array(
+                return view('events.create', array(
                     'timezone_select' => $timezone_select,
                     'start_date' => $start_date,
                     'finish_date' => $finish_date,
@@ -195,7 +195,7 @@ class EventsController extends Controller {
 			$event_finish_zero = $date;
 
 			$event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
-			return view('admin.events.show', compact('event'));
+			return view('events.show', compact('event'));
 
 		}
 		}
@@ -234,7 +234,7 @@ class EventsController extends Controller {
 		$event['start'] = date('Y/m/d H:i', strtotime($event['start']));
 		$event['finish'] = date('Y/m/d H:i', strtotime($event['finish']));
         $event['timezone'] =$event['timezone'];
-		return view('admin.events.edit', compact('event'));
+		return view('events.edit', compact('event'));
 	}
 
 	/**
