@@ -117,7 +117,7 @@ class EventsController extends Controller {
 			$finish_date = date('Y/m/d 20:00');
             $timezone_select = self::getTimeZoneSelect();
             $input = $request->hasCookie('time_zone');
-            var_dump($_COOKIE);
+            var_dump($_COOKIE['time_zone']);
             $name = $request->cookie('time_zone');
             var_dump($name);
             $ip = $_SERVER["REMOTE_ADDR"];
