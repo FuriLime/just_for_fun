@@ -414,7 +414,7 @@
     $( document ).ready(function() {
         var tz = jstz.determine();
         $.cookie('time_zone', tz.name(), { path: '/' });
-        if ( $.browser.msie ) {
+        if ( $.browser.webkit ) {
             alert( $.browser.version );
         }
     });
