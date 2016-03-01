@@ -549,8 +549,8 @@ Home
 {{-- footer scripts --}}
 @section('footer_scripts')
     <!-- page level js starts-->
-    <script type="text/javascript" src="{{ asset('assets/js/frontend/jquery.circliful.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/vendors/owl-carousel/owl.carousel.js') }}"></script>
+    {{--<script type="text/javascript" src="{{ asset('assets/js/frontend/jquery.circliful.js') }}"></script>--}}
+{{--    <script type="text/javascript" src="{{ asset('assets/vendors/owl-carousel/owl.carousel.js') }}"></script>--}}
     <script type="text/javascript" src="{{ asset('assets/js/frontend/carousel.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/frontend/index.js') }}"></script>
     <!--page level js ends-->
