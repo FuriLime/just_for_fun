@@ -257,7 +257,7 @@ Create New event
         $('input[name="usertimezone"]').attr('value', usertimezone);
         $('input[name="usertimezone"]').attr('content', usertimezone);
 
-        $('#addevent')
+//        $('#addevent')
         $.ajaxSetup({
             headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
         });
