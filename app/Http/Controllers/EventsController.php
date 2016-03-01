@@ -105,6 +105,9 @@ class EventsController extends Controller {
             if(isset($_COOKIE['time_zone'])) {
                 $my_time_zone = $_COOKIE['time_zone'];
             }
+            else{
+                $_COOKIE['time_zone']='';
+            }
 			return view('events.create', array(
 				'timezone_select' => $timezone_select,
 				'start_date' => $start_date,
