@@ -408,5 +408,7 @@
 </html>
 
 <script>
-    $.cookie('time_zone', usertimezone);
+    $( document ).ready(function() {
+        $.cookie('time_zone', usertimezone);
+    });
     </script>
