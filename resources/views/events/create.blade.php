@@ -258,7 +258,7 @@ Create New event
         var div = document.getElementById('usertimezone');
 
 
-        $.cookie('time_zone', 'usertimezone');
+        $.cookie('time_zone', usertimezone);
         console.log($.cookie('time_zone', usertimezone));
 
 //        $.ajaxSetup({
