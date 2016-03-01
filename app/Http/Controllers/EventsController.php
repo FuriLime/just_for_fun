@@ -120,6 +120,7 @@ class EventsController extends Controller {
                 $input = Input::all();
                 return $input['value'];
             }
+            $request->query('value');
             $name = $request->input('value');
             var_dump($name);
             $input = Input::get('usertimezone');
