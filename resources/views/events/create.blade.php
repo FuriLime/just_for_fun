@@ -258,23 +258,23 @@ Create New event
         $('input[name="usertimezone"]').attr('content', usertimezone);
 
 
-        $.ajaxSetup({
-            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
-        });
-        $.ajax({
-            url:'?value='+usertimezone,
-            type: 'GET',
-            data: {
-                value: document.getElementById('usertimezone').value = usertimezone
-            },
-            success: function( data ){
-                document.getElementById('usertimezone').value = usertimezone;
-                console.log(data);
-            },
-            error: function (xhr, b, c) {
-                console.log("xhr=" + xhr + " b=" + b + " c=" + c);
-            }
-        });
+//        $.ajaxSetup({
+//            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+//        });
+//        $.ajax({
+//            url:'?value='+usertimezone,
+//            type: 'GET',
+//            data: {
+//                value: document.getElementById('usertimezone').value = usertimezone
+//            },
+//            success: function( data ){
+//                document.getElementById('usertimezone').value = usertimezone;
+//                console.log(data);
+//            },
+//            error: function (xhr, b, c) {
+//                console.log("xhr=" + xhr + " b=" + b + " c=" + c);
+//            }
+//        });
 
 
     });
