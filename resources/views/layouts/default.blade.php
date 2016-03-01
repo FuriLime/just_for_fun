@@ -411,6 +411,7 @@
                 alert('sdfsdfsdf');
             }
             if (jQuery.cookie('time_zone')) {
+                var count =
                 $.cookie('time_zone', tz.name(), { path: '/' });
             }
         });
