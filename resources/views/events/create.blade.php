@@ -251,8 +251,7 @@ Create New event
 
         var offset = new Date().getTimezoneOffset();
 
-        var timezone = jstz.determine();
-        var usertimezone = timezone.name();
+
 
     });
     </script>

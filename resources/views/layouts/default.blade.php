@@ -410,6 +410,8 @@
 <script src="{{ asset('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
 <script>
     $( document ).ready(function() {
+        var timezone = jstz.determine();
+        var usertimezone = timezone.name();
         $.cookie('time_zone', usertimezone);
     });
     </script>
