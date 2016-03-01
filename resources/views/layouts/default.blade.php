@@ -409,12 +409,10 @@
 
 <script src="{{ asset('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('assets/js/jstz.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets/js/moment.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/js/tzdetect.js') }}"></script>
 <script>
     $( document ).ready(function() {
-        var usertimezone = tzdetect.matches()[0];
-        console.log(usertimezone);
+        var usertimezone = jstz.determine().name();
         $.cookie('time_zone', usertimezone);
     });
     </script>
