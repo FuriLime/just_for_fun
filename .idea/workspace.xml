@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -29,21 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35892856" vertical-offset="2289" max-vertical-offset="3270">
+            <state vertical-scroll-proportion="-8.375" vertical-offset="2289" max-vertical-offset="3270">
               <caret line="170" column="39" selection-start-line="170" selection-start-column="39" selection-end-line="170" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5" vertical-offset="1410" max-vertical-offset="8595">
-              <caret line="119" column="47" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.29464287" vertical-offset="1410" max-vertical-offset="8595">
+              <caret line="118" column="13" selection-start-line="118" selection-start-column="13" selection-end-line="120" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -125,9 +124,9 @@
         <option value="$PROJECT_DIR$/config/filesystems.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/googleController.php" />
         <option value="$PROJECT_DIR$/public/assets/ical.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
       </list>
     </option>
   </component>
@@ -294,12 +293,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-00906" summary="google auth">
-      <created>1456819198759</created>
-      <option name="number" value="00906" />
-      <option name="project" value="LOCAL" />
-      <updated>1456819198759</updated>
     </task>
     <task id="LOCAL-00907" summary="google auth">
       <created>1456819230307</created>
@@ -589,7 +582,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456823933786</updated>
     </task>
-    <option name="localTasksCounter" value="955" />
+    <task id="LOCAL-00955" summary="google auth">
+      <created>1456824196917</created>
+      <option name="number" value="00955" />
+      <option name="project" value="LOCAL" />
+      <updated>1456824196917</updated>
+    </task>
+    <option name="localTasksCounter" value="956" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -985,6 +984,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.375" vertical-offset="2289" max-vertical-offset="3270">
+          <caret line="170" column="39" selection-start-line="170" selection-start-column="39" selection-end-line="170" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.875" vertical-offset="3768" max-vertical-offset="11475">
@@ -1002,16 +1009,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5" vertical-offset="1410" max-vertical-offset="8595">
-          <caret line="119" column="47" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35892856" vertical-offset="2289" max-vertical-offset="3270">
-          <caret line="170" column="39" selection-start-line="170" selection-start-column="39" selection-end-line="170" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.29464287" vertical-offset="1410" max-vertical-offset="8595">
+          <caret line="118" column="13" selection-start-line="118" selection-start-column="13" selection-end-line="120" selection-end-column="15" />
           <folding />
         </state>
       </provider>
