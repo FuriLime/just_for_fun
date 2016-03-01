@@ -118,7 +118,7 @@ class EventsController extends Controller {
             $timezone_select = self::getTimeZoneSelect();
             if($request->ajax()){
                 $input = Input::all();
-                var_dump($input);
+                var_dump($input['value']);
             }
 //            $input = Input::get('usertimezone');
 
