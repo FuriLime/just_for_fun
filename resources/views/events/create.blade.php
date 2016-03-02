@@ -287,6 +287,7 @@ Create New event
     $('#location').change(function () {
         $('.locale').attr('style', 'display:none');
         $('.fields_map').attr('style', 'display:block');
+        console.log(status == google.maps.places.PlacesServiceStatus.OK);
         if (status == google.maps.places.PlacesServiceStatus.OK) {
             for (var i = 0; i < results.length; i++) {
                 var place = results[i];
