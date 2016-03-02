@@ -40,7 +40,6 @@ Create New event
                             @endforeach
                         </ul>
                     @endif
-                         {!!var_dump($_POST['timezone'])!!}
 					<h3 class="primary">@lang('frontend.add_event_text')</h3>
 
                          {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
