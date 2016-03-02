@@ -193,13 +193,13 @@ class EventsController extends Controller {
 
 			//show event for unregister user
 			$event = Event::whereUuid($uuid)->first();
-            $my_time_zone = $_COOKIE['time_zone'];
+
 			$date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
-			$date->setTimezone(new \DateTimeZone($my_time_zone));
+			$date->setTimezone(new \DateTimeZone($event->timezone));
 			$event_start_zero = $date;
 
 			$date = new \DateTime($event['finish'], new \DateTimeZone('UTC'));
-			$date->setTimezone(new \DateTimeZone($my_time_zone));
+			$date->setTimezone(new \DateTimeZone($event->timezone));
 			$event_finish_zero = $date;
 			$event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
 			return view('events.show', compact('event'));
