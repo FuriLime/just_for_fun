@@ -106,6 +106,7 @@ class EventsController extends Controller {
 	 */
 	public function store(Request $request)
 	{
+        var_dump($_POST);
 		$this->validate($request, [
 			'title' => 'required|max:80',
 			'description' => 'required|max:500',
@@ -139,7 +140,7 @@ class EventsController extends Controller {
 				return redirect('events')->with('success', Lang::get('message.success.create'));
 			}
 		} else {
-var_dump($_POST);
+
 			event::create($store_info);
 			return redirect('events')->with('success', Lang::get('message.success.create'));
 		}
