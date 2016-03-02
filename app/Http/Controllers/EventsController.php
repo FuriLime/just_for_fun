@@ -234,10 +234,8 @@ class EventsController extends Controller {
 
 		// Is the user logged in?
 		if (Sentinel::check()) {
-			if (Sentinel::inRole('admin')) {
+			if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
 				return redirect('admin/events')->with('success', Lang::get('message.success.update'));
-			} else {
-				return redirect('events')->with('success', Lang::get('message.success.update'));
 			}
 		} else {
 			return redirect('events')->with('success', Lang::get('message.success.update'));
