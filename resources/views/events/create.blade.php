@@ -350,8 +350,8 @@ Create New event
             }
 
             var place_id = place["place_id"];
-            location_lat = place["geometry"]["location"].lat();
-            location_lng = place["geometry"]["location"].lng();
+            var location_lat = place["geometry"]["location"].lat();
+            var location_lng = place["geometry"]["location"].lng();
         }
 
         var map = new google.maps.Map(document.getElementById('map'), {
