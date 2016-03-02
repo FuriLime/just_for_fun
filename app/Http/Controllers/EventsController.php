@@ -106,7 +106,6 @@ class EventsController extends Controller {
 	 */
 	public function store(Request $request)
 	{
-        var_dump($_POST);
 		$this->validate($request, [
 			'title' => 'required|max:80',
 			'description' => 'required|max:500',
@@ -127,7 +126,6 @@ class EventsController extends Controller {
 		$date = new \DateTime($store_info['finish'], new \DateTimeZone($store_info['timezone']));
 		$date->setTimezone(new \DateTimeZone('UTC'));
 		$event_finish_zero = $date;
-
 
 		// $event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
 		$store_info['start'] = $event_start_zero->format('Y-m-d H:i');
@@ -411,6 +409,7 @@ class EventsController extends Controller {
 
 		// save current timezone (DST-detect change it below)
 		$current_timezone = date_default_timezone_get();
+
         $ip = $_SERVER["REMOTE_ADDR"];
         $location = GeoIP::getLocation($ip);
         if($location['timezone']!=NULL || $location['timezone']!='') {
@@ -469,7 +468,7 @@ class EventsController extends Controller {
 
 					// DST
 					date_default_timezone_set($timeZone);
-					$dst = date('I'); // this will be 1 in DST or else 0
+//					$dst = date('I'); // this will be 1 in DST or else 0
 
 //                     $structure .= "<option data-countrycode='".$location['country_code']."' data-offset='".$utc_offset."' ".(($timeZone == $selectedZone) ? 'selected="selected "':'') . " value=\"".($timeZone)."\">(".$p. " UTC) " .str_replace('_',' ',$city)."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( ".$timeZone." | DST ".$dst.")</option>";
                 	$structure .= "<option data-countrycode='".$location['country_code']."' data-offset='".$utc_offset."' ".(($timeZone == $my_time_zone) ? 'selected="selected "':'') . " value=\"".($timeZone)."\">".$timeZone."</option>";
