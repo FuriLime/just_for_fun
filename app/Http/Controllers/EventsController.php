@@ -106,7 +106,6 @@ class EventsController extends Controller {
 	 */
 	public function store(Request $request)
 	{
-        var_dump($_POST);
 		$this->validate($request, [
 			'title' => 'required|max:80',
 			'description' => 'required|max:500',
