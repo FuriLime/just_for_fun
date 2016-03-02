@@ -43,7 +43,7 @@ Create New event
 
 					<h3 class="primary">@lang('frontend.add_event_text')</h3>
                          <input id="usertimezone" type="text" content="usertimezone" name="usertimezone" value="" hidden>
-
+{{var_dump($_POST)}}
                     {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
                          {{--<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }} " />--}}
 
