@@ -410,8 +410,6 @@ class EventsController extends Controller {
 		// save current timezone (DST-detect change it below)
 		$current_timezone = date_default_timezone_get();
 
-        var_dump($_GET);
-
         $ip = $_SERVER["REMOTE_ADDR"];
         $location = GeoIP::getLocation($ip);
         if($location['timezone']!=NULL || $location['timezone']!='') {
@@ -471,7 +469,7 @@ class EventsController extends Controller {
 					// DST
 					date_default_timezone_set($timeZone);
 					$dst = date('I'); // this will be 1 in DST or else 0
-
+var_dump($timeZone);
 //                     $structure .= "<option data-countrycode='".$location['country_code']."' data-offset='".$utc_offset."' ".(($timeZone == $selectedZone) ? 'selected="selected "':'') . " value=\"".($timeZone)."\">(".$p. " UTC) " .str_replace('_',' ',$city)."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( ".$timeZone." | DST ".$dst.")</option>";
                 	$structure .= "<option data-countrycode='".$location['country_code']."' data-offset='".$utc_offset."' ".(($timeZone == $my_time_zone) ? 'selected="selected "':'') . " value=\"".($timeZone)."\">".$timeZone."</option>";
                 }
