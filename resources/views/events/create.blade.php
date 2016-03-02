@@ -344,9 +344,9 @@ Create New event
                         }
 
                         if (splits.length >= 4) {
-                            num_house = splits[0];
-                            street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                            $('#street').val(num_house + ' ' + street);
+//                            num_house = splits[0];
+                            street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
+                            $('#street').val(street);
 
                             sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
                             $('#city').val(sity);
