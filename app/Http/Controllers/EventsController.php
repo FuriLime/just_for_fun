@@ -153,42 +153,35 @@ class EventsController extends Controller {
 	 */
 	public function show($uuid)
 	{
+        $ip = $_SERVER["REMOTE_ADDR"];
+        $location = GeoIP::getLocation($ip);
+        if($location['timezone']!=NULL || $location['timezone']!='') {
+            $my_time_zone = $location['timezone'];
+        }else if(isset($_COOKIE['time_zone'])) {
+            $my_time_zone = $_COOKIE['time_zone'];
+        }
+        else{
+            $my_time_zone = 'UTC';
+        }
+        $event = Event::whereUuid($uuid)->first();
+        $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
+        $date->setTimezone(new \DateTimeZone($my_time_zone));
+        $event_start_zero = $date;
+        $date = new \DateTime($event['finish'], new \DateTimeZone('UTC'));
+        $date->setTimezone(new \DateTimeZone($my_time_zone));
+        $event_finish_zero = $date;
+        $event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
 		// Is the user logged in?
 		if (Sentinel::check()) {
 			if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
 					//$event = Event::findOrFail($uuid);
-			$event = Event::whereUuid($uuid)->first();
-			$date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
-                if(Sentinel::getUser()->timezone){
-                    $my_time_zone = Sentinel::getUser()->timezone;
-                }else {
-                    $my_time_zone = $_COOKIE['time_zone'];
-                }
-			$date->setTimezone(new \DateTimeZone($my_time_zone));
-			$event_start_zero = $date;
-			$date = new \DateTime($event['finish'], new \DateTimeZone('UTC'));
-			$date->setTimezone(new \DateTimeZone($my_time_zone));
-			$event_finish_zero = $date;
-			$event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
-			return view('events.show', compact('event'));
-
-		    }
+					return view('events.show', compact('event'));
+            }
 		}
 
 		else {
-			//$event = Event::findOrFail($uuid);
-
 			//show event for unregister user
-			$event = Event::whereUuid($uuid)->first();
-            $my_time_zone = $_COOKIE['time_zone'];
-			$date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
-			$date->setTimezone(new \DateTimeZone($my_time_zone));
-			$event_start_zero = $date;
 
-			$date = new \DateTime($event['finish'], new \DateTimeZone('UTC'));
-			$date->setTimezone(new \DateTimeZone($my_time_zone));
-			$event_finish_zero = $date;
-			$event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
 			return view('events.show', compact('event'));
 		}
 	}
