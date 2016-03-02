@@ -73,7 +73,7 @@ class EventsController extends Controller {
 //                $start_date_tmp = strtotime("+1 day");
 
                 if(Sentinel::getUser()->timezone){
-                    $my_time_zone = Sentinel::getUser()->timezone;
+                    $user_timezone = Sentinel::getUser()->timezone;
                 } else{
                         $user_timezone = $my_time_zone;
                 }
