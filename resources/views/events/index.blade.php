@@ -23,6 +23,7 @@ Events List
 					<th>@lang('frontend.title')</th>
 					<th>@lang('frontend.type')</th>
 					<th>@lang('frontend.location')</th>
+                    <th>Event Time Zone</th>
 					<th>@lang('frontend.start')</th>
 					<th>@lang('frontend.finish')</th>
 					<th>@lang('frontend.published')</th>
@@ -43,6 +44,7 @@ Events List
 						@endif
 					</td>
 					<td>{{ $event->location }}</td>
+                    <td>{{ $event->timezone }}</td>
 					<td>{{ $event->startt }}</td>
 					<td>{{$event->finisht }}</td>
 					<td>
