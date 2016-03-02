@@ -415,21 +415,24 @@ class EventsController extends Controller {
         $ip = $_SERVER["REMOTE_ADDR"];
         $location = GeoIP::getLocation($ip);
         if($location['timezone']!=NULL || $location['timezone']!='') {
-            $my_time_zone = $location['timezone'];
+            $user_time_zone = $location['timezone'];
         }else if(isset($_COOKIE['time_zone'])) {
-            $my_time_zone = $_COOKIE['time_zone'];
+            $user_time_zone = $_COOKIE['time_zone'];
         }
         else{
-            $my_time_zone = 'UTC';
+            $user_time_zone = 'UTC';
         }
 
            if(Sentinel::check()) {
-               if (Sentinel::getUser()->timezone) {
-                   $my_time_zone = $my_time_zone;
+                   if (Sentinel::getUser()->timezone) {
+                       $my_time_zone = Sentinel::getUser()->timezone;
+                   }
+                   else {
+                       $my_time_zone = $user_time_zone;
+                   }
                }
-               else {
-                   $my_time_zone = $my_time_zone;
-               }
+           else {
+               $my_time_zone = $user_time_zone;
            }
         $structure = '<select class="form-control timezone" name="timezone" id="timezone">';
         $structure .= '<option value="">'.$my_time_zone.'</option>';
