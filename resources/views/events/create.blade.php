@@ -352,6 +352,7 @@ Create New event
             var place_id = place["place_id"];
             var location_lat = place["geometry"]["location"].lat();
             var location_lng = place["geometry"]["location"].lng();
+            console.log(location_lat);
         }
 
         var map = new google.maps.Map(document.getElementById('map'), {
