@@ -407,14 +407,7 @@
         $( document ).ready(function() {
             var tz = jstz.determine();
             var timezone = $.cookie('time_zone', tz.name(), { path: '/' });
-            if (timezone == null) {
-                alert('sdfsdfsdf');
-            }
-            if (jQuery.cookie('time_zone')) {
-                var count =
-                $.cookie('time_zone', tz.name(), { path: '/' });
-            }
-        });
+          });
     </script>
     <!--global js end-->
     <!-- begin page level js -->
