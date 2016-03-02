@@ -287,25 +287,26 @@ Create New event
     $('#location').change(function () {
         $('.locale').attr('style', 'display:none');
         $('.fields_map').attr('style', 'display:block');
-        console.log(status == google.maps.places.PlacesServiceStatus.OK);
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-                var place = results[i];
-                console.log(place);
-                break;
+        function callback(results, status) {
+            console.log(status == google.maps.places.PlacesServiceStatus.OK);
+            if (status == google.maps.places.PlacesServiceStatus.OK) {
+                for (var i = 0; i < results.length; i++) {
+                    var place = results[i];
+                    console.log(place);
+                    break;
+                }
+                var locale = ($('#location').val());
+                var place_id = place["place_id"];
+                var location_lat = place["geometry"]["location"].lat();
+                var location_lng = place["geometry"]["location"].lng();
+                console.log(location_lat);
             }
-            var locale = ($('#location').val());
-            var place_id = place["place_id"];
-            var location_lat = place["geometry"]["location"].lat();
-            var location_lng = place["geometry"]["location"].lng();
-            console.log(location_lat);
+            var pyrmont = new google.maps.LatLng(location_lat, location_lng);
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: pyrmont
+            });
         }
-        var pyrmont = new google.maps.LatLng(location_lat, location_lng);
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 8,
-            center: pyrmont
-        });
-
     });
 
 
