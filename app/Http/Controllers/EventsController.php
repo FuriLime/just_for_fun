@@ -45,6 +45,7 @@ class EventsController extends Controller {
                 }
             }
         else {
+            var_dump($_POST);
             //if not logined user
                 return view('events.index', compact('events'));
             }
