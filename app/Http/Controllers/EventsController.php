@@ -127,7 +127,6 @@ class EventsController extends Controller {
 		$date->setTimezone(new \DateTimeZone('UTC'));
 		$event_finish_zero = $date;
 
-var_dump('sdfsdf');
 		// $event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
 		$store_info['start'] = $event_start_zero->format('Y-m-d H:i');
 		$store_info['finish'] =$event_finish_zero->format('Y-m-d H:i');
@@ -410,6 +409,9 @@ var_dump('sdfsdf');
 
 		// save current timezone (DST-detect change it below)
 		$current_timezone = date_default_timezone_get();
+
+        var_dump('sdfsdf');
+
         $ip = $_SERVER["REMOTE_ADDR"];
         $location = GeoIP::getLocation($ip);
         if($location['timezone']!=NULL || $location['timezone']!='') {
