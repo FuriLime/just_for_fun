@@ -30,21 +30,12 @@ class EventsController extends Controller {
             if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
                 $events = Event::latest()->get();
                 foreach ($events as $event) {
-                    if (Sentinel::getUser()->timezone) {
-                        $my_time_zone = Sentinel::getUser()->timezone;
-                    } else {
-                        if(isset($_COOKIE['time_zone'])){
-                            $my_time_zone = $_COOKIE['time_zone'];
-                        }else{
-                            $my_time_zone= $_COOKIE['time_zone']='';
-                        }
-                    }
                     $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
-                    $date->setTimezone(new \DateTimeZone($my_time_zone));
+                    $date->setTimezone(new \DateTimeZone($event->timezone));
                     $event_start_zero = $date;
 
                     $date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
-                    $date->setTimezone(new \DateTimeZone($my_time_zone));
+                    $date->setTimezone(new \DateTimeZone($event->timezone));
                     $event_finish_zero = $date;
 
                     $event->startt = date($event_start_zero->format('Y-m-d H:i'));
@@ -58,16 +49,10 @@ class EventsController extends Controller {
                 $events = Event::latest()->get();
                 foreach ($events as $event) {
                     $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
-
-                    if(isset($_COOKIE['time_zone'])){
-                        $my_time_zone = $_COOKIE['time_zone'];
-                    }else{
-                        $my_time_zone= $_COOKIE['time_zone']='';
-                    }
-                    $date->setTimezone(new \DateTimeZone($my_time_zone));
+                    $date->setTimezone(new \DateTimeZone($event->timezone));
                     $event_start_zero = $date;
                     $date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
-                    $date->setTimezone(new \DateTimeZone($my_time_zone));
+                    $date->setTimezone(new \DateTimeZone($event->timezone));
                     $event_finish_zero = $date;
                     $event->startt = date($event_start_zero->format('Y-m-d H:i'));
                     $event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
