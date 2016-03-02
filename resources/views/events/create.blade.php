@@ -40,7 +40,7 @@ Create New event
                             @endforeach
                         </ul>
                     @endif
-
+                         {!!var_dump($_POST)!!}
 					<h3 class="primary">@lang('frontend.add_event_text')</h3>
 
                          {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
@@ -106,7 +106,7 @@ Create New event
                                     </div>
                         <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
-{!!var_dump($_POST)!!}
+
 
                     <div class="form-group"  id="time_zone_change" style="display:none">
                              <label for="timezone">@lang('frontend.timezone')</label>
