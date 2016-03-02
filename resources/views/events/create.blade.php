@@ -326,8 +326,8 @@ Create New event
                             console.log($('#street').val(sity));
                             country = splits[1];
                             $('#state').val(country);
-                            $('#country').attr('style', 'display:none');
-                            $('#city').attr('style', 'display:none');
+                            $('#country').attr('style', 'display:block');
+                            $('#city').attr('style', 'display:block');
                         }
 
                         if (splits.length == 3) {
