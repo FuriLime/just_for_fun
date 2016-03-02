@@ -71,7 +71,6 @@ class EventsController extends Controller {
                 // for bootstrap-datepicker
                 //registered user
 //                $start_date_tmp = strtotime("+1 day");
-
                 if(Sentinel::getUser()->timezone){
                     $user_timezone = Sentinel::getUser()->timezone;
                 } else{
@@ -286,9 +285,7 @@ class EventsController extends Controller {
 		$delete = Event::destroy( $event['id'] );
 		// Is the user logged in?
 		if (Sentinel::check()) {
-			if (Sentinel::inRole('admin')) {
-				return redirect('admin/events')->with('success', Lang::get('message.success.delete'));
-			} else {
+			if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
 				return redirect('events')->with('success', Lang::get('message.success.delete'));
 			}
 		} else {
