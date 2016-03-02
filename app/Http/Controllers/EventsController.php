@@ -432,7 +432,6 @@ class EventsController extends Controller {
            else {
                $my_time_zone = $user_time_zone;
            }
-        var_dump($_POST);
         $structure = '<select class="form-control timezone" name="timezone" id="timezone">';
         $structure .= '<option value="">'.$my_time_zone.'</option>';
 
@@ -483,6 +482,7 @@ class EventsController extends Controller {
 
 		// restore current timezone
 		date_default_timezone_set($current_timezone);
+        var_dump($_POST);
         return $structure;
     }
 
