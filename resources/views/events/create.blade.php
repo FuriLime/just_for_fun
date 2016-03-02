@@ -246,6 +246,7 @@ Create New event
             minDate: datef,
             minuteStep: 10
         });
+        console.log($_POST);
     });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
