@@ -287,11 +287,16 @@ Create New event
     $('#location').change(function () {
         $('.locale').attr('style', 'display:none');
         $('.fields_map').attr('style', 'display:block');
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+                var place = results[i];
+                break;
+            }
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 8,
                 center: {lat: -34.397, lng: 150.644}
             });
-
+        }
     });
 
 
