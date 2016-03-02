@@ -45,7 +45,6 @@ class EventsController extends Controller {
                 }
             }
         else {
-            var_dump($_POST);
             //if not logined user
                 return view('events.index', compact('events'));
             }
@@ -89,7 +88,6 @@ class EventsController extends Controller {
                 ));
 			}
 		} else {
-            var_dump($_POST);
 			//create events unregister user
 //			$start_date_tmp = strtotime("+1 hour");
             $user_timezone = $my_time_zone;
