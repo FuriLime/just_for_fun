@@ -254,10 +254,10 @@ class AuthController extends JoshController
             );
 
             // Send the activation code through email
-//            Mail::send('emails.forgot-password', $data, function ($m) use ($user) {
-//                $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-//                $m->subject('Account Password Recovery');
-//            });
+            Mail::send('emails.forgot-password', $data, function ($m) use ($user) {
+                $m->to($user->email, $user->first_name . ' ' . $user->last_name);
+                $m->subject('Account Password Recovery');
+            });
         }
         else
         {
