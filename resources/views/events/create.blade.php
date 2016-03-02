@@ -106,7 +106,7 @@ Create New event
                                     </div>
                         <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
-{!!$_POST!!}
+{!!var_dump($_POST)!!}
 
                     <div class="form-group"  id="time_zone_change" style="display:none">
                              <label for="timezone">@lang('frontend.timezone')</label>
