@@ -410,7 +410,7 @@ class EventsController extends Controller {
 		// save current timezone (DST-detect change it below)
 		$current_timezone = date_default_timezone_get();
 
-        var_dump('sdfsdf');
+        var_dump($_POST);
 
         $ip = $_SERVER["REMOTE_ADDR"];
         $location = GeoIP::getLocation($ip);
