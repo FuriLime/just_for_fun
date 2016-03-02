@@ -354,10 +354,10 @@ Create New event
             var location_lng = place["geometry"]["location"].lng();
             console.log(location_lat);
         }
-
+        var pyrmont = new google.maps.LatLng(location_lat, location_lng);
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 8,
-            center: {lat: location_lat, lng: location_lng}
+            center: pyrmont
         });
     });
 
