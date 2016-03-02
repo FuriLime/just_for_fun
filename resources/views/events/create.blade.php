@@ -327,6 +327,8 @@ Create New event
                             $('#country').val(country);
                             $('#street').attr('style', 'display:none');
                             $('#state').attr('style', 'display:none');
+                            $('#city').attr('style', 'display:block');
+                            $('#country').attr('style', 'display:block');
                         }
 
                         if (splits.length == 3) {
