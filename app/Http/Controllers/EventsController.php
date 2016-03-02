@@ -25,7 +25,6 @@ class EventsController extends Controller {
 
 	public function index()
     {
-        // Is the user logged in?
         $events = Event::latest()->get();
         foreach ($events as $event) {
             $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
@@ -39,12 +38,14 @@ class EventsController extends Controller {
             $event->startt = date($event_start_zero->format('Y-m-d H:i'));
             $event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
         }
+        //if user logined
         if (Sentinel::check()) {
             if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
-                return view('events.index', compact('events'));
+                return view('admin.events.index', compact('events'));
             }
             }
         else {
+            //if not logined user
                 return view('events.index', compact('events'));
             }
         }
