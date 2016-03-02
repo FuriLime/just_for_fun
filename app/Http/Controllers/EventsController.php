@@ -139,7 +139,7 @@ class EventsController extends Controller {
 				return redirect('events')->with('success', Lang::get('message.success.create'));
 			}
 		} else {
-
+var_dump($_POST);
 			event::create($store_info);
 			return redirect('events')->with('success', Lang::get('message.success.create'));
 		}
@@ -482,7 +482,6 @@ class EventsController extends Controller {
 
 		// restore current timezone
 		date_default_timezone_set($current_timezone);
-        var_dump($_POST);
         return $structure;
     }
 
