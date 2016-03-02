@@ -136,7 +136,7 @@ class EventsController extends Controller {
 		if (Sentinel::check()) {
 			if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
 				event::create($store_info);
-				return redirect('admin/events')->with('success', Lang::get('message.success.create'));
+				return redirect('events')->with('success', Lang::get('message.success.create'));
 			}
 		} else {
 
