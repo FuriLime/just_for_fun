@@ -88,6 +88,7 @@ class EventsController extends Controller {
                 ));
 			}
 		} else {
+            var_dump($timezone_select);
 			//create events unregister user
 //			$start_date_tmp = strtotime("+1 hour");
             $user_timezone = $my_time_zone;
@@ -469,7 +470,7 @@ class EventsController extends Controller {
 					// DST
 					date_default_timezone_set($timeZone);
 					$dst = date('I'); // this will be 1 in DST or else 0
-var_dump($timeZone);
+
 //                     $structure .= "<option data-countrycode='".$location['country_code']."' data-offset='".$utc_offset."' ".(($timeZone == $selectedZone) ? 'selected="selected "':'') . " value=\"".($timeZone)."\">(".$p. " UTC) " .str_replace('_',' ',$city)."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( ".$timeZone." | DST ".$dst.")</option>";
                 	$structure .= "<option data-countrycode='".$location['country_code']."' data-offset='".$utc_offset."' ".(($timeZone == $my_time_zone) ? 'selected="selected "':'') . " value=\"".($timeZone)."\">".$timeZone."</option>";
                 }
