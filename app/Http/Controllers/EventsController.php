@@ -49,8 +49,6 @@ class EventsController extends Controller {
                 return view('events.index', compact('events'));
             }
         }
-
-
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -61,6 +59,12 @@ class EventsController extends Controller {
         $start_date = date('Y/m/d 19:00');
         $finish_date = date('Y/m/d 20:00');
         $timezone_select = self::getTimeZoneSelect();
+        if(isset($_COOKIE['time_zone'])) {
+            $my_time_zone = $_COOKIE['time_zone'];
+        }
+        else{
+            $my_time_zone = 'UTC';
+        }
 		// Is the user logged in?
 		if (Sentinel::check()) {
 			if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
@@ -71,30 +75,24 @@ class EventsController extends Controller {
                 if(Sentinel::getUser()->timezone){
                     $my_time_zone = Sentinel::getUser()->timezone;
                 } else{
-                    $my_time_zone = $_COOKIE['time_zone'];
+                        $user_timezone = $my_time_zone;
                 }
                 return view('events.create', array(
                     'timezone_select' => $timezone_select,
                     'start_date' => $start_date,
                     'finish_date' => $finish_date,
-                    'user_timezone' => $my_time_zone
+                    'user_timezone' => $user_timezone
                 ));
 			}
 		} else {
 			//create events unregister user
 //			$start_date_tmp = strtotime("+1 hour");
-            if(isset($_COOKIE['time_zone'])) {
-                var_dump($_COOKIE['time_zone']);
-                $my_time_zone = $_COOKIE['time_zone'];
-            }
-            else{
-                $my_time_zone = $_COOKIE['time_zone'];
-            }
+            $user_timezone = $my_time_zone;
 			return view('events.create', array(
 				'timezone_select' => $timezone_select,
 				'start_date' => $start_date,
 				'finish_date' => $finish_date,
-				'user_timezone'=>$my_time_zone));
+				'user_timezone'=>$user_timezone));
 		}
 	}
 
