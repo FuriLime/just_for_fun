@@ -26,37 +26,25 @@ class EventsController extends Controller {
 	public function index()
     {
         // Is the user logged in?
+        $events = Event::latest()->get();
+        foreach ($events as $event) {
+            $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
+            $date->setTimezone(new \DateTimeZone($event->timezone));
+            $event_start_zero = $date;
+
+            $date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
+            $date->setTimezone(new \DateTimeZone($event->timezone));
+            $event_finish_zero = $date;
+
+            $event->startt = date($event_start_zero->format('Y-m-d H:i'));
+            $event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
+        }
         if (Sentinel::check()) {
             if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
-                $events = Event::latest()->get();
-                foreach ($events as $event) {
-                    $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
-                    $date->setTimezone(new \DateTimeZone($event->timezone));
-                    $event_start_zero = $date;
-
-                    $date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
-                    $date->setTimezone(new \DateTimeZone($event->timezone));
-                    $event_finish_zero = $date;
-
-                    $event->startt = date($event_start_zero->format('Y-m-d H:i'));
-                    $event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
-                }
                 return view('events.index', compact('events'));
-
             }
-        }else {
-                //show all events for unregister user
-                $events = Event::latest()->get();
-                foreach ($events as $event) {
-                    $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
-                    $date->setTimezone(new \DateTimeZone($event->timezone));
-                    $event_start_zero = $date;
-                    $date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
-                    $date->setTimezone(new \DateTimeZone($event->timezone));
-                    $event_finish_zero = $date;
-                    $event->startt = date($event_start_zero->format('Y-m-d H:i'));
-                    $event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
-                }
+            }
+        else {
                 return view('events.index', compact('events'));
             }
         }
