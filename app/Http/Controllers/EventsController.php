@@ -471,7 +471,7 @@ class EventsController extends Controller {
 					$dst = date('I'); // this will be 1 in DST or else 0
 
 //                     $structure .= "<option data-countrycode='".$location['country_code']."' data-offset='".$utc_offset."' ".(($timeZone == $selectedZone) ? 'selected="selected "':'') . " value=\"".($timeZone)."\">(".$p. " UTC) " .str_replace('_',' ',$city)."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( ".$timeZone." | DST ".$dst.")</option>";
-                	$structure .= "<option data-countrycode='".$location['country_code']."' data-offset='".$utc_offset."' ".(($timeZone == $timeZone) ? 'selected="selected "':'') . " value=\"".($timeZone)."\">".$timeZone."</option>";
+                	$structure .= "<option data-countrycode='".$location['country_code']."' data-offset='".$utc_offset."' ".(($timeZone == $my_time_zone) ? 'selected="selected "':'') . " value=\"".($timeZone)."\">".$timeZone."</option>";
                 }
 
                 $selectContinent = $continent;
@@ -481,7 +481,7 @@ class EventsController extends Controller {
         $structure .= '</optgroup></select>';
 
 		// restore current timezone
-		date_default_timezone_set($current_timezone);
+		date_default_timezone_set($user_time_zone);
         return $structure;
     }
 
