@@ -58,20 +58,21 @@ class EventsController extends Controller {
 	 */
 	public function create(Request $request)
 	{
+        $start_date = date('Y/m/d 19:00');
+        $finish_date = date('Y/m/d 20:00');
+        $timezone_select = self::getTimeZoneSelect();
+        if(Sentinel::getUser()->timezone){
+            $my_time_zone = Sentinel::getUser()->timezone;
+        } else if(!Sentinel::getUser()->timezone || !Sentinel::check()){
+            $my_time_zone = $_COOKIE['time_zone'];
+        }
 		// Is the user logged in?
 		if (Sentinel::check()) {
 			if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
                 // for bootstrap-datepicker
                 //registered user
 //                $start_date_tmp = strtotime("+1 day");
-                $start_date = date('Y/m/d 19:00');
-                $finish_date = date('Y/m/d 20:00');
-                $timezone_select = self::getTimeZoneSelect();
-                if(Sentinel::getUser()->timezone){
-                    $my_time_zone = Sentinel::getUser()->timezone;
-                } else{
-                    $my_time_zone = $_COOKIE['time_zone'];
-                }
+
                 return view('events.create', array(
                     'timezone_select' => $timezone_select,
                     'start_date' => $start_date,
@@ -80,19 +81,6 @@ class EventsController extends Controller {
                 ));
 			}
 		} else {
-			//create events unregister user
-//			$start_date_tmp = strtotime("+1 hour");
-			$start_date = date('Y/m/d 19:00');
-			$finish_date = date('Y/m/d 20:00');
-            $timezone_select = self::getTimeZoneSelect();
-            if(isset($_COOKIE['time_zone'])) {
-                var_dump($_COOKIE['time_zone']);
-                $my_time_zone = $_COOKIE['time_zone'];
-            }
-            else{
-                var_dump('sdfsdfsdf');
-                $my_time_zone = $_COOKIE['time_zone'];
-            }
 			return view('events.create', array(
 				'timezone_select' => $timezone_select,
 				'start_date' => $start_date,
