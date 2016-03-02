@@ -284,10 +284,9 @@ Create New event
 
 	// Get timezone of the place
 	// 3 steps: get entered place, find it`s location (coordinates), find its timezone
-    $('#location').change(function () {
+    $('#location').change(function (results, status) {
         $('.locale').attr('style', 'display:none');
         $('.fields_map').attr('style', 'display:block');
-        function callback(results, status) {
             console.log(status == google.maps.places.PlacesServiceStatus.OK);
             if (status == google.maps.places.PlacesServiceStatus.OK) {
                 for (var i = 0; i < results.length; i++) {
@@ -306,7 +305,7 @@ Create New event
                 zoom: 8,
                 center: pyrmont
             });
-        }
+
     });
 
 
