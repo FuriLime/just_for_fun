@@ -167,6 +167,7 @@ return [
         Mailchimp\MailchimpServiceProvider::class,
         Torann\GeoIP\GeoIPServiceProvider::class,
         Msurguy\Honeypot\HoneypotServiceProvider::class,
+        Weblee\Mandrill\MandrillServiceProvider::class,
     ],
 
     /*
@@ -234,6 +235,7 @@ return [
         'GeoIP' => Torann\GeoIP\GeoIPFacade::class,
         'MC' => Mailchimp\MailchimpFacade::class,
         'Honeypot' => Msurguy\Honeypot\HoneypotFacade::class,
+        'MandrillMail'  => Weblee\Mandrill\MandrillFacade::class
     ],
 
 ];
