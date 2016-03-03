@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c2a871d7e4d9a9bea757ce05ba05ea43",
-    "content-hash": "43ddc8ea9d6405a6216b743329050ab1",
+    "hash": "3f7e5f0a8286e3220a867fb7bb69e928",
+    "content-hash": "334daa6f36a4762d306233ff77b067d1",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.15.5",
+            "version": "3.15.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "e6d8b291b45009b310a174bcabad3de1c864e176"
+                "reference": "599824c35ce324efb55d17dba4ecaf121f7bec94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e6d8b291b45009b310a174bcabad3de1c864e176",
-                "reference": "e6d8b291b45009b310a174bcabad3de1c864e176",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/599824c35ce324efb55d17dba4ecaf121f7bec94",
+                "reference": "599824c35ce324efb55d17dba4ecaf121f7bec94",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +85,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2016-02-25 22:52:38"
+            "time": "2016-03-02 00:38:23"
         },
         {
             "name": "aws/aws-sdk-php-laravel",
@@ -2009,6 +2009,49 @@
             "time": "2015-10-23 04:02:07"
         },
         {
+            "name": "mandrill/mandrill",
+            "version": "1.0.55",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/mailchimp/mandrill-api-php.git",
+                "reference": "da3adc10042eafac2e53de141b358a52b8e53596"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/mailchimp/mandrill-api-php/get/da3adc10042eafac2e53de141b358a52b8e53596.zip",
+                "reference": "da3adc10042eafac2e53de141b358a52b8e53596",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mandrill": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Mandrill Devs",
+                    "email": "community@mandrill.com",
+                    "homepage": "http://mandrill.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "API client library for the Mandrill email as a service platform",
+            "homepage": "https://bitbucket.org/mailchimp/mandrill-api-php",
+            "keywords": [
+                "api",
+                "email"
+            ],
+            "time": "2015-09-22 13:58:03"
+        },
+        {
             "name": "maxmind-db/reader",
             "version": "v1.1.0",
             "source": {
@@ -2102,16 +2145,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.17.2",
+            "version": "1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bee7f0dc9c3e0b69a6039697533dca1e845c8c24"
+                "reference": "e19b764b5c855580e8ffa7e615f72c10fd2f99cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bee7f0dc9c3e0b69a6039697533dca1e845c8c24",
-                "reference": "bee7f0dc9c3e0b69a6039697533dca1e845c8c24",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/e19b764b5c855580e8ffa7e615f72c10fd2f99cc",
+                "reference": "e19b764b5c855580e8ffa7e615f72c10fd2f99cc",
                 "shasum": ""
             },
             "require": {
@@ -2140,6 +2183,7 @@
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
                 "ext-mongo": "Allow sending log messages to a MongoDB server",
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
                 "php-console/php-console": "Allow sending log messages to Google Chrome",
                 "raven/raven": "Allow sending log messages to a Sentry server",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
@@ -2149,7 +2193,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.16.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -2175,7 +2219,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-10-14 12:51:02"
+            "time": "2016-03-01 18:00:40"
         },
         {
             "name": "msurguy/honeypot",
@@ -2477,16 +2521,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "b0e69d10852716b2ccbdff69c75c477637220790"
+                "reference": "f078eba3bcf140fd69b5fcc3ea5ac809abf729dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/b0e69d10852716b2ccbdff69c75c477637220790",
-                "reference": "b0e69d10852716b2ccbdff69c75c477637220790",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/f078eba3bcf140fd69b5fcc3ea5ac809abf729dc",
+                "reference": "f078eba3bcf140fd69b5fcc3ea5ac809abf729dc",
                 "shasum": ""
             },
             "require": {
@@ -2521,7 +2565,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2016-02-06 03:52:05"
+            "time": "2016-02-29 17:25:04"
         },
         {
             "name": "psr/http-message",
@@ -3768,6 +3812,51 @@
                 "environment"
             ],
             "time": "2015-05-30 15:59:26"
+        },
+        {
+            "name": "weblee/mandrill",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weblee/Mandrill.git",
+                "reference": "140c991913286ed0218c59b012195262d846b103"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weblee/Mandrill/zipball/140c991913286ed0218c59b012195262d846b103",
+                "reference": "140c991913286ed0218c59b012195262d846b103",
+                "shasum": ""
+            },
+            "require": {
+                "mandrill/mandrill": "1.0.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Weblee\\Mandrill\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lee Smith",
+                    "email": "lee@weblee.co.uk"
+                }
+            ],
+            "description": "Laravel 5 Mandrill API Wrapper",
+            "keywords": [
+                "email",
+                "laravel",
+                "mandrill"
+            ],
+            "time": "2015-08-26 08:32:02"
         },
         {
             "name": "webpatser/laravel-uuid",
@@ -5050,7 +5139,8 @@
         "cviebrock/eloquent-taggable": 20,
         "pacely/mailchimp-apiv3": 20,
         "msurguy/honeypot": 20,
-        "torann/geoip": 20
+        "torann/geoip": 20,
+        "weblee/mandrill": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
