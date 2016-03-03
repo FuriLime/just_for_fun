@@ -15,7 +15,7 @@ class MailController extends Controller
 {
     //
 
-    public function emailSend(Request $request){
+    public function emailSend(){
 
         $subject = date('Y-m-d H:i:s') . " Subjectline";  // using a time in there to easily now which email was received for testing
         $to_email = 'sergey.ch.ysbm@gmail.com';
@@ -78,6 +78,7 @@ class MailController extends Controller
         ];
 
         // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
-        \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
+        $send_email = \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
+        return $send_email;
     }
 }

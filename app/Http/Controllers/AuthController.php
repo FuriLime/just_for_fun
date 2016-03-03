@@ -15,7 +15,7 @@ use Socialite;
 use App\User;
 use App\Activate;
 use \Mailchimp;
-use Weblee\Mandrill\Mail;
+use MailController;
 
 class AuthController extends JoshController
 {
@@ -147,7 +147,7 @@ class AuthController extends JoshController
                 'user'          => $user,
                 'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
             );
-
+           emailSend();
 
             // Send the activation code through email
 //            Mail::send('emails.register-activate', $data, function ($m) use ($user) {
