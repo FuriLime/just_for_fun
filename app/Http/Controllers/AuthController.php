@@ -147,7 +147,8 @@ class AuthController extends JoshController
                 'user'          => $user,
                 'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
             );
-            MailController::emailSend();
+            $vfvfd = new MailController();
+            $vfvfd->emailSend();
 
             // Send the activation code through email
 //            Mail::send('emails.register-activate', $data, function ($m) use ($user) {
