@@ -15,7 +15,7 @@ use Socialite;
 use App\User;
 use App\Activate;
 use \Mailchimp;
-use GuzzleHttp;
+use Guzzle;
 
 class AuthController extends JoshController
 {
