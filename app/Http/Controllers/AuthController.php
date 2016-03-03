@@ -162,8 +162,8 @@ class AuthController extends JoshController
             );
 
             $global_merge_vars = [
-                ['name' => 'emailname',             'content' => $to_name],
-                ['name' => 'NNAME',                 'content' => $user->first_name],
+                ['name' => 'emailname',             'content' => $to_email],
+                ['name' => 'NNAME',                 'content' => $to_email],
                 ['name' => 'FNAME',                 'content' => $user->first_name],
                 ['name' => 'LNAME',                 'content' => $user->last_name],
                 ['name' => 'LOGINCOUNT',            'content' => $data['activationUrl']],
@@ -175,7 +175,6 @@ class AuthController extends JoshController
                 ['name' => 'RENEWDATE',             'content' => 'content-RENEWDATE'],
                 ['name' => 'FREETEXT',              'content' => 'content-FREETEXT'],
                 ['name' => 'COLOR1',                'content' => '#ee12ab'], // merge value not in mandrill code yet
-                // ['name' => 'logo',              'content' => 'https://gallery.mailchimp.com/af80e28befb4c13871210c7c0/images/9db15bbf-b6f3-4fa2-9afe-402ec9b558f6.jpg'],
                 ['name' => 'logo',              'content' => 'https://gallery.mailchimp.com/af80e28befb4c13871210c7c0/images/868e7c81-a24b-4468-931e-8d8a5ff5dc92.png'],
             ];
             $message = [
