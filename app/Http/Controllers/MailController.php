@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
 use Weblee\Mandrill\Mail;
-use App\User;
 
 class MailController extends Controller
 {
