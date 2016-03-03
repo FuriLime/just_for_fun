@@ -233,7 +233,7 @@ class AuthController extends JoshController
             ];
 
             // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
-           MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
+           \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
 
 
             // Send the activation code through email
