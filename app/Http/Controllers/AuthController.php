@@ -149,8 +149,8 @@ class AuthController extends JoshController
             );
 
             $subject = date('Y-m-d H:i:s') . " Subjectline";  // using a time in there to easily now which email was received for testing
-            $to_email = 'user_email@twofy.de';
-            $to_name = 'John Doe';
+            $to_email = $user->email;
+            $to_name = $user->first_name;
             $from_email = 'test@eventfellows.org';
             $from_name = 'From Name Here';
 
@@ -233,9 +233,9 @@ class AuthController extends JoshController
             ];
 
             // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
-            \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
+            $sadad = \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
 
-
+dd($sadad);
             // Send the activation code through email
 //            Mail::send('emails.register-activate', $data, function ($m) use ($user) {
 //                $m->to($user->email, $user->first_name . ' ' . $user->last_name);
