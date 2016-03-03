@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/laravel-backup.php" afterPath="$PROJECT_DIR$/config/laravel-backup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/filesystems.php" afterPath="$PROJECT_DIR$/config/filesystems.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -55,8 +56,8 @@
       <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.25" vertical-offset="3132" max-vertical-offset="3705">
-              <caret line="238" column="6" selection-start-line="238" selection-start-column="6" selection-end-line="238" selection-end-column="6" />
+            <state vertical-scroll-proportion="-8.25" vertical-offset="2262" max-vertical-offset="3690">
+              <caret line="164" column="51" selection-start-line="164" selection-start-column="51" selection-end-line="164" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -75,28 +76,28 @@
       <file leaf-file-name="secrets.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/secrets.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125" vertical-offset="135" max-vertical-offset="930">
-              <caret line="14" column="23" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="23" />
+            <state vertical-scroll-proportion="-6.875" vertical-offset="135" max-vertical-offset="930">
+              <caret line="20" column="39" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="laravel-backup.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="laravel-backup.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/laravel-backup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52879584" vertical-offset="432" max-vertical-offset="1725">
+            <state vertical-scroll-proportion="-5.125" vertical-offset="612" max-vertical-offset="1725">
               <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="filesystems.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="filesystems.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/filesystems.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0" vertical-offset="837" max-vertical-offset="1410">
-              <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.39790577" vertical-offset="837" max-vertical-offset="1410">
+              <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -156,14 +157,14 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MailController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
-        <option value="$PROJECT_DIR$/config/filesystems.php" />
         <option value="$PROJECT_DIR$/storage/logs/laravel.log" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/config/laravel-backup.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/config/filesystems.php" />
       </list>
     </option>
   </component>
@@ -382,12 +383,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01157" summary="google auth">
-      <created>1456990567725</created>
-      <option name="number" value="01157" />
-      <option name="project" value="LOCAL" />
-      <updated>1456990567726</updated>
     </task>
     <task id="LOCAL-01158" summary="google auth">
       <created>1456990858459</created>
@@ -677,7 +672,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457012109026</updated>
     </task>
-    <option name="localTasksCounter" value="1206" />
+    <task id="LOCAL-01206" summary="google auth">
+      <created>1457012177676</created>
+      <option name="number" value="01206" />
+      <option name="project" value="LOCAL" />
+      <updated>1457012177676</updated>
+    </task>
+    <option name="localTasksCounter" value="1207" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1081,22 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.25" vertical-offset="3132" max-vertical-offset="3705">
-          <caret line="238" column="6" selection-start-line="238" selection-start-column="6" selection-end-line="238" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/filesystems.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0" vertical-offset="837" max-vertical-offset="1410">
-          <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.875" vertical-offset="135" max-vertical-offset="1200">
@@ -1105,18 +1090,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/secrets.json">
+    <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125" vertical-offset="135" max-vertical-offset="930">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="23" />
+        <state vertical-scroll-proportion="-8.25" vertical-offset="2262" max-vertical-offset="3690">
+          <caret line="164" column="51" selection-start-line="164" selection-start-column="51" selection-end-line="164" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/laravel-backup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52879584" vertical-offset="432" max-vertical-offset="1725">
+        <state vertical-scroll-proportion="-5.125" vertical-offset="612" max-vertical-offset="1725">
           <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/secrets.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875" vertical-offset="135" max-vertical-offset="930">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/filesystems.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39790577" vertical-offset="837" max-vertical-offset="1410">
+          <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
           <folding />
         </state>
       </provider>

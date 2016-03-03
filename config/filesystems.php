@@ -66,10 +66,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key'    => $secrets['CUSTOM']['S3_KEY'],
-            'secret' => $secrets['CUSTOM']['S3_SECRET'],
-            'region' => $secrets['CUSTOM']['S3_REGION_BACKUP'],
-            'bucket' => $secrets['CUSTOM']['S3_BUCKET_BACKUP'],
+            'key'    => 'AKIAJQIUBOL3BP2GW55A',
+            'secret' => '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',
+            'region' => 'eu-west-1',
+            'bucket' => 'sergey-backups',
 
         ],
 

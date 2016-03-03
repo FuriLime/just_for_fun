@@ -163,7 +163,6 @@ return [
         Chencha\Share\ShareServiceProvider::class,
 //        Spatie\Newsletter\NewsletterServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
-//        Skovmand\Mailchimp\MailchimpServiceProvider::class,
         Mailchimp\MailchimpServiceProvider::class,
         Torann\GeoIP\GeoIPServiceProvider::class,
         Msurguy\Honeypot\HoneypotServiceProvider::class,
