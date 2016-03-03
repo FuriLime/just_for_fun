@@ -163,9 +163,9 @@ class AuthController extends JoshController
 
             $global_merge_vars = [
                 ['name' => 'emailname',             'content' => $to_name],
-                ['name' => 'NNAME',                 'content' => 'content-NNAME'],
-                ['name' => 'FNAME',                 'content' => 'content-FNAME'],
-                ['name' => 'LNAME',                 'content' => 'content-LNAME'],
+                ['name' => 'NNAME',                 'content' => $user->first_name],
+                ['name' => 'FNAME',                 'content' => $user->first_name],
+                ['name' => 'LNAME',                 'content' => $user->last_name],
                 ['name' => 'LOGINCOUNT',            'content' => 'content-LOGINCOUNT'],
                 ['name' => 'PASSRESET',             'content' => 'content-PASSRESET'],
                 ['name' => 'RESETVALID',            'content' => 'content-RESETVALID'],
@@ -233,9 +233,9 @@ class AuthController extends JoshController
             ];
 
             // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
-            $sadad = \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
+           MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
 
-dd($sadad);
+
             // Send the activation code through email
 //            Mail::send('emails.register-activate', $data, function ($m) use ($user) {
 //                $m->to($user->email, $user->first_name . ' ' . $user->last_name);
