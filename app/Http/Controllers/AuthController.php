@@ -151,7 +151,7 @@ class AuthController extends JoshController
 
 
             // Send the activation code through email
-            Mail::message()->send('emails.register-activate', $data, function ($m) use ($user) {
+            Mail::send('emails.register-activate', $data, function ($m) use ($user) {
                 $m->to($user->email, $user->first_name . ' ' . $user->last_name);
                 $m->subject('Welcome ' . $user->first_name);
             });
