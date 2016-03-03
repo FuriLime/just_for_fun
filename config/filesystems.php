@@ -70,6 +70,9 @@ return [
             'secret' => $secrets['CUSTOM']['S3_SECRET'],
             'region' => $secrets['CUSTOM']['S3_REGION_BACKUP'],
             'bucket' => $secrets['CUSTOM']['S3_BUCKET_BACKUP'],
+            'sitecontent' => $secrets['CUSTOM']['S3_BUCKET_SITECONTENT'],
+            'userdata' => $secrets['CUSTOM']['S3_BUCKET_USERDATA'],
+
         ],
 
         'rackspace' => [
