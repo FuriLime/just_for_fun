@@ -87,6 +87,6 @@ class FacebookController extends Controller
                 }
             }
         }
-        return Redirect::route("home")->with('success', Lang::get('auth/message.signin.fail'));
+        return Redirect::route("home")->with('error', Lang::get('auth/message.signin.error'));
     }
 }
