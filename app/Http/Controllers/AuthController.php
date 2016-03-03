@@ -149,10 +149,97 @@ class AuthController extends JoshController
             );
 
             // Send the activation code through email
-            Mail::send('emails.register-activate', $data, function ($m) use ($user) {
-                $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-                $m->subject('Welcome ' . $user->first_name);
-            });
+//            Mail::send('emails.register-activate', $data, function ($m) use ($user) {
+//                $m->to($user->email, $user->first_name . ' ' . $user->last_name);
+//                $m->subject('Welcome ' . $user->first_name);
+//            });
+
+            $subject = date('Y-m-d H:i:s') . " Subjectline";  // using a time in there to easily now which email was received for testing
+            $to_email = 'user_email@twofy.de';
+            $to_name = 'John Doe';
+            $from_email = 'test@eventfellows.org';
+            $from_name = 'From Name Here';
+
+            $template_content = array(
+                array(
+                    'name' => 'example name from first array in file',
+                    'content' => 'example content from first array in file'
+                )
+            );
+
+            $global_merge_vars = [
+                ['name' => 'emailname',             'content' => $to_name],
+                ['name' => 'NNAME',                 'content' => 'content-NNAME'],
+                ['name' => 'FNAME',                 'content' => 'content-FNAME'],
+                ['name' => 'LNAME',                 'content' => 'content-LNAME'],
+                ['name' => 'LOGINCOUNT',            'content' => 'content-LOGINCOUNT'],
+                ['name' => 'PASSRESET',             'content' => 'content-PASSRESET'],
+                ['name' => 'RESETVALID',            'content' => 'content-RESETVALID'],
+                ['name' => 'DCREDITS',              'content' => '30'],
+                ['name' => 'ECREDITS',              'content' => 'content-ECREDITS'],
+                ['name' => 'ACCTYPE',               'content' => 'content-ACCTYPE'],
+                ['name' => 'RENEWDATE',             'content' => 'content-RENEWDATE'],
+                ['name' => 'FREETEXT',              'content' => 'content-FREETEXT'],
+                ['name' => 'COLOR1',                'content' => '#ee12ab'], // merge value not in mandrill code yet
+                // ['name' => 'logo',              'content' => 'https://gallery.mailchimp.com/af80e28befb4c13871210c7c0/images/9db15bbf-b6f3-4fa2-9afe-402ec9b558f6.jpg'],
+                ['name' => 'logo',              'content' => 'https://gallery.mailchimp.com/af80e28befb4c13871210c7c0/images/868e7c81-a24b-4468-931e-8d8a5ff5dc92.png'],
+            ];
+
+            //images to dynamically exchange logo as a test
+            //Image with people
+            //https://gallery.mailchimp.com/af80e28befb4c13871210c7c0/images/9db15bbf-b6f3-4fa2-9afe-402ec9b558f6.jpg
+
+            // EventFellows Logo
+            // https://gallery.mailchimp.com/af80e28befb4c13871210c7c0/images/868e7c81-a24b-4468-931e-8d8a5ff5dc92.png
+
+            $message = [
+                'html' => '<p>Example HTML content 12345</p>',
+                'text' => 'Example text content 56789',
+                'subject' => $subject,
+                'from_email' => $from_email ,
+                'from_name' => $from_name,
+                'to' => array(
+                    array(
+                        'email' => $to_email,
+                        'name' => $to_name,
+                    ),
+                    // array(                               // this would be a second recipient
+                    //     'email' => 'to_array2@twofy.de',
+                    //     'name' => 'To Array',
+                    //     'type' => 'to'
+                    // )
+                ),
+                'headers' => array('Reply-To' => 'message.reply@twofy.de'),
+                'important' => false,
+                'track_opens' => null,
+                'track_clicks' => null,
+                'auto_text' => null,
+                'auto_html' => null,
+                'inline_css' => null,
+                'url_strip_qs' => null,
+                'preserve_recipients' => null,
+                'view_content_link' => null,
+                'tracking_domain' => null,
+                'signing_domain' => null,
+                'return_path_domain' => null,
+                'merge' => true,
+                'merge_language' => 'mailchimp',
+                'global_merge_vars' => $global_merge_vars,
+                // 'merge_vars' => array(           // user would need to be mentioned here again to apply values
+                //     array(
+                //         'rcpt' => 'to_array2@twofy.de',
+                //         'vars' => array(
+                //             array(
+                //                 'name' => 'merge2',
+                //                 'content' => 'merge2 content'
+                //             )
+                //         )
+                //     )
+                // )
+            ];
+
+            // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
+            \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
 
             //Redirect to login page
             //return Redirect::to("admin/login")->with('success', Lang::get('auth/message.signup.success'));
