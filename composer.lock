@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c2a871d7e4d9a9bea757ce05ba05ea43",
-    "content-hash": "43ddc8ea9d6405a6216b743329050ab1",
+    "hash": "3f7e5f0a8286e3220a867fb7bb69e928",
+    "content-hash": "334daa6f36a4762d306233ff77b067d1",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -2009,6 +2009,49 @@
             "time": "2015-10-23 04:02:07"
         },
         {
+            "name": "mandrill/mandrill",
+            "version": "1.0.55",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/mailchimp/mandrill-api-php.git",
+                "reference": "da3adc10042eafac2e53de141b358a52b8e53596"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/mailchimp/mandrill-api-php/get/da3adc10042eafac2e53de141b358a52b8e53596.zip",
+                "reference": "da3adc10042eafac2e53de141b358a52b8e53596",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mandrill": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Mandrill Devs",
+                    "email": "community@mandrill.com",
+                    "homepage": "http://mandrill.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "API client library for the Mandrill email as a service platform",
+            "homepage": "https://bitbucket.org/mailchimp/mandrill-api-php",
+            "keywords": [
+                "api",
+                "email"
+            ],
+            "time": "2015-09-22 13:58:03"
+        },
+        {
             "name": "maxmind-db/reader",
             "version": "v1.1.0",
             "source": {
@@ -3771,6 +3814,51 @@
             "time": "2015-05-30 15:59:26"
         },
         {
+            "name": "weblee/mandrill",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weblee/Mandrill.git",
+                "reference": "140c991913286ed0218c59b012195262d846b103"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weblee/Mandrill/zipball/140c991913286ed0218c59b012195262d846b103",
+                "reference": "140c991913286ed0218c59b012195262d846b103",
+                "shasum": ""
+            },
+            "require": {
+                "mandrill/mandrill": "1.0.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Weblee\\Mandrill\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lee Smith",
+                    "email": "lee@weblee.co.uk"
+                }
+            ],
+            "description": "Laravel 5 Mandrill API Wrapper",
+            "keywords": [
+                "email",
+                "laravel",
+                "mandrill"
+            ],
+            "time": "2015-08-26 08:32:02"
+        },
+        {
             "name": "webpatser/laravel-uuid",
             "version": "2.0",
             "source": {
@@ -5051,7 +5139,8 @@
         "cviebrock/eloquent-taggable": 20,
         "pacely/mailchimp-apiv3": 20,
         "msurguy/honeypot": 20,
-        "torann/geoip": 20
+        "torann/geoip": 20,
+        "weblee/mandrill": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
