@@ -220,9 +220,12 @@ Create New event
 	<script src="{{ asset('assets/vendors/maxlength/bootstrap-maxlength.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/vendors/select2/select2.js') }}" type="text/javascript"></script>
     <script type="text/javascript" src="{{ asset('assets/js/date.format.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.maskedinput.min.js') }}"></script>
 
     <script>
     $(document).ready(function() {
+        $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
+
         var date = new Date('{{ $start_date }}');
         $("#datestart").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',

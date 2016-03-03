@@ -56,6 +56,8 @@ class EventsController extends Controller {
 	 */
 	public function create(Request $request)
 	{
+      /*var_dump($_SESSION);*/
+
         $start_date = date('Y/m/d 19:00');
         $finish_date = date('Y/m/d 20:00');
         $timezone_select = self::getTimeZoneSelect();
@@ -117,6 +119,10 @@ class EventsController extends Controller {
 			'finish' => 'required',
 		]);
 
+    /*if(isset($_POST['timezone'])) {
+      $_SESSION['timezone'] = $_POST['timezone'];
+    }*/
+
 		$store_info = $request->all();
 		$store_info['uuid'] = Uuid::generate(4)->string;
 		// for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
@@ -129,7 +135,7 @@ class EventsController extends Controller {
 
 		// $event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
 		$store_info['start'] = $event_start_zero->format('Y-m-d H:i');
-		$store_info['finish'] =$event_finish_zero->format('Y-m-d H:i');
+		$store_info['finish'] = $event_finish_zero->format('Y-m-d H:i');
 
 		// Is the user logged in?
 		if (Sentinel::check()) {
