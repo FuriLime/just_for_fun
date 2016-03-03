@@ -40,7 +40,7 @@ Create New event
                             @endforeach
                         </ul>
                     @endif
-					<h3 class="primary">@lang('frontend.add_event_text')</h3>
+					<h3 class="primary add_event_section_link">@lang('frontend.add_event_text')</h3>
 
                          {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
                          {{--<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }} " />--}}
@@ -52,7 +52,7 @@ Create New event
 
                     </div>
 
-                    <div class="form-group" id="add_dicription">
+                    <div class="form-group add_event_section_link" id="add_dicription">
                         <i class="fa fa-fw fa-comment"></i>
                         <a >Add Description</a>
                     </div>
@@ -64,7 +64,7 @@ Create New event
                         <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         {{--<button type="button" class="btn btn-warning " title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title">!</button>--}}
                     </div>
-                         <div id="hide_dicription" style="display: none">
+                         <div id="hide_dicription" class="add_event_section_link" style="display: none">
                             <i class="fa fa-fw fa-stop"></i>
                             <a class="show_hide" >Hide Description</a>
                          </div>
@@ -86,8 +86,8 @@ Create New event
                     </div>
 
 
-                         <div class="form-group" id="change_time_zone">
-                            <span>Timezone is {{$user_timezone}}. Default duration is 1h.<a id="time_change">Change here.</a></span>
+                         <div class="form-group add_event_section_link" id="change_time_zone">
+                            <span>Timezone is {{$user_timezone}}. Default duration is 1h. <a id="time_change">Change here.</a></span>
                          </div>
         		<div class="form-group" id="end_time_event" style="display:none" >
                         <label for="start">@lang('frontend.enddate')</label>
@@ -139,14 +139,16 @@ Create New event
                          <div class="form-group fields_loc">
                              {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country']) !!}
                          </div>
-                        <a id="reset_loc">Reset Address</a>
+                         <div class="form-group fields_loc">
+                            <a id="reset_loc">Reset Address</a>
+                         </div>
                         </div>
 
-                        <div class="">
+                        <div class="add_event_section_link">
                             <i class="fa fa-fw fa-gears"></i>
                             <a>Advansed Options</a>
                          </div>
-                         <div class="form-group" style='float:right; left: -5%;'>
+                         <div class="form-group" style="text-align: right; margin-right: 3%; margin-top: 9%;">
                         <div class="col-sm-offset-0 col-sm-12" id="btn_group">
                             <button type="button" class="btn" onclick="(function($) { $('#active').val('0'); $('#btn_group .btn-primary').click(); })(jQuery);">
                                 @lang('frontend.save_as_draft')
@@ -154,16 +156,17 @@ Create New event
                             <button class="btn btn-primary text-white test submit">
                                 @lang('frontend.save_and_publish')
                             </button>
+
+                            <div class="checkbox add_event_section_link">
+                              <label><input type="checkbox" value="">This is a test event</label>
+                            </div>
                         </div>
 
                     </div>
                          <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                     {!! Form::close() !!}
                 </div>
-                    <div class="checkbox">
-
-  <label><input type="checkbox" value="">This is a test event</label>
-</div>
+                    
             </div>
         </div>
 		<div class="col-md-1"></div>
