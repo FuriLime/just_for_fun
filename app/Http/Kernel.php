@@ -31,4 +31,31 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'Admin' => \App\Http\Middleware\Admin::class,
     ];
+
+    protected function schedule(Schedule $schedule)
+    {
+        $schedule->command('backup:run',['--only-files' => '','--suffix' => '_files'])
+            ->weekly()->mondays()->at('03:00')
+            ->description('My-project Files backup')
+            ->sendOutputTo('storage/logs/backup.log')
+            ->emailOutputTo('mark@novate.co.uk')
+            ->before(function(){
+                Log::info('Commencing Files Backup');
+            })
+            ->after(function(){
+                Log::info('My-project Files backup complete');
+            });
+
+        $schedule->command('backup:run',['--only-db' => '','--suffix' => '_db'])
+            ->twiceDaily(2,14)
+            ->description('My-project Database backup')
+            ->sendOutputTo('storage/logs/backup.log')
+            ->emailOutputTo('mark@novate.co.uk')
+            ->before(function(){
+                Log::info('Commencing Database backup');
+            })
+            ->after(function(){
+                Log::info('My-project Database backup complete');
+            });
+    }
 }
