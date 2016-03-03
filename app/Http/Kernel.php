@@ -38,7 +38,7 @@ class Kernel extends HttpKernel
             ->weekly()->mondays()->at('03:00')
             ->description('My-project Files backup')
             ->sendOutputTo('storage/logs/backup.log')
-            ->emailOutputTo('mark@novate.co.uk')
+            ->emailOutputTo('sergey.ch.gmail.com')
             ->before(function(){
                 Log::info('Commencing Files Backup');
             })

@@ -55,8 +55,8 @@
       <file leaf-file-name="Kernel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52879584" vertical-offset="432" max-vertical-offset="1005">
-              <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.29319373" vertical-offset="432" max-vertical-offset="1005">
+              <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -123,7 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/user/eventcategories/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventcategoriesController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/eventcategories/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/eventcategories/index.blade.php" />
@@ -173,6 +172,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/config/filesystems.php" />
+        <option value="$PROJECT_DIR$/storage/logs/laravel.log" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
       </list>
     </option>
@@ -244,7 +244,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -258,11 +262,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
+              <option name="myItemId" value="storage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -340,12 +340,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01152" summary="google auth">
-      <created>1456930555842</created>
-      <option name="number" value="01152" />
-      <option name="project" value="LOCAL" />
-      <updated>1456930555842</updated>
     </task>
     <task id="LOCAL-01153" summary="google auth">
       <created>1456930580323</created>
@@ -635,7 +629,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457010674372</updated>
     </task>
-    <option name="localTasksCounter" value="1201" />
+    <task id="LOCAL-01201" summary="google auth">
+      <created>1457010986177</created>
+      <option name="number" value="01201" />
+      <option name="project" value="LOCAL" />
+      <updated>1457010986177</updated>
+    </task>
+    <option name="localTasksCounter" value="1202" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -691,13 +691,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32142857" vertical-offset="690" max-vertical-offset="1950">
-          <caret line="58" column="94" selection-start-line="58" selection-start-column="94" selection-end-line="58" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="596">
@@ -997,7 +990,7 @@
         <state vertical-scroll-proportion="1.7410715" vertical-offset="0" max-vertical-offset="1335">
           <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
           <folding>
-            <element signature="e#41#63#0#PHP" expanded="true" />
+            <element signature="e#41#63#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1067,10 +1060,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.094339624" vertical-offset="1233370" max-vertical-offset="1233900">
+          <caret line="82228" column="131" selection-start-line="82228" selection-start-column="131" selection-end-line="82228" selection-end-column="131" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52879584" vertical-offset="432" max-vertical-offset="1005">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.29319373" vertical-offset="432" max-vertical-offset="1005">
+          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
           <folding />
         </state>
       </provider>
