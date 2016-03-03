@@ -166,14 +166,6 @@ class AuthController extends JoshController
                 ['name' => 'NNAME',                 'content' => $to_email],
                 ['name' => 'FNAME',                 'content' => $user->first_name],
                 ['name' => 'LNAME',                 'content' => $user->last_name],
-                ['name' => 'LOGINCOUNT',            'content' => $data['activationUrl']],
-                ['name' => 'PASSRESET',             'content' => 'content-PASSRESET'],
-                ['name' => 'RESETVALID',            'content' => 'content-RESETVALID'],
-                ['name' => 'DCREDITS',              'content' => '30'],
-                ['name' => 'ECREDITS',              'content' => 'content-ECREDITS'],
-                ['name' => 'ACCTYPE',               'content' => 'content-ACCTYPE'],
-                ['name' => 'RENEWDATE',             'content' => 'content-RENEWDATE'],
-                ['name' => 'FREETEXT',              'content' => 'content-FREETEXT'],
                 ['name' => 'COLOR1',                'content' => '#ee12ab'], // merge value not in mandrill code yet
                 ['name' => 'logo',              'content' => 'https://gallery.mailchimp.com/af80e28befb4c13871210c7c0/images/868e7c81-a24b-4468-931e-8d8a5ff5dc92.png'],
             ];
