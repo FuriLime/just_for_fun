@@ -166,7 +166,7 @@ class AuthController extends JoshController
                 ['name' => 'NNAME',                 'content' => $user->first_name],
                 ['name' => 'FNAME',                 'content' => $user->first_name],
                 ['name' => 'LNAME',                 'content' => $user->last_name],
-                ['name' => 'LOGINCOUNT',            'content' => 'content-LOGINCOUNT'],
+                ['name' => 'LOGINCOUNT',            'content' => $data['activationUrl']],
                 ['name' => 'PASSRESET',             'content' => 'content-PASSRESET'],
                 ['name' => 'RESETVALID',            'content' => 'content-RESETVALID'],
                 ['name' => 'DCREDITS',              'content' => '30'],
@@ -178,14 +178,6 @@ class AuthController extends JoshController
                 // ['name' => 'logo',              'content' => 'https://gallery.mailchimp.com/af80e28befb4c13871210c7c0/images/9db15bbf-b6f3-4fa2-9afe-402ec9b558f6.jpg'],
                 ['name' => 'logo',              'content' => 'https://gallery.mailchimp.com/af80e28befb4c13871210c7c0/images/868e7c81-a24b-4468-931e-8d8a5ff5dc92.png'],
             ];
-
-            //images to dynamically exchange logo as a test
-            //Image with people
-            //https://gallery.mailchimp.com/af80e28befb4c13871210c7c0/images/9db15bbf-b6f3-4fa2-9afe-402ec9b558f6.jpg
-
-            // EventFellows Logo
-            // https://gallery.mailchimp.com/af80e28befb4c13871210c7c0/images/868e7c81-a24b-4468-931e-8d8a5ff5dc92.png
-
             $message = [
                 'html' => '<p>Example HTML content 12345</p>',
                 'text' => 'Example text content 56789',
@@ -197,11 +189,6 @@ class AuthController extends JoshController
                         'email' => $to_email,
                         'name' => $to_name,
                     ),
-                    // array(                               // this would be a second recipient
-                    //     'email' => 'to_array2@twofy.de',
-                    //     'name' => 'To Array',
-                    //     'type' => 'to'
-                    // )
                 ),
                 'headers' => array('Reply-To' => 'message.reply@twofy.de'),
                 'important' => false,
@@ -219,17 +206,6 @@ class AuthController extends JoshController
                 'merge' => true,
                 'merge_language' => 'mailchimp',
                 'global_merge_vars' => $global_merge_vars,
-                // 'merge_vars' => array(           // user would need to be mentioned here again to apply values
-                //     array(
-                //         'rcpt' => 'to_array2@twofy.de',
-                //         'vars' => array(
-                //             array(
-                //                 'name' => 'merge2',
-                //                 'content' => 'merge2 content'
-                //             )
-                //         )
-                //     )
-                // )
             ];
 
             // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
