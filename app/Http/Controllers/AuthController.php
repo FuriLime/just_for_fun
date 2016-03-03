@@ -148,7 +148,7 @@ class AuthController extends JoshController
             );
 
             $api = Mandrill::api();
-
+dd();
 
             // Send the activation code through email
             Mail::send('emails.register-activate', $data, function ($m) use ($user) {
