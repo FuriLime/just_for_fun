@@ -50,7 +50,7 @@ class Kernel extends HttpKernel
             ->twiceDaily(2,14)
             ->description('My-project Database backup')
             ->sendOutputTo('storage/logs/backup.log')
-            ->emailOutputTo('mark@novate.co.uk')
+            ->emailOutputTo('sergey.ch.gmail.com')
             ->before(function(){
                 Log::info('Commencing Database backup');
             })
