@@ -63,8 +63,8 @@
 						<li {!! (Request::is('advancedfeatures') ? 'class="active"' : '') !!}><a href="{{ URL::to('advancedfeatures') }}">@lang('frontend.features')</a></li>
 						
 						@if(!Sentinel::check())
-						<li><a href="#auth" class="fa fa-sign-in" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'#tologin'">@lang('frontend.sign_in')</a></li>
-						<li><a href="#auth" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'#toregister'">@lang('frontend.sign_up')</a></li>
+						<li><a href="" class="fa fa-sign-in" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'#tologin'">@lang('frontend.sign_in')</a></li>
+						<li><a href="http://event.test-y-sbm.com/auth/register" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'auth/register'">@lang('frontend.sign_up')</a></li>
 						@endif
 
 						<li><a href="{{ URL::to('events') }}" data-toggle="modal">Events</a></li>
