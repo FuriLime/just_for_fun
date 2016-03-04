@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/filesystems.php" afterPath="$PROJECT_DIR$/config/filesystems.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -29,75 +28,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="39.375" vertical-offset="2790" max-vertical-offset="7950">
-              <caret line="123" column="7" selection-start-line="123" selection-start-column="7" selection-end-line="123" selection-end-column="7" />
+            <state vertical-scroll-proportion="21.25" vertical-offset="990" max-vertical-offset="6525">
+              <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
               <folding>
-                <element signature="e#39#52#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Invite.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Invite.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.625" vertical-offset="762" max-vertical-offset="1335">
+              <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="products.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/products.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="31.875" vertical-offset="765" max-vertical-offset="5325">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="349" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/invite/create.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-43.75" vertical-offset="0" max-vertical-offset="1275">
+              <caret line="70" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.73214287" vertical-offset="2725" max-vertical-offset="3285">
+              <caret line="213" column="25" selection-start-line="213" selection-start-column="25" selection-end-line="213" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InviteMiddleware.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/InviteMiddleware.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.125" vertical-offset="42" max-vertical-offset="615">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="e#39#51#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Kernel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.0" vertical-offset="222" max-vertical-offset="1035">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="invitesonly.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/invite/invitesonly.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.583333" vertical-offset="430" max-vertical-offset="990">
+              <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.875" vertical-offset="1980" max-vertical-offset="8235">
-              <caret line="167" column="66" selection-start-line="167" selection-start-column="66" selection-end-line="167" selection-end-column="66" />
-              <folding>
-                <element signature="e#38#51#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/app.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.25" vertical-offset="2262" max-vertical-offset="3690">
-              <caret line="164" column="51" selection-start-line="164" selection-start-column="51" selection-end-line="164" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875" vertical-offset="135" max-vertical-offset="1200">
-              <caret line="20" column="27" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="secrets.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/secrets.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875" vertical-offset="135" max-vertical-offset="930">
-              <caret line="20" column="39" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="laravel-backup.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/laravel-backup.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.125" vertical-offset="612" max-vertical-offset="1725">
-              <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="filesystems.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/filesystems.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39790577" vertical-offset="837" max-vertical-offset="1410">
-              <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+            <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1335">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -114,19 +133,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EventcategoriesController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/eventcategories/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/eventcategories/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/eventcategories/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/eventcategories/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/events/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/events/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/events/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/events/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/billing_and_invoices/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/layouts/menu.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/config/mail.php" />
         <option value="$PROJECT_DIR$/resources/views/emails/layouts/default.blade.php" />
@@ -148,23 +157,33 @@
         <option value="$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/config/services.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/googleController.php" />
         <option value="$PROJECT_DIR$/public/assets/ical.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/events/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/events/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MailController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/storage/logs/laravel.log" />
-        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/config/laravel-backup.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/config/filesystems.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/twitterController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/googleController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/config/googletagmanager.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_04_084853_create_invites_table.php" />
+        <option value="$PROJECT_DIR$/app/Invite.php" />
+        <option value="$PROJECT_DIR$/resources/views/invite/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/InviteController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/InviteMiddleware.php" />
+        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
+        <option value="$PROJECT_DIR$/resources/views/invite/invitesonly.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
       </list>
     </option>
   </component>
@@ -235,7 +254,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -249,41 +272,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-ef" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event.test-y-sbm.loc" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="furilime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backups" />
+              <option name="myItemId" value="invite" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -297,15 +294,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.loc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backups" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -383,204 +400,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01158" summary="google auth">
-      <created>1456990858459</created>
-      <option name="number" value="01158" />
-      <option name="project" value="LOCAL" />
-      <updated>1456990858459</updated>
-    </task>
-    <task id="LOCAL-01159" summary="google auth">
-      <created>1456990974515</created>
-      <option name="number" value="01159" />
-      <option name="project" value="LOCAL" />
-      <updated>1456990974515</updated>
-    </task>
-    <task id="LOCAL-01160" summary="google auth">
-      <created>1456991262497</created>
-      <option name="number" value="01160" />
-      <option name="project" value="LOCAL" />
-      <updated>1456991262497</updated>
-    </task>
-    <task id="LOCAL-01161" summary="google auth">
-      <created>1456993343607</created>
-      <option name="number" value="01161" />
-      <option name="project" value="LOCAL" />
-      <updated>1456993343607</updated>
-    </task>
-    <task id="LOCAL-01162" summary="google auth">
-      <created>1456994140721</created>
-      <option name="number" value="01162" />
-      <option name="project" value="LOCAL" />
-      <updated>1456994140721</updated>
-    </task>
-    <task id="LOCAL-01163" summary="google auth">
-      <created>1456994207642</created>
-      <option name="number" value="01163" />
-      <option name="project" value="LOCAL" />
-      <updated>1456994207642</updated>
-    </task>
-    <task id="LOCAL-01164" summary="google auth">
-      <created>1456994297605</created>
-      <option name="number" value="01164" />
-      <option name="project" value="LOCAL" />
-      <updated>1456994297605</updated>
-    </task>
-    <task id="LOCAL-01165" summary="google auth">
-      <created>1456994311146</created>
-      <option name="number" value="01165" />
-      <option name="project" value="LOCAL" />
-      <updated>1456994311146</updated>
-    </task>
-    <task id="LOCAL-01166" summary="google auth">
-      <created>1456994353190</created>
-      <option name="number" value="01166" />
-      <option name="project" value="LOCAL" />
-      <updated>1456994353190</updated>
-    </task>
-    <task id="LOCAL-01167" summary="google auth">
-      <created>1456994927241</created>
-      <option name="number" value="01167" />
-      <option name="project" value="LOCAL" />
-      <updated>1456994927242</updated>
-    </task>
-    <task id="LOCAL-01168" summary="google auth">
-      <created>1456994986723</created>
-      <option name="number" value="01168" />
-      <option name="project" value="LOCAL" />
-      <updated>1456994986723</updated>
-    </task>
-    <task id="LOCAL-01169" summary="google auth">
-      <created>1456995444331</created>
-      <option name="number" value="01169" />
-      <option name="project" value="LOCAL" />
-      <updated>1456995444331</updated>
-    </task>
-    <task id="LOCAL-01170" summary="google auth">
-      <created>1456995566996</created>
-      <option name="number" value="01170" />
-      <option name="project" value="LOCAL" />
-      <updated>1456995566996</updated>
-    </task>
-    <task id="LOCAL-01171" summary="google auth">
-      <created>1456995629301</created>
-      <option name="number" value="01171" />
-      <option name="project" value="LOCAL" />
-      <updated>1456995629301</updated>
-    </task>
-    <task id="LOCAL-01172" summary="google auth">
-      <created>1456995836097</created>
-      <option name="number" value="01172" />
-      <option name="project" value="LOCAL" />
-      <updated>1456995836097</updated>
-    </task>
-    <task id="LOCAL-01173" summary="google auth">
-      <created>1456996363562</created>
-      <option name="number" value="01173" />
-      <option name="project" value="LOCAL" />
-      <updated>1456996363562</updated>
-    </task>
-    <task id="LOCAL-01174" summary="google auth">
-      <created>1456996435943</created>
-      <option name="number" value="01174" />
-      <option name="project" value="LOCAL" />
-      <updated>1456996435943</updated>
-    </task>
-    <task id="LOCAL-01175" summary="google auth">
-      <created>1456997040967</created>
-      <option name="number" value="01175" />
-      <option name="project" value="LOCAL" />
-      <updated>1456997040967</updated>
-    </task>
-    <task id="LOCAL-01176" summary="google auth">
-      <created>1456997232105</created>
-      <option name="number" value="01176" />
-      <option name="project" value="LOCAL" />
-      <updated>1456997232105</updated>
-    </task>
-    <task id="LOCAL-01177" summary="google auth">
-      <created>1456997247238</created>
-      <option name="number" value="01177" />
-      <option name="project" value="LOCAL" />
-      <updated>1456997247239</updated>
-    </task>
-    <task id="LOCAL-01178" summary="google auth">
-      <created>1456997426772</created>
-      <option name="number" value="01178" />
-      <option name="project" value="LOCAL" />
-      <updated>1456997426772</updated>
-    </task>
-    <task id="LOCAL-01179" summary="google auth">
-      <created>1456997528738</created>
-      <option name="number" value="01179" />
-      <option name="project" value="LOCAL" />
-      <updated>1456997528738</updated>
-    </task>
-    <task id="LOCAL-01180" summary="google auth">
-      <created>1456997604611</created>
-      <option name="number" value="01180" />
-      <option name="project" value="LOCAL" />
-      <updated>1456997604611</updated>
-    </task>
-    <task id="LOCAL-01181" summary="google auth">
-      <created>1456998258024</created>
-      <option name="number" value="01181" />
-      <option name="project" value="LOCAL" />
-      <updated>1456998258024</updated>
-    </task>
-    <task id="LOCAL-01182" summary="google auth">
-      <created>1456998424300</created>
-      <option name="number" value="01182" />
-      <option name="project" value="LOCAL" />
-      <updated>1456998424301</updated>
-    </task>
-    <task id="LOCAL-01183" summary="google auth">
-      <created>1456998494350</created>
-      <option name="number" value="01183" />
-      <option name="project" value="LOCAL" />
-      <updated>1456998494350</updated>
-    </task>
-    <task id="LOCAL-01184" summary="google auth">
-      <created>1456998534783</created>
-      <option name="number" value="01184" />
-      <option name="project" value="LOCAL" />
-      <updated>1456998534783</updated>
-    </task>
-    <task id="LOCAL-01185" summary="google auth">
-      <created>1456998768571</created>
-      <option name="number" value="01185" />
-      <option name="project" value="LOCAL" />
-      <updated>1456998768571</updated>
-    </task>
-    <task id="LOCAL-01186" summary="google auth">
-      <created>1456999090416</created>
-      <option name="number" value="01186" />
-      <option name="project" value="LOCAL" />
-      <updated>1456999090416</updated>
-    </task>
-    <task id="LOCAL-01187" summary="google auth">
-      <created>1456999124198</created>
-      <option name="number" value="01187" />
-      <option name="project" value="LOCAL" />
-      <updated>1456999124198</updated>
-    </task>
-    <task id="LOCAL-01188" summary="google auth">
-      <created>1456999449902</created>
-      <option name="number" value="01188" />
-      <option name="project" value="LOCAL" />
-      <updated>1456999449902</updated>
-    </task>
-    <task id="LOCAL-01189" summary="google auth">
-      <created>1457000020861</created>
-      <option name="number" value="01189" />
-      <option name="project" value="LOCAL" />
-      <updated>1457000020861</updated>
-    </task>
-    <task id="LOCAL-01190" summary="google auth">
-      <created>1457000351655</created>
-      <option name="number" value="01190" />
-      <option name="project" value="LOCAL" />
-      <updated>1457000351655</updated>
     </task>
     <task id="LOCAL-01191" summary="google auth">
       <created>1457000763961</created>
@@ -678,25 +497,222 @@
       <option name="project" value="LOCAL" />
       <updated>1457012177676</updated>
     </task>
-    <option name="localTasksCounter" value="1207" />
+    <task id="LOCAL-01207" summary="google auth">
+      <created>1457012326638</created>
+      <option name="number" value="01207" />
+      <option name="project" value="LOCAL" />
+      <updated>1457012326638</updated>
+    </task>
+    <task id="LOCAL-01208" summary="google auth">
+      <created>1457012557291</created>
+      <option name="number" value="01208" />
+      <option name="project" value="LOCAL" />
+      <updated>1457012557291</updated>
+    </task>
+    <task id="LOCAL-01209" summary="google auth">
+      <created>1457013707720</created>
+      <option name="number" value="01209" />
+      <option name="project" value="LOCAL" />
+      <updated>1457013707720</updated>
+    </task>
+    <task id="LOCAL-01210" summary="google auth">
+      <created>1457013882402</created>
+      <option name="number" value="01210" />
+      <option name="project" value="LOCAL" />
+      <updated>1457013882402</updated>
+    </task>
+    <task id="LOCAL-01211" summary="google auth">
+      <created>1457014491634</created>
+      <option name="number" value="01211" />
+      <option name="project" value="LOCAL" />
+      <updated>1457014491634</updated>
+    </task>
+    <task id="LOCAL-01212" summary="google auth">
+      <created>1457073862277</created>
+      <option name="number" value="01212" />
+      <option name="project" value="LOCAL" />
+      <updated>1457073862289</updated>
+    </task>
+    <task id="LOCAL-01213" summary="google auth">
+      <created>1457073910117</created>
+      <option name="number" value="01213" />
+      <option name="project" value="LOCAL" />
+      <updated>1457073910117</updated>
+    </task>
+    <task id="LOCAL-01214" summary="google auth">
+      <created>1457074291952</created>
+      <option name="number" value="01214" />
+      <option name="project" value="LOCAL" />
+      <updated>1457074291963</updated>
+    </task>
+    <task id="LOCAL-01215" summary="google auth">
+      <created>1457074345297</created>
+      <option name="number" value="01215" />
+      <option name="project" value="LOCAL" />
+      <updated>1457074345297</updated>
+    </task>
+    <task id="LOCAL-01216" summary="google auth">
+      <created>1457074377728</created>
+      <option name="number" value="01216" />
+      <option name="project" value="LOCAL" />
+      <updated>1457074377728</updated>
+    </task>
+    <task id="LOCAL-01217" summary="google auth">
+      <created>1457075062114</created>
+      <option name="number" value="01217" />
+      <option name="project" value="LOCAL" />
+      <updated>1457075062114</updated>
+    </task>
+    <task id="LOCAL-01218" summary="google auth">
+      <created>1457075288366</created>
+      <option name="number" value="01218" />
+      <option name="project" value="LOCAL" />
+      <updated>1457075288367</updated>
+    </task>
+    <task id="LOCAL-01219" summary="google auth">
+      <created>1457077902506</created>
+      <option name="number" value="01219" />
+      <option name="project" value="LOCAL" />
+      <updated>1457077902506</updated>
+    </task>
+    <task id="LOCAL-01220" summary="google auth">
+      <created>1457078117104</created>
+      <option name="number" value="01220" />
+      <option name="project" value="LOCAL" />
+      <updated>1457078117104</updated>
+    </task>
+    <task id="LOCAL-01221" summary="google auth">
+      <created>1457078216527</created>
+      <option name="number" value="01221" />
+      <option name="project" value="LOCAL" />
+      <updated>1457078216527</updated>
+    </task>
+    <task id="LOCAL-01222" summary="google auth">
+      <created>1457078234585</created>
+      <option name="number" value="01222" />
+      <option name="project" value="LOCAL" />
+      <updated>1457078234585</updated>
+    </task>
+    <task id="LOCAL-01223" summary="google auth">
+      <created>1457078249068</created>
+      <option name="number" value="01223" />
+      <option name="project" value="LOCAL" />
+      <updated>1457078249068</updated>
+    </task>
+    <task id="LOCAL-01224" summary="google auth">
+      <created>1457078304194</created>
+      <option name="number" value="01224" />
+      <option name="project" value="LOCAL" />
+      <updated>1457078304194</updated>
+    </task>
+    <task id="LOCAL-01225" summary="google auth">
+      <created>1457078462361</created>
+      <option name="number" value="01225" />
+      <option name="project" value="LOCAL" />
+      <updated>1457078462361</updated>
+    </task>
+    <task id="LOCAL-01226" summary="google auth">
+      <created>1457078563418</created>
+      <option name="number" value="01226" />
+      <option name="project" value="LOCAL" />
+      <updated>1457078563418</updated>
+    </task>
+    <task id="LOCAL-01227" summary="google auth">
+      <created>1457078602137</created>
+      <option name="number" value="01227" />
+      <option name="project" value="LOCAL" />
+      <updated>1457078602137</updated>
+    </task>
+    <task id="LOCAL-01228" summary="google auth">
+      <created>1457079918349</created>
+      <option name="number" value="01228" />
+      <option name="project" value="LOCAL" />
+      <updated>1457079918349</updated>
+    </task>
+    <task id="LOCAL-01229" summary="invite system">
+      <created>1457081438659</created>
+      <option name="number" value="01229" />
+      <option name="project" value="LOCAL" />
+      <updated>1457081438659</updated>
+    </task>
+    <task id="LOCAL-01230" summary="invite system">
+      <created>1457081583421</created>
+      <option name="number" value="01230" />
+      <option name="project" value="LOCAL" />
+      <updated>1457081583421</updated>
+    </task>
+    <task id="LOCAL-01231" summary="invite system">
+      <created>1457082089669</created>
+      <option name="number" value="01231" />
+      <option name="project" value="LOCAL" />
+      <updated>1457082089669</updated>
+    </task>
+    <task id="LOCAL-01232" summary="invite system">
+      <created>1457083770007</created>
+      <option name="number" value="01232" />
+      <option name="project" value="LOCAL" />
+      <updated>1457083770007</updated>
+    </task>
+    <task id="LOCAL-01233" summary="invite system">
+      <created>1457084115734</created>
+      <option name="number" value="01233" />
+      <option name="project" value="LOCAL" />
+      <updated>1457084115735</updated>
+    </task>
+    <task id="LOCAL-01234" summary="invite system">
+      <created>1457084187458</created>
+      <option name="number" value="01234" />
+      <option name="project" value="LOCAL" />
+      <updated>1457084187458</updated>
+    </task>
+    <task id="LOCAL-01235" summary="invite system">
+      <created>1457084378454</created>
+      <option name="number" value="01235" />
+      <option name="project" value="LOCAL" />
+      <updated>1457084378454</updated>
+    </task>
+    <task id="LOCAL-01236" summary="invite system">
+      <created>1457084390621</created>
+      <option name="number" value="01236" />
+      <option name="project" value="LOCAL" />
+      <updated>1457084390621</updated>
+    </task>
+    <task id="LOCAL-01237" summary="invite system">
+      <created>1457084460256</created>
+      <option name="number" value="01237" />
+      <option name="project" value="LOCAL" />
+      <updated>1457084460256</updated>
+    </task>
+    <task id="LOCAL-01238" summary="invite system">
+      <created>1457084511602</created>
+      <option name="number" value="01238" />
+      <option name="project" value="LOCAL" />
+      <updated>1457084511602</updated>
+    </task>
+    <task id="LOCAL-01239" summary="invite system">
+      <created>1457084620902</created>
+      <option name="number" value="01239" />
+      <option name="project" value="LOCAL" />
+      <updated>1457084620902</updated>
+    </task>
+    <option name="localTasksCounter" value="1240" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29136163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32371795" sideWeight="0.4692533" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7307692" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29136163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.69711536" sideWeight="0.5307467" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7307692" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -704,6 +720,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.69711536" sideWeight="0.5307467" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -725,141 +742,23 @@
     </option>
     <MESSAGE value="cxhx" />
     <MESSAGE value="google auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="google auth" />
+    <MESSAGE value="invite system" />
+    <option name="LAST_COMMIT_MESSAGE" value="invite system" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="596">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0338984" vertical-offset="0" max-vertical-offset="9930">
-          <caret line="313" column="7" selection-start-line="313" selection-start-column="7" selection-end-line="313" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/geoip.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81643355" vertical-offset="148" max-vertical-offset="900">
-          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7307693" vertical-offset="0" max-vertical-offset="2385">
-          <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6066434" vertical-offset="493" max-vertical-offset="1170">
-          <caret line="56" column="6" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FacebookController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7902098" vertical-offset="898" max-vertical-offset="1470">
-          <caret line="90" column="5" selection-start-line="38" selection-start-column="4" selection-end-line="90" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fortrabbit.ef-prod.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="596">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fortrabbit.ef-test.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="596">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15100671" vertical-offset="0" max-vertical-offset="615">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/share42/share42.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.025728988" vertical-offset="0" max-vertical-offset="583">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/googleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60314685" vertical-offset="135" max-vertical-offset="1260">
-          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="660">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36239782" vertical-offset="1532" max-vertical-offset="2385">
-          <caret line="111" column="17" selection-start-line="111" selection-start-column="17" selection-end-line="111" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/vendors/tags/bower_components/angular/angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13869864" vertical-offset="139374" max-vertical-offset="420750">
-          <caret line="9297" column="21" selection-start-line="9297" selection-start-column="21" selection-end-line="9297" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.482143" vertical-offset="1390" max-vertical-offset="3975">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.851648" vertical-offset="3951" max-vertical-offset="8460">
-          <caret line="551" column="20" selection-start-line="551" selection-start-column="20" selection-end-line="551" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/emails/forgot-password.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/events/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08928572" vertical-offset="280" max-vertical-offset="840">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/events/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.3125" vertical-offset="175" max-vertical-offset="1635">
@@ -878,13 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.66785717" vertical-offset="316" max-vertical-offset="1380">
           <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6785714" vertical-offset="5755" max-vertical-offset="6360">
-          <caret line="409" column="10" selection-start-line="409" selection-start-column="10" selection-end-line="409" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -920,14 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2274" max-vertical-offset="3210">
-          <caret line="169" column="38" selection-start-line="169" selection-start-column="38" selection-end-line="169" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="572">
@@ -939,7 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -947,7 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1050">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -955,7 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -963,17 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.31413612" vertical-offset="180" max-vertical-offset="1995">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="39.375" vertical-offset="2790" max-vertical-offset="7950">
-          <caret line="123" column="7" selection-start-line="123" selection-start-column="7" selection-end-line="123" selection-end-column="7" />
-          <folding>
-            <element signature="e#39#52#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -981,7 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="5275" max-vertical-offset="76020">
           <caret line="364" column="33" selection-start-line="364" selection-start-column="17" selection-end-line="364" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
@@ -992,15 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1008,15 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5235602" vertical-offset="0" max-vertical-offset="573">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/auth/message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.12565444" vertical-offset="72" max-vertical-offset="645">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,9 +875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.7410715" vertical-offset="0" max-vertical-offset="1335">
           <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
-          <folding>
-            <element signature="e#41#63#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1049,7 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="8745">
           <caret line="12" column="37" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1057,67 +904,250 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.094339624" vertical-offset="1233370" max-vertical-offset="1233900">
           <caret line="82228" column="131" selection-start-line="82228" selection-start-column="131" selection-end-line="82228" selection-end-column="131" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/message.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0" vertical-offset="207" max-vertical-offset="1005">
-          <caret line="52" column="48" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/twitterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7120419" vertical-offset="597" max-vertical-offset="1170">
+          <caret line="80" column="87" selection-start-line="80" selection-start-column="87" selection-end-line="80" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/frontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.46596858" vertical-offset="267" max-vertical-offset="840">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/filesystems.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4764398" vertical-offset="657" max-vertical-offset="1410">
+          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/auth/message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31937173" vertical-offset="72" max-vertical-offset="645">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/googleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7643979" vertical-offset="687" max-vertical-offset="1260">
+          <caret line="86" column="90" selection-start-line="86" selection-start-column="90" selection-end-line="86" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FacebookController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8062827" vertical-offset="678" max-vertical-offset="1275">
+          <caret line="89" column="90" selection-start-line="89" selection-start-column="90" selection-end-line="89" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/laravel-backup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21465969" vertical-offset="612" max-vertical-offset="1725">
+          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3975">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/googletagmanager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31413612" vertical-offset="0" max-vertical-offset="573">
+          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/spatie/laravel-googletagmanager/src/DataLayer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05235602" vertical-offset="0" max-vertical-offset="1050">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3107142" vertical-offset="2304" max-vertical-offset="8235">
+          <caret line="30" column="47" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="47" />
+          <folding>
+            <element signature="e#39#52#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.875" vertical-offset="1980" max-vertical-offset="8235">
-          <caret line="167" column="66" selection-start-line="167" selection-start-column="66" selection-end-line="167" selection-end-column="66" />
-          <folding>
-            <element signature="e#38#51#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-8.866072" vertical-offset="5130" max-vertical-offset="8220">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875" vertical-offset="135" max-vertical-offset="1200">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="30" />
+        <state vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="1200">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/account/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.669643" vertical-offset="1495" max-vertical-offset="2730">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/emails/auth/reminder.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_04_084853_create_invites_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5235602" vertical-offset="0" max-vertical-offset="630">
+          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+          <folding>
+            <element signature="e#7#48#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/secrets.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18324608" vertical-offset="0" max-vertical-offset="930">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.25" vertical-offset="2262" max-vertical-offset="3690">
-          <caret line="164" column="51" selection-start-line="164" selection-start-column="51" selection-end-line="164" selection-end-column="51" />
+        <state vertical-scroll-proportion="5.7853403" vertical-offset="0" max-vertical-offset="3690">
+          <caret line="221" column="39" selection-start-line="221" selection-start-column="39" selection-end-line="221" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/laravel-backup.php">
+    <entry file="file://$PROJECT_DIR$/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.125" vertical-offset="612" max-vertical-offset="1725">
-          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        <state vertical-scroll-proportion="-1.8062828" vertical-offset="1035" max-vertical-offset="2385">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/secrets.json">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875" vertical-offset="135" max-vertical-offset="930">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="39" />
+        <state vertical-scroll-proportion="21.25" vertical-offset="990" max-vertical-offset="6525">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Invite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.625" vertical-offset="762" max-vertical-offset="1335">
+          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/filesystems.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/products.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39790577" vertical-offset="837" max-vertical-offset="1410">
-          <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+        <state vertical-scroll-proportion="31.875" vertical-offset="765" max-vertical-offset="5325">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="349" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/InviteMiddleware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.125" vertical-offset="42" max-vertical-offset="615">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#39#51#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0" vertical-offset="222" max-vertical-offset="1035">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InviteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7382199" vertical-offset="417" max-vertical-offset="990">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="e#39#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/invite/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-43.75" vertical-offset="0" max-vertical-offset="1275">
+          <caret line="70" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/invite/invitesonly.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.583333" vertical-offset="430" max-vertical-offset="990">
+          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1335">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73214287" vertical-offset="2725" max-vertical-offset="3285">
+          <caret line="213" column="25" selection-start-line="213" selection-start-column="25" selection-end-line="213" selection-end-column="25" />
           <folding />
         </state>
       </provider>

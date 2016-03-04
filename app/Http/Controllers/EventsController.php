@@ -14,6 +14,7 @@ use Lang;
 use Uuid;
 use App\User;
 use GeoIP;
+use Spatie\GoogleTagManager;
 
 class EventsController extends Controller {
 
@@ -26,6 +27,8 @@ class EventsController extends Controller {
   public function index()
     {
         $events = Event::latest()->get();
+        $dataLayer = new GoogleTagManager\DataLayer();
+        $dataLayer->set('ecommerce.click.events', $events->toJson());
         foreach ($events as $event) {
             $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
             $date->setTimezone(new \DateTimeZone($event->timezone));
@@ -161,6 +164,7 @@ class EventsController extends Controller {
    */
   public function show($uuid)
   {
+
         $ip = $_SERVER["REMOTE_ADDR"];
         $location = GeoIP::getLocation($ip);
         if($location['timezone']!=NULL || $location['timezone']!='') {
@@ -172,6 +176,8 @@ class EventsController extends Controller {
             $my_time_zone = 'UTC';
         }
         $event = Event::whereUuid($uuid)->first();
+        $dataLayer = new GoogleTagManager\DataLayer();
+        $dataLayer->set('ecommerce.click.events', $event->toJson());
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($my_time_zone));
         $event_start_zero = $date;

@@ -30,6 +30,7 @@ class Kernel extends HttpKernel
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'Admin' => \App\Http\Middleware\Admin::class,
+        'invite' => \App\Http\Middleware\InviteMiddleware::class,
     ];
 
     protected function schedule(Schedule $schedule)
@@ -58,4 +59,5 @@ class Kernel extends HttpKernel
                 Log::info('My-project Database backup complete');
             });
     }
+
 }
