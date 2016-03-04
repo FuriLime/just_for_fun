@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -62,20 +62,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.0" vertical-offset="798" max-vertical-offset="6525">
-              <caret line="66" column="186" selection-start-line="66" selection-start-column="186" selection-end-line="66" selection-end-column="186" />
+            <state vertical-scroll-proportion="0.34285715" vertical-offset="798" max-vertical-offset="6525">
+              <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31607142" vertical-offset="2043" max-vertical-offset="3315">
+            <state vertical-scroll-proportion="-7.375" vertical-offset="2043" max-vertical-offset="3315">
               <caret line="152" column="19" selection-start-line="152" selection-start-column="19" selection-end-line="152" selection-end-column="19" />
               <folding />
             </state>
@@ -142,8 +142,8 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MicrosoftController.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
       </list>
     </option>
   </component>
@@ -390,12 +390,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01249" summary="invite system">
-      <created>1457087437721</created>
-      <option name="number" value="01249" />
-      <option name="project" value="LOCAL" />
-      <updated>1457087437721</updated>
     </task>
     <task id="LOCAL-01250" summary="invite system">
       <created>1457087607350</created>
@@ -685,7 +679,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457101242538</updated>
     </task>
-    <option name="localTasksCounter" value="1298" />
+    <task id="LOCAL-01298" summary="invite system">
+      <created>1457101267071</created>
+      <option name="number" value="01298" />
+      <option name="project" value="LOCAL" />
+      <updated>1457101267071</updated>
+    </task>
+    <option name="localTasksCounter" value="1299" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1089,18 +1089,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.0" vertical-offset="798" max-vertical-offset="6525">
-          <caret line="66" column="186" selection-start-line="66" selection-start-column="186" selection-end-line="66" selection-end-column="186" />
+        <state vertical-scroll-proportion="-7.375" vertical-offset="2043" max-vertical-offset="3315">
+          <caret line="152" column="19" selection-start-line="152" selection-start-column="19" selection-end-line="152" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31607142" vertical-offset="2043" max-vertical-offset="3315">
-          <caret line="152" column="19" selection-start-line="152" selection-start-column="19" selection-end-line="152" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.34285715" vertical-offset="798" max-vertical-offset="6525">
+          <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
           <folding />
         </state>
       </provider>
