@@ -167,7 +167,7 @@ return [
         Torann\GeoIP\GeoIPServiceProvider::class,
         Msurguy\Honeypot\HoneypotServiceProvider::class,
         Weblee\Mandrill\MandrillServiceProvider::class,
-//        Artdarek\OAuth\OAuthServiceProvider::class,
+        Artdarek\OAuth\OAuthServiceProvider::class,
     ],
 
     /*
@@ -236,7 +236,7 @@ return [
         'MC' => Mailchimp\MailchimpFacade::class,
         'Honeypot' => Msurguy\Honeypot\HoneypotFacade::class,
         'MandrillMail'  => Weblee\Mandrill\MandrillFacade::class,
-//        'OAuth' => Artdarek\OAuth\Facade\OAuth::class,
+        'OAuth' => Artdarek\OAuth\Facade\OAuth::class,
     ],
 
 ];
