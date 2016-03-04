@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -65,8 +66,8 @@
       <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.0" vertical-offset="798" max-vertical-offset="6525">
-              <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+            <state vertical-scroll-proportion="-3.4038463" vertical-offset="2793" max-vertical-offset="6525">
+              <caret line="198" column="61" selection-start-line="198" selection-start-column="53" selection-end-line="198" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -76,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.31607142" vertical-offset="2043" max-vertical-offset="3315">
-              <caret line="152" column="46" selection-start-line="152" selection-start-column="46" selection-end-line="152" selection-end-column="46" />
+              <caret line="152" column="48" selection-start-line="152" selection-start-column="48" selection-end-line="152" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -391,12 +392,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-01252" summary="invite system">
-      <created>1457087673774</created>
-      <option name="number" value="01252" />
-      <option name="project" value="LOCAL" />
-      <updated>1457087673774</updated>
-    </task>
     <task id="LOCAL-01253" summary="invite system">
       <created>1457087759732</created>
       <option name="number" value="01253" />
@@ -685,7 +680,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457101546605</updated>
     </task>
-    <option name="localTasksCounter" value="1301" />
+    <task id="LOCAL-01301" summary="invite system">
+      <created>1457101578805</created>
+      <option name="number" value="01301" />
+      <option name="project" value="LOCAL" />
+      <updated>1457101578805</updated>
+    </task>
+    <option name="localTasksCounter" value="1302" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1053,7 +1054,7 @@
         <state vertical-scroll-proportion="-0.20418848" vertical-offset="777" max-vertical-offset="1350">
           <caret line="44" column="55" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="55" />
           <folding>
-            <element signature="e#23#62#0#PHP" expanded="true" />
+            <element signature="e#23#62#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1069,14 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="735">
           <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.0" vertical-offset="798" max-vertical-offset="6525">
-          <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1101,10 +1094,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4038463" vertical-offset="2793" max-vertical-offset="6525">
+          <caret line="198" column="61" selection-start-line="198" selection-start-column="53" selection-end-line="198" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31607142" vertical-offset="2043" max-vertical-offset="3315">
-          <caret line="152" column="46" selection-start-line="152" selection-start-column="46" selection-end-line="152" selection-end-column="46" />
+          <caret line="152" column="48" selection-start-line="152" selection-start-column="48" selection-end-line="152" selection-end-column="48" />
           <folding />
         </state>
       </provider>
