@@ -14,7 +14,7 @@ use Lang;
 use Uuid;
 use App\User;
 use GeoIP;
-
+use Spatie\GoogleTagManager;
 
 class EventsController extends Controller {
 
