@@ -16,7 +16,7 @@ class InviteController extends Controller {
      */
 
     public function __construct() {
-        $this->middleware('auth', ['except' => 'create', 'except' => 'store']);
+        $this->middleware('auth', ['except' => 'store']);
     }
 
     public function create() {
