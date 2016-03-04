@@ -175,7 +175,7 @@ class EventsController extends Controller {
         }
         $event = Event::whereUuid($uuid)->first();
         $dataLayer = new GoogleTagManager\DataLayer();
-        $dataLayer->set('ecommerce.click.products', $event->toJson());
+        $dataLayer->set('ecommerce.click.events', $event->toJson());
         echo $dataLayer->toJson();
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($my_time_zone));
