@@ -5,7 +5,7 @@ return [
     /*
      * The Google Tag Manager id, should be a code that looks something like "gtm-xxxx".
      */
-    'id' => '',
+    'id' => 'GTM-NL5B2M',
     
     /*
      * Enable or disable script rendering. Useful for local development.

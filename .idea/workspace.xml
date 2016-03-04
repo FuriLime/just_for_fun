@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/googletagmanager.php" afterPath="$PROJECT_DIR$/config/googletagmanager.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -40,10 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53571427" vertical-offset="315" max-vertical-offset="6525">
+            <state vertical-scroll-proportion="-12.5" vertical-offset="315" max-vertical-offset="6525">
               <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -72,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="googletagmanager.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="googletagmanager.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/googletagmanager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="495">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.18324608" vertical-offset="0" max-vertical-offset="573">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -103,7 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/admin/eventcategories/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/eventcategories/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/eventcategories/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/eventcategories/edit.blade.php" />
@@ -154,6 +153,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/config/googletagmanager.php" />
       </list>
     </option>
   </component>
@@ -302,12 +302,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01166" summary="google auth">
-      <created>1456994353190</created>
-      <option name="number" value="01166" />
-      <option name="project" value="LOCAL" />
-      <updated>1456994353190</updated>
     </task>
     <task id="LOCAL-01167" summary="google auth">
       <created>1456994927241</created>
@@ -597,7 +591,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457074291963</updated>
     </task>
-    <option name="localTasksCounter" value="1215" />
+    <task id="LOCAL-01215" summary="google auth">
+      <created>1457074345297</created>
+      <option name="number" value="01215" />
+      <option name="project" value="LOCAL" />
+      <updated>1457074345297</updated>
+    </task>
+    <option name="localTasksCounter" value="1216" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1007,21 +1007,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/googletagmanager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53571427" vertical-offset="315" max-vertical-offset="6525">
+        <state vertical-scroll-proportion="-12.5" vertical-offset="315" max-vertical-offset="6525">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/googletagmanager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18324608" vertical-offset="0" max-vertical-offset="573">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
