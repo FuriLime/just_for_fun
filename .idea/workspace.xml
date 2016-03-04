@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
+    <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="invite system">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_03_04_084853_create_invites_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -42,8 +43,8 @@
       <file leaf-file-name="2016_03_04_084853_create_invites_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_04_084853_create_invites_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4712042" vertical-offset="0" max-vertical-offset="630">
-              <caret line="18" column="39" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.5235602" vertical-offset="0" max-vertical-offset="630">
+              <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
               <folding>
                 <element signature="e#7#48#0#PHP" expanded="true" />
               </folding>
@@ -309,12 +310,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01180" summary="google auth">
-      <created>1456997604611</created>
-      <option name="number" value="01180" />
-      <option name="project" value="LOCAL" />
-      <updated>1456997604611</updated>
     </task>
     <task id="LOCAL-01181" summary="google auth">
       <created>1456998258024</created>
@@ -604,7 +599,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457079918349</updated>
     </task>
-    <option name="localTasksCounter" value="1229" />
+    <task id="LOCAL-01229" summary="invite system">
+      <created>1457081438659</created>
+      <option name="number" value="01229" />
+      <option name="project" value="LOCAL" />
+      <updated>1457081438659</updated>
+    </task>
+    <option name="localTasksCounter" value="1230" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -651,7 +652,8 @@
     </option>
     <MESSAGE value="cxhx" />
     <MESSAGE value="google auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="google auth" />
+    <MESSAGE value="invite system" />
+    <option name="LAST_COMMIT_MESSAGE" value="invite system" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1031,8 +1033,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_04_084853_create_invites_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4712042" vertical-offset="0" max-vertical-offset="630">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.5235602" vertical-offset="0" max-vertical-offset="630">
+          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
           <folding>
             <element signature="e#7#48#0#PHP" expanded="true" />
           </folding>
