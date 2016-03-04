@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Mail;
+use Mail;
 
 class Invite extends Model
 {
