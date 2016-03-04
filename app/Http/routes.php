@@ -214,7 +214,7 @@ Route::get('{name?}', 'JoshController@showFrontEndView');
 
 
 Route::get('auth/invite', 'InviteController@create');
-Route::post('invite', 'InviteController@store');
+Route::post('auth/invite', 'InviteController@store');
 Route::get('auth/invite-only', 'InviteController@invitesonly');
 
 # End of frontend views
