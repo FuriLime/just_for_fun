@@ -213,7 +213,7 @@ Route::post('blogitem/{blog}/comment', 'BlogController@storeCommentFrontend');
 Route::get('{name?}', 'JoshController@showFrontEndView');
 
 
-Route::get('auth/invite', 'InviteController@create');
+Route::get('auth/create', 'InviteController@create');
 Route::post('auth/invite', 'InviteController@store');
 Route::get('auth/invite-only', 'InviteController@invitesonly');
 
