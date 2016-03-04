@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/InviteController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/InviteController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -61,8 +61,8 @@
       <file leaf-file-name="InviteController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InviteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.75" vertical-offset="180" max-vertical-offset="1035">
-              <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+            <state vertical-scroll-proportion="-1.375" vertical-offset="237" max-vertical-offset="1035">
+              <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
               <folding>
                 <element signature="e#39#61#0#PHP" expanded="true" />
               </folding>
@@ -142,8 +142,8 @@
         <option value="$PROJECT_DIR$/config/services.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/googleController.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/InviteController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/InviteController.php" />
       </list>
     </option>
   </component>
@@ -292,12 +292,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01222" summary="google auth">
-      <created>1457078234585</created>
-      <option name="number" value="01222" />
-      <option name="project" value="LOCAL" />
-      <updated>1457078234585</updated>
     </task>
     <task id="LOCAL-01223" summary="google auth">
       <created>1457078249068</created>
@@ -587,7 +581,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457089613270</updated>
     </task>
-    <option name="localTasksCounter" value="1271" />
+    <task id="LOCAL-01271" summary="invite system">
+      <created>1457089646275</created>
+      <option name="number" value="01271" />
+      <option name="project" value="LOCAL" />
+      <updated>1457089646275</updated>
+    </task>
+    <option name="localTasksCounter" value="1272" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1034,8 +1034,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InviteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75" vertical-offset="180" max-vertical-offset="1035">
-          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+        <state vertical-scroll-proportion="-1.375" vertical-offset="237" max-vertical-offset="1035">
+          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
           <folding>
             <element signature="e#39#61#0#PHP" expanded="true" />
           </folding>
