@@ -6,7 +6,8 @@ use App\Invite;
 
 use Illuminate\Http\Request;
 use Auth;
-
+use App\User;
+use App\Activate;
 class InviteController extends Controller {
 
     /**
@@ -14,8 +15,13 @@ class InviteController extends Controller {
      * return view with invite form
      *
      */
+
+//    public function __construct() {
+//        $this->middleware('auth', ['except' => 'invitesonly']);
+//    }
+
     public function create() {
-        return view('invite.create');
+        return View('invite.create');
     }
 
 
@@ -31,9 +37,11 @@ class InviteController extends Controller {
         $message = $request->get('message');
 
         //create new invite
-        $inviter = Auth::user();
+        $inviter = new User();
+
         $invite = new Invite(['email' => $email]);
-        $invite->inviter_id = $inviter->id;
+        $invite->inviter_id = '1';
+//        dd($inviter->id);
         $invite->save();
 
 
@@ -54,8 +62,6 @@ class InviteController extends Controller {
         return view('invite.invitesonly');
     }
 
-    public function __construct() {
-        $this->middleware('auth', ['except' => 'invitesonly']);
-    }
+
 
 }

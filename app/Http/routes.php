@@ -150,7 +150,7 @@ Route::group(array('prefix' => 'admin'), function () {
 # Signin / Signup / Forgot-password
 Route::get('signin', array('as' => 'signin','uses' => 'AuthController@getSignin'));
 Route::post('signin','AuthController@postSignin');
-Route::post('signup',array('as' => 'signup','uses' => 'AuthController@postSignup'));
+Route::post('register', 'AuthController@postSignup');
 Route::post('forgot-password',array('as' => 'forgot-password','uses' => 'AuthController@postForgotPassword'));
 
 # Forgot Password Confirmation
@@ -213,8 +213,8 @@ Route::post('blogitem/{blog}/comment', 'BlogController@storeCommentFrontend');
 Route::get('{name?}', 'JoshController@showFrontEndView');
 
 
-Route::get('invite', 'InviteController@create');
-Route::post('invite', 'InviteController@store');
+Route::get('auth/invite', 'InviteController@create');
+Route::post('auth/invite', 'InviteController@store');
 Route::get('auth/invite-only', 'InviteController@invitesonly');
 
 # End of frontend views
