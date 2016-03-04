@@ -162,7 +162,7 @@ class EventsController extends Controller {
    */
   public function show($uuid)
   {
-        GoogleTagManager::set('pageType', 'show');
+        GoogleTagManager::set('pageType', 'event');
         $ip = $_SERVER["REMOTE_ADDR"];
         $location = GeoIP::getLocation($ip);
         if($location['timezone']!=NULL || $location['timezone']!='') {

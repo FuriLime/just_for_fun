@@ -30,7 +30,7 @@
 </head>
 
 <body>
-<script>dataLayer = [{"pageType":"show"}];</script>
+<script>dataLayer = [{"pageType":"event"}];</script>
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NL5B2M"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
