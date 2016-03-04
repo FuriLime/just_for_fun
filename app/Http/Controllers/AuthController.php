@@ -10,7 +10,6 @@ use URL;
 use \Cartalyst\Sentinel\Checkpoints\NotActivatedException;
 use \Cartalyst\Sentinel\Checkpoints\ThrottlingException;
 use Reminder;
-//use Mail;
 use Socialite;
 use App\User;
 use App\Activate;

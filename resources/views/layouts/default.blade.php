@@ -30,6 +30,7 @@
 </head>
 
 <body>
+<script>dataLayer = [{"pageType":"show"}];</script>
     <!-- Header Start -->
     <header>
         <!-- Icon Section Start -->
