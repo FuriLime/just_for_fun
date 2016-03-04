@@ -29,7 +29,7 @@ return [
 		'Microsoft' => [
 			'client_id'     => $secrets['CUSTOM']['WINDOWS_ID'],
 			'client_secret' => $secrets['CUSTOM']['WINDOWS_SECRET'],
-			'scope'         => ['basic'],
+			'scope'         => ['basic', 'signin', 'emails', 'work_profile', 'postal_addresses'],
 		],
 
 	]
