@@ -64,7 +64,7 @@
 						
 						@if(!Sentinel::check())
 						<li><a href="" class="fa fa-sign-in" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'#tologin'">@lang('frontend.sign_in')</a></li>
-                        <li><a href="#auth" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'#toregister'">@lang('frontend.sign_up')</a></li>
+                            <li><a href="#auth" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'#toregister'">@lang('frontend.sign_up')</a></li>
 						@endif
 
 						<li><a href="{{ URL::to('events') }}" data-toggle="modal">Events</a></li>
@@ -196,7 +196,7 @@
 						</form>
 					</div>
 					<div id="register" class="animate form">
-						<form action="{{ route('register') }}" autocomplete="on" method="post" role="form">
+						<form action="{{ route('signup') }}" autocomplete="on" method="post" role="form">
 							<h3 class="black_bg">
 								<img src="{{ asset('assets/img/logo.png') }}" alt="josh logo">
 								<br>Sign Up</h3>
