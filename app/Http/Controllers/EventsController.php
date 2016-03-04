@@ -14,7 +14,7 @@ use Lang;
 use Uuid;
 use App\User;
 use GeoIP;
-use GoogleTagManager;
+
 
 class EventsController extends Controller {
 
@@ -174,7 +174,7 @@ class EventsController extends Controller {
             $my_time_zone = 'UTC';
         }
         $event = Event::whereUuid($uuid)->first();
-        $dataLayer = new DataLayer();
+        $dataLayer = new \DataLayer();
         $dataLayer->set('ecommerce.click.products', $event->toJson());
         echo $dataLayer->toJson();
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
