@@ -31,6 +31,7 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
+        $this->middleware('invite', ['only' => ['getRegister', 'postRegister']]);
     }
 
     /**
@@ -61,5 +62,26 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+
+    public function postRegister(Request $request) {
+        $validator = $this->registrar->validator($request->all());
+
+        if ($validator->fails()) {
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+
+        $this->auth->login($this->registrar->create($request->all()));
+
+        $invite = Invite::where('code', $request->input('code'))->first();
+        $user = $this->auth->user();
+        $invite->invitee_id = $user->id;
+        $invite->claimed = Carbon::now();
+        $invite->save();
+
+        return redirect($this->redirectPath());
     }
 }
