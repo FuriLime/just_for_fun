@@ -14,6 +14,11 @@ class InviteController extends Controller {
      * return view with invite form
      *
      */
+
+    public function __construct() {
+        $this->middleware('auth', ['except' => 'invitesonly']);
+    }
+
     public function create() {
         return View('invite.create');
     }
@@ -54,8 +59,6 @@ class InviteController extends Controller {
         return view('invite.invitesonly');
     }
 
-    public function __construct() {
-        $this->middleware('auth', ['except' => 'invitesonly']);
-    }
+
 
 }

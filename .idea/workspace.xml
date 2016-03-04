@@ -51,8 +51,8 @@
       <file leaf-file-name="InviteController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InviteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20942408" vertical-offset="135" max-vertical-offset="990">
-              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.4973822" vertical-offset="0" max-vertical-offset="1035">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding>
                 <element signature="e#39#61#0#PHP" expanded="true" />
               </folding>
@@ -63,8 +63,8 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.9038463" vertical-offset="2783" max-vertical-offset="3315">
-              <caret line="210" column="32" selection-start-line="210" selection-start-column="32" selection-end-line="210" selection-end-column="32" />
+            <state vertical-scroll-proportion="-6.1923075" vertical-offset="2783" max-vertical-offset="3315">
+              <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -334,12 +334,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01200" summary="google auth">
-      <created>1457010674372</created>
-      <option name="number" value="01200" />
-      <option name="project" value="LOCAL" />
-      <updated>1457010674372</updated>
     </task>
     <task id="LOCAL-01201" summary="google auth">
       <created>1457010986177</created>
@@ -629,7 +623,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457087244295</updated>
     </task>
-    <option name="localTasksCounter" value="1249" />
+    <task id="LOCAL-01249" summary="invite system">
+      <created>1457087437721</created>
+      <option name="number" value="01249" />
+      <option name="project" value="LOCAL" />
+      <updated>1457087437721</updated>
+    </task>
+    <option name="localTasksCounter" value="1250" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1066,14 +1066,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.9038463" vertical-offset="2783" max-vertical-offset="3315">
-          <caret line="210" column="32" selection-start-line="210" selection-start-column="32" selection-end-line="210" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="24.25" vertical-offset="3147" max-vertical-offset="3720">
@@ -1082,10 +1074,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1923075" vertical-offset="2783" max-vertical-offset="3315">
+          <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InviteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20942408" vertical-offset="135" max-vertical-offset="990">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.4973822" vertical-offset="0" max-vertical-offset="1035">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
             <element signature="e#39#61#0#PHP" expanded="true" />
           </folding>
