@@ -162,7 +162,7 @@ class EventsController extends Controller {
    */
   public function show($uuid)
   {
-        GoogleTagManager::set('pageType', 'event');
+
         $ip = $_SERVER["REMOTE_ADDR"];
         $location = GeoIP::getLocation($ip);
         if($location['timezone']!=NULL || $location['timezone']!='') {
@@ -174,6 +174,9 @@ class EventsController extends Controller {
             $my_time_zone = 'UTC';
         }
         $event = Event::whereUuid($uuid)->first();
+        $dataLayer = new DataLayer();
+        $dataLayer->set('ecommerce.click.products', $event->toJson());
+        echo $dataLayer->toJson();
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($my_time_zone));
         $event_start_zero = $date;
