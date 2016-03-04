@@ -150,7 +150,7 @@ Route::group(array('prefix' => 'admin'), function () {
 # Signin / Signup / Forgot-password
 Route::get('signin', array('as' => 'signin','uses' => 'AuthController@getSignin'));
 Route::post('signin','AuthController@postSignin');
-Route::post('auth.register', 'AuthController@postSignup');
+Route::post('register', 'AuthController@postSignup');
 Route::post('forgot-password',array('as' => 'forgot-password','uses' => 'AuthController@postForgotPassword'));
 
 # Forgot Password Confirmation

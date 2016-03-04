@@ -196,7 +196,7 @@
 						</form>
 					</div>
 					<div id="register" class="animate form">
-						<form action="{{ route('auth.register') }}" autocomplete="on" method="post" role="form">
+						<form action="{{ route('register') }}" autocomplete="on" method="post" role="form">
 							<h3 class="black_bg">
 								<img src="{{ asset('assets/img/logo.png') }}" alt="josh logo">
 								<br>Sign Up</h3>
