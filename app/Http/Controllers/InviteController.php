@@ -6,7 +6,8 @@ use App\Invite;
 
 use Illuminate\Http\Request;
 use Auth;
-
+use App\User;
+use App\Activate;
 class InviteController extends Controller {
 
     /**
