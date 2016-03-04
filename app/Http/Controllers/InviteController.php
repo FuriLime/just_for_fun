@@ -40,7 +40,7 @@ class InviteController extends Controller {
         $inviter = new User();
 
         $invite = new Invite(['email' => $email]);
-        $invite->inviter_id = $inviter->id;
+        $invite->inviter_id = '1';
 //        dd($inviter->id);
         $invite->save();
 
