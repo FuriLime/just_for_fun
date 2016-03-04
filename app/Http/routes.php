@@ -177,6 +177,8 @@ Route::get('/', array('as' => 'home', function () {
     return View::make('index');
 }));
 
+Route::get('microsoft', 'MicrosoftController@index');
+
 // Route::get('/', function(){
 // 	$data = [
 // 		'title'=>'sdfsdfsdfsdf',
