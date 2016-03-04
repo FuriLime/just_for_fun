@@ -37,6 +37,7 @@ class InviteController extends Controller {
 
         //create new invite
         $inviter = Auth::user();
+        dd($inviter);
         $invite = new Invite(['email' => $email]);
         $invite->inviter_id = $inviter->id;
         dd($inviter->id);
