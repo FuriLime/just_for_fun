@@ -43,11 +43,17 @@ return [
         'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+//
+//    'facebook' => [
+//        'client_id' => $secrets['CUSTOM']['FACEBOOK_APP_ID'],
+//        'client_secret' => $secrets['CUSTOM']['FACEBOOK_APP_SECRET'],
+//        'redirect' => $secrets['CUSTOM']['FACEBOOK_CALLBACK_URL'],
+//    ],
 
     'facebook' => [
-        'client_id' => $secrets['CUSTOM']['FACEBOOK_APP_ID'],
-        'client_secret' => $secrets['CUSTOM']['FACEBOOK_APP_SECRET'],
-        'redirect' => $secrets['CUSTOM']['FACEBOOK_CALLBACK_URL'],
+        'client_id' => '1685286605050549',
+        'client_secret' => '7aa94a9144725b0eb4c14eb3f6bb3ed8',
+        'redirect' => 'http://event.test-y-sbm.com/oauthfacebook',
     ],
 
     'twitter' => [
