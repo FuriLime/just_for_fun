@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -91,14 +92,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InviteMiddleware.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InviteMiddleware.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Middleware/InviteMiddleware.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7382199" vertical-offset="42" max-vertical-offset="615">
-              <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+            <state vertical-scroll-proportion="-20.125" vertical-offset="42" max-vertical-offset="615">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
                 <element signature="e#39#51#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Kernel.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5026178" vertical-offset="222" max-vertical-offset="1035">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,7 +158,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/MailController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/storage/logs/laravel.log" />
-        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/config/laravel-backup.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/config/filesystems.php" />
@@ -165,6 +175,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/InviteController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/InviteMiddleware.php" />
+        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
       </list>
     </option>
   </component>
@@ -381,18 +392,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01186" summary="google auth">
-      <created>1456999090416</created>
-      <option name="number" value="01186" />
-      <option name="project" value="LOCAL" />
-      <updated>1456999090416</updated>
-    </task>
-    <task id="LOCAL-01187" summary="google auth">
-      <created>1456999124198</created>
-      <option name="number" value="01187" />
-      <option name="project" value="LOCAL" />
-      <updated>1456999124198</updated>
     </task>
     <task id="LOCAL-01188" summary="google auth">
       <created>1456999449902</created>
@@ -676,7 +675,19 @@
       <option name="project" value="LOCAL" />
       <updated>1457084187458</updated>
     </task>
-    <option name="localTasksCounter" value="1235" />
+    <task id="LOCAL-01235" summary="invite system">
+      <created>1457084378454</created>
+      <option name="number" value="01235" />
+      <option name="project" value="LOCAL" />
+      <updated>1457084378454</updated>
+    </task>
+    <task id="LOCAL-01236" summary="invite system">
+      <created>1457084390621</created>
+      <option name="number" value="01236" />
+      <option name="project" value="LOCAL" />
+      <updated>1457084390621</updated>
+    </task>
+    <option name="localTasksCounter" value="1237" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -898,13 +909,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0" vertical-offset="207" max-vertical-offset="1005">
-          <caret line="52" column="48" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/en/message.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
@@ -1115,11 +1119,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/InviteMiddleware.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7382199" vertical-offset="42" max-vertical-offset="615">
-          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+        <state vertical-scroll-proportion="-20.125" vertical-offset="42" max-vertical-offset="615">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
             <element signature="e#39#51#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5026178" vertical-offset="222" max-vertical-offset="1035">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
