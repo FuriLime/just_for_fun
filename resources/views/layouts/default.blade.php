@@ -64,7 +64,7 @@
 						
 						@if(!Sentinel::check())
 						<li><a href="" class="fa fa-sign-in" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'#tologin'">@lang('frontend.sign_in')</a></li>
-						<li><a href="http://event.test-y-sbm.com/auth/register" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'auth/register'">@lang('frontend.sign_up')</a></li>
+						<li><a href="#" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'auth/register'">@lang('frontend.sign_up')</a></li>
 						@endif
 
 						<li><a href="{{ URL::to('events') }}" data-toggle="modal">Events</a></li>
