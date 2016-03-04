@@ -48,10 +48,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InviteController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InviteController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InviteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="1035">
+            <state vertical-scroll-proportion="0.4712042" vertical-offset="0" max-vertical-offset="1035">
               <caret line="18" column="102" selection-start-line="18" selection-start-column="102" selection-end-line="18" selection-end-column="102" />
               <folding>
                 <element signature="e#39#61#0#PHP" expanded="true" />
@@ -70,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7462406" vertical-offset="2783" max-vertical-offset="3315">
-              <caret line="216" column="24" selection-start-line="216" selection-start-column="18" selection-end-line="216" selection-end-column="24" />
+            <state vertical-scroll-proportion="-6.769231" vertical-offset="2783" max-vertical-offset="3315">
+              <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -290,12 +290,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01213" summary="google auth">
-      <created>1457073910117</created>
-      <option name="number" value="01213" />
-      <option name="project" value="LOCAL" />
-      <updated>1457073910117</updated>
     </task>
     <task id="LOCAL-01214" summary="google auth">
       <created>1457074291952</created>
@@ -585,7 +579,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457088947963</updated>
     </task>
-    <option name="localTasksCounter" value="1262" />
+    <task id="LOCAL-01262" summary="invite system">
+      <created>1457089092290</created>
+      <option name="number" value="01262" />
+      <option name="project" value="LOCAL" />
+      <updated>1457089092290</updated>
+    </task>
+    <option name="localTasksCounter" value="1263" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1022,16 +1022,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InviteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="1035">
-          <caret line="18" column="102" selection-start-line="18" selection-start-column="102" selection-end-line="18" selection-end-column="102" />
-          <folding>
-            <element signature="e#39#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="24.25" vertical-offset="3147" max-vertical-offset="3720">
@@ -1042,9 +1032,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7462406" vertical-offset="2783" max-vertical-offset="3315">
-          <caret line="216" column="24" selection-start-line="216" selection-start-column="18" selection-end-line="216" selection-end-column="24" />
+        <state vertical-scroll-proportion="-6.769231" vertical-offset="2783" max-vertical-offset="3315">
+          <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InviteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4712042" vertical-offset="0" max-vertical-offset="1035">
+          <caret line="18" column="102" selection-start-line="18" selection-start-column="102" selection-end-line="18" selection-end-column="102" />
+          <folding>
+            <element signature="e#39#61#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
