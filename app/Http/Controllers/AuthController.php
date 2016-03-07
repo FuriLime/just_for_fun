@@ -68,14 +68,8 @@ class AuthController extends JoshController
                 // Redirect to the dashboard page
 
                 $user = Sentinel::check();
-                if($user->isActivate==1) {
-                    dd($user->isActivate);
-                    $user_email = $user["attributes"]["email"];
-                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-                }
-                else{
-                    $this->messageBag->add('email', Lang::get('auth/message.account_not_activated'));
-                }
+                $user_email = $user["attributes"]["email"];
+                return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
             }
 
             $this->messageBag->add('email', Lang::get('auth/message.account_not_found'));
@@ -202,24 +196,6 @@ class AuthController extends JoshController
 
             // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
             \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
-
-            // Send the activation code through email
-//            Mail::send('emails.register-activate', $data, function ($m) use ($user) {
-//                $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-//                $m->subject('Welcome ' . $user->first_name);
-//            });
-
-            //Redirect to login page
-            //return Redirect::to("admin/login")->with('success', Lang::get('auth/message.signup.success'));
-            // return 'ok';
-
-
-            // login user automatically
-
-
-
-            // Log the user in
-            //Sentinel::login($user, false);
             // Redirect to the home page with success menu
             return Redirect::back()->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
         } catch (UserExistsException $e) {
