@@ -407,7 +407,8 @@
 <script>
     $( document ).ready(function() {
         var tz = jstz.determine();
-        var timezone = $.cookie('time_zone', tz.name(), { path: '/' });
+        $.cookie('time_zone', tz.name(), { path: '/' });
+        console.log($.cookie('time_zone', tz.name(), { path: '/' }));
     });
 </script>
 <!--global js end-->
