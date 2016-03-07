@@ -158,10 +158,8 @@ return [
 		// amazon AWS SDK https://github.com/aws/aws-sdk-php-laravel
 		Aws\Laravel\AwsServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
-        // Cartalyst\Sentinel\Addons\Social\Laravel\SocialServiceProvider,
         Spatie\GoogleTagManager\GoogleTagManagerServiceProvider::class,
         Chencha\Share\ShareServiceProvider::class,
-//        Spatie\Newsletter\NewsletterServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
         Mailchimp\MailchimpServiceProvider::class,
         Torann\GeoIP\GeoIPServiceProvider::class,
@@ -226,7 +224,6 @@ return [
 		// amazon AWS SDK https://github.com/aws/aws-sdk-php-laravel
         'AWS'       => Aws\Laravel\AwsFacade::class,
 		// https://github.com/webpatser/laravel-uuid
-		'Uuid'		=> Webpatser\Uuid\Uuid::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         // 'Social' => Cartalyst\Sentinel\Addons\Social\Laravel\Facades\Social,
         'GoogleTagManager' => Spatie\GoogleTagManager\GoogleTagManagerFacade::class,
