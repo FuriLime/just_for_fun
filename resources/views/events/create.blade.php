@@ -229,25 +229,25 @@ Create New event
     $(document).ready(function() {
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
 
-        var date = new Date('{{ $start_date }}');
-        $("#datestart").datetimepicker({
-            format: 'yyyy/mm/dd hh:ii',
-            autoclose: true,
-            todayBtn: true,
-            startDate: date,
-            minuteStep: 10,
-            minDate: date
-        });
+        {{--var date = new Date('{{ $start_date }}');--}}
+        {{--$("#datestart").datetimepicker({--}}
+            {{--format: 'yyyy/mm/dd hh:ii',--}}
+            {{--autoclose: true,--}}
+            {{--todayBtn: true,--}}
+            {{--startDate: date,--}}
+            {{--minuteStep: 10,--}}
+            {{--minDate: date--}}
+        {{--});--}}
 
-        var datef = new Date('{{ $finish_date }}');
-        $("#datefinish").datetimepicker({
-            format: 'yyyy/mm/dd hh:ii',
-            autoclose: true,
-            todayBtn: true,
-            startDate: datef,
-            minDate: datef,
-            minuteStep: 10
-        });
+        {{--var datef = new Date('{{ $finish_date }}');--}}
+        {{--$("#datefinish").datetimepicker({--}}
+            {{--format: 'yyyy/mm/dd hh:ii',--}}
+            {{--autoclose: true,--}}
+            {{--todayBtn: true,--}}
+            {{--startDate: datef,--}}
+            {{--minDate: datef,--}}
+            {{--minuteStep: 10--}}
+        {{--});--}}
     });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
