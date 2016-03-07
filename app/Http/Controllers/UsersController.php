@@ -9,6 +9,7 @@ use Lang;
 use URL;
 use Mail;
 use File;
+use Config;
 use App\User;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Hash;
