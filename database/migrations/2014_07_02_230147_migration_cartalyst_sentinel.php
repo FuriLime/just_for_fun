@@ -11,7 +11,7 @@
  * bundled with this package in the LICENSE file.
  *
  * @package    Sentinel
- * @version    2.0.9
+ * @version    2.0.7
  * @author     Cartalyst LLC
  * @license    BSD License (3-clause)
  * @copyright  (c) 2011-2015, Cartalyst LLC
@@ -32,7 +32,7 @@ class MigrationCartalystSentinel extends Migration
     {
         Schema::create('activations', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->integer('user_id')->unsigned();
             $table->string('code');
             $table->boolean('completed')->default(0);
             $table->timestamp('completed_at')->nullable();
@@ -60,6 +60,26 @@ class MigrationCartalystSentinel extends Migration
             $table->timestamps();
         });
 
+        Schema::create('roles', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('slug');
+            $table->string('name');
+            $table->text('permissions')->nullable();
+            $table->timestamps();
+
+            $table->engine = 'InnoDB';
+            $table->unique('slug');
+        });
+
+        Schema::create('role_users', function (Blueprint $table) {
+            $table->integer('user_id')->unsigned();
+            $table->integer('role_id')->unsigned();
+            $table->nullableTimestamps();
+
+            $table->engine = 'InnoDB';
+            $table->primary(['user_id', 'role_id']);
+        });
+
         Schema::create('throttle', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->nullable();
@@ -70,6 +90,7 @@ class MigrationCartalystSentinel extends Migration
             $table->engine = 'InnoDB';
             $table->index('user_id');
         });
+
     }
 
     /**
@@ -82,6 +103,8 @@ class MigrationCartalystSentinel extends Migration
         Schema::drop('activations');
         Schema::drop('persistences');
         Schema::drop('reminders');
+        Schema::drop('roles');
+        Schema::drop('role_users');
         Schema::drop('throttle');
     }
 }
