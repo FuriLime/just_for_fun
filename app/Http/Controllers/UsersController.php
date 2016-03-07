@@ -12,7 +12,7 @@ use File;
 use App\User;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Hash;
-use \Mailchimp;
+use Mailchimp\Mailchimp;
 
 class UsersController extends JoshController
 {
@@ -272,13 +272,6 @@ class UsersController extends JoshController
     protected $mailchimp;
     protected $listId = '3b2e9de273';        // Id of newsletter list
 
-    public function __construct(\Mailchimp\Mailchimp $mailchimp)
-    {
-        $this->mailchimp = $mailchimp;
-    }
-
-
-
     /**
      * Show a list of all the users.
      *
@@ -450,7 +443,8 @@ class UsersController extends JoshController
             $user = Sentinel::findById($id);
             $us_email = Sentinel::getUser()->email;
             $email = md5(Sentinel::getUser()->email);
-            $this->mailchimp->delete("lists/$this->listId/members/$email");
+            $mc = new Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
+            $mc->delete("lists/$this->listId/members/$email");
         } catch (UserNotFoundException $e) {
             // Prepare the error message
             $error = Lang::get('users/message.user_not_found', compact('id'));
@@ -579,7 +573,7 @@ class UsersController extends JoshController
             // Was the user updated?
             if ($user->save()) {
 
-               $this->mailchimp->post("lists/$this->listId/members", [
+                $mc->post("lists/$this->listId/members", [
                     'email_address' => $user->email,
                     'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
                     'status'        => 'subscribed',
@@ -822,8 +816,9 @@ class UsersController extends JoshController
     {
         $email = md5(Sentinel::getUser()->email);
         $user_email = Sentinel::getUser()->email;
-        $result_member = $this->mailchimp->get("lists/$this->listId/members");
-        $categories = $this->mailchimp->get("lists/$this->listId/interest-categories");
+        $mc = new Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
+        $result_member = $mc->get("lists/$this->listId/members");
+        $categories = $mc->get("lists/$this->listId/interest-categories");
         foreach($categories['categories'] as $cat_id){
                 $new_cat_id[] = $cat_id->id;
         }
@@ -832,11 +827,11 @@ class UsersController extends JoshController
             $member_user[] = $email_user->email_address;
         }
         if (in_array($user_email, $member_user)){
-            $result1 = $this->mailchimp->get("lists/$this->listId/members/$email", [
+            $result1 = $mc->get("lists/$this->listId/members/$email", [
                 'fields' => 'id,interests,email_address'
             ]);
 
-            $result = $this->mailchimp->get("lists/$this->listId/interest-categories/$new_cat_id[0]/interests", [
+            $result = $mc->get("lists/$this->listId/interest-categories/$new_cat_id[0]/interests", [
                 'fields' => ['interests' => ['name']]
             ]);
 
@@ -853,7 +848,7 @@ class UsersController extends JoshController
         }
         else{
             try {
-                $this->mailchimp->post("lists/$this->listId/members", [
+                $mc->post("lists/$this->listId/members", [
                     'email_address' => $user_email,
                     'status'        => 'subscribed',
                 ]);
@@ -886,8 +881,8 @@ class UsersController extends JoshController
         foreach ($check_id as $key=>$value){
             $data[$value] = $check_true[$key];
         }
-
-        $this->mailchimp->patch("lists/$this->listId/members/$email", [
+        $mc = new Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
+        $mc->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
             'interests'    => $data
         ]);
