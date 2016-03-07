@@ -41,6 +41,14 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+$app->configureMonologUsing(function($monolog) {
+    // chose the error_log handler
+    $handler = new \Monolog\Handler\ErrorLogHandler();
+    // time will already be logged -> change default format
+    $handler->setFormatter(new \Monolog\Formatter\LineFormatter('%channel%.%level_name%: %message% %context% %extra%'));
+    $monolog->pushHandler($handler);
+});
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application
