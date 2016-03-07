@@ -15,6 +15,7 @@ use Socialite;
 use App\User;
 use App\Activate;
 use \Mailchimp;
+use MC;
 
 class AuthController extends JoshController
 {
@@ -243,7 +244,7 @@ class AuthController extends JoshController
         $user = User::find($userId);
         $email = $user->email;
         $hash_email = md5($email);
-        $mc = new Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
+        $mc = new \Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
             $result_member = $mc->get("lists/$this->listId/members");
