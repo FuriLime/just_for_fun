@@ -15,7 +15,7 @@ use Socialite;
 use App\User;
 use App\Activate;
 use Mailchimp\Mailchimp;
-use Confing;
+use Config;
 
 class AuthController extends JoshController
 {
