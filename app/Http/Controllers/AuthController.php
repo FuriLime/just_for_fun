@@ -243,20 +243,21 @@ class AuthController extends JoshController
         $user = User::find($userId);
         $email = $user->email;
         $hash_email = md5($email);
+        $mc = new Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
-            $result_member = \Mailchimp::mailchimp()->get("lists/$this->listId/members");
+            $result_member = $mc->get("lists/$this->listId/members");
             foreach($result_member['members'] as $email_user){
                 $member_user[] = $email_user->email_address;
             }
             if (in_array($email, $member_user)) {
-                \Mailchimp::mailchimp()->patch("lists/$this->listId/members/$hash_email", [
+                $mc->patch("lists/$this->listId/members/$hash_email", [
                     'email_address' => $email,
                     'status' => 'subscribed',
                 ]);
             }
             else {
-                \Mailchimp::mailchimp()->post("lists/$this->listId/members", [
+                $mc->post("lists/$this->listId/members", [
                     'email_address' => $email,
                     'status'        => 'subscribed',
                 ]);
