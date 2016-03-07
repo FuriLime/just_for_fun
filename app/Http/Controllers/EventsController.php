@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Response;
 use Carbon\Carbon;
 use Lang;
-use Uuid;
+use Ramsey\Uuid;
 use App\User;
 use GeoIP;
 use Spatie\GoogleTagManager;
