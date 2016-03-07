@@ -60,29 +60,6 @@ class MigrationCartalystSentinel extends Migration
             $table->timestamps();
         });
 
-// // taken out to a separate migration
-//         Schema::create('roles', function (Blueprint $table) {
-//             $table->increments('id')->unsigned();
-//             $table->string('slug');
-//             $table->string('name');
-//             $table->string('description');
-//             $table->text('permissions')->nullable();        // permissions cannot be stored with the roles in our case
-//             $table->timestamps();
-
-//             $table->engine = 'InnoDB';
-//             $table->unique('slug');
-//         });
-
-// //this table should not exist as role_id is an add on column on account_user table
-//         Schema::create('role_users', function (Blueprint $table) {
-//             $table->integer('user_id');
-//             $table->integer('role_id');
-//             $table->nullableTimestamps();
-
-//             $table->engine = 'InnoDB';
-//             $table->primary(['user_id', 'role_id']);
-//         });
-
         Schema::create('throttle', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->nullable();
@@ -93,23 +70,6 @@ class MigrationCartalystSentinel extends Migration
             $table->engine = 'InnoDB';
             $table->index('user_id');
         });
-
-// // taken out to a separate migration
-        // Schema::create('users', function (Blueprint $table) {   //moved to separate migration
-        //     $table->integer('id');
-        //     $table->string('nickname');
-        //     $table->string('email');
-        //     $table->string('password');
-        //     $table->text('permissions')->nullable();
-        //     $table->timestamp('last_login')->nullable();
-        //     $table->string('first_name')->nullable();
-        //     $table->string('last_name')->nullable();
-        //     $table->integer('login_count')->unsigned()->default(0);
-        //     $table->timestamps();
-
-        //     $table->engine = 'InnoDB';
-        //     $table->unique('email');
-        // });
     }
 
     /**
@@ -122,9 +82,6 @@ class MigrationCartalystSentinel extends Migration
         Schema::drop('activations');
         Schema::drop('persistences');
         Schema::drop('reminders');
-        // Schema::drop('roles');
-        // Schema::drop('role_users');
         Schema::drop('throttle');
-        // Schema::drop('users');
     }
 }
