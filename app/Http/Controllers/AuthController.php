@@ -146,7 +146,7 @@ class AuthController extends JoshController
                 'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
             );
             $subject = date('Y-m-d H:i:s') . " Subjectline";  // using a time in there to easily now which email was received for testing
-            $to_email = 'sergey.ch.ysbm@gmail.com';
+            $to_email = $user->email;
             $to_name = 'asdasd';
             $from_email = 'test@eventfellows.org';
             $from_name = 'From Name Here';
@@ -315,7 +315,7 @@ class AuthController extends JoshController
 
             // Send the activation code through email
             $subject = date('Y-m-d H:i:s') . " Subjectline";  // using a time in there to easily now which email was received for testing
-            $to_email = 'sergey.ch.ysbm@gmail.com';
+            $to_email = $user->email;
             $to_name = 'asdasd';
             $from_email = 'test@eventfellows.org';
             $from_name = 'From Name Here';
