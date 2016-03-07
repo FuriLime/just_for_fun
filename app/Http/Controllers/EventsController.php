@@ -67,7 +67,7 @@ class EventsController extends Controller {
         $location = GeoIP::getLocation($ip);
         $pre_timezone = null;
 //        if($location['timezone']!=NULL || $location['timezone']!='') {
-//            $my_time_zone = $location['timezone'];
+            $my_time_zone = $location['timezone'];
 //        }else if(isset($_COOKIE['time_zone'])) {
 //            $my_time_zone = $_COOKIE['time_zone'];
 //        }
