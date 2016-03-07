@@ -444,7 +444,8 @@ class UsersController extends JoshController
             $user = Sentinel::findById($id);
             $us_email = Sentinel::getUser()->email;
             $email = md5(Sentinel::getUser()->email);
-            $mc = new Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
+            $apiKey = Config::get('mailchimp.apikey');
+            $mc = new Mailchimp($apiKey);
             $mc->delete("lists/$this->listId/members/$email");
         } catch (UserNotFoundException $e) {
             // Prepare the error message
@@ -817,7 +818,8 @@ class UsersController extends JoshController
     {
         $email = md5(Sentinel::getUser()->email);
         $user_email = Sentinel::getUser()->email;
-        $mc = new Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
+        $apiKey = Config::get('mailchimp.apikey');
+        $mc = new Mailchimp($apiKey);
         $result_member = $mc->get("lists/$this->listId/members");
         $categories = $mc->get("lists/$this->listId/interest-categories");
         foreach($categories['categories'] as $cat_id){
@@ -882,8 +884,8 @@ class UsersController extends JoshController
         foreach ($check_id as $key=>$value){
             $data[$value] = $check_true[$key];
         }
-        dd(Config::get('mailchimp.apikey'));
-        $mc = new Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
+        $apiKey = Config::get('mailchimp.apikey');
+        $mc = new Mailchimp($apiKey);
         $mc->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
             'interests'    => $data
