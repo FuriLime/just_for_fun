@@ -130,7 +130,7 @@ class EventsController extends Controller {
     ]);
 
     $store_info = $request->all();
-    $store_info['uuid'] = Uuid::uuid4(4)->string;
+    $store_info['uuid'] = Uuid::uuid4(4);
     // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
     $date = new \DateTime($store_info['start'], new \DateTimeZone($store_info['timezone']));
     $date->setTimezone(new \DateTimeZone('UTC'));
