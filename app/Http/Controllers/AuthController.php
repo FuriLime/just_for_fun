@@ -61,6 +61,7 @@ class AuthController extends JoshController
             return back()->withInput()->withErrors($validator);
         }
         $user = Sentinel::check();
+        $user = User::find();
 //        $activeIs = $user->isActivate;
 
         try {
