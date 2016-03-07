@@ -881,7 +881,7 @@ class UsersController extends JoshController
         foreach ($check_id as $key=>$value){
             $data[$value] = $check_true[$key];
         }
-        $mc = new Mailchimp('901e50791519fce4886a3e84f2087ff9-us1');
+        $mc = new Mailchimp('apikey');
         $mc->patch("lists/$this->listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
             'interests'    => $data
