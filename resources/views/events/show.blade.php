@@ -213,6 +213,7 @@
 				'Yahoo': [moment().subtract('days', 1), moment().subtract('days', 1)],
 				'Microsoft': [moment().subtract('days', 2), moment().subtract('days', 2)],
 				'iCal': [moment().subtract('days', 2), moment().subtract('days', 2)],
+				'Outloock': [moment().subtract('days', 2), moment().subtract('days', 2)],
 			},
 			startDate: moment().subtract('days', 29),
 			endDate: moment()

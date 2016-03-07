@@ -383,7 +383,10 @@ class EventsController extends Controller {
                     $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='. $event_start_zero->format('Ymd').'T'.$event_start_zero->format('His') .'&dtend='. $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His') .'&summary='. $event['title'] .'&location='. $event['location'] .'&description='. $event['description'];
                 break;
 
-
+        case 'Outloock':
+            $result = 'success_load';
+            $calendar_link = '/assets/ical.php?name='. $event['title'] .'&sd='. $event_start_zero->format('Ymd') .'&st='. $event_start_zero->format('His') .'&fd='. $event_finish_zero->format('Ymd') .'&ft='. $event_finish_zero->format('His') .'&loc='. $event['location'] .'&desc='. $event['description'];
+            break;
                 case 'iCal':
                     $result = 'success_load';
                     $calendar_link = '/assets/ical.php?name='. $event['title'] .'&sd='. $event_start_zero->format('Ymd') .'&st='. $event_start_zero->format('His') .'&fd='. $event_finish_zero->format('Ymd') .'&ft='. $event_finish_zero->format('His') .'&loc='. $event['location'] .'&desc='. $event['description'];
