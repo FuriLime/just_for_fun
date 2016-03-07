@@ -256,13 +256,13 @@ class AuthController extends JoshController
                 $member_user[] = $email_user->email_address;
             }
             if (in_array($email, $member_user)) {
-                $this->mailchimp->patch("lists/$this->listId/members/$hash_email", [
+                \Mailchimp::mailchimp()->patch("lists/$this->listId/members/$hash_email", [
                     'email_address' => $email,
                     'status' => 'subscribed',
                 ]);
             }
             else {
-                $this->mailchimp->post("lists/$this->listId/members", [
+                \Mailchimp::mailchimp()->post("lists/$this->listId/members", [
                     'email_address' => $email,
                     'status'        => 'subscribed',
                 ]);
