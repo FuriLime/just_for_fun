@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/cartalyst/sentinel/src/migrations/2014_07_02_230147_migration_cartalyst_sentinel.php" afterPath="$PROJECT_DIR$/vendor/cartalyst/sentinel/src/migrations/2014_07_02_230147_migration_cartalyst_sentinel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/cartalyst/sentinel/src/Roles/EloquentRole.php" afterPath="$PROJECT_DIR$/vendor/cartalyst/sentinel/src/Roles/EloquentRole.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/cartalyst/sentinel/src/Users/EloquentUser.php" afterPath="$PROJECT_DIR$/vendor/cartalyst/sentinel/src/Users/EloquentUser.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -28,68 +30,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AccountProfile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/AccountProfile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="330">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountText.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/AccountText.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.333333" vertical-offset="265" max-vertical-offset="1365">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding>
-                <element signature="e#23#39#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserProfile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/UserProfile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="510">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Usergroup.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Usergroup.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="390">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Role.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Role.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="780">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Permission.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Permission.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -100,31 +40,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/AccountType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.375" vertical-offset="57" max-vertical-offset="630">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="2014_07_02_230147_migration_cartalyst_sentinel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/cartalyst/sentinel/src/migrations/2014_07_02_230147_migration_cartalyst_sentinel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="17.5" vertical-offset="1260" max-vertical-offset="1695">
-              <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+            <state vertical-scroll-proportion="-6.25" vertical-offset="1380" max-vertical-offset="1695">
+              <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminSeeder.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/seeds/AdminSeeder.php">
+      <file leaf-file-name="EloquentRole.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/cartalyst/sentinel/src/Roles/EloquentRole.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.784127" vertical-offset="382" max-vertical-offset="735">
-              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+            <state vertical-scroll-proportion="-8.125" vertical-offset="405" max-vertical-offset="2085">
+              <caret line="58" column="63" selection-start-line="58" selection-start-column="63" selection-end-line="58" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EloquentUser.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/cartalyst/sentinel/src/Users/EloquentUser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.35873017" vertical-offset="1342" max-vertical-offset="6525">
+              <caret line="118" column="63" selection-start-line="118" selection-start-column="63" selection-end-line="118" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -141,9 +81,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Subscriber/mailchimp.php" />
-        <option value="$PROJECT_DIR$/secrets.json" />
-        <option value="$PROJECT_DIR$/resources/views/emails/register-activate.blade.php" />
         <option value="$PROJECT_DIR$/config/laravel-newsletter.php" />
         <option value="$PROJECT_DIR$/config/mailchimp.php" />
         <option value="$PROJECT_DIR$/resources/views/notisfaction.blade.php" />
@@ -192,6 +129,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/database/seeds/AdminSeeder.php" />
+        <option value="$PROJECT_DIR$/vendor/cartalyst/sentinel/src/migrations/2014_07_02_230147_migration_cartalyst_sentinel.php" />
+        <option value="$PROJECT_DIR$/vendor/cartalyst/sentinel/src/Roles/EloquentRole.php" />
+        <option value="$PROJECT_DIR$/vendor/cartalyst/sentinel/src/Users/EloquentUser.php" />
       </list>
     </option>
   </component>
@@ -340,12 +280,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01286" summary="invite system">
-      <created>1457092578922</created>
-      <option name="number" value="01286" />
-      <option name="project" value="LOCAL" />
-      <updated>1457092578922</updated>
     </task>
     <task id="LOCAL-01287" summary="invite system">
       <created>1457092748748</created>
@@ -635,7 +569,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457359279916</updated>
     </task>
-    <option name="localTasksCounter" value="1335" />
+    <task id="LOCAL-01335" summary="database">
+      <created>1457359671417</created>
+      <option name="number" value="01335" />
+      <option name="project" value="LOCAL" />
+      <updated>1457359671417</updated>
+    </task>
+    <option name="localTasksCounter" value="1336" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -650,7 +590,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7307692" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29136163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27013177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41346154" sideWeight="0.5307467" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -693,20 +633,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/invite/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25" vertical-offset="225" max-vertical-offset="1275">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/secrets.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2408377" vertical-offset="357" max-vertical-offset="930">
-          <caret line="33" column="71" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/services.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39790577" vertical-offset="597" max-vertical-offset="1260">
@@ -1055,6 +981,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/AdminSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2356021" vertical-offset="0" max-vertical-offset="735">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AccountType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.09947644" vertical-offset="57" max-vertical-offset="630">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Permission.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
@@ -1063,26 +1005,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/AccountType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.375" vertical-offset="57" max-vertical-offset="630">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/cartalyst/sentinel/src/migrations/2014_07_02_230147_migration_cartalyst_sentinel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="17.5" vertical-offset="1260" max-vertical-offset="1695">
-          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+        <state vertical-scroll-proportion="-6.25" vertical-offset="1380" max-vertical-offset="1695">
+          <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/AdminSeeder.php">
+    <entry file="file://$PROJECT_DIR$/vendor/cartalyst/sentinel/src/Roles/EloquentRole.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.784127" vertical-offset="382" max-vertical-offset="735">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        <state vertical-scroll-proportion="-8.125" vertical-offset="405" max-vertical-offset="2085">
+          <caret line="58" column="63" selection-start-line="58" selection-start-column="63" selection-end-line="58" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cartalyst/sentinel/src/Users/EloquentUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35873017" vertical-offset="1342" max-vertical-offset="6525">
+          <caret line="118" column="63" selection-start-line="118" selection-start-column="63" selection-end-line="118" selection-end-column="63" />
           <folding />
         </state>
       </provider>
