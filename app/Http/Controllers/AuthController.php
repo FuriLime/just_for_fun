@@ -60,6 +60,8 @@ class AuthController extends JoshController
             // Ooops.. something went wrong
             return back()->withInput()->withErrors($validator);
         }
+        $user = Sentinel::check();
+        $activeIs = $user->isActivate;
 
         try {
             // Try to log the user in
@@ -67,8 +69,7 @@ class AuthController extends JoshController
             {
                 // Redirect to the dashboard page
 
-                $user = Sentinel::check();
-                dd($user);
+                dd($activeIs);
                 $user_email = $user["attributes"]["email"];
                 return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
             }
