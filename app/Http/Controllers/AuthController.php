@@ -27,10 +27,10 @@ class AuthController extends JoshController
     protected $mailchimp;
     protected $listId = '3b2e9de273';        // Id of newsletter list
 
-//    public function __construct(\Mailchimp\Mailchimp $mailchimp)
-//    {
-//        $this->mailchimp = $mailchimp;
-//    }
+    public function __construct(\Mailchimp\Mailchimp $mailchimp)
+    {
+        $newmailchimp = $mailchimp;
+    }
 
 
 
@@ -251,7 +251,7 @@ class AuthController extends JoshController
         $hash_email = md5($email);
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
-            $result_member = $this->mailchimp->get("lists/$this->listId/members");
+            $result_member = \Mailchimp::mailchimp()->get("lists/$this->listId/members");
             foreach($result_member['members'] as $email_user){
                 $member_user[] = $email_user->email_address;
             }
