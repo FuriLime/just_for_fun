@@ -11,7 +11,7 @@
  * bundled with this package in the LICENSE file.
  *
  * @package    Sentinel
- * @version    2.0.7
+ * @version    2.0.9
  * @author     Cartalyst LLC
  * @license    BSD License (3-clause)
  * @copyright  (c) 2011-2015, Cartalyst LLC
@@ -32,7 +32,7 @@ class MigrationCartalystSentinel extends Migration
     {
         Schema::create('activations', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
+            $table->integer('user_id');
             $table->string('code');
             $table->boolean('completed')->default(0);
             $table->timestamp('completed_at')->nullable();
@@ -60,25 +60,28 @@ class MigrationCartalystSentinel extends Migration
             $table->timestamps();
         });
 
-        Schema::create('roles', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('slug');
-            $table->string('name');
-            $table->text('permissions')->nullable();
-            $table->timestamps();
+// // taken out to a separate migration
+//         Schema::create('roles', function (Blueprint $table) {
+//             $table->increments('id')->unsigned();
+//             $table->string('slug');
+//             $table->string('name');
+//             $table->string('description');
+//             $table->text('permissions')->nullable();        // permissions cannot be stored with the roles in our case
+//             $table->timestamps();
 
-            $table->engine = 'InnoDB';
-            $table->unique('slug');
-        });
+//             $table->engine = 'InnoDB';
+//             $table->unique('slug');
+//         });
 
-        Schema::create('role_users', function (Blueprint $table) {
-            $table->integer('user_id')->unsigned();
-            $table->integer('role_id')->unsigned();
-            $table->nullableTimestamps();
+// //this table should not exist as role_id is an add on column on account_user table
+//         Schema::create('role_users', function (Blueprint $table) {
+//             $table->integer('user_id');
+//             $table->integer('role_id');
+//             $table->nullableTimestamps();
 
-            $table->engine = 'InnoDB';
-            $table->primary(['user_id', 'role_id']);
-        });
+//             $table->engine = 'InnoDB';
+//             $table->primary(['user_id', 'role_id']);
+//         });
 
         Schema::create('throttle', function (Blueprint $table) {
             $table->increments('id');
@@ -91,6 +94,22 @@ class MigrationCartalystSentinel extends Migration
             $table->index('user_id');
         });
 
+// // taken out to a separate migration
+        // Schema::create('users', function (Blueprint $table) {   //moved to separate migration
+        //     $table->integer('id');
+        //     $table->string('nickname');
+        //     $table->string('email');
+        //     $table->string('password');
+        //     $table->text('permissions')->nullable();
+        //     $table->timestamp('last_login')->nullable();
+        //     $table->string('first_name')->nullable();
+        //     $table->string('last_name')->nullable();
+        //     $table->integer('login_count')->unsigned()->default(0);
+        //     $table->timestamps();
+
+        //     $table->engine = 'InnoDB';
+        //     $table->unique('email');
+        // });
     }
 
     /**
@@ -103,8 +122,9 @@ class MigrationCartalystSentinel extends Migration
         Schema::drop('activations');
         Schema::drop('persistences');
         Schema::drop('reminders');
-        Schema::drop('roles');
-        Schema::drop('role_users');
+        // Schema::drop('roles');
+        // Schema::drop('role_users');
         Schema::drop('throttle');
+        // Schema::drop('users');
     }
 }
