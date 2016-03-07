@@ -238,7 +238,10 @@ Create New event
             minuteStep: 10,
             minDate: date
         });
-
+        var start_date = new Date($('#start').val());
+        var end_date = new Date(start_date);
+        end_date.setHours(start_date.getHours() + 1);
+        end_date = end_date.format('Y/m/d H:i');
         var datef = new Date('{{ $finish_date }}');
         $("#datefinish").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
