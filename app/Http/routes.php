@@ -178,6 +178,7 @@ Route::get('/', array('as' => 'home', function () {
 }));
 
 Route::get('oauthwindows', 'MicrosoftController@index');
+Route::get('oauthpocket', 'PocketController@index');
 
 // Route::get('/', function(){
 // 	$data = [

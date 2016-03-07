@@ -25,6 +25,11 @@ return [
 			'scope'         => ['basic', 'signin', 'emails', 'work_profile', 'postal_addresses'],
 		],
 
+		'Pocket' => [
+			'client_id'     => $secrets['CUSTOM']['POCKET_CONSUMER_KEY'],
+			'client_secret' => $secrets['CUSTOM']['POCKET_CONSUMER_KEY'],
+			'scope'         => [],
+		],
 	]
 
 ];
