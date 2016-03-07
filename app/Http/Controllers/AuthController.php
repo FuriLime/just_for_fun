@@ -10,6 +10,7 @@ use URL;
 use \Cartalyst\Sentinel\Checkpoints\NotActivatedException;
 use \Cartalyst\Sentinel\Checkpoints\ThrottlingException;
 use Reminder;
+//use Mail;
 use Socialite;
 use App\User;
 use App\Activate;
@@ -261,7 +262,7 @@ class AuthController extends JoshController
                 ]);
             }
             else {
-              $this->mailchimp->post("lists/$this->listId/members", [
+                $this->mailchimp->post("lists/$this->listId/members", [
                     'email_address' => $email,
                     'status'        => 'subscribed',
                 ]);
