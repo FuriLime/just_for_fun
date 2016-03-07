@@ -166,6 +166,7 @@ return [
         Msurguy\Honeypot\HoneypotServiceProvider::class,
         Weblee\Mandrill\MandrillServiceProvider::class,
         Artdarek\OAuth\OAuthServiceProvider::class,
+        Laravel\Cashier\CashierServiceProvider::class,
     ],
 
     /*
