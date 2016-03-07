@@ -20,7 +20,7 @@ use Activation;
 class PocketController extends Controller {
   
   public function index(Request $request) {
-    $code = $request->get('code');
+    /*$code = $request->get('code');
 
     $pocket = \OAuth::consumer('Pocket');
 
@@ -33,7 +33,23 @@ class PocketController extends Controller {
     } else {
       $url = $pocket->getAuthorizationUri();
       return redirect((string)$url);
-    }
+    }*/
+
+    $url = 'https://getpocket.com/v3/oauth/request';
+    $data = array('consumer_key' => '50790-067541bc6daec667212f5e0e', 'redirect_uri' => '/');
+
+    $options = array(
+        'http' => array(
+            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method'  => 'POST',
+            'content' => http_build_query($data),
+        ),
+    );
+    $context  = stream_context_create($options);
+    $result = file_get_contents($url, false, $context);
+    if ($result === FALSE) { /* Handle error */ }
+
+    var_dump($result);
   }
 
 }

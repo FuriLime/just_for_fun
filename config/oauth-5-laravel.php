@@ -26,8 +26,7 @@ return [
 		],
 
 		'Pocket' => [
-			//'client_id'     => $secrets['CUSTOM']['POCKET_CONSUMER_KEY'],
-			'client_id' => '',
+			'client_id'     => $secrets['CUSTOM']['POCKET_CONSUMER_KEY'],
 			'client_secret' => $secrets['CUSTOM']['POCKET_CONSUMER_KEY'],
 			'scope'         => [],
 		],
