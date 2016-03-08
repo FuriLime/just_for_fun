@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/create.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -31,20 +31,30 @@
       <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.4583335" vertical-offset="3394" max-vertical-offset="5730">
-              <caret line="235" column="29" selection-start-line="235" selection-start-column="29" selection-end-line="235" selection-end-column="29" />
+            <state vertical-scroll-proportion="26.041666" vertical-offset="4315" max-vertical-offset="5730">
+              <caret line="246" column="0" selection-start-line="246" selection-start-column="0" selection-end-line="251" selection-end-column="26" />
               <folding>
-                <element signature="e#15221#19801#0#HTML" expanded="false" />
-                <element signature="e#19871#23961#0#HTML" expanded="false" />
+                <element signature="e#15197#19777#0#HTML" expanded="false" />
+                <element signature="e#19847#23937#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.8482144" vertical-offset="1900" max-vertical-offset="3990">
+              <caret line="233" column="28" selection-start-line="233" selection-start-column="28" selection-end-line="233" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.4625" vertical-offset="4114" max-vertical-offset="8385">
+            <state vertical-scroll-proportion="10.791667" vertical-offset="4114" max-vertical-offset="8385">
               <caret line="257" column="25" selection-start-line="257" selection-start-column="25" selection-end-line="257" selection-end-column="25" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
@@ -113,8 +123,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
-        <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
       </list>
     </option>
   </component>
@@ -206,18 +216,12 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test-ef" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event.test-y-sbm.loc" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="events" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -231,33 +235,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-ef" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event.test-y-sbm.loc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,12 +314,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01351" summary="database">
-      <created>1457367737959</created>
-      <option name="number" value="01351" />
-      <option name="project" value="LOCAL" />
-      <updated>1457367737959</updated>
     </task>
     <task id="LOCAL-01352" summary="database">
       <created>1457367764024</created>
@@ -631,7 +603,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457454150049</updated>
     </task>
-    <option name="localTasksCounter" value="1400" />
+    <task id="LOCAL-01400" summary="database">
+      <created>1457454323385</created>
+      <option name="number" value="01400" />
+      <option name="project" value="LOCAL" />
+      <updated>1457454323385</updated>
+    </task>
+    <option name="localTasksCounter" value="1401" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -694,8 +672,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="8865">
           <caret line="89" column="62" selection-start-line="89" selection-start-column="48" selection-end-line="89" selection-end-column="62" />
           <folding>
-            <element signature="e#15221#19801#0#HTML" expanded="false" />
-            <element signature="e#19871#23961#0#HTML" expanded="false" />
+            <element signature="e#15197#19777#0#HTML" expanded="false" />
+            <element signature="e#19847#23937#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -715,8 +693,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="8253" max-vertical-offset="8865">
           <caret line="562" column="12" selection-start-line="562" selection-start-column="8" selection-end-line="562" selection-end-column="12" />
           <folding>
-            <element signature="e#15221#19801#0#HTML" expanded="false" />
-            <element signature="e#19871#23961#0#HTML" expanded="false" />
+            <element signature="e#15197#19777#0#HTML" expanded="false" />
+            <element signature="e#19847#23937#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -971,13 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8660714" vertical-offset="3010" max-vertical-offset="3990">
-          <caret line="233" column="28" selection-start-line="233" selection-start-column="28" selection-end-line="233" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.0410714" vertical-offset="5022" max-vertical-offset="6375">
@@ -1006,24 +977,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.4583335" vertical-offset="3394" max-vertical-offset="5730">
-          <caret line="235" column="29" selection-start-line="235" selection-start-column="29" selection-end-line="235" selection-end-column="29" />
-          <folding>
-            <element signature="e#15221#19801#0#HTML" expanded="false" />
-            <element signature="e#19871#23961#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.4625" vertical-offset="4114" max-vertical-offset="8385">
+        <state vertical-scroll-proportion="10.791667" vertical-offset="4114" max-vertical-offset="8385">
           <caret line="257" column="25" selection-start-line="257" selection-start-column="25" selection-end-line="257" selection-end-column="25" />
           <folding>
             <element signature="e#39#52#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="26.041666" vertical-offset="4315" max-vertical-offset="5730">
+          <caret line="246" column="0" selection-start-line="246" selection-start-column="0" selection-end-line="251" selection-end-column="26" />
+          <folding>
+            <element signature="e#15197#19777#0#HTML" expanded="false" />
+            <element signature="e#19847#23937#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.8482144" vertical-offset="1900" max-vertical-offset="3990">
+          <caret line="233" column="28" selection-start-line="233" selection-start-column="28" selection-end-line="233" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>

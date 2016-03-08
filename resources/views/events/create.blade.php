@@ -231,12 +231,12 @@ Create New event
 
         var date = new Date('{{ $start_date }}');
         $("#datestart").datetimepicker({
-//            format: 'yyyy/mm/dd hh:ii',
-//            autoclose: true,
-//            todayBtn: true,
-//            startDate: date,
-//            minuteStep: 10,
-//            minDate: date
+            format: 'yyyy/mm/dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            startDate: date,
+            minuteStep: 10,
+            minDate: date
         });
         var start_date = new Date($('#start').val());
         var end_date = new Date(start_date);
@@ -244,12 +244,12 @@ Create New event
         end_date = end_date.format('Y/m/d H:i');
         var datef = new Date('{{ $finish_date }}');
         $("#datefinish").datetimepicker({
-//            format: 'yyyy/mm/dd hh:ii',
-//            autoclose: true,
-//            todayBtn: true,
-//            startDate: end_date,
-//            minDate: end_date,
-//            minuteStep: 10
+            format: 'yyyy/mm/dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            startDate: end_date,
+            minDate: end_date,
+            minuteStep: 10
         });
     });
     </script>
