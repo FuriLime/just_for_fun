@@ -252,7 +252,7 @@ Create New event
             minuteStep: 10
         });
 
-        $('#datestart .glyphicon-remove').click(function(){
+        $('.glyphicon-remove').click(function(){
             console.log('dddd');
             $('#finish').val('');
         });
