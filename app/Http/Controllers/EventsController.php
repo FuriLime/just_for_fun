@@ -74,7 +74,11 @@ class EventsController extends Controller {
         else{
             $my_time_zone = 'UTC';
         }
-    // Is the user logged in?
+
+      if(session()->get('timezone')) {
+          $my_time_zone = session()->get('timezone');
+      }
+      // Is the user logged in?
     if (Sentinel::check()) {
       if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
                 // for bootstrap-datepicker
