@@ -71,6 +71,7 @@ class AuthController extends JoshController
                 $user = User::where('email', $email['email'])->get();
                 if($user['0']['original']['isActivate']==0){
                     $this->messageBag->add('email', Lang::get('auth/message.account_not_activated'));
+                    return back()->withInput()->withErrors($this->messageBag);
                 }
                 $user = Sentinel::check();
                 $user_email = $user["attributes"]["email"];
