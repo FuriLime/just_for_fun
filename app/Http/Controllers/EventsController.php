@@ -123,7 +123,6 @@ class EventsController extends Controller {
     if(isset($_POST['timezone'])) {
       session()->put('timezone', $_POST['timezone']);
     }
-var_dump($_POST);
     $this->validate($request, [
       'title' => 'required|max:80',
       'description' => 'required|max:500',
@@ -152,11 +151,13 @@ var_dump($_POST);
     if (Sentinel::check()) {
       if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
         event::create($store_info);
+          Session::forget('timezone');
         return redirect('events')->with('success', Lang::get('message.success.create'));
       }
     } else {
 
       event::create($store_info);
+        Session::forget('timezone');
       return redirect('events')->with('success', Lang::get('message.success.create'));
     }
   }
