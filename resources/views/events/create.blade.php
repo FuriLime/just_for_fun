@@ -226,7 +226,7 @@ Create New event
     <script type="text/javascript" src="{{ asset('assets/js/jquery.maskedinput.min.js') }}"></script>
 
     <script>
-//    $(document).ready(function() {
+    $(document).ready(function() {
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
 
         var date = new Date('{{ $start_date }}');
@@ -288,7 +288,7 @@ Create New event
             }
         });
 
-//    });
+    });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 	<script type="text/javascript">//<![CDATA[
