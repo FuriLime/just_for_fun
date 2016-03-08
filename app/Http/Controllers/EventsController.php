@@ -78,7 +78,7 @@ class EventsController extends Controller {
       if(session()->get('timezone')) {
           $my_time_zone = session()->get('timezone');
       }
-      var_dump($_GET);
+      var_dump($_POST);
       // Is the user logged in?
     if (Sentinel::check()) {
       if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
