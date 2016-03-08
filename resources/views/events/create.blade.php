@@ -548,6 +548,11 @@ if($('#location').val()) {
 
             $('#finish').val(end_date);
         }
+
+
+        $('#datestart.glyphicon-remove').click(function(){
+           $('#finish').val('');
+        });
     });
 
 	$('input#title').maxlength({
