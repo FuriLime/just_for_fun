@@ -37,7 +37,7 @@ class Activate extends Model {
     public function activateUser($user_id)
     {
         $user = User::find($user_id);
-		$user->isActivate = 0;
+		$user->isActivate = 1;
 		$user->save();
     }
 
