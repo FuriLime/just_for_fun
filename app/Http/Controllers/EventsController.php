@@ -78,6 +78,7 @@ class EventsController extends Controller {
       if(session()->get('timezone')) {
           $my_time_zone = session()->get('timezone');
       }
+      Session::forget('timezone');
 
       // Is the user logged in?
     if (Sentinel::check()) {
@@ -133,7 +134,6 @@ class EventsController extends Controller {
       'start' => 'required',
       'finish' => 'required',
     ]);
-      var_dump($_POST);
     $store_info = $request->all();
     $store_info['uuid'] = Uuid::uuid4(4);
     // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
