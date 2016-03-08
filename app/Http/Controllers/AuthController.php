@@ -45,7 +45,7 @@ class AuthController extends JoshController
      *
      * @return Redirect
      */
-    public function postSignin()
+    public function postSignin($userId)
     {
         // Declare the rules for the form validation
         $rules = array(
@@ -67,8 +67,8 @@ class AuthController extends JoshController
             if(Sentinel::authenticate(Input::only('email', 'password'), Input::get('remember-me', false)))
             {
                 // Redirect to the dashboard page
-                $userID = new User();
-                dd($userID);
+                $user = User::find($userId);
+                dd($user);
                 $user = Sentinel::check();
                 $user_email = $user["attributes"]["email"];
                 return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
