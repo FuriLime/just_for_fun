@@ -68,7 +68,7 @@ class AuthController extends JoshController
             {
                 $email= Input::only('email');
                 // Redirect to the dashboard page
-                $user = User::find($email['email']);
+                $user = User::where('email', $email['email']);
                 dd($user);
                 $user = Sentinel::check();
                 $user_email = $user["attributes"]["email"];
