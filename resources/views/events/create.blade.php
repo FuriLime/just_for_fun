@@ -247,7 +247,7 @@ Create New event
                 $('#start').val(start_def_date.format('Y/m/d H:i'));
                 return false;
             }
-console.log(start_date);
+console.log(Date($('#start').val()));
             var end_date = new Date(start_date);
             end_date.setHours(start_date.getHours() + 1);
             end_date = end_date.format('Y/m/d H:i');
