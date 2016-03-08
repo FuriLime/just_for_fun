@@ -242,7 +242,7 @@ Create New event
         $('#start').on('change', function() {
             var start_def_date = new Date('{{ $start_date }}');
             var start_date = new Date($('#start').val());
-            if(start_date==false){
+            if(start_date==true){
                 console.log('ddddd');
             }
 
