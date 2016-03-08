@@ -239,11 +239,9 @@ Create New event
             minDate: date
         });
         var start_date = new Date($('#start').val());
-        console.log(start_date);
         var end_date = new Date(start_date);
         end_date.setHours(start_date.getHours() + 1);
         end_date = end_date.format('Y/m/d H:i');
-        console.log(end_date);
         var datef = new Date('{{ $finish_date }}');
         $("#datefinish").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
@@ -527,7 +525,7 @@ if($('#location').val()) {
         var end_date = new Date(start_date);
         end_date.setHours(start_date.getHours() + 1);
         end_date = end_date.format('Y/m/d H:i');
-
+console.log(end_date);
         $('#finish').val(end_date);
 
         $("#datefinish").datetimepicker({
