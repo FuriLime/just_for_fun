@@ -229,45 +229,6 @@ Create New event
     $(document).ready(function() {
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
 
-        var end_date = new Date(start_date);
-        end_date.setHours(start_date.getHours() + 1);
-        end_date = end_date.format('Y/m/d H:i');
-
-        $('#start').on('change', function() {
-            var start_def_date = new Date('{{ $start_date }}');
-            var start_date = new Date($('#start').val());
-
-            if(start_date.getTime() < start_def_date.getTime()) {
-                $('#start').val(start_def_date.format('Y/m/d H:i'));
-                return false;
-            }
-
-
-            $('#finish').val(end_date);
-
-            $("#datefinish").datetimepicker({
-                format: 'yyyy/mm/dd hh:ii',
-                autoclose: true,
-                todayBtn: true,
-                startDate: end_date,
-                minDate: end_date,
-                minuteStep: 10
-            });
-        });
-
-        $('#finish').on('change', function() {
-            var start_date = new Date($('#start').val());
-            var end_date = new Date($('#finish').val());
-
-            if(end_date.getTime() < start_date.getTime()) {
-                var end_date = new Date(start_date);
-                end_date.setHours(start_date.getHours() + 1);
-                end_date = end_date.format('Y/m/d H:i');
-
-                $('#finish').val(end_date);
-            }
-        });
-
         var date = new Date('{{ $start_date }}');
         $("#datestart").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
@@ -277,7 +238,11 @@ Create New event
             minuteStep: 10,
             minDate: date
         });
-
+        var start_date = new Date($('#start').val());
+        var end_date = new Date(start_date);
+        end_date.setHours(start_date.getHours() + 1);
+        end_date = end_date.format('Y/m/d H:i');
+        var datef = new Date('{{ $finish_date }}');
         $("#datefinish").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
@@ -286,9 +251,6 @@ Create New event
             minDate: end_date,
             minuteStep: 10
         });
-
-
-
     });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
@@ -551,7 +513,42 @@ if($('#location').val()) {
 		$('#datefinish .glyphicon-calendar').click();
 	});
 
+    $('#start').on('change', function() {
+        var start_def_date = new Date('{{ $start_date }}');
+        var start_date = new Date($('#start').val());
 
+        if(start_date.getTime() < start_def_date.getTime()) {
+            $('#start').val(start_def_date.format('Y/m/d H:i'));
+            return false;
+        }
+
+        var end_date = new Date(start_date);
+        end_date.setHours(start_date.getHours() + 1);
+        end_date = end_date.format('Y/m/d H:i');
+        $('#finish').val(end_date);
+
+        $("#datefinish").datetimepicker({
+            format: 'yyyy/mm/dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            startDate: end_date,
+            minDate: end_date,
+            minuteStep: 10
+        });
+    });
+
+    $('#finish').on('change', function() {
+        var start_date = new Date($('#start').val());
+        var end_date = new Date($('#finish').val());
+
+        if(end_date.getTime() < start_date.getTime()) {
+            var end_date = new Date(start_date);
+            end_date.setHours(start_date.getHours() + 1);
+            end_date = end_date.format('Y/m/d H:i');
+
+            $('#finish').val(end_date);
+        }
+    });
 
 	$('input#title').maxlength({
 		//alwaysShow: true,
