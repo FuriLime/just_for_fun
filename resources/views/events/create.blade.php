@@ -251,6 +251,11 @@ Create New event
             minDate: end_date,
             minuteStep: 10
         });
+
+        $('#datestart .glyphicon-remove').click(function(){
+            console.log('dddd');
+            $('#finish').val('');
+        });
     });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
@@ -550,10 +555,7 @@ if($('#location').val()) {
         }
 
 
-        $('#datestart .glyphicon-remove').click(function(){
-            console.log('dddd');
-           $('#finish').val('');
-        });
+
     });
 
 	$('input#title').maxlength({
