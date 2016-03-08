@@ -69,7 +69,7 @@ class AuthController extends JoshController
                 $email= Input::only('email');
                 // Redirect to the dashboard page
                 $user = User::where('email', $email['email'])->get();
-                dd($user['0']['original']);
+                dd($user['0']['original']['isActivate']);
                 $user = Sentinel::check();
                 $user_email = $user["attributes"]["email"];
                 return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
