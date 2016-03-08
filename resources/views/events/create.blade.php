@@ -242,12 +242,13 @@ Create New event
         $('#start').on('change', function() {
             var start_def_date = new Date('{{ $start_date }}');
             var start_date = new Date($('#start').val());
+            console.log(start_date);
 
             if(start_date.getTime() < start_def_date.getTime()) {
                 $('#start').val(start_def_date.format('Y/m/d H:i'));
                 return false;
             }
-console.log(Date($('#start').val()));
+
             var end_date = new Date(start_date);
             end_date.setHours(start_date.getHours() + 1);
             end_date = end_date.format('Y/m/d H:i');
