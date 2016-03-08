@@ -550,7 +550,7 @@ if($('#location').val()) {
         }
 
 
-        $('#datestart.glyphicon-remove').click(function(){
+        $('#datestart .glyphicon-remove').click(function(){
             console.log('dddd');
            $('#finish').val('');
         });
