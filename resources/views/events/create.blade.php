@@ -254,7 +254,7 @@ Create New event
 
         $('#datestart .glyphicon-remove').click(function(){
             console.log('dddd');
-            $('#finish').val('');
+            $('#finish').val('asaaa');
         });
     });
     </script>
