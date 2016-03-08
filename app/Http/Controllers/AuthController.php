@@ -61,18 +61,18 @@ class AuthController extends JoshController
             // Ooops.. something went wrong
             return back()->withInput()->withErrors($validator);
         }
-
+        $email= Input::only('email');
+        // Redirect to the dashboard page
+        $user = User::where('email', $email['email'])->get();
+        if($user['0']['original']['isActivate']==0){
+            $this->messageBag->add('email', Lang::get('auth/message.account_not_activated'));
+            return back()->withInput()->withErrors($this->messageBag);
+        }
         try {
             // Try to log the user in
-            if(Sentinel::authenticate(Input::only('email', 'password'), Input::get('remember-me', false)))
+            if(Sentinel::authenticate(Input::only('email', 'password'), Input::get('remember-me', false)) && $user['0']['original']['isActivate']=!0)
             {
-                $email= Input::only('email');
-                // Redirect to the dashboard page
-                $user = User::where('email', $email['email'])->get();
-                if($user['0']['original']['isActivate']==0){
-                    $this->messageBag->add('email', Lang::get('auth/message.account_not_activated'));
-                    return back()->withInput()->withErrors($this->messageBag);
-                }
+
                 $user = Sentinel::check();
                 $user_email = $user["attributes"]["email"];
                 return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
