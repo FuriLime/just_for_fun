@@ -123,7 +123,7 @@ class EventsController extends Controller {
     if(isset($_POST['timezone'])) {
       session()->put('timezone', $_POST['timezone']);
     }
-
+      Session::forget('timezone');
     $this->validate($request, [
       'title' => 'required|max:80',
       'description' => 'required|max:500',
