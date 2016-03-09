@@ -61,18 +61,18 @@ class AuthController extends JoshController
         }
         $email= Input::only('email');
         // Redirect to the dashboard page
-        $user = User::where('email', $email['email'])->get();
-        if($user) {
-            $activeUser = $user['0']['original']['isActivate'];
-            if ($activeUser == 0) {
-                $this->messageBag->add('email', Lang::get('auth/message.account_not_activated'));
-                return back()->withInput()->withErrors($this->messageBag);
-            }
 
         try {
             // Try to log the user in
-            if(Sentinel::authenticate(Input::only('email', 'password'), Input::get('remember-me', false)) && $activeUser==1)
+            if(Sentinel::authenticate(Input::only('email', 'password'), Input::get('remember-me', false)))
             {
+                $user = User::where('email', $email['email'])->get();
+                $activeUser = $user['0']['original']['isActivate'];
+//        dd($activeUser);
+                if($activeUser==0){
+                    $this->messageBag->add('email', Lang::get('auth/message.account_not_activated'));
+                    return back()->withInput()->withErrors($this->messageBag);
+                }
 
                 $user = Sentinel::check();
                 $user_email = $user["attributes"]["email"];
@@ -87,7 +87,7 @@ class AuthController extends JoshController
             $delay = $e->getDelay();
             $this->messageBag->add('email', Lang::get('auth/message.account_suspended', compact('delay' )));
         }
-        }
+
         // Ooops.. something went wrong
         return back()->withInput()->withErrors($this->messageBag);
     }
