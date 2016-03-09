@@ -131,6 +131,7 @@ class EventsController extends Controller {
       'finish' => 'required',
     ]);
     $store_info = $request->all();
+      $store_info =$request->except('_token');
     $store_info['uuid'] = Uuid::uuid4(4);
       if (Sentinel::check()) {
           $store_info['author_id'] = Sentinel::getUser()->id;
