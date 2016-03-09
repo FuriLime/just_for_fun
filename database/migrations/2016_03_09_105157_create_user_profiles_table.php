@@ -17,9 +17,15 @@ class CreateUserProfilesTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('twitNick')->nullable();
+            $table->text('bio')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('country')->nullable();
+            $table->string('state')->nullable();
+            $table->string('city')->nullable();
+            $table->string('address')->nullable();
             $table->string('timezone')->required();
             $table->text('about')->nullable();
-            $table->string('image')->nullable();
+            $table->string('pic')->nullable();
             $table->timestamps();
             $table->engine = 'InnoDB';
         });
