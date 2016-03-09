@@ -59,7 +59,6 @@ class EventsController extends Controller {
    */
   public function create(Request $request)
   {    
-
         $start_date = date('Y/m/d 19:00');
         $finish_date = date('Y/m/d 20:00');
         $timezone_select = self::getTimeZoneSelect();
@@ -201,7 +200,6 @@ class EventsController extends Controller {
 
     else {
       //show event for unregister user
-
       return view('events.show', compact('event'));
     }
   }
@@ -214,7 +212,6 @@ class EventsController extends Controller {
    */
   public function edit($uuid)
   {
-
     //$event = Event::findOrFail($id);
     $event = Event::whereUuid($uuid)->first();
     $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
