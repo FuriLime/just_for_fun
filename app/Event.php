@@ -27,8 +27,8 @@ class Event extends Model  {
 //        'test_until',
 //        'free_downloads_until',
 //    ];
-    protected $guarded = array();
-//    protected $fillable = ['uuid', 'title','author_id', 'editor_id', 'account_id', 'type', 'description', 'location', 'url', 'timezone', 'start', 'finish', 'active'];
+//    protected $guarded = array();
+    protected $fillable = ['uuid', 'title','author_id', 'editor_id', 'account_id', 'type', 'description', 'location', 'url', 'timezone', 'start', 'finish', 'active'];
     /**
      * Get the account that owns the event.
      */
