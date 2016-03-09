@@ -125,7 +125,6 @@ class EventsController extends Controller {
       'description' => 'max:500',
       // 'type' => 'required',
       'location' => 'max:255',
-        'Street' => 'max:255',
       'url' => 'max:255',
       'timezone' => 'required',
       'start' => 'required',
@@ -138,10 +137,6 @@ class EventsController extends Controller {
           $store_info['author_id'] = Sentinel::getUser()->id;
           $store_info['editor_id'] = Sentinel::getUser()->id;
           $store_info['account_id'] = Sentinel::getUser()->id;
-          $store_info['Street'] = Sentinel::getUser()->id;
-          $store_info['Country'] = Sentinel::getUser()->id;
-          $store_info['City'] = Sentinel::getUser()->id;
-          $store_info['State'] = Sentinel::getUser()->id;
           }
 //      dd($store_info['author_id']);
     // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
