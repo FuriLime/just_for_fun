@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Account.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/AccountFeature.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/AccountProfile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/AccountText.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/AccountType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/CreditPackage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/CreditType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/DownloadCredit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/DownloadTransaction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/EventCredit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/EventTransaction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Feature.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Invoice.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Permission.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Blog.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/BlogCategory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/BlogComment.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -54,31 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.916666" vertical-offset="1379" max-vertical-offset="7740">
-              <caret line="135" column="23" selection-start-line="135" selection-start-column="23" selection-end-line="135" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016_02_17_223608_create_cashier_table_settings.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_02_17_223608_create_cashier_table_settings.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="8.875" vertical-offset="273" max-vertical-offset="660">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5635838" vertical-offset="0" max-vertical-offset="825">
-              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.6042781" vertical-offset="1559" max-vertical-offset="7740">
+              <caret line="135" column="44" selection-start-line="134" selection-start-column="14" selection-end-line="135" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -144,8 +108,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/config/mailchimp.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
       </list>
     </option>
   </component>
@@ -327,12 +291,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01497" summary="database">
-      <created>1457511618277</created>
-      <option name="number" value="01497" />
-      <option name="project" value="LOCAL" />
-      <updated>1457511618277</updated>
     </task>
     <task id="LOCAL-01498" summary="database">
       <created>1457511742317</created>
@@ -622,7 +580,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457518186933</updated>
     </task>
-    <option name="localTasksCounter" value="1546" />
+    <task id="LOCAL-01546" summary="database">
+      <created>1457518280081</created>
+      <option name="number" value="01546" />
+      <option name="project" value="LOCAL" />
+      <updated>1457518280081</updated>
+    </task>
+    <option name="localTasksCounter" value="1547" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1049,26 +1013,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.916666" vertical-offset="1379" max-vertical-offset="7740">
-          <caret line="135" column="23" selection-start-line="135" selection-start-column="23" selection-end-line="135" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.5635838" vertical-offset="0" max-vertical-offset="825">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_02_17_223608_create_cashier_table_settings.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.875" vertical-offset="273" max-vertical-offset="660">
+        <state vertical-scroll-proportion="-0.5503876" vertical-offset="273" max-vertical-offset="660">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5635838" vertical-offset="0" max-vertical-offset="825">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.6042781" vertical-offset="1559" max-vertical-offset="7740">
+          <caret line="135" column="44" selection-start-line="134" selection-start-column="14" selection-end-line="135" selection-end-column="44" />
           <folding />
         </state>
       </provider>
