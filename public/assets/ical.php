@@ -35,4 +35,5 @@ if (isset($ID) && $ID != "") {
     header('Content-Disposition: attachment; filename="cal.ics"');
 // 5. Output
     echo $vCalendar->render();
+    exit();
 }
