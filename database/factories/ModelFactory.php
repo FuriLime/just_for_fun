@@ -239,7 +239,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $firstname . '.' . $lastname . '@' . $faker->safeEmailDomain,
         'password' => bcrypt(str_random(10)),
         'login_count' => random_int(0, 100),
-        'verified' => random_int(0, 1),
+        'isActive' => random_int(0, 1),
         'status' => $status_array[array_rand($status_array)],
         'last_login' => $faker->dateTimeBetween($startDate = '-2 years', $endDate = 'now'),
     ];
