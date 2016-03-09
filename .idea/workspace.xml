@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/seeds/CreditTypesTableSeeder.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/factories/ModelFactory.php" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -62,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.7369942" vertical-offset="0" max-vertical-offset="825">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -311,12 +312,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01495" summary="database">
-      <created>1457511458293</created>
-      <option name="number" value="01495" />
-      <option name="project" value="LOCAL" />
-      <updated>1457511458293</updated>
     </task>
     <task id="LOCAL-01496" summary="database">
       <created>1457511553272</created>
@@ -606,7 +601,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457518019358</updated>
     </task>
-    <option name="localTasksCounter" value="1544" />
+    <task id="LOCAL-01544" summary="database">
+      <created>1457518045884</created>
+      <option name="number" value="01544" />
+      <option name="project" value="LOCAL" />
+      <updated>1457518045885</updated>
+    </task>
+    <option name="localTasksCounter" value="1545" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1052,7 +1053,7 @@
     <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7369942" vertical-offset="0" max-vertical-offset="825">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding />
         </state>
       </provider>

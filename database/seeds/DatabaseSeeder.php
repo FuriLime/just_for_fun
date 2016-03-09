@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         // Seeders that do NOT depend on another table being filled before
-//        $this->call(CreditPackagesTableSeeder::class);      // no dependancy for table seeding
+        $this->call(CreditPackagesTableSeeder::class);      // no dependancy for table seeding
         $this->call(CreditTypesTableSeeder::class);         // no dependancy for table seeding
         $this->call(FeaturesTableSeeder::class);            // no dependancy for table seeding
         $this->call(PermissionsTableSeeder::class);         // no dependancy for table seeding // not needed in Phase 1 & 2
