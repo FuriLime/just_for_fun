@@ -79,6 +79,7 @@ class AuthController extends JoshController
 
                 $user = Sentinel::check();
                 $user_email = $user["attributes"]["email"];
+                dd($user);
                 return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
             }
 
