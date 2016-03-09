@@ -122,7 +122,6 @@ class EventsController extends Controller {
     }
     $this->validate($request, [
       'title' => 'required|max:80',
-        '_token' => 'max:250',
       'description' => 'max:500',
       // 'type' => 'required',
       'location' => 'max:255',
@@ -132,13 +131,16 @@ class EventsController extends Controller {
       'finish' => 'required',
     ]);
 
-      $store_info =$request->except('_token');
       $store_info = $request->all();
     $store_info['uuid'] = Uuid::uuid4(4);
       if (Sentinel::check()) {
           $store_info['author_id'] = Sentinel::getUser()->id;
           $store_info['editor_id'] = Sentinel::getUser()->id;
           $store_info['account_id'] = Sentinel::getUser()->id;
+          $store_info['Street'] = Sentinel::getUser()->id;
+          $store_info['Country'] = Sentinel::getUser()->id;
+          $store_info['City'] = Sentinel::getUser()->id;
+          $store_info['State'] = Sentinel::getUser()->id;
           }
 //      dd($store_info['author_id']);
     // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
