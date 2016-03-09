@@ -72,7 +72,7 @@ class AuthController extends JoshController
         }
         try {
             // Try to log the user in
-            if(Sentinel::authenticate(Input::only('email', 'password'), Input::get('remember-me', false)) && $activeUser==1)
+            if(Sentinel::authenticate(Input::only('email', 'password'), Input::get('remember-me', false)))
             {
 
                 $user = Sentinel::check();
