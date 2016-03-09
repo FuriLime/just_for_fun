@@ -125,6 +125,7 @@ class EventsController extends Controller {
       'description' => 'max:500',
       // 'type' => 'required',
       'location' => 'max:255',
+        'Street' => 'max:255',
       'url' => 'max:255',
       'timezone' => 'required',
       'start' => 'required',
