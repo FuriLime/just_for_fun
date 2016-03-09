@@ -135,6 +135,7 @@ class EventsController extends Controller {
       if (Sentinel::check()) {
           $store_info['author_id'] = Sentinel::getUser()->id;
           $store_info['editor_id'] = Sentinel::getUser()->id;
+          $store_info['account_id'] = Sentinel::getUser()->id;
           }
 //      dd($store_info['author_id']);
     // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
