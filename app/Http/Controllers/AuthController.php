@@ -65,13 +65,14 @@ class AuthController extends JoshController
         try {
 
             $user = User::where('email', $email['email'])->get();
-            if(isset($user)){
-            $activeUser = $user['0']['original']['isActivate'];
+            if(isset($user)) {
+                $activeUser = $user['0']['original']['isActivate'];
 //          dd($activeUser);
-            if($activeUser==0){
+                if ($activeUser == 0) {
 //                    dd($activeUser);
-                $this->messageBag->add('email', Lang::get('auth/message.account_not_activated'));
-                return back()->withInput()->withErrors($this->messageBag);
+                    $this->messageBag->add('email', Lang::get('auth/message.account_not_activated'));
+                    return back()->withInput()->withErrors($this->messageBag);
+                }
             }
             // Try to log the user in
             if(Sentinel::authenticate(Input::only('email', 'password'), Input::get('remember-me', false)) && $activeUser==1)
