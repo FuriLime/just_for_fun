@@ -13,6 +13,7 @@ use Reminder;
 //use Mail;
 use Socialite;
 use App\User;
+use App\UserProfile;
 use App\Activate;
 use Mailchimp\Mailchimp;
 use Config;
@@ -104,14 +105,10 @@ class AuthController extends JoshController
     {
         // Declare the rules for the form validation
         $rules = array(
-            // 'first_name'       => 'required|min:3',
-            // 'last_name'        => 'required|min:3',
             'email'            => 'required|email|unique:users',
-            // 'email_confirm'    => 'required|email|same:email',
             'password'         => 'required|between:3,32',
             'my_name'   => 'honeypot',
             'my_time'   => 'required|honeytime:5'
-            // 'password_confirm' => 'required|same:password',
         );
 
         // Create a new validator instance from our validation rules
