@@ -34,6 +34,11 @@ class User extends EloquentUser
     /**
      * Get the user profile information associated with the user.
      */
+    public function activate()
+    {
+        return $this->hasOne('App\Activate');
+    }
+
     public function user_profile()
     {
         return $this->hasOne('App\UserProfile');
