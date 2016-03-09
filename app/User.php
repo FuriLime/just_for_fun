@@ -1,8 +1,10 @@
 <?php namespace App;
-use Illuminate\Database\Eloquent\Model;
-
-use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Account;
+use App\UserProfile;
+use App\Custom\AutomaticUuidKey;
+use Illuminate\Auth\Authenticatable;
 use Cartalyst\Sentinel\Users\EloquentUser;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends EloquentUser {
 
@@ -33,4 +35,19 @@ class User extends EloquentUser {
 	{
 		return $this->hasOne('App\Activate');
 	}
+
+    public function user_profile()
+    {
+        return $this->hasOne('App\UserProfile');
+    }
+
+    public function accounts()
+    {
+        return $this->belongsToMany('App\Account')->withPivot('role_id')->withTimestamps();
+    }
+
+    public function roles()
+    {
+        return $this->belongsToMany('App\Role', 'role_users')->withPivot('role_id')->withTimestamps();
+    }
 }
