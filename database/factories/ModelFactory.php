@@ -229,7 +229,7 @@ $factory->define(App\Role::class, function (Faker\Generator $faker) {
 
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
-    $status_array = ['activated', 'activated', 'activated', 'blocked', 'waiting for verification'];
+    $status_array = ['activated', 'blocked', 'waiting for verification'];
 
     return [
         // 'id' => \Uuid::generate(4),  // this is not needed if the Trait for UUID is used in model
