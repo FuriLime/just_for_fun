@@ -12,19 +12,17 @@ class CreateAccountTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('account_profiles', function (Blueprint $table) {
+        Schema::create('account_types', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('account_id')->unsigned();
-            $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
+            $table->string('name')->required()->unique();
+            $table->string('slug')->required()->unique();
+            $table->integer('event_credits')->unsigned()->default(0);
+            $table->integer('download_credits')->unsigned()->default(0);
+            $table->integer('description_length')->unsigned()->default(100);
 
-            $table->string('timezone')->required();
-            $table->text('about')->nullable();
-            $table->string('image')->nullable();
-            $table->string('homepage')->nullable();
-            $table->timestamps();
             $table->engine = 'InnoDB';
-
-            // relationship needed to accounts as one-to-one
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 
@@ -35,6 +33,6 @@ class CreateAccountTypesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('account_profiles');
+        Schema::drop('account_types');
     }
 }
