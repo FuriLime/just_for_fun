@@ -62,7 +62,6 @@ class AuthController extends JoshController
         $email= Input::only('email');
         // Redirect to the dashboard page
         $user = User::where('email', $email['email'])->get();
-//        dd($user);
         if(!$user) {
             $activeUser = $user['0']['original']['isActivate'];
 //        dd($activeUser);
@@ -73,7 +72,7 @@ class AuthController extends JoshController
         }
         try {
             // Try to log the user in
-            if(Sentinel::authenticate(Input::only('email', 'password'), Input::get('remember-me', false)))
+            if(Sentinel::authenticate(Input::only('email', 'password'), Input::get('remember-me', false)) && $activeUser==1)
             {
 
                 $user = Sentinel::check();
