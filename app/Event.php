@@ -15,14 +15,7 @@ class Event extends Model
      *
      * @var array
      */
-    protected $dates = [
-        'uuid',       // to make sure dates are treated as instances of Carbon()
-        'deleted_at',
-    	'start',
-    	'finish',
-    	'test_until',
-    	'free_downloads_until',
-    ];
+    protected $fillable = ['uuid', 'title', 'type', 'description', 'location', 'timezone', 'start', 'finish', 'active'];
 
 
     /**
