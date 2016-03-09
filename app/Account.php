@@ -28,19 +28,19 @@ class Account extends Model
     /**
      * Get the account profile information associated with the account.
      */
-    public function account_profile()
-    {
-        return $this->hasOne('App\AccountProfile');
-    }
-    
-
-    /**
-     * Get the account type of the account.
-     */
-    public function account_type()
-    {
-        return $this->belongsTo('App\AccountType');
-    }
+//    public function account_profile()
+//    {
+//        return $this->hasOne('App\AccountProfile');
+//    }
+//
+//
+//    /**
+//     * Get the account type of the account.
+//     */
+//    public function account_type()
+//    {
+//        return $this->belongsTo('App\AccountType');
+//    }
 
 
     /**
@@ -64,62 +64,62 @@ class Account extends Model
      /**
      * Get the events for the account.
      */
-    public function events()
-    {
-        return $this->hasMany('App\Event');
-    }
-
-
-     /**
-     * Get the invoices for the account.
-     */
-    public function invoices()
-    {
-        return $this->hasMany('App\Invoice');
-    }
-
-
-     /**
-     * Get the features of the account.
-     */
-    public function features()
-    {
-        return $this->belongsToMany('App\Feature')->withPivot('valid_until', 'credit_type')->withTimestamps();
-    }
-
-
-    /**
-     * Get the event credits for the account.
-     */
-    public function event_credits()
-    {
-        return $this->hasMany('App\EventCredit');
-    }
-
-
-    /**
-     * Get the event transactions for the account.
-     */
-    public function event_transactions()
-    {
-        return $this->hasMany('App\EventTransaction');
-    }
-
-
-    /**
-     * Get the download credits for the account.
-     */
-    public function download_credits()
-    {
-        return $this->hasMany('App\DownloadCredit');
-    }
-
-
-    /**
-     * Get the download transactions for the account.
-     */
-    public function download_transactions()
-    {
-        return $this->hasMany('App\DownloadTransaction');
-    }
+//    public function events()
+//    {
+//        return $this->hasMany('App\Event');
+//    }
+//
+//
+//     /**
+//     * Get the invoices for the account.
+//     */
+//    public function invoices()
+//    {
+//        return $this->hasMany('App\Invoice');
+//    }
+//
+//
+//     /**
+//     * Get the features of the account.
+//     */
+//    public function features()
+//    {
+//        return $this->belongsToMany('App\Feature')->withPivot('valid_until', 'credit_type')->withTimestamps();
+//    }
+//
+//
+//    /**
+//     * Get the event credits for the account.
+//     */
+//    public function event_credits()
+//    {
+//        return $this->hasMany('App\EventCredit');
+//    }
+//
+//
+//    /**
+//     * Get the event transactions for the account.
+//     */
+//    public function event_transactions()
+//    {
+//        return $this->hasMany('App\EventTransaction');
+//    }
+//
+//
+//    /**
+//     * Get the download credits for the account.
+//     */
+//    public function download_credits()
+//    {
+//        return $this->hasMany('App\DownloadCredit');
+//    }
+//
+//
+//    /**
+//     * Get the download transactions for the account.
+//     */
+//    public function download_transactions()
+//    {
+//        return $this->hasMany('App\DownloadTransaction');
+//    }
 }
