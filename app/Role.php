@@ -44,5 +44,4 @@ class Role extends Model                // class Role extends EloquentRole //
         return $this->belongsToMany('App\Permission');
     }
 
-
 }
