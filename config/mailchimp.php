@@ -15,5 +15,5 @@ return [
 
     'apikey' => $secrets['CUSTOM']['MAILCHIMP_SECRET'],
 
-    'listId' => '3b2e9de273',
+    'listId' => $secrets['CUSTOM']['MAILCHIMP_LIST_ID'],
 ];
