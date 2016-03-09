@@ -124,7 +124,6 @@ class EventsController extends Controller {
       'title' => 'required|max:80',
       'description' => 'max:500',
       // 'type' => 'required',
-        'author_id' => 'max:255',
       'location' => 'max:255',
       'url' => 'max:255',
       'timezone' => 'required',
@@ -152,6 +151,7 @@ class EventsController extends Controller {
     // Is the user logged in?
     if (Sentinel::check()) {
       if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
+          dd($store_info);
         event::create($store_info);
           Session::forget('timezone');
         return redirect('events')->with('success', Lang::get('message.success.create'));
