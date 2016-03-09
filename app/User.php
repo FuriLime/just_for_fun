@@ -14,7 +14,7 @@ class User extends EloquentUser {
 	 *
 	 * @var string
 	 */
-	protected $table = 'users';
+//	protected $table = 'users';
 
 	/**
 	 * The attributes excluded from the model's JSON form.
