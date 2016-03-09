@@ -136,7 +136,7 @@ class AuthController extends JoshController
             $role->users()->attach($user);
 
 
-
+dd($user);
             //un-comment below code incase if user have to activate manually
 
             // Data to be used on the email view
