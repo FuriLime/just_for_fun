@@ -18,6 +18,8 @@ class Event extends Model  {
      *
      * @var array
      */
+    protected $table = 'events';
+
     protected $dates = [            // to make sure dates are treated as instances of Carbon()
         'deleted_at',
         'start',
