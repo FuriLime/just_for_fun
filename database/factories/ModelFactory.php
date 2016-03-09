@@ -221,11 +221,11 @@ use App\DownloadCredit;
 //});
 //
 //
-//$factory->define(App\Role::class, function (Faker\Generator $faker) {
-//    return [
-//        // empty as everything gets set manually in respective Table Seeder
-//    ];
-//});
+$factory->define(App\Role::class, function (Faker\Generator $faker) {
+    return [
+        // empty as everything gets set manually in respective Table Seeder
+    ];
+});
 
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
