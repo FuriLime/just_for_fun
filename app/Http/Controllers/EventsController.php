@@ -26,31 +26,29 @@ class EventsController extends Controller {
 
   public function index()
     {
-        $events = Event::latest()->get();
-        $dataLayer = new GoogleTagManager\DataLayer();
-        $dataLayer->set('ecommerce.click.events', $events->toJson());
-        foreach ($events as $event) {
-            $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
-            $date->setTimezone(new \DateTimeZone($event->timezone));
-            $event_start_zero = $date;
-
-            $date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
-            $date->setTimezone(new \DateTimeZone($event->timezone));
-            $event_finish_zero = $date;
-
-            $event->startt = date($event_start_zero->format('Y-m-d H:i'));
-            $event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
-        }
-        //if user logined
-        if (Sentinel::check()) {
-            if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
-                return view('events.index', compact('events'));
-                }
-            }
-        else {
-            //if not logined user
-                return view('events.index', compact('events'));
-            }
+//        $events = Event::latest()->get();
+//        foreach ($events as $event) {
+//            $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
+//            $date->setTimezone(new \DateTimeZone($event->timezone));
+//            $event_start_zero = $date;
+//
+//            $date = new \DateTime($event->finish, new \DateTimeZone('UTC'));
+//            $date->setTimezone(new \DateTimeZone($event->timezone));
+//            $event_finish_zero = $date;
+//
+//            $event->startt = date($event_start_zero->format('Y-m-d H:i'));
+//            $event->finisht = date($event_finish_zero->format('Y-m-d H:i'));
+//        }
+//        //if user logined
+//        if (Sentinel::check()) {
+//            if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
+//                return view('events.index', compact('events'));
+//                }
+//            }
+//        else {
+//            //if not logined user
+//                return view('events.index', compact('events'));
+//            }
         }
   /**
    * Show the form for creating a new resource.
@@ -70,13 +68,13 @@ class EventsController extends Controller {
         }else if(isset($_COOKIE['time_zone'])) {
             $my_time_zone = $_COOKIE['time_zone'];
         }
+        else if(session()->get('timezone')) {
+            $my_time_zone = session()->get('timezone');
+        }
         else{
             $my_time_zone = 'UTC';
         }
 
-      if(session()->get('timezone')) {
-          $my_time_zone = session()->get('timezone');
-      }
       Session::forget('timezone');
 
       // Is the user logged in?
@@ -138,7 +136,7 @@ class EventsController extends Controller {
       if (Sentinel::check()) {
           $store_info['author_id'] = Sentinel::getUser()->id;
           }
-      dd($store_info['author_id']);
+//      dd($store_info['author_id']);
     // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
     $date = new \DateTime($store_info['start'], new \DateTimeZone($store_info['timezone']));
     $date->setTimezone(new \DateTimeZone('UTC'));
