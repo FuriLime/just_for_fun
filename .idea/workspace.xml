@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Event.php" afterPath="$PROJECT_DIR$/app/Event.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -40,10 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24107143" vertical-offset="1725" max-vertical-offset="8640">
+            <state vertical-scroll-proportion="-5.625" vertical-offset="1725" max-vertical-offset="8640">
               <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
@@ -52,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Event.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Event.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Event.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5" vertical-offset="165" max-vertical-offset="795">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.48214287" vertical-offset="165" max-vertical-offset="795">
+              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
               <folding>
                 <element signature="e#22#54#0#PHP" expanded="true" />
               </folding>
@@ -182,8 +182,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/app/AccountType.php" />
-        <option value="$PROJECT_DIR$/app/Event.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+        <option value="$PROJECT_DIR$/app/Event.php" />
       </list>
     </option>
   </component>
@@ -379,12 +379,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01640" summary="database">
-      <created>1457546866637</created>
-      <option name="number" value="01640" />
-      <option name="project" value="LOCAL" />
-      <updated>1457546866637</updated>
     </task>
     <task id="LOCAL-01641" summary="database">
       <created>1457548691289</created>
@@ -674,7 +668,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457561983670</updated>
     </task>
-    <option name="localTasksCounter" value="1689" />
+    <task id="LOCAL-01689" summary="database">
+      <created>1457562020183</created>
+      <option name="number" value="01689" />
+      <option name="project" value="LOCAL" />
+      <updated>1457562020183</updated>
+    </task>
+    <option name="localTasksCounter" value="1690" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1099,16 +1099,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5" vertical-offset="165" max-vertical-offset="795">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-          <folding>
-            <element signature="e#22#54#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/AccountsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="495">
@@ -1121,10 +1111,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24107143" vertical-offset="1725" max-vertical-offset="8640">
+        <state vertical-scroll-proportion="-5.625" vertical-offset="1725" max-vertical-offset="8640">
           <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
           <folding>
             <element signature="e#39#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48214287" vertical-offset="165" max-vertical-offset="795">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding>
+            <element signature="e#22#54#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
