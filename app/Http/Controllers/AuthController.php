@@ -63,7 +63,7 @@ class AuthController extends JoshController
         // Redirect to the dashboard page
         $user = User::where('email', $email['email'])->get();
         $activeUser = $user['0']['original']['isActivate'];
-//        dd($activeUser);
+        dd($activeUser);
         if($activeUser==0){
             $this->messageBag->add('email', Lang::get('auth/message.account_not_activated'));
             return back()->withInput()->withErrors($this->messageBag);
