@@ -64,7 +64,7 @@ class AuthController extends JoshController
 
         try {
             if(User::where('email', $email['email'])->get()) {
-                dd(User::where('email', $email['email'])->get());
+//                dd(User::where('email', $email['email'])->get());
                 $user = User::where('email', $email['email'])->get();
                 $activeUser = $user['0']['original']['isActivate'];
 //        dd($activeUser);
