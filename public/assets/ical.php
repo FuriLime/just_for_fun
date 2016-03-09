@@ -38,13 +38,13 @@ if (isset($ID) && $ID != "") {
 //	echo $file;
 //	exit;
 
-    $vCalendar = new \Eluceo\iCal\Component\Calendar('www.example.com');
+    $vCalendar = new \Eluceo\iCal\Component\Calendar('');
     $vEvent = new \Eluceo\iCal\Component\Event();
     $vEvent
         ->setDtStart(new \DateTime($date))
         ->setDtEnd(new \DateTime($date_end))
         ->setNoTime(true)
-        ->setSummary('Christmas')
+        ->setSummary(strip_tags($_GET['desc']))
     ;
     $vCalendar->addComponent($vEvent);
     echo $vCalendar->render();
