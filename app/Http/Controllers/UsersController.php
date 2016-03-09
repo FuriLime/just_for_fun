@@ -270,8 +270,7 @@ class UsersController extends JoshController
         'pic' => 'mimes:jpg,jpeg,bmp,png|max:10000'
     );
 
-    protected $mailchimp;
-    protected $listId = Config::get('mailchimp.listId');        // Id of newsletter list
+       // Id of newsletter list
 
     /**
      * Show a list of all the users.
@@ -446,7 +445,8 @@ class UsersController extends JoshController
             $email = md5(Sentinel::getUser()->email);
             $apiKey = Config::get('mailchimp.apikey');
             $mc = new Mailchimp($apiKey);
-            $mc->delete("lists/$this->listId/members/$email");
+            $listId = Config::get('mailchimp.listId');
+            $mc->delete("lists/$listId/members/$email");
         } catch (UserNotFoundException $e) {
             // Prepare the error message
             $error = Lang::get('users/message.user_not_found', compact('id'));
@@ -575,7 +575,7 @@ class UsersController extends JoshController
             // Was the user updated?
             if ($user->save()) {
 
-                $mc->post("lists/$this->listId/members", [
+                $mc->post("lists/$listId/members", [
                     'email_address' => $user->email,
                     'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
                     'status'        => 'subscribed',
@@ -819,9 +819,10 @@ class UsersController extends JoshController
         $email = md5(Sentinel::getUser()->email);
         $user_email = Sentinel::getUser()->email;
         $apiKey = Config::get('mailchimp.apikey');
+        $listId = Config::get('mailchimp.listId');
         $mc = new Mailchimp($apiKey);
-        $result_member = $mc->get("lists/$this->listId/members");
-        $categories = $mc->get("lists/$this->listId/interest-categories");
+        $result_member = $mc->get("lists/$listId/members");
+        $categories = $mc->get("lists/$listId/interest-categories");
         foreach($categories['categories'] as $cat_id){
                 $new_cat_id[] = $cat_id->id;
         }
@@ -830,11 +831,11 @@ class UsersController extends JoshController
             $member_user[] = $email_user->email_address;
         }
         if (in_array($user_email, $member_user)){
-            $result1 = $mc->get("lists/$this->listId/members/$email", [
+            $result1 = $mc->get("lists/$listId/members/$email", [
                 'fields' => 'id,interests,email_address'
             ]);
 
-            $result = $mc->get("lists/$this->listId/interest-categories/$new_cat_id[0]/interests", [
+            $result = $mc->get("lists/$listId/interest-categories/$new_cat_id[0]/interests", [
                 'fields' => ['interests' => ['name']]
             ]);
 
@@ -851,7 +852,7 @@ class UsersController extends JoshController
         }
         else{
             try {
-                $mc->post("lists/$this->listId/members", [
+                $mc->post("lists/$listId/members", [
                     'email_address' => $user_email,
                     'status'        => 'subscribed',
                 ]);
@@ -886,7 +887,8 @@ class UsersController extends JoshController
         }
         $apiKey = Config::get('mailchimp.apikey');
         $mc = new Mailchimp($apiKey);
-        $mc->patch("lists/$this->listId/members/$email", [
+        $listId = Config::get('mailchimp.listId');
+        $mc->patch("lists/$listId/members/$email", [
             'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
             'interests'    => $data
         ]);
