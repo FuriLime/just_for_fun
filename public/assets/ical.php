@@ -34,7 +34,7 @@ if (isset($ID) && $ID != "") {
 		END:VALARM
 		END:VEVENT
 		END:VCALENDAR";
-    dd($file);
+    //dd($file);
 	echo $file;
 	exit;
 }
