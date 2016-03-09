@@ -10,11 +10,12 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()           // the order of SEEDERS on this page DOES matter a lot
+    public function run()
     {
         Model::unguard();
 
-        $this->call('RolesTableSeeder');               // no dependancy for table seeding
+        $this->call('AdminSeeder');
+        $this->command->info('Admin User created with username admin@admin.com and password admin');
 
         Model::reguard();
     }
