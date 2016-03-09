@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_03_030000_create_account_texts_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_04_010000_create_account_feature_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_06_010000_create_account_type_permission_table.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/database/migrations/2016_03_09_133130_create_accounts_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_01_03_010000_create_accounts_table.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/database/migrations/2016_03_09_133713_create_account_types_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_01_02_010000_create_account_types_table.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/database/migrations/2016_03_09_133729_create_account_profiles_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_01_03_020000_create_account_profiles_table.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_01_02_010000_create_account_types_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_01_03_010000_create_accounts_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_01_03_020000_create_account_profiles_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_01_03_030000_create_account_texts_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_01_04_010000_create_account_feature_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_01_06_010000_create_account_type_permission_table.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -316,12 +316,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-01560" summary="database">
-      <created>1457519850956</created>
-      <option name="number" value="01560" />
-      <option name="project" value="LOCAL" />
-      <updated>1457519850956</updated>
-    </task>
     <task id="LOCAL-01561" summary="database">
       <created>1457519886270</created>
       <option name="number" value="01561" />
@@ -610,7 +604,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457530910737</updated>
     </task>
-    <option name="localTasksCounter" value="1609" />
+    <task id="LOCAL-01609" summary="database">
+      <created>1457531161374</created>
+      <option name="number" value="01609" />
+      <option name="project" value="LOCAL" />
+      <updated>1457531161374</updated>
+    </task>
+    <option name="localTasksCounter" value="1610" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1049,14 +1049,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5183246" vertical-offset="213" max-vertical-offset="810">
           <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_09_133713_create_account_types_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1705426" vertical-offset="72" max-vertical-offset="645">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
           <folding />
         </state>
       </provider>
