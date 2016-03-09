@@ -46,8 +46,4 @@ class User extends EloquentUser {
         return $this->belongsToMany('App\Account')->withPivot('role_id')->withTimestamps();
     }
 
-    public function roles()
-    {
-        return $this->belongsToMany('App\Role', 'role_users')->withPivot('role_id')->withTimestamps();
-    }
 }
