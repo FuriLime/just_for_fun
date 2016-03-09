@@ -24,9 +24,7 @@ class AuthController extends JoshController
      *
      * @return View
      */
-
-    protected $mailchimp;
-    protected $listId = '3b2e9de273';        // Id of newsletter list
+      // Id of newsletter list
 
 
     public function getSignin()
@@ -230,20 +228,21 @@ class AuthController extends JoshController
         $hash_email = md5($email);
         $apiKey = Config::get('mailchimp.apikey');
         $mc = new Mailchimp($apiKey);
+        $listId = Config::get('mailchimp.listId');
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
-            $result_member = $mc->get("lists/$this->listId/members");
+            $result_member = $mc->get("lists/$listId/members");
             foreach($result_member['members'] as $email_user){
                 $member_user[] = $email_user->email_address;
             }
             if (in_array($email, $member_user)) {
-                $mc->patch("lists/$this->listId/members/$hash_email", [
+                $mc->patch("lists/$listId/members/$hash_email", [
                     'email_address' => $email,
                     'status' => 'subscribed',
                 ]);
             }
             else {
-                $mc->post("lists/$this->listId/members", [
+                $mc->post("lists/$listId/members", [
                     'email_address' => $email,
                     'status'        => 'subscribed',
                 ]);
