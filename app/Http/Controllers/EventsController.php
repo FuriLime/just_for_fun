@@ -323,7 +323,6 @@ class EventsController extends Controller {
     $calendar = $info['calendar'];
 
     $event = Event::whereUuid($uuid)->first();
-dd($event->timezone);
     // perform events time to 00.00 timezone
     $date = new \DateTime($event['start'], new \DateTimeZone($event['timezone']));
     $date->setTimezone(new \DateTimeZone($event->timezone));
@@ -344,16 +343,6 @@ dd($event->timezone);
       if ($minutesLeft < 10) { $minutesLeft = '0'.$minutesLeft; }
       $duration = $hourDifference.$minutesLeft;
     }
-
-    // registration and credits check for later
-    /*
-    // Is the user logged in?
-    if (Sentinel::check()) {
-      return redirect('events')->with('success', Lang::get('message.success.delete'));
-    } else {
-      return redirect('events')->with('success', Lang::get('message.success.delete'));
-    }
-    */
     $result = $error_massage = $calendar_link = '';
     switch ($calendar) {
 
@@ -386,7 +375,11 @@ dd($event->timezone);
 
        case 'Microsoft':
           $result = 'success';
-          $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='. $event_start_zero->format('Ymd').'T'.$event_start_zero->format('His') .'&dtend='. $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His') .'&summary='. $event['title'] .'&location='. $event['location'] .'&description='. $event['description'];
+          $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='. $event_start_zero->format('Ymd').'T'.$event_start_zero->format('His') .
+              '&dtend='. $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His') .
+              '&summary='. $event['title'] .
+              '&location='. $event['location'] .
+              '&description='. $event['description'];
       break;
 
         case 'Outloock':
