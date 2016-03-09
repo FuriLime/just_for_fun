@@ -375,8 +375,10 @@ class EventsController extends Controller {
 
        case 'Microsoft':
           $result = 'success';
-          $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='. $event_start_zero->format('Ymd').'T'.$event_start_zero->format('His').'Z' .
-              '&dtend='. $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His') .
+          $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='.
+              $event_start_zero->format('Ymd').'T'.
+              $event_start_zero->format('His').'Z' .
+              '&dtend='. $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His').'Z' .
               '&summary='. $event['title'] .
               '&location='. $event['location'] .
               '&description='. $event['description'];
@@ -386,16 +388,22 @@ class EventsController extends Controller {
             $result = 'success_load';
             $calendar_link = '/assets/ical.php?name='. $event['title'] .
                 '&sd='. $event_start_zero->format('Ymd') .
-                '&st='. $event_start_zero->format('His') .
+                '&st='. $event_start_zero->format('His') .'Z'.
                 '&fd='. $event_finish_zero->format('Ymd') .
-                '&ft='. $event_finish_zero->format('His') .
+                '&ft='. $event_finish_zero->format('His').'Z' .
                 '&loc='. $event['location'] .
                 '&desc='. $event['description'];
             break;
 
         case 'iCal':
             $result = 'success_load';
-            $calendar_link = '/assets/ical.php?name='. $event['title'] .'&sd='. $event_start_zero->format('Ymd') .'&st='. $event_start_zero->format('His') .'&fd='. $event_finish_zero->format('Ymd') .'&ft='. $event_finish_zero->format('His') .'&loc='. $event['location'] .'&desc='. $event['description'];
+            $calendar_link = '/assets/ical.php?name='. $event['title'] .
+                '&sd='. $event_start_zero->format('Ymd') .
+                '&st='. $event_start_zero->format('His').'Z' .
+                '&fd='. $event_finish_zero->format('Ymd') .
+                '&ft='. $event_finish_zero->format('His').'Z' .
+                '&loc='. $event['location'] .
+                '&desc='. $event['description'];
             break;
 
                 default:
