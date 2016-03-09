@@ -126,6 +126,7 @@ class EventsController extends Controller {
       'title' => 'required|max:80',
       'description' => 'max:500',
       // 'type' => 'required',
+        'author_id' => 'max:255',
       'location' => 'max:255',
       'url' => 'max:255',
       'timezone' => 'required',
