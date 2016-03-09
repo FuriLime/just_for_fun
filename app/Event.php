@@ -15,57 +15,13 @@ class Event extends Model
      *
      * @var array
      */
-    protected $dates = [            // to make sure dates are treated as instances of Carbon()
-        'deleted_at',
-    	'start',
-    	'finish',
-    	'test_until',
-    	'free_downloads_until',
-    ];
-
+    protected $table = 'events';
 
     /**
-     * Get the account that owns the event.
+     * Attributes that should be mass-assignable.
+     *
+     * @var array
      */
-    public function account()
-    {
-        return $this->belongsTo('App\Account');
-    }
-
-
-    /**
-     * Get the author that has created the event.
-     */
-    public function author()
-    {
-        return $this->belongsTo('App\User');
-    }
-    
-
-    /**
-     * Get the editor who last edited the event.
-     */
-    public function last_editor()
-    {
-        return $this->belongsTo('App\User', 'editor_id');
-    }
-
-
-    /**
-     * Get the download transactions for the event.
-     */
-    public function download_transactions()
-    {
-        return $this->hasMany('App\DownloadTransaction');
-    }
-
-
-    /**
-     * Get the event transactions for the event.
-     */
-    public function event_transactions()
-    {
-        return $this->hasMany('App\EventTransaction');
-    }
+    protected $fillable = ['uuid', 'title', 'type', 'description', 'location', 'url', 'timezone', 'start', 'finish', 'active'];
     
 }
