@@ -57,7 +57,7 @@ class Account extends Model
      */
     public function roles()
     {
-        return $this->belongsToMany('App\Role', 'role_users')->withPivot('role_id')->withTimestamps();
+        return $this->belongsToMany('App\Role', 'account_user')->withPivot('role_id')->withTimestamps();
     }
 
 
