@@ -36,7 +36,7 @@ Create New event
                      @if ($errors->any())
                         <ul class="alert alert-danger">
                             @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
+                                <li>{{ var_dump($error) }}</li>
                             @endforeach
                         </ul>
                     @endif
@@ -48,7 +48,7 @@ Create New event
                     <div class="form-group">
                         <label for="title">@lang('frontend.title')</label>
                         {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}
-                        <ul class="alert alert-danger"><li>{{ $error[0] }}</li></ul>
+                        <ul class="alert alert-danger"><li>{{ $error }}</li></ul>
                         <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
 
                     </div>
