@@ -36,7 +36,7 @@ Create New event
                      @if ($errors->any())
                         <ul class="alert alert-danger">
                             @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
+                                <li>{{ dd($error) }}</li>
                             @endforeach
                         </ul>
                     @endif
