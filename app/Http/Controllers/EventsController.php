@@ -375,7 +375,7 @@ class EventsController extends Controller {
 
        case 'Microsoft':
           $result = 'success';
-          $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='. $event_start_zero->format('Ymd').'T'.$event_start_zero->format('His') .
+          $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='. $event_start_zero->format('Ymd').'T'.$event_start_zero->format('His').'Z' .
               '&dtend='. $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His') .
               '&summary='. $event['title'] .
               '&location='. $event['location'] .
