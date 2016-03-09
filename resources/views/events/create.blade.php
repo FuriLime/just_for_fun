@@ -34,10 +34,9 @@ Create New event
                 </div>
                 <div class="panel-body">
                      @if ($errors->any())
-                         {{dd($errors->any())}}
                         <ul class="alert alert-danger">
                             @foreach ($errors->any() as $error)
-                                <li>{{ $error }}</li>
+                                <li>{{ dd($error) }}</li>
                             @endforeach
                         </ul>
                     @endif
