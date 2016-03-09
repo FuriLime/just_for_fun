@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_03_09_143412_create_accounts_table.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_03_09_142814_create_accounts_table.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_03_09_143513_create_account_profiles_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -95,11 +94,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_03_09_143412_create_accounts_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2016_03_09_143412_create_accounts_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_09_143412_create_accounts_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.947644" vertical-offset="207" max-vertical-offset="840">
+            <state vertical-scroll-proportion="-22.625" vertical-offset="207" max-vertical-offset="840">
               <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016_03_09_143513_create_account_profiles_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_09_143513_create_account_profiles_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7905759" vertical-offset="87" max-vertical-offset="660">
+              <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -126,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Middleware/InviteMiddleware.php" />
         <option value="$PROJECT_DIR$/resources/views/invite/invitesonly.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/config/services.php" />
@@ -177,6 +185,7 @@
         <option value="$PROJECT_DIR$/database/migrations/2016_03_09_142814_create_accounts_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_09_143158_create_account_types_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_09_143412_create_accounts_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_09_143513_create_account_profiles_table.php" />
       </list>
     </option>
   </component>
@@ -358,12 +367,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01576" summary="database">
-      <created>1457524370940</created>
-      <option name="number" value="01576" />
-      <option name="project" value="LOCAL" />
-      <updated>1457524370940</updated>
     </task>
     <task id="LOCAL-01577" summary="database">
       <created>1457524601830</created>
@@ -653,7 +656,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457533946320</updated>
     </task>
-    <option name="localTasksCounter" value="1625" />
+    <task id="LOCAL-01625" summary="database">
+      <created>1457534071331</created>
+      <option name="number" value="01625" />
+      <option name="project" value="LOCAL" />
+      <updated>1457534071331</updated>
+    </task>
+    <option name="localTasksCounter" value="1626" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -711,13 +720,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InviteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.125" vertical-offset="378" max-vertical-offset="975">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MailController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3482143" vertical-offset="90" max-vertical-offset="1335">
@@ -1117,8 +1119,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_09_143412_create_accounts_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.947644" vertical-offset="207" max-vertical-offset="840">
+        <state vertical-scroll-proportion="-22.625" vertical-offset="207" max-vertical-offset="840">
           <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_09_143513_create_account_profiles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7905759" vertical-offset="87" max-vertical-offset="660">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
           <folding />
         </state>
       </provider>
