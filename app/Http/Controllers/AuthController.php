@@ -62,7 +62,7 @@ class AuthController extends JoshController
         $email= Input::only('email');
         // Redirect to the dashboard page
         $user = User::where('email', $email['email'])->get();
-        if(!$user) {
+        if($user['0']['original']['isActivate']) {
             $activeUser = $user['0']['original']['isActivate'];
 //        dd($activeUser);
             if ($activeUser == 0) {
