@@ -151,9 +151,10 @@ class EventsController extends Controller {
     // Is the user logged in?
     if (Sentinel::check()) {
       if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
-          dd($store_info);
+
         event::create($store_info);
           Session::forget('timezone');
+          dd($store_info);
         return redirect('events')->with('success', Lang::get('message.success.create'));
       }
     } else {
