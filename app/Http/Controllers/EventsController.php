@@ -326,11 +326,11 @@ class EventsController extends Controller {
 
     // perform events time to 00.00 timezone
     $date = new \DateTime($event['start'], new \DateTimeZone($event['timezone']));
-    $date->setTimezone(new \DateTimeZone('UTC'));
+    $date->setTimezone(new \DateTimeZone($event->timezone));
     $event_start_zero = $date;
 
     $date = new \DateTime($event['finish'], new \DateTimeZone($event['timezone']));
-    $date->setTimezone(new \DateTimeZone('UTC'));
+    $date->setTimezone(new \DateTimeZone($event->timezone));
     $event_finish_zero = $date;
 
     $difference = strtotime($event['finish']) - strtotime($event['start']);
