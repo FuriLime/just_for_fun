@@ -20,16 +20,15 @@ class Event extends Model  {
      */
     protected $table = 'events';
 
-//    protected $dates = [            // to make sure dates are treated as instances of Carbon()
-//        'deleted_at',
-//        'uuid',
-//        'start',
-//        'finish',
-//        'test_until',
-//        'free_downloads_until',
-//    ];
+    protected $dates = [            // to make sure dates are treated as instances of Carbon()
+        'deleted_at',
+        'start',
+        'finish',
+        'test_until',
+        'free_downloads_until',
+    ];
 
-    protected $fillable = ['uuid', 'title','author_id', 'editor_id', 'account_id', 'type', 'description', 'location', 'url', 'timezone', 'start', 'finish', 'active'];
+//    protected $fillable = ['uuid', 'title','author_id', 'editor_id', 'account_id', 'type', 'description', 'location', 'url', 'timezone', 'start', 'finish', 'active'];
     /**
      * Get the account that owns the event.
      */
