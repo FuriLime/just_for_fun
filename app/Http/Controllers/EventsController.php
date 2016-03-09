@@ -384,10 +384,10 @@ class EventsController extends Controller {
         '&DESC='.$event['description'];
         break;
 
-                case 'Microsoft':
-                    $result = 'success';
-                    $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='. $event_start_zero->format('Ymd').'T'.$event_start_zero->format('His') .'&dtend='. $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His') .'&summary='. $event['title'] .'&location='. $event['location'] .'&description='. $event['description'];
-                break;
+       case 'Microsoft':
+          $result = 'success';
+          $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='. $event_start_zero->format('Ymd').'T'.$event_start_zero->format('His') .'&dtend='. $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His') .'&summary='. $event['title'] .'&location='. $event['location'] .'&description='. $event['description'];
+      break;
 
         case 'Outloock':
             $result = 'success_load';
