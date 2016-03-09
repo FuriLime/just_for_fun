@@ -56,10 +56,10 @@ class User extends EloquentUser
 //    /**
 //     * The roles that belong to the user.
 //     */
-//    public function roles()
-//    {
-//        return $this->belongsToMany('App\Role', 'role_users')->withPivot('role_id')->withTimestamps();
-//    }
+    public function roles()
+    {
+        return $this->belongsToMany('App\Role', 'role_users')->withPivot('role_id')->withTimestamps();
+    }
 
 
     /**
