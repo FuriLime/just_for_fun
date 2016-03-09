@@ -271,7 +271,7 @@ class UsersController extends JoshController
     );
 
     protected $mailchimp;
-    protected $listId = '3b2e9de273';        // Id of newsletter list
+    protected $listId = Config::get('mailchimp.listId');        // Id of newsletter list
 
     /**
      * Show a list of all the users.
