@@ -2,7 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Activate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Blog.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/BlogCategory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/BlogComment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Eventcategory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Usergroup.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Account.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/AccountFeature.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/AccountProfile.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/AccountText.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/AccountType.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Activation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/CreditPackage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/CreditType.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DownloadCredit.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DownloadTransaction.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/EventCredit.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/EventTransaction.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Feature.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Invoice.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Permission.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Role.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/UserProfile.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Event.php" afterPath="$PROJECT_DIR$/app/Event.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -41,9 +65,12 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="14.166667" vertical-offset="715" max-vertical-offset="1275">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="13.5" vertical-offset="654" max-vertical-offset="654">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <marker date="1457094523268" expanded="true" signature="603:606" placeholder="{...}" />
+                <marker date="1457094523268" expanded="true" signature="603:604" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,8 +78,8 @@
       <file leaf-file-name="Event.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Event.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2670157" vertical-offset="72" max-vertical-offset="1035">
-              <caret line="17" column="108" selection-start-line="17" selection-start-column="108" selection-end-line="17" selection-end-column="108" />
+            <state vertical-scroll-proportion="0.28795812" vertical-offset="0" max-vertical-offset="573">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -319,12 +346,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01513" summary="database">
-      <created>1457512348658</created>
-      <option name="number" value="01513" />
-      <option name="project" value="LOCAL" />
-      <updated>1457512348658</updated>
     </task>
     <task id="LOCAL-01514" summary="database">
       <created>1457512365704</created>
@@ -614,7 +635,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457519886270</updated>
     </task>
-    <option name="localTasksCounter" value="1562" />
+    <task id="LOCAL-01562" summary="database">
+      <created>1457519893381</created>
+      <option name="number" value="01562" />
+      <option name="project" value="LOCAL" />
+      <updated>1457519893381</updated>
+    </task>
+    <option name="localTasksCounter" value="1563" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1040,16 +1067,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="14.166667" vertical-offset="715" max-vertical-offset="1275">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="13.5" vertical-offset="654" max-vertical-offset="654">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1457094523268" expanded="true" signature="603:606" placeholder="{...}" />
+            <marker date="1457094523268" expanded="true" signature="603:604" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Event.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2670157" vertical-offset="72" max-vertical-offset="1035">
-          <caret line="17" column="108" selection-start-line="17" selection-start-column="108" selection-end-line="17" selection-end-column="108" />
+        <state vertical-scroll-proportion="0.28795812" vertical-offset="0" max-vertical-offset="573">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding />
         </state>
       </provider>
