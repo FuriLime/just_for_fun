@@ -18,26 +18,36 @@ if (isset($ID) && $ID != "") {
 	$date_end = strip_tags($_GET['fd']);
 	$time_end = strip_tags($_GET['ft']);
 
-	$file = "BEGIN:VCALENDAR
-		BEGIN:VEVENT\r\n";
+//	$file = "BEGIN:VCALENDAR
+//		BEGIN:VEVENT\r\n";
+//
+//	$file .= "DTSTART:" . $date . "T" . $time . "Z\r\n";
+//	$file .= "DTEND:" . $date_end . "T" . $time_end . "Z\r\n";
+//	$file .= "LOCATION:" . strip_tags($_GET['loc']) . "\r\n";
+//	$file .= "DESCRIPTION:" . iconv('windows-1251', 'UTF-8', trim(strip_tags(html_entity_decode
+//			(strip_tags($_GET['desc']), ENT_QUOTES, 'windows-1251')))) . "\r\n";
+//	$file .= "SUMMARY:" . iconv('windows-1251', 'UTF-8', strip_tags($_GET['name'])) . "\r\n";
+//	$file .= "PRIORITY:3
+//		BEGIN:VALARM
+//		ACTION:DISPLAY
+//		TRIGGER:-PT15M
+//		END:VALARM
+//		END:VEVENT
+//		END:VCALENDAR";
+//    //dd($file);
+//	echo $file;
+//	exit;
 
-	$file .= "DTSTART:" . $date . "T" . $time . "Z\r\n";
-	$file .= "DTEND:" . $date_end . "T" . $time_end . "Z\r\n";
-	$file .= "LOCATION:" . strip_tags($_GET['loc']) . "\r\n";
-	$file .= "DESCRIPTION:" . iconv('windows-1251', 'UTF-8', trim(strip_tags(html_entity_decode
-			(strip_tags($_GET['desc']), ENT_QUOTES, 'windows-1251')))) . "\r\n";
-	$file .= "SUMMARY:" . iconv('windows-1251', 'UTF-8', strip_tags($_GET['name'])) . "\r\n";
-	$file .= "PRIORITY:3
-		BEGIN:VALARM
-		ACTION:DISPLAY
-		TRIGGER:-PT15M
-		END:VALARM
-		END:VEVENT
-		END:VCALENDAR";
-    //dd($file);
-	echo $file;
-	exit;
-
+    $vCalendar = new \Eluceo\iCal\Component\Calendar('www.example.com');
+    $vEvent = new \Eluceo\iCal\Component\Event();
+    $vEvent
+        ->setDtStart(new \DateTime($date))
+        ->setDtEnd(new \DateTime($date_end))
+        ->setNoTime(true)
+        ->setSummary('Christmas')
+    ;
+    $vCalendar->addComponent($vEvent);
+    echo $vCalendar->render();
 
 
 }
