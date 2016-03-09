@@ -188,8 +188,6 @@ class EventsController extends Controller {
             $my_time_zone = 'UTC';
         }
         $event = Event::whereUuid($uuid)->first();
-        $dataLayer = new GoogleTagManager\DataLayer();
-        $dataLayer->set('ecommerce.click.events', $event->toJson());
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($my_time_zone));
         $event_start_zero = $date;
