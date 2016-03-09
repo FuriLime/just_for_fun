@@ -21,36 +21,36 @@ use App\DownloadCredit;
 */
 
 
-//$factory->define(App\Account::class, function (Faker\Generator $faker) {
-//    $status_array = ['Active', 'Active', 'Active', 'Active', 'Blocked']; // multiple entries to have higher likelyhood for some entries
-//    $account_types = AccountType::select('id')->get();
-//
-//    return [
-//        'name' => $faker->company . random_int(1, 99),      // contains a random number to avoid duplicated during seeder run
-//        'slug' => $faker->slug,
-//        'status' => $status_array[array_rand($status_array)],
-//        'account_type_id' => $account_types->random(1)->id,
-//
-//        'stripe_active' => 0,               //can be changed when stripe setup is complete
-//        'stripe_id' => null,                //can be changed when stripe setup is complete
-//        'stripe_subscription' => null,      //can be changed when stripe setup is complete
-//        'stripe_plan' => null,              //can be changed when stripe setup is complete
-//        'last_four' => null,                //can be changed when stripe setup is complete
-//        'trial_ends_at' => null,            //can be changed when stripe setup is complete
-//        'subscription_ends_at' => null,     //can be changed when stripe setup is complete
-//
-//        'free_downloads_until' => $faker->dateTimeBetween($startDate = '-2 months', $endDate = '+2 months'),
-//        'free_events_until' => $faker->dateTimeBetween($startDate = '-2 months', $endDate = '+2 months'),
-//    ];
-//});
+$factory->define(App\Account::class, function (Faker\Generator $faker) {
+    $status_array = ['Active', 'Active', 'Active', 'Active', 'Blocked']; // multiple entries to have higher likelyhood for some entries
+    $account_types = AccountType::select('id')->get();
+
+    return [
+        'name' => $faker->company . random_int(1, 99),      // contains a random number to avoid duplicated during seeder run
+        'slug' => $faker->slug,
+        'status' => $status_array[array_rand($status_array)],
+        'account_type_id' => $account_types->random(1)->id,
+
+        'stripe_active' => 0,               //can be changed when stripe setup is complete
+        'stripe_id' => null,                //can be changed when stripe setup is complete
+        'stripe_subscription' => null,      //can be changed when stripe setup is complete
+        'stripe_plan' => null,              //can be changed when stripe setup is complete
+        'last_four' => null,                //can be changed when stripe setup is complete
+        'trial_ends_at' => null,            //can be changed when stripe setup is complete
+        'subscription_ends_at' => null,     //can be changed when stripe setup is complete
+
+        'free_downloads_until' => $faker->dateTimeBetween($startDate = '-2 months', $endDate = '+2 months'),
+        'free_events_until' => $faker->dateTimeBetween($startDate = '-2 months', $endDate = '+2 months'),
+    ];
+});
 
 
-//$factory->define(App\AccountProfile::class, function (Faker\Generator $faker) {
-//    return [
-//        'timezone' => $faker->timezone,
-//        'about' => $faker->paragraph,
-//    ];
-//});
+$factory->define(App\AccountProfile::class, function (Faker\Generator $faker) {
+    return [
+        'timezone' => $faker->timezone,
+        'about' => $faker->paragraph,
+    ];
+});
 
 
 //$factory->define(App\AccountText::class, function (Faker\Generator $faker) {
@@ -60,11 +60,11 @@ use App\DownloadCredit;
 //});
 
 
-//$factory->define(App\AccountType::class, function (Faker\Generator $faker) {
-//    return [
-//        // all comes from manual settings
-//    ];
-//});
+$factory->define(App\AccountType::class, function (Faker\Generator $faker) {
+    return [
+        // all comes from manual settings
+    ];
+});
 //
 //
 //$factory->define(App\CreditPackage::class, function (Faker\Generator $faker) {
@@ -125,41 +125,41 @@ use App\DownloadCredit;
 //});
 //
 //
-//$factory->define(App\Event::class, function (Faker\Generator $faker) {
-//    $status_array = ['Draft', 'Published', 'Published', 'Published']; // multiple entries to have higher likelyhood for some entries
-//    $test_array = [null, null, null, $faker->dateTimeBetween($startDate = '-2 months', $endDate = '+3 days')]; // multiple entries to have higher likelyhood for some entries
-//    $free_downloads_array = [null, null, null, $faker->dateTimeBetween($startDate = '-4 weeks', $endDate = '+2 days')]; // multiple entries to have higher likelyhood for some entries
-//    $accounts = Account::select('id')->get();
-//
-//    return [
-//        'account_id' => 7,//$account = $accounts->random(1)->id,
-//        'author_id' => 7,       //should be random for every created item
-//        'editor_id' => 7,       //should be random for every created item
-//
-//        'title' => $faker->sentence(6),
-//        'description' => $faker->paragraph,
-//        'location' => $faker->address,
-//        'lat' => $faker->latitude($min = -60, $max = 60),
-//        'lng' => $faker->longitude($min = -180, $max = 180) ,
-//
-//        'permanent_url' => '/' . (string)Uuid::uuid4() . ' - should be UUID of event',
-//        'readable_url' => '/' . $faker->slug,
-//
-//        'event_url' => 'may later be entered by user for online events',
-//
-//        'timezone' => $faker->timezone,
-//        'start' => $start = $faker->dateTimeBetween($startDate = '-2 months', $endDate = '+16 months'),
-//        'finish' => $start, //has to be changed to later time
-//
-//        'type' => '',
-//        'test_until' => $test_array[array_rand($test_array)],
-//        // event collumns to be added in future here
-//
-//        'free_downloads_until' => $free_downloads_array[array_rand($free_downloads_array)],
-//
-//        'status' => $status_array[array_rand($status_array)],
-//    ];
-//});
+$factory->define(App\Event::class, function (Faker\Generator $faker) {
+    $status_array = ['Draft', 'Published', 'Published', 'Published']; // multiple entries to have higher likelyhood for some entries
+    $test_array = [null, null, null, $faker->dateTimeBetween($startDate = '-2 months', $endDate = '+3 days')]; // multiple entries to have higher likelyhood for some entries
+    $free_downloads_array = [null, null, null, $faker->dateTimeBetween($startDate = '-4 weeks', $endDate = '+2 days')]; // multiple entries to have higher likelyhood for some entries
+    $accounts = Account::select('id')->get();
+
+    return [
+        'account_id' => 7,//$account = $accounts->random(1)->id,
+        'author_id' => 7,       //should be random for every created item
+        'editor_id' => 7,       //should be random for every created item
+
+        'title' => $faker->sentence(6),
+        'description' => $faker->paragraph,
+        'location' => $faker->address,
+        'lat' => $faker->latitude($min = -60, $max = 60),
+        'lng' => $faker->longitude($min = -180, $max = 180) ,
+
+        'permanent_url' => '/' . (string)Uuid::uuid4() . ' - should be UUID of event',
+        'readable_url' => '/' . $faker->slug,
+
+        'event_url' => 'may later be entered by user for online events',
+
+        'timezone' => $faker->timezone,
+        'start' => $start = $faker->dateTimeBetween($startDate = '-2 months', $endDate = '+16 months'),
+        'finish' => $start, //has to be changed to later time
+
+        'type' => '',
+        'test_until' => $test_array[array_rand($test_array)],
+        // event collumns to be added in future here
+
+        'free_downloads_until' => $free_downloads_array[array_rand($free_downloads_array)],
+
+        'status' => $status_array[array_rand($status_array)],
+    ];
+});
 //
 //
 //$factory->define(App\EventCredit::class, function (Faker\Generator $faker) {
