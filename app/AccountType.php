@@ -26,12 +26,5 @@ class AccountType extends Model
     }
 
 
-    /**
-     * The permissions that come with this Account Type.
-     */
-    public function permissions()
-    {
-        return $this->belongsToMany('App\Permission');
-    }
 
 }

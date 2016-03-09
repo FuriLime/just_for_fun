@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/AccountType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AccountType.php" afterPath="$PROJECT_DIR$/app/AccountType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -74,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountsTableSeeder.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AccountsTableSeeder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/seeds/AccountsTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="495">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="e#7#20#0#PHP" expanded="true" />
               </folding>
@@ -86,10 +86,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Account.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AccountType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/AccountType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="540">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="e#23#62#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Account.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-36.833332" vertical-offset="1" max-vertical-offset="1965">
+            <state vertical-scroll-proportion="0.921466" vertical-offset="357" max-vertical-offset="1965">
               <caret line="59" column="59" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
               <folding>
                 <element signature="e#23#52#0#PHP" expanded="true" />
@@ -131,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/InviteController.php" />
         <option value="$PROJECT_DIR$/app/Invite.php" />
@@ -182,6 +193,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/app/Event.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/AccountType.php" />
       </list>
     </option>
   </component>
@@ -377,12 +389,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01635" summary="database">
-      <created>1457538841550</created>
-      <option name="number" value="01635" />
-      <option name="project" value="LOCAL" />
-      <updated>1457538841550</updated>
     </task>
     <task id="LOCAL-01636" summary="database">
       <created>1457539124767</created>
@@ -672,7 +678,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457561440155</updated>
     </task>
-    <option name="localTasksCounter" value="1684" />
+    <task id="LOCAL-01684" summary="database">
+      <created>1457561553711</created>
+      <option name="number" value="01684" />
+      <option name="project" value="LOCAL" />
+      <updated>1457561553711</updated>
+    </task>
+    <option name="localTasksCounter" value="1685" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -730,13 +742,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/secrets.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4450262" vertical-offset="180" max-vertical-offset="930">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0093985" vertical-offset="213" max-vertical-offset="1950">
@@ -1104,22 +1109,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Account.php">
+    <entry file="file://$PROJECT_DIR$/database/seeds/AccountsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-36.833332" vertical-offset="1" max-vertical-offset="1965">
-          <caret line="59" column="59" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
+        <state vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="495">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#23#52#0#PHP" expanded="true" />
+            <element signature="e#7#20#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/AccountsTableSeeder.php">
+    <entry file="file://$PROJECT_DIR$/app/AccountType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="540">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <element signature="e#7#20#0#PHP" expanded="true" />
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.921466" vertical-offset="357" max-vertical-offset="1965">
+          <caret line="59" column="59" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
+          <folding>
+            <element signature="e#23#52#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
