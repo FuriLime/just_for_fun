@@ -136,13 +136,13 @@ class AuthController extends JoshController
             $role->users()->attach($user);
 
 
-dd($user);
+
             //un-comment below code incase if user have to activate manually
 
             // Data to be used on the email view
             $data = array(
                 'user'          => $user,
-                'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
+//                'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
             );
             $subject = date('Y-m-d H:i:s') . " Subjectline";  // using a time in there to easily now which email was received for testing
             $to_email = $user->email;
@@ -163,7 +163,7 @@ dd($user);
                 ['name' => 'FNAME',                 'content' => 'User reigester without first name'],
                 ['name' => 'LNAME',                 'content' => 'User reigester without last name'],
                 ['name' => 'LOGINCOUNT',            'content' => 'We not have this data yet'],
-                ['name' => 'PASSRESET',             'content' => $data['activationUrl']],
+                ['name' => 'PASSRESET',             'content' => 'dsfdsfsdf',
                 ['name' => 'RESETVALID',            'content' => 'We not have this data yet'],
                 ['name' => 'DCREDITS',              'content' => '30'],
                 ['name' => 'ECREDITS',              'content' => 'We not have this data yet'],
