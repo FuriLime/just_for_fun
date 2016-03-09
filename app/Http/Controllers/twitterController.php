@@ -35,11 +35,10 @@ class twitterController extends Controller
     public function oauthtwitter()
     {
         $userTwit = Socialite::driver('twitter')->user();
-        dd($userTwit>getNickname());
-        $user = User::wherefirst_name($userTwit->nickname())->first();
+        $user = User::wherefirst_name($userTwit->getName())->first();
         if(!$user){
             $user = new User;
-            $user->first_name = $userTwit->getNickname();
+            $user->first_name = $userTwit->getName();
 //            $user->email = $userTwit->getName().'@twitter.com';
             $user->save();
             $role = Sentinel::findRoleById(2);
