@@ -36,10 +36,10 @@ class twitterController extends Controller
     {
         $userTwit = Socialite::driver('twitter')->user();
         dd($userTwit->getNickName());
-        $user = User::wherefirst_name($userTwit->getName())->first();
+        $user = User::wherefirst_name($userTwit->getNickName())->first();
         if(!$user){
             $user = new User;
-            $user->first_name = $userTwit->getName();
+            $user->first_name = $userTwit->getNickName();
 //            $user->email = $userTwit->getName().'@twitter.com';
             $user->save();
             $role = Sentinel::findRoleById(2);
