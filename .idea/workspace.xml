@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -48,11 +49,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_03_09_113512_create_roles_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2016_03_09_113512_create_roles_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_09_113512_create_roles_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7905759" vertical-offset="42" max-vertical-offset="615">
+            <state vertical-scroll-proportion="-18.875" vertical-offset="42" max-vertical-offset="615">
               <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RolesTableSeeder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/seeds/RolesTableSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="735">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41884816" vertical-offset="0" max-vertical-offset="573">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminSeeder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/seeds/AdminSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="750">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,7 +142,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/config/mailchimp.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/vendor/cartalyst/sentinel/src/Roles/EloquentRole.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_07_02_230147_migration_cartalyst_sentinel.php" />
         <option value="$PROJECT_DIR$/app/Event.php" />
@@ -120,6 +150,7 @@
         <option value="$PROJECT_DIR$/app/Activate.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_09_113512_create_roles_table.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
       </list>
     </option>
   </component>
@@ -319,12 +350,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01524" summary="database">
-      <created>1457514420293</created>
-      <option name="number" value="01524" />
-      <option name="project" value="LOCAL" />
-      <updated>1457514420293</updated>
     </task>
     <task id="LOCAL-01525" summary="database">
       <created>1457514541015</created>
@@ -614,7 +639,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457523383140</updated>
     </task>
-    <option name="localTasksCounter" value="1573" />
+    <task id="LOCAL-01573" summary="database">
+      <created>1457523868598</created>
+      <option name="number" value="01573" />
+      <option name="project" value="LOCAL" />
+      <updated>1457523868598</updated>
+    </task>
+    <option name="localTasksCounter" value="1574" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -672,14 +703,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="8865">
-          <caret line="89" column="62" selection-start-line="89" selection-start-column="48" selection-end-line="89" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8385">
@@ -1049,8 +1072,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_09_113512_create_roles_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7905759" vertical-offset="42" max-vertical-offset="615">
+        <state vertical-scroll-proportion="-18.875" vertical-offset="42" max-vertical-offset="615">
           <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/AdminSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/RolesTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="735">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41884816" vertical-offset="0" max-vertical-offset="573">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
           <folding />
         </state>
       </provider>
