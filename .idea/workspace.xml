@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21428572" vertical-offset="270" max-vertical-offset="8550">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state vertical-scroll-proportion="-12.5" vertical-offset="1710" max-vertical-offset="8550">
+              <caret line="134" column="4" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="41" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
               </folding>
@@ -52,12 +52,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ical.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
+      <file leaf-file-name="AutomaticUuidKey.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Custom/AutomaticUuidKey.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.0" vertical-offset="0" max-vertical-offset="870">
-              <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
+            <state vertical-scroll-proportion="6.375" vertical-offset="153" max-vertical-offset="750">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.53571427" vertical-offset="1620" max-vertical-offset="7965">
+              <caret line="128" column="41" selection-start-line="128" selection-start-column="41" selection-end-line="128" selection-end-column="41" />
+              <folding>
+                <element signature="e#38#51#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,7 +77,7 @@
       <file leaf-file-name="2016_03_09_201048_create_events_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_09_201048_create_events_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.125" vertical-offset="135" max-vertical-offset="1110">
+            <state vertical-scroll-proportion="-12.708333" vertical-offset="145" max-vertical-offset="1110">
               <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
               <folding />
             </state>
@@ -123,7 +135,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2016_03_09_143158_create_account_types_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_09_143412_create_accounts_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_09_143513_create_account_profiles_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/app/Role.php" />
@@ -134,6 +145,7 @@
         <option value="$PROJECT_DIR$/database/factories/ModelFactory.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_09_201048_create_events_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
       </list>
     </option>
   </component>
@@ -272,6 +284,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -347,12 +399,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01613" summary="database">
-      <created>1457531850616</created>
-      <option name="number" value="01613" />
-      <option name="project" value="LOCAL" />
-      <updated>1457531850616</updated>
     </task>
     <task id="LOCAL-01614" summary="database">
       <created>1457532030789</created>
@@ -642,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457555490401</updated>
     </task>
-    <option name="localTasksCounter" value="1662" />
+    <task id="LOCAL-01662" summary="database">
+      <created>1457555667807</created>
+      <option name="number" value="01662" />
+      <option name="project" value="LOCAL" />
+      <updated>1457555667808</updated>
+    </task>
+    <option name="localTasksCounter" value="1663" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -700,13 +752,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2076" max-vertical-offset="3330">
-          <caret line="151" column="37" selection-start-line="151" selection-start-column="37" selection-end-line="151" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/twitterController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34554973" vertical-offset="222" max-vertical-offset="1185">
@@ -904,14 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2303665" vertical-offset="135" max-vertical-offset="1920">
-          <caret line="59" column="59" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_09_143158_create_account_types_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.875" vertical-offset="0" max-vertical-offset="645">
@@ -954,41 +991,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Custom/AutomaticUuidKey.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.30890054" vertical-offset="177" max-vertical-offset="750">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/cartalyst/sentinel/src/Sentinel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3529412" vertical-offset="2253" max-vertical-offset="12435">
           <caret line="187" column="20" selection-start-line="187" selection-start-column="20" selection-end-line="187" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13157895" vertical-offset="1790" max-vertical-offset="7935">
-          <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/UserProfile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4973822" vertical-offset="0" max-vertical-offset="573">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.005235602" vertical-offset="252" max-vertical-offset="825">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#21#37#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1052,28 +1058,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_09_201048_create_events_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.708333" vertical-offset="145" max-vertical-offset="1110">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.0" vertical-offset="0" max-vertical-offset="870">
+        <state vertical-scroll-proportion="1.0714285" vertical-offset="0" max-vertical-offset="870">
           <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_09_201048_create_events_table.php">
+    <entry file="file://$PROJECT_DIR$/app/UserProfile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.125" vertical-offset="135" max-vertical-offset="1110">
-          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+        <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="510">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Events/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2303665" vertical-offset="135" max-vertical-offset="1920">
+          <caret line="59" column="59" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.125" vertical-offset="153" max-vertical-offset="750">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Custom/AutomaticUuidKey.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.375" vertical-offset="153" max-vertical-offset="750">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21428572" vertical-offset="270" max-vertical-offset="8550">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        <state vertical-scroll-proportion="-12.5" vertical-offset="1710" max-vertical-offset="8550">
+          <caret line="134" column="4" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="41" />
           <folding>
             <element signature="e#39#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53571427" vertical-offset="1620" max-vertical-offset="7965">
+          <caret line="128" column="41" selection-start-line="128" selection-start-column="41" selection-end-line="128" selection-end-column="41" />
+          <folding>
+            <element signature="e#38#51#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

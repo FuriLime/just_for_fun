@@ -17,6 +17,7 @@ use App\UserProfile;
 use App\Activate;
 use Mailchimp\Mailchimp;
 use Config;
+use Ramsey\Uuid\Uuid;
 
 class AuthController extends JoshController
 {
@@ -125,6 +126,7 @@ class AuthController extends JoshController
             $user = Sentinel::registerAndActivate(array(
                 'email'      => Input::get('email'),
                 'password'   => Input::get('password'),
+                'uuid' => Uuid::uuid4(4),
             ));
 
 
