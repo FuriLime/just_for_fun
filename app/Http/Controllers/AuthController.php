@@ -66,7 +66,7 @@ class AuthController extends JoshController
 
             $user = User::where('email', $email['email'])->get();
             if(!empty($user['0'])) {
-                $activeUser = $user['0']['original']['isActivate'];
+                $activeUser = $user['0']['original']['verified'];
                 if ($activeUser == 0) {
                     $this->messageBag->add('email', Lang::get('auth/message.account_not_activated'));
                     return back()->withInput()->withErrors($this->messageBag);
