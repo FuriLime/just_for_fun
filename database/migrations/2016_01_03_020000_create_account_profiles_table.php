@@ -10,7 +10,6 @@ class CreateAccountProfilesTable extends Migration
      *
      * @return void
      */
-
     public function up()
     {
         Schema::create('account_profiles', function (Blueprint $table) {
@@ -18,10 +17,15 @@ class CreateAccountProfilesTable extends Migration
             $table->integer('account_id')->unsigned();
             $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
 
-            $table->string('timezone')->required();
+            $table->string('timezone')->required();     //->default('UTC'); // default timezone of account
             $table->text('about')->nullable();
-            $table->string('image')->nullable();
-            $table->string('homepage')->nullable();
+            $table->string('image')->nullable(); // e.g. a company logo
+            $table->string('homepage')->nullable(); // e.g. a www.acme.com
+            // all the other fields that are needed for an account profile
+            // all the other fields that are needed for an account profile
+            // all the other fields that are needed for an account profile
+            // all the other fields that are needed for an account profile
+
             $table->timestamps();
             $table->engine = 'InnoDB';
 

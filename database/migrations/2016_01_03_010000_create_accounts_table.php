@@ -14,7 +14,7 @@ class CreateAccountsTable extends Migration
     {
         Schema::create('accounts', function (Blueprint $table) {
             $table->increments('id');
-            $table->uuid('uuid')->required()->unique();
+            $table->uuid('uuid')->required()->unique();                     
             //no 'user_id' on this table as this is a many-to-many relationship
             $table->string('status')->nullable();               // e.g. Active, Blocked, etc...
             $table->integer('account_type_id')->unsigned();     // i.e. account type
