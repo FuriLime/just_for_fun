@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/factories/ModelFactory.php" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Account.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/AccountFeature.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/AccountProfile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/AccountText.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/AccountType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/CreditPackage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/CreditType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/DownloadCredit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/DownloadTransaction.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/EventCredit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/EventTransaction.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Feature.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Invoice.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Permission.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Blog.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/BlogCategory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/BlogComment.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -62,8 +77,8 @@
       <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7369942" vertical-offset="0" max-vertical-offset="825">
-              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.5635838" vertical-offset="0" max-vertical-offset="825">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -312,12 +327,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01496" summary="database">
-      <created>1457511553272</created>
-      <option name="number" value="01496" />
-      <option name="project" value="LOCAL" />
-      <updated>1457511553272</updated>
     </task>
     <task id="LOCAL-01497" summary="database">
       <created>1457511618277</created>
@@ -607,7 +616,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457518045885</updated>
     </task>
-    <option name="localTasksCounter" value="1545" />
+    <task id="LOCAL-01545" summary="database">
+      <created>1457518186933</created>
+      <option name="number" value="01545" />
+      <option name="project" value="LOCAL" />
+      <updated>1457518186933</updated>
+    </task>
+    <option name="localTasksCounter" value="1546" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1052,8 +1067,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7369942" vertical-offset="0" max-vertical-offset="825">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.5635838" vertical-offset="0" max-vertical-offset="825">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
           <folding />
         </state>
       </provider>
