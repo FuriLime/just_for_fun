@@ -124,21 +124,21 @@ Create New event
 
                         <div class="fields_map" style="display: none">
                          <div class="map_event_loc" id="map"></div>
-                         {{--<div class="form-group fields_loc">--}}
-                             {{--{!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street']) !!}--}}
-                         {{--</div>--}}
+                         <div class="form-group fields_loc">
+                             {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street']) !!}
+                         </div>
 
-                         {{--<div class="form-group fields_loc">--}}
-                             {{--{!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city']) !!}--}}
-                         {{--</div>--}}
+                         <div class="form-group fields_loc">
+                             {!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city']) !!}
+                         </div>
 
-                         {{--<div class="form-group fields_loc">--}}
-                             {{--{!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state']) !!}--}}
-                         {{--</div>--}}
+                         <div class="form-group fields_loc">
+                             {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state']) !!}
+                         </div>
 
-                         {{--<div class="form-group fields_loc">--}}
-                             {{--{!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country']) !!}--}}
-                         {{--</div>--}}
+                         <div class="form-group fields_loc">
+                             {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country']) !!}
+                         </div>
                          <div class="form-group fields_loc">
                             <a id="reset_loc">Reset Address</a>
                          </div>
