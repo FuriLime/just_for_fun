@@ -20,13 +20,13 @@ class Event extends Model  {
      */
     protected $table = 'events';
 
-    protected $dates = [            // to make sure dates are treated as instances of Carbon()
-        'deleted_at',
-        'start',
-        'finish',
-        'test_until',
-        'free_downloads_until',
-    ];
+//    protected $dates = [            // to make sure dates are treated as instances of Carbon()
+//        'deleted_at',
+//        'start',
+//        'finish',
+//        'test_until',
+//        'free_downloads_until',
+//    ];
 
     protected $fillable = ['uuid', 'title', 'type', 'description', 'location', 'url', 'timezone', 'start', 'finish', 'active'];
     /**
