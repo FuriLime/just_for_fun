@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Role.php" afterPath="$PROJECT_DIR$/app/Role.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -40,11 +40,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8982143" vertical-offset="5362" max-vertical-offset="8190">
-              <caret line="405" column="17" selection-start-line="405" selection-start-column="17" selection-end-line="405" selection-end-column="17" />
+            <state vertical-scroll-proportion="-5.625" vertical-offset="4635" max-vertical-offset="8190">
+              <caret line="332" column="57" selection-start-line="332" selection-start-column="41" selection-end-line="332" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Role.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Role.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9424084" vertical-offset="0" max-vertical-offset="780">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding>
+                <element signature="e#23#62#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.625" vertical-offset="60" max-vertical-offset="1230">
+              <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -116,7 +138,6 @@
         <option value="$PROJECT_DIR$/app/Activate.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_09_113512_create_roles_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_09_124209_create_role_users_table.php" />
-        <option value="$PROJECT_DIR$/app/Role.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_09_133130_create_accounts_table.php" />
         <option value="$PROJECT_DIR$/app/Account.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_09_133729_create_account_profiles_table.php" />
@@ -134,6 +155,7 @@
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+        <option value="$PROJECT_DIR$/app/Role.php" />
       </list>
     </option>
   </component>
@@ -203,25 +225,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-ef" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event.test-y-sbm.loc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -301,24 +305,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01582" summary="database">
-      <created>1457525362801</created>
-      <option name="number" value="01582" />
-      <option name="project" value="LOCAL" />
-      <updated>1457525362801</updated>
-    </task>
-    <task id="LOCAL-01583" summary="database">
-      <created>1457525643104</created>
-      <option name="number" value="01583" />
-      <option name="project" value="LOCAL" />
-      <updated>1457525643104</updated>
-    </task>
-    <task id="LOCAL-01584" summary="database">
-      <created>1457525942905</created>
-      <option name="number" value="01584" />
-      <option name="project" value="LOCAL" />
-      <updated>1457525942905</updated>
     </task>
     <task id="LOCAL-01585" summary="database">
       <created>1457526063158</created>
@@ -596,12 +582,30 @@
       <option name="project" value="LOCAL" />
       <updated>1457537204236</updated>
     </task>
-    <option name="localTasksCounter" value="1631" />
+    <task id="LOCAL-01631" summary="database">
+      <created>1457537451583</created>
+      <option name="number" value="01631" />
+      <option name="project" value="LOCAL" />
+      <updated>1457537451583</updated>
+    </task>
+    <task id="LOCAL-01632" summary="database">
+      <created>1457538449701</created>
+      <option name="number" value="01632" />
+      <option name="project" value="LOCAL" />
+      <updated>1457538449701</updated>
+    </task>
+    <task id="LOCAL-01633" summary="database">
+      <created>1457538512804</created>
+      <option name="number" value="01633" />
+      <option name="project" value="LOCAL" />
+      <updated>1457538512804</updated>
+    </task>
+    <option name="localTasksCounter" value="1634" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -697,14 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4450262" vertical-offset="180" max-vertical-offset="930">
           <caret line="29" column="22" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34031415" vertical-offset="240" max-vertical-offset="1230">
-          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -909,14 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Role.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60209423" vertical-offset="0" max-vertical-offset="780">
-          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/AccountProfile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
@@ -970,7 +958,7 @@
         <state vertical-scroll-proportion="-2.267857" vertical-offset="12430" max-vertical-offset="13560">
           <caret line="744" column="28" selection-start-line="744" selection-start-column="28" selection-end-line="744" selection-end-column="28" />
           <folding>
-            <element signature="e#38#51#0#PHP" expanded="true" />
+            <element signature="e#38#51#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1045,14 +1033,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.005235602" vertical-offset="252" max-vertical-offset="825">
@@ -1063,11 +1043,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.625" vertical-offset="60" max-vertical-offset="1230">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8982143" vertical-offset="5362" max-vertical-offset="8190">
-          <caret line="405" column="17" selection-start-line="405" selection-start-column="17" selection-end-line="405" selection-end-column="17" />
+        <state vertical-scroll-proportion="-5.625" vertical-offset="4635" max-vertical-offset="8190">
+          <caret line="332" column="57" selection-start-line="332" selection-start-column="41" selection-end-line="332" selection-end-column="57" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9424084" vertical-offset="0" max-vertical-offset="780">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

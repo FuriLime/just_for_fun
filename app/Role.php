@@ -35,7 +35,6 @@ class Role extends Model                // class Role extends EloquentRole //
         return $this->belongsToMany('App\Account', 'role_users')->withPivot('role_id')->withTimestamps();
     }
 
-
      /**
      * The permissions that this role has.
      */
