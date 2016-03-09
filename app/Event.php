@@ -29,7 +29,7 @@ class Event extends Model  {
 //        'free_downloads_until',
 //    ];
 
-    protected $fillable = ['uuid', 'title','author_id' , 'type', 'description', 'location', 'url', 'timezone', 'start', 'finish', 'active'];
+    protected $fillable = ['uuid', 'title','author_id', 'editor_id', 'type', 'description', 'location', 'url', 'timezone', 'start', 'finish', 'active'];
     /**
      * Get the account that owns the event.
      */
