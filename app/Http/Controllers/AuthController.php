@@ -126,7 +126,6 @@ class AuthController extends JoshController
             $user = Sentinel::registerAndActivate(array(
                 'email'      => Input::get('email'),
                 'password'   => Input::get('password'),
-                'uuid' => Uuid::uuid4(4),
             ));
 
 
