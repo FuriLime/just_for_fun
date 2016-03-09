@@ -122,6 +122,7 @@ class EventsController extends Controller {
     }
     $this->validate($request, [
       'title' => 'required|max:80',
+        '_token' => 'max:250',
       'description' => 'max:500',
       // 'type' => 'required',
       'location' => 'max:255',
