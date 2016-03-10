@@ -35,7 +35,7 @@ class twitterController extends Controller
     public function oauthtwitter()
     {
         $userTwit = Socialite::driver('twitter')->user();
-        dd($userTwit->getNickName());
+       // dd($userTwit->getNickName());
         $user = User::wherefirst_name($userTwit->getNickName())->first();
         if(!$user){
             $user = new User;
