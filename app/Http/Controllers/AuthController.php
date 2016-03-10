@@ -142,13 +142,11 @@ class AuthController extends JoshController
 
             //add user to 'User' group
             $role = Role::find(3);
-            $projects = [
-                2 => ['admin_id' => 1, 'user_id' => 1],
-                3 => ['admin_id' => 1, 'user_id' => 2],
-                // and so on
+            $rolew = [
+               0 => ['account_id' => $account_user, 'user_id' => $user],
             ];
 
-            dd($pivot = $user->roles()->pivot());
+dd($rolew);
             $role->users()->save($user);
             $role->accounts()->attach($account_user);
 
