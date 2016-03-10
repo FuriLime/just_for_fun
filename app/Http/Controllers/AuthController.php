@@ -136,7 +136,7 @@ class AuthController extends JoshController
 
             $account_user = new Account();
             $account_user->	account_type_id = '1';
-            $account_user->name = $rules['email'];
+            $account_user->name = $user['email'];
             $account_user->save();
 
             //add user to 'User' group
