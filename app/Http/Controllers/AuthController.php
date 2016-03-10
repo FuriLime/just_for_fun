@@ -146,9 +146,8 @@ class AuthController extends JoshController
                0 => ['account_id' => $account_user, 'user_id' => $user],
             ];
 
-dd($rolew);
-            $role->users()->save($user);
-            $role->accounts()->attach($account_user);
+            $role->users()->attach($rolew);
+//            $role->accounts()->attach($account_user);
 
 
 
