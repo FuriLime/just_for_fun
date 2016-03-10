@@ -98,17 +98,17 @@ class EventsController extends Controller {
                     'user_timezone' => $user_timezone,
                 ));
 //      }
-//    } else {
-//      //create events unregister user
-////      $start_date_tmp = strtotime("+1 hour");
-//      $user_timezone = $my_time_zone;
-//
-//      return view('events.create', array(
-//        'timezone_select' => $timezone_select,
-//        'start_date' => $start_date,
-//        'finish_date' => $finish_date,
-//        'user_timezone' => $user_timezone,
-//      ));
+    } else {
+      //create events unregister user
+//      $start_date_tmp = strtotime("+1 hour");
+      $user_timezone = $my_time_zone;
+
+      return view('events.create', array(
+        'timezone_select' => $timezone_select,
+        'start_date' => $start_date,
+        'finish_date' => $finish_date,
+        'user_timezone' => $user_timezone,
+      ));
     }
   }
 
@@ -136,11 +136,11 @@ class EventsController extends Controller {
 
       $store_info = $request->all();
         $store_info['uuid'] = Uuid::uuid4(4);
-      if (Sentinel::check()) {
-          $store_info['author_id'] = Sentinel::getUser()->id;
-          $store_info['editor_id'] = Sentinel::getUser()->id;
-          $store_info['account_id'] = Sentinel::getUser()->id;
-          }
+//      if (Sentinel::check()) {
+//          $store_info['author_id'] = Sentinel::getUser()->id;
+//          $store_info['editor_id'] = Sentinel::getUser()->id;
+//          $store_info['account_id'] = Sentinel::getUser()->id;
+//          }
 //      dd($store_info['author_id']);
     // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
     $date = new \DateTime($store_info['start'], new \DateTimeZone($store_info['timezone']));
@@ -259,9 +259,9 @@ class EventsController extends Controller {
 
     // Is the user logged in?
     if (Sentinel::check()) {
-      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
+
         return redirect('events')->with('success', Lang::get('message.success.update'));
-      }
+
     } else {
       return redirect('events')->with('success', Lang::get('message.success.update'));
     }
@@ -280,13 +280,13 @@ class EventsController extends Controller {
 
     // Is the user logged in?
     if (Sentinel::check()) {
-      if (Sentinel::inRole('admin')) {
-        $confirm_route =  route('admin.events.delete',['uuid'=>$uuid]);
-        return View('admin/layouts/modal_confirmation', compact('error','model', 'confirm_route'));
-      } else {
+//      if (Sentinel::inRole('admin')) {
+//        $confirm_route =  route('admin.events.delete',['uuid'=>$uuid]);
+//        return View('admin/layouts/modal_confirmation', compact('error','model', 'confirm_route'));
+//      } else {
         $confirm_route =  route('events.delete',['uuid'=>$uuid]);
         return View('layouts/modal_confirmation', compact('error','model', 'confirm_route'));
-      }
+//      }
     } else {
       $confirm_route =  route('events.delete',['uuid'=>$uuid]);
       return View('layouts/modal_confirmation', compact('error','model', 'confirm_route'));
@@ -305,9 +305,9 @@ class EventsController extends Controller {
     $delete = Event::destroy( $event['id'] );
     // Is the user logged in?
     if (Sentinel::check()) {
-      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
+//      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
         return redirect('events')->with('success', Lang::get('message.success.delete'));
-      }
+//      }
     } else {
       return redirect('events')->with('success', Lang::get('message.success.delete'));
     }
