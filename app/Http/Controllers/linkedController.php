@@ -90,6 +90,6 @@ class LinkedController extends Controller
                }
 
         }
-        return Redirect::route("/")->with('error', Lang::get('auth/message.signin.error'));
+        return Redirect::route("home")->with('error', Lang::get('auth/message.signin.error'));
     }
 }
