@@ -71,6 +71,7 @@ class AuthController extends JoshController
             $user = User::where('email', $email['email'])->get();
             $user_id = $user['0']['original']['id'];
             $account_user = new Account();
+            $account_user->user_id = $user['0']['original']['id'];
             $account_user->save();
 //            dd();
 //            dd($userss = Account::find($user_id)->users()->first());
