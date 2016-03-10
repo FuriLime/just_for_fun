@@ -64,23 +64,13 @@
       <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7358834" vertical-offset="1823" max-vertical-offset="9044">
-              <caret line="144" column="32" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.4571949" vertical-offset="2078" max-vertical-offset="9163">
+              <caret line="150" column="49" selection-start-line="150" selection-start-column="49" selection-end-line="150" selection-end-column="49" />
               <folding>
                 <element signature="e#38#51#0#PHP" expanded="true" />
                 <element signature="e#487#549#0#PHP" expanded="false" />
                 <element signature="e#587#814#0#PHP" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Activation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Activation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8076923" vertical-offset="191" max-vertical-offset="782">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="37" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -108,7 +98,7 @@
       <file leaf-file-name="Role.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Role.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.307693" vertical-offset="242" max-vertical-offset="884">
+            <state vertical-scroll-proportion="-19.615385" vertical-offset="0" max-vertical-offset="884">
               <caret line="32" column="28" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="28" />
               <folding />
             </state>
@@ -326,12 +316,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01737" summary="database">
-      <created>1457596718807</created>
-      <option name="number" value="01737" />
-      <option name="project" value="LOCAL" />
-      <updated>1457596718807</updated>
     </task>
     <task id="LOCAL-01738" summary="database">
       <created>1457596731879</created>
@@ -621,7 +605,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457606360635</updated>
     </task>
-    <option name="localTasksCounter" value="1786" />
+    <task id="LOCAL-01786" summary="database">
+      <created>1457606880960</created>
+      <option name="number" value="01786" />
+      <option name="project" value="LOCAL" />
+      <updated>1457606880960</updated>
+    </task>
+    <option name="localTasksCounter" value="1787" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -958,22 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Role.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.307693" vertical-offset="242" max-vertical-offset="884">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Activation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8076923" vertical-offset="191" max-vertical-offset="782">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/UserProfile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.71912014" vertical-offset="0" max-vertical-offset="591">
@@ -1024,10 +998,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Activation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.035532996" vertical-offset="191" max-vertical-offset="782">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.615385" vertical-offset="0" max-vertical-offset="884">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7358834" vertical-offset="1823" max-vertical-offset="9044">
-          <caret line="144" column="32" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.4571949" vertical-offset="2078" max-vertical-offset="9163">
+          <caret line="150" column="49" selection-start-line="150" selection-start-column="49" selection-end-line="150" selection-end-column="49" />
           <folding>
             <element signature="e#38#51#0#PHP" expanded="true" />
             <element signature="e#487#549#0#PHP" expanded="false" />
