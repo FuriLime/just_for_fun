@@ -77,11 +77,7 @@ class FacebookController extends Controller
               if(Sentinel::authenticate($user))
             {
                 $user = Sentinel::check();
-                if (Sentinel::inRole('admin')) {
                     return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-                } else if (Sentinel::inRole('user'))  {
-                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-                }
             }
         }
 
@@ -94,12 +90,7 @@ class FacebookController extends Controller
             if(Sentinel::authenticate($user))
             {
                 $user = Sentinel::check();
-                if (Sentinel::inRole('admin')) {
                     return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-                } else if (Sentinel::inRole('user'))  {
-
-                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-                }
             }
         }
         return Redirect::route("home")->with('error', Lang::get('auth/message.signin.error'));
