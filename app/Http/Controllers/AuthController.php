@@ -140,7 +140,7 @@ class AuthController extends JoshController
             // Data to be used on the email view
             $data = array(
                 'user'          => $user,
-//                'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
+                'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
             );
             $subject = date('Y-m-d H:i:s') . " Subjectline";  // using a time in there to easily now which email was received for testing
             $to_email = $user->email;
