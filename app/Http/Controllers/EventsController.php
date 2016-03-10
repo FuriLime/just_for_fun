@@ -164,6 +164,8 @@ class EventsController extends Controller {
 
     } else {
 
+        dd($store_info);
+
       event::create($store_info);
         Session::forget('timezone');
       return redirect('events')->with('success', Lang::get('message.success.create'));
