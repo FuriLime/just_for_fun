@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Account;
+use App\Role;
 use Auth;
 use Redirect;
 use Lang;
@@ -35,10 +37,20 @@ class MicrosoftController extends Controller {
         $user->first_name = $result['first_name'];
         $user->email = $result['emails']['account'];
         $user->save();
+          $account_user = new Account();
+          $account_user->	account_type_id = '1';
+          $account_user->name = $user->first_name;
+          $account_user->slug = $user->first_name;
+          $account_user->save();
+          $role = Role::find(2);
+          $rolew = [
+              0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
+          ];
 
-        $role = Sentinel::findRoleById(2);
-        $role->users()->attach($user);
-        
+          $role->users()->attach($rolew);
+          $user_profile = new UserProfile();
+          $user_profile->user_id = $user->id;
+          $user_profile->save();
         $user = Sentinel::findById($user->id);
         $activation = Activation::create($user);
 
@@ -47,12 +59,7 @@ class MicrosoftController extends Controller {
           
           if(Sentinel::authenticate($user)) {
             $user = Sentinel::check();
-
-            if (Sentinel::inRole('admin')) {
               return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-            } else if (Sentinel::inRole('user')) {
-              return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-            }
           }
         }
       }
@@ -62,12 +69,8 @@ class MicrosoftController extends Controller {
 
         if(Sentinel::authenticate($user)) {
           $user = Sentinel::check();
+           return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
 
-          if (Sentinel::inRole('admin')) {
-            return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-          } else if (Sentinel::inRole('user')) {
-            return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-          }
         }
       }
 

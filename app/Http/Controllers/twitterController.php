@@ -55,6 +55,9 @@ class twitterController extends Controller
             ];
 
             $role->users()->attach($rolew);
+            $user_profile = new UserProfile();
+            $user_profile->user_id = $user->id;
+            $user_profile->save();
             $user = Sentinel::findById($user->id);
             $activation = Activation::create($user);
 
