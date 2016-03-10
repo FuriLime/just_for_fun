@@ -135,11 +135,11 @@ class EventsController extends Controller {
 
         $store_info = new Event();
         $store = $request->all();
-        $store_info['uuid'] = Uuid::uuid4(4);
+        $store_info->uuid = Uuid::uuid4(4);
 
-          $store_info['author_id'] = '28';
-          $store_info['editor_id'] = '28';
-          $store_info['account_id'] = '25';
+          $store_info->author_id = '28';
+          $store_info->editor_id = '28';
+          $store_info->account_id = '25';
       dd($store_info);
       $store_info->create($store);
 
