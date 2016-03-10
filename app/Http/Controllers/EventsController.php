@@ -141,6 +141,11 @@ class EventsController extends Controller {
         $store = $request->all();
         $store_info->uuid = Uuid::uuid4(4);
         $store_info->title = Input::get('title');
+        $store_info->description = Input::get('description');
+        $store_info->location = Input::get('location');
+        $store_info->timezone = Input::get('timezone');
+        $store_info->finish = Input::get('finish');
+        $store_info->start = Input::get('start');
 
           $store_info->author_id = $user->id;
           $store_info->editor_id = $user->id;
