@@ -140,9 +140,9 @@ class EventsController extends Controller {
           $store_info['author_id'] = '28';
           $store_info['editor_id'] = '28';
           $store_info['account_id'] = '25';
-
-      $store_info->create($store);
       dd($store_info);
+      $store_info->create($store);
+
 //      dd($store_info['author_id']);
     // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
     $date = new \DateTime($store_info['start'], new \DateTimeZone($store_info['timezone']));
