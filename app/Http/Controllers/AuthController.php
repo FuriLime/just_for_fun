@@ -138,7 +138,6 @@ class AuthController extends JoshController
             //un-comment below code incase if user have to activate manually
 
             // Data to be used on the email view
-            dd(User::find($user->id)->activate->code);
             $data = array(
                 'user'          => $user,
                 'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
@@ -162,7 +161,7 @@ class AuthController extends JoshController
                 ['name' => 'FNAME',                 'content' => 'User reigester without first name'],
                 ['name' => 'LNAME',                 'content' => 'User reigester without last name'],
                 ['name' => 'LOGINCOUNT',            'content' => 'We not have this data yet'],
-                ['name' => 'PASSRESET',             'content' => ''],
+                ['name' => 'PASSRESET',             'content' => $data['activationUrl']],
                 ['name' => 'RESETVALID',            'content' => 'We not have this data yet'],
                 ['name' => 'DCREDITS',              'content' => '30'],
                 ['name' => 'ECREDITS',              'content' => 'We not have this data yet'],

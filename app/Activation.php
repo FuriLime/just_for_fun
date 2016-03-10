@@ -26,14 +26,14 @@ class Activation extends Model
     public function activateUser($user_id)
     {
         $user = User::find($user_id);
-        $user->isActive = 1;
+        $user->verified = 1;
         $user->save();
     }
 
     public function isUserActivate($user_id)
     {
         $user = User::find($user_id);
-        if ($user->isActive){
+        if ($user->verified){
             return true;
         }
     }
