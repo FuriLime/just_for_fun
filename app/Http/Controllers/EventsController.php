@@ -134,14 +134,14 @@ class EventsController extends Controller {
     ]);
 
         $store_info = new Event();
-//      $store_info = $request->all();
+        $store = $request->all();
         $store_info['uuid'] = Uuid::uuid4(4);
 
           $store_info['author_id'] = '28';
           $store_info['editor_id'] = '28';
           $store_info['account_id'] = '25';
 
-      $store_info::create($store_info);
+      $store_info->create($store);
       dd($store_info);
 //      dd($store_info['author_id']);
     // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
