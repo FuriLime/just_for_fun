@@ -56,9 +56,9 @@ class JoshController extends Controller {
     {
     	if(Sentinel::check()) {
 
-            if (Sentinel::inRole('admin')) {
+//            if (Sentinel::inRole('admin')) {
                 return View('admin/index');
-            }
+//            }
        
         if (Sentinel::inRole('user')) {
                 return View('admin/index');
@@ -75,9 +75,9 @@ class JoshController extends Controller {
     	if(View::exists('admin/'.$name))
 		{
 			if(Sentinel::check()){
-                if (Sentinel::inRole('admin')) {
+//                if (Sentinel::inRole('admin')) {
                     return View('admin/'.$name);
-                }
+//                }
                 if (Sentinel::inRole('user')) {
                     return View('admin/'.$name);
                 }
