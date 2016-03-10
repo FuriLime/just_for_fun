@@ -242,15 +242,15 @@ Edit User
                                                 {{--@endif--}}
                                             @endif
 
-                                                @if(Sentinel::check())
+                                                {{--@if(Sentinel::check())--}}
                                                     {{--@if(Sentinel::inRole('user'))--}}
-                                            <select class="form-control " title="Select group..." name="groups[]" id="groups" required>
+                                            {{--<select class="form-control " title="Select group..." name="groups[]" id="groups" required>--}}
                                                 {{--<option value="">Select</option>--}}
                                                 {{--@foreach($roles as $role)--}}
-                                                    <option value="2" {{ (array_key_exists(2, $userRoles) ? ' selected="selected"' : '') }}>user</option>
+                                                    {{--<option value="2" {{ (array_key_exists(2, $userRoles) ? ' selected="selected"' : '') }}>user</option>--}}
                                                 {{--@endforeach--}}
-                                            </select>
-                                                    @endif
+                                            {{--</select>--}}
+                                                    {{--@endif--}}
                                                     {{--@endif--}}
                                         </div>
                                     </div>
