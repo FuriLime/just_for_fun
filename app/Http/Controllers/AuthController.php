@@ -141,8 +141,9 @@ class AuthController extends JoshController
             $account_user->save();
 
             //add user to 'User' group
-//            $role = Role::find(3);
-//            $role->users()->attach($user);
+            $role = Role::find(3);
+            $role->users()->attach($user);
+            $role->accounts()->attach($account_user);
 
 
 
