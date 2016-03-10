@@ -130,6 +130,8 @@ class AuthController extends JoshController
                 'password'   => Input::get('password'),
             ));
 
+            dd($user);
+
             $account_user = new Account();
             $account_user->	account_type_id = '1';
             $account_user->name = $user['email'];
