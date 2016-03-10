@@ -27,7 +27,8 @@ class User extends EloquentUser
     			'nick_name', 
     			'first_name', 
     			'last_name', 
-    			'email'
+    			'email',
+                'password'
     		];
 
 
