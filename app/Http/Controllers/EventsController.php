@@ -43,6 +43,7 @@ class EventsController extends Controller {
         //if user logined
         if (Sentinel::check()) {
 //            if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
+            dd(Sentinel::getUser());
                 return view('events.index', compact('events'));
 //                }
             }
