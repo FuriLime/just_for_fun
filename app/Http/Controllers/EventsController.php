@@ -200,16 +200,16 @@ class EventsController extends Controller {
         $event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
     // Is the user logged in?
     if (Sentinel::check()) {
-      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
+//      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
           //$event = Event::findOrFail($uuid);
           return view('events.show', compact('event'));
             }
-    }
-
-    else {
-      //show event for unregister user
-      return view('events.show', compact('event'));
-    }
+//    }
+//
+//    else {
+//      //show event for unregister user
+//      return view('events.show', compact('event'));
+//    }
   }
 
   /**
