@@ -45,8 +45,8 @@ class twitterController extends Controller
             $user->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';
-            $account_user->name = $user['email'];
-            $account_user->slug = $user['email'];
+            $account_user->name = $user->first_name;
+            $account_user->slug = $user->first_name;
             $account_user->save();
             $role = Role::find(2);
             $rolew = [
