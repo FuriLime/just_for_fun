@@ -19,12 +19,12 @@ class DatabaseSeeder extends Seeder
 //        $this->call(CreditTypesTableSeeder::class);         // no dependancy for table seeding
 //        $this->call(FeaturesTableSeeder::class);            // no dependancy for table seeding
 //        $this->call(PermissionsTableSeeder::class);         // no dependancy for table seeding // not needed in Phase 1 & 2
-        $this->call(RolesTableSeeder::class);               // no dependancy for table seeding
+//        $this->call(RolesTableSeeder::class);               // no dependancy for table seeding
 //        $this->call(UsersTableSeeder::class);               // no dependancy for table seeding
 //
 //
 //        // Seeders that DO depend on another table in the FIRST block or earlier already having data
-//        $this->call(AccountTypesTableSeeder::class);        // depends on table 'permissions' to already have data
+        $this->call(AccountTypesTableSeeder::class);        // depends on table 'permissions' to already have data
 //        $this->call(PermissionRoleTableSeeder::class);      // depends on tables 'permissions' and 'roles' to already have data  // not needed in Phase 1 & 2
 //        $this->call(UserProfilesTableSeeder::class);        // depends on table 'users' to already have data
 //
