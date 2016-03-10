@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Activation.php" afterPath="$PROJECT_DIR$/app/Activation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -75,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4363637" vertical-offset="1970" max-vertical-offset="8806">
-              <caret line="140" column="36" selection-start-line="140" selection-start-column="36" selection-end-line="140" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.229927" vertical-offset="1970" max-vertical-offset="8806">
+              <caret line="140" column="54" selection-start-line="140" selection-start-column="54" selection-end-line="140" selection-end-column="54" />
               <folding>
                 <element signature="e#38#51#0#PHP" expanded="true" />
                 <element signature="e#454#516#0#PHP" expanded="false" />
@@ -89,10 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Activation.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Activation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Activation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19675925" vertical-offset="0" max-vertical-offset="864">
+            <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="782">
               <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
               <folding />
             </state>
@@ -199,8 +199,8 @@
         <option value="$PROJECT_DIR$/database/seeds/AccountsTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/Event.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/app/Activation.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
       </list>
     </option>
   </component>
@@ -390,12 +390,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01671" summary="database">
-      <created>1457559731397</created>
-      <option name="number" value="01671" />
-      <option name="project" value="LOCAL" />
-      <updated>1457559731397</updated>
     </task>
     <task id="LOCAL-01672" summary="database">
       <created>1457559898259</created>
@@ -685,7 +679,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457594003050</updated>
     </task>
-    <option name="localTasksCounter" value="1720" />
+    <task id="LOCAL-01720" summary="database">
+      <created>1457594095611</created>
+      <option name="number" value="01720" />
+      <option name="project" value="LOCAL" />
+      <updated>1457594095611</updated>
+    </task>
+    <option name="localTasksCounter" value="1721" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1013,23 +1013,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Activation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="782">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4363637" vertical-offset="1970" max-vertical-offset="8806">
-          <caret line="140" column="36" selection-start-line="140" selection-start-column="36" selection-end-line="140" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.229927" vertical-offset="1970" max-vertical-offset="8806">
+          <caret line="140" column="54" selection-start-line="140" selection-start-column="54" selection-end-line="140" selection-end-column="54" />
           <folding>
             <element signature="e#38#51#0#PHP" expanded="true" />
             <element signature="e#454#516#0#PHP" expanded="false" />
             <element signature="e#554#781#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Activation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19675925" vertical-offset="0" max-vertical-offset="864">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
