@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/googleController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/googleController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -40,14 +41,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinkedController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LinkedController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LinkedController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.74111676" vertical-offset="1126" max-vertical-offset="1717">
-              <caret line="92" column="36" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="36" />
+            <state vertical-scroll-proportion="-16.846153" vertical-offset="769" max-vertical-offset="1717">
+              <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="googleController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/googleController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.6328257" vertical-offset="293" max-vertical-offset="1445">
+              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MicrosoftController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/show.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_01_01_060000_create_users_table.php" />
         <option value="$PROJECT_DIR$/app/Custom/AutomaticUuidKey.php" />
@@ -178,6 +188,7 @@
         <option value="$PROJECT_DIR$/app/Account.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/googleController.php" />
       </list>
     </option>
   </component>
@@ -367,12 +378,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01744" summary="database">
-      <created>1457598738712</created>
-      <option name="number" value="01744" />
-      <option name="project" value="LOCAL" />
-      <updated>1457598738712</updated>
     </task>
     <task id="LOCAL-01745" summary="database">
       <created>1457598866026</created>
@@ -662,7 +667,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457609757068</updated>
     </task>
-    <option name="localTasksCounter" value="1793" />
+    <task id="LOCAL-01793" summary="database">
+      <created>1457609868433</created>
+      <option name="number" value="01793" />
+      <option name="project" value="LOCAL" />
+      <updated>1457609868433</updated>
+    </task>
+    <option name="localTasksCounter" value="1794" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1069,11 +1080,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LinkedController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74111676" vertical-offset="1126" max-vertical-offset="1717">
-          <caret line="92" column="36" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="36" />
+        <state vertical-scroll-proportion="-16.846153" vertical-offset="769" max-vertical-offset="1717">
+          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/googleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6328257" vertical-offset="293" max-vertical-offset="1445">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
