@@ -35,6 +35,7 @@ events List
             <br />
             <div class="panel-body">
                 <table class="table table-bordered " id="table">
+                    {{dd(Sentinel::getUser())}}
                     <thead>
                         <tr class="filters">
                             <th>Status</th>
