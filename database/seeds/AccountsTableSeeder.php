@@ -20,7 +20,7 @@ class AccountsTableSeeder extends Seeder
 
         foreach($users as $user)
         {
-            $account = factory('App\Account', 0)->create();                             // account created for each user
+            $account = factory('App\Account', 1)->create();                             // account created for each user
             $account->users()->attach($user->id, ['role_id' => $user_role->id]);        // user attached to his account with the role of "account_owner"
         }
     }
