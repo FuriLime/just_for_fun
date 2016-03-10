@@ -131,7 +131,7 @@ class EventsController extends Controller {
       'start' => 'required',
       'finish' => 'required',
     ]);
-      Eloquent::unguard();
+
 
       $store_info = $request->all();
         $store_info['uuid'] = Uuid::uuid4(4);
