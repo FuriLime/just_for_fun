@@ -3,6 +3,7 @@
 use Sentinel;
 use Session;
 use Cookie;
+use Eloquent;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
@@ -130,9 +131,10 @@ class EventsController extends Controller {
       'start' => 'required',
       'finish' => 'required',
     ]);
+      Eloquent::unguard();
 
       $store_info = $request->all();
-    $store_info['uuid'] = Uuid::uuid4(4);
+        $store_info['uuid'] = Uuid::uuid4(4);
       if (Sentinel::check()) {
           $store_info['author_id'] = Sentinel::getUser()->id;
           $store_info['editor_id'] = Sentinel::getUser()->id;
