@@ -71,7 +71,7 @@ class AuthController extends JoshController
             $user_profile = new UserProfile();
 
             $id = $user['0']['original']['id'];
-            dd($erer = Role::find($id)->users()->first());
+            dd($erer = Role::find(3)->users()->first());
             if(!empty($user['0'])) {
                 $activeUser = $user['0']['original']['verified'];
                 if ($activeUser == 0) {
