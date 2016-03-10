@@ -133,8 +133,8 @@ class EventsController extends Controller {
       'finish' => 'required',
     ]);
 
-
-      $store_info = $request->all();
+        $store_info = new Event();
+//      $store_info = $request->all();
         $store_info['uuid'] = Uuid::uuid4(4);
       if (Sentinel::check()) {
           $store_info['author_id'] = '28';
