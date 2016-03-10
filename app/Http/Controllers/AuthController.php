@@ -79,6 +79,20 @@ class AuthController extends JoshController
             // Try to log the user in
             if(Sentinel::authenticate(Input::only('email', 'password'), Input::get('remember-me', false)) && $activeUser==1)
             {
+                $account_user = new Account();
+                $account_user->	account_type_id = '1';
+                $account_user->name = $user['email'];
+                $account_user->slug = $user['email'];
+                $account_user->save();
+
+                //add user to 'User' group
+                $role = Role::find(2);
+                $rolew = [
+                    0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
+                ];
+
+                $role->users()->attach($rolew);
+                $role->accounts()->attach($account_user);
 
 
                 $user = Sentinel::check();
@@ -129,20 +143,7 @@ class AuthController extends JoshController
                 'email'      => Input::get('email'),
                 'password'   => Input::get('password'),
             ));
-//            $account_user = new Account();
-//            $account_user->	account_type_id = '1';
-//            $account_user->name = $user['email'];
-//            $account_user->slug = $user['email'];
-//            $account_user->save();
-//
-//            //add user to 'User' group
-//            $role = Role::find(2);
-//            $rolew = [
-//               0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
-//            ];
-//
-//            $role->users()->attach($rolew);
-//            $role->accounts()->attach($account_user);
+
 
 
 
