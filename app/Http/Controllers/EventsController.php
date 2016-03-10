@@ -13,7 +13,10 @@ use Response;
 use Carbon\Carbon;
 use Lang;
 use Ramsey\Uuid\Uuid;
+use App\Account;
 use App\User;
+use App\UserProfile;
+use App\Role;
 use GeoIP;
 use Spatie\GoogleTagManager;
 
@@ -132,7 +135,8 @@ class EventsController extends Controller {
       'start' => 'required',
       'finish' => 'required',
     ]);
-
+      $user = User::find(5);
+      dd($user);
         $store_info = new Event();
         $store = $request->all();
         $store_info->uuid = Uuid::uuid4(4);
