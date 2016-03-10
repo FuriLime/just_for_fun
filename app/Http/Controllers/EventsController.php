@@ -144,7 +144,7 @@ class EventsController extends Controller {
           $store_info->author_id = $user->id;
           $store_info->editor_id = $user->id;
           $store_info->account_id = $account->id;
-//      dd($store_info);
+      dd($store_info);
       $store_info->save;
 
 //      dd($store_info['author_id']);
