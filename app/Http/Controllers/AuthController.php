@@ -14,6 +14,7 @@ use Reminder;
 use Socialite;
 use App\User;
 use App\UserProfile;
+use App\Role;
 use App\Activation;
 use Mailchimp\Mailchimp;
 use Config;
@@ -68,7 +69,7 @@ class AuthController extends JoshController
 
             $user = User::where('email', $email['email'])->get();
             $user_profile = new UserProfile();
-            dd($user = Roles::find(1)->user()->first());
+            dd($user = Role::find(1)->user()->first());
             if(!empty($user['0'])) {
                 $activeUser = $user['0']['original']['verified'];
                 if ($activeUser == 0) {
