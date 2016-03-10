@@ -134,6 +134,7 @@ class EventsController extends Controller {
     ]);
 
         $store_info = new Event();
+      dd($store_info);
 //      $store_info = $request->all();
         $store_info['uuid'] = Uuid::uuid4(4);
       if (Sentinel::check()) {
