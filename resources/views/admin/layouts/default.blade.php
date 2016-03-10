@@ -43,7 +43,7 @@
                     <div class="responsive_nav"></div>
                 </a>
             </div>
-            {{dd(Sentinel::getUser()->first_name)}}
+            {{dd(Sentinel::getUser())}}
             <div class="navbar-right">
                 <ul class="nav navbar-nav">
                     <li class="dropdown user user-menu">
