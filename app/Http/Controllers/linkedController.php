@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\Account;
 use App\Role;
+use App\UserProfile;
 use Auth;
 use Redirect;
 use Lang;
