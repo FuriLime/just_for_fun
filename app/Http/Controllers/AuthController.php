@@ -69,10 +69,6 @@ class AuthController extends JoshController
         try {
 
             $user = User::where('email', $email['email'])->get();
-            $user_id = $user['0']['original']['id'];
-
-//            dd();
-//            dd($userss = Account::find($user_id)->users()->first());
             if(!empty($user['0'])) {
                 $activeUser = $user['0']['original']['verified'];
                 if ($activeUser == 0) {
@@ -141,7 +137,7 @@ class AuthController extends JoshController
             $account_user->save();
 
             //add user to 'User' group
-            $role = Role::find(3);
+            $role = Role::find(2);
             $rolew = [
                0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
             ];
