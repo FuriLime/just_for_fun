@@ -32,8 +32,8 @@ class EventsController extends Controller {
     {
         $events = Event::latest()->get();
         foreach ($events as $event) {
-            dd($event->timezone);
             $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
+            dd($date->setTimezone(new \DateTimeZone($event->timezone)));
             $date->setTimezone(new \DateTimeZone($event->timezone));
             $event_start_zero = $date;
 
