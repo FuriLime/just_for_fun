@@ -40,7 +40,7 @@ class User extends EloquentUser
      */
     public function user_profile()
     {
-        return $this->hasOne('App\UserProfile');
+        return $this->hasOne('App\UserProfile', 'user_id');
     }
 
     /**
