@@ -69,7 +69,7 @@ class AuthController extends JoshController
         try {
 
             $user = User::where('email', $email['email'])->get();
-            dd($userss = Account::find(1)->user()->first());
+            dd($userss = Account::find(1)->users()->first());
             if(!empty($user['0'])) {
                 $activeUser = $user['0']['original']['verified'];
                 if ($activeUser == 0) {
