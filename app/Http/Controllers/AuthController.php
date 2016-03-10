@@ -138,6 +138,7 @@ class AuthController extends JoshController
             //un-comment below code incase if user have to activate manually
 
             // Data to be used on the email view
+            dd(User::find($user->id)->activate->code);
             $data = array(
                 'user'          => $user,
                 'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
