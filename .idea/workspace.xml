@@ -66,7 +66,7 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.0" vertical-offset="667" max-vertical-offset="1513">
+            <state vertical-scroll-proportion="-24.692308" vertical-offset="259" max-vertical-offset="1513">
               <caret line="59" column="62" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="62" />
               <folding />
             </state>
@@ -87,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.48615918" vertical-offset="365" max-vertical-offset="8500">
-              <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+              <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
               <folding>
                 <element signature="e#456#518#0#PHP" expanded="false" />
                 <element signature="e#556#783#0#PHP" expanded="false" />
@@ -347,12 +347,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01697" summary="database">
-      <created>1457562626128</created>
-      <option name="number" value="01697" />
-      <option name="project" value="LOCAL" />
-      <updated>1457562626128</updated>
     </task>
     <task id="LOCAL-01698" summary="database">
       <created>1457562755485</created>
@@ -642,7 +636,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457598866027</updated>
     </task>
-    <option name="localTasksCounter" value="1746" />
+    <task id="LOCAL-01746" summary="database">
+      <created>1457598907070</created>
+      <option name="number" value="01746" />
+      <option name="project" value="LOCAL" />
+      <updated>1457598907070</updated>
+    </task>
+    <option name="localTasksCounter" value="1747" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -994,16 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.0" vertical-offset="139" max-vertical-offset="1309">
-          <caret line="25" column="127" selection-start-line="25" selection-start-column="127" selection-end-line="25" selection-end-column="127" />
-          <folding>
-            <element signature="e#23#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-97.42308" vertical-offset="1071" max-vertical-offset="9775">
@@ -1014,9 +1004,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.0" vertical-offset="139" max-vertical-offset="1309">
+          <caret line="25" column="127" selection-start-line="25" selection-start-column="127" selection-end-line="25" selection-end-column="127" />
+          <folding>
+            <element signature="e#23#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.0" vertical-offset="667" max-vertical-offset="1513">
+        <state vertical-scroll-proportion="-24.692308" vertical-offset="259" max-vertical-offset="1513">
           <caret line="59" column="62" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="62" />
           <folding />
         </state>
@@ -1025,7 +1025,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48615918" vertical-offset="365" max-vertical-offset="8500">
-          <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+          <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
           <folding>
             <element signature="e#456#518#0#PHP" expanded="false" />
             <element signature="e#556#783#0#PHP" expanded="false" />
