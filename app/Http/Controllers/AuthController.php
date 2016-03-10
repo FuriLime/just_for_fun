@@ -68,10 +68,6 @@ class AuthController extends JoshController
         try {
 
             $user = User::where('email', $email['email'])->get();
-            $user_profile = new UserProfile();
-
-            $id = $user['0']['original']['id'];
-            dd($erer = Role::find(3));
             if(!empty($user['0'])) {
                 $activeUser = $user['0']['original']['verified'];
                 if ($activeUser == 0) {
@@ -135,7 +131,7 @@ class AuthController extends JoshController
 
 
             //add user to 'User' group
-            $role = Sentinel::findRoleById(3);
+            $role = Role::find(3);
             $role->users()->attach($user);
 
 
