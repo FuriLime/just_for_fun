@@ -8,7 +8,7 @@ class Activation extends Model
 {
 	protected $dates = ['completed_at'];  // to make sure dates are treated as instances of Carbon()
 
-
+    protected $table = 'activations';
     /**
      * Get the user that belongs to the activation.
      */
