@@ -224,7 +224,7 @@ class AuthController extends JoshController
     public function getActivate($userId, $activationCode)
     {
 
-        $activate = new Activate();
+        $activate = new Activation();
         $user = User::find($userId);
         $email = $user->email;
         $hash_email = md5($email);
