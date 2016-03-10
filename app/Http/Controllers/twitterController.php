@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Account;
+use App\Role;
 use Auth;
 use Redirect;
 use Lang;
