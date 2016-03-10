@@ -163,7 +163,8 @@ class EventsController extends Controller {
     // Is the user logged in?
     if (Sentinel::check()) {
 //          dd($store_info);
-        event::create($store_info);
+//        event::create($store_info);
+        $store_info->save();
           Session::forget('timezone');
 
         return redirect('events')->with('success', Lang::get('message.success.create'));
