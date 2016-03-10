@@ -70,9 +70,7 @@ class AuthController extends JoshController
 
             $user = User::where('email', $email['email'])->get();
             $user_id = $user['0']['original']['id'];
-            $account_user = new Account();
-            $account_user->	account_type_id = '1';
-            $account_user->save();
+
 //            dd();
 //            dd($userss = Account::find($user_id)->users()->first());
             if(!empty($user['0'])) {
@@ -136,7 +134,8 @@ class AuthController extends JoshController
                 'password'   => Input::get('password'),
             ));
 
-            $account_user = new Account_User();
+            $account_user = new Account();
+            $account_user->	account_type_id = '1';
             $account_user->save();
             //add user to 'User' group
             $role = Role::find(3);
