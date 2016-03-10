@@ -22,7 +22,7 @@ class UserProfile extends Model
     /**
      * Get the user that belongs to this user profile.
      */
-    public function user()
+    public function usere()
     {
         return $this->belongsTo('App\User');
     }
