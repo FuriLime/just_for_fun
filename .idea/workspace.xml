@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_01_03_040000_create_events_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_01_03_040000_create_events_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -65,6 +65,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4247039" vertical-offset="89" max-vertical-offset="935">
+              <caret line="21" column="43" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -87,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_01_03_040000_create_events_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2016_01_03_040000_create_events_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2016_01_03_040000_create_events_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6764706" vertical-offset="68" max-vertical-offset="1411">
+            <state vertical-scroll-proportion="-15.038462" vertical-offset="68" max-vertical-offset="1411">
               <caret line="28" column="70" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
               <folding />
             </state>
@@ -136,7 +146,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2016_02_18_071006_create_event_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_09_200404_create_events_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_09_201048_create_events_table.php" />
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/app/AccountType.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/database/factories/ModelFactory.php" />
@@ -159,6 +168,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/app/Event.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_01_03_040000_create_events_table.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
       </list>
     </option>
   </component>
@@ -247,7 +257,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="seeds" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -358,12 +368,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01781" summary="database">
-      <created>1457605277387</created>
-      <option name="number" value="01781" />
-      <option name="project" value="LOCAL" />
-      <updated>1457605277387</updated>
     </task>
     <task id="LOCAL-01782" summary="database">
       <created>1457605612134</created>
@@ -653,7 +657,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457618064945</updated>
     </task>
-    <option name="localTasksCounter" value="1830" />
+    <task id="LOCAL-01830" summary="database">
+      <created>1457618370732</created>
+      <option name="number" value="01830" />
+      <option name="project" value="LOCAL" />
+      <updated>1457618370732</updated>
+    </task>
+    <option name="localTasksCounter" value="1831" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -711,13 +721,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6230366" vertical-offset="2892" max-vertical-offset="3690">
-          <caret line="169" column="6" selection-start-line="169" selection-start-column="6" selection-end-line="169" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/vendors/summernote/dist/summernote.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.051369864" vertical-offset="0" max-vertical-offset="584">
@@ -1086,18 +1089,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.653846" vertical-offset="1755" max-vertical-offset="9027">
-          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-          <folding>
-            <element signature="e#38#51#0#PHP" expanded="true" />
-            <element signature="e#487#549#0#PHP" expanded="false" />
-            <element signature="e#587#814#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.961538" vertical-offset="1938" max-vertical-offset="9826">
@@ -1118,8 +1109,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_01_03_040000_create_events_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6764706" vertical-offset="68" max-vertical-offset="1411">
+        <state vertical-scroll-proportion="-15.038462" vertical-offset="68" max-vertical-offset="1411">
           <caret line="28" column="70" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.653846" vertical-offset="1755" max-vertical-offset="9027">
+          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding>
+            <element signature="e#38#51#0#PHP" expanded="true" />
+            <element signature="e#487#549#0#PHP" expanded="false" />
+            <element signature="e#587#814#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4247039" vertical-offset="89" max-vertical-offset="935">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="43" />
           <folding />
         </state>
       </provider>
