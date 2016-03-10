@@ -144,8 +144,8 @@ class EventsController extends Controller {
           $store_info->author_id = $user->id;
           $store_info->editor_id = $user->id;
           $store_info->account_id = $account->id;
-      dd($store_info);
-      $store_info->save;
+//      dd($store_info);
+//      $store_info->save;
 
 //      dd($store_info['author_id']);
     // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
