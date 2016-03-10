@@ -21,11 +21,11 @@ class CreateEventsTable extends Migration
             $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
 
             // user who has initially created the event
-            $table->integer('author_id')->unsigned();
+            $table->integer('author_id')->unsigned()->nullable();
             $table->foreign('author_id')->references('id')->on('users');      // NO "onDelete('cascade')" as the event belongs to the account, not the user
 
             // user who has edited the event last
-            $table->integer('editor_id')->unsigned();
+            $table->integer('editor_id')->unsigned()->nullable();
             $table->foreign('editor_id')->references('id')->on('users');      // NO "onDelete('cascade')" as the event belongs to the account, not the user
 
             $table->string('title')->required();
