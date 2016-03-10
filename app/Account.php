@@ -24,7 +24,7 @@ class Account extends Model
     	'free_events_until',
     ];
 
-
+    protected $table = 'accounts';
     /**
      * Get the account profile information associated with the account.
      */

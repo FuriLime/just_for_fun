@@ -12,6 +12,7 @@ use \Cartalyst\Sentinel\Checkpoints\ThrottlingException;
 use Reminder;
 //use Mail;
 use Socialite;
+use App\Account;
 use App\User;
 use App\UserProfile;
 use App\Role;
@@ -68,6 +69,7 @@ class AuthController extends JoshController
         try {
 
             $user = User::where('email', $email['email'])->get();
+            dd($userss = Account::find(1)->user()->first());
             if(!empty($user['0'])) {
                 $activeUser = $user['0']['original']['verified'];
                 if ($activeUser == 0) {
@@ -129,7 +131,7 @@ class AuthController extends JoshController
                 'password'   => Input::get('password'),
             ));
 
-
+$account_user = new Account_User();
             //add user to 'User' group
             $role = Role::find(3);
             $role->users()->attach($user);
