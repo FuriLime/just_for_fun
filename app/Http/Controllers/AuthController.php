@@ -137,6 +137,9 @@ class AuthController extends JoshController
             $account_user = new Account();
             $account_user->	account_type_id = '1';
             $account_user->save();
+            $user_profile = new UserProfile();
+            $user_profile->user_id = $user['0']['original']['id'];
+            $user_profile->save();
             //add user to 'User' group
             $role = Role::find(3);
             $role->users()->attach($user);
