@@ -146,7 +146,7 @@ class EventsController extends Controller {
         $store_info->timezone = Input::get('timezone');
         $store_info->finish = Input::get('finish');
         $store_info->start = Input::get('start');
-
+      dd(Sentinel::getUser()->id);
           $store_info->author_id = $user->id;
           $store_info->editor_id = $user->id;
           $store_info->account_id = $account->id;
