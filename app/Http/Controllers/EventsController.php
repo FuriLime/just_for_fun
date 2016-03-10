@@ -135,7 +135,10 @@ class EventsController extends Controller {
       'start' => 'required',
       'finish' => 'required',
     ]);
-      $user = User::find(5);
+      if(Sentinel::check()){
+         $userId = Sentinel::getUser()->id;
+      }
+      $user = User::find($userId);
       $account= Account::find(4);
         $store_info = new Event();
         $store = $request->all();
@@ -146,7 +149,7 @@ class EventsController extends Controller {
         $store_info->timezone = Input::get('timezone');
         $store_info->finish = Input::get('finish');
         $store_info->start = Input::get('start');
-      dd(Sentinel::getAccount()->id);
+
           $store_info->author_id = $user->id;
           $store_info->editor_id = $user->id;
           $store_info->account_id = $account->id;
