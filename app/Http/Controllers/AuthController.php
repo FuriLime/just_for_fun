@@ -137,9 +137,7 @@ class AuthController extends JoshController
             $account_user = new Account();
             $account_user->	account_type_id = '1';
             $account_user->save();
-            $user_profile = new UserProfile();
-            $user_profile->user_id = $user['0']['original']['id'];
-            $user_profile->save();
+
             //add user to 'User' group
             $role = Role::find(3);
             $role->users()->attach($user);
@@ -241,6 +239,9 @@ class AuthController extends JoshController
         $hash_email = md5($email);
         $apiKey = Config::get('mailchimp.apikey');
         $mc = new Mailchimp($apiKey);
+        $user_profile = new UserProfile();
+        $user_profile->user_id = $user->id;
+        $user_profile->save();
         $listId = Config::get('mailchimp.listId');
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
