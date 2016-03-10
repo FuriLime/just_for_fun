@@ -232,18 +232,18 @@ Edit User
                                         <div class="col-sm-10">
 
                                             @if(Sentinel::check())
-                                            @if(Sentinel::inRole('admin'))
+                                            {{--@if(Sentinel::inRole('admin'))--}}
                                             <select class="form-control " title="Select group..." name="groups[]" id="groups" required>
                                                 <option value="">Select</option>
                                                 @foreach($roles as $role)
                                                     <option value="{!! $role->id !!}" {{ (array_key_exists($role->id, $userRoles) ? ' selected="selected"' : '') }}>{{ $role->name }}</option>
                                                 @endforeach
                                             </select>
-                                                @endif
+                                                {{--@endif--}}
                                             @endif
 
                                                 @if(Sentinel::check())
-                                                    @if(Sentinel::inRole('user'))
+                                                    {{--@if(Sentinel::inRole('user'))--}}
                                             <select class="form-control " title="Select group..." name="groups[]" id="groups" required>
                                                 {{--<option value="">Select</option>--}}
                                                 {{--@foreach($roles as $role)--}}
@@ -251,7 +251,7 @@ Edit User
                                                 {{--@endforeach--}}
                                             </select>
                                                     @endif
-                                                    @endif
+                                                    {{--@endif--}}
                                         </div>
                                     </div>
 

@@ -80,7 +80,7 @@
         </li>
     </ul>
 </li>
-@if(Sentinel::inRole('admin'))
+{{--@if(Sentinel::inRole('admin'))--}}
     <li >
         <a href="#">
             <i class="livicon" data-name="gear" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>
@@ -108,4 +108,4 @@
             </li>
         </ul>
     </li>
-@endif
+{{--@endif--}}

@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -44,18 +45,18 @@
       <file leaf-file-name="menu.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.5" vertical-offset="1381" max-vertical-offset="1972">
-              <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
+            <state vertical-scroll-proportion="-3.4" vertical-offset="1207" max-vertical-offset="1972">
+              <caret line="82" column="24" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/users/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-153.0" vertical-offset="0" max-vertical-offset="4998">
-              <caret line="234" column="48" selection-start-line="234" selection-start-column="48" selection-end-line="234" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.33333334" vertical-offset="3608" max-vertical-offset="4998">
+              <caret line="223" column="60" selection-start-line="223" selection-start-column="54" selection-end-line="223" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -85,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334" vertical-offset="3013" max-vertical-offset="4233">
+            <state vertical-scroll-proportion="-3.3272727" vertical-offset="3013" max-vertical-offset="4233">
               <caret line="188" column="73" selection-start-line="188" selection-start-column="67" selection-end-line="188" selection-end-column="73" />
               <folding />
             </state>
@@ -146,8 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/emails/invite.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/register.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/linkedController.php" />
@@ -197,6 +196,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/JoshController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
       </list>
     </option>
   </component>
@@ -386,12 +387,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01684" summary="database">
-      <created>1457561553711</created>
-      <option name="number" value="01684" />
-      <option name="project" value="LOCAL" />
-      <updated>1457561553711</updated>
     </task>
     <task id="LOCAL-01685" summary="database">
       <created>1457561629466</created>
@@ -681,7 +676,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457595877322</updated>
     </task>
-    <option name="localTasksCounter" value="1733" />
+    <task id="LOCAL-01733" summary="database">
+      <created>1457595960767</created>
+      <option name="number" value="01733" />
+      <option name="project" value="LOCAL" />
+      <updated>1457595960767</updated>
+    </task>
+    <option name="localTasksCounter" value="1734" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1034,22 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5" vertical-offset="1381" max-vertical-offset="1972">
-          <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-153.0" vertical-offset="0" max-vertical-offset="4998">
-          <caret line="234" column="48" selection-start-line="234" selection-start-column="48" selection-end-line="234" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JoshController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-50.346153" vertical-offset="0" max-vertical-offset="1904">
@@ -1060,8 +1045,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="3013" max-vertical-offset="4233">
+        <state vertical-scroll-proportion="-3.3272727" vertical-offset="3013" max-vertical-offset="4233">
           <caret line="188" column="73" selection-start-line="188" selection-start-column="67" selection-end-line="188" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4" vertical-offset="1207" max-vertical-offset="1972">
+          <caret line="82" column="24" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="3608" max-vertical-offset="4998">
+          <caret line="223" column="60" selection-start-line="223" selection-start-column="54" selection-end-line="223" selection-end-column="60" />
           <folding />
         </state>
       </provider>
