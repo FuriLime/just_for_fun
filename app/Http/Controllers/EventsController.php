@@ -144,21 +144,19 @@ class EventsController extends Controller {
           $store_info->author_id = $user->id;
           $store_info->editor_id = $user->id;
           $store_info->account_id = $account->id;
-//      dd($store_info);
-//      $store_info->save;
 
 //      dd($store_info['author_id']);
     // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
-//    $date = new \DateTime($store_info['start'], new \DateTimeZone($store_info['timezone']));
-//    $date->setTimezone(new \DateTimeZone('UTC'));
-//    $event_start_zero = $date;
-//    $date = new \DateTime($store_info['finish'], new \DateTimeZone($store_info['timezone']));
-//    $date->setTimezone(new \DateTimeZone('UTC'));
-//    $event_finish_zero = $date;
-//
-//    // $event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
-//    $store_info['start'] = $event_start_zero->format('Y-m-d H:i');
-//    $store_info['finish'] = $event_finish_zero->format('Y-m-d H:i');
+    $date = new \DateTime($store_info->start, new \DateTimeZone($store_info->timezone));
+    $date->setTimezone(new \DateTimeZone('UTC'));
+    $event_start_zero = $date;
+    $date = new \DateTime($store_info->finish, new \DateTimeZone($store_info->timezone));
+    $date->setTimezone(new \DateTimeZone('UTC'));
+    $event_finish_zero = $date;
+
+    // $event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
+    $store_info->start = $event_start_zero->format('Y-m-d H:i');
+    $store_info->finish = $event_finish_zero->format('Y-m-d H:i');
 
     // Is the user logged in?
     if (Sentinel::check()) {
