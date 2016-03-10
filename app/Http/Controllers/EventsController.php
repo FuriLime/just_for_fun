@@ -151,7 +151,7 @@ class EventsController extends Controller {
 
     // Is the user logged in?
     if (Sentinel::check()) {
-//          dd($store_info);
+          dd($store_info);
         event::create($store_info);
           Session::forget('timezone');
 
