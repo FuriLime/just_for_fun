@@ -81,7 +81,7 @@ class EventsController extends Controller {
 
       // Is the user logged in?
     if (Sentinel::check()) {
-      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
+//      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
                 // for bootstrap-datepicker
                 //registered user
 //                $start_date_tmp = strtotime("+1 day");
@@ -97,18 +97,18 @@ class EventsController extends Controller {
                     'finish_date' => $finish_date,
                     'user_timezone' => $user_timezone,
                 ));
-      }
-    } else {
-      //create events unregister user
-//      $start_date_tmp = strtotime("+1 hour");
-      $user_timezone = $my_time_zone;
-
-      return view('events.create', array(
-        'timezone_select' => $timezone_select,
-        'start_date' => $start_date,
-        'finish_date' => $finish_date,
-        'user_timezone' => $user_timezone,
-      ));
+//      }
+//    } else {
+//      //create events unregister user
+////      $start_date_tmp = strtotime("+1 hour");
+//      $user_timezone = $my_time_zone;
+//
+//      return view('events.create', array(
+//        'timezone_select' => $timezone_select,
+//        'start_date' => $start_date,
+//        'finish_date' => $finish_date,
+//        'user_timezone' => $user_timezone,
+//      ));
     }
   }
 
