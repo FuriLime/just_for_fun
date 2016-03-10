@@ -136,7 +136,8 @@ class EventsController extends Controller {
       'finish' => 'required',
     ]);
       $user = User::find(5);
-      dd($user);
+      $account= Account::find(4);
+      dd($account);
         $store_info = new Event();
         $store = $request->all();
         $store_info->uuid = Uuid::uuid4(4);
