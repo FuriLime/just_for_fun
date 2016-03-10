@@ -14,7 +14,7 @@ use Reminder;
 use Socialite;
 use App\User;
 use App\UserProfile;
-use App\Activate;
+use App\Activation;
 use Mailchimp\Mailchimp;
 use Config;
 use Ramsey\Uuid\Uuid;
