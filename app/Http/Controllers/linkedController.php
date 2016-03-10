@@ -51,8 +51,17 @@ class LinkedController extends Controller
             $user->first_name = $userFace->getName();
             $user->email = $userFace->getEmail();
             $user->save();
-            $role = Sentinel::findRoleById(2);
-            $role->users()->attach($user);
+            $account_user = new Account();
+            $account_user->	account_type_id = '1';
+            $account_user->name = $user['email'];
+            $account_user->slug = $user['email'];
+            $account_user->save();
+            $role = Role::find(2);
+            $rolew = [
+                0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
+            ];
+
+            $role->users()->attach($rolew);
             $user = Sentinel::findById($user->id);
             $activation = Activation::create($user);
 
@@ -61,10 +70,7 @@ class LinkedController extends Controller
                 Sentinel::authenticate($user);
                 if(Sentinel::authenticate($user))
                 {
-                    $user = Sentinel::check();
-                    if (Sentinel::inRole('admin')) {
-                        return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-                    } else if (Sentinel::inRole('user'))  {
+                    if(Sentinel::check()) {
                         return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
                     }
                 }
@@ -78,14 +84,11 @@ class LinkedController extends Controller
             Sentinel::authenticate($user);
             if(Sentinel::authenticate($user))
             {
-                $user = Sentinel::check();
-                if (Sentinel::inRole('admin')) {
-                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-                } else if (Sentinel::inRole('user'))  {
+               if(Sentinel::check()) {
+                   return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
+               }
+               }
 
-                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-                }
-            }
         }
         return Redirect::route("/")->with('error', Lang::get('auth/message.signin.error'));
     }
