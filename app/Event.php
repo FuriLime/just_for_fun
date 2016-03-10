@@ -15,13 +15,13 @@ class Event extends Model
      *
      * @var array
      */
-    protected $dates = [            // to make sure dates are treated as instances of Carbon()
-        'deleted_at',
-    	'start',
-    	'finish',
-    	'test_until',
-    	'free_downloads_until',
-    ];
+//    protected $dates = [            // to make sure dates are treated as instances of Carbon()
+//        'deleted_at',
+//    	'start',
+//    	'finish',
+//    	'test_until',
+//    	'free_downloads_until',
+//    ];
 
 
     /**
