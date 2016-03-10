@@ -23,7 +23,7 @@ class Role extends Model                // class Role extends EloquentRole //
      */
     public function users()
     {
-        return $this->belongsToMany('App\User', 'role_users')->withPivot('role_id')->withTimestamps();
+        return $this->belongsToMany('App\User', 'account_user')->withPivot('role_id')->withTimestamps();
     }
 
 
@@ -32,8 +32,9 @@ class Role extends Model                // class Role extends EloquentRole //
      */
     public function accounts()
     {
-        return $this->belongsToMany('App\Account', 'role_users')->withPivot('role_id')->withTimestamps();
+        return $this->belongsToMany('App\Account', 'account_user')->withPivot('role_id')->withTimestamps();
     }
+
 
      /**
      * The permissions that this role has.
@@ -42,5 +43,6 @@ class Role extends Model                // class Role extends EloquentRole //
     {
         return $this->belongsToMany('App\Permission');
     }
+
 
 }

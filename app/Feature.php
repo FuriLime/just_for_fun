@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class AccountType extends Model
+class Feature extends Model
 {
     use SoftDeletes;
 
@@ -17,21 +17,11 @@ class AccountType extends Model
     protected $dates = ['deleted_at'];
 
 
-    /**
-     * Get the accounts of this type.
+     /**
+     * Get the accounts of the feature.
      */
     public function accounts()
     {
-        return $this->hasMany('App\Account');
+        return $this->belongsToMany('App\Account')->withPivot('valid_until', 'credit_type')->withTimestamps();
     }
-
-
-    /**
-     * The permissions that come with this Account Type.
-     */
-    public function permissions()
-    {
-        return $this->belongsToMany('App\Permission');
-    }
-
 }

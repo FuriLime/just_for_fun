@@ -2,22 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_09_104700_create_users_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_09_105157_create_user_profiles_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_09_113512_create_roles_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_09_124209_create_role_users_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_09_143158_create_account_types_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_09_143412_create_accounts_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_09_143513_create_account_profiles_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_09_201048_create_events_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\seeds\AccountsTableSeeder.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\seeds\AdminSeeder.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\seeds\DatabaseSeeder.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\seeds\RolesTableSeeder.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\seeds\UserProfilesTableSeeder.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\seeds\UsersTableSeeder.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_01_010000_create_credit_packages_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_01_020000_create_credit_types_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_01_030000_create_features_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_01_040000_create_permissions_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_01_050000_create_roles_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_01_060000_create_users_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_02_010000_create_account_types_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_02_020000_create_permission_role_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_02_030000_create_user_profiles_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_03_010000_create_accounts_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_03_020000_create_account_profiles_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_03_030000_create_account_texts_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_03_040000_create_events_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_04_010000_create_account_feature_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_04_030000_create_download_credits_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_04_040000_create_event_credits_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_04_050000_create_invoices_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_05_010000_create_download_transactions_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_06_010000_create_account_type_permission_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_06_020000_create_event_transactions_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_06_030000_create_account_user_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_02_17_223608_create_cashier_table_settings.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/AccountFeature.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/AccountFeatureTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/AccountProfilesTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/AccountText.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/AccountTextsTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/AccountTypesTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/AccountsTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Activation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/AdminRolesTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/CreditPackage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/CreditPackagesTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/CreditType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/CreditTypesTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/DownloadCredit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/DownloadCreditsTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/DownloadTransaction.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/DownloadTransactionsTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/EventCredit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/EventCreditsTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/EventTransaction.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/EventsTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Feature.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/FeaturesTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Invoice.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/InvoiceTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Permission.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/PermissionRoleTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/PermissionsTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/UserProfilesTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
+      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\app\Activate.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\app\Blog.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\app\BlogCategory.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\app\BlogComment.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\app\Eventcategory.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\app\Usergroup.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Account.php" afterPath="$PROJECT_DIR$/app/Account.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AccountType.php" afterPath="$PROJECT_DIR$/app/AccountType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Event.php" afterPath="$PROJECT_DIR$/app/Event.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/test-ef.iml" afterPath="$PROJECT_DIR$/.idea/test-ef.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Role.php" afterPath="$PROJECT_DIR$/app/Role.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -58,10 +108,10 @@
       <file leaf-file-name="Event.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Event.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.724537" vertical-offset="37" max-vertical-offset="901">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.15393518" vertical-offset="445" max-vertical-offset="1309">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
-                <element signature="e#22#54#0#PHP" expanded="true" />
+                <element signature="e#23#55#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,9 +121,11 @@
         <entry file="file://$PROJECT_DIR$/app/Account.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2227">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="2" selection-end-line="42" selection-end-column="7" />
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="e#23#52#0#PHP" expanded="true" />
+                <marker date="1457296820598" expanded="true" signature="200:2647" placeholder="{...}" />
+                <marker date="1457296820598" expanded="true" signature="2640:2645" placeholder="//..." />
               </folding>
             </state>
           </provider>
@@ -137,10 +189,10 @@
         <option value="$PROJECT_DIR$/app/AccountType.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/Event.php" />
         <option value="$PROJECT_DIR$/app/Account.php" />
         <option value="$PROJECT_DIR$/database/factories/ModelFactory.php" />
         <option value="$PROJECT_DIR$/database/seeds/AccountsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Event.php" />
       </list>
     </option>
   </component>
@@ -251,6 +303,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -326,12 +392,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01656" summary="database">
-      <created>1457554239585</created>
-      <option name="number" value="01656" />
-      <option name="project" value="LOCAL" />
-      <updated>1457554239586</updated>
     </task>
     <task id="LOCAL-01657" summary="database">
       <created>1457554269578</created>
@@ -621,12 +681,18 @@
       <option name="project" value="LOCAL" />
       <updated>1457590930564</updated>
     </task>
-    <option name="localTasksCounter" value="1705" />
+    <task id="LOCAL-01705" summary="database">
+      <created>1457591120742</created>
+      <option name="number" value="01705" />
+      <option name="project" value="LOCAL" />
+      <updated>1457591120742</updated>
+    </task>
+    <option name="localTasksCounter" value="1706" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -640,7 +706,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23928571" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23928571" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -852,14 +918,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Activate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.25" vertical-offset="213" max-vertical-offset="810">
-          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1631016" vertical-offset="1470" max-vertical-offset="7950">
@@ -916,9 +974,11 @@
     <entry file="file://$PROJECT_DIR$/app/Account.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2227">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="2" selection-end-line="42" selection-end-column="7" />
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="e#23#52#0#PHP" expanded="true" />
+            <marker date="1457296820598" expanded="true" signature="200:2647" placeholder="{...}" />
+            <marker date="1457296820598" expanded="true" signature="2640:2645" placeholder="//..." />
           </folding>
         </state>
       </provider>
@@ -942,10 +1002,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Event.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.724537" vertical-offset="37" max-vertical-offset="901">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.15393518" vertical-offset="445" max-vertical-offset="1309">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
-            <element signature="e#22#54#0#PHP" expanded="true" />
+            <element signature="e#23#55#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
