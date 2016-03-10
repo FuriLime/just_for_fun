@@ -16,4 +16,25 @@ class Activation extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+
+    public function isUserHasCode($user_id, $activation_code)
+    {
+        return (boolean)$this->where('user_id',$user_id)->where('code',$activation_code)->count();
+    }
+
+    public function activateUser($user_id)
+    {
+        $user = User::find($user_id);
+        $user->isActive = 1;
+        $user->save();
+    }
+
+    public function isUserActivate($user_id)
+    {
+        $user = User::find($user_id);
+        if ($user->isActive){
+            return true;
+        }
+    }
 }
