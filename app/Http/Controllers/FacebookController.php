@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Account;
+use App\Role;
 use Auth;
 use Redirect;
 use Lang;
@@ -51,8 +53,20 @@ class FacebookController extends Controller
             $user->first_name = $userFace->getName();
             $user->email = $userFace->getEmail();
             $user->save();
-            $role = Sentinel::findRoleById(2);
-            $role->users()->attach($user);
+            $account_user = new Account();
+            $account_user->	account_type_id = '1';
+            $account_user->name = $user->first_name;
+            $account_user->slug = $user->first_name;
+            $account_user->save();
+            $role = Role::find(2);
+            $rolew = [
+                0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
+            ];
+
+            $role->users()->attach($rolew);
+            $user_profile = new UserProfile();
+            $user_profile->user_id = $user->id;
+            $user_profile->save();
             $user = Sentinel::findById($user->id);
             $activation = Activation::create($user);
 
