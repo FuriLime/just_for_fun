@@ -236,7 +236,10 @@ Create New event
             todayBtn: true,
             startDate: nowtimedate,
             minuteStep: 10,
-            minDate: nowtimedate
+            minDate: nowtimedate,
+            onSelect: function(date) {
+                alert(date);
+            }
         });
     });
     $('#start').on('change', function() {
