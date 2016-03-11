@@ -82,7 +82,7 @@
 </li>
 {{$user = Sentinel::getUser()}}
 {{{$userRoles = $user->roles()->lists('name')->first()}}}
-{{--@if(Sentinel::inRole('admin'))--}}
+@if($userRoles =='admin')
     <li >
         <a href="#">
             <i class="livicon" data-name="gear" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>
@@ -110,4 +110,4 @@
             </li>
         </ul>
     </li>
-{{--@endif--}}
+@endif
