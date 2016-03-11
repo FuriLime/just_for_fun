@@ -261,7 +261,15 @@ Create New event
                 minuteStep: 10
             });
         });
-
+        var date = new Date('{{date('Y/m/d 20:00')}}');
+        $("#datefinish").datetimepicker({
+            format: 'yyyy/mm/dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            startDate: date,
+            minuteStep: 10,
+            minDate: date
+        });
 //var start_date = new Date($('#start').val());
 //var end_date = new Date(start_date);
 //end_date.setHours(start_date.getHours() + 1);
