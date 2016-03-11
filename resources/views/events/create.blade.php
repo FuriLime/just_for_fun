@@ -242,6 +242,7 @@ Create New event
         $('#start').on('change', function() {
             var start_def_date = new Date('{{date('Y/m/d 19:00')}}');
             var start_date = new Date($('#start').val());
+            console.log(start_date);
 
             if(start_date.getTime() < start_def_date.getTime()) {
                 $('#start').val(start_def_date.format('Y/m/d H:i'));
