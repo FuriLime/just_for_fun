@@ -81,7 +81,7 @@
     </ul>
 </li>
 { $user = Sentinel::getUser()}
-{{$userRoles = $user->roles()->lists('name')->first()}}
+{$userRoles = $user->roles()->lists('name')->first()}
 {{--@if(Sentinel::inRole('admin'))--}}
     <li >
         <a href="#">
