@@ -15,6 +15,7 @@ use Socialite;
 use App\Account;
 use App\User;
 use App\UserProfile;
+use App\AccountProfile;
 use App\Role;
 use App\Activation;
 use Mailchimp\Mailchimp;

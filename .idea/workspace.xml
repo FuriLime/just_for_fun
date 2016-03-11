@@ -4,7 +4,6 @@
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/twitterController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/twitterController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -45,12 +44,11 @@
       <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39537713" vertical-offset="1800" max-vertical-offset="9044">
-              <caret line="138" column="28" selection-start-line="138" selection-start-column="28" selection-end-line="138" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.33090025" vertical-offset="0" max-vertical-offset="9061">
+              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
               <folding>
-                <element signature="e#38#51#0#PHP" expanded="true" />
-                <element signature="e#487#549#0#PHP" expanded="false" />
-                <element signature="e#587#814#0#PHP" expanded="false" />
+                <element signature="e#511#573#0#PHP" expanded="false" />
+                <element signature="e#611#838#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -267,12 +265,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01834" summary="database">
-      <created>1457619394722</created>
-      <option name="number" value="01834" />
-      <option name="project" value="LOCAL" />
-      <updated>1457619394722</updated>
     </task>
     <task id="LOCAL-01835" summary="database">
       <created>1457619459750</created>
@@ -562,7 +554,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457683671808</updated>
     </task>
-    <option name="localTasksCounter" value="1883" />
+    <task id="LOCAL-01883" summary="database">
+      <created>1457683946643</created>
+      <option name="number" value="01883" />
+      <option name="project" value="LOCAL" />
+      <updated>1457683946643</updated>
+    </task>
+    <option name="localTasksCounter" value="1884" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -690,6 +688,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="374">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1023,12 +1022,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39537713" vertical-offset="1800" max-vertical-offset="9044">
-          <caret line="138" column="28" selection-start-line="138" selection-start-column="28" selection-end-line="138" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.33090025" vertical-offset="0" max-vertical-offset="9061">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
           <folding>
-            <element signature="e#38#51#0#PHP" expanded="true" />
-            <element signature="e#487#549#0#PHP" expanded="false" />
-            <element signature="e#587#814#0#PHP" expanded="false" />
+            <element signature="e#511#573#0#PHP" expanded="false" />
+            <element signature="e#611#838#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
