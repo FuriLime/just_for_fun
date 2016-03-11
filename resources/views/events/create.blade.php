@@ -256,12 +256,12 @@ Create New event
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
                 todayBtn: true,
-                startDate: date,
-                minDate: date,
+                startDate: end_date,
+                minDate: end_date,
                 minuteStep: 10
             });
         });
-        var date = new Date('{{date('Y/m/d 20:00')}}');
+        var datef = new Date('{{date('Y/m/d 20:00')}}');
         $("#datefinish").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
