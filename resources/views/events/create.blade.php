@@ -240,30 +240,7 @@ Create New event
             minDate: nowtimedate
         });
 
-//        $('#start').on('change', function() {
-//            var start_def_date = new Date(nowtimedate);
-//            var start_date = new Date($('#start').val());
-//
-//            if(start_date.getTime() < start_def_date.getTime()) {
-//                $('#start').val(start_def_date.format('Y/m/d H:i'));
-//                return false;
-//            }
-//
-//            var end_date = new Date(start_date);
-//            end_date.setHours(start_date.getHours() + 1);
-//            end_date = end_date.format('Y/m/d H:i');
-//            console.log(end_date);
-//            $('#finish').val(end_date);
-//            $("#datefinish").datetimepicker({
-//                format: 'yyyy/mm/dd hh:ii',
-//                autoclose: true,
-//                todayBtn: true,
-//                startDate: end_date,
-//                minDate: end_date,
-//                minuteStep: 10
-//            });
-//        });
-        $('#time_change').on('click', function() {
+        $('#start').on('change', function() {
             var start_def_date = new Date(nowtimedate);
             var start_date = new Date($('#start').val());
 
@@ -275,6 +252,7 @@ Create New event
             var end_date = new Date(start_date);
             end_date.setHours(start_date.getHours() + 1);
             end_date = end_date.format('Y/m/d H:i');
+            console.log(end_date);
             $('#finish').val(end_date);
             $("#datefinish").datetimepicker({
                 format: 'yyyy/mm/dd hh:ii',
@@ -285,6 +263,28 @@ Create New event
                 minuteStep: 10
             });
         });
+//        $('#time_change').on('click', function() {
+//            var start_def_date = new Date(nowtimedate);
+//            var start_date = new Date($('#start').val());
+//
+//            if(start_date.getTime() < start_def_date.getTime()) {
+//                $('#start').val(start_def_date.format('Y/m/d H:i'));
+//                return false;
+//            }
+//
+//            var end_date = new Date(start_date);
+//            end_date.setHours(start_date.getHours() + 1);
+//            end_date = end_date.format('Y/m/d H:i');
+//            $('#finish').val(end_date);
+//            $("#datefinish").datetimepicker({
+//                format: 'yyyy/mm/dd hh:ii',
+//                autoclose: true,
+//                todayBtn: true,
+//                startDate: end_date,
+//                minDate: end_date,
+//                minuteStep: 10
+//            });
+//        });
         $('#finish').on('change', function() {
 
             var start_date = new Date($('#start').val());
