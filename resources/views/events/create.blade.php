@@ -279,8 +279,8 @@ console.log(start_date);
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
                 todayBtn: true,
-                startDate: start_dateNew,
-                minDate: start_dateNew,
+                startDate: end_date,
+                minDate: end_date,
                 minuteStep: 10
             });
         });
