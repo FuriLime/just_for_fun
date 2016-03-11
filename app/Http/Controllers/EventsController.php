@@ -157,7 +157,7 @@ class EventsController extends Controller {
          $userId = Sentinel::getUser()->id;
           $user = User::find($userId);
           $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
-          dd($userRoles = $user->roles()->lists('id')->all());
+          dd($userRoles = $user->roles()->lists('name')->all());
 
       }else {
           $user = new User();
