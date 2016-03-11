@@ -280,8 +280,8 @@ console.log(end_date);
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
                 todayBtn: true,
-                startDate: finaldate,
-                minDate: finaldate,
+                startDate: end_date,
+                minDate: end_date,
                 minuteStep: 10
             });
         });
