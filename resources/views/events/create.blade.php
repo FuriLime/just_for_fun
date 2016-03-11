@@ -240,7 +240,7 @@ Create New event
             minDate: nowtimedate
         });
 
-        $('#start').on('change', function() {
+        $('#time_change').on('click', function() {
             var start_def_date = new Date('{{date('Y/m/d 19:00')}}');
             var start_date = new Date($('#start').val());
 
