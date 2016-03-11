@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\Account;
 use App\Role;
+use App\AccountProfile;
 use Auth;
 use Redirect;
 use Lang;
@@ -42,6 +43,9 @@ class MicrosoftController extends Controller {
           $account_user->name = $user->uuid;
           $account_user->slug = $user->uuid;
           $account_user->save();
+          $account_profile = new AccountProfile();
+          $account_profile->account_id = $account_user->id;
+          $account_profile->save();
           $role = Role::find(2);
           $rolew = [
               0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
@@ -51,6 +55,7 @@ class MicrosoftController extends Controller {
           $user_profile = new UserProfile();
           $user_profile->user_id = $user->id;
           $user_profile->save();
+
         $user = Sentinel::findById($user->id);
         $activation = Activation::create($user);
 

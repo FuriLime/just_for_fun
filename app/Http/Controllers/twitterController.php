@@ -10,6 +10,7 @@ use App\User;
 use App\Account;
 use App\Role;
 use App\UserProfile;
+use App\AccountProfile;
 use Auth;
 use Redirect;
 use Lang;
@@ -51,6 +52,9 @@ class twitterController extends Controller
             $account_user->name = $user->uuid;
             $account_user->slug = $user->uuid;
             $account_user->save();
+            $account_profile = new AccountProfile();
+            $account_profile->account_id = $account_user->id;
+            $account_profile->save();
 
             $role = Role::find(2);
             $rolew = [
