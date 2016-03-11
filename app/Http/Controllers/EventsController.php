@@ -91,6 +91,8 @@ class EventsController extends Controller {
         }
 
       Session::forget('timezone');
+      Session::forget('start');
+      Session::forget('finish');
 
       // Is the user logged in?
     if (Sentinel::check()) {
@@ -209,12 +211,16 @@ class EventsController extends Controller {
 //        event::create($store_info);
         $store_info->save();
           Session::forget('timezone');
+          Session::forget('start');
+          Session::forget('finish');
 
         return redirect('events')->with('success', Lang::get('message.success.create'));
 
     } else {
         $store_info->save();
         Session::forget('timezone');
+        Session::forget('start');
+        Session::forget('finish');
       return redirect('events')->with('success', Lang::get('message.success.create'));
     }
   }
