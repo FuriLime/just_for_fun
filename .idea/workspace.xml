@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2014_07_02_230147_migration_cartalyst_sentinel.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_062907_create_users_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_062943_create_accounts_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063001_create_user_profiles_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063053_create_credit_packages_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063106_create_credit_types_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063130_create_features_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063151_create_permissions_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063209_create_roles_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063243_create_account_types_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063326_create_permission_roles_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063425_create_account_profiles_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063450_create_account_texts_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063504_create_account_feature_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063532_create_dowload_credits_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063545_create_event_credits_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063600_create_invoices_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063636_create_download_trasactions_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063705_create_account_type_permissions_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063729_create_event_transactions_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063757_create_account_user_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_063842_create_cashier_settings_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Working\event.test-y-sbm.com\database\migrations\2016_03_11_064232_create_events_table.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_072448_create_account_user_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_072526_create_cashier_table_settings.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -312,18 +291,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-01815" summary="database">
-      <created>1457615713165</created>
-      <option name="number" value="01815" />
-      <option name="project" value="LOCAL" />
-      <updated>1457615713165</updated>
-    </task>
-    <task id="LOCAL-01816" summary="database">
-      <created>1457615739152</created>
-      <option name="number" value="01816" />
-      <option name="project" value="LOCAL" />
-      <updated>1457615739152</updated>
-    </task>
     <task id="LOCAL-01817" summary="database">
       <created>1457615788069</created>
       <option name="number" value="01817" />
@@ -606,7 +573,19 @@
       <option name="project" value="LOCAL" />
       <updated>1457679577970</updated>
     </task>
-    <option name="localTasksCounter" value="1864" />
+    <task id="LOCAL-01864" summary="database">
+      <created>1457680898947</created>
+      <option name="number" value="01864" />
+      <option name="project" value="LOCAL" />
+      <updated>1457680898947</updated>
+    </task>
+    <task id="LOCAL-01865" summary="database">
+      <created>1457680918632</created>
+      <option name="number" value="01865" />
+      <option name="project" value="LOCAL" />
+      <updated>1457680918632</updated>
+    </task>
+    <option name="localTasksCounter" value="1866" />
     <servers />
   </component>
   <component name="ToolWindowManager">
