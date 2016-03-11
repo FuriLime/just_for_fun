@@ -63,9 +63,17 @@ class EventsController extends Controller {
    * @return Response
    */
   public function create(Request $request)
-  {    
-        $start_date = date('Y/m/d 19:00');
-        $finish_date = date('Y/m/d 20:00');
+  {
+      if(session()->get('start')) {
+          $start_date = session()->get('start');
+      }else {
+          $start_date = date('Y/m/d 19:00');
+      }
+      if(session()->get('finish')) {
+          $finish_date = session()->get('finish');
+      }else {
+          $finish_date = date('Y/m/d 20:00');
+      }
         $timezone_select = self::getTimeZoneSelect();
         $ip = $_SERVER["REMOTE_ADDR"];
         $location = GeoIP::getLocation($ip);
@@ -183,8 +191,7 @@ class EventsController extends Controller {
       $store_info->account_id = $account[0]->account_id;
       $store_info->permanent_url = Uuid::uuid4();
       $store_info->readable_url = Uuid::uuid4();
-//      dd($store_info['author_id']);
-    // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
+
     $date = new \DateTime($store_info->start, new \DateTimeZone($store_info->timezone));
     $date->setTimezone(new \DateTimeZone('UTC'));
     $event_start_zero = $date;
