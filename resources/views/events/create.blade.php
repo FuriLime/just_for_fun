@@ -261,15 +261,15 @@ Create New event
                 minuteStep: 10
             });
         });
-        var datef = new Date('{{date('Y/m/d 20:00')}}');
-        $("#datefinish").datetimepicker({
-            format: 'yyyy/mm/dd hh:ii',
-            autoclose: true,
-            todayBtn: true,
-            startDate: date,
-            minuteStep: 10,
-            minDate: date
-        });
+        {{--var datef = new Date('{{date('Y/m/d 20:00')}}');--}}
+        {{--$("#datefinish").datetimepicker({--}}
+            {{--format: 'yyyy/mm/dd hh:ii',--}}
+            {{--autoclose: true,--}}
+            {{--todayBtn: true,--}}
+            {{--startDate: date,--}}
+            {{--minuteStep: 10,--}}
+            {{--minDate: date--}}
+        {{--});--}}
         $('#finish').on('change', function() {
 
             var start_date = new Date($('#start').val());
