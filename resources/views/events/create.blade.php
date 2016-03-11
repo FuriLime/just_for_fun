@@ -263,6 +263,7 @@ Create New event
             });
         });
         $('#time_change').on('click', function() {
+            console.log('dfdfdf');
             var start_def_date = new Date(nowtimedate);
             var start_date = new Date($('#start').val());
 
