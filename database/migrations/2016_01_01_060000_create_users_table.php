@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('nick_name')->nullable(); // e.g. John123
             $table->string('first_name')->nullable(); // e.g. John
             $table->string('last_name')->nullable(); // e.g. Doe
+            $table->string('twit_nick')->nullable(); //need for auth from twitter
             $table->string('password');
             $table->boolean('verified')->default(false);
             $table->string('status')->default('Waiting for verificaiton'); // e.g. activated, blocked, waiting for verification, etc...

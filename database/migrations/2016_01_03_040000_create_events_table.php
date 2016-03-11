@@ -34,11 +34,14 @@ class CreateEventsTable extends Migration
             $table->string('readable_url')->required()->unique();     // this is a human-friendly readable URL based on the title of the event like /my-great-bbq-party-at-home
 
             // infos related to location of event
-            $table->string('location')->nullable();         // MAYBE we should save Street, City, ... in separate files?
-            $table->string('event_url')->nullable();        // only needed later     
+            $table->string('location')->nullable();
+            $table->string('country')->nullable();
+            $table->string('state')->nullable();
+            $table->string('city')->nullable();
+            $table->string('street')->nullable();
+            $table->string('event_url')->nullable();        // only needed later
             $table->string('lat')->nullable();              // latitude of address so we do not have to qurey the GeoId for every user request to show the map
             $table->string('lng')->nullable();              // longitude of address so we do not have to qurey the GeoId for every user request to show the map
-                                                            // MAYBE more information needed here to store the map data to DB
 
             // infos related to timing of event
             $table->string('timezone')->required();
@@ -48,15 +51,6 @@ class CreateEventsTable extends Migration
             $table->string('type')->nullable();                                         // online, offline, etc
             $table->timestamp('test_until')->nullable()->default(null);                 // timestamp limits the visibility of the event to +2 days from now
             $table->timestamp('free_downloads_until')->nullable()->default(null);       // to grant free usage for a certain time on event level
-
-            // more event columns to be added in future here
-            // more event columns to be added in future here
-            // more event columns to be added in future here
-            // more event columns to be added in future here
-            // more event columns to be added in future here
-            // more event columns to be added in future here
-            // more event columns to be added in future here
-
             $table->string('status')->default('Draft');
 
             $table->engine = 'InnoDB';
