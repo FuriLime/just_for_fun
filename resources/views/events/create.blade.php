@@ -133,7 +133,7 @@ Create New event
                          </div>
 
                          <div class="form-group fields_loc">
-                             {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state']) !!}
+                             {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}
                          </div>
 
                          <div class="form-group fields_loc">
