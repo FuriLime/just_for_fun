@@ -281,7 +281,7 @@ Create New event
 //    startDate: end_date,
 //    minuteStep: 10,
 //    minDate: end_date
-//});
+//
 
         $('#finish').on('change', function() {
 
@@ -289,10 +289,18 @@ Create New event
             var end_date = new Date($('#finish').val());
 
             if(end_date.getTime() < start_date.getTime()) {
-                console.log('dfsdff');
+
                 var end_date = new Date(start_date);
                 end_date.setHours(start_date.getHours() + 1);
                 end_date = end_date.format('Y/m/d H:i');
+                $("#datefinish").datetimepicker({
+                    format: 'yyyy/mm/dd hh:ii',
+                    autoclose: true,
+                    todayBtn: true,
+                    startDate: end_date,
+                    minuteStep: 10,
+                    minDate: end_date
+                });
 
                 $('#finish').val(end_date);
             }
