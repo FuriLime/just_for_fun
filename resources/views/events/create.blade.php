@@ -266,7 +266,7 @@ Create New event
             autoclose: true,
             todayBtn: true,
             startDate: $('#finish').val(),
-            minDate: '2016/03/24 20:00',
+            minDate: $('#finish').val(),
             minuteStep: 10
         });
     });
