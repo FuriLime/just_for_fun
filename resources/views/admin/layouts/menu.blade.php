@@ -80,8 +80,7 @@
         </li>
     </ul>
 </li>
-{{  $userId = Sentinel::getUser()}}
-{{  dd($userId)}}
+{{  $user = Sentinel::getUser()}}
 {{$userRoles = $user->roles()->lists('name')->all()}}
 {{--@if(Sentinel::inRole('admin'))--}}
     <li >
