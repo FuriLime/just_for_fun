@@ -242,12 +242,14 @@ Create New event
         {{--var datef = new Date('{{date('Y/m/d 20:00')}}');--}}
         {{--datef = datef.format('Y/m/d H:i');--}}
         {{--$('#finish').attr('value', datef);--}}
-        $("#datefinish").datetimepicker({
-            format: 'yyyy/mm/dd hh:ii',
-            autoclose: true,
-            todayBtn: true,
-            minuteStep: 10,
-        });
+//        $("#datefinish").datetimepicker({
+//            format: 'yyyy/mm/dd hh:ii',
+//            autoclose: true,
+//            todayBtn: true,
+//            startDate: datef,
+//            minuteStep: 10,
+//            minDate: datef
+//        });
 
 
         $('#start').on('change', function() {
@@ -260,10 +262,10 @@ Create New event
 
 
 
-//            if(start_date.getTime() < start_def_date.getTime()) {
-//                $('#start').val(start_def_date.format('Y/m/d H:i'));
-//                return false;
-//            }
+            if(start_date.getTime() < start_def_date.getTime()) {
+                $('#start').val(start_def_date.format('Y/m/d H:i'));
+                return false;
+            }
 
             var end_date = new Date(start_date);
             end_date.setHours(start_date.getHours() + 1);
