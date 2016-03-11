@@ -144,8 +144,9 @@ class EventsController extends Controller {
 
       }else{
           $user = new User();
-          dd($user->id);
+
           $account_user = new Account();
+          dd($account_user->id);
           $account_user->	account_type_id = '1';
           $account_user->name = $user['uuid'];
           $account_user->slug = $user['uuid'];
