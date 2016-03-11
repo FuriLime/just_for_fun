@@ -238,67 +238,51 @@ Create New event
             minuteStep: 10,
             minDate: nowtimedate
         });
+    });
+    $('#start').on('change', function() {
+        var start_def_date = new Date('{{ $start_date }}');
 
-        {{--var datef = new Date('{{date('Y/m/d 20:00')}}');--}}
-        {{--datef = datef.format('Y/m/d H:i');--}}
-        {{--$('#finish').attr('value', datef);--}}
-//        $("#datefinish").datetimepicker({
-//            format: 'yyyy/mm/dd hh:ii',
-//            autoclose: true,
-//            todayBtn: true,
-//            startDate: datef,
-//            minuteStep: 10,
-//            minDate: datef
-//        });
+        var start_date = new Date($('#start').val());
 
-
-        $('#start').on('change', function() {
-            var start_def_date = new Date('{{ $start_date }}');
-
-            var start_date = new Date($('#start').val());
-
-            var start_dateNew = start_date.format('Y/m/d H:i');
-            var enddate =  $('#start').attr('value', start_dateNew);
+        var start_dateNew = start_date.format('Y/m/d H:i');
+        var enddate =  $('#start').attr('value', start_dateNew);
 
 
 
-            if(start_date.getTime() < start_def_date.getTime()) {
-                $('#start').val(start_def_date.format('Y/m/d H:i'));
-                return false;
-            }
+        if(start_date.getTime() < start_def_date.getTime()) {
+            $('#start').val(start_def_date.format('Y/m/d H:i'));
+            return false;
+        }
 
+        var end_date = new Date(start_date);
+        end_date.setHours(start_date.getHours() + 1);
+        end_date = end_date.format('Y/m/d H:i');
+        $('#finish').attr('value', end_date);
+        console.log($('#finish').val());
+        var finaldate = $('#finish').val();
+//            console.log(finaldate);
+        $("#datefinish").datetimepicker({
+            format: 'yyyy/mm/dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            startDate: $('#finish').val(),
+            minDate: '2016/03/24 20:00',
+            minuteStep: 10
+        });
+    });
+
+    $('#finish').on('change', function() {
+        var start_date = new Date($('#start').val());
+        var end_date = new Date($('#finish').val());
+
+        if(end_date.getTime() < start_date.getTime()) {
             var end_date = new Date(start_date);
             end_date.setHours(start_date.getHours() + 1);
             end_date = end_date.format('Y/m/d H:i');
-            $('#finish').attr('value', end_date);
-            console.log($('#finish').val());
-            var finaldate = $('#finish').val();
-//            console.log(finaldate);
-            $("#datefinish").datetimepicker({
-                format: 'yyyy/mm/dd hh:ii',
-                autoclose: true,
-                todayBtn: true,
-                startDate: $('#finish').val(),
-                minDate: '2016/03/24 20:00',
-                minuteStep: 10
-            });
-        });
 
-        $('#finish').on('change', function() {
-            var start_date = new Date($('#start').val());
-            var end_date = new Date($('#finish').val());
-
-            if(end_date.getTime() < start_date.getTime()) {
-                var end_date = new Date(start_date);
-                end_date.setHours(start_date.getHours() + 1);
-                end_date = end_date.format('Y/m/d H:i');
-
-                $('#finish').val(end_date);
-            }
-        });
-
+            $('#finish').val(end_date);
+        }
     });
-
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 	<script type="text/javascript">//<![CDATA[
