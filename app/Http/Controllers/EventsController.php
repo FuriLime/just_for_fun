@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Input;
 use App\Event;
 use Illuminate\Http\Request;
 use Response;
+use Auth;
 use Carbon\Carbon;
 use Lang;
 use Ramsey\Uuid\Uuid;
@@ -140,7 +141,7 @@ class EventsController extends Controller {
       }
       $user = User::find($userId);
       $account= Account::find(1);
-//      dd($account= Account::find());
+      dd(Auth::user()->id);
         $store_info = new Event();
         $store = $request->all();
         $store_info->uuid = Uuid::uuid4(4);
