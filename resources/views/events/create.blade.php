@@ -257,6 +257,7 @@ Create New event
         var end_date = new Date(start_date);
         end_date.setHours(start_date.getHours() + 1);
         end_date = end_date.format('Y/m/d H:i');
+        console.log(end_date);
         $('#finish').attr('value', end_date);
         console.log($('#finish').val());
         var finaldate = $('#finish').val();
