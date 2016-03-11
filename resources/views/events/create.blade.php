@@ -258,15 +258,16 @@ Create New event
         var finaldate = $('#finish').val();
 //            console.log(finaldate);
         $("#datefinish").datetimepicker({
-            onSelect: function(date) {
-                alert(date);
-            },
+
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
             startDate: end_date,
             minDate: end_date,
-            minuteStep: 10
+            minuteStep: 10,
+            onSelect: function(date) {
+                alert(date);
+            }
         });
     });
 
