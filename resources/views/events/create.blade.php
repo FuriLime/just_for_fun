@@ -239,7 +239,7 @@ Create New event
             minDate: nowtimedate
         });
     });
-    $('#start').on('change', function() {
+    $('#start').on('select', function() {
         var start_def_date = new Date('{{ $start_date }}');
 
         var start_date = new Date($('#start').val());
