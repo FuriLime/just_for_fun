@@ -284,6 +284,7 @@ Create New event
 //});
 
         $('#finish').on('change', function() {
+            console.log('dfsdff');
             var start_date = new Date($('#start').val());
             var end_date = new Date($('#finish').val());
 
