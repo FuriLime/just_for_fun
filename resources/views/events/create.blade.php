@@ -230,7 +230,7 @@ Create New event
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
 
         var date = new Date('{{date('Y/m/d 19:00')}}');
-        date = date.format('Y/m/d H:i');
+//        date = date.format('Y/m/d H:i');
         $('#start').attr('value', date);
         $("#datestart").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
@@ -272,7 +272,6 @@ console.log(start_date);
             end_date = end_date.format('Y/m/d H:i');
 
             $('#finish').val(end_date);
-            console.log(enddate);
             $("#datefinish").datetimepicker({
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
