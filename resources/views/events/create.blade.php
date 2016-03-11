@@ -258,10 +258,10 @@ Create New event
             var start_dateNew = start_date.format('Y/m/d H:i');
             var start_date = $('#start').attr('value', start_dateNew);
 
-            if(start_date.getTime() < start_def_date.getTime()) {
-                $('#start').val(start_def_date.format('Y/m/d H:i'));
-                return false;
-            }
+//            if(start_date.getTime() < start_def_date.getTime()) {
+//                $('#start').val(start_def_date.format('Y/m/d H:i'));
+//                return false;
+//            }
 
             var end_date = new Date(start_date);
             end_date.setHours(start_date.getHours() + 1);
