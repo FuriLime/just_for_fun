@@ -255,8 +255,8 @@ Create New event
             var start_def_date = new Date('{{ $start_date }}');
 
             var start_date = new Date($('#start').val());
-            start_date = start_date.format('Y/m/d H:i');
-console.log(start_date);
+            var start_dateNew = start_date.format('Y/m/d H:i');
+            console.log(start_dateNew);
             if(start_date.getTime() < start_def_date.getTime()) {
                 $('#start').val(start_def_date.format('Y/m/d H:i'));
                 return false;
