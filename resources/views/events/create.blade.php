@@ -238,7 +238,7 @@ var nowtimedate = new Date();
             todayBtn: true,
             startDate: date,
             minuteStep: 10,
-            minDate: date
+            minDate: nowtimedate
         });
 
         $('#start').on('change', function() {
