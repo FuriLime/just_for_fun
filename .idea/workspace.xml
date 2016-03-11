@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071132_create_credit_packages_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071132_create_credit_packages_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071203_create_credit_types_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071203_create_credit_types_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071240_create_features_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071240_create_features_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071254_create_permissions_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071254_create_permissions_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071303_create_roles_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071303_create_roles_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071340_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071340_create_users_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071359_create_account_types_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071359_create_account_types_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071418_create_permission_role_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071418_create_permission_role_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071442_create_user_profiles_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071442_create_user_profiles_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071450_create_accounts_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071450_create_accounts_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071708_create_account_profiles_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071708_create_account_profiles_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071722_create_account_texts_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071722_create_account_texts_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071747_create_events_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071747_create_events_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071810_create_account_feature_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071810_create_account_feature_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071819_create_dowload_credits_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071819_create_dowload_credits_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071826_create_event_credits_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071826_create_event_credits_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071834_create_invoices_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071834_create_invoices_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071855_create_download_trasactions_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071855_create_download_trasactions_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071903_create_account_type_permission_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071903_create_account_type_permission_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071939_create_event_transactions_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071939_create_event_transactions_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_072448_create_account_user_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_072448_create_account_user_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_072526_create_cashier_table_settings.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_072526_create_cashier_table_settings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -60,11 +39,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_03_11_071203_create_credit_types_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2016_03_11_071203_create_credit_types_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071203_create_credit_types_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6689815" vertical-offset="0" max-vertical-offset="864">
+            <state vertical-scroll-proportion="-22.23077" vertical-offset="0" max-vertical-offset="714">
               <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3611111" vertical-offset="45" max-vertical-offset="935">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -83,7 +72,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/Event.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_01_03_040000_create_events_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_01_01_060000_create_users_table.php" />
@@ -132,6 +120,7 @@
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071240_create_features_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071819_create_dowload_credits_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071203_create_credit_types_table.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
       </list>
     </option>
   </component>
@@ -203,6 +192,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seeds" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -331,12 +338,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01818" summary="database">
-      <created>1457615816150</created>
-      <option name="number" value="01818" />
-      <option name="project" value="LOCAL" />
-      <updated>1457615816150</updated>
     </task>
     <task id="LOCAL-01819" summary="database">
       <created>1457615856301</created>
@@ -626,7 +627,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457681143426</updated>
     </task>
-    <option name="localTasksCounter" value="1867" />
+    <task id="LOCAL-01867" summary="database">
+      <created>1457681818203</created>
+      <option name="number" value="01867" />
+      <option name="project" value="LOCAL" />
+      <updated>1457681818203</updated>
+    </task>
+    <option name="localTasksCounter" value="1868" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -826,13 +833,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3824027" vertical-offset="7938" max-vertical-offset="58701">
           <caret line="541" column="27" selection-start-line="541" selection-start-column="27" selection-end-line="541" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.576923" vertical-offset="89" max-vertical-offset="935">
-          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1079,8 +1080,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071203_create_credit_types_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6689815" vertical-offset="0" max-vertical-offset="864">
+        <state vertical-scroll-proportion="-22.23077" vertical-offset="0" max-vertical-offset="714">
           <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3611111" vertical-offset="45" max-vertical-offset="935">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
           <folding />
         </state>
       </provider>

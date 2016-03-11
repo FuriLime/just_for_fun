@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
 //        $this->call(CreditTypesTableSeeder::class);         // no dependancy for table seeding
 //        $this->call(FeaturesTableSeeder::class);            // no dependancy for table seeding
 //        $this->call(PermissionsTableSeeder::class);         // no dependancy for table seeding // not needed in Phase 1 & 2
-//        $this->call(RolesTableSeeder::class);               // no dependancy for table seeding
+        $this->call(RolesTableSeeder::class);               // no dependancy for table seeding
 //        $this->call(UsersTableSeeder::class);               // no dependancy for table seeding
 //
 //
