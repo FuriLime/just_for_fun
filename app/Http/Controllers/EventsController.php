@@ -139,7 +139,8 @@ class EventsController extends Controller {
          $userId = Sentinel::getUser()->id;
       }
       $user = User::find($userId);
-      $account= Account::find(4);
+      $account= Account::find(1);
+      dd($account= Account::find());
         $store_info = new Event();
         $store = $request->all();
         $store_info->uuid = Uuid::uuid4(4);
