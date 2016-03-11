@@ -268,13 +268,13 @@ Create New event
             end_date = end_date.format('Y/m/d H:i');
 
             $('#finish').val(end_date);
-            console.log(start_dateNew);
+            console.log(enddate);
             $("#datefinish").datetimepicker({
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
                 todayBtn: true,
-                startDate: enddate,
-                minDate: enddate,
+                startDate: start_dateNew,
+                minDate: start_dateNew,
                 minuteStep: 10
             });
         });
