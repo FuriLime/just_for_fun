@@ -239,7 +239,7 @@ Create New event
             minDate: nowtimedate
         });
     });
-    $('#start').on('select', function() {
+    $('#start').on('change', function() {
         var start_def_date = new Date('{{ $start_date }}');
 
         var start_date = new Date($('#start').val());
@@ -258,6 +258,9 @@ Create New event
         var finaldate = $('#finish').val();
 //            console.log(finaldate);
         $("#datefinish").datetimepicker({
+            onSelect: function(date) {
+                alert(date);
+            },
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
