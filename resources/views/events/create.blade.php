@@ -236,7 +236,7 @@ var nowtimedate = new Date();
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
-            startDate: date,
+            startDate: nowtimedate,
             minuteStep: 10,
             minDate: nowtimedate
         });
