@@ -81,6 +81,7 @@
     </ul>
 </li>
 {{  $userId = Sentinel::getUser()->id}}
+{{  var_dump($userId)}}
           {{$user = User::find($userId)}}
 {{ $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id')}}
 {{$userRoles = $user->roles()->lists('name')->all()}}
