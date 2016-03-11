@@ -150,9 +150,9 @@ Create New event
                          </div>
                          <div class="form-group" style="text-align: right; margin-right: 3%; margin-top: 9%;">
                         <div class="col-sm-offset-0 col-sm-12" id="btn_group">
-                            {{--<button type="button" class="btn" onclick="(function($) { $('#active').val('0'); $('#btn_group .btn-primary').click(); })(jQuery);">--}}
-                                {{--@lang('frontend.save_as_draft')--}}
-                            {{--</button>--}}
+                            <button type="button" class="btn" onclick="(function($) { $('#active').val('0'); $('#btn_group .btn-primary').click(); })(jQuery);">
+                                @lang('frontend.save_as_draft')
+                            </button>
                             <button class="btn btn-primary text-white test submit">
                                 @lang('frontend.save_and_publish')
                             </button>
