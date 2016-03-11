@@ -127,7 +127,9 @@ class EventsController extends Controller {
     if(isset($_POST['timezone'])) {
       session()->put('timezone', $_POST['timezone']);
     }
-      var_dump($_POST['timezone']);
+      if(isset($_POST['start'])) {
+          session()->put('start', $_POST['start']);
+      }
     $this->validate($request, [
       'title' => 'required|max:80',
       'description' => 'max:500',
