@@ -140,10 +140,9 @@ class EventsController extends Controller {
          $userId = Sentinel::getUser()->id;
       }
       $user = User::find($userId);
-      $account= Account::find(1);
-      if (Auth::check()){
-          dd(Auth::user()->id);
-      }
+      $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId);
+
+
 
         $store_info = new Event();
         $store_info->uuid = Uuid::uuid4(4);
