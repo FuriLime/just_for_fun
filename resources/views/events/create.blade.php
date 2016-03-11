@@ -248,9 +248,9 @@ Create New event
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
-            startDate: start_date,
+            startDate: datef,
             minuteStep: 10,
-            minDate: start_date
+            minDate: datef
         });
 
 
