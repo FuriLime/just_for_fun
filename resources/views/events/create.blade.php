@@ -228,17 +228,16 @@ Create New event
     <script>
     $(document).ready(function() {
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
-
+        var nowtimedate = new Date();
+        nowtimedate = nowtimedate.format('Y/m/d H:i');
         var date = new Date('{{date('Y/m/d 19:00')}}');
-        date = date.format('Y/m/d H:i');
-        $('#start').attr('value', date);
         $("#datestart").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
-            startDate: date,
+            startDate: nowtimedate,
             minuteStep: 10,
-            minDate: date
+            minDate: nowtimedate
         });
 
         {{--var datef = new Date('{{date('Y/m/d 20:00')}}');--}}
