@@ -230,6 +230,7 @@ Create New event
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
 
         var date = new Date('{{date('Y/m/d 19:00')}}');
+        date = date.format('Y/m/d H:i');
         $('#start').attr('value', date);
         $("#datestart").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
