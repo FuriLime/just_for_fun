@@ -262,15 +262,6 @@ Create New event
                 minuteStep: 10
             });
         });
-        {{--var datef = new Date('{{date('Y/m/d 20:00')}}');--}}
-        {{--$("#datefinish").datetimepicker({--}}
-            {{--format: 'yyyy/mm/dd hh:ii',--}}
-            {{--autoclose: true,--}}
-            {{--todayBtn: true,--}}
-            {{--startDate: date,--}}
-            {{--minuteStep: 10,--}}
-            {{--minDate: date--}}
-        {{--});--}}
         $('#finish').on('change', function() {
 
             var start_date = new Date($('#start').val());
@@ -281,15 +272,6 @@ Create New event
                 var end_date = new Date(start_date);
                 end_date.setHours(start_date.getHours() + 1);
                 end_date = end_date.format('Y/m/d H:i');
-                $("#datefinish").datetimepicker({
-                    format: 'yyyy/mm/dd hh:ii',
-                    autoclose: true,
-                    todayBtn: true,
-                    startDate: end_date,
-                    minuteStep: 10,
-                    minDate: end_date
-                });
-
                 $('#finish').val(end_date);
             }
         });
