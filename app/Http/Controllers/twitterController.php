@@ -43,7 +43,7 @@ class twitterController extends Controller
         if(!$user){
             $user = new User;
             $user->twit_nick = $userTwit->getNickName();
-//            $user->email = $userTwit->getName().'@twitter.com';
+            $user->email = $user->uuid;
             $user->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';
