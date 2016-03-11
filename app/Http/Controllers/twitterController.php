@@ -39,7 +39,7 @@ class twitterController extends Controller
     {
         $userTwit = Socialite::driver('twitter')->user();
        // dd($userTwit->getNickName());
-        $user = User::wherefirst_name($userTwit->getNickName())->first();
+        $user = User::wheretwit_nick($userTwit->getNickName())->first();
         if(!$user){
             $user = new User;
             $user->first_name = $userTwit->getNickName();
