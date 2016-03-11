@@ -244,9 +244,8 @@ Create New event
     });
     $('#start').on('change', function() {
         var start_def_date = new Date('{{ $start_date }}');
-
         var start_date = new Date($('#start').val());
-        console.log(start_date.getTime());
+
 
 //        if(start_date.getTime() < start_def_date.getTime()) {
 //            $('#start').val(start_def_date.format('Y/m/d H:i'));
@@ -268,10 +267,7 @@ Create New event
             todayBtn: true,
             startDate: end_date,
             minDate: end_date,
-            minuteStep: 10,
-            onSelect: function(date) {
-                alert(date);
-            }
+            minuteStep: 10
         });
     });
 
