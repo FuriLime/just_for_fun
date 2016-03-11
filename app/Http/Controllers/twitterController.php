@@ -42,7 +42,7 @@ class twitterController extends Controller
         $user = User::wheretwit_nick($userTwit->getNickName())->first();
         if(!$user){
             $user = new User;
-            $user->first_name = $userTwit->getNickName();
+            $user->twit_nick = $userTwit->getNickName();
 //            $user->email = $userTwit->getName().'@twitter.com';
             $user->save();
             $account_user = new Account();
