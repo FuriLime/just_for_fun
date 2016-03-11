@@ -21,10 +21,6 @@ class CreateAccountProfilesTable extends Migration
             $table->text('about')->nullable();
             $table->string('image')->nullable(); // e.g. a company logo
             $table->string('homepage')->nullable(); // e.g. a www.acme.com
-            // all the other fields that are needed for an account profile
-            // all the other fields that are needed for an account profile
-            // all the other fields that are needed for an account profile
-            // all the other fields that are needed for an account profile
 
             $table->timestamps();
             $table->engine = 'InnoDB';

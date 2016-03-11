@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAccountTypePermissionTable extends Migration
+class CreateAccountTypePermissionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateAccountTypePermissionTable extends Migration
      */
     public function up()
     {
-        Schema::create('account_type_permission', function (Blueprint $table) {
+        Schema::create('account_type_permissions', function (Blueprint $table) {
             $table->integer('account_type_id')->unsigned();
             $table->integer('permission_id')->unsigned();
 
@@ -29,6 +29,6 @@ class CreateAccountTypePermissionTable extends Migration
      */
     public function down()
     {
-        Schema::drop('account_type_permission');
+        Schema::drop('account_type_permissions');
     }
 }

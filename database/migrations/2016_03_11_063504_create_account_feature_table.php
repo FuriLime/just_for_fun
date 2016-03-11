@@ -12,7 +12,7 @@ class CreateAccountFeatureTable extends Migration
      */
     public function up()
     {
-        Schema::create('account_feature', function (Blueprint $table) {
+        Schema::create('account_features', function (Blueprint $table) {
             $table->integer('account_id')->required();
             $table->integer('feature_id')->required();
 
@@ -34,6 +34,6 @@ class CreateAccountFeatureTable extends Migration
      */
     public function down()
     {
-        Schema::drop('account_feature');
+        Schema::drop('account_features');
     }
 }

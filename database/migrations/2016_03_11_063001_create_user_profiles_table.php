@@ -16,21 +16,14 @@ class CreateUserProfilesTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            
-            $table->string('timezone')->required();     // default timezone of user
+
+            $table->string('timezone')->required();
             $table->text('about')->nullable();
-            $table->string('image')->nullable();        // i.e. the name of user picture in file system/ path to user picture in file system
-            // all the other fields that are needed for a user account
-            // all the other fields that are needed for a user account
-            // all the other fields that are needed for a user account
+            $table->string('image')->nullable();
             $table->timestamps();
             $table->engine = 'InnoDB';
         });
     }
-
-
-
-
     /**
      * Reverse the migrations.
      *
