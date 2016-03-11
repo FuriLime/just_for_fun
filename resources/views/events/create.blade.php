@@ -255,7 +255,7 @@ Create New event
             var start_def_date = new Date('{{ $start_date }}');
 
             var start_date = new Date($('#start').val());
-
+console.log(start_date);
 
             var start_dateNew = start_date.format('Y/m/d H:i');
             var enddate =  $('#start').attr('value', start_dateNew);
