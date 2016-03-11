@@ -143,13 +143,13 @@ class EventsController extends Controller {
           $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
 
       }else {
-          if(!User) {
+          if(!User()) {
               $user = new User();
           }
           $user->save();
           $userId = $user->id;
           $user = User::find($userId);
-          if (!Account) {
+          if (!Account()) {
 
           $account_user = new Account();
       }
