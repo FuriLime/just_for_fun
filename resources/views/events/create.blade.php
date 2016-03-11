@@ -241,17 +241,17 @@ Create New event
             minDate: date
         });
 
-        var datef = new Date('{{date('Y/m/d 20:00')}}');
-        datef = datef.format('Y/m/d H:i');
-        $('#finish').attr('value', datef);
-        $("#datefinish").datetimepicker({
-            format: 'yyyy/mm/dd hh:ii',
-            autoclose: true,
-            todayBtn: true,
-            startDate: datef,
-            minuteStep: 10,
-            minDate: datef
-        });
+        {{--var datef = new Date('{{date('Y/m/d 20:00')}}');--}}
+        {{--datef = datef.format('Y/m/d H:i');--}}
+        {{--$('#finish').attr('value', datef);--}}
+        {{--$("#datefinish").datetimepicker({--}}
+            {{--format: 'yyyy/mm/dd hh:ii',--}}
+            {{--autoclose: true,--}}
+            {{--todayBtn: true,--}}
+            {{--startDate: datef,--}}
+            {{--minuteStep: 10,--}}
+            {{--minDate: datef--}}
+        {{--});--}}
 
 
         $('#start').on('change', function() {
