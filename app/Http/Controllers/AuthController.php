@@ -132,8 +132,8 @@ class AuthController extends JoshController
             ));
             $account_user = new Account();
             $account_user->	account_type_id = '1';
-            $account_user->name = $user['email'];
-            $account_user->slug = $user['email'];
+            $account_user->name = $user['uuid'];
+            $account_user->slug = $user['uuid'];
             $account_user->save();
             $account_profile = new AccountProfile();
             $account_profile->account_id = $account_user->id;

@@ -141,24 +141,40 @@ class EventsController extends Controller {
          $userId = Sentinel::getUser()->id;
           $user = User::find($userId);
           $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
-          $store_info = new Event();
-        $store_info->uuid = Uuid::uuid4(4);
-        $store_info->title = Input::get('title');
-        $store_info->description = Input::get('description');
-        $store_info->location = Input::get('location');
-        $store_info->country = Input::get('Country');
-        $store_info->state = Input::get('State');
-        $store_info->city = Input::get('City');
-        $store_info->street = Input::get('Street');
-        $store_info->timezone = Input::get('timezone');
-        $store_info->finish = Input::get('finish');
-        $store_info->start = Input::get('start');
-        $store_info->author_id = $user->id;
-        $store_info->editor_id = $user->id;
-        $store_info->account_id = $account[0]->account_id;
-        $store_info->permanent_url = Uuid::uuid4();
-        $store_info->readable_url = Uuid::uuid4();
+
+      }else{
+          $user = new User();
+          $account_user = new Account();
+          $account_user->	account_type_id = '1';
+          $account_user->name = $user['uuid'];
+          $account_user->slug = $user['uuid'];
+          $account_user->save();
+          //add user to 'User' group
+          $role = Role::find(2);
+          $rolew = [
+              0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
+          ];
+
+          $role->users()->attach($rolew);
+
       }
+      $store_info = new Event();
+      $store_info->uuid = Uuid::uuid4(4);
+      $store_info->title = Input::get('title');
+      $store_info->description = Input::get('description');
+      $store_info->location = Input::get('location');
+      $store_info->country = Input::get('Country');
+      $store_info->state = Input::get('State');
+      $store_info->city = Input::get('City');
+      $store_info->street = Input::get('Street');
+      $store_info->timezone = Input::get('timezone');
+      $store_info->finish = Input::get('finish');
+      $store_info->start = Input::get('start');
+      $store_info->author_id = $user->id;
+      $store_info->editor_id = $user->id;
+      $store_info->account_id = $account[0]->account_id;
+      $store_info->permanent_url = Uuid::uuid4();
+      $store_info->readable_url = Uuid::uuid4();
 //      dd($store_info['author_id']);
     // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
     $date = new \DateTime($store_info->start, new \DateTimeZone($store_info->timezone));
