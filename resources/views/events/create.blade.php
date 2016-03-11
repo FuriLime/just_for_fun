@@ -279,8 +279,8 @@ Create New event
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
                 todayBtn: true,
-                startDate: finaldate,
-                minDate: finaldate,
+                startDate: '2016/03/11 20:00',
+                minDate: '2016/03/11 20:00',
                 minuteStep: 10
             });
         });
