@@ -275,7 +275,7 @@ Create New event
 console.log(end_date);
              $('#finish').attr('value', end_date);
             var finaldate = $('#finish').val();
-            console.log(finaldate);
+//            console.log(finaldate);
             $("#datefinish").datetimepicker({
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
