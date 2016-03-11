@@ -145,7 +145,7 @@ class EventsController extends Controller {
       }else{
           $user = new User();
           $user->save();
-          $userId = Sentinel::getUser()->id;
+          $userId = $user->id;
           $user = User::find($userId);
           $account_user = new Account();
           $account_user->	account_type_id = '1';
