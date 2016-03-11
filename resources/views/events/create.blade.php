@@ -244,11 +244,6 @@ Create New event
 
         var start_date = new Date($('#start').val());
 
-        var start_dateNew = start_date.format('Y/m/d H:i');
-        var enddate =  $('#start').attr('value', start_dateNew);
-
-
-
         if(start_date.getTime() < start_def_date.getTime()) {
             $('#start').val(start_def_date.format('Y/m/d H:i'));
             return false;
@@ -266,8 +261,8 @@ Create New event
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
-            startDate: $('#finish').val(),
-            minDate: $('#finish').val(),
+            startDate: end_date,
+            minDate: end_date,
             minuteStep: 10
         });
     });
