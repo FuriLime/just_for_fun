@@ -146,11 +146,12 @@ class EventsController extends Controller {
           $user = new User();
 
           $account_user = new Account();
-          dd($account_user->id);
+
           $account_user->	account_type_id = '1';
-          $account_user->name = $user['uuid'];
-          $account_user->slug = $user['uuid'];
+          $account_user->name = 'sdfsdf';
+          $account_user->slug = 'sdfsdf';
           $account_user->save();
+          dd($account_user->id);
           //add user to 'User' group
           $role = Role::find(2);
           $rolew = [
