@@ -158,7 +158,7 @@ class EventsController extends Controller {
           $user = User::find($userId);
           $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
          $userRoles = $user->roles()->lists('name')->all();
-          dd($userRoles);
+          dd($userRoles[0]);
 
       }else {
           $user = new User();
