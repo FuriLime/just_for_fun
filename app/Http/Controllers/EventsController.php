@@ -140,7 +140,7 @@ class EventsController extends Controller {
       }
       $user = User::find($userId);
       $account= Account::find(1);
-      dd($account= Account::find());
+//      dd($account= Account::find());
         $store_info = new Event();
         $store = $request->all();
         $store_info->uuid = Uuid::uuid4(4);
