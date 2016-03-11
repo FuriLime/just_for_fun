@@ -240,24 +240,17 @@ Create New event
         });
 
         var datef = new Date('{{date('Y/m/d 20:00')}}');
+        var start_date = new Date($('#start').val());
         $("#datefinish").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
-            startDate: datef,
+            startDate: start_date,
             minuteStep: 10,
-            minDate: datef
+            minDate: start_date
         });
 
     });
-    $("#datestart").on("dp.change", function (e) {
-        $('#datefinish').data("DateTimePicker").minDate(e.date);
-    });
-    // run second calendar after closing of first
-    $("#datestart").on("dp.hide", function (e) {
-        $('#datefinish .glyphicon-calendar').click();
-    });
-
     $('#start').on('change', function() {
         var start_def_date = new Date('{{ $start_date }}');
         var start_date = new Date($('#start').val());
