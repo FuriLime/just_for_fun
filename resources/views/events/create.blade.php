@@ -229,6 +229,8 @@ Create New event
     $(document).ready(function() {
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
         var nowtimedate = new Date();
+        nowtimedate.setHours(nowtimedate.getHours()+1);
+        console.log(nowtimedate);
         nowtimedate = nowtimedate.format('Y/m/d H:i');
         var date = new Date('{{date('Y/m/d 19:00')}}');
         $("#datestart").datetimepicker({
@@ -241,6 +243,7 @@ Create New event
         });
 
         $('#start').on('change', function() {
+            console.log('start');
             var start_def_date = new Date(nowtimedate);
             var start_date = new Date($('#start').val());
 
