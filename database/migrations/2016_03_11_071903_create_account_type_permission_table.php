@@ -12,7 +12,14 @@ class CreateAccountTypePermissionTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('account_type_permission', function (Blueprint $table) {
+            $table->integer('account_type_id')->unsigned();
+            $table->integer('permission_id')->unsigned();
+
+            $table->primary(['account_type_id', 'permission_id']);
+            $table->engine = 'InnoDB';
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +29,6 @@ class CreateAccountTypePermissionTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('account_type_permission');
     }
 }

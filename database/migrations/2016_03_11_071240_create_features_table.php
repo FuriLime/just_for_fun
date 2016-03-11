@@ -12,7 +12,16 @@ class CreateFeaturesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('features', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('slug')->required()->unique();
+            $table->string('name')->required()->unique();
+            $table->string('description')->nullable();
+
+            $table->engine = 'InnoDB';
+            $table->softDeletes();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +31,6 @@ class CreateFeaturesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('features');
     }
 }

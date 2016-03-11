@@ -2,8 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_072448_create_account_user_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_072526_create_cashier_table_settings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071132_create_credit_packages_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071132_create_credit_packages_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071203_create_credit_types_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071203_create_credit_types_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071240_create_features_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071240_create_features_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071254_create_permissions_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071254_create_permissions_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071303_create_roles_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071303_create_roles_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071340_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071340_create_users_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071359_create_account_types_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071359_create_account_types_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071418_create_permission_role_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071418_create_permission_role_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071442_create_user_profiles_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071442_create_user_profiles_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071450_create_accounts_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071450_create_accounts_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071708_create_account_profiles_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071708_create_account_profiles_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071722_create_account_texts_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071722_create_account_texts_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071747_create_events_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071747_create_events_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071810_create_account_feature_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071810_create_account_feature_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071819_create_dowload_credits_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071819_create_dowload_credits_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071826_create_event_credits_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071826_create_event_credits_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071834_create_invoices_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071834_create_invoices_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071855_create_download_trasactions_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071855_create_download_trasactions_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071903_create_account_type_permission_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071903_create_account_type_permission_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_071939_create_event_transactions_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_071939_create_event_transactions_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_072448_create_account_user_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_072448_create_account_user_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_11_072526_create_cashier_table_settings.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_11_072526_create_cashier_table_settings.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -29,7 +49,28 @@
     <favorites_list name="test-ef" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="2016_03_11_071819_create_dowload_credits_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071819_create_dowload_credits_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-25.5" vertical-offset="0" max-vertical-offset="799">
+              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016_03_11_071203_create_credit_types_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071203_create_credit_types_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6689815" vertical-offset="0" max-vertical-offset="864">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Push.Settings">
     <option name="myUpdateMethod" value="REBASE" />
@@ -40,28 +81,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/public/assets/ical.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_02_18_071006_create_event_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_03_09_200404_create_events_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_03_09_201048_create_events_table.php" />
-        <option value="$PROJECT_DIR$/app/AccountType.php" />
-        <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
-        <option value="$PROJECT_DIR$/database/factories/ModelFactory.php" />
-        <option value="$PROJECT_DIR$/database/seeds/AccountsTableSeeder.php" />
-        <option value="$PROJECT_DIR$/app/Activation.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/JoshController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/events/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/UserProfile.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/Account.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MicrosoftController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/LinkedController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/googleController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/Event.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
@@ -91,6 +110,28 @@
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_063757_create_account_user_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_063842_create_cashier_settings_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_064232_create_events_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071254_create_permissions_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071303_create_roles_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071340_create_users_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071359_create_account_types_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071418_create_permission_role_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071442_create_user_profiles_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071450_create_accounts_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071708_create_account_profiles_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071722_create_account_texts_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071747_create_events_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071810_create_account_feature_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071903_create_account_type_permission_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_072448_create_account_user_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071132_create_credit_packages_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071826_create_event_credits_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071834_create_invoices_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071855_create_download_trasactions_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071939_create_event_transactions_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_072526_create_cashier_table_settings.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071240_create_features_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071819_create_dowload_credits_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071203_create_credit_types_table.php" />
       </list>
     </option>
   </component>
@@ -290,12 +331,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-01817" summary="database">
-      <created>1457615788069</created>
-      <option name="number" value="01817" />
-      <option name="project" value="LOCAL" />
-      <updated>1457615788069</updated>
     </task>
     <task id="LOCAL-01818" summary="database">
       <created>1457615816150</created>
@@ -585,12 +620,18 @@
       <option name="project" value="LOCAL" />
       <updated>1457680918632</updated>
     </task>
-    <option name="localTasksCounter" value="1866" />
+    <task id="LOCAL-01866" summary="database">
+      <created>1457681143426</created>
+      <option name="number" value="01866" />
+      <option name="project" value="LOCAL" />
+      <updated>1457681143426</updated>
+    </task>
+    <option name="localTasksCounter" value="1867" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -604,7 +645,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23928571" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23928571" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -864,6 +905,182 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.5969448" vertical-offset="2855" max-vertical-offset="4267">
           <caret line="96" column="48" selection-start-line="96" selection-start-column="48" selection-end-line="96" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071254_create_permissions_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7280093" vertical-offset="0" max-vertical-offset="864">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071303_create_roles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6493056" vertical-offset="0" max-vertical-offset="864">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071340_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8263889" vertical-offset="0" max-vertical-offset="864">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071359_create_account_types_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6886574" vertical-offset="0" max-vertical-offset="864">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071442_create_user_profiles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7280093" vertical-offset="0" max-vertical-offset="864">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071418_create_permission_role_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6099537" vertical-offset="0" max-vertical-offset="864">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071450_create_accounts_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48842594" vertical-offset="105" max-vertical-offset="969">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071708_create_account_profiles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5115741" vertical-offset="0" max-vertical-offset="864">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071722_create_account_texts_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.23077" vertical-offset="0" max-vertical-offset="714">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071747_create_events_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1398355" vertical-offset="203" max-vertical-offset="1309">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071810_create_account_feature_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.538462" vertical-offset="0" max-vertical-offset="748">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071903_create_account_type_permission_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6099537" vertical-offset="0" max-vertical-offset="864">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_072448_create_account_user_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6296296" vertical-offset="0" max-vertical-offset="864">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071132_create_credit_packages_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6886574" vertical-offset="0" max-vertical-offset="864">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071826_create_event_credits_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7673611" vertical-offset="0" max-vertical-offset="864">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071834_create_invoices_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9988249" vertical-offset="0" max-vertical-offset="986">
+          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071855_create_download_trasactions_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0987074" vertical-offset="0" max-vertical-offset="1071">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071939_create_event_transactions_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8854167" vertical-offset="0" max-vertical-offset="901">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071240_create_features_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6493056" vertical-offset="0" max-vertical-offset="864">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_072526_create_cashier_table_settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7083333" vertical-offset="0" max-vertical-offset="864">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071819_create_dowload_credits_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.5" vertical-offset="0" max-vertical-offset="799">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071203_create_credit_types_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6689815" vertical-offset="0" max-vertical-offset="864">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding />
         </state>
       </provider>

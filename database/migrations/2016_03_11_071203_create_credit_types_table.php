@@ -12,7 +12,17 @@ class CreateCreditTypesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('credit_types', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->required()->unique();
+            $table->string('slug')->required()->unique();
+            $table->string('default_valid_until')->nullable()->default('1 month');
+            $table->string('description')->nullable();
+
+            $table->engine = 'InnoDB';
+            $table->softDeletes();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +32,6 @@ class CreateCreditTypesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('credit_types');
     }
 }

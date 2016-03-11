@@ -12,7 +12,15 @@ class CreateAccountUserTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('account_user', function (Blueprint $table) {
+            $table->integer('account_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->integer('role_id')->unsigned();         // will only be needed later, no function at the momenent
+
+            $table->primary(['account_id', 'user_id', 'role_id']);
+            $table->engine = 'InnoDB';
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +30,6 @@ class CreateAccountUserTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('account_user');
     }
 }

@@ -12,7 +12,16 @@ class CreateRolesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('roles', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->required()->unique();
+            $table->string('slug')->required()->unique();
+            $table->string('description');
+
+            $table->engine = 'InnoDB';
+            $table->softDeletes();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +31,6 @@ class CreateRolesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('roles');
     }
 }
