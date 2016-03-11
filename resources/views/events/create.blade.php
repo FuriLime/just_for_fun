@@ -267,7 +267,7 @@ Create New event
             end_date = end_date.format('Y/m/d H:i');
 
             $('#finish').val(end_date);
-            console.log(start_date);
+            console.log(start_dateNew);
             $("#datefinish").datetimepicker({
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
