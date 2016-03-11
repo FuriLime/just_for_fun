@@ -142,7 +142,7 @@ class EventsController extends Controller {
       }
       $user = User::find($userId);
       $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get();
-dd($account);
+dd($account['account_id']);
 
 
         $store_info = new Event();
