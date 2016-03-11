@@ -82,7 +82,7 @@
 </li>
 <div style="display:none">
 {{$user = Sentinel::getUser()}}
-{{{$userRoles = $user->roles()->lists('name')->first()}}}
+{{$userRoles = $user->roles()->lists('name')->first()}}
     </div>
 @if($userRoles =='admin')
     <li >
