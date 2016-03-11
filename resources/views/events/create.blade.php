@@ -272,16 +272,14 @@ Create New event
             var end_date = new Date(start_date);
             end_date.setHours(start_date.getHours() + 1);
             end_date = end_date.format('Y/m/d H:i');
-//console.log(end_date);
-             $('#finish').attr('value', end_date);
+            $('#finish').attr('value', end_date);
             var finaldate = $('#finish').val();
-            console.log(finaldate);
             $("#datefinish").datetimepicker({
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
                 todayBtn: true,
-                startDate: end_date,
-                minDate: end_date,
+                startDate: finaldate,
+                minDate: finaldate,
                 minuteStep: 10
             });
         });
