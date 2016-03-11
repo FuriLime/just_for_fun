@@ -278,7 +278,7 @@ Create New event
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
                 todayBtn: true,
-                startDate: '2016/03/24 20:00',
+                startDate: $('#finish').val(),
                 minDate: '2016/03/24 20:00',
                 minuteStep: 10
             });
