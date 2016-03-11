@@ -150,10 +150,10 @@ class EventsController extends Controller {
         $store_info->title = Input::get('title');
         $store_info->description = Input::get('description');
         $store_info->location = Input::get('location');
-        $store_info->country = Input::get('country');
-        $store_info->state = Input::get('state');
-        $store_info->city = Input::get('city');
-        $store_info->street = Input::get('street');
+        $store_info->country = Input::get('Country');
+        $store_info->state = Input::get('State');
+        $store_info->city = Input::get('City');
+        $store_info->street = Input::get('Street');
         $store_info->timezone = Input::get('timezone');
         $store_info->finish = Input::get('finish');
         $store_info->start = Input::get('start');
