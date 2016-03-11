@@ -160,7 +160,7 @@ class EventsController extends Controller {
 
           $store_info->author_id = $user->id;
           $store_info->editor_id = $user->id;
-          $store_info->account_id = $account->id;
+          $store_info->account_id = $account;
           $store_info->permanent_url = Uuid::uuid4(4);
           $store_info->readable_url = Uuid::uuid4(4);
 
