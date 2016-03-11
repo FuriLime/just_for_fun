@@ -78,7 +78,7 @@ Create New event
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
-                                <input class="form-control" size="16" id="start" name="start" type="datetime"  min="{{$start_date}}" value="{{$start_date}}">
+                                <input class="form-control" size="16" id="start" name="start" type="datetime"  min="" value="">
 
                             </div>
                         </div>
@@ -99,7 +99,7 @@ Create New event
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-th"></span>
                                             </span>
-                                            <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{$finish_date}}">
+                                            <input class="form-control" size="16" id="finish" name="finish" type="text" value="">
 
                                         </div>
                                     </div>
