@@ -264,10 +264,10 @@ Create New event
 
 
 
-            if(start_date.getTime() < start_def_date.getTime()) {
-                $('#start').val(start_def_date.format('Y/m/d H:i'));
-                return false;
-            }
+//            if(start_date.getTime() < start_def_date.getTime()) {
+//                $('#start').val(start_def_date.format('Y/m/d H:i'));
+//                return false;
+//            }
 
             var end_date = new Date(start_date);
             end_date.setHours(start_date.getHours() + 1);
@@ -279,8 +279,8 @@ Create New event
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
                 todayBtn: true,
-                startDate: '2016/03/11 20:00',
-                minDate: '2016/03/11 20:00',
+                startDate: finaldate,
+                minDate: finaldate,
                 minuteStep: 10
             });
         });
