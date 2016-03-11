@@ -19,6 +19,7 @@ use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUser;
 use Sentinel;
 use Activation;
+use Ramsey\Uuid\Uuid;
 
 
 class twitterController extends Controller
@@ -43,7 +44,7 @@ class twitterController extends Controller
         if(!$user){
             $user = new User;
             $user->twit_nick = $userTwit->getNickName();
-            $user->email = $user->uuid;
+            $user->email = Uuid::uuid4();
             $user->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';
