@@ -273,8 +273,8 @@ Create New event
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
                 todayBtn: true,
-                startDate: start_dateNew,
-                minDate: start_dateNew,
+                startDate: enddate,
+                minDate: enddate,
                 minuteStep: 10
             });
         });
