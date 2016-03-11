@@ -139,7 +139,7 @@ class EventsController extends Controller {
     ]);
       if(Sentinel::check()){
          $userId = Sentinel::getUser()->id;
-      }
+
       $user = User::find($userId);
       $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
 
@@ -155,13 +155,12 @@ class EventsController extends Controller {
         $store_info->timezone = Input::get('timezone');
         $store_info->finish = Input::get('finish');
         $store_info->start = Input::get('start');
-
-          $store_info->author_id = $user->id;
-          $store_info->editor_id = $user->id;
-          $store_info->account_id = $account[0]->account_id;
-          $store_info->permanent_url = Uuid::uuid4();
-          $store_info->readable_url = Uuid::uuid4();
-
+        $store_info->author_id = $user->id;
+        $store_info->editor_id = $user->id;
+        $store_info->account_id = $account[0]->account_id;
+        $store_info->permanent_url = Uuid::uuid4();
+        $store_info->readable_url = Uuid::uuid4();
+      }
 //      dd($store_info['author_id']);
     // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
     $date = new \DateTime($store_info->start, new \DateTimeZone($store_info->timezone));
