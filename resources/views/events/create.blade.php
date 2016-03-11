@@ -240,20 +240,29 @@ Create New event
         });
 
     });
-    $('#start').on('change', function() {
-        var start_def_date = new Date('{{date('Y/m/d 19:00')}}');
-        var start_date = new Date($('#start').val());
-        console.log(start_date);
+    $("#datestart").on("dp.change", function (e) {
+        $('#datefinish').data("DateTimePicker").minDate(e.date);
+    });
+    // run second calendar after closing of first
+    $("#datestart").on("dp.hide", function (e) {
+        $('#datefinish .glyphicon-calendar').click();
+    });
 
-//            if(start_date.getTime() < start_def_date.getTime()) {
-//                $('#start').val(start_def_date.format('Y/m/d H:i'));
-//                return false;
-//            }
+    $('#start').on('change', function() {
+        var start_def_date = new Date('{{ $start_date }}');
+        var start_date = new Date($('#start').val());
+
+        if(start_date.getTime() < start_def_date.getTime()) {
+            $('#start').val(start_def_date.format('Y/m/d H:i'));
+            return false;
+        }
 
         var end_date = new Date(start_date);
         end_date.setHours(start_date.getHours() + 1);
         end_date = end_date.format('Y/m/d H:i');
+
         $('#finish').val(end_date);
+
         $("#datefinish").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
@@ -263,6 +272,7 @@ Create New event
             minuteStep: 10
         });
     });
+
     $('#finish').on('change', function() {
         var start_date = new Date($('#start').val());
         var end_date = new Date($('#finish').val());
