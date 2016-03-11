@@ -230,7 +230,6 @@ Create New event
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
         var nowtimedate = new Date();
         nowtimedate = nowtimedate.format('Y/m/d H:i');
-        var date = new Date('{{date('Y/m/d 19:00')}}');
         $("#datestart").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
@@ -243,14 +242,12 @@ Create New event
         {{--var datef = new Date('{{date('Y/m/d 20:00')}}');--}}
         {{--datef = datef.format('Y/m/d H:i');--}}
         {{--$('#finish').attr('value', datef);--}}
-        {{--$("#datefinish").datetimepicker({--}}
-            {{--format: 'yyyy/mm/dd hh:ii',--}}
-            {{--autoclose: true,--}}
-            {{--todayBtn: true,--}}
-            {{--startDate: datef,--}}
-            {{--minuteStep: 10,--}}
-            {{--minDate: datef--}}
-        {{--});--}}
+        $("#datefinish").datetimepicker({
+            format: 'yyyy/mm/dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            minuteStep: 10,
+        });
 
 
         $('#start').on('change', function() {
