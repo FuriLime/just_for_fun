@@ -228,7 +228,9 @@ Create New event
     <script>
     $(document).ready(function() {
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
-console.log(new Date('Y/m/d hh:mm'));
+var nowtimedate = new Date();
+        nowtimedate = nowtimedate.format('Y/m/d H:i');
+        console.log(nowtimedate);
         var date = new Date('{{date('Y/m/d 19:00')}}');
         $("#datestart").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
