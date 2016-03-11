@@ -139,11 +139,9 @@ class EventsController extends Controller {
     ]);
       if(Sentinel::check()){
          $userId = Sentinel::getUser()->id;
-
-      $user = User::find($userId);
-      $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
-
-        $store_info = new Event();
+          $user = User::find($userId);
+          $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
+          $store_info = new Event();
         $store_info->uuid = Uuid::uuid4(4);
         $store_info->title = Input::get('title');
         $store_info->description = Input::get('description');
