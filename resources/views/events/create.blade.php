@@ -230,6 +230,7 @@ Create New event
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
 
         var date = new Date('{{date('Y/m/d 19:00')}}');
+        $('#start').attr('value', date);
         $("#datestart").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
@@ -249,45 +250,46 @@ Create New event
             minuteStep: 10,
             minDate: start_date
         });
+        $('#start').on('change', function() {
+            var start_def_date = new Date('{{ $start_date }}');
+            var start_date = new Date($('#start').val());
 
-    });
-    $('#start').on('change', function() {
-        var start_def_date = new Date('{{ $start_date }}');
-        var start_date = new Date($('#start').val());
+            if(start_date.getTime() < start_def_date.getTime()) {
+                $('#start').val(start_def_date.format('Y/m/d H:i'));
+                return false;
+            }
 
-        if(start_date.getTime() < start_def_date.getTime()) {
-            $('#start').val(start_def_date.format('Y/m/d H:i'));
-            return false;
-        }
-
-        var end_date = new Date(start_date);
-        end_date.setHours(start_date.getHours() + 1);
-        end_date = end_date.format('Y/m/d H:i');
-
-        $('#finish').val(end_date);
-console.log(start_date);
-        $("#datefinish").datetimepicker({
-            format: 'yyyy/mm/dd hh:ii',
-            autoclose: true,
-            todayBtn: true,
-            startDate: start_date,
-            minDate: start_date,
-            minuteStep: 10
-        });
-    });
-
-    $('#finish').on('change', function() {
-        var start_date = new Date($('#start').val());
-        var end_date = new Date($('#finish').val());
-
-        if(end_date.getTime() < start_date.getTime()) {
             var end_date = new Date(start_date);
             end_date.setHours(start_date.getHours() + 1);
             end_date = end_date.format('Y/m/d H:i');
 
             $('#finish').val(end_date);
-        }
+            console.log(start_date);
+            $("#datefinish").datetimepicker({
+                format: 'yyyy/mm/dd hh:ii',
+                autoclose: true,
+                todayBtn: true,
+                startDate: start_date,
+                minDate: start_date,
+                minuteStep: 10
+            });
+        });
+
+        $('#finish').on('change', function() {
+            var start_date = new Date($('#start').val());
+            var end_date = new Date($('#finish').val());
+
+            if(end_date.getTime() < start_date.getTime()) {
+                var end_date = new Date(start_date);
+                end_date.setHours(start_date.getHours() + 1);
+                end_date = end_date.format('Y/m/d H:i');
+
+                $('#finish').val(end_date);
+            }
+        });
+
     });
+
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 	<script type="text/javascript">//<![CDATA[
