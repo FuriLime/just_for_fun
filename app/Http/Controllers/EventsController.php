@@ -11,7 +11,6 @@ use App\Event;
 use Illuminate\Http\Request;
 use Response;
 use Auth;
-use Sentry;
 use Carbon\Carbon;
 use Lang;
 use Ramsey\Uuid\Uuid;
@@ -142,7 +141,10 @@ class EventsController extends Controller {
       }
       $user = User::find($userId);
       $account= Account::find(1);
-      dd(Sentry::getUser()->id);
+      if (Auth::check()){
+          dd(Auth::user()->id);
+      }
+
         $store_info = new Event();
         $store = $request->all();
         $store_info->uuid = Uuid::uuid4(4);
