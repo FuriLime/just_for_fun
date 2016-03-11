@@ -240,7 +240,7 @@ Create New event
         });
 
         $('#start').on('change', function() {
-            var start_def_date = new Date('{{ $start_date }}');
+            var start_def_date = new Date('{{date('Y/m/d 19:00')}}');
             var start_date = new Date($('#start').val());
 
             if(start_date.getTime() < start_def_date.getTime()) {
