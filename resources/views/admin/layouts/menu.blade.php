@@ -81,7 +81,7 @@
     </ul>
 </li>
 {{  $userId = Sentinel::getUser()->id}}
-{{ $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id')}}
+
 
 {{--@if(Sentinel::inRole('admin'))--}}
     <li >
