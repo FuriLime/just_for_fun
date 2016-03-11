@@ -142,8 +142,6 @@ class EventsController extends Controller {
       }
       $user = User::find($userId);
       $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
-dd($account[0]->account_id);
-
 
         $store_info = new Event();
         $store_info->uuid = Uuid::uuid4(4);
@@ -160,7 +158,7 @@ dd($account[0]->account_id);
 
           $store_info->author_id = $user->id;
           $store_info->editor_id = $user->id;
-          $store_info->account_id = $account;
+          $store_info->account_id = $account[0]->account_id;
           $store_info->permanent_url = 'sdfsdfdf';
           $store_info->readable_url = 'asdasdasd';
 
