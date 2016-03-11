@@ -19,6 +19,7 @@ use App\User;
 use App\UserProfile;
 use App\Role;
 use GeoIP;
+use DB;
 use Spatie\GoogleTagManager;
 
 class EventsController extends Controller {
