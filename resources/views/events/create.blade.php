@@ -150,9 +150,9 @@ Create New event
                          </div>
                          <div class="form-group" style="text-align: right; margin-right: 3%; margin-top: 9%;">
                         <div class="col-sm-offset-0 col-sm-12" id="btn_group">
-                            {{--<button type="button" class="btn" onclick="(function($) { $('#active').val('0'); $('#btn_group .btn-primary').click(); })(jQuery);">--}}
-                                {{--@lang('frontend.save_as_draft')--}}
-                            {{--</button>--}}
+                            <button type="button" class="btn" onclick="(function($) { $('#active').val('0'); $('#btn_group .btn-primary').click(); })(jQuery);">
+                                @lang('frontend.save_as_draft')
+                            </button>
                             <button class="btn btn-primary text-white test submit">
                                 @lang('frontend.save_and_publish')
                             </button>
@@ -229,8 +229,6 @@ Create New event
     $(document).ready(function() {
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
         var nowtimedate = new Date();
-//        nowtimedate.setHours(nowtimedate.getHours()+1);
-//        console.log(nowtimedate);
         nowtimedate = nowtimedate.format('Y/m/d H:i');
         var date = new Date('{{date('Y/m/d 19:00')}}');
         $("#datestart").datetimepicker({
@@ -243,8 +241,7 @@ Create New event
         });
 
         $('#start').on('change', function() {
-            console.log('start');
-            var start_def_date = new Date(nowtimedate);
+            var start_def_date = new Date('{{date('Y/m/d 19:00')}}');
             var start_date = new Date($('#start').val());
 
             if(start_date.getTime() < start_def_date.getTime()) {
@@ -255,7 +252,6 @@ Create New event
             var end_date = new Date(start_date);
             end_date.setHours(start_date.getHours() + 1);
             end_date = end_date.format('Y/m/d H:i');
-            console.log(end_date);
             $('#finish').val(end_date);
             $("#datefinish").datetimepicker({
                 format: 'yyyy/mm/dd hh:ii',
@@ -266,29 +262,15 @@ Create New event
                 minuteStep: 10
             });
         });
-//        $('#time_change').on('click', function() {
-//            console.log('dfdfdf');
-//            var start_def_date = new Date(nowtimedate);
-//            var start_date = new Date($('#start').val());
-//
-//            if(start_date.getTime() < start_def_date.getTime()) {
-//                $('#start').val(start_def_date.format('Y/m/d H:i'));
-//                return false;
-//            }
-//
-//            var end_date = new Date(start_date);
-//            end_date.setHours(start_date.getHours() + 1);
-//            end_date = end_date.format('Y/m/d H:i');
-//            $('#finish').val(end_date);
-//            $("#datefinish").datetimepicker({
-//                format: 'yyyy/mm/dd hh:ii',
-//                autoclose: true,
-//                todayBtn: true,
-//                startDate: end_date,
-//                minDate: end_date,
-//                minuteStep: 10
-//            });
-//        });
+        {{--var datef = new Date('{{date('Y/m/d 20:00')}}');--}}
+        {{--$("#datefinish").datetimepicker({--}}
+            {{--format: 'yyyy/mm/dd hh:ii',--}}
+            {{--autoclose: true,--}}
+            {{--todayBtn: true,--}}
+            {{--startDate: date,--}}
+            {{--minuteStep: 10,--}}
+            {{--minDate: date--}}
+        {{--});--}}
         $('#finish').on('change', function() {
 
             var start_date = new Date($('#start').val());
@@ -299,6 +281,14 @@ Create New event
                 var end_date = new Date(start_date);
                 end_date.setHours(start_date.getHours() + 1);
                 end_date = end_date.format('Y/m/d H:i');
+                $("#datefinish").datetimepicker({
+                    format: 'yyyy/mm/dd hh:ii',
+                    autoclose: true,
+                    todayBtn: true,
+                    startDate: end_date,
+                    minuteStep: 10,
+                    minDate: end_date
+                });
 
                 $('#finish').val(end_date);
             }
