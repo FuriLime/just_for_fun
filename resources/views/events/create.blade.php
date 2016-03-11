@@ -239,6 +239,16 @@ Create New event
             minDate: date
         });
 
+        var datef = new Date('{{date('Y/m/d 20:00')}}');
+        $("#datefinish").datetimepicker({
+            format: 'yyyy/mm/dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            startDate: datef,
+            minuteStep: 10,
+            minDate: datef
+        });
+
     });
     $("#datestart").on("dp.change", function (e) {
         $('#datefinish').data("DateTimePicker").minDate(e.date);
