@@ -67,7 +67,7 @@ Edit User
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
                                 <!-- first tab -->
-                                {{--<h1>User Profile</h1>--}}
+                                <h1>asdasd</h1>
 
                                 <section>
                                 
