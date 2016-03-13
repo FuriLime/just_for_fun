@@ -128,8 +128,8 @@ Edit User
                                         <div class="col-sm-10">
                                             <div class="fileinput fileinput-new" data-provides="fileinput">
                                                 <div class="fileinput-new thumbnail" style="width: 200px; height: 200px;">
-                                                    @if($user->pic)
-                                                        <img src="{!! url('/').'/uploads/users/'.$user->pic !!}" alt="profile pic">
+                                                    @if($user_profile->image)
+                                                        <img src="{!! url('/').'/uploads/users/'.$user_profile->image !!}" alt="profile pic">
                                                     @else
                                                         <img src="http://placehold.it/200x200" alt="profile pic">
                                                     @endif
