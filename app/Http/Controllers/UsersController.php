@@ -425,7 +425,7 @@ class UsersController extends JoshController
         $status = Activation::completed($user);
 
         // Show the page
-        return View('admin/users/edit', compact('user', '$user_profile', 'roles', 'userRoles','countries','status'));
+        return View('admin/users/edit', compact('user', 'user_profile', 'roles', 'userRoles','countries','status'));
 //        return View('admin/layouts/edit', compact('user', 'roles', 'userRoles','countries','status'));
     }
 
