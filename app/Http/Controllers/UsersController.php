@@ -443,7 +443,6 @@ class UsersController extends JoshController
             // Get the user information
             $user = Sentinel::findById($id);
             $user_profile = $user->user_profile()->first();
-            dd($user_profile);
 
             $us_email = Sentinel::getUser()->email;
             $email = md5(Sentinel::getUser()->email);
