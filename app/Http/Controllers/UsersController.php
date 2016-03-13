@@ -480,14 +480,14 @@ class UsersController extends JoshController
             $user->first_name  = Input::get('first_name');
             $user->last_name   = Input::get('last_name');
             $user->email       = Input::get('email');
-            $user->dob   = Input::get('dob');
-            $user->bio   = Input::get('bio');
-            $user->gender   = Input::get('gender');
-            $user->country   = Input::get('country');
-            $user->state   = Input::get('state');
-            $user->city   = Input::get('city');
-            $user->address   = Input::get('address');
-            $user->timezone   = Input::get('timezone');
+            $user_profile->dob   = Input::get('dob');
+            $user_profile->bio   = Input::get('bio');
+            $user_profile->gender   = Input::get('gender');
+            $user_profile->country   = Input::get('country');
+            $user_profile->state   = Input::get('state');
+            $user_profile->city   = Input::get('city');
+            $user_profile->address   = Input::get('address');
+            $user_profile->timezone   = Input::get('timezone');
 
             // Do we want to update the user password?
             if ($password) {
