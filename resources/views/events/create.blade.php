@@ -231,8 +231,8 @@ Create New event
         var nowtimedate = new Date();
         nowtimedate = nowtimedate.format('Y/m/d H:i');
         $("#datestart").datetimepicker({
-            onSelect: function(date) {
-                alert(date);
+            onSelect: function(nowtimedate) {
+                alert(nowtimedate);
             },
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
