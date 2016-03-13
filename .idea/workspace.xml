@@ -52,7 +52,7 @@
       <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/users/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231" vertical-offset="867" max-vertical-offset="4998">
+            <state vertical-scroll-proportion="21.576923" vertical-offset="1734" max-vertical-offset="4998">
               <caret line="69" column="53" selection-start-line="69" selection-start-column="53" selection-end-line="69" selection-end-column="53" />
               <folding />
             </state>
@@ -75,8 +75,8 @@
       <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5212947" vertical-offset="2958" max-vertical-offset="11135">
-              <caret line="443" column="45" selection-start-line="443" selection-start-column="45" selection-end-line="443" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.40545145" vertical-offset="3060" max-vertical-offset="11135">
+              <caret line="445" column="51" selection-start-line="445" selection-start-column="51" selection-end-line="445" selection-end-column="51" />
               <folding>
                 <element signature="e#341#7688#0#PHP" expanded="false" />
               </folding>
@@ -448,12 +448,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-02052" summary="database">
-      <created>1457708932441</created>
-      <option name="number" value="02052" />
-      <option name="project" value="LOCAL" />
-      <updated>1457708932441</updated>
-    </task>
     <task id="LOCAL-02053" summary="database">
       <created>1457709313852</created>
       <option name="number" value="02053" />
@@ -742,7 +736,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457877209854</updated>
     </task>
-    <option name="localTasksCounter" value="2101" />
+    <task id="LOCAL-02101" summary="database">
+      <created>1457877245598</created>
+      <option name="number" value="02101" />
+      <option name="project" value="LOCAL" />
+      <updated>1457877245598</updated>
+    </task>
+    <option name="localTasksCounter" value="2102" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1109,7 +1109,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2490" max-vertical-offset="10727">
           <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
           <folding>
-            <element signature="e#39#52#0#PHP" expanded="true" />
+            <element signature="e#39#52#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1157,14 +1157,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231" vertical-offset="867" max-vertical-offset="4998">
-          <caret line="69" column="53" selection-start-line="69" selection-start-column="53" selection-end-line="69" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.730769" vertical-offset="394" max-vertical-offset="1530">
@@ -1173,10 +1165,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="21.576923" vertical-offset="1734" max-vertical-offset="4998">
+          <caret line="69" column="53" selection-start-line="69" selection-start-column="53" selection-end-line="69" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5212947" vertical-offset="2958" max-vertical-offset="11135">
-          <caret line="443" column="45" selection-start-line="443" selection-start-column="45" selection-end-line="443" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.40545145" vertical-offset="3060" max-vertical-offset="11135">
+          <caret line="445" column="51" selection-start-line="445" selection-start-column="51" selection-end-line="445" selection-end-column="51" />
           <folding>
             <element signature="e#341#7688#0#PHP" expanded="false" />
           </folding>

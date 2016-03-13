@@ -441,7 +441,7 @@ class UsersController extends JoshController
         try {
             // Get the user information
             $user = Sentinel::findById($id);
-            dd($user->user_profile()->first());
+            $user_profile = $user->user_profile()->first();
 
             $us_email = Sentinel::getUser()->email;
             $email = md5(Sentinel::getUser()->email);
