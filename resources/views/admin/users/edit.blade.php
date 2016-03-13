@@ -112,94 +112,94 @@ Edit User
                                 </section>
 
                                 <!-- second tab -->
-                                <h1>Bio</h1>
+                                {{--<h1>Bio</h1>--}}
 
-                                <section>
+                                {{--<section>--}}
 
-                                    <div class="form-group">
-                                        <label for="dob" class="col-sm-2 control-label">Date of Birth</label>
-                                        <div class="col-sm-10">
-                                            <input id="dob" name="dob" type="text" class="form-control" data-mask="9999-99-99" value="{!! Input::old('dob', $user->dob) !!}" placeholder="yyyy-mm-dd" />
-                                        </div>
-                                    </div>
+                                    {{--<div class="form-group">--}}
+                                        {{--<label for="dob" class="col-sm-2 control-label">Date of Birth</label>--}}
+                                        {{--<div class="col-sm-10">--}}
+                                            {{--<input id="dob" name="dob" type="text" class="form-control" data-mask="9999-99-99" value="{!! Input::old('dob', $user->dob) !!}" placeholder="yyyy-mm-dd" />--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
 
-                                    <div class="form-group">
-                                        <label for="pic" class="col-sm-2 control-label">Profile picture</label>
-                                        <div class="col-sm-10">
-                                            <div class="fileinput fileinput-new" data-provides="fileinput">
-                                                <div class="fileinput-new thumbnail" style="width: 200px; height: 200px;">
-                                                    @if($user->pic)
-                                                        <img src="{!! url('/').'/uploads/users/'.$user->pic !!}" alt="profile pic">
-                                                    @else
-                                                        <img src="http://placehold.it/200x200" alt="profile pic">
-                                                    @endif
-                                                </div>
-                                                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 200px;"></div>
-                                                <div>
-                                                    <span class="btn btn-default btn-file">
-                                                        <span class="fileinput-new">Select image</span>
-                                                        <span class="fileinput-exists">Change</span>
-                                                        <input id="pic" name="pic" type="file" class="form-control" />
-                                                    </span>
-                                                    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="bio" class="col-sm-2 control-label">Bio <small>(brief intro)</small></label>
-                                        <div class="col-sm-10">
-                                            <textarea name="bio" id="bio" class="form-control" rows="4">{!! Input::old('bio', $user->bio) !!}</textarea>
-                                        </div>
-                                    </div>
-                                
-                                </section>
+                                    {{--<div class="form-group">--}}
+                                        {{--<label for="pic" class="col-sm-2 control-label">Profile picture</label>--}}
+                                        {{--<div class="col-sm-10">--}}
+                                            {{--<div class="fileinput fileinput-new" data-provides="fileinput">--}}
+                                                {{--<div class="fileinput-new thumbnail" style="width: 200px; height: 200px;">--}}
+                                                    {{--@if($user->pic)--}}
+                                                        {{--<img src="{!! url('/').'/uploads/users/'.$user->pic !!}" alt="profile pic">--}}
+                                                    {{--@else--}}
+                                                        {{--<img src="http://placehold.it/200x200" alt="profile pic">--}}
+                                                    {{--@endif--}}
+                                                {{--</div>--}}
+                                                {{--<div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 200px;"></div>--}}
+                                                {{--<div>--}}
+                                                    {{--<span class="btn btn-default btn-file">--}}
+                                                        {{--<span class="fileinput-new">Select image</span>--}}
+                                                        {{--<span class="fileinput-exists">Change</span>--}}
+                                                        {{--<input id="pic" name="pic" type="file" class="form-control" />--}}
+                                                    {{--</span>--}}
+                                                    {{--<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>--}}
+                                                {{--</div>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="form-group">--}}
+                                        {{--<label for="bio" class="col-sm-2 control-label">Bio <small>(brief intro)</small></label>--}}
+                                        {{--<div class="col-sm-10">--}}
+                                            {{--<textarea name="bio" id="bio" class="form-control" rows="4">{!! Input::old('bio', $user->bio) !!}</textarea>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{----}}
+                                {{--</section>--}}
 
-                                <!-- third tab -->
-                                <h1>Address</h1>
-                                <section>
+                                {{--<!-- third tab -->--}}
+                                {{--<h1>Address</h1>--}}
+                                {{--<section>--}}
 
-                                    <div class="form-group">
-                                        <label for="email" class="col-sm-2 control-label">Gender</label>
-                                        <div class="col-sm-10">
-                                            <select class="form-control" title="Select Gender..." name="gender">
-                                                <option value="">Select</option>
-                                                <option value="male" @if($user->gender === 'male') selected="selected" @endif >MALE</option>
-                                                <option value="female" @if($user->gender === 'female') selected="selected" @endif >FEMALE</option>
-                                                <option value="other" @if($user->gender === 'other') selected="selected" @endif >OTHER</option>
+                                    {{--<div class="form-group">--}}
+                                        {{--<label for="email" class="col-sm-2 control-label">Gender</label>--}}
+                                        {{--<div class="col-sm-10">--}}
+                                            {{--<select class="form-control" title="Select Gender..." name="gender">--}}
+                                                {{--<option value="">Select</option>--}}
+                                                {{--<option value="male" @if($user->gender === 'male') selected="selected" @endif >MALE</option>--}}
+                                                {{--<option value="female" @if($user->gender === 'female') selected="selected" @endif >FEMALE</option>--}}
+                                                {{--<option value="other" @if($user->gender === 'other') selected="selected" @endif >OTHER</option>--}}
 
-                                            </select>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label for="country" class="col-sm-2 control-label">Country</label>
-                                        <div class="col-sm-10">
-                                            {!! Form::select('country', $countries,Input::old('country',$user->country),array('class' => 'form-control')) !!}
+                                            {{--</select>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                    {{----}}
+                                    {{--<div class="form-group">--}}
+                                        {{--<label for="country" class="col-sm-2 control-label">Country</label>--}}
+                                        {{--<div class="col-sm-10">--}}
+                                            {{--{!! Form::select('country', $countries,Input::old('country',$user->country),array('class' => 'form-control')) !!}--}}
 
-                                        </div>
-                                    </div>
+                                        {{--</div>--}}
+                                    {{--</div>--}}
 
-                                    <div class="form-group">
-                                        <label for="state" class="col-sm-2 control-label">State</label>
-                                        <div class="col-sm-10">
-                                            <input id="state" name="state" type="text" class="form-control" value="{!! Input::old('state', $user->state) !!}" />
-                                        </div>
-                                    </div>
+                                    {{--<div class="form-group">--}}
+                                        {{--<label for="state" class="col-sm-2 control-label">State</label>--}}
+                                        {{--<div class="col-sm-10">--}}
+                                            {{--<input id="state" name="state" type="text" class="form-control" value="{!! Input::old('state', $user->state) !!}" />--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
 
-                                    <div class="form-group">
-                                        <label for="city" class="col-sm-2 control-label">City</label>
-                                        <div class="col-sm-10">
-                                            <input id="city" name="city" type="text" class="form-control" value="{!! Input::old('city', $user->city) !!}" />
-                                        </div>
-                                    </div>
+                                    {{--<div class="form-group">--}}
+                                        {{--<label for="city" class="col-sm-2 control-label">City</label>--}}
+                                        {{--<div class="col-sm-10">--}}
+                                            {{--<input id="city" name="city" type="text" class="form-control" value="{!! Input::old('city', $user->city) !!}" />--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
 
-                                    <div class="form-group">
-                                        <label for="address" class="col-sm-2 control-label">Address</label>
-                                        <div class="col-sm-10">
-                                            <input id="address" name="address" type="text" class="form-control" value="{!! Input::old('address', $user->address) !!}" />
-                                        </div>
-                                    </div>
+                                    {{--<div class="form-group">--}}
+                                        {{--<label for="address" class="col-sm-2 control-label">Address</label>--}}
+                                        {{--<div class="col-sm-10">--}}
+                                            {{--<input id="address" name="address" type="text" class="form-control" value="{!! Input::old('address', $user->address) !!}" />--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
 
                                     {{--<div class="form-group">--}}
                                         {{--<label for="postal" class="col-sm-2 control-label">Postal/zip</label>--}}
@@ -208,39 +208,39 @@ Edit User
                                         {{--</div>--}}
                                     {{--</div>--}}
 
-                                    <div class="form-group">
-                                        <label for="timezone" class="col-sm-2 control-label">@lang('users/title.timezone')</label>
-                                        <div class="col-sm-10">
-                                            <input id="timezone" name="timezone" type="text" class="form-control" value="{!! Input::old('timezone', $user->timezone) !!}" />
-                                        </div>
-                                    </div>
-                                    
-                                </section>
+                                    {{--<div class="form-group">--}}
+                                        {{--<label for="timezone" class="col-sm-2 control-label">@lang('users/title.timezone')</label>--}}
+                                        {{--<div class="col-sm-10">--}}
+                                            {{--<input id="timezone" name="timezone" type="text" class="form-control" value="{!! Input::old('timezone', $user->timezone) !!}" />--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                    {{----}}
+                                {{--</section>--}}
 
-                                
-                                <!-- fourth tab -->
+                                {{----}}
+                                {{--<!-- fourth tab -->--}}
 
                                 {{--@if(Sentinel::check())--}}
                                     {{--@if(Sentinel::inRole('admin'))--}}
-                                <h1>User Group</h1>
+                                {{--<h1>User Group</h1>--}}
 
-                                <section>
+                                {{--<section>--}}
 
-                                    <p class="text-danger"><strong>Be careful with group selection, if you give admin access.. they can access admin section</strong></p>
-                                    <div class="form-group">
-                                        <label for="group" class="col-sm-2 control-label">Group *</label>
-                                        <div class="col-sm-10">
+                                    {{--<p class="text-danger"><strong>Be careful with group selection, if you give admin access.. they can access admin section</strong></p>--}}
+                                    {{--<div class="form-group">--}}
+                                        {{--<label for="group" class="col-sm-2 control-label">Group *</label>--}}
+                                        {{--<div class="col-sm-10">--}}
 
-                                            @if(Sentinel::check())
+                                            {{--@if(Sentinel::check())--}}
                                             {{--@if(Sentinel::inRole('admin'))--}}
-                                            <select class="form-control " title="Select group..." name="groups[]" id="groups" required>
-                                                <option value="">Select</option>
-                                                @foreach($roles as $role)
-                                                    <option value="{!! $role->id !!}" {{ (array_key_exists($role->id, $userRoles) ? ' selected="selected"' : '') }}>{{ $role->name }}</option>
-                                                @endforeach
-                                            </select>
+                                            {{--<select class="form-control " title="Select group..." name="groups[]" id="groups" required>--}}
+                                                {{--<option value="">Select</option>--}}
+                                                {{--@foreach($roles as $role)--}}
+                                                    {{--<option value="{!! $role->id !!}" {{ (array_key_exists($role->id, $userRoles) ? ' selected="selected"' : '') }}>{{ $role->name }}</option>--}}
+                                                {{--@endforeach--}}
+                                            {{--</select>--}}
                                                 {{--@endif--}}
-                                            @endif
+                                            {{--@endif--}}
 
                                                 {{--@if(Sentinel::check())--}}
                                                     {{--@if(Sentinel::inRole('user'))--}}
@@ -252,8 +252,8 @@ Edit User
                                             {{--</select>--}}
                                                     {{--@endif--}}
                                                     {{--@endif--}}
-                                        </div>
-                                    </div>
+                                        {{--</div>--}}
+                                    {{--</div>--}}
 
                                     {{--<div class="form-group">--}}
                                         {{--<label for="activate" class="col-sm-2 control-label"> Activate User</label>--}}
@@ -262,9 +262,9 @@ Edit User
                                         {{--</div>--}}
                                         {{--<span>If user is not activated, mail will be sent to user with activation link</span>--}}
                                     {{--</div>--}}
-                                    
-                                
-                                </section>
+                                    {{----}}
+                                {{----}}
+                                {{--</section>--}}
                             {{--@endif--}}
                                     {{--@endif--}}
                             </form>
