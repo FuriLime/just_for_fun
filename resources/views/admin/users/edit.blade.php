@@ -119,7 +119,7 @@ Edit User
                                     <div class="form-group">
                                         <label for="dob" class="col-sm-2 control-label">Date of Birth</label>
                                         <div class="col-sm-10">
-                                            <input id="dob" name="dob" type="text" class="form-control" data-mask="9999-99-99" value="{!! Input::old('dob', $user->dob) !!}" placeholder="yyyy-mm-dd" />
+                                            <input id="dob" name="dob" type="text" class="form-control" data-mask="9999-99-99" value="{!! Input::old('dob', $user_profile->dob) !!}" placeholder="yyyy-mm-dd" />
                                         </div>
                                     </div>
 
@@ -149,7 +149,7 @@ Edit User
                                     <div class="form-group">
                                         <label for="bio" class="col-sm-2 control-label">Bio <small>(brief intro)</small></label>
                                         <div class="col-sm-10">
-                                            <textarea name="bio" id="bio" class="form-control" rows="4">{!! Input::old('bio', $user->bio) !!}</textarea>
+                                            <textarea name="bio" id="bio" class="form-control" rows="4">{!! Input::old('bio', $user_profile->bio) !!}</textarea>
                                         </div>
                                     </div>
 
@@ -175,7 +175,7 @@ Edit User
                                     <div class="form-group">
                                         <label for="country" class="col-sm-2 control-label">Country</label>
                                         <div class="col-sm-10">
-                                            {!! Form::select('country', $countries,Input::old('country',$user->country),array('class' => 'form-control')) !!}
+                                            {!! Form::select('country', $countries,Input::old('country',$user_profile->country),array('class' => 'form-control')) !!}
 
                                         </div>
                                     </div>
@@ -183,21 +183,21 @@ Edit User
                                     <div class="form-group">
                                         <label for="state" class="col-sm-2 control-label">State</label>
                                         <div class="col-sm-10">
-                                            <input id="state" name="state" type="text" class="form-control" value="{!! Input::old('state', $user->state) !!}" />
+                                            <input id="state" name="state" type="text" class="form-control" value="{!! Input::old('state', $user_profile->state) !!}" />
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="city" class="col-sm-2 control-label">City</label>
                                         <div class="col-sm-10">
-                                            <input id="city" name="city" type="text" class="form-control" value="{!! Input::old('city', $user->city) !!}" />
+                                            <input id="city" name="city" type="text" class="form-control" value="{!! Input::old('city', $user_profile->city) !!}" />
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="address" class="col-sm-2 control-label">Address</label>
                                         <div class="col-sm-10">
-                                            <input id="address" name="address" type="text" class="form-control" value="{!! Input::old('address', $user->address) !!}" />
+                                            <input id="address" name="address" type="text" class="form-control" value="{!! Input::old('address', $user_profile->address) !!}" />
                                         </div>
                                     </div>
 
@@ -211,7 +211,7 @@ Edit User
                                     <div class="form-group">
                                         <label for="timezone" class="col-sm-2 control-label">@lang('users/title.timezone')</label>
                                         <div class="col-sm-10">
-                                            <input id="timezone" name="timezone" type="text" class="form-control" value="{!! Input::old('timezone', $user->timezone) !!}" />
+                                            <input id="timezone" name="timezone" type="text" class="form-control" value="{!! Input::old('timezone', $user_profile->timezone) !!}" />
                                         </div>
                                     </div>
 
