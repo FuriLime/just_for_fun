@@ -441,6 +441,8 @@ class UsersController extends JoshController
         try {
             // Get the user information
             $user = Sentinel::findById($id);
+            dd($user);
+
             $us_email = Sentinel::getUser()->email;
             $email = md5(Sentinel::getUser()->email);
             $apiKey = Config::get('mailchimp.apikey');
