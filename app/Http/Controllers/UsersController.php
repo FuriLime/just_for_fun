@@ -406,6 +406,7 @@ class UsersController extends JoshController
             {
                 // Get this user groups
                 $userRoles = $user->getRoles()->lists('name', 'id')->all();
+                $user_profile = $user->user_profile()->first();
 
                 // Get a list of all the available groups
                 $roles = Sentinel::getRoleRepository()->all();
@@ -424,7 +425,7 @@ class UsersController extends JoshController
         $status = Activation::completed($user);
 
         // Show the page
-        return View('admin/users/edit', compact('user', 'roles', 'userRoles','countries','status'));
+        return View('admin/users/edit', compact('user', '$user_profile', 'roles', 'userRoles','countries','status'));
 //        return View('admin/layouts/edit', compact('user', 'roles', 'userRoles','countries','status'));
     }
 
