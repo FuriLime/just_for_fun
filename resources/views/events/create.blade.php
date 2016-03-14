@@ -33,13 +33,13 @@ Create New event
                     </h4>
                 </div>
                 <div class="panel-body">
-                     @if ($errors->any())
-                        <ul class="alert alert-danger">
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    @endif
+                     {{--@if ($errors->any())--}}
+                        {{--<ul class="alert alert-danger">--}}
+                            {{--@foreach ($errors->all() as $error)--}}
+                                {{--<li>{{ $error }}</li>--}}
+                            {{--@endforeach--}}
+                        {{--</ul>--}}
+                    {{--@endif--}}
 					<h3 class="primary add_event_section_link">@lang('frontend.add_event_text')</h3>
 
                          {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
@@ -49,11 +49,13 @@ Create New event
                         <label for="title">@lang('frontend.title')</label>
                         {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}
                         <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-                        <ul class="alert alert-danger">
-
+                        @if ($errors->any())
+                            <ul class="alert alert-danger">
                                 <li>{{ $errors->first('title') }}</li>
+                            </ul>
+                        @endif
 
-                        </ul>
+
                     </div>
 
                     <div class="form-group add_event_section_link" id="add_dicription">
