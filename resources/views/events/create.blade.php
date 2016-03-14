@@ -227,86 +227,62 @@ Create New event
 
     <script>
     $(document).ready(function() {
-//        $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
-//        var nowtimedate = new Date();
-//        nowtimedate = nowtimedate.format('Y/m/d H:i');
-//        $("#datestart").datetimepicker({
-//            onSelect: function() {alert('sdfsdfsdf')},
-//            format: 'yyyy/mm/dd hh:ii',
-//            autoclose: true,
-//            todayBtn: true,
-//            startDate: nowtimedate,
-//            minuteStep: 10,
-//            controlType: 'select',
-//            minDate: nowtimedate
-//        });
-//        $('#datefinish').datetimepicker({
-//            format: 'yyyy/mm/dd hh:ii',
-//            autoclose: true,
-//            todayBtn: true,
-//            useCurrent: false //Important! See issue #1075
-//        });
-//        $("#datestart").on("dp.change", function (e) {
-//            $('#datefinish').data("DateTimePicker").minDate(e.date);
-//        });
-//        $("#datefinish").on("dp.change", function (e) {
-//            $('#datestart').data("DateTimePicker").maxDate(e.date);
-//        });
-    });
-    $(function () {
-        $('#datestart').datetimepicker();
-        $('#datefinish').datetimepicker({
-            useCurrent: false //Important! See issue #1075
-        });
-        $("#datestart").on("dp.change", function (e) {
-            $('#datefinish').data("DateTimePicker").minDate(e.date);
-        });
-        $("#datefinish").on("dp.change", function (e) {
-            $('#datestart').data("DateTimePicker").maxDate(e.date);
+        $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
+        var nowtimedate = new Date();
+        nowtimedate = nowtimedate.format('Y/m/d H:i');
+        $("#datestart").datetimepicker({
+            onSelect: function() {alert('sdfsdfsdf')},
+            format: 'yyyy/mm/dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            startDate: nowtimedate,
+            minuteStep: 10,
+            controlType: 'select',
+            minDate: nowtimedate
         });
     });
 
-    {{--$('#start').on('change', function() {--}}
-        {{--var start_def_date = new Date('{{ $start_date }}');--}}
-        {{--var start_date = new Date($('#start').val());--}}
+    $('#start').on('change', function() {
+        var start_def_date = new Date('{{ $start_date }}');
+        var start_date = new Date($('#start').val());
 
 
-{{--//        if(start_date.getTime() < start_def_date.getTime()) {--}}
-{{--//            $('#start').val(start_def_date.format('Y/m/d H:i'));--}}
-{{--//            return false;--}}
-{{--//        }--}}
+//        if(start_date.getTime() < start_def_date.getTime()) {
+//            $('#start').val(start_def_date.format('Y/m/d H:i'));
+//            return false;
+//        }
 
-        {{--var end_date = new Date(start_date);--}}
-        {{--end_date.setHours(start_date.getHours() + 1);--}}
-        {{--end_date = end_date.format('Y/m/d H:i');--}}
-        {{--$('#finish').val(end_date);--}}
-        {{--console.log($('#finish').val());--}}
-        {{--$("#datefinish").datetimepicker({--}}
-            {{--onSelect: function() {alert('sdfsdfsdf')},--}}
-            {{--format: 'yyyy/mm/dd hh:ii',--}}
-            {{--autoclose: true,--}}
-            {{--todayBtn: true,--}}
-            {{--controlType: 'select',--}}
-            {{--startDate: $('#finish').val(),--}}
-            {{--minDate: $('#finish').val(),--}}
-            {{--minuteStep: 10--}}
+        var end_date = new Date(start_date);
+        end_date.setHours(start_date.getHours() + 1);
+        end_date = end_date.format('Y/m/d H:i');
+        $('#finish').val(end_date);
+        console.log($('#finish').val());
+        $("#datefinish").datetimepicker({
+            onSelect: function() {alert('sdfsdfsdf')},
+            format: 'yyyy/mm/dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            controlType: 'select',
+            startDate: $('#finish').val(),
+            minDate: $('#finish').val(),
+            minuteStep: 10
 
-        {{--});--}}
+        });
 
-    {{--});--}}
+    });
 
-    {{--$('#finish').on('change', function() {--}}
-        {{--var start_date = new Date($('#start').val());--}}
-        {{--var end_date = new Date($('#finish').val());--}}
+    $('#finish').on('change', function() {
+        var start_date = new Date($('#start').val());
+        var end_date = new Date($('#finish').val());
 
-        {{--if(end_date.getTime() < start_date.getTime()) {--}}
-            {{--var end_date = new Date(start_date);--}}
-            {{--end_date.setHours(start_date.getHours() + 1);--}}
-            {{--end_date = end_date.format('Y/m/d H:i');--}}
+        if(end_date.getTime() < start_date.getTime()) {
+            var end_date = new Date(start_date);
+            end_date.setHours(start_date.getHours() + 1);
+            end_date = end_date.format('Y/m/d H:i');
 
-            {{--$('#finish').val(end_date);--}}
-        {{--}--}}
-    {{--});--}}
+            $('#finish').val(end_date);
+        }
+    });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 	<script type="text/javascript">//<![CDATA[
