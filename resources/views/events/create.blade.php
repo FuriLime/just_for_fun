@@ -227,23 +227,35 @@ Create New event
 
     <script>
     $(document).ready(function() {
-        $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
-        var nowtimedate = new Date();
-        nowtimedate = nowtimedate.format('Y/m/d H:i');
-        $("#datestart").datetimepicker({
-            onSelect: function() {alert('sdfsdfsdf')},
-            format: 'yyyy/mm/dd hh:ii',
-            autoclose: true,
-            todayBtn: true,
-            startDate: nowtimedate,
-            minuteStep: 10,
-            controlType: 'select',
-            minDate: nowtimedate
-        });
+//        $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
+//        var nowtimedate = new Date();
+//        nowtimedate = nowtimedate.format('Y/m/d H:i');
+//        $("#datestart").datetimepicker({
+//            onSelect: function() {alert('sdfsdfsdf')},
+//            format: 'yyyy/mm/dd hh:ii',
+//            autoclose: true,
+//            todayBtn: true,
+//            startDate: nowtimedate,
+//            minuteStep: 10,
+//            controlType: 'select',
+//            minDate: nowtimedate
+//        });
+//        $('#datefinish').datetimepicker({
+//            format: 'yyyy/mm/dd hh:ii',
+//            autoclose: true,
+//            todayBtn: true,
+//            useCurrent: false //Important! See issue #1075
+//        });
+//        $("#datestart").on("dp.change", function (e) {
+//            $('#datefinish').data("DateTimePicker").minDate(e.date);
+//        });
+//        $("#datefinish").on("dp.change", function (e) {
+//            $('#datestart').data("DateTimePicker").maxDate(e.date);
+//        });
+    });
+    $(function () {
+        $('#datestart').datetimepicker();
         $('#datefinish').datetimepicker({
-            format: 'yyyy/mm/dd hh:ii',
-            autoclose: true,
-            todayBtn: true,
             useCurrent: false //Important! See issue #1075
         });
         $("#datestart").on("dp.change", function (e) {
@@ -253,7 +265,6 @@ Create New event
             $('#datestart').data("DateTimePicker").maxDate(e.date);
         });
     });
-
 
     {{--$('#start').on('change', function() {--}}
         {{--var start_def_date = new Date('{{ $start_date }}');--}}
