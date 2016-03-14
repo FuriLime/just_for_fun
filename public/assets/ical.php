@@ -105,8 +105,8 @@ $file .= "END:STANDARD\r\n";
     $file .= "END:VEVENT\r\n";
 
     $file .= "BEGIN:VEVENT\r\n";
-    $file .= "DTSTART;VALUE=DATE:20071225\r\n";
-    $file .= "DTEND;VALUE=DATE:20071225\r\n";
+    $file .= "DTSTART;VALUE=DATE:20161225\r\n";
+    $file .= "DTEND;VALUE=DATE:20161225\r\n";
     $file .= "DTSTAMP:20071003T171517Z\r\n";
     $file .= "ORGANIZER;CN=David:MAILTO:me@home.com\r\n";
     $file .= "UID:kaii6it1gmbpncmkavjkpkq1tk@google.com\r\n";
