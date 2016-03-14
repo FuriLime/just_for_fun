@@ -254,14 +254,16 @@ Create New event
     });
 
     $('#start').on('change', function() {
+        var nowtimedate = new Date();
+        nowtimedate = nowtimedate.format('Y/m/d H:i');
         var start_def_date = new Date('{{ $start_date }}');
-        var start_date = new Date($('#start').val());
+        var start_date = new Date();
 
 
-//        if(start_date.getTime() < start_def_date.getTime()) {
-//            $('#start').val(start_def_date.format('Y/m/d H:i'));
-//            return false;
-//        }
+        if(start_date.getTime() < start_def_date.getTime()) {
+            $('#start').val(start_def_date.format('Y/m/d H:i'));
+            return false;
+        }
 
         var end_date = new Date(start_date);
         end_date.setHours(start_date.getHours() + 1);
