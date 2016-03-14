@@ -268,6 +268,9 @@ Create New event
         end_date = end_date.format('Y/m/d H:i');
         $('#finish').val(end_date);
         console.log($('#finish').val());
+        if($('#finish').val('add:598 NaN/NaN/NaN NaN:NaN')){
+            alert('sdfsdf');
+        }
         $("#datefinish").datetimepicker("remove");
         $("#datefinish").datetimepicker({
             onSelect: function() {alert('sdfsdfsdf')},
