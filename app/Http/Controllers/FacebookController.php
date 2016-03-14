@@ -72,7 +72,11 @@ class FacebookController extends Controller
             $rolew = [
                 0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
             ];
-
+            $hash_email = md5($user->email);
+            $mc->patch("lists/$listId/members/$hash_email", [
+                'email_address' => $user->email,
+                'status' => 'subscribed',
+            ]);
             $role->users()->attach($rolew);
             $user_profile = new UserProfile();
             $user_profile->user_id = $user->id;
