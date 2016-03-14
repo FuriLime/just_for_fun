@@ -19,10 +19,15 @@ use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUser;
 use Sentinel;
 use Activation;
+use Mailchimp\Mailchimp;
+use Config;
 
 class MicrosoftController extends Controller {
   
   public function index(Request $request) {
+      $apiKey = Config::get('mailchimp.apikey');
+      $mc = new Mailchimp($apiKey);
+      $listId = Config::get('mailchimp.listId');
     $code = $request->get('code');
 
     $ms = \OAuth::consumer('Microsoft');
@@ -50,7 +55,10 @@ class MicrosoftController extends Controller {
           $rolew = [
               0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
           ];
-
+          $mc->post("lists/$listId/members", [
+              'email_address' => $user->email,
+              'status'        => 'subscribed',
+          ]);
           $role->users()->attach($rolew);
           $user_profile = new UserProfile();
           $user_profile->user_id = $user->id;
