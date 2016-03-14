@@ -530,16 +530,16 @@ class UsersController extends JoshController
             // Assign the user to groups
             foreach ($rolesToAdd as $roleId) {
                 $role = Sentinel::findRoleById($roleId);
-                dd('sdfsdf');
+
                 $role->users()->attach($user);
             }
 
             // Remove the user from groups
-            foreach ($rolesToRemove as $roleId) {
-                $role = Sentinel::findRoleById($roleId);
-
-                $role->users()->detach($user);
-            }
+//            foreach ($rolesToRemove as $roleId) {
+//                $role = Sentinel::findRoleById($roleId);
+//
+//                $role->users()->detach($user);
+//            }
 
             // Activate / De-activate user
 //            $status = $activation = Activation::completed($user);
