@@ -261,6 +261,7 @@ Create New event
         console.log($('#finish').val());
         var finaldate = $('#finish').val();
 //            console.log(finaldate);
+        $( "#datefinish" ).datetimepicker("destroy");
         $("#datefinish").datetimepicker({
             onSelect: function() {alert('sdfsdfsdf')},
             format: 'yyyy/mm/dd hh:ii',
