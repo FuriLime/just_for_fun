@@ -535,7 +535,7 @@ class UsersController extends JoshController
                     0 => ['user_id' => $user->id, 'account_id' => $acc_id],
                 ];
                 $role->users()->detach($rolew);
-                dd($role->users()->detach($rolew));
+
             }
 
             // Assign the user to groups
@@ -547,7 +547,7 @@ class UsersController extends JoshController
                 ];
 
                 $role->users()->attach($rolew);
-
+                dd($role->users()->attach($rolew));
 //                $role->users()->attach();
             }
 
