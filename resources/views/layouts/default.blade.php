@@ -61,7 +61,7 @@
                     <li {!! (Request::is('advancedfeatures') ? 'class="active"' : '') !!}><a href="{{ URL::to('advancedfeatures') }}">@lang('frontend.features')</a></li>
 
                     @if(!Sentinel::check())
-                        <li><a href="#auth" class="fa fa-sign-in" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'#tologin'">@lang('frontend.sign_in')</a></li>
+                        <li><a href="{{ URL::to('singin') }}" class="fa fa-sign-in" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'#tologin'">@lang('frontend.sign_in')</a></li>
                         <li><a href="#auth" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'#toregister'">@lang('frontend.sign_up')</a></li>
                     @endif
 
@@ -231,11 +231,11 @@
                         <p class="signin button">
                             <input type="submit" class="btn btn-success" value="Sign up" />
                         </p>
-                        {{--<p class="change_link">--}}
-                            {{--<a href="{{ URL::to('singin') }}" class="to_register">--}}
-                                {{--<button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Back</button>--}}
-                            {{--</a>--}}
-                        {{--</p>--}}
+                        <p class="change_link">
+                            <a href="#tologin" class="to_register">
+                                <button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Back</button>
+                            </a>
+                        </p>
                     </form>
                 </div>
                 <div id="forgot" class="animate form">
