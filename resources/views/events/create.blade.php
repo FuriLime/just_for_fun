@@ -256,8 +256,8 @@ Create New event
     $('#start').on('change', function() {
         var nowtimedate = new Date();
         nowtimedate = nowtimedate.format('Y/m/d H:i');
-        var start_def_date = new Date('{{ $start_date }}');
-        var start_date = new Date();
+        var start_def_date = new Date();
+        var start_date = new Date($('#start').val());
 
 
         if(start_date.getTime() < start_def_date.getTime()) {
