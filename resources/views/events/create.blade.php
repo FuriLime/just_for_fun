@@ -230,7 +230,7 @@ Create New event
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
         var nowtimedate = new Date();
         nowtimedate = nowtimedate.format('Y/m/d H:i');
-        $("#datestart").datetimepicker({
+        $("#datestart").datepicker({
             onSelect: function() {alert('sdfsdfsdf')},
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
