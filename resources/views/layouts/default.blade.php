@@ -232,7 +232,7 @@
                             <input type="submit" class="btn btn-success" value="Sign up" />
                         </p>
                         <p class="change_link">
-                            <a href="#tologin" class="to_register">
+                            <a href="{{ URL::to('singin') }}" class="to_register">
                                 <button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Back</button>
                             </a>
                         </p>
