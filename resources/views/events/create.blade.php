@@ -90,7 +90,7 @@ Create New event
 
                             </div>
                             @if ($errors->first('start'))
-                                <ul class="alert alert-danger myalert">
+                                <ul class="alert alert-danger">
                                     <li>{{ $errors->first('start') }}</li>
                                 </ul>
                             @endif
@@ -116,7 +116,7 @@ Create New event
 
                                         </div>
                              @if ($errors->first('finish'))
-                                 <ul class="alert alert-danger myalert">
+                                 <ul class="alert alert-danger">
                                      <li>{{ $errors->first('finish') }}</li>
                                  </ul>
                              @endif
