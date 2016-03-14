@@ -269,7 +269,6 @@ Create New event
         $('#finish').val(end_date);
         console.log($('#finish').val());
         if($('#finish').val()=='NaN/NaN/NaN NaN:NaN'){
-            alert('sdfdf');
             $('#finish').val('');
         }
         $("#datefinish").datetimepicker("remove");
