@@ -63,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16333725" vertical-offset="1204" max-vertical-offset="8687">
-              <caret line="113" column="35" selection-start-line="113" selection-start-column="35" selection-end-line="113" selection-end-column="35" />
+            <state vertical-scroll-proportion="-6.0" vertical-offset="1204" max-vertical-offset="8704">
+              <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
               <folding>
                 <element signature="e#511#573#0#PHP" expanded="false" />
                 <element signature="e#611#838#0#PHP" expanded="false" />
@@ -76,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.2" vertical-offset="3483" max-vertical-offset="7378">
-              <caret line="212" column="54" selection-start-line="212" selection-start-column="54" selection-end-line="212" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.14720194" vertical-offset="3483" max-vertical-offset="7378">
+              <caret line="212" column="69" selection-start-line="212" selection-start-column="69" selection-end-line="212" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -146,8 +146,8 @@
         <option value="$PROJECT_DIR$/public/assets/ical.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/twitterController.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
       </list>
     </option>
   </component>
@@ -337,12 +337,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-02252" summary="database">
-      <created>1457959362616</created>
-      <option name="number" value="02252" />
-      <option name="project" value="LOCAL" />
-      <updated>1457959362616</updated>
     </task>
     <task id="LOCAL-02253" summary="database">
       <created>1457959416346</created>
@@ -632,7 +626,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457978347114</updated>
     </task>
-    <option name="localTasksCounter" value="2301" />
+    <task id="LOCAL-02301" summary="database">
+      <created>1457978712591</created>
+      <option name="number" value="02301" />
+      <option name="project" value="LOCAL" />
+      <updated>1457978712591</updated>
+    </task>
+    <option name="localTasksCounter" value="2302" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1044,22 +1044,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2" vertical-offset="3483" max-vertical-offset="7378">
-          <caret line="212" column="54" selection-start-line="212" selection-start-column="54" selection-end-line="212" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16333725" vertical-offset="1204" max-vertical-offset="8687">
-          <caret line="113" column="35" selection-start-line="113" selection-start-column="35" selection-end-line="113" selection-end-column="35" />
+        <state vertical-scroll-proportion="-6.0" vertical-offset="1204" max-vertical-offset="8704">
+          <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
           <folding>
             <element signature="e#511#573#0#PHP" expanded="false" />
             <element signature="e#611#838#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14720194" vertical-offset="3483" max-vertical-offset="7378">
+          <caret line="212" column="69" selection-start-line="212" selection-start-column="69" selection-end-line="212" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
