@@ -241,6 +241,9 @@ Create New event
             minDate: nowtimedate
         });
         $('#datefinish').datetimepicker({
+            format: 'yyyy/mm/dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
             useCurrent: false //Important! See issue #1075
         });
         $("#datestart").on("dp.change", function (e) {
