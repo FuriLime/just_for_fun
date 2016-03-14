@@ -267,7 +267,6 @@ Create New event
         end_date.setHours(start_date.getHours() + 1);
         end_date = end_date.format('Y/m/d H:i');
         $('#finish').val(end_date);
-        console.log($('#finish').val());
         if($('#finish').val()=='NaN/NaN/NaN NaN:NaN'){
             $('#finish').val('');
         }
