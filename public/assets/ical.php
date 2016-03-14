@@ -34,31 +34,6 @@ if (isset($ID) && $ID != "") {
 ////		END:VALARM
 ////		END:VEVENT
 ////		END:VCALENDAR";  $mail[0]  = "BEGIN:VCALENDAR";
-//
-//    $file .= "PRODID:-//Google Inc//Google Calendar 70.9054//EN" . "\r\n";
-//    $file .= "VERSION:2.0" . "\r\n";
-//    $file .= "CALSCALE:GREGORIAN" . "\r\n";
-//    $file .= "METHOD:REQUEST" . "\r\n";
-//    $file .= "BEGIN:VEVENT" . "\r\n";
-//    $file .= "DTSTART;TZID=America/Sao_Paulo:" . $date . "\r\n";
-//    $file .= "DTEND;TZID=America/Sao_Paulo:" . $date_end . "\r\n";
-//    $file .= "DTSTAMP;TZID=America/Sao_Paulo:" . "\r\n";
-//    $file .= "UID:" . "\r\n";
-//    $file .= "ORGANIZER;" . "\r\n";
-//    $file .= "CREATED:" . "\r\n";
-//    $file .= "DESCRIPTION:" . strip_tags($_GET['desc']). "\r\n";
-//    $file .= "LAST-MODIFIED:". "\r\n" ;
-//    $file .= "LOCATION:" .  strip_tags($_GET['loc']). "\r\n";
-//    $file .= "SEQUENCE:0". "\r\n";
-//    $file .= "STATUS:CONFIRMED". "\r\n";
-//    $file .= "SUMMARY:" . strip_tags($_GET['loc']). "\r\n";
-//    $file .= "TRANSP:OPAQUE". "\r\n";
-//    $file .= "END:VEVENT". "\r\n";
-//    $file .= "END:VCALENDAR". "\r\n";
-//    //dd($file);
-//	echo $file;
-//	exit;
-
 
     $file =  "BEGIN:VCALENDAR\r\n";
     $file .= "PRODID:-//Google Inc//Google Calendar 70.9054//EN\r\n";
@@ -66,24 +41,24 @@ if (isset($ID) && $ID != "") {
     $file .= "CALSCALE:GREGORIAN\r\n";
     $file .= "METHOD:PUBLISH\r\n";
     $file .= "X-WR-CALNAME:".strip_tags($_GET['name'])."\r\n";
-$file .= "X-WR-TIMEZONE:America/New_York\r\n";
-    $file .= "BEGIN:VTIMEZONE\r\n";
-    $file .= "TZID:America/New_York\r\n";
-$file .= "X-LIC-LOCATION:America/New_York\r\n";
+//    $file .= "X-WR-TIMEZONE:America/New_York\r\n";
+//    $file .= "BEGIN:VTIMEZONE\r\n";
+//    $file .= "TZID:America/New_York\r\n";
+    $file .= "X-LIC-LOCATION:".strip_tags($_GET['loc'])."\r\n";
     $file .= "BEGIN:DAYLIGHT\r\n";
     $file .= "TZOFFSETFROM:-0500\r\n";
     $file .= "TZOFFSETTO:-0400\r\n";
     $file .= "TZNAME:EDT\r\n";
     $file .= "DTSTART:19700308T020000\r\n";
-$file .= "RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\n";
-$file .= "END:DAYLIGHT\r\n";
-$file .= "BEGIN:STANDARD\r\n";
+    $file .= "RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\n";
+    $file .= "END:DAYLIGHT\r\n";
+    $file .= "BEGIN:STANDARD\r\n";
     $file .= "TZOFFSETFROM:-0400\r\n";
     $file .= "TZOFFSETTO:-0500\r\n";
     $file .= "TZNAME:EST\r\n";
-$file .= "DTSTART:19701101T020000\r\n";
-$file .= "RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\n";
-$file .= "END:STANDARD\r\n";
+    $file .= "DTSTART:19701101T020000\r\n";
+    $file .= "RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\n";
+    $file .= "END:STANDARD\r\n";
     $file .= "END:VTIMEZONE\r\n";
 
     $file .= "BEGIN:VEVENT\r\n";
