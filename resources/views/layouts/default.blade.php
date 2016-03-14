@@ -156,7 +156,7 @@
                             <br>Log in</h3>
                         <!-- CSRF Token -->
                         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-
+                        {!! Honeypot::generate('my_email', 'my_password') !!}
                         <div class="form-group {{ $errors->first('email', 'has-error') }}">
                             <label style="margin-bottom:0px;" for="email" class="uname control-label"> <i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
                                 E-mail

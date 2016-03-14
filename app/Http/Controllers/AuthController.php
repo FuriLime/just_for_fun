@@ -54,6 +54,8 @@ class AuthController extends JoshController
         $rules = array(
             'email'    => 'required|email',
             'password' => 'required|between:3,32',
+            'my_email'   => 'honeypot',
+            'my_password'   => 'required|honeytime:5'
         );
 
         // Create a new validator instance from our validation rules
