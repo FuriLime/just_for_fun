@@ -76,27 +76,27 @@
                                     <!-- CSRF Token -->
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
-                                    <div class="form-group {{ $errors->first('first_name', 'has-error') }}">
-                                        <label style="margin-bottom:0px;" for="first_name" class="youmail">
-                                            <i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
-                                            First Name
-                                        </label>
-                                        <input id="first_name" name="first_name" required type="text" placeholder="John" value="{!! Input::old('first_name') !!}" />
-                                        <div class="col-sm-12">
-                                            {!! $errors->first('first_name', '<span class="help-block">:message</span>') !!}
-                                        </div>
-                                    </div>
+                                    {{--<div class="form-group {{ $errors->first('first_name', 'has-error') }}">--}}
+                                        {{--<label style="margin-bottom:0px;" for="first_name" class="youmail">--}}
+                                            {{--<i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>--}}
+                                            {{--First Name--}}
+                                        {{--</label>--}}
+                                        {{--<input id="first_name" name="first_name" required type="text" placeholder="John" value="{!! Input::old('first_name') !!}" />--}}
+                                        {{--<div class="col-sm-12">--}}
+                                            {{--{!! $errors->first('first_name', '<span class="help-block">:message</span>') !!}--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
 
-                                    <div class="form-group {{ $errors->first('last_name', 'has-error') }}">
-                                        <label style="margin-bottom:0px;" for="last_name" class="youmail">
-                                            <i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
-                                            Last Name
-                                        </label>
-                                        <input id="last_name" name="last_name" required type="text" placeholder="Doe" value="{!! Input::old('last_name') !!}" />
-                                        <div class="col-sm-12">
-                                            {!! $errors->first('last_name', '<span class="help-block">:message</span>') !!}
-                                        </div>
-                                    </div>
+                                    {{--<div class="form-group {{ $errors->first('last_name', 'has-error') }}">--}}
+                                        {{--<label style="margin-bottom:0px;" for="last_name" class="youmail">--}}
+                                            {{--<i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>--}}
+                                            {{--Last Name--}}
+                                        {{--</label>--}}
+                                        {{--<input id="last_name" name="last_name" required type="text" placeholder="Doe" value="{!! Input::old('last_name') !!}" />--}}
+                                        {{--<div class="col-sm-12">--}}
+                                            {{--{!! $errors->first('last_name', '<span class="help-block">:message</span>') !!}--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
 
                                     <div class="form-group {{ $errors->first('email', 'has-error') }}">
                                         <label style="margin-bottom:0px;" for="email" class="youmail">
@@ -109,16 +109,16 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group {{ $errors->first('email_confirm', 'has-error') }}">
-                                        <label style="margin-bottom:0px;" for="email" class="youmail">
-                                            <i class="livicon" data-name="mail" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
-                                            Confirm E-mail
-                                        </label>
-                                        <input id="email_confirm" name="email_confirm" required type="email" placeholder="mysupermail@mail.com" value="{!! Input::old('email_confirm') !!}" />
-                                        <div class="col-sm-12">
-                                            {!! $errors->first('email_confirm', '<span class="help-block">:message</span>') !!}
-                                        </div>
-                                    </div>
+                                    {{--<div class="form-group {{ $errors->first('email_confirm', 'has-error') }}">--}}
+                                        {{--<label style="margin-bottom:0px;" for="email" class="youmail">--}}
+                                            {{--<i class="livicon" data-name="mail" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>--}}
+                                            {{--Confirm E-mail--}}
+                                        {{--</label>--}}
+                                        {{--<input id="email_confirm" name="email_confirm" required type="email" placeholder="mysupermail@mail.com" value="{!! Input::old('email_confirm') !!}" />--}}
+                                        {{--<div class="col-sm-12">--}}
+                                            {{--{!! $errors->first('email_confirm', '<span class="help-block">:message</span>') !!}--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
 
                                     <div class="form-group {{ $errors->first('password', 'has-error') }}">
                                         <label style="margin-bottom:0px;" for="password" class="youpasswd">
@@ -131,16 +131,16 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group {{ $errors->first('password_confirm', 'has-error') }}">
-                                        <label style="margin-bottom:0px;" for="passwor_confirm" class="youpasswd">
-                                            <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
-                                            Confirm Password
-                                        </label>
-                                        <input id="password_confirm" name="password_confirm" required type="password" placeholder="eg. X8df!90EO" />
-                                        <div class="col-sm-12">
-                                            {!! $errors->first('email_confirm', '<span class="help-block">:message</span>') !!}
-                                        </div>
-                                    </div>
+                                    {{--<div class="form-group {{ $errors->first('password_confirm', 'has-error') }}">--}}
+                                        {{--<label style="margin-bottom:0px;" for="passwor_confirm" class="youpasswd">--}}
+                                            {{--<i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>--}}
+                                            {{--Confirm Password--}}
+                                        {{--</label>--}}
+                                        {{--<input id="password_confirm" name="password_confirm" required type="password" placeholder="eg. X8df!90EO" />--}}
+                                        {{--<div class="col-sm-12">--}}
+                                            {{--{!! $errors->first('email_confirm', '<span class="help-block">:message</span>') !!}--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
                                 <p class="signin button">
                                     <input type="submit" class="btn btn-success" value="Sign up" />
                                 </p>
