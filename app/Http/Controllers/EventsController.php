@@ -460,7 +460,6 @@ class EventsController extends Controller {
                 '&ft='. $event_finish_zero->format('His') .
                 '&loc='. $event['location'] .
                 '&desc='. $event['description'];
-            dd();
             break;
 
         case 'iCal':

@@ -79,28 +79,8 @@ if (isset($ID) && $ID != "") {
     $file .= "TRANSP:TRANSPARENT\r\n";
     $file .= "END:VEVENT\r\n";
     $file .= "END:VCALENDAR\r\n";
-    echo $file;
-    exit;
-//    $tz  = 'Europe/Berlin';
-//    $dtz = new \DateTimeZone($tz);
-//    date_default_timezone_set($tz);
-//// 1. Create new calendar
-//    $vCalendar = new \Eluceo\iCal\Component\Calendar('www.example.com');
-//// 2. Create timezone rule object for Daylight Saving Time
-//// 3. Create timezone rule object for Standard Time
-//// 5. Create an event
-//    $vEvent = new \Eluceo\iCal\Component\Event();
-//    $vEvent->setDtStart(new \DateTime($date));
-//    $vEvent->setDtEnd(new \DateTime($date_end));
-//    $vEvent->setSummary($_GET['desc']);
-//// 6. Adding Timezone
-//    $vEvent->setUseTimezone(true);
-//// 7. Add event to calendar
-//    $vCalendar->addComponent($vEvent);
-//// 8. Set headers
-//    header('Content-Type: text/calendar; charset=utf-8');
-//    header('Content-Disposition: attachment; filename="cal.ics"');
-//// 9. Output
-//    echo $vCalendar->render();
 
+    echo $file;
+    die;
+    exit;
 }
