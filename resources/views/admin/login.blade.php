@@ -35,7 +35,7 @@
 
                                 <div class="form-group {{ $errors->first('email', 'has-error') }}">
                                     <label style="margin-bottom:0px;" for="email" class="uname control-label"> <i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
-                                        E-mail
+                                       dfsghjn
                                     </label>
                                     <input id="email" name="email" required type="email" placeholder="E-mail" value="{!! Input::old('email') !!}" />
                                     <div class="col-sm-12">
