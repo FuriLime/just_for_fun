@@ -553,7 +553,7 @@ class UsersController extends JoshController
             $mc->patch("lists/$listId/members", [
                 'email_address' => $user->email,
                 'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
-                'status'        => 'subscribed',
+//                'status'        => 'subscribed',
             ]);
 
             // Activate / De-activate user
