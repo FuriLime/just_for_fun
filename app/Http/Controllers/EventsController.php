@@ -267,10 +267,10 @@ class EventsController extends Controller {
             }
 //    }
 //
-//    else {
-//      //show event for unregister user
-//      return view('events.show', compact('event'));
-//    }
+    else {
+      //show event for unregister user
+      return view('events.show', compact('event'));
+    }
   }
 
   /**
