@@ -263,25 +263,14 @@ Create New event
         var finaldate = $('#finish').val();
 //            console.log(finaldate);
         $("#datefinish").datetimepicker({
-            onSelect: function(data) {
-                alert('sdfsdf');
-                format: 'yyyy/mm/dd hh:ii',
-                        autoclose
-                :
-                true,
-                        todayBtn
-                :
-                true,
-                        startDate
-                :
-                end_date,
-                        minDate
-                :
-                end_date,
-                        minuteStep
-                :
-                10
-            }
+            onSelect: function(data) {alert('sdfsdfsdf')}
+            format: 'yyyy/mm/dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            startDate: end_date,
+            minDate: end_date,
+            minuteStep: 10
+
         });
     });
 
