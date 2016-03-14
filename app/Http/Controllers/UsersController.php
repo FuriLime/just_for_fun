@@ -824,7 +824,9 @@ class UsersController extends JoshController
         $apiKey = Config::get('mailchimp.apikey');
         $listId = Config::get('mailchimp.listId');
         $mc = new Mailchimp($apiKey);
+
         $result_member = $mc->get("lists/$listId/members");
+        dd($result_member);
         $categories = $mc->get("lists/$listId/interest-categories");
         foreach($categories['categories'] as $cat_id){
                 $new_cat_id[] = $cat_id->id;
