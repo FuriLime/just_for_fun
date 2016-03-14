@@ -268,6 +268,7 @@ Create New event
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
+            controlType: 'select',
             startDate: end_date,
             minDate: new Date($('#finish').val()),
             minuteStep: 10
