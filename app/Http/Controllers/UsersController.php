@@ -830,7 +830,6 @@ class UsersController extends JoshController
         foreach($categories['categories'] as $cat_id){
                 $new_cat_id[] = $cat_id->id;
         }
-//        dd($new_cat_id[0]);
         foreach($result_member['members'] as $email_user){
             $member_user[] = $email_user->email_address;
         }
@@ -861,6 +860,7 @@ class UsersController extends JoshController
                     'email_address' => $user_email,
                     'status'        => 'subscribed',
                 ]);
+
             }
             catch (\Mailchimp_List_AlreadySubscribed $e){
 //                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
@@ -868,7 +868,7 @@ class UsersController extends JoshController
             catch (\Mailchimp_Error $e) {
                 // do something
             }
-            return View('admin.notisfaction', compact('val_name'));
+            return View('admin.notisfaction');
         }
 
     }
