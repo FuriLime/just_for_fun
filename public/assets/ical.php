@@ -62,7 +62,7 @@ if (isset($ID) && $ID != "") {
     $file .= "END:VTIMEZONE\r\n";
 
     $file .= "BEGIN:VEVENT\r\n";
-    $file .= "DTSTART;VALUE=DATE:20070417\r\n";
+    $file .= "DTSTART;VALUE=DATE:".$date_end . "T" . $time_end ."Z\r\n";
     $file .= "DTEND;VALUE=DATE:20070418\r\n";
     $file .= "DTSTAMP:20071003T171517Z\r\n";
     $file .= "ORGANIZER;CN=David:MAILTO:me@home.com\r\n";
