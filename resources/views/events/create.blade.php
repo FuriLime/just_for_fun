@@ -257,36 +257,36 @@ Create New event
     });
 
 
-    $('#start').on('change', function() {
-        var start_def_date = new Date('{{ $start_date }}');
-        var start_date = new Date($('#start').val());
+    {{--$('#start').on('change', function() {--}}
+        {{--var start_def_date = new Date('{{ $start_date }}');--}}
+        {{--var start_date = new Date($('#start').val());--}}
 
 
-//        if(start_date.getTime() < start_def_date.getTime()) {
-//            $('#start').val(start_def_date.format('Y/m/d H:i'));
-//            return false;
-//        }
+{{--//        if(start_date.getTime() < start_def_date.getTime()) {--}}
+{{--//            $('#start').val(start_def_date.format('Y/m/d H:i'));--}}
+{{--//            return false;--}}
+{{--//        }--}}
 
-        var end_date = new Date(start_date);
-        end_date.setHours(start_date.getHours() + 1);
-        end_date = end_date.format('Y/m/d H:i');
-        console.log(end_date);
-        $('#finish').val(end_date);
-        console.log($('#finish').val());
-        var finaldate = $('#finish').val();
-//            console.log(finaldate);
-        $("#datefinish").datetimepicker({
-            onSelect: function(data) {alert('sdfsdfsdf')},
-            format: 'yyyy/mm/dd hh:ii',
-            autoclose: true,
-            todayBtn: true,
-            controlType: 'select',
-            startDate: end_date,
-            minDate: new Date($('#finish').val()),
-            minuteStep: 10
+        {{--var end_date = new Date(start_date);--}}
+        {{--end_date.setHours(start_date.getHours() + 1);--}}
+        {{--end_date = end_date.format('Y/m/d H:i');--}}
+        {{--console.log(end_date);--}}
+        {{--$('#finish').val(end_date);--}}
+        {{--console.log($('#finish').val());--}}
+        {{--var finaldate = $('#finish').val();--}}
+{{--//            console.log(finaldate);--}}
+        {{--$("#datefinish").datetimepicker({--}}
+            {{--onSelect: function(data) {alert('sdfsdfsdf')},--}}
+            {{--format: 'yyyy/mm/dd hh:ii',--}}
+            {{--autoclose: true,--}}
+            {{--todayBtn: true,--}}
+            {{--controlType: 'select',--}}
+            {{--startDate: end_date,--}}
+            {{--minDate: new Date($('#finish').val()),--}}
+            {{--minuteStep: 10--}}
 
-        });
-    });
+        {{--});--}}
+    {{--});--}}
 
     $('#finish').on('change', function() {
         var start_date = new Date($('#start').val());
