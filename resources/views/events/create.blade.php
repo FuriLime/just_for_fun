@@ -231,6 +231,7 @@ Create New event
         var nowtimedate = new Date();
         nowtimedate = nowtimedate.format('Y/m/d H:i');
         $("#datestart").datetimepicker({
+            onSelect: function() {alert('sdfsdfsdf')},
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
@@ -240,6 +241,7 @@ Create New event
             minDate: nowtimedate
         });
         $("#datefinish").datetimepicker({
+            onSelect: function() {alert('sdfsdfsdf')},
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
@@ -265,6 +267,7 @@ Create New event
         end_date.setHours(start_date.getHours() + 1);
         end_date = end_date.format('Y/m/d H:i');
         $('#finish').val(end_date);
+        console.log($('#finish').val());
         if($('#finish').val()=='NaN/NaN/NaN NaN:NaN'){
             $('#finish').val('');
         }
@@ -548,13 +551,13 @@ if($('#location').val()) {
 
 	<script type="text/javascript">
 	$('#timezone').select2();
-	$("#datestart").on("dp.change", function (e) {
-		$('#datefinish').data("DateTimePicker").minDate(e.date);
-	});
-	// run second calendar after closing of first
-	$("#datestart").on("dp.hide", function (e) {
-		$('#datefinish .glyphicon-calendar').click();
-	});
+//	$("#datestart").on("dp.change", function (e) {
+//		$('#datefinish').data("DateTimePicker").minDate(e.date);
+//	});
+//	// run second calendar after closing of first
+//	$("#datestart").on("dp.hide", function (e) {
+//		$('#datefinish .glyphicon-calendar').click();
+//	});
 
 
 
