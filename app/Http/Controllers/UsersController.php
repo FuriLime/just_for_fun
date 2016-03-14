@@ -529,7 +529,7 @@ class UsersController extends JoshController
 
             // Assign the user to groups
             foreach ($rolesToAdd as $roleId) {
-                dd($user->accounts()->id);
+                dd($user->accounts()->first());
                 $role = Role::find($roleId);
                 $rolew = [
                     0 => ['user_id' => $user->id],
