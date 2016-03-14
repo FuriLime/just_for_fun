@@ -49,11 +49,13 @@ Create New event
                         <label for="title">@lang('frontend.title')</label>
                         {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}
                         <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                        <div class="form-group">
                         @if ($errors->any())
                             <ul class="alert alert-danger myalert">
                                 <li>{{ $errors->first('title') }}</li>
                             </ul>
                         @endif
+                            </div>
 
 
                     </div>
@@ -206,11 +208,11 @@ Create New event
         position: relative;
         float: right;
     }
-    .myalert{
-        width: 70%;
-        float: right;
-        margin-right: 50px;
-    }
+    /*.myalert{*/
+        /*width: 70%;*/
+        /*float: right;*/
+        /*margin-right: 50px;*/
+    /*}*/
     </style>
 {{-- page level scripts --}}
 @section('footer_scripts')
