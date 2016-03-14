@@ -86,6 +86,7 @@ class EventsController extends Controller {
             $my_time_zone = $_COOKIE['time_zone'];
         }
         else if(session()->get('timezone')) {
+            dd('asdasd');
             $my_time_zone = session()->get('timezone');
         }
         else{
