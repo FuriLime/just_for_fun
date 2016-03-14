@@ -887,6 +887,8 @@ class UsersController extends JoshController
 
     public function updateInterests(){
         $email = md5(Sentinel::getUser()->email);
+        $user_name = Sentinel::getUser()->first_name;
+        $user_last = Sentinel::getUser()->last_name;
         $check_true= array();
         foreach($_POST['check'] as $check){
             $check_id[] = $check["'id'"];
@@ -906,7 +908,7 @@ class UsersController extends JoshController
         $mc = new Mailchimp($apiKey);
         $listId = Config::get('mailchimp.listId');
         $mc->patch("lists/$listId/members/$email", [
-            'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
+            'merge_fields' => ['FNAME'=>$user_name, 'LNAME'=>$user_last],
             'interests'    => $data
         ]);
         return redirect('admin/notisfaction')->with('success', Lang::get('message.success.update'));
