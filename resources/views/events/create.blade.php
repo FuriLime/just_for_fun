@@ -85,12 +85,13 @@ Create New event
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
                                 <input class="form-control" size="16" id="start" name="start" type="datetime" value="{{$start_date}}">
-                                @if ($errors->any())
-                                    <ul class="alert alert-danger myalert">
-                                        <li>{{ $errors->first('start') }}</li>
-                                    </ul>
-                                @endif
+
                             </div>
+                            @if ($errors->any())
+                                <ul class="alert alert-danger myalert">
+                                    <li>{{ $errors->first('start') }}</li>
+                                </ul>
+                            @endif
                         </div>
                                     <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
@@ -110,12 +111,13 @@ Create New event
                                                 <span class="glyphicon glyphicon-th"></span>
                                             </span>
                                             <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{$finish_date}}">
-                                            @if ($errors->any())
-                                                <ul class="alert alert-danger myalert">
-                                                    <li>{{ $errors->first('finish') }}</li>
-                                                </ul>
-                                            @endif
+
                                         </div>
+                             @if ($errors->any())
+                                 <ul class="alert alert-danger myalert">
+                                     <li>{{ $errors->first('finish') }}</li>
+                                 </ul>
+                             @endif
                                     </div>
                         <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
