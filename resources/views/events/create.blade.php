@@ -269,6 +269,8 @@ Create New event
             minuteStep: 10
 
         });
+        "change",
+        { minDate: $('#finish').val() }
 
     });
 
