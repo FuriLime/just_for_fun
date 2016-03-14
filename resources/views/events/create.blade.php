@@ -240,6 +240,17 @@ Create New event
             controlType: 'select',
             minDate: nowtimedate
         });
+        $("#datefinish").datetimepicker({
+            onSelect: function() {alert('sdfsdfsdf')},
+            format: 'yyyy/mm/dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            controlType: 'select',
+            startDate: $('#finish').val(),
+            minDate: $('#finish').val(),
+            minuteStep: 10
+
+        });
     });
 
 
