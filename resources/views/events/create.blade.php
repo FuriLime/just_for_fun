@@ -265,7 +265,7 @@ Create New event
             todayBtn: true,
             controlType: 'select',
             startDate: $('#finish').val(),
-            minDate: $('#finish').val(),
+
             minuteStep: 10
 
         });
