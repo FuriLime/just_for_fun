@@ -18,22 +18,43 @@ if (isset($ID) && $ID != "") {
 	$date_end = strip_tags($_GET['fd']);
 	$time_end = strip_tags($_GET['ft']);
 
-	$file = "BEGIN:VCALENDAR
-		BEGIN:VEVENT\r\n";
+//	$file = "BEGIN:VCALENDAR
+//		BEGIN:VEVENT\r\n";
+//
+//	$file .= "DTSTART:" . $date . "T" . $time . "Z\r\n";
+//	$file .= "DTEND:" . $date_end . "T" . $time_end . "Z\r\n";
+//	$file .= "LOCATION:" . strip_tags($_GET['loc']) . "\r\n";
+//	$file .= "DESCRIPTION:" . iconv('windows-1251', 'UTF-8', trim(strip_tags(html_entity_decode
+//			(strip_tags($_GET['desc']), ENT_QUOTES, 'windows-1251')))) . "\r\n";
+//	$file .= "SUMMARY:" . iconv('windows-1251', 'UTF-8', strip_tags($_GET['name'])) . "\r\n";
+//	$file .= "PRIORITY:3
+//		BEGIN:VALARM
+//		ACTION:DISPLAY
+//		TRIGGER:-PT15M
+//		END:VALARM
+//		END:VEVENT
+//		END:VCALENDAR";  $mail[0]  = "BEGIN:VCALENDAR";
 
-	$file .= "DTSTART:" . $date . "T" . $time . "Z\r\n";
-	$file .= "DTEND:" . $date_end . "T" . $time_end . "Z\r\n";
-	$file .= "LOCATION:" . strip_tags($_GET['loc']) . "\r\n";
-	$file .= "DESCRIPTION:" . iconv('windows-1251', 'UTF-8', trim(strip_tags(html_entity_decode
-			(strip_tags($_GET['desc']), ENT_QUOTES, 'windows-1251')))) . "\r\n";
-	$file .= "SUMMARY:" . iconv('windows-1251', 'UTF-8', strip_tags($_GET['name'])) . "\r\n";
-	$file .= "PRIORITY:3
-		BEGIN:VALARM
-		ACTION:DISPLAY
-		TRIGGER:-PT15M
-		END:VALARM
-		END:VEVENT
-		END:VCALENDAR";
+    $file = "PRODID:-//Google Inc//Google Calendar 70.9054//EN";
+    $file .= "VERSION:2.0";
+    $file .= "CALSCALE:GREGORIAN";
+    $file .= "METHOD:REQUEST";
+    $file .= "BEGIN:VEVENT";
+    $file .= "DTSTART;TZID=America/Sao_Paulo:" . $date;
+    $file .= "DTEND;TZID=America/Sao_Paulo:" . $date_end;
+    $file .= "DTSTAMP;TZID=America/Sao_Paulo:";
+    $file .= "UID:" ;
+    $file .= "ORGANIZER;";
+    $file .= "CREATED:" ;
+    $file .= "DESCRIPTION:" . strip_tags($_GET['desc']);
+    $file .= "LAST-MODIFIED:" ;
+    $file .= "LOCATION:" .  strip_tags($_GET['loc']);
+    $file .= "SEQUENCE:0";
+    $file .= "STATUS:CONFIRMED";
+    $file .= "SUMMARY:" . strip_tags($_GET['loc']);
+    $file .= "TRANSP:OPAQUE";
+    $file .= "END:VEVENT";
+    $file .= "END:VCALENDAR";
     //dd($file);
 	echo $file;
 	exit;
