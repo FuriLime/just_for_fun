@@ -261,7 +261,7 @@ Create New event
         console.log($('#finish').val());
         var finaldate = $('#finish').val();
 //            console.log(finaldate);
-
+        $("#datefinish").datetimepicker("refresh");
         $("#datefinish").datetimepicker({
             onSelect: function() {alert('sdfsdfsdf')},
             format: 'yyyy/mm/dd hh:ii',
@@ -273,7 +273,7 @@ Create New event
             minuteStep: 10
 
         });
-        $( "#datefinish" ).datetimepicker("destroy");
+
     });
 
     $('#finish').on('change', function() {
