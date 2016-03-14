@@ -59,4 +59,4 @@
 //// 9. Output
 //    echo $vCalendar->render();
 
-}
+//}
