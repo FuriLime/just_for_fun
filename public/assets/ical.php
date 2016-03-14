@@ -18,8 +18,8 @@ if (isset($ID) && $ID != "") {
 	$date_end = strip_tags($_GET['fd']);
 	$time_end = strip_tags($_GET['ft']);
 
-//	$file = "BEGIN:VCALENDAR
-//		BEGIN:VEVENT\r\n";
+	$file = "BEGIN:VCALENDAR
+		BEGIN:VEVENT\r\n";
 //
 //	$file .= "DTSTART:" . $date . "T" . $time . "Z\r\n";
 //	$file .= "DTEND:" . $date_end . "T" . $time_end . "Z\r\n";
@@ -35,7 +35,7 @@ if (isset($ID) && $ID != "") {
 //		END:VEVENT
 //		END:VCALENDAR";  $mail[0]  = "BEGIN:VCALENDAR";
 
-    $file = "PRODID:-//Google Inc//Google Calendar 70.9054//EN";
+    $file .= "PRODID:-//Google Inc//Google Calendar 70.9054//EN";
     $file .= "VERSION:2.0";
     $file .= "CALSCALE:GREGORIAN";
     $file .= "METHOD:REQUEST";
@@ -58,6 +58,7 @@ if (isset($ID) && $ID != "") {
     //dd($file);
 	echo $file;
 	exit;
+
 //    $tz  = 'Europe/Berlin';
 //    $dtz = new \DateTimeZone($tz);
 //    date_default_timezone_set($tz);
