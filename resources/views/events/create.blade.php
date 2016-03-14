@@ -276,18 +276,18 @@ Create New event
         });
     });
 
-    $('#finish').on('change', function() {
-        var start_date = new Date($('#start').val());
-        var end_date = new Date($('#finish').val());
-
-        if(end_date.getTime() < start_date.getTime()) {
-            var end_date = new Date(start_date);
-            end_date.setHours(start_date.getHours() + 1);
-            end_date = end_date.format('Y/m/d H:i');
-
-            $('#finish').val(end_date);
-        }
-    });
+//    $('#finish').on('change', function() {
+//        var start_date = new Date($('#start').val());
+//        var end_date = new Date($('#finish').val());
+//
+//        if(end_date.getTime() < start_date.getTime()) {
+//            var end_date = new Date(start_date);
+//            end_date.setHours(start_date.getHours() + 1);
+//            end_date = end_date.format('Y/m/d H:i');
+//
+//            $('#finish').val(end_date);
+//        }
+//    });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 	<script type="text/javascript">//<![CDATA[
