@@ -63,7 +63,7 @@ if (isset($ID) && $ID != "") {
 
     $file .= "BEGIN:VEVENT\r\n";
     $file .= "DTSTART;VALUE=DATE:".$date_end . "T" . $time_end ."Z\r\n";
-    $file .= "DTEND;VALUE=DATE:20070418\r\n";
+    $file .= "DTEND;VALUE=DATE".$date_end . "T" . $time_end ."\r\n";
     $file .= "DTSTAMP:20071003T171517Z\r\n";
     $file .= "ORGANIZER;CN=David:MAILTO:me@home.com\r\n";
     $file .= "UID:41r8cefge2pi3tmt7tt766baf4@google.com\r\n";
