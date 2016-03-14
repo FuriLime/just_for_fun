@@ -14,7 +14,7 @@ use App\User;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Hash;
 use Mailchimp\Mailchimp;
-use Role;
+use App\Role;
 class UsersController extends JoshController
 {
     protected $countries = array(
