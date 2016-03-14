@@ -50,7 +50,7 @@ Create New event
                         {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}
                         <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         <div class="form-group">
-                        @if ($errors->any())
+                        @if ($errors->first('title'))
                             <ul class="alert alert-danger myalert">
                                 <li>{{ $errors->first('title') }}</li>
                             </ul>
@@ -89,7 +89,7 @@ Create New event
                                 <input class="form-control" size="16" id="start" name="start" type="datetime" value="{{$start_date}}">
 
                             </div>
-                            @if ($errors->any())
+                            @if ($errors->first('start'))
                                 <ul class="alert alert-danger myalert">
                                     <li>{{ $errors->first('start') }}</li>
                                 </ul>
@@ -115,7 +115,7 @@ Create New event
                                             <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{$finish_date}}">
 
                                         </div>
-                             @if ($errors->any())
+                             @if ($errors->first('finish'))
                                  <ul class="alert alert-danger myalert">
                                      <li>{{ $errors->first('finish') }}</li>
                                  </ul>
