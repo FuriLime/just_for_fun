@@ -529,6 +529,7 @@ class UsersController extends JoshController
 
             // Assign the user to groups
             foreach ($rolesToAdd as $roleId) {
+                dd($roleId);
                 $role = Sentinel::findRoleById($roleId);
 
                 $role->users()->attach($user);
