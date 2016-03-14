@@ -269,7 +269,7 @@ Create New event
 //            minuteStep: 10
 //
 //        });
-        $('#datefinish').datetimepicker('option', 'minDate', new Date($('#finish').val()));
+        $('#datefinish').datetimepicker('option', 'minDate',$('#finish').val());
 
     });
 
