@@ -835,7 +835,6 @@ class UsersController extends JoshController
             $member_user[] = $email_user->email_address;
         }
         if (in_array($user_email, $member_user)){
-            dd($user_email);
             $result1 = $mc->get("lists/$listId/members/$email", [
                 'fields' => 'id,interests,email_address'
             ]);
