@@ -84,7 +84,7 @@
 {{$user = Sentinel::getUser()}}
 {{$userRoles = $user->roles()->lists('name')->first()}}
     </div>
-@if($userRoles =='admin')
+@if($userRoles =='Admin')
     <li >
         <a href="#">
             <i class="livicon" data-name="gear" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>
