@@ -70,7 +70,7 @@ if (isset($ID) && $ID != "") {
 //    $file .= "COMMENT;X-COMMENTER=MAILTO:me@home.com:<p>Hey Everyone: I think I have talked to everyone about setting up a brainstorm/initial planning meeting for a complete overhaul of the current FCAG site. I have penciled in a meeting for Tuesday April 10  @ 7:00 PM 8:30 PM.  Would you be able to attend?\r\n";
     $file .= "CLASS:PUBLIC\r\n";
     $file .= "CREATED:20070402T234821Z\r\n";
-    $file .= "DESCRIPTION:Website Brainstorm Session\r\n";
+    $file .= "DESCRIPTION:".strip_tags($_GET['desc'])."\r\n";
     $file .= "LAST-MODIFIED:20070411T115625Z\r\n";
     $file .= "LOCATION:FCAG\r\n";
     $file .= "SEQUENCE:2\r\n";
