@@ -241,7 +241,7 @@ Create New event
             minDate: nowtimedate
         });
         $("#datefinish").datetimepicker({
-            onSelect: function() {alert('sdfsdfsdf')},
+            onSelect: function(dateStr) {alert('asdasdsad');},
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
@@ -255,7 +255,7 @@ Create New event
 
 
     $('#start').on('change', function() {
-        console.log($("#datefinish").datetimepicker('destroy'));
+        $("#datefinish").datetimepicker('destroy');
         var start_def_date = new Date('{{ $start_date }}');
         var start_date = new Date($('#start').val());
 
