@@ -239,6 +239,7 @@ Create New event
             todayBtn: true,
             startDate: nowtimedate,
             minuteStep: 10,
+            controlType: 'select',
             minDate: nowtimedate
         });
     });
@@ -263,12 +264,12 @@ Create New event
         var finaldate = $('#finish').val();
 //            console.log(finaldate);
         $("#datefinish").datetimepicker({
-            onSelect: function(data) {alert('sdfsdfsdf')}
+            onSelect: function(data) {alert('sdfsdfsdf')},
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
             startDate: end_date,
-            minDate: end_date,
+            minDate: new Date($('#finish').val()),
             minuteStep: 10
 
         });
