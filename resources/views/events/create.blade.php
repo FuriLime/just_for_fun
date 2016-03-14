@@ -264,7 +264,7 @@ Create New event
         var finaldate = $('#finish').val();
 //            console.log(finaldate);
         $("#datefinish").datetimepicker({
-            onSelect: function(date) {alert('sdfsdfsdf')},
+            onSelect: function() {alert('sdfsdfsdf')},
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
