@@ -208,11 +208,11 @@ Create New event
         position: relative;
         float: right;
     }
-    /*.myalert{*/
-        /*width: 70%;*/
-        /*float: right;*/
-        /*margin-right: 50px;*/
-    /*}*/
+    .myalert{
+        width: 70%;
+        float: right;
+        margin-right: 50px;
+    }
     </style>
 {{-- page level scripts --}}
 @section('footer_scripts')
