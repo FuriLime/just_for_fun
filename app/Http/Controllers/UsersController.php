@@ -826,7 +826,6 @@ class UsersController extends JoshController
         $mc = new Mailchimp($apiKey);
 
         $result_member = $mc->get("lists/$listId/members");
-        dd($result_member);
         $categories = $mc->get("lists/$listId/interest-categories");
         foreach($categories['categories'] as $cat_id){
                 $new_cat_id[] = $cat_id->id;
