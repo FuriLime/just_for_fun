@@ -85,26 +85,7 @@ Create New event
                                     <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
 
-                         <div class='col-md-5'>
-                             <div class="form-group">
-                                 <div class='input-group date' id='datetimepicker6'>
-                                     <input type='text' class="form-control" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class='col-md-5'>
-                             <div class="form-group">
-                                 <div class='input-group date' id='datetimepicker7'>
-                                     <input type='text' class="form-control" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-                                 </div>
-                             </div>
-                         </div>
+
                          <div class="form-group add_event_section_link" id="change_time_zone">
                             <span>Timezone is {{$user_timezone}}. Default duration is 1h. <a id="time_change">Change here.</a></span>
                          </div>
@@ -224,18 +205,6 @@ Create New event
                 if (result == true) {
                    $('#create_event').submit();
                 }
-            });
-        });
-        $(function () {
-            $('#datetimepicker6').datetimepicker();
-            $('#datetimepicker7').datetimepicker({
-                useCurrent: false //Important! See issue #1075
-            });
-            $("#datetimepicker6").on("dp.change", function (e) {
-                $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-            });
-            $("#datetimepicker7").on("dp.change", function (e) {
-                $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
             });
         });
     </script>
