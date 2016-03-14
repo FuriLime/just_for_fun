@@ -551,13 +551,13 @@ if($('#location').val()) {
 
 	<script type="text/javascript">
 	$('#timezone').select2();
-//	$("#datestart").on("dp.change", function (e) {
-//		$('#datefinish').data("DateTimePicker").minDate(e.date);
-//	});
-//	// run second calendar after closing of first
-//	$("#datestart").on("dp.hide", function (e) {
-//		$('#datefinish .glyphicon-calendar').click();
-//	});
+	$("#datestart").on("dp.change", function (e) {
+		$('#datefinish').data("DateTimePicker").minDate(e.date);
+	});
+	// run second calendar after closing of first
+	$("#datestart").on("dp.hide", function (e) {
+		$('#datefinish .glyphicon-calendar').click();
+	});
 
 
 
