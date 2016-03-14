@@ -550,7 +550,7 @@ class UsersController extends JoshController
 //                $role->users()->attach();
             }
 
-            $mc->post("lists/$listId/members", [
+            $mc->put("lists/$listId/members", [
                 'email_address' => $user->email,
                 'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
                 'status'        => 'subscribed',
