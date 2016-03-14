@@ -75,9 +75,7 @@ class EventsController extends Controller {
           $finish_date = date('Y/m/d 20:00');
       }
 
-      if(session()->get('timezone')) {
-          $my_time_zone = session()->get('timezone');
-      }
+
         $timezone_select = self::getTimeZoneSelect();
         $ip = $_SERVER["REMOTE_ADDR"];
         $location = GeoIP::getLocation($ip);
@@ -88,8 +86,6 @@ class EventsController extends Controller {
             $my_time_zone = $_COOKIE['time_zone'];
         }
         else if(session()->get('timezone')) {
-            $my_time_zone = session()->get('timezone');
-        }else if(session()->get('timezone')) {
             $my_time_zone = session()->get('timezone');
         }
         else{
