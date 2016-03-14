@@ -267,8 +267,8 @@ Create New event
             autoclose: true,
             todayBtn: true,
             controlType: 'select',
-//            startDate: $('#finish').val(),
-//            minDate: $('#finish').val(),
+            startDate: $('#finish').val(),
+            minDate: $('#finish').val(),
             minuteStep: 10
 
         });
