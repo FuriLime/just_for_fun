@@ -240,22 +240,10 @@ Create New event
             controlType: 'select',
             minDate: nowtimedate
         });
-        $("#datefinish").datetimepicker({
-            onSelect: function(dateStr) {alert('asdasdsad');},
-            format: 'yyyy/mm/dd hh:ii',
-            autoclose: true,
-            todayBtn: true,
-            controlType: 'select',
-            startDate: $('#finish').val(),
-            minDate: $('#finish').val(),
-            minuteStep: 10
-
-        });
     });
 
 
     $('#start').on('change', function() {
-        $("#datefinish").datetimepicker("refresh");
         var start_def_date = new Date('{{ $start_date }}');
         var start_date = new Date($('#start').val());
 
