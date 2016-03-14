@@ -90,7 +90,6 @@ class EventsController extends Controller {
         }
 
       if(session()->get('timezone')) {
-          dd('asdasd');
           $my_time_zone = session()->get('timezone');
       }
 
