@@ -244,7 +244,6 @@ Create New event
 
 
     $('#start').on('change', function() {
-        $( "#datefinish" ).datetimepicker("destroy");
         var start_def_date = new Date('{{ $start_date }}');
         var start_date = new Date($('#start').val());
 
@@ -277,17 +276,6 @@ Create New event
     });
 
     $('#finish').on('change', function() {
-        $("#datefinish").datetimepicker({
-            onSelect: function() {alert('sdfsdfsdf')},
-            format: 'yyyy/mm/dd hh:ii',
-            autoclose: true,
-            todayBtn: true,
-            controlType: 'select',
-            startDate:new Date($('#finish').val()),
-            minDate: new Date($('#finish').val()),
-            minuteStep: 10
-
-        });
         var start_date = new Date($('#start').val());
         var end_date = new Date($('#finish').val());
 
