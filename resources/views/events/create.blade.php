@@ -268,7 +268,7 @@ Create New event
         end_date = end_date.format('Y/m/d H:i');
         $('#finish').val(end_date);
         console.log($('#finish').val());
-        if($('#finish').val('NaN/NaN/NaN NaN:NaN')){
+        if($('#finish').val()=='NaN/NaN/NaN NaN:NaN'){
             alert('sdfdf');
             $('#finish').val('');
         }
