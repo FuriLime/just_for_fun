@@ -256,8 +256,8 @@ Create New event
         var end_date = new Date(start_date);
         end_date.setHours(start_date.getHours() + 1);
         end_date = end_date.format('Y/m/d H:i');
-        console.log(end_date);
         $('#finish').val(end_date);
+        console.log($('#finish').val());
         $("#datefinish").datetimepicker({
             onSelect: function() {alert('sdfsdfsdf')},
             format: 'yyyy/mm/dd hh:ii',
@@ -265,12 +265,10 @@ Create New event
             todayBtn: true,
             controlType: 'select',
             startDate: $('#finish').val(),
-
+            minDate: $('#finish').val(),
             minuteStep: 10
 
         });
-        "change",
-        { minDate: $('#finish').val() }
 
     });
 
