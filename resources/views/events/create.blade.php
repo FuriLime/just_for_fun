@@ -269,7 +269,7 @@ Create New event
             todayBtn: true,
             controlType: 'select',
             startDate: end_date,
-            minDate: new Date($('#finish').val()),
+            minDate: end_date,
             minuteStep: 10
 
         });
