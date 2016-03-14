@@ -74,6 +74,10 @@ class EventsController extends Controller {
       }else {
           $finish_date = date('Y/m/d 20:00');
       }
+
+      if(session()->get('timezone')) {
+          $my_time_zone = session()->get('timezone');
+      }
         $timezone_select = self::getTimeZoneSelect();
         $ip = $_SERVER["REMOTE_ADDR"];
         $location = GeoIP::getLocation($ip);
@@ -84,6 +88,8 @@ class EventsController extends Controller {
             $my_time_zone = $_COOKIE['time_zone'];
         }
         else if(session()->get('timezone')) {
+            $my_time_zone = session()->get('timezone');
+        }else if(session()->get('timezone')) {
             $my_time_zone = session()->get('timezone');
         }
         else{
@@ -142,6 +148,9 @@ class EventsController extends Controller {
       }
       if(isset($_POST['finish'])) {
           session()->put('finish', $_POST['finish']);
+      }
+      if(isset($_POST['timezone'])) {
+          session()->put('timezone', $_POST['timezone']);
       }
     $this->validate($request, [
       'title' => 'required|max:80',
