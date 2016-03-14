@@ -274,6 +274,7 @@ Create New event
             minuteStep: 10
 
         });
+        $("#datefinish").datetimepicker("refresh");
     });
 
     $('#finish').on('change', function() {
