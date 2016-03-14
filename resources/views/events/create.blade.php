@@ -244,18 +244,6 @@ Create New event
         });
     });
 
-    $("#datefinish").datetimepicker({
-        onSelect: function(data) {alert('sdfsdfsdf')},
-        format: 'yyyy/mm/dd hh:ii',
-        autoclose: true,
-        todayBtn: true,
-        controlType: 'select',
-        startDate: new Date($('#finish').val()),
-        minDate: new Date($('#finish').val()),
-        minuteStep: 10
-
-    });
-
 
     $('#start').on('change', function() {
         var start_def_date = new Date('{{ $start_date }}');
