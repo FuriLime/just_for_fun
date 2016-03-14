@@ -868,6 +868,7 @@ class UsersController extends JoshController
             catch (\Mailchimp_Error $e) {
                 // do something
             }
+            return View('admin.notisfaction', compact('val_name'));
         }
 
     }
