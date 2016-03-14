@@ -265,7 +265,6 @@ Create New event
         end_date.setHours(start_date.getHours() + 1);
         end_date = end_date.format('Y/m/d H:i');
         $('#finish').val(end_date);
-        console.log($('#finish').val());
         if($('#finish').val()=='NaN/NaN/NaN NaN:NaN'){
             $('#finish').val('');
         }
@@ -276,8 +275,8 @@ Create New event
             autoclose: true,
             todayBtn: true,
             controlType: 'select',
-            startDate: $('#finish').val(),
-            minDate: $('#finish').val(),
+            startDate: end_date,
+            minDate: end_date,
             minuteStep: 10
 
         });
