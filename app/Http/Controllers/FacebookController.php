@@ -20,6 +20,8 @@ use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUser;
 use Sentinel;
 use Activation;
+use Mailchimp\Mailchimp;
+use Config;
 
 class FacebookController extends Controller
 {
@@ -47,7 +49,10 @@ class FacebookController extends Controller
 
     public function oauthfacebook()
     {
-
+        $apiKey = Config::get('mailchimp.apikey');
+        $mc = new Mailchimp($apiKey);
+        $listId = Config::get('mailchimp.listId');
+        dd($listId);
         $userFace = Socialite::driver('facebook')->user();
         $user = User::whereemail($userFace->getEmail(), $userFace->getName())->first();
         if(!$user){
