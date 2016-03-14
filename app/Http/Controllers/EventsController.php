@@ -21,9 +21,7 @@ use App\Role;
 use GeoIP;
 use DB;
 use Spatie\GoogleTagManager;
-
-require_once __DIR__ . '/../vendor/autoload.php';
-
+use Eluceo;
 class EventsController extends Controller {
 
   /**
