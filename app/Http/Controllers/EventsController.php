@@ -464,23 +464,13 @@ class EventsController extends Controller {
 
         case 'iCal':
             $result = 'success_load';
-            $vCalendar = new \Eluceo\iCal\Component\Calendar('www.example.com');
-// 2. Create an event
-            $vEvent = new \Eluceo\iCal\Component\Event();
-            $vEvent->setDtStart(new \DateTime('2012-12-24'));
-            $vEvent->setDtEnd(new \DateTime('2012-12-24'));
-            $vEvent->setNoTime(true);
-            $vEvent->setSummary('Summary with some german "umlauten" and a backslash \\: Kinder mögen Äpfel pflücken.');
-            $vEvent->setCategories(['holidays']);
-// Adding Timezone (optional)
-            $vEvent->setUseTimezone(true);
-// 3. Add event to calendar
-            $vCalendar->addComponent($vEvent);
-// 4. Set headers
-            header('Content-Type: text/calendar; charset=utf-8');
-            header('Content-Disposition: attachment; filename="cal.ics"');
-// 5. Output
-            echo $vCalendar->render();
+            $calendar_link = '/assets/ical.php?name='. $event['title'] .
+                '&sd='. $event_start_zero->format('Ymd') .
+                '&st='. $event_start_zero->format('His') .
+                '&fd='. $event_finish_zero->format('Ymd') .
+                '&ft='. $event_finish_zero->format('His') .
+                '&loc='. $event['location'] .
+                '&desc='. $event['description'];
             break;
 
                 default:
