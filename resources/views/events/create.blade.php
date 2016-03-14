@@ -49,7 +49,7 @@ Create New event
                         <label for="title">@lang('frontend.title')</label>
                         {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}
                         <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-
+                        {{ $errors->first('title') }}
                     </div>
 
                     <div class="form-group add_event_section_link" id="add_dicription">
