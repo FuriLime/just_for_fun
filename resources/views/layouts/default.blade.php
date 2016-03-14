@@ -210,7 +210,7 @@
                                 {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
                             </div>
                         </div>
-                        {{--{!! Honeypot::generate('email', 'password') !!}--}}
+                        {!! Honeypot::generate('email', 'password') !!}
                         <div class="form-group {{ $errors->first('password', 'has-error') }}">
                             <label style="margin-bottom:0px;" for="password" class="youpasswd">
                                 <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
