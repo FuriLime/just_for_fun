@@ -546,9 +546,9 @@ class UsersController extends JoshController
                     0 => ['user_id' => $user->id, 'account_id' => $acc_id],
                 ];
 
-                $role->users()->attach($rolew);
+                $role->users()->attach($user);
 
-//                $role->users()->attach($user);
+//                $role->users()->attach();
             }
 
 
