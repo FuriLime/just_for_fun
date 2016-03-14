@@ -453,16 +453,13 @@ class EventsController extends Controller {
 
         case 'Outloock':
             $result = 'success_load';
-            $vCalendar = new \Eluceo\iCal\Component\Calendar('www.example.com');
-            $vEvent = new \Eluceo\iCal\Component\Event();
-            $vEvent
-                ->setDtStart(new \DateTime($event_start_zero))
-                ->setDtEnd(new \DateTime($event_finish_zero))
-                ->setNoTime(true)
-                ->setSummary('Christmas')
-            ;
-            $vCalendar->addComponent($vEvent);
-            echo $vCalendar->render();
+            $calendar_link = '/assets/ical.php?name='. $event['title'] .
+                '&sd='. $event_start_zero->format('Ymd') .
+                '&st='. $event_start_zero->format('His') .
+                '&fd='. $event_finish_zero->format('Ymd') .
+                '&ft='. $event_finish_zero->format('His') .
+                '&loc='. $event['location'] .
+                '&desc='. $event['description'];
             break;
 
         case 'iCal':

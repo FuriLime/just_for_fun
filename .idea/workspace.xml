@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ical.php" afterPath="$PROJECT_DIR$/public/assets/ical.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -28,34 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-49.73077" vertical-offset="7509" max-vertical-offset="10290">
-              <caret line="910" column="61" selection-start-line="910" selection-start-column="61" selection-end-line="910" selection-end-column="61" />
-              <folding>
-                <element signature="e#38#51#0#PHP" expanded="true" />
-                <element signature="e#354#7701#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ical.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ical.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52797204" vertical-offset="298" max-vertical-offset="870">
+            <state vertical-scroll-proportion="-12.583333" vertical-offset="298" max-vertical-offset="870">
               <caret line="40" column="125" selection-start-line="40" selection-start-column="125" selection-end-line="40" selection-end-column="125" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="229.375" vertical-offset="6570" max-vertical-offset="9255">
-              <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.4293381" vertical-offset="6390" max-vertical-offset="9210">
+              <caret line="462" column="18" selection-start-line="462" selection-start-column="18" selection-end-line="462" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -130,7 +117,6 @@
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071442_create_user_profiles_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/linkedController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MicrosoftController.php" />
@@ -143,6 +129,7 @@
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/ical.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
       </list>
     </option>
   </component>
@@ -331,12 +318,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-02234" summary="database">
-      <created>1457954615188</created>
-      <option name="number" value="02234" />
-      <option name="project" value="LOCAL" />
-      <updated>1457954615188</updated>
     </task>
     <task id="LOCAL-02235" summary="database">
       <created>1457954938887</created>
@@ -626,7 +607,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457966166963</updated>
     </task>
-    <option name="localTasksCounter" value="2283" />
+    <task id="LOCAL-02283" summary="database">
+      <created>1457966575129</created>
+      <option name="number" value="02283" />
+      <option name="project" value="LOCAL" />
+      <updated>1457966575129</updated>
+    </task>
+    <option name="localTasksCounter" value="2284" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1068,18 +1055,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+    <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="229.375" vertical-offset="6570" max-vertical-offset="9255">
-          <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+        <state vertical-scroll-proportion="-12.583333" vertical-offset="298" max-vertical-offset="870">
+          <caret line="40" column="125" selection-start-line="40" selection-start-column="125" selection-end-line="40" selection-end-column="125" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52797204" vertical-offset="298" max-vertical-offset="870">
-          <caret line="40" column="125" selection-start-line="40" selection-start-column="125" selection-end-line="40" selection-end-column="125" />
+        <state vertical-scroll-proportion="0.4293381" vertical-offset="6390" max-vertical-offset="9210">
+          <caret line="462" column="18" selection-start-line="462" selection-start-column="18" selection-end-line="462" selection-end-column="18" />
           <folding />
         </state>
       </provider>
