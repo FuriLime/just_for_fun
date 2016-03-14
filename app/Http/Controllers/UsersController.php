@@ -854,6 +854,7 @@ class UsersController extends JoshController
                     }
                 }
             }
+            return View('admin.notisfaction', compact('val_name'));
         }
         else{
             try {
@@ -869,7 +870,7 @@ class UsersController extends JoshController
                 // do something
             }
         }
-        return View('admin.notisfaction', compact('val_name'));
+
     }
 
 
