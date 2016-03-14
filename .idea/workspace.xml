@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -28,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8318426" vertical-offset="3945" max-vertical-offset="10080">
+            <state vertical-scroll-proportion="-19.375" vertical-offset="3945" max-vertical-offset="10080">
               <caret line="531" column="56" selection-start-line="531" selection-start-column="56" selection-end-line="531" selection-end-column="56" />
               <folding>
                 <element signature="e#38#51#0#PHP" expanded="true" />
@@ -44,8 +44,8 @@
       <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.541667" vertical-offset="2891" max-vertical-offset="7680">
-              <caret line="242" column="8" selection-start-line="242" selection-start-column="8" selection-end-line="242" selection-end-column="34" />
+            <state vertical-scroll-proportion="-8.291667" vertical-offset="2936" max-vertical-offset="7680">
+              <caret line="243" column="27" selection-start-line="243" selection-start-column="27" selection-end-line="243" selection-end-column="27" />
               <folding>
                 <element signature="e#511#573#0#PHP" expanded="false" />
                 <element signature="e#611#838#0#PHP" expanded="false" />
@@ -54,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FacebookController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FacebookController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FacebookController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.5" vertical-offset="720" max-vertical-offset="1755">
-              <caret line="76" column="47" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.15734266" vertical-offset="705" max-vertical-offset="1740">
+              <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -126,8 +126,8 @@
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071442_create_user_profiles_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
       </list>
     </option>
   </component>
@@ -316,12 +316,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-02143" summary="database">
-      <created>1457939431081</created>
-      <option name="number" value="02143" />
-      <option name="project" value="LOCAL" />
-      <updated>1457939431081</updated>
     </task>
     <task id="LOCAL-02144" summary="database">
       <created>1457939455155</created>
@@ -611,7 +605,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457947437391</updated>
     </task>
-    <option name="localTasksCounter" value="2192" />
+    <task id="LOCAL-02192" summary="database">
+      <created>1457947461845</created>
+      <option name="number" value="02192" />
+      <option name="project" value="LOCAL" />
+      <updated>1457947461845</updated>
+    </task>
+    <option name="localTasksCounter" value="2193" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1012,20 +1012,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FacebookController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.5" vertical-offset="720" max-vertical-offset="1755">
-          <caret line="76" column="47" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
+        <state vertical-scroll-proportion="-19.375" vertical-offset="3945" max-vertical-offset="10080">
+          <caret line="531" column="56" selection-start-line="531" selection-start-column="56" selection-end-line="531" selection-end-column="56" />
           <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
+            <element signature="e#38#51#0#PHP" expanded="true" />
+            <element signature="e#341#7688#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.541667" vertical-offset="2891" max-vertical-offset="7680">
-          <caret line="242" column="8" selection-start-line="242" selection-start-column="8" selection-end-line="242" selection-end-column="34" />
+        <state vertical-scroll-proportion="-8.291667" vertical-offset="2936" max-vertical-offset="7680">
+          <caret line="243" column="27" selection-start-line="243" selection-start-column="27" selection-end-line="243" selection-end-column="27" />
           <folding>
             <element signature="e#511#573#0#PHP" expanded="false" />
             <element signature="e#611#838#0#PHP" expanded="false" />
@@ -1033,13 +1034,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FacebookController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8318426" vertical-offset="3945" max-vertical-offset="10080">
-          <caret line="531" column="56" selection-start-line="531" selection-start-column="56" selection-end-line="531" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.15734266" vertical-offset="705" max-vertical-offset="1740">
+          <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
           <folding>
-            <element signature="e#38#51#0#PHP" expanded="true" />
-            <element signature="e#341#7688#0#PHP" expanded="false" />
+            <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
