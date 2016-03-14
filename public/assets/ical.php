@@ -57,7 +57,7 @@ if (isset($ID) && $ID != "") {
     $file .= "TZOFFSETTO:\r\n";
     $file .= "TZNAME:UTC\r\n";
     $file .= "DTSTART:19701101T020000\r\n";
-    $file .= "RRULE:\r\n";
+    $file .= "RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\n";
     $file .= "END:STANDARD\r\n";
     $file .= "END:VTIMEZONE\r\n";
 
