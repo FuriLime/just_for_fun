@@ -259,6 +259,7 @@ Create New event
         console.log(end_date);
         $('#finish').val(end_date);
         console.log($('#finish').val());
+        console.log(new Date($('#finish').val()));
         var finaldate = $('#finish').val();
 //            console.log(finaldate);
         $("#datefinish").datetimepicker({
