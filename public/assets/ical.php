@@ -81,6 +81,5 @@ if (isset($ID) && $ID != "") {
     $file .= "END:VCALENDAR\r\n";
 
     echo $file;
-    die;
     exit;
 }
