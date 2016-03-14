@@ -244,6 +244,7 @@ Create New event
 
 
     $('#start').on('change', function() {
+        $( "#datefinish" ).datetimepicker("destroy");
         var start_def_date = new Date('{{ $start_date }}');
         var start_date = new Date($('#start').val());
 
