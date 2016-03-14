@@ -38,7 +38,7 @@ if (isset($ID) && $ID != "") {
 //	echo $file;
 //	exit;
 
-    $vCalendar = new \Eluceo\iCal\Component\Calendar('');
+    $vCalendar = new \Eluceo\iCal\Component\Calendar('http://event.test-y-sbm.com/events/36b226b6-1404-433a-8520-692be99aabf5');
     $vEvent = new \Eluceo\iCal\Component\Event();
     $vEvent
         ->setDtStart(new \DateTime($date))
