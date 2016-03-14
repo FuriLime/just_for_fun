@@ -230,15 +230,26 @@ Create New event
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
         var nowtimedate = new Date();
         nowtimedate = nowtimedate.format('Y/m/d H:i');
-        $("#datestart").datetimepicker({
-            onSelect: function() {alert('sdfsdfsdf')},
-            format: 'yyyy/mm/dd hh:ii',
-            autoclose: true,
-            todayBtn: true,
-            startDate: nowtimedate,
-            minuteStep: 10,
-            controlType: 'select',
-            minDate: nowtimedate
+//        $("#datestart").datetimepicker({
+//            onSelect: function() {alert('sdfsdfsdf')},
+//            format: 'yyyy/mm/dd hh:ii',
+//            autoclose: true,
+//            todayBtn: true,
+//            startDate: nowtimedate,
+//            minuteStep: 10,
+//            controlType: 'select',
+//            minDate: nowtimedate
+//        });
+        $(function() {
+            $('#datestart').datetimepicker( {
+                onSelect: function(date) {
+                    alert(date);
+                },
+                selectWeek: true,
+                inline: true,
+                startDate: '01/01/2000',
+                firstDay: 1
+            });
         });
     });
 
