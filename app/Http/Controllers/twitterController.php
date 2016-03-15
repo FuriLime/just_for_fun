@@ -47,7 +47,7 @@ class twitterController extends Controller
 
         if(empty($userTwit->email))
         {
-            return redirect()->route('home');
+            return back()->withInput();
         }
         $user = User::wheretwit_nick($userTwit->getNickName())->first();
         if(!$user){
