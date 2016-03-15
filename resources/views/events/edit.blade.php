@@ -111,7 +111,7 @@
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
-                                    <input class="form-control" size="16" id="start" name="start" type="datetime" value="{{$store_info['start']}}">
+                                    <input class="form-control" size="16" id="start" name="start" type="datetime" value="{{$event['start']}}">
 
                                 </div>
                                 @if ($errors->first('start'))
