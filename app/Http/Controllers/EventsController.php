@@ -349,6 +349,7 @@ class EventsController extends Controller {
 //    $event['finish'] = str_replace('/','-',$store_info['finish']);
     $event['timezone'] =$event['timezone'];
     $event->update($request->all());
+      Session::forget('timezone');
 
     // Is the user logged in?
     if (Sentinel::check()) {
