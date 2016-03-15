@@ -315,7 +315,7 @@
 //                                street = splits[0] + ' ' +splits[1].replace(/(^\s*)$/g, '');
                             street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#street').val(street);
-
+console.log(street);
                                 sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#city').val(sity);
 
