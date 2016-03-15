@@ -294,7 +294,7 @@ class EventsController extends Controller {
         // for bootstrap-datepicker
         $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
-        $event['timezone'] =$event['timezone'];
+//        $event['timezone'] =$event['timezone'];
         return view('events.edit', compact('event'));
     }
 
