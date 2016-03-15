@@ -79,6 +79,16 @@ Edit a event
                         <label for="url">@lang('frontend.url')</label>
                         {!! Form::text('url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'url']) !!}
                     </div>
+
+                         <div class="form-group">
+                             <label for="parmanent_url">@lang('frontend.url')</label>
+                             {!! Form::text('parmanent_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'parmanent_url']) !!}
+                         </div>
+
+                         <div class="form-group">
+                             <label for="readable_url">@lang('frontend.url')</label>
+                             {!! Form::text('readable_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'readable_url']) !!}
+                         </div>
 					
 					<div class="form-group">
                         <label for="timezone">@lang('frontend.timezone')</label>
