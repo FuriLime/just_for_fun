@@ -91,7 +91,7 @@ Edit a event
 					<div class="form-group">
                         <label for="start">@lang('frontend.date')</label>
 						<div class="form-group form_datetime3">
-							<div class="input-group date" id="datestart">
+							<div class="input-group date form_datetime3 col-md-12" id="datestart">
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-calendar"></span>
 								</span>
@@ -102,8 +102,8 @@ Edit a event
 					
 					<div class="form-group">
                         <label for="start">@lang('frontend.enddate')</label>
-						<div class="form-group form_datetime3">
-							<div class="input-group date" id="datefinish">
+						<div class="form-group form_datetime">
+							<div class="input-group date form_datetime3 col-md-12 " id="datefinish">
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-calendar"></span>
 								</span>
