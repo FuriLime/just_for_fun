@@ -24,13 +24,13 @@ use Spatie\GoogleTagManager;
 
 class EventsController extends Controller {
 
-  /**
-   * Display a listing of the resource.
-   *
-   * @return Response
-   */
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
 
-  public function index()
+    public function index()
     {
         $events = Event::latest()->get();
         foreach ($events as $event) {
@@ -49,31 +49,31 @@ class EventsController extends Controller {
         if (Sentinel::check()) {
 //            if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
 
-                return view('events.index', compact('events'));
+            return view('events.index', compact('events'));
 //                }
-            }
+        }
         else {
             //if not logined user
-                return view('events.index', compact('events'));
-            }
+            return view('events.index', compact('events'));
         }
-  /**
-   * Show the form for creating a new resource.
-   *
-   * @return Response
-   */
-  public function create(Request $request)
-  {
-      if(session()->get('start')) {
-          $start_date = session()->get('start');
-      }else {
-          $start_date = date('Y/m/d 19:00');
-      }
-      if(session()->get('finish')) {
-          $finish_date = session()->get('finish');
-      }else {
-          $finish_date = date('Y/m/d 20:00');
-      }
+    }
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
+    public function create(Request $request)
+    {
+        if(session()->get('start')) {
+            $start_date = session()->get('start');
+        }else {
+            $start_date = date('Y/m/d 19:00');
+        }
+        if(session()->get('finish')) {
+            $finish_date = session()->get('finish');
+        }else {
+            $finish_date = date('Y/m/d 20:00');
+        }
 
 
         $timezone_select = self::getTimeZoneSelect();
@@ -89,158 +89,158 @@ class EventsController extends Controller {
             $my_time_zone = 'UTC';
         }
 
-      if(session()->get('timezone')) {
-          $my_time_zone = session()->get('timezone');
-      }
+        if(session()->get('timezone')) {
+            $my_time_zone = session()->get('timezone');
+        }
 
-      Session::forget('timezone');
-      Session::forget('start');
-      Session::forget('finish');
-
-      // Is the user logged in?
-    if (Sentinel::check()) {
-//      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
-                // for bootstrap-datepicker
-                //registered user
-//                $start_date_tmp = strtotime("+1 day");
-                if(Sentinel::getUser()->timezone){
-                    $user_timezone = Sentinel::getUser()->timezone;
-                } else{
-                        $user_timezone = $my_time_zone;
-                }
-
-                return view('events.create', array(
-                    'timezone_select' => $timezone_select,
-                    'start_date' => $start_date,
-                    'finish_date' => $finish_date,
-                    'user_timezone' => $user_timezone,
-                ));
-//      }
-    } else {
-      //create events unregister user
-//      $start_date_tmp = strtotime("+1 hour");
-      $user_timezone = $my_time_zone;
-
-      return view('events.create', array(
-        'timezone_select' => $timezone_select,
-        'start_date' => $start_date,
-        'finish_date' => $finish_date,
-        'user_timezone' => $user_timezone,
-      ));
-    }
-  }
-
-  /**
-   * Store a newly created resource in storage.
-   *
-   * @return Response
-   */
-  public function store(Request $request)
-  {
-    if(isset($_POST['timezone'])) {
-      session()->put('timezone', $_POST['timezone']);
-    }
-      if(isset($_POST['start'])) {
-          session()->put('start', $_POST['start']);
-      }
-      if(isset($_POST['finish'])) {
-          session()->put('finish', $_POST['finish']);
-      }
-      if(isset($_POST['timezone'])) {
-          session()->put('timezone', $_POST['timezone']);
-      }
-    $this->validate($request, [
-      'title' => 'required|max:80',
-      'description' => 'max:500',
-      // 'type' => 'required',
-      'location' => 'max:255',
-      'url' => 'max:255',
-      'timezone' => 'required',
-      'start' => 'required',
-      'finish' => 'required',
-    ]);
-      if(Sentinel::check()){
-         $userId = Sentinel::getUser()->id;
-          $user = User::find($userId);
-          $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
-      }else {
-          $user = new User();
-          $user->email = Uuid::uuid4();
-          $user->save();
-          $userId = $user->id;
-          $user = User::find($userId);
-          $account_user = new Account();
-          $account_user->	account_type_id = '1';
-          $account_user->name = $user->uuid;
-          $account_user->slug = $user->uuid;
-          $account_user->save();
-
-          //add user to 'User' group
-          $role = Role::find(2);
-          $rolew = [
-              0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
-          ];
-
-          $role->users()->attach($rolew);
-          $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
-      }
-      $store_info = new Event();
-      $store_info->uuid = Uuid::uuid4(4);
-      $store_info->title = Input::get('title');
-      $store_info->description = Input::get('description');
-      $store_info->location = Input::get('location');
-      $store_info->country = Input::get('Country');
-      $store_info->state = Input::get('State');
-      $store_info->city = Input::get('City');
-      $store_info->street = Input::get('Street');
-      $store_info->timezone = Input::get('timezone');
-      $store_info->finish = Input::get('finish');
-      $store_info->start = Input::get('start');
-      $store_info->author_id = $user->id;
-      $store_info->editor_id = $user->id;
-      $store_info->account_id = $account[0]->account_id;
-      $store_info->permanent_url = Uuid::uuid4();
-      $store_info->readable_url = Uuid::uuid4();
-
-    $date = new \DateTime($store_info->start, new \DateTimeZone($store_info->timezone));
-    $date->setTimezone(new \DateTimeZone('UTC'));
-    $event_start_zero = $date;
-    $date = new \DateTime($store_info->finish, new \DateTimeZone($store_info->timezone));
-    $date->setTimezone(new \DateTimeZone('UTC'));
-    $event_finish_zero = $date;
-
-    // $event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
-    $store_info->start = $event_start_zero->format('Y-m-d H:i');
-    $store_info->finish = $event_finish_zero->format('Y-m-d H:i');
-
-    // Is the user logged in?
-    if (Sentinel::check()) {
-//          dd($store_info);
-//        event::create($store_info);
-        $store_info->save();
-          Session::forget('timezone');
-          Session::forget('start');
-          Session::forget('finish');
-
-        return redirect('events')->with('success', Lang::get('message.success.create'));
-
-    } else {
-        $store_info->save();
         Session::forget('timezone');
         Session::forget('start');
         Session::forget('finish');
-      return redirect('events')->with('success', Lang::get('message.success.create'));
-    }
-  }
 
-  /**
-   * Display the specified resource.
-   *
-   * @param  int  $uuid
-   * @return Response
-   */
-  public function show($uuid)
-  {
+        // Is the user logged in?
+        if (Sentinel::check()) {
+//      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
+            // for bootstrap-datepicker
+            //registered user
+//                $start_date_tmp = strtotime("+1 day");
+            if(Sentinel::getUser()->timezone){
+                $user_timezone = Sentinel::getUser()->timezone;
+            } else{
+                $user_timezone = $my_time_zone;
+            }
+
+            return view('events.create', array(
+                'timezone_select' => $timezone_select,
+                'start_date' => $start_date,
+                'finish_date' => $finish_date,
+                'user_timezone' => $user_timezone,
+            ));
+//      }
+        } else {
+            //create events unregister user
+//      $start_date_tmp = strtotime("+1 hour");
+            $user_timezone = $my_time_zone;
+
+            return view('events.create', array(
+                'timezone_select' => $timezone_select,
+                'start_date' => $start_date,
+                'finish_date' => $finish_date,
+                'user_timezone' => $user_timezone,
+            ));
+        }
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store(Request $request)
+    {
+        if(isset($_POST['timezone'])) {
+            session()->put('timezone', $_POST['timezone']);
+        }
+        if(isset($_POST['start'])) {
+            session()->put('start', $_POST['start']);
+        }
+        if(isset($_POST['finish'])) {
+            session()->put('finish', $_POST['finish']);
+        }
+        if(isset($_POST['timezone'])) {
+            session()->put('timezone', $_POST['timezone']);
+        }
+        $this->validate($request, [
+            'title' => 'required|max:80',
+            'description' => 'max:500',
+            // 'type' => 'required',
+            'location' => 'max:255',
+            'url' => 'max:255',
+            'timezone' => 'required',
+            'start' => 'required',
+            'finish' => 'required',
+        ]);
+        if(Sentinel::check()){
+            $userId = Sentinel::getUser()->id;
+            $user = User::find($userId);
+            $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
+        }else {
+            $user = new User();
+            $user->email = Uuid::uuid4();
+            $user->save();
+            $userId = $user->id;
+            $user = User::find($userId);
+            $account_user = new Account();
+            $account_user->	account_type_id = '1';
+            $account_user->name = $user->uuid;
+            $account_user->slug = $user->uuid;
+            $account_user->save();
+
+            //add user to 'User' group
+            $role = Role::find(2);
+            $rolew = [
+                0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
+            ];
+
+            $role->users()->attach($rolew);
+            $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
+        }
+        $store_info = new Event();
+        $store_info->uuid = Uuid::uuid4(4);
+        $store_info->title = Input::get('title');
+        $store_info->description = Input::get('description');
+        $store_info->location = Input::get('location');
+        $store_info->country = Input::get('Country');
+        $store_info->state = Input::get('State');
+        $store_info->city = Input::get('City');
+        $store_info->street = Input::get('Street');
+        $store_info->timezone = Input::get('timezone');
+        $store_info->finish = Input::get('finish');
+        $store_info->start = Input::get('start');
+        $store_info->author_id = $user->id;
+        $store_info->editor_id = $user->id;
+        $store_info->account_id = $account[0]->account_id;
+        $store_info->permanent_url = Uuid::uuid4();
+        $store_info->readable_url = Uuid::uuid4();
+
+        $date = new \DateTime($store_info->start, new \DateTimeZone($store_info->timezone));
+        $date->setTimezone(new \DateTimeZone('UTC'));
+        $event_start_zero = $date;
+        $date = new \DateTime($store_info->finish, new \DateTimeZone($store_info->timezone));
+        $date->setTimezone(new \DateTimeZone('UTC'));
+        $event_finish_zero = $date;
+
+        // $event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
+        $store_info->start = $event_start_zero->format('Y-m-d H:i');
+        $store_info->finish = $event_finish_zero->format('Y-m-d H:i');
+
+        // Is the user logged in?
+        if (Sentinel::check()) {
+//          dd($store_info);
+//        event::create($store_info);
+            $store_info->save();
+            Session::forget('timezone');
+            Session::forget('start');
+            Session::forget('finish');
+
+            return redirect('events')->with('success', Lang::get('message.success.create'));
+
+        } else {
+            $store_info->save();
+            Session::forget('timezone');
+            Session::forget('start');
+            Session::forget('finish');
+            return redirect('events')->with('success', Lang::get('message.success.create'));
+        }
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $uuid
+     * @return Response
+     */
+    public function show($uuid)
+    {
 
         $ip = $_SERVER["REMOTE_ADDR"];
         $location = GeoIP::getLocation($ip);
@@ -260,249 +260,241 @@ class EventsController extends Controller {
         $date->setTimezone(new \DateTimeZone($my_time_zone));
         $event_finish_zero = $date;
         $event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
-    // Is the user logged in?
-    if (Sentinel::check()) {
+        // Is the user logged in?
+        if (Sentinel::check()) {
 //      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
-          //$event = Event::findOrFail($uuid);
-          return view('events.show', compact('event'));
-            }
+            //$event = Event::findOrFail($uuid);
+            return view('events.show', compact('event'));
+        }
 //    }
 //
-    else {
-      //show event for unregister user
-      return view('events.show', compact('event'));
+        else {
+            //show event for unregister user
+            return view('events.show', compact('event'));
+        }
     }
-  }
 
-  /**
-   * Show the form for editing the specified resource.
-   *
-   * @param  int  $uuid
-   * @return Response
-   */
-  public function edit($uuid)
-  {
-
-    //$event = Event::findOrFail($id);
-    $event = Event::whereUuid($uuid)->first();
-
-    $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
-    // for bootstrap-datepicker
-    $event['start'] = date('Y/m/d H:i', strtotime($event['start']));
-    $event['finish'] = date('Y/m/d H:i', strtotime($event['finish']));
-    $event['timezone'] =$event['timezone'];
-    return view('events.edit', compact('event'));
-  }
-
-  /**
-   * Update the specified resource in storage.
-   *
-   * @param  int  $uuid
-   * @return Response
-   */
-  public function update($uuid, Request $request)
-  {
-
-    $this->validate($request, [
-      'title' => 'required|max:80',
-      'description' => 'max:500',
-//      'type' => 'required',
-      'location' => 'max:255',
-        'Country' => 'max:255',
-        'City' => 'max:255',
-        'State' => 'max:255',
-        'Street' => 'max:255',
-      'event_url' =>'max:255',
-      'timezone' => 'required',
-      'start' => 'required',
-      'finish' => 'required',
-    ]);
-//    $event = Event::findOrFail($uuid);
-
-    $event = Event::whereUuid($uuid)->first();
-    // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
-    $store_info = $request->all();
-//
-//    $event['start'] = str_replace('/','-',$store_info['start']);
-//    $event['finish'] = str_replace('/','-',$store_info['finish']);
-      $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
-    $event['timezone'] =$event['timezone'];
-    $event->update($request->all());
-
-    // Is the user logged in?
-    if (Sentinel::check()) {
-
-        return redirect('events')->with('success', Lang::get('message.success.update'));
-
-    } else {
-      return redirect('events')->with('success', Lang::get('message.success.update'));
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $uuid
+     * @return Response
+     */
+    public function edit($uuid)
+    {
+        //$event = Event::findOrFail($id);
+        $event = Event::whereUuid($uuid)->first();
+        $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
+        // for bootstrap-datepicker
+        $event['start'] = date('Y/m/d H:i', strtotime($event['start']));
+        $event['finish'] = date('Y/m/d H:i', strtotime($event['finish']));
+        $event['timezone'] =$event['timezone'];
+        return view('events.edit', compact('event'));
     }
-  }
 
-  /**
-   * Delete confirmation for the given Event.
-   *
-   * @param  int      $uuid
-   * @return View
-   */
-  public function getModalDelete($uuid = null)
-  {
-    $error = '';
-    $model = '';
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int  $uuid
+     * @return Response
+     */
+    public function update($uuid, Request $request)
+    {
+        $this->validate($request, [
+            'title' => 'required|max:80',
+            'description' => 'required|max:500',
+            'type' => 'required',
+            'location' => 'required|max:255',
+            'parmanent_url' =>'required|max255',
+            'readable_url' =>'required|max255',
+            'url' => 'max:255',
+            'timezone' => 'required',
+            'start' => 'required',
+            'finish' => 'required',
+        ]);
+        //$event = Event::findOrFail($uuid);
+        $event = Event::whereUuid($uuid)->first();
+        // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
+        $store_info = $request->all();
+        $event['start'] = str_replace('/','-',$store_info['start']);
+        $event['finish'] = str_replace('/','-',$store_info['finish']);
+        $event['timezone'] =$event['timezone'];
+        $event->update($request->all());
 
-    // Is the user logged in?
-    if (Sentinel::check()) {
+        // Is the user logged in?
+        if (Sentinel::check()) {
+
+            return redirect('events')->with('success', Lang::get('message.success.update'));
+
+        } else {
+            return redirect('events')->with('success', Lang::get('message.success.update'));
+        }
+    }
+
+    /**
+     * Delete confirmation for the given Event.
+     *
+     * @param  int      $uuid
+     * @return View
+     */
+    public function getModalDelete($uuid = null)
+    {
+        $error = '';
+        $model = '';
+
+        // Is the user logged in?
+        if (Sentinel::check()) {
 //      if (Sentinel::inRole('admin')) {
 //        $confirm_route =  route('admin.events.delete',['uuid'=>$uuid]);
 //        return View('admin/layouts/modal_confirmation', compact('error','model', 'confirm_route'));
 //      } else {
-        $confirm_route =  route('events.delete',['uuid'=>$uuid]);
-        return View('layouts/modal_confirmation', compact('error','model', 'confirm_route'));
+            $confirm_route =  route('events.delete',['uuid'=>$uuid]);
+            return View('layouts/modal_confirmation', compact('error','model', 'confirm_route'));
 //      }
-    } else {
-      $confirm_route =  route('events.delete',['uuid'=>$uuid]);
-      return View('layouts/modal_confirmation', compact('error','model', 'confirm_route'));
+        } else {
+            $confirm_route =  route('events.delete',['uuid'=>$uuid]);
+            return View('layouts/modal_confirmation', compact('error','model', 'confirm_route'));
+        }
     }
-  }
 
-  /**
-   * Delete the given Event.
-   *
-   * @param  int      $uuid
-   * @return Redirect
-   */
-  public function getDelete($uuid = null)
-  {
-    $event = Event::whereUuid($uuid)->first();
-    $delete = Event::destroy( $event['id'] );
-    // Is the user logged in?
-    if (Sentinel::check()) {
+    /**
+     * Delete the given Event.
+     *
+     * @param  int      $uuid
+     * @return Redirect
+     */
+    public function getDelete($uuid = null)
+    {
+        $event = Event::whereUuid($uuid)->first();
+        $delete = Event::destroy( $event['id'] );
+        // Is the user logged in?
+        if (Sentinel::check()) {
 //      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
-        return redirect('events')->with('success', Lang::get('message.success.delete'));
+            return redirect('events')->with('success', Lang::get('message.success.delete'));
 //      }
-    } else {
-      return redirect('events')->with('success', Lang::get('message.success.delete'));
+        } else {
+            return redirect('events')->with('success', Lang::get('message.success.delete'));
+        }
+
     }
 
-  }
+    /**
+     * Add to calendar handler.
+     *
+     * @param  char36 $uuid, string $calendar
+     * @return Url
+     */
+    public function addToCalendar(Request $request)
+    {
+        $info = $request->all();
 
-  /**
-   * Add to calendar handler.
-   *
-   * @param  char36 $uuid, string $calendar
-   * @return Url
-   */
-  public function addToCalendar(Request $request)
-  {
-    $info = $request->all();
+        $uuid = $info['uuid'];
+        $calendar = $info['calendar'];
 
-    $uuid = $info['uuid'];
-    $calendar = $info['calendar'];
+        $event = Event::whereUuid($uuid)->first();
+        // perform events time to 00.00 timezone
+        $date = new \DateTime($event['start'], new \DateTimeZone($event['timezone']));
+        $date->setTimezone(new \DateTimeZone($event->timezone));
+        $event_start_zero = $date;
 
-    $event = Event::whereUuid($uuid)->first();
-    // perform events time to 00.00 timezone
-    $date = new \DateTime($event['start'], new \DateTimeZone($event['timezone']));
-    $date->setTimezone(new \DateTimeZone($event->timezone));
-    $event_start_zero = $date;
+        $date = new \DateTime($event['finish'], new \DateTimeZone($event['timezone']));
+        $date->setTimezone(new \DateTimeZone($event->timezone));
+        $event_finish_zero = $date;
 
-    $date = new \DateTime($event['finish'], new \DateTimeZone($event['timezone']));
-    $date->setTimezone(new \DateTimeZone($event->timezone));
-    $event_finish_zero = $date;
+        $difference = strtotime($event['finish']) - strtotime($event['start']);
+        $minuteDifference = (int) ($difference / 60);
+        $hourDifference = (int) ($minuteDifference / 60);
+        $minutesLeft = $minuteDifference - $hourDifference * 60;
 
-    $difference = strtotime($event['finish']) - strtotime($event['start']);
-    $minuteDifference = (int) ($difference / 60);
-    $hourDifference = (int) ($minuteDifference / 60);
-    $minutesLeft = $minuteDifference - $hourDifference * 60;
+        if ($hourDifference > 99) { $duration = '9900'; }
+        else {
+            if ($hourDifference < 10) { $hourDifference = '0'.$hourDifference; }
+            if ($minutesLeft < 10) { $minutesLeft = '0'.$minutesLeft; }
+            $duration = $hourDifference.$minutesLeft;
+        }
+        $result = $error_massage = $calendar_link = '';
+        switch ($calendar) {
 
-    if ($hourDifference > 99) { $duration = '9900'; }
-    else {
-      if ($hourDifference < 10) { $hourDifference = '0'.$hourDifference; }
-      if ($minutesLeft < 10) { $minutesLeft = '0'.$minutesLeft; }
-      $duration = $hourDifference.$minutesLeft;
-    }
-    $result = $error_massage = $calendar_link = '';
-    switch ($calendar) {
+            case 'Google':
+                $timezone = '';
+                $result = 'success';
+                $calendar_link = 'https://www.google.com/calendar/render?action=TEMPLATE'.
+                    '&text='.$event['title'].
+                    '&dates='.$event_start_zero->format('Ymd').'T'.$event_start_zero->format('His').'Z/'.
+                    $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His').'Z'.
+                    $timezone.
+                    '&details='.$event['description'].
+                    '&sprop=website:'.route('events.show',$uuid).
+                    '&location='.$event['location'].'&pli=1&uid=&sf=true&output=xml';
+                break;
 
-      case 'Google':
-        $timezone = '';
-        $result = 'success';
-        $calendar_link = 'https://www.google.com/calendar/render?action=TEMPLATE'.
-        '&text='.$event['title'].
-        '&dates='.$event_start_zero->format('Ymd').'T'.$event_start_zero->format('His').'Z/'.
-        $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His').'Z'.
-        $timezone.
-        '&details='.$event['description'].
-        '&sprop=website:'.route('events.show',$uuid).
-        '&location='.$event['location'].'&pli=1&uid=&sf=true&output=xml';
-        break;
+            case 'Yahoo':
+                // https://docs.google.com/document/d/1scDk4WxGzDSGAF6OWiRkKwdQg9zD8kDReTH9cvTZnVo/edit
+                $result = 'success';
+                $calendar_link = 'https://calendar.yahoo.com/?v=60'.
+                    '&TITLE='.$event['title'].
+                    '&ST='.$event_start_zero->format('Ymd').'T'.$event_start_zero->format('His').'Z'.
+                    // 'Z' does not work at End Time (Yahoo bug), using duration parameter
+                    //'&ET='.$event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His').'Z'.
+                    '&DUR='.$duration.
+                    '&URL='.route('events.show',$uuid).
+                    '&in_loc='.$event['location'].
+                    '&DESC='.$event['description'];
+                break;
 
-      case 'Yahoo':
-        // https://docs.google.com/document/d/1scDk4WxGzDSGAF6OWiRkKwdQg9zD8kDReTH9cvTZnVo/edit
-        $result = 'success';
-        $calendar_link = 'https://calendar.yahoo.com/?v=60'.
-        '&TITLE='.$event['title'].
-        '&ST='.$event_start_zero->format('Ymd').'T'.$event_start_zero->format('His').'Z'.
-        // 'Z' does not work at End Time (Yahoo bug), using duration parameter
-        //'&ET='.$event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His').'Z'.
-        '&DUR='.$duration.
-        '&URL='.route('events.show',$uuid).
-        '&in_loc='.$event['location'].
-        '&DESC='.$event['description'];
-        break;
+            case 'Microsoft':
+                $result = 'success';
+                $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='.
+                    $event_start_zero->format('Ymd').'T'.
+                    $event_start_zero->format('His').'Z' .
+                    '&dtend='. $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His').'Z' .
+                    '&summary='. $event['title'] .
+                    '&location='. $event['location'] .
+                    '&description='. $event['description'];
+                break;
 
-       case 'Microsoft':
-          $result = 'success';
-          $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='.
-              $event_start_zero->format('Ymd').'T'.
-              $event_start_zero->format('His').'Z' .
-              '&dtend='. $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His').'Z' .
-              '&summary='. $event['title'] .
-              '&location='. $event['location'] .
-              '&description='. $event['description'];
-      break;
+            case 'Outloock':
+                $result = 'success_load';
+                $calendar_link = '/assets/ical.php?name='. $event['title'] .
+                    '&sd='. $event_start_zero->format('Ymd') .
+                    '&st='. $event_start_zero->format('His') .
+                    '&fd='. $event_finish_zero->format('Ymd') .
+                    '&ft='. $event_finish_zero->format('His') .
+                    '&loc='. $event['location'] .
+                    '&desc='. $event['description'];
+                break;
 
-        case 'Outloock':
-            $result = 'success_load';
-            $calendar_link = '/assets/ical.php?name='. $event['title'] .
-                '&sd='. $event_start_zero->format('Ymd') .
-                '&st='. $event_start_zero->format('His') .
-                '&fd='. $event_finish_zero->format('Ymd') .
-                '&ft='. $event_finish_zero->format('His') .
-                '&loc='. $event['location'] .
-                '&desc='. $event['description'];
-            break;
+            case 'iCal':
+                $result = 'success_load';
+                $calendar_link = '/assets/ical.php?name='. $event['title'] .
+                    '&sd='. $event_start_zero->format('Ymd') .
+                    '&st='. $event_start_zero->format('His') .
+                    '&fd='. $event_finish_zero->format('Ymd') .
+                    '&ft='. $event_finish_zero->format('His') .
+                    '&loc='. $event['location'] .
+                    '&desc='. $event['description'];
+                break;
 
-        case 'iCal':
-            $result = 'success_load';
-            $calendar_link = '/assets/ical.php?name='. $event['title'] .
-                '&sd='. $event_start_zero->format('Ymd') .
-                '&st='. $event_start_zero->format('His') .
-                '&fd='. $event_finish_zero->format('Ymd') .
-                '&ft='. $event_finish_zero->format('His') .
-                '&loc='. $event['location'] .
-                '&desc='. $event['description'];
-            break;
-
-                default:
+            default:
                 $result = 'error';
                 $error_massage = 'Not supported for now';
                 break;
-                }
+        }
 
-    echo json_encode(array(
-          'result' => $result,
-          'calendar_link' => $calendar_link,
-          'error_massage' => $error_massage,
-      ));
-    exit(0);
-  }
-  
-  /**
-   * Timezone select - generator.
-   *
-   */
+        echo json_encode(array(
+            'result' => $result,
+            'calendar_link' => $calendar_link,
+            'error_massage' => $error_massage,
+        ));
+        exit(0);
+    }
 
-  public static function getTimeZoneSelect()
+    /**
+     * Timezone select - generator.
+     *
+     */
+
+    public static function getTimeZoneSelect()
     {
         $regions = array(
             'Africa' => \DateTimeZone::AFRICA,
@@ -517,8 +509,8 @@ class EventsController extends Controller {
             'Arctic' => \DateTimeZone::ARCTIC
         );
 
-    // save current timezone (DST-detect change it below)
-    $current_timezone = date_default_timezone_get();
+        // save current timezone (DST-detect change it below)
+        $current_timezone = date_default_timezone_get();
 
         $ip = $_SERVER["REMOTE_ADDR"];
         $location = GeoIP::getLocation($ip);
@@ -531,21 +523,21 @@ class EventsController extends Controller {
             $user_time_zone = 'UTC';
         }
 
-           if(Sentinel::check()) {
-                   if (Sentinel::getUser()->timezone) {
-                       $my_time_zone = Sentinel::getUser()->timezone;
-                   }
-                   else {
-                       $my_time_zone = $user_time_zone;
-                   }
-               }
-           else {
-               $my_time_zone = $user_time_zone;
-           }
+        if(Sentinel::check()) {
+            if (Sentinel::getUser()->timezone) {
+                $my_time_zone = Sentinel::getUser()->timezone;
+            }
+            else {
+                $my_time_zone = $user_time_zone;
+            }
+        }
+        else {
+            $my_time_zone = $user_time_zone;
+        }
 
         if(session()->get('timezone')) {
-          $my_time_zone = session()->get('timezone');
-        }   
+            $my_time_zone = session()->get('timezone');
+        }
 
         $structure = '<select class="form-control timezone" name="timezone" id="timezone">';
         $structure .= '<option value="">'.$my_time_zone.'</option>';
@@ -573,20 +565,20 @@ class EventsController extends Controller {
                         $city = $city . '/'. $subcity;
                     }
 
-          $utc_offset = (float) $p;
-          $utc_offset = $utc_offset * 60;
+                    $utc_offset = (float) $p;
+                    $utc_offset = $utc_offset * 60;
 
-          // country code
-          $location['country_code']  = '';
-          //$tz = new \DateTimeZone($timeZone);
-          //$location = $tz->getLocation();
+                    // country code
+                    $location['country_code']  = '';
+                    //$tz = new \DateTimeZone($timeZone);
+                    //$location = $tz->getLocation();
 
-          // DST
-          date_default_timezone_set($timeZone);
+                    // DST
+                    date_default_timezone_set($timeZone);
 //          $dst = date('I'); // this will be 1 in DST or else 0
 
 //                     $structure .= "<option data-countrycode='".$location['country_code']."' data-offset='".$utc_offset."' ".(($timeZone == $selectedZone) ? 'selected="selected "':'') . " value=\"".($timeZone)."\">(".$p. " UTC) " .str_replace('_',' ',$city)."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( ".$timeZone." | DST ".$dst.")</option>";
-                  $structure .= "<option data-countrycode='".$location['country_code']."' data-offset='".$utc_offset."' ".(($timeZone == $my_time_zone) ? 'selected="selected "':'') . " value=\"".($timeZone)."\">".$timeZone."</option>";
+                    $structure .= "<option data-countrycode='".$location['country_code']."' data-offset='".$utc_offset."' ".(($timeZone == $my_time_zone) ? 'selected="selected "':'') . " value=\"".($timeZone)."\">".$timeZone."</option>";
                 }
 
                 $selectContinent = $continent;
@@ -595,13 +587,13 @@ class EventsController extends Controller {
 
         $structure .= '</optgroup></select>';
 
-    // restore current timezone
-    date_default_timezone_set($current_timezone);
-  /*
-      if(session()->get('timezone')) {
-        date_default_timezone_set(session()->get('timezone'));
-      }*/
-    
+        // restore current timezone
+        date_default_timezone_set($current_timezone);
+        /*
+            if(session()->get('timezone')) {
+              date_default_timezone_set(session()->get('timezone'));
+            }*/
+
         return $structure;
     }
 
