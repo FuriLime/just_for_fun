@@ -44,9 +44,9 @@ class twitterController extends Controller
         $mc = new Mailchimp($apiKey);
         $listId = Config::get('mailchimp.listId');
         $userTwit = Socialite::driver('twitter')->user();
-        if(isset($_POST)){
-            dd($_POST);
-        }
+//        if(isset($_POST)){
+//            dd($_POST);
+//        }
 //        if(empty($userTwit->email))
 //        {
 //            return redirect()->route('welcome');
