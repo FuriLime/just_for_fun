@@ -114,8 +114,8 @@
                         <div class="form-group">
                             <label for="status">@lang('frontend.status')</label>
                             <select class="form-control active" name="status" id="status">
-                                <option value="0">@lang('frontend.draft')</option>
-                                <option value="1">@lang('frontend.published')</option>
+                                <option value="Draft">@lang('frontend.draft')</option>
+                                <option value="Publish">@lang('frontend.published')</option>
                             </select>
                         </div>
 
