@@ -302,15 +302,6 @@ class EventsController extends Controller {
   public function update($uuid, Request $request)
   {
 
-      if(isset($_POST['timezone'])) {
-          session()->put('timezone', $_POST['timezone']);
-      }
-      if(isset($_POST['start'])) {
-          session()->put('start', $_POST['start']);
-      }
-      if(isset($_POST['finish'])) {
-          session()->put('finish', $_POST['finish']);
-      }
 //    $this->validate($request, [
 ////      'title' => 'required|max:80',
 //////      'description' => 'required|max:500',
@@ -327,18 +318,15 @@ class EventsController extends Controller {
 //    ]);
     //$event = Event::findOrFail($uuid);
 
-      if(session()->get('timezone')) {
-          $event['timezone'] = session()->get('timezone');
-      }
     $event = Event::whereUuid($uuid)->first();
     // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
 //    $store_info = $request->all();
 //
 //    $event['start'] = str_replace('/','-',$store_info['start']);
 //    $event['finish'] = str_replace('/','-',$store_info['finish']);
+      $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
     $event['timezone'] =$event['timezone'];
     $event->update($request->all());
-      Session::forget('timezone');
 
     // Is the user logged in?
     if (Sentinel::check()) {
