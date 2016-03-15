@@ -373,6 +373,8 @@ class EventsController extends Controller {
 //        $event['timezone'] =$event['timezone'];
         return view('events.cloned', compact('event'));
     }
+
+
     public function clonne($uuid, Request $request)
     {
         $this->validate($request, [
