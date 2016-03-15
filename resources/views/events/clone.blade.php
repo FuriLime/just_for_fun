@@ -509,7 +509,7 @@
 
 
     <script type="text/javascript">
-        $('#timezone').select2();
+//        $('#timezone').select2();
 
         // select event timezone
         $('#timezone option[value="{{$event->timezone}}"]').attr('selected','selected');
