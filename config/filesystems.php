@@ -72,6 +72,24 @@ return [
             'bucket' => 'sergey-backups',
 
         ],
+        'user_data' => [
+            'driver' => 's3',
+            'key'    => "AKIAJQIUBOL3BP2GW55A",
+            'secret' => "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",
+            'region' => "eu-west-1",
+            'bucket' => 'sergey-userdata',
+
+        ],
+
+        'site_content' => [
+            'driver' => 's3',
+            'key'    => "AKIAJQIUBOL3BP2GW55A",
+            'secret' => "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",
+            'region' => "eu-west-1",
+            'bucket' => 'sergey-sitecontent',
+
+        ],
+
 
         'rackspace' => [
             'driver'    => 'rackspace',
