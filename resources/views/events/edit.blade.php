@@ -78,8 +78,8 @@ Edit a event
 
 
                          <div class="form-group">
-                             <label for="parmanent_url">@lang('frontend.url')</label>
-                             {!! Form::text('parmanent_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'parmanent_url']) !!}
+                             <label for="permanent_url">@lang('frontend.url')</label>
+                             {!! Form::text('permanent_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'parmanent_url']) !!}
                          </div>
 
                          <div class="form-group">
