@@ -116,12 +116,21 @@
                         <div class="form-group">
                             <label for="start">@lang('frontend.enddate')</label>
                             <div class="form-group form_datetime">
-                                <div class="input-group date" id="datefinish">
-								<span class="input-group-addon">
-									<span class="glyphicon glyphicon-calendar"></span>
-								</span>
-                                    {!! Form::text('finish', null, ['class' => 'form-control', 'id' => 'finish', 'style' => 'width: 100%;']) !!}
+                                <div class="input-group date form_datetime3 col-md-12"  id="datestart">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </span>
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                                    <input class="form-control" size="16" id="start" name="start" type="datetime" value="">
+
                                 </div>
+                                @if ($errors->first('start'))
+                                    <ul class="alert alert-danger">
+                                        <li>{{ $errors->first('start') }}</li>
+                                    </ul>
+                                @endif
                             </div>
                         </div>
 
