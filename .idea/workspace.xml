@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/create.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/edit.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -32,16 +31,16 @@
       <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/events/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7055961" vertical-offset="848" max-vertical-offset="9452">
-              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.33333334" vertical-offset="1766" max-vertical-offset="9452">
+              <caret line="120" column="29" selection-start-line="120" selection-start-column="29" selection-end-line="120" selection-end-column="29" />
               <folding>
                 <element signature="e#2728#2749#0#HTML" expanded="true" />
                 <element signature="e#3598#3619#0#HTML" expanded="true" />
                 <element signature="e#5173#5193#0#HTML" expanded="true" />
                 <element signature="e#6610#6630#0#HTML" expanded="true" />
-                <element signature="e#7727#7748#0#HTML" expanded="true" />
-                <element signature="e#9357#9417#0#HTML" expanded="true" />
-                <element signature="e#10346#10368#0#HTML" expanded="true" />
+                <element signature="e#7734#7755#0#HTML" expanded="true" />
+                <element signature="e#9364#9424#0#HTML" expanded="true" />
+                <element signature="e#10353#10375#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,8 +62,8 @@
       <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-39.307693" vertical-offset="3993" max-vertical-offset="11067">
-              <caret line="295" column="74" selection-start-line="295" selection-start-column="56" selection-end-line="295" selection-end-column="74" />
+            <state vertical-scroll-proportion="2.5384614" vertical-offset="5268" max-vertical-offset="11067">
+              <caret line="306" column="20" selection-start-line="306" selection-start-column="20" selection-end-line="306" selection-end-column="20" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
               </folding>
@@ -288,13 +287,13 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="989" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="222" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="225" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="228" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="231" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="235" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="239" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="952" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="955" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
@@ -347,12 +346,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-02413" summary="database">
-      <created>1458032553039</created>
-      <option name="number" value="02413" />
-      <option name="project" value="LOCAL" />
-      <updated>1458032553040</updated>
     </task>
     <task id="LOCAL-02414" summary="database">
       <created>1458032588209</created>
@@ -642,7 +635,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458046587867</updated>
     </task>
-    <option name="localTasksCounter" value="2462" />
+    <task id="LOCAL-02462" summary="database">
+      <created>1458046667192</created>
+      <option name="number" value="02462" />
+      <option name="project" value="LOCAL" />
+      <updated>1458046667192</updated>
+    </task>
+    <option name="localTasksCounter" value="2463" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1047,16 +1046,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-39.307693" vertical-offset="3993" max-vertical-offset="11067">
-          <caret line="295" column="74" selection-start-line="295" selection-start-column="56" selection-end-line="295" selection-end-column="74" />
-          <folding>
-            <element signature="e#39#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.1272728" vertical-offset="2208" max-vertical-offset="3808">
@@ -1076,18 +1065,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.5384614" vertical-offset="5268" max-vertical-offset="11067">
+          <caret line="306" column="20" selection-start-line="306" selection-start-column="20" selection-end-line="306" selection-end-column="20" />
+          <folding>
+            <element signature="e#39#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7055961" vertical-offset="848" max-vertical-offset="9452">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="1766" max-vertical-offset="9452">
+          <caret line="120" column="29" selection-start-line="120" selection-start-column="29" selection-end-line="120" selection-end-column="29" />
           <folding>
             <element signature="e#2728#2749#0#HTML" expanded="true" />
             <element signature="e#3598#3619#0#HTML" expanded="true" />
             <element signature="e#5173#5193#0#HTML" expanded="true" />
             <element signature="e#6610#6630#0#HTML" expanded="true" />
-            <element signature="e#7727#7748#0#HTML" expanded="true" />
-            <element signature="e#9357#9417#0#HTML" expanded="true" />
-            <element signature="e#10346#10368#0#HTML" expanded="true" />
+            <element signature="e#7734#7755#0#HTML" expanded="true" />
+            <element signature="e#9364#9424#0#HTML" expanded="true" />
+            <element signature="e#10353#10375#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
