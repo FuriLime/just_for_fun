@@ -288,7 +288,7 @@ class EventsController extends Controller {
     // for bootstrap-datepicker
     $event['start'] = date('Y/m/d H:i', strtotime($event['start']));
     $event['finish'] = date('Y/m/d H:i', strtotime($event['finish']));
-        $event['timezone'] =$event['timezone'];
+    $event['timezone'] =$event['timezone'];
     return view('events.edit', compact('event'));
   }
 
@@ -305,8 +305,7 @@ class EventsController extends Controller {
       'description' => 'required|max:500',
       'type' => 'required',
       'location' => 'required|max:255',
-      'permanent_url' =>'required|max:255',
-      'readable_url' =>'required|max:255',
+      'event_url' =>'required|max:255',
       'timezone' => 'required',
       'start' => 'required',
       'finish' => 'required',
