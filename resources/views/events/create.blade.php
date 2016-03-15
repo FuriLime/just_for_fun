@@ -419,18 +419,34 @@ Create New event
                         }
 
                         if (splits.length >= 4) {
-                            street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
-//                            street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
-                            $('#street').val(street);
 
-                            sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
-                            $('#city').val(sity);
+                            if($.isNumeric(splits[1])){
+                                street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
+                                $('#street').val(street);
 
-                            state = splits[3].replace(/(^\s*)|(\s*)$/g, '');
-                            $('#state').val(state);
+//                                street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
+                                sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
+                                $('#city').val(sity);
 
-                            country = splits[4];
-                            $('#country').val(country);
+                                state = splits[3].replace(/(^\s*)|(\s*)$/g, '');
+                                $('#state').val(state);
+
+                                country = splits[4];
+                                $('#country').val(country);
+                            }else{
+                                street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
+                                $('#street').val(street);
+                                sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
+                                $('#city').val(sity);
+
+                                state = splits[2].replace(/(^\s*)|(\s*)$/g, '');
+                                $('#state').val(state);
+
+                                country = splits[3];
+                                $('#country').val(country);
+                            }
+
+
 
                             $('#country').attr('style', 'display:block');
                             $('#state').attr('style', 'display:block');
