@@ -171,7 +171,7 @@ Route::post('event/add', 'EventsController@store');
 
 Route::get('events/{uuid}/delete', array('as' => 'events.delete', 'uses' => 'EventsController@getDelete'));
 Route::get('events/{uuid}/cloned', array('as' => 'events.cloned', 'uses' => 'EventsController@cloned'));
-Route::post('events/{uuid}/cloned', array('as' => 'events.cloned', 'uses' => 'EventsController@clonne'));
+//Route::post('events/{uuid}/cloned', array('as' => 'events.cloned', 'uses' => 'EventsController@clonne'));
 Route::get('events/{uuid}/confirm-delete', array('as' => 'events.confirm-delete', 'uses' => 'EventsController@getModalDelete'));
 Route::post('event/addtocalendar', array('as' => 'event.addtocalendar', 'uses' => 'EventsController@addToCalendar'));
 
