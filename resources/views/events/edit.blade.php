@@ -198,7 +198,7 @@
     <script>
         $(document).ready(function() {
             var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
-            console.log(asd);
+            console.log($('#select2-timezone-container').val());
             $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
             var nowtimedate = new Date();
             nowtimedate = nowtimedate.format('Y/m/d H:i');
