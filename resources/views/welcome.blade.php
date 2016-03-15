@@ -49,7 +49,7 @@
                 <form action="{{ route('twitter') }}" method="post" role="form">
                     <div class="form-group">
                     <label for="subject">Enter your email </label>
-                    <input type="text" name="subject" id="subject" class="form-control">
+                    <input type="email" name="email" id="email" class="form-control">
                     <input type="submit" value="Send" class="btn btn-primary">
                     </div>
                 </form>
