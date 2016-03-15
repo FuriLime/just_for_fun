@@ -60,6 +60,9 @@ class twitterController extends Controller
             {
                 return redirect()->route('welcome');
             }
+            else{
+                $user->email = $_POST['email'];
+            }
             $user->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';

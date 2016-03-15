@@ -88,7 +88,7 @@ class MailController extends Controller
             'email'  => 'required|email|unique:users',
     ]);
 dd($_POST);
-        return redirect()->route('oauthtwitter');
+//        return redirect()->route('oauthtwitter');
 
     }
 }
