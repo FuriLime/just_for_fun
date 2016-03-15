@@ -90,7 +90,7 @@ Edit a event
 					
 					<div class="form-group">
                         <label for="start">@lang('frontend.date')</label>
-						<div class="form-group form_datetime3">
+						<div class="form-group form_datetime">
 							<div class="input-group date form_datetime3 col-md-12" id="datestart">
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-calendar"></span>
