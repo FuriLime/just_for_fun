@@ -115,7 +115,22 @@ Edit a event
 							</div>
 						</div>
                     </div>
-					
+
+                         <div class="form-group fields_loc">
+                             {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street','readonly']) !!}
+                         </div>
+
+                         <div class="form-group fields_loc">
+                             {!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city','readonly']) !!}
+                         </div>
+
+                         <div class="form-group fields_loc">
+                             {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}
+                         </div>
+
+                         <div class="form-group fields_loc">
+                             {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}
+                         </div>
 					{{--<div class="form-group">--}}
                         {{--<label for="status">@lang('frontend.status')</label>--}}
 						{{--<select class="form-control active" name="active" id="active">--}}
@@ -191,6 +206,66 @@ Edit a event
 					var place = results[i];
 					break; 
 				}
+
+
+                  var locale = ($('#location').val());
+                  var splits = '';
+                  var sity = '';
+                  var street = '';
+                  var state = '';
+                  var country = '';
+                  var num_house = '';
+
+                  if (results[0]) {
+                      locale = results[0].formatted_address;
+                      splits = locale.split(',');
+                      console.log(locale);
+//
+                      if (splits.length == 2) {
+                          sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
+                          $('#city').val(sity);
+                          country = splits[1];
+                          $('#country').val(country);
+                          $('#street').attr('style', 'display:none');
+                          $('#state').attr('style', 'display:none');
+                          $('#city').attr('style', 'display:block');
+                          $('#country').attr('style', 'display:block');
+                      }
+
+                      if (splits.length == 3) {
+                          street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
+                          $('#street').val(num_house + ' ' + street);
+                          sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
+                          $('#city').val(sity);
+                          country = splits[2];
+                          $('#country').val(country);
+                          $('#state').attr('style', 'display:none');
+                          $('#city').attr('style', 'display:block');
+                          $('#street').attr('style', 'display:block');
+                          $('#country').attr('style', 'display:block');
+                      }
+
+                      if (splits.length >= 4) {
+                          street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
+//                            street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
+                          $('#street').val(street);
+
+                          sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
+                          $('#city').val(sity);
+
+                          state = splits[3].replace(/(^\s*)|(\s*)$/g, '');
+                          $('#state').val(state);
+
+                          country = splits[4];
+                          $('#country').val(country);
+
+                          $('#country').attr('style', 'display:block');
+                          $('#state').attr('style', 'display:block');
+                          $('#city').attr('style', 'display:block');
+                          $('#street').attr('style', 'display:block');
+
+                      }
+                  }
 				var place_id = place["place_id"];
 				var location_lat = place["geometry"]["location"]["H"];
 				var location_lng = place["geometry"]["location"]["L"];
