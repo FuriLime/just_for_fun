@@ -229,7 +229,7 @@ class EventsController extends Controller {
             Session::forget('timezone');
             Session::forget('start');
             Session::forget('finish');
-            return redirect('confirm')->with('success', Lang::get('message.success.create'));
+            return redirect('confirm');
         }
     }
 
