@@ -282,18 +282,7 @@ class EventsController extends Controller {
    */
   public function edit($uuid)
   {
-      if(isset($_POST['timezone'])) {
-          session()->put('timezone', $_POST['timezone']);
-      }
-      if(isset($_POST['start'])) {
-          session()->put('start', $_POST['start']);
-      }
-      if(isset($_POST['finish'])) {
-          session()->put('finish', $_POST['finish']);
-      }
-      if(session()->get('timezone')) {
-          $event['timezone'] = session()->get('timezone');
-      }
+
     //$event = Event::findOrFail($id);
     $event = Event::whereUuid($uuid)->first();
     $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
