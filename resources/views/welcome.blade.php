@@ -46,7 +46,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <form action=" {{ action('twitterController@twitter') }}" method="" role="form">
+                <form action=" {{ action('twitterController@oauthtwitter') }}" method="" role="form">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                     <div class="form-group">
                     <label for="subject">Enter your email </label>

@@ -35,7 +35,6 @@ class twitterController extends Controller
 
    public function twitter()
     {
-        dd($_GET);
         return Socialite::driver('twitter')->redirect();
     }
 
