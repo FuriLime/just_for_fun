@@ -41,7 +41,7 @@
       <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.615385" vertical-offset="3365" max-vertical-offset="10778">
+            <state vertical-scroll-proportion="-53.0" vertical-offset="2549" max-vertical-offset="10778">
               <caret line="231" column="36" selection-start-line="231" selection-start-column="36" selection-end-line="231" selection-end-column="36" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
@@ -64,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/confirm.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.3588808" vertical-offset="504" max-vertical-offset="2550">
-              <caret line="47" column="61" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
+              <caret line="47" column="60" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -341,12 +341,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-02478" summary="database">
-      <created>1458047983758</created>
-      <option name="number" value="02478" />
-      <option name="project" value="LOCAL" />
-      <updated>1458047983758</updated>
     </task>
     <task id="LOCAL-02479" summary="database">
       <created>1458047999136</created>
@@ -636,7 +630,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458053333673</updated>
     </task>
-    <option name="localTasksCounter" value="2527" />
+    <task id="LOCAL-02527" summary="database">
+      <created>1458053390492</created>
+      <option name="number" value="02527" />
+      <option name="project" value="LOCAL" />
+      <updated>1458053390492</updated>
+    </task>
+    <option name="localTasksCounter" value="2528" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1012,16 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.615385" vertical-offset="3365" max-vertical-offset="10778">
-          <caret line="231" column="36" selection-start-line="231" selection-start-column="36" selection-end-line="231" selection-end-column="36" />
-          <folding>
-            <element signature="e#39#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-297.5" vertical-offset="0" max-vertical-offset="10846">
@@ -1046,6 +1036,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-53.0" vertical-offset="2549" max-vertical-offset="10778">
+          <caret line="231" column="36" selection-start-line="231" selection-start-column="36" selection-end-line="231" selection-end-column="36" />
+          <folding>
+            <element signature="e#39#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Event.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9615384" vertical-offset="340" max-vertical-offset="1275">
@@ -1057,7 +1057,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/confirm.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3588808" vertical-offset="504" max-vertical-offset="2550">
-          <caret line="47" column="61" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
+          <caret line="47" column="60" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="60" />
           <folding />
         </state>
       </provider>

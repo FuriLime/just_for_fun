@@ -45,7 +45,7 @@ Confirm Page
             <div class="row">
                 <div class="col-xs-10 col-xs-offset-1 popup-content">
                     <div class="popup-head">
-                        We are now preparing <span>{{$event}}</span> for you
+                        We are now preparing <span>Eventname</span> for you
                     </div>
                     <div class="estimated-time">
                         Estimated time: <span>10</span> seconds
