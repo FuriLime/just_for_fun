@@ -301,18 +301,18 @@ class EventsController extends Controller {
   public function update($uuid, Request $request)
   {
     $this->validate($request, [
-      'title' => 'required|max:80',
-//      'description' => 'required|max:500',
-//      'type' => 'required',
-      'location' => 'required|max:255',
-        'Country' => 'max:255',
-        'City' => 'max:255',
-        'State' => 'max:255',
-        'Street' => 'max:255',
-      'event_url' =>'required|max:255',
-      'timezone' => 'required',
-      'start' => 'required',
-      'finish' => 'required',
+//      'title' => 'required|max:80',
+////      'description' => 'required|max:500',
+////      'type' => 'required',
+//      'location' => 'max:255',
+//        'Country' => 'max:255',
+//        'City' => 'max:255',
+//        'State' => 'max:255',
+//        'Street' => 'max:255',
+//      'event_url' =>'max:255',
+//      'timezone' => 'required',
+//      'start' => 'required',
+//      'finish' => 'required',
     ]);
     //$event = Event::findOrFail($uuid);
     $event = Event::whereUuid($uuid)->first();
