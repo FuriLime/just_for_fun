@@ -299,7 +299,7 @@
                             }
 
                             if (splits.length == 3) {
-                                street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
+                                street = splits[0].replace(/(\s*)$/g, '');
                                 $('#street').val(num_house + ' ' + street);
                                 sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#city').val(sity);
