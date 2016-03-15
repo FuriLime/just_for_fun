@@ -151,7 +151,11 @@
     </div>
 @stop
 
-
+<style>
+    .fields_loc{
+        display: none;
+    }
+</style>
 {{-- page level scripts --}}
 @section('footer_scripts')
     <script type="text/javascript" src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>
