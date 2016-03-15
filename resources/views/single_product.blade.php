@@ -41,215 +41,92 @@ Single Product| Welcome to Josh Frontend
 {{-- Page content --}}
 @section('content')
     <!-- Container Section Start -->
-    <div class="container">
-        <!--item view start-->
-        <div class="row">
-            <div class="mart10">
-                <!--product view-->
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="product_wrapper">
-                            <img id="zoom_09" src="{{ asset('assets/images/cart/small/1.jpg') }}" data-zoom-image="{{ asset('assets/images/cart/big/1.jpg') }}" class="img-responsive" />
-                        </div>
+    <div class="important-popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 popup-content">
+                    <div class="popup-head">
+                        We are now preparing <span>Eventname</span> for you
                     </div>
-                    <div class="row">
-                        <!--individual products in product view-->
-                        <div id="gal1">
-                            <a href="#" data-image="{{ asset('assets/images/cart/small/1.jpg') }}" data-zoom-image="{{ asset('assets/images/cart/big/1.jpg') }}">
-                                <img id="img_01" src="{{ asset('assets/images/cart/small/1.jpg') }}" class="img-responsive" />
-                            </a>
-                            <a href="#" data-image="{{ asset('assets/images/cart/small/2.jpg') }}" data-zoom-image="{{ asset('assets/images/cart/big/2.jpg') }}">
-                                <img id="img_01" src="{{ asset('assets/images/cart/small/2.jpg') }}" class="img-responsive" />
-                            </a>
-                            <a href="#" data-image="{{ asset('assets/images/cart/small/3.jpg') }}" data-zoom-image="{{ asset('assets/images/cart/big/3.jpg') }}">
-                                <img id="img_01" src="{{ asset('assets/images/cart/small/3.jpg') }}" class="img-responsive" />
-                            </a>
-                            <a href="#" data-image="{{ asset('assets/images/cart/small/4.jpg') }}" data-zoom-image="{{ asset('assets/images/cart/big/4.jpg') }}">
-                                <img id="img_01" src="{{ asset('assets/images/cart/small/4.jpg') }}" class="img-responsive" />
-                            </a>
-                        </div>
+                    <div class="estimated-time">
+                        Estimated time: <span>10</span> seconds
                     </div>
-                </div>
-                <!--individual product description-->
-                <div class="col-md-8">
-                    <h2 class="text-primary">Neque porro quisquam </h2>
-                    <i class="fa fa-star text-primary"></i>
-                    <i class="fa fa-star text-primary"></i>
-                    <i class="fa fa-star text-primary"></i>
-                    <i class="fa fa-star text-primary"></i>
-                    <i class="fa fa-star-o text-primary"></i>
-                    <h5>5 Review(s) | Add your Review</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</p>
-                    <div class="text-big3">
-                        <del>$1000</del>
-                    </div>
-                    <div class="text-big4">$750</div>
-                    <a href="#" class="btn btn-primary btn-lg text-white">Add to Cart</a>
-                    <h4>Quantity</h4>
-                    <form>
-                        <div class="form-group">
-                            <input type="number" class="form-control" min="1" style="width:70px;">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!--item view end-->
-        <!--item desciption start-->
-        <div class="row">
-            <div class="col-sm-12">
-                <!-- Tabbable-Panel Start -->
-                <div class="tabbable-panel">
-                    <!-- Tabbablw-line Start -->
-                    <div class="tabbable-line">
-                        <!-- Nav Nav-tabs Start -->
-                        <ul class="nav nav-tabs ">
-                            <li class="active">
-                                <a href="#tab_default_1" data-toggle="tab">
-                                Description </a>
-                            </li>
-                            <li>
-                                <a href="#tab_default_2" data-toggle="tab">
-                                Reviews </a>
-                            </li>
-                        </ul>
-                        <!-- //Nav Nav-tabs End -->
-                        <!-- Tab-content Start -->
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="tab_default_1">
-                                <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus.</p>
-                                <ul>
-                                    <li><i class="livicon" data-name="check" data-size="18" data-loop="true" data-c="#555555" data-hc="#555555"></i> White dwarf extraplanetary</li>
-                                    <li><i class="livicon" data-name="check" data-size="18" data-loop="true" data-c="#555555" data-hc="#555555"></i>Worldlets, white dwarf</li>
-                                    <li><i class="livicon" data-name="check" data-size="18" data-loop="true" data-c="#555555" data-hc="#555555"></i>Cambrian explosion, hydrogen</li>
-                                    <li><i class="livicon" data-name="check" data-size="18" data-loop="true" data-c="#555555" data-hc="#555555"></i>Euclid Sea of Tranquility</li>
-                                </ul>
-                                <p>Coffin quarter pipe NoMeansNo switch sponsored hospital flip. Fastplant 270 skater boned out yeah. Stoked boardslide hardware air nose-bump. Manual hang ten ledge Vision Streetwear backside hang-up. Streets on Fire wall ride nose grab rail speed wobbles hang ten. Invert hand rail snake skate key hurricane. Hanger concave rail no comply rail slide. Nose bump gnarly 180 soul skate shinner. Jason Dill Japan air hang ten camel back goofy footed frontside air. Melancholy axle set handplant kickflip Donger fakie.</p>
+                    <ul class="col-xs-4 col-xs-offset-4 popup-events-list">
+                        <li>
+                            Checking some OMG IMPORTANT STAFF!!!
+                        </li>
+                        <li>
+                            Checking some OMG IMPORTANT STAFF!!!
+                        </li>
+                        <li>
+                            Checking some OMG IMPORTANT STAFF!!!
+                        </li>
+                        <li>
+                            Checking some OMG IMPORTANT STAFF!!!
+                        </li>
+                        <li>
+                            Checking some OMG IMPORTANT STAFF!!!
+                        </li>
+                        <li>
+                            Checking some OMG IMPORTANT STAFF!!!
+                        </li>
+                        <li>
+                            Checking some OMG IMPORTANT STAFF!!!
+                        </li>
+                        <li>
+                            Checking some OMG IMPORTANT STAFF!!!
+                        </li>
+                        <li>
+                            Checking some OMG IMPORTANT STAFF!!!
+                        </li>
+                        <li>
+                            Checking some OMG IMPORTANT STAFF!!!
+                        </li>
+                    </ul>
+                    <a href="#" class="col-xs-4 col-xs-offset-4 succ-btn">
+                        <img src="img/yes.png"><span>Success:</span> Visit your EventPage
+                    </a>
+                    <div id="myCarousel" class="carousel slide col-xs-8 col-xs-offset-2" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="img_chania.jpg" alt="Chania" width="460" height="345">
                             </div>
-                            <div class="tab-pane" id="tab_default_2">
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <form>
-                                            <div class="form-group">
-                                                <label>Name:</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Email:</label>
-                                                <input type="mail" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Review</label>
-                                                <textarea class="form-control" rows="3"></textarea>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="username" class="uname">Your Ratings:</label>
-                                                <input type="hidden" id="rating3" class="rating form-control" data-filled="fa fa-star fa-1x" data-empty="fa fa-star-o fa-1x" />
-                                            </div>
-                                            <div class="form-group">
-                                                <a href="#" class="btn btn-primary text-white">Submit</a>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <h3 class="text-primary">Reviews</h3>
-                                        <i class="fa fa-star text-primary"></i>
-                                        <i class="fa fa-star text-primary"></i>
-                                        <i class="fa fa-star text-primary"></i>
-                                        <i class="fa fa-star text-primary"></i>
-                                        <i class="fa fa-star-o text-primary"></i>
-                                        <h6>Jim J. Platz</h6>
-                                        <h6>jan 31, 2015</h6>
-                                        <strong>Trout Burrowing</strong>
-                                        <p>Burbot yellow-eye mullet sailback scorpionfish sandroller snake mudhead limia sea chub Asiatic glassfish marblefish pikehead snook. Atlantic eel Rio Grande perch stingray longjaw mudsucker albacore northern sea robin spotted dogfish northern sea robin river stingray. </p>
-                                        <i class="fa fa-star text-primary"></i>
-                                        <i class="fa fa-star text-primary"></i>
-                                        <i class="fa fa-star text-primary"></i>
-                                        <i class="fa fa-star-half-empty text-primary"></i>
-                                        <i class="fa fa-star-o text-primary"></i>
-                                        <h6>Jim J. Platz</h6>
-                                        <h6>feb 6, 2015</h6>
-                                        <strong>Trout Burrowing</strong>
-                                        <p>Burbot yellow-eye mullet sailback scorpionfish sandroller snake mudhead limia sea chub Asiatic glassfish marblefish pikehead snook. Atlantic eel Rio Grande perch stingray longjaw mudsucker albacore northern sea robin spotted dogfish northern sea robin river stingray. </p>
-                                        <nav class="pull-right">
-                                            <ul class="pagination">
-                                                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                                                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                                                <li><a href="#">2 <span class="sr-only">(current)</span></a></li>
-                                                <li><a href="#">3 <span class="sr-only">(current)</span></a></li>
-                                                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
+
+                            <div class="item">
+                                <img src="img_chania2.jpg" alt="Chania" width="460" height="345">
                             </div>
-                            <!-- Tab-content End -->
+
+                            <div class="item">
+                                <img src="img_flower.jpg" alt="Flower" width="460" height="345">
+                            </div>
+
+                            <div class="item">
+                                <img src="img_flower2.jpg" alt="Flower" width="460" height="345">
+                            </div>
                         </div>
-                        <!-- //Tabbable-line End -->
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="" aria-hidden="true"><</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="" aria-hidden="true">></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
-                    <!-- Tabbable_panel End -->
                 </div>
             </div>
         </div>
-        <!--item desciption end-->
-        <!--recently view item-->
-        <div class="row">
-            <h2 class="text-primary"> Recently Viewed</h2>
-            <div class="divider"></div>
-            <div class="flip-3d">
-                <figure>
-                    <img src="{{ asset('assets/images/cart/default/saree1.jpg') }}" alt="product image">
-                    <figcaption>
-                        <h4 class="text-white">Floral Printed Saree</h4>
-                        <ul class="hidden-xs">
-                            <li>Product Type - Women's Saree</li>
-                            <li>Color - Multi Colour</li>
-                        </ul>
-                        <h4 class="text-white hidden-xs"><del class="text-danger">Rs. 1599.00</del>  Rs. 1198.00   </h4>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="flip-3d">
-                <figure>
-                    <img src="{{ asset('assets/images/cart/default/shirt.jpg') }}" alt="product image">
-                    <figcaption>
-                        <h4 class="text-white">Atelier Check Shirt</h4>
-                        <ul class="hidden-xs">
-                            <li>Product -Men's Club Wear</li>
-                            <li>Care - Machine/Hand Wash</li>
-                        </ul>
-                        <h4 class="text-white hidden-xs"><del class="text-danger">Rs. 1999.00</del> Rs. 1499.00</h4>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="flip-3d">
-                <figure>
-                    <img src="{{ asset('assets/images/cart/default/sony.jpg') }}" alt="product image">
-                    <figcaption>
-                        <h4 class="text-white">Sony Xperia C3 - (Black)</h4>
-                        <ul class="hidden-xs">
-                            <li>Android v4.4.2 (KitKat)</li>
-                            <li>Quad-core 1.2 GHz</li>
-                        </ul>
-                        <h4 class="text-white hidden-xs"><del class="text-danger">Rs. 21,990</del>  Rs. 18,088</h4>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="flip-3d">
-                <figure>
-                    <img src="{{ asset('assets/images/cart/default/samsung.jpg') }}" alt="product image">
-                    <figcaption>
-                        <h4 class="text-white">Samsung Galaxy S6 64 GB - (White)</h4>
-                        <ul class="hidden-xs">
-                            <li>Android v4.4.2 (KitKat)</li>
-                            <li>Quad-core 1.2 GHz</li>
-                        </ul>
-                        <h4 class="text-white hidden-xs">Rs. 55,900</h4>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <!--recently view item end-->
     </div>
     <!-- //Container Section End -->
 @stop
