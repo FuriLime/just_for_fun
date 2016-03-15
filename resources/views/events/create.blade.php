@@ -33,15 +33,7 @@ Create New event
                     </h4>
                 </div>
                 <div class="panel-body">
-                     {{--@if ($errors->any())--}}
-                        {{--<ul class="alert alert-danger">--}}
-                            {{--@foreach ($errors->all() as $error)--}}
-                                {{--<li>{{ $error }}</li>--}}
-                            {{--@endforeach--}}
-                        {{--</ul>--}}
-                    {{--@endif--}}
 					<h3 class="primary add_event_section_link">@lang('frontend.add_event_text')</h3>
-
                          {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
                          {{--<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }} " />--}}
 
