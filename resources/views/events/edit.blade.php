@@ -161,7 +161,9 @@ Edit a event
 {{-- page level scripts --}}
 @section('footer_scripts')
 	<script src="{{ asset('assets/vendors/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
-	<script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/vendors/colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
+    {{--<script src="{{asset('assets/vendors/timepicker/js/bootstrap-timepicker.min.js')}}"></script>--}}
+    <script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/vendors/maxlength/bootstrap-maxlength.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/vendors/select2/select2.js') }}" type="text/javascript"></script>
     <script type="text/javascript" src="{{ asset('assets/js/moment.js') }}"></script>
