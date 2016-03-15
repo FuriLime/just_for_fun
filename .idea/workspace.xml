@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/edit.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/events/clone.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -40,12 +40,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/events/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26467067" vertical-offset="0" max-vertical-offset="9639">
-              <caret line="13" column="150" selection-start-line="13" selection-start-column="150" selection-end-line="13" selection-end-column="150" />
+            <state vertical-scroll-proportion="-5.2545457" vertical-offset="0" max-vertical-offset="9639">
+              <caret line="17" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="561" selection-end-column="5" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clone.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/events/clone.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="3.085648" vertical-offset="6871" max-vertical-offset="9639">
+              <caret line="561" column="5" selection-start-line="561" selection-start-column="5" selection-end-line="561" selection-end-column="5" />
+              <folding>
+                <element signature="e#9030#9052#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_063842_create_cashier_settings_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_064232_create_events_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071254_create_permissions_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071303_create_roles_table.php" />
@@ -132,6 +143,7 @@
         <option value="$PROJECT_DIR$/public/assets/ical.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/events/clone.blade.php" />
       </list>
     </option>
   </component>
@@ -321,12 +333,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-02533" summary="database">
-      <created>1458054348591</created>
-      <option name="number" value="02533" />
-      <option name="project" value="LOCAL" />
-      <updated>1458054348591</updated>
     </task>
     <task id="LOCAL-02534" summary="database">
       <created>1458054370877</created>
@@ -616,7 +622,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458067223772</updated>
     </task>
-    <option name="localTasksCounter" value="2582" />
+    <task id="LOCAL-02582" summary="database">
+      <created>1458067353467</created>
+      <option name="number" value="02582" />
+      <option name="project" value="LOCAL" />
+      <updated>1458067353467</updated>
+    </task>
+    <option name="localTasksCounter" value="2583" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -674,13 +686,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071240_create_features_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6493056" vertical-offset="0" max-vertical-offset="864">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_072526_create_cashier_table_settings.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7083333" vertical-offset="0" max-vertical-offset="864">
@@ -1037,9 +1042,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26467067" vertical-offset="0" max-vertical-offset="9639">
-          <caret line="13" column="150" selection-start-line="13" selection-start-column="150" selection-end-line="13" selection-end-column="150" />
+        <state vertical-scroll-proportion="-5.2545457" vertical-offset="0" max-vertical-offset="9639">
+          <caret line="17" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="561" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/clone.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.085648" vertical-offset="6871" max-vertical-offset="9639">
+          <caret line="561" column="5" selection-start-line="561" selection-start-column="5" selection-end-line="561" selection-end-column="5" />
+          <folding>
+            <element signature="e#9030#9052#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
