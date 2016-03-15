@@ -45,10 +45,10 @@ class twitterController extends Controller
         $listId = Config::get('mailchimp.listId');
         $userTwit = Socialite::driver('twitter')->user();
 
-//        if(empty($userTwit->email))
-//        {
-//            return redirect()->route('welcome');
-//        }
+        if(empty($userTwit->email))
+        {
+            return redirect()->route('welcome');
+        }
         $user = User::wheretwit_nick($userTwit->getNickName())->first();
         if(!$user){
             $user = new User;
