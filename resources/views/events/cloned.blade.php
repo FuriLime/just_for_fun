@@ -41,7 +41,7 @@
                             {{--</ul>--}}
                         {{--@endif--}}
 
-                        {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@clonne', $event->uuid]]) !!}
+                        {!! Form::model($eventold, ['method' => 'PATCH', 'action' => ['EventsController@clonne', $eventold->uuid]]) !!}
                         <div class="form-group">
                             <label for="title">@lang('frontend.title')</label>
                             {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '80', 'id' => 'title']) !!}
