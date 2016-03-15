@@ -324,7 +324,7 @@ class EventsController extends Controller {
 //        $event['start'] = str_replace('/','-',$store_info['start']);
 //        $event['finish'] = str_replace('/','-',$store_info['finish']);
 
-
+        $event['title'] = $store_info['title'];
         $event = Event::whereUuid($uuid)->first();
         $date = new \DateTime($store_info['start'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
