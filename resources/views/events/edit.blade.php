@@ -85,7 +85,7 @@
 
                         <div class="form-group">
                             <label for="timezone">@lang('frontend.timezone')</label>
-                            {!! $event->timezone_select !!}
+                            {{--{!! $event->timezone_select !!}--}}
                         </div>
 
                         <div class="form-group">
