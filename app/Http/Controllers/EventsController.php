@@ -324,9 +324,11 @@ class EventsController extends Controller {
 
 
         $event = Event::whereUuid($uuid)->first();
-        $date = new \DateTime($store_info['start'], new \DateTimeZone('UTC'));
+        $date = new \DateTime($store_info['start'], new \DateTimeZone($event['timezone']));
+        $date->setTimezone(new \DateTimeZone('UTC'));
         $event_start_zero = $date;
-        $date = new \DateTime($event['finish'], new \DateTimeZone('UTC'));
+        $date = new \DateTime($event['finish'], new \DateTimeZone($event['timezone']));
+        $date->setTimezone(new \DateTimeZone('UTC'));
         $event_finish_zero = $date;
 
         // for bootstrap-datepicker
