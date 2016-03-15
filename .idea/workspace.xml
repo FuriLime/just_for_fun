@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/done.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/undone.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/yes.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/css/popup.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/popup.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/jquery-2.1.4.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/confirm.blade.php" afterPath="$PROJECT_DIR$/resources/views/confirm.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -67,8 +64,8 @@
       <file leaf-file-name="confirm.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/confirm.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36075205" vertical-offset="1665" max-vertical-offset="2516">
-              <caret line="116" column="12" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.8202115" vertical-offset="1665" max-vertical-offset="2567">
+              <caret line="139" column="77" selection-start-line="139" selection-start-column="77" selection-end-line="139" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -105,7 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_063705_create_account_type_permissions_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_063729_create_event_transactions_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_063757_create_account_user_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_063842_create_cashier_settings_table.php" />
@@ -156,6 +152,7 @@
         <option value="$PROJECT_DIR$/app/Event.php" />
         <option value="$PROJECT_DIR$/resources/views/single_product.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/confirm.blade.php" />
       </list>
     </option>
   </component>
@@ -265,33 +262,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-ef" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event.test-y-sbm.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -371,12 +342,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-02466" summary="database">
-      <created>1458046963865</created>
-      <option name="number" value="02466" />
-      <option name="project" value="LOCAL" />
-      <updated>1458046963865</updated>
     </task>
     <task id="LOCAL-02467" summary="database">
       <created>1458047045263</created>
@@ -666,7 +631,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458052267187</updated>
     </task>
-    <option name="localTasksCounter" value="2515" />
+    <task id="LOCAL-02515" summary="database">
+      <created>1458052434672</created>
+      <option name="number" value="02515" />
+      <option name="project" value="LOCAL" />
+      <updated>1458052434672</updated>
+    </task>
+    <option name="localTasksCounter" value="2516" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1084,8 +1055,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/confirm.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36075205" vertical-offset="1665" max-vertical-offset="2516">
-          <caret line="116" column="12" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.8202115" vertical-offset="1665" max-vertical-offset="2567">
+          <caret line="139" column="77" selection-start-line="139" selection-start-column="77" selection-end-line="139" selection-end-column="77" />
           <folding />
         </state>
       </provider>

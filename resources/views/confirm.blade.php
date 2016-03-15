@@ -134,9 +134,12 @@ Single Product| Welcome to Josh Frontend
 {{-- page level scripts --}}
 @section('footer_scripts')
     <!--page level js start-->
-    <script type="text/javascript" src="{{ asset('assets/js/frontend/elevatezoom.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/vendors/bootstrap-rating-master/bootstrap-rating.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/frontend/cart.js') }}"></script>
+    {{--<script type="text/javascript" src="{{ asset('assets/js/frontend/elevatezoom.js') }}"></script>--}}
+    {{--<script type="text/javascript" src="{{ asset('assets/vendors/bootstrap-rating-master/bootstrap-rating.min.js') }}"></script>--}}
+    {{--<script type="text/javascript" src="{{ asset('assets/js/frontend/cart.js') }}"></script>--}}
+    <script type="text/javascript" src="{{ asset('assets/js/jquery-2.1.4.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/bootstrap.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/popup.js') }}"></script>
     <!--page level js start-->
 
 @stop
