@@ -82,7 +82,7 @@ Single Product| Welcome to Josh Frontend
                             Checking some OMG IMPORTANT STAFF!!!
                         </li>
                     </ul>
-                    <a href="/events" class="col-xs-4 col-xs-offset-4 succ-btn">
+                    <a href="#" class="col-xs-4 col-xs-offset-4 succ-btn">
                         <img src="{{ asset('assets/images/yes.png') }}"><span>Success:</span> Visit your EventPage
                     </a>
                     <div id="myCarousel" class="carousel slide col-xs-8 col-xs-offset-2" data-ride="carousel">
