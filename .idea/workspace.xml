@@ -53,8 +53,8 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.0" vertical-offset="2944" max-vertical-offset="3808">
-              <caret line="194" column="87" selection-start-line="194" selection-start-column="74" selection-end-line="194" selection-end-column="87" />
+            <state vertical-scroll-proportion="-18.192308" vertical-offset="2944" max-vertical-offset="3808">
+              <caret line="205" column="97" selection-start-line="205" selection-start-column="67" selection-end-line="205" selection-end-column="97" />
               <folding />
             </state>
           </provider>
@@ -76,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.27546296" vertical-offset="0" max-vertical-offset="864">
-              <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+              <caret line="48" column="72" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -390,12 +390,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-02347" summary="database">
-      <created>1458022747614</created>
-      <option name="number" value="02347" />
-      <option name="project" value="LOCAL" />
-      <updated>1458022747614</updated>
-    </task>
     <task id="LOCAL-02348" summary="database">
       <created>1458022909060</created>
       <option name="number" value="02348" />
@@ -684,7 +678,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458030441928</updated>
     </task>
-    <option name="localTasksCounter" value="2396" />
+    <task id="LOCAL-02396" summary="database">
+      <created>1458030515235</created>
+      <option name="number" value="02396" />
+      <option name="project" value="LOCAL" />
+      <updated>1458030515235</updated>
+    </task>
+    <option name="localTasksCounter" value="2397" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1082,14 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.0" vertical-offset="2944" max-vertical-offset="3808">
-          <caret line="194" column="87" selection-start-line="194" selection-start-column="74" selection-end-line="194" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MailController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.846153" vertical-offset="904" max-vertical-offset="1768">
@@ -1108,10 +1100,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.192308" vertical-offset="2944" max-vertical-offset="3808">
+          <caret line="205" column="97" selection-start-line="205" selection-start-column="67" selection-end-line="205" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27546296" vertical-offset="0" max-vertical-offset="864">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+          <caret line="48" column="72" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
           </folding>
