@@ -317,6 +317,9 @@
 
                                 street = splits[0].replace(/(^\s*)$/g, '');
                                 num_house = splits[1].replace(/(^\s*)$/g, '');
+                                if($.isNumeric(num_house)==true){
+                                    alert();
+                                }
                                 console.log($.isNumeric(num_house));
                                 console.log(num_house);
                                 $('#street').val(street);
