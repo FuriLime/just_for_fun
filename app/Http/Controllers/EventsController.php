@@ -566,7 +566,7 @@ class EventsController extends Controller {
         }
 
         $structure = '<select class="form-control timezone" name="timezone" id="timezone">';
-        $structure .= '<option value="">'.$current_timezone.'</option>';
+        $structure .= '<option value="">Asia/Tokyo</option>';
 
         foreach ($regions as $mask) {
             $zones = \DateTimeZone::listIdentifiers($mask);
