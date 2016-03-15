@@ -315,12 +315,9 @@
 
                             if (splits.length >= 4) {
 
-                                street = splits[0].replace(/(^\s*)$/g, '');
-                                num_house = splits[1].replace(/(^\s*)$/g, '');
                                 if($.isNumeric(splits[1])){
-                                    street = street + num_house;
+                                    street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                 }
-                                console.log(street);
                                 $('#street').val(street);
 
 //                                street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
