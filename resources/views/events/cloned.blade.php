@@ -33,15 +33,15 @@
                         </h4>
                     </div>
                     <div class="panel-body">
-                        @if ($errors->any())
-                            <ul class="alert alert-danger">
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        @endif
+                        {{--@if ($errors->any())--}}
+                            {{--<ul class="alert alert-danger">--}}
+                                {{--@foreach ($errors->all() as $error)--}}
+                                    {{--<li>{{ $error }}</li>--}}
+                                {{--@endforeach--}}
+                            {{--</ul>--}}
+                        {{--@endif--}}
 
-                        {!! Form::open($event, ['method' => 'PATCH', 'action' => ['EventsController@clonne', $event->uuid]]) !!}
+                        {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@clonne', $event->uuid]]) !!}
                         <div class="form-group">
                             <label for="title">@lang('frontend.title')</label>
                             {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '80', 'id' => 'title']) !!}
