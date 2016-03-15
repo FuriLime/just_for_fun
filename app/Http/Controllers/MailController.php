@@ -80,7 +80,7 @@ class MailController extends Controller
 //        $send_email = \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
 //        return $send_email;
         if(isset($_POST)){
-            dd($_POST);
+            var_dump($_POST);
         }
 
         return view('welcome');
