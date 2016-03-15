@@ -509,12 +509,12 @@
 
 
     <script type="text/javascript">
-        {{--$('#timezone').select2();--}}
+        $('#timezone').select2();
 
-        {{--// select event timezone--}}
+        // select event timezone
         {{--$('#timezone option[value="{{$event->timezone}}"]').attr('selected','selected');--}}
-        {{--// select event status--}}
-        {{--$('#active option[value="{{$event->active}}"]').attr('selected','selected');--}}
+        // select event status
+        $('#active option[value="{{$event->active}}"]').attr('selected','selected');
 
         // http://eonasdan.github.io/bootstrap-datetimepicker/Options/#locale
         $("#datestart").on("dp.change", function (e) {
