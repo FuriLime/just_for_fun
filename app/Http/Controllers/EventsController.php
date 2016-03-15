@@ -293,11 +293,11 @@ class EventsController extends Controller {
     //$event = Event::findOrFail($id);
     $event = Event::whereUuid($uuid)->first();
 
-    $event['timezone_select'] = self::getTimeZoneSelect($my_time_zone);
+    $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
     // for bootstrap-datepicker
     $event['start'] = date('Y/m/d H:i', strtotime($event['start']));
     $event['finish'] = date('Y/m/d H:i', strtotime($event['finish']));
-    $event['timezone'] =$my_time_zone;
+    $event['timezone'] =$event['timezone'];
     return view('events.edit', compact('event'));
   }
 
