@@ -44,6 +44,7 @@ class twitterController extends Controller
         $mc = new Mailchimp($apiKey);
         $listId = Config::get('mailchimp.listId');
         $userTwit = Socialite::driver('twitter')->user();
+        dd($_GET['email']);
 //        if(isset($_POST)){
 //            dd($_POST);
 //        }
@@ -63,7 +64,7 @@ class twitterController extends Controller
             else{
                 $userTwit->email = 'sergelime@gmail.com';
             }
-            $user->email = $_GET['email'];;
+            $user->email = $_GET['email'];
             $user->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';
