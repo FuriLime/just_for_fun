@@ -164,6 +164,7 @@
     <script src="{{ asset('assets/vendors/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
     <script type="text/javascript" src="{{ asset('assets/js/date.format.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/jquery.maskedinput.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>
 
 
     <script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
@@ -315,9 +316,9 @@
 //                                street = splits[0] + ' ' +splits[1].replace(/(^\s*)$/g, '');
                             street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#street').val(street);
-console.log(typeof(street));
+console.log($.isNumeric(street));
                                 street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                                console.log(typeof(street));
+                                console.log($.isNumeric(street));
                                 sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#city').val(sity);
 
