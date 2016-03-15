@@ -167,6 +167,82 @@ Edit a event
 	
 	
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
+    <script>
+    $(document).ready(function() {
+    $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
+    var nowtimedate = new Date();
+    nowtimedate = nowtimedate.format('Y/m/d H:i');
+    $("#datestart").datetimepicker({
+    onSelect: function() {alert('sdfsdfsdf')},
+    format: 'yyyy/mm/dd hh:ii',
+    autoclose: true,
+    todayBtn: true,
+    startDate: nowtimedate,
+    minuteStep: 10,
+    controlType: 'select',
+    minDate: nowtimedate
+    });
+    $("#datefinish").datetimepicker({
+    onSelect: function() {alert('sdfsdfsdf')},
+    format: 'yyyy/mm/dd hh:ii',
+    autoclose: true,
+    todayBtn: true,
+    controlType: 'select',
+    startDate: $('#finish').val(),
+    minDate: $('#finish').val(),
+    minuteStep: 10
+
+    });
+    });
+
+    $('#start').on('change', function() {
+    var nowtimedate = new Date();
+    nowtimedate = nowtimedate.format('Y/m/d H:i');
+    var start_def_date = new Date();
+    var start_date = new Date($('#start').val());
+
+
+    if(start_date.getTime() < start_def_date.getTime()) {
+    $('#start').val(start_def_date.format('Y/m/d H:i'));
+    return false;
+    }
+
+    var end_date = new Date(start_date);
+    end_date.setHours(start_date.getHours() + 1);
+    end_date = end_date.format('Y/m/d H:i');
+    $('#finish').val(end_date);
+    if($('#finish').val()=='NaN/NaN/NaN NaN:NaN'){
+    $('#finish').val('');
+    }
+    $("#datefinish").datetimepicker("remove");
+    $("#datefinish").datetimepicker({
+    onSelect: function() {alert('sdfsdfsdf')},
+    format: 'yyyy/mm/dd hh:ii',
+    autoclose: true,
+    todayBtn: true,
+    controlType: 'select',
+    startDate: $('#finish').val(),
+    minDate: $('#finish').val(),
+    minuteStep: 10
+
+    });
+
+    });
+
+    $('#finish').on('change', function() {
+    var start_date = new Date($('#start').val());
+    var end_date = new Date($('#finish').val());
+
+    if(end_date.getTime() < start_date.getTime()) {
+    var end_date = new Date(start_date);
+    end_date.setHours(start_date.getHours() + 1);
+    end_date = end_date.format('Y/m/d H:i');
+
+    $('#finish').val(end_date);
+    }
+    });
+    </script>
 	<script type="text/javascript">//<![CDATA[
 	window.onload=function(){
 		var autocomplete = new google.maps.places.Autocomplete(document.getElementById('location'), {
@@ -401,32 +477,6 @@ Edit a event
 	$('#active option[value="{{$event->active}}"]').attr('selected','selected');
 	
 	// http://eonasdan.github.io/bootstrap-datetimepicker/Options/#locale
-	$('#datestart').datetimepicker({
-		//locale: 'ru',
-		//extraFormats: true,
-		ignoreReadonly: true, 
-		allowInputToggle: true,
-        format: 'yyyy/mm/dd hh:ii',
-		stepping: 5,
-		sideBySide: true,
-		showClose: true,
-		showClear: true,
-		showTodayButton: true,
-		defaultDate: '{{ $event->start }}'
-	});
-	$('#datefinish').datetimepicker({
-		//locale: 'ru',
-		//extraFormats: true,
-		ignoreReadonly: true, 
-		allowInputToggle: true,
-        format: 'yyyy/mm/dd hh:ii',
-		stepping: 5,
-		sideBySide: true,
-		showClose: true,
-		showClear: true,
-		showTodayButton: true,
-		defaultDate: '{{ $event->finish }}'
-	});
 	$("#datestart").on("dp.change", function (e) {
 		$('#datefinish').data("DateTimePicker").minDate(e.date);
 	});
