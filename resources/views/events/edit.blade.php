@@ -243,8 +243,8 @@
                 autoclose: true,
                 todayBtn: true,
                 controlType: 'select',
-                startDate: end_date,
-                minDate: end_date,
+                startDate: $('#finish').val(),
+                minDate: $('#finish').val(),
                 minuteStep: 10
 
             });
