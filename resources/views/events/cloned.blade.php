@@ -41,7 +41,7 @@
                             </ul>
                         @endif
 
-                        {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@clonne', $event->uuid]]) !!}
+                        {!! Form::model($event, ['method' => 'POST', 'action' => ['EventsController@clonne', $event->uuid]]) !!}
 
                         <div class="form-group">
                             <label for="title">@lang('frontend.title')</label>
