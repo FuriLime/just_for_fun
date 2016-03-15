@@ -287,15 +287,14 @@ class EventsController extends Controller {
         $date = new \DateTime($event['start'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone($event['timezone']));
         $event_start_zero = $date;
-        dd($event_start_zero['timezone']);
         $date = new \DateTime($event['finish'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone($event['timezone']));
         $event_finish_zero = $date;
 
         $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
         // for bootstrap-datepicker
-        $event['start'] = $event_start_zero;
-        $event['finish'] = $event_finish_zero;
+        $event['start'] = date($event['start'], new \DateTimeZone($event['timezone']));
+        $event['finish'] = date('Y/m/d H:i', strtotime($event['finish']));
         $event['timezone'] =$event['timezone'];
         return view('events.edit', compact('event'));
     }
