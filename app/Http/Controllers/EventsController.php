@@ -307,7 +307,7 @@ class EventsController extends Controller {
             'location' => 'max:255',
             'parmanent_url' =>'max:255',
             'readable_url' =>'max:255',
-            'url' => 'max:255',
+            'event_url' => 'max:255',
             'timezone' => 'required',
             'start' => 'required',
             'finish' => 'required',

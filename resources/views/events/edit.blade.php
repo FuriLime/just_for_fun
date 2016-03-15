@@ -78,13 +78,8 @@
 
 
                         <div class="form-group">
-                            <label for="parmanent_url">@lang('frontend.url')</label>
-                            {!! Form::text('parmanent_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'parmanent_url']) !!}
-                        </div>
-
-                        <div class="form-group">
-                            <label for="readable_url">@lang('frontend.url')</label>
-                            {!! Form::text('readable_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'readable_url']) !!}
+                            <label for="event_url">@lang('frontend.url')</label>
+                            {!! Form::text('event_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'event_url']) !!}
                         </div>
 
                         <div class="form-group">
