@@ -1,0 +1,147 @@
+html{
+	background: black;
+	color: white;
+}
+.important-popup{
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: white;
+	margin: auto;
+	transition: all ease 0.5s;
+}
+div.item{
+	height: 127px;
+	background-color: blue;
+	border: 1px solid rgba(255,255,255, 0.5);
+	border-radius: 3px;	
+}
+.carousel-control{
+	line-height: 125px;
+}
+.carousel-control.right{
+	right: 15px;
+}
+.carousel-control.left{
+	left:15px;	
+}
+.popup-head{
+	font-size: 24px;
+	color: #1f487c;
+	text-align: center;
+}
+.popup-head span{
+	font-weight: bold;
+}
+.estimated-time{
+	font-size: 16px;
+	color: #7f7f7f;
+	text-align:center;
+}
+.popup-events-list {
+	list-style:none;
+	line-height: 30px;
+}
+.popup-events-list li:before {
+	display: inline;
+	content: url(../img/undone.png);
+	left: -15px;
+	position: absolute;
+	animation-name: spin;
+    animation-duration: 600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+ 
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+.popup-events-list li.done:before {
+	display: inline;
+	content: url(../img/done.png);
+	left: -15px;
+	animation-name: none;
+}
+.succ-btn, 
+.succ-btn:hover,
+.succ-btn:focus{
+	background-color: #00af50;
+	Color: white;
+	border-radius: 7px;
+	line-height: 48px;
+	border: 1px solid #d1e9e6;
+	font-size: 17px;
+	text-decoration: none;
+	opacity: 0.5;
+	transition: all ease 0.3s;
+	margin-bottom: 15px;
+}
+.succ-btn.enabled-btn:hover{
+	margin-top: 1px;
+	margin-bottom: 14px;
+}
+.succ-btn img{
+	display: none;
+}
+.succ-btn.enabled-btn{
+	opacity: 1;
+}
+.succ-btn.enabled-btn img{
+	display: inline;
+}
+.succ-btn span{
+	font-weight: bold;
+}
+@media(min-width: 992px) and (max-width: 1200px){
+	.popup-events-list,
+	.succ-btn{
+		width:50%;
+		margin-left:25%;
+	}
+}
+@media(min-width: 768px) and (max-width: 991px){
+	.popup-content{
+		width:100%;
+		margin-left: 0;
+	}
+	.popup-events-list,
+	.succ-btn{
+		width:50%;
+		margin-left:25%;
+	}
+	
+}
+
+@media(min-width: 346px) and (max-width: 768px){
+	.popup-content{
+		width:100%;
+		margin-left: 0;
+	}
+	.popup-events-list,
+	.succ-btn{
+		width:70%;
+		margin-left:15%;
+		line-height: 26px;
+	}
+}
+@media (max-width:345px){
+	.popup-content,
+	#myCarousel{
+		width:100%;
+		margin-left: 0;
+	}
+	.popup-events-list{
+		width:calc(100% - 30px);
+		margin-left:30px;
+	}
+	.succ-btn{
+		width: 100%;
+		line-height: 26px;
+		margin-left: 0;
+	}
+}
