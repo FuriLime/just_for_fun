@@ -298,40 +298,40 @@ class EventsController extends Controller {
    * @param  int  $uuid
    * @return Response
    */
-//  public function update($uuid, Request $request)
-//  {
-//    $this->validate($request, [
-////      'title' => 'required|max:80',
-//////      'description' => 'required|max:500',
-//////      'type' => 'required',
-////      'location' => 'max:255',
-////        'Country' => 'max:255',
-////        'City' => 'max:255',
-////        'State' => 'max:255',
-////        'Street' => 'max:255',
-////      'event_url' =>'max:255',
-////      'timezone' => 'required',
-////      'start' => 'required',
-////      'finish' => 'required',
-//    ]);
-//    //$event = Event::findOrFail($uuid);
-//    $event = Event::whereUuid($uuid)->first();
-//    // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
-//    $store_info = $request->all();
-//    $event['start'] = str_replace('/','-',$store_info['start']);
-//    $event['finish'] = str_replace('/','-',$store_info['finish']);
-//    $event['timezone'] =$event['timezone'];
-//    $event->update($request->all());
-//
-//    // Is the user logged in?
-//    if (Sentinel::check()) {
-//
-//        return redirect('events')->with('success', Lang::get('message.success.update'));
-//
-//    } else {
-//      return redirect('events')->with('success', Lang::get('message.success.update'));
-//    }
-//  }
+  public function update($uuid, Request $request)
+  {
+    $this->validate($request, [
+//      'title' => 'required|max:80',
+////      'description' => 'required|max:500',
+////      'type' => 'required',
+//      'location' => 'max:255',
+//        'Country' => 'max:255',
+//        'City' => 'max:255',
+//        'State' => 'max:255',
+//        'Street' => 'max:255',
+//      'event_url' =>'max:255',
+//      'timezone' => 'required',
+//      'start' => 'required',
+//      'finish' => 'required',
+    ]);
+    //$event = Event::findOrFail($uuid);
+    $event = Event::whereUuid($uuid)->first();
+    // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
+    $store_info = $request->all();
+    $event['start'] = str_replace('/','-',$store_info['start']);
+    $event['finish'] = str_replace('/','-',$store_info['finish']);
+    $event['timezone'] =$event['timezone'];
+    $event->update($request->all());
+
+    // Is the user logged in?
+    if (Sentinel::check()) {
+
+        return redirect('events')->with('success', Lang::get('message.success.update'));
+
+    } else {
+      return redirect('events')->with('success', Lang::get('message.success.update'));
+    }
+  }
 
   /**
    * Delete confirmation for the given Event.
