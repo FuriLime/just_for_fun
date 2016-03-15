@@ -61,9 +61,9 @@ Events List
 						<a href="{{ route('events.edit', $event->uuid) }}">
 							<i class="livicon" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="edit event"></i>
 						</a>
-                        {{--<a href="{{ route('confirm', $event->uuid) }}">--}}
-                            {{--<i class="livicon" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="clone event"></i>--}}
-                        {{--</a>--}}
+                        <a href="{{ route('events.cloned', $event->uuid) }}">
+                            <i class="livicon" data-name="cloned" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="clone event"></i>
+                        </a>
 						<a href="{{ route('events.confirm-delete', $event->uuid) }}" data-toggle="modal" data-target="#delete_confirm">
 							<i class="livicon" data-name="remove-alt" data-size="18" data-loop="true" data-c="#f56954" data-hc="#f56954" title="delete event"></i>
 						</a>

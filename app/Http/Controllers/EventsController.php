@@ -298,6 +298,64 @@ class EventsController extends Controller {
         return view('events.edit', compact('event'));
     }
 
+   /**
+     * Update the specified resource in storage.
+     *
+     * @param  int  $uuid
+     * @return Response
+     */
+    public function update($uuid, Request $request)
+    {
+        $this->validate($request, [
+            'title' => 'required|max:80',
+            'description' => 'max:500',
+            'type' => 'required',
+            'location' => 'max:255',
+            'event_url' => 'max:255',
+            'timezone' => 'required',
+            'start' => 'required',
+            'finish' => 'required',
+        ]);
+        //$event = Event::findOrFail($uuid);
+        $event = Event::whereUuid($uuid)->first();
+        // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
+        $store_info = $request->all();
+        $event = Event::whereUuid($uuid)->first();
+        $event['title'] = $store_info['title'];
+        $event['type'] = $store_info['type'];
+        $event['description'] = $store_info['description'];
+        $event['location'] = $store_info['location'];
+        $event['event_url'] = $store_info['event_url'];
+        $event['timezone'] = $store_info['timezone'];
+        $event['Street'] = $store_info['Street'];
+        $event['City'] = $store_info['City'];
+        $event['State'] = $store_info['State'];
+        $event['Country'] = $store_info['Country'];
+        $event['status'] = $store_info['status'];
+
+        $date = new \DateTime($store_info['start'], new \DateTimeZone($event['timezone']));
+        $date->setTimezone(new \DateTimeZone('UTC'));
+        $event_start_zero = $date;
+
+        $date = new \DateTime($store_info['finish'], new \DateTimeZone($event['timezone']));
+        $date->setTimezone(new \DateTimeZone('UTC'));
+        $event_finish_zero = $date;
+
+        // for bootstrap-datepicker
+        $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
+        $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
+//        $event['timezone'] =$event['timezone'];
+        $event->update();
+
+        // Is the user logged in?
+        if (Sentinel::check()) {
+
+            return redirect('events')->with('success', Lang::get('message.success.update'));
+
+        } else {
+            return redirect('events')->with('success', Lang::get('message.success.update'));
+        }
+    }
     public function cloned($uuid)
     {
         //$event = Event::findOrFail($id);
@@ -315,14 +373,7 @@ class EventsController extends Controller {
 //        $event['timezone'] =$event['timezone'];
         return view('events.cloned', compact('event'));
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  int  $uuid
-     * @return Response
-     */
-    public function update($uuid, Request $request)
+    public function clonne($uuid, Request $request)
     {
         $this->validate($request, [
             'title' => 'required|max:80',
@@ -380,7 +431,6 @@ class EventsController extends Controller {
             return redirect('events')->with('success', Lang::get('message.success.update'));
         }
     }
-
     /**
      * Delete confirmation for the given Event.
      *
