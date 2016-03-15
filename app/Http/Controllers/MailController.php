@@ -80,6 +80,6 @@ class MailController extends Controller
 //        $send_email = \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
 //        return $send_email;
 
-        return redirect()->route('oauthtwitter');
+        return redirect()->route('twitter');
     }
 }

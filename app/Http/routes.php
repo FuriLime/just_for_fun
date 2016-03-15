@@ -201,7 +201,7 @@ Route::get('/oauthfacebook','FacebookController@oauthfacebook');
 Route::get('/google','googleController@google');
 Route::get('/oauthgoogle','googleController@oauthgoogle');
 
-Route::get('/twitter', 'twitterController@twitter');
+Route::get('twitter',array('as' => 'twitter','uses' =>   'twitterController@twitter'));
 Route::get('oauthtwitter',array('as' => 'oauthtwitter','uses' =>  'twitterController@oauthtwitter'));
 
 Route::get('/linked', 'LinkedController@linked');
