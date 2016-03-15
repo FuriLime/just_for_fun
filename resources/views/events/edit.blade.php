@@ -239,13 +239,12 @@
             }
             $("#datefinish").datetimepicker("remove");
             $("#datefinish").datetimepicker({
-                onSelect: function() {alert('sdfsdfsdf')},
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
                 todayBtn: true,
                 controlType: 'select',
-                startDate: $('#finish').val(),
-                minDate: $('#finish').val(),
+                startDate: end_date,
+                minDate: end_date,
                 minuteStep: 10
 
             });
