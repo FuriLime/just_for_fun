@@ -320,7 +320,6 @@ class EventsController extends Controller {
         $event = Event::whereUuid($uuid)->first();
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
-dd($store_info);
         $event = Event::whereUuid($uuid)->first();
         $event['title'] = $store_info['title'];
         $event['type'] = $store_info['type'];
@@ -328,7 +327,11 @@ dd($store_info);
         $event['location'] = $store_info['location'];
         $event['event_url'] = $store_info['event_url'];
         $event['timezone'] = $store_info['timezone'];
-
+        $event['Street'] = $store_info['Street'];
+        $event['City'] = $store_info['City'];
+        $event['State'] = $store_info['State'];
+        $event['Country'] = $store_info['Country'];
+        $event['status'] = $store_info['timezone'];
 
         $date = new \DateTime($store_info['start'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
