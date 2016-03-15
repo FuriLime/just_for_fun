@@ -316,7 +316,8 @@ class EventsController extends Controller {
     $store_info = $request->all();
     $event['start'] = str_replace('/','-',$store_info['start']);
     $event['finish'] = str_replace('/','-',$store_info['finish']);
-        $event['timezone'] =$event['timezone'];
+    $event['timezone'] =$event['timezone'];
+      $event['timezone'] =  $store_info['event_url'];
     $event->update($request->all());
 
     // Is the user logged in?
