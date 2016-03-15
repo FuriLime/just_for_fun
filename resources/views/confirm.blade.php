@@ -83,7 +83,7 @@ Single Product| Welcome to Josh Frontend
                         </li>
                     </ul>
                     <a href="#" class="col-xs-4 col-xs-offset-4 succ-btn">
-                        <img src="img/yes.png"><span>Success:</span> Visit your EventPage
+                        <img src="{{ asset('assets/images/yes.png') }}"><span>Success:</span> Visit your EventPage
                     </a>
                     <div id="myCarousel" class="carousel slide col-xs-8 col-xs-offset-2" data-ride="carousel">
                         <!-- Indicators -->
