@@ -82,8 +82,6 @@ Edit a event
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
-                                     <input class="form-control" size="16" id="start" name="start" type="datetime" value="{{$start_date}}">
-
                                  </div>
                                  @if ($errors->first('start'))
                                      <ul class="alert alert-danger">
@@ -94,10 +92,6 @@ Edit a event
                              <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                          </div>
 
-
-                         <div class="form-group add_event_section_link" id="change_time_zone">
-                             <span>Timezone is {{$user_timezone}}. Default duration is 1h. <a id="time_change">Change here.</a></span>
-                         </div>
                          <div class="form-group" id="end_time_event" style="display:none" >
                              <label for="start">@lang('frontend.enddate')</label>
                              <div class="form-group form_datetime">
@@ -108,7 +102,7 @@ Edit a event
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-th"></span>
                                             </span>
-                                     <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{$finish_date}}">
+
 
                                  </div>
                                  @if ($errors->first('finish'))
