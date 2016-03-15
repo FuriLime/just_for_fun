@@ -333,7 +333,7 @@ class EventsController extends Controller {
 
         // for bootstrap-datepicker
         $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
-        dd($event['start']);
+        dd($event['City']);
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
         $event->update($request->all());
