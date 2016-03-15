@@ -329,7 +329,8 @@ class EventsController extends Controller {
         $date = new \DateTime($store_info['start'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
         $event_start_zero = $date;
-        $date = new \DateTime($event['finish'], new \DateTimeZone($event['timezone']));
+
+        $date = new \DateTime($store_info['finish'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
         $event_finish_zero = $date;
 
