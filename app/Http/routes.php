@@ -192,7 +192,7 @@ Route::get('oauthpocket', 'PocketController@index');
 // });
 
 //Route::post('welcome', 'MailController@emailSend');
-Route::get('welcome', 'MailController@emailSend');
+Route::get('welcome', 'MailController@getEmailSend');
 
 Route::get('/facebook','FacebookController@facebook');
 Route::get('/oauthfacebook','FacebookController@oauthfacebook');

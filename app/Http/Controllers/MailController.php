@@ -14,7 +14,7 @@ class MailController extends Controller
 {
     //
 
-    public function emailSend(){
+    public function getEmailSend(){
 
 //        $subject = date('Y-m-d H:i:s') . " Subjectline";  // using a time in there to easily now which email was received for testing
 //        $to_email = 'sergey.ch.ysbm@gmail.com';
