@@ -316,13 +316,12 @@
                             if (splits.length >= 4) {
 
                                 street = splits[0].replace(/(^\s*)$/g, '');
-                                console.log($.isNumeric(street));
-                                console.log(street);
-                            street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
+                                num_house = splits[1].replace(/(^\s*)$/g, '');
+                                console.log($.isNumeric(num_house));
+                                console.log(num_house);
                                 $('#street').val(street);
-console.log($.isNumeric(street));
-                                street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                                console.log($.isNumeric(street));
+
+//                                street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                 sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#city').val(sity);
 
