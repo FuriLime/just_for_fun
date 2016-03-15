@@ -132,7 +132,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-th"></span>
                                             </span>
-                                    <input class="form-control" size="16" id="finish" name="finish" type="text" value="">
+                                    <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{$event['finish']}}">
 
                                 </div>
                                 @if ($errors->first('finish'))
