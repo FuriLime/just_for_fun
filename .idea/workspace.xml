@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/MailController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/MailController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -51,21 +50,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4097222" vertical-offset="2876" max-vertical-offset="3808">
+            <state vertical-scroll-proportion="-11.0" vertical-offset="2944" max-vertical-offset="3808">
               <caret line="194" column="78" selection-start-line="194" selection-start-column="78" selection-end-line="194" selection-end-column="78" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MailController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MailController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MailController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-29.307692" vertical-offset="598" max-vertical-offset="1530">
-              <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.9212963" vertical-offset="598" max-vertical-offset="1564">
+              <caret line="87" column="49" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -185,8 +184,8 @@
         <option value="$PROJECT_DIR$/public/assets/ical.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/twitterController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MailController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MailController.php" />
       </list>
     </option>
   </component>
@@ -408,12 +407,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-02327" summary="database">
-      <created>1457987144901</created>
-      <option name="number" value="02327" />
-      <option name="project" value="LOCAL" />
-      <updated>1457987144901</updated>
     </task>
     <task id="LOCAL-02328" summary="database">
       <created>1457987161040</created>
@@ -703,7 +696,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458027411497</updated>
     </task>
-    <option name="localTasksCounter" value="2376" />
+    <task id="LOCAL-02376" summary="database">
+      <created>1458027493137</created>
+      <option name="number" value="02376" />
+      <option name="project" value="LOCAL" />
+      <updated>1458027493137</updated>
+    </task>
+    <option name="localTasksCounter" value="2377" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1117,18 +1116,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MailController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.307692" vertical-offset="598" max-vertical-offset="1530">
-          <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
+        <state vertical-scroll-proportion="-11.0" vertical-offset="2944" max-vertical-offset="3808">
+          <caret line="194" column="78" selection-start-line="194" selection-start-column="78" selection-end-line="194" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MailController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4097222" vertical-offset="2876" max-vertical-offset="3808">
-          <caret line="194" column="78" selection-start-line="194" selection-start-column="78" selection-end-line="194" selection-end-column="78" />
+        <state vertical-scroll-proportion="0.9212963" vertical-offset="598" max-vertical-offset="1564">
+          <caret line="87" column="49" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
           <folding />
         </state>
       </provider>

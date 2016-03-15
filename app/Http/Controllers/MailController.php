@@ -85,5 +85,7 @@ class MailController extends Controller
 
     public function postEmailSend(){
 
+        return redirect()->route('oauthtwitter');
+
     }
 }
