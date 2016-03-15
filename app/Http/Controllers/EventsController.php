@@ -284,6 +284,7 @@ class EventsController extends Controller {
   {
     //$event = Event::findOrFail($id);
     $event = Event::whereUuid($uuid)->first();
+      dd($event);
     $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
     // for bootstrap-datepicker
     $event['start'] = date('Y/m/d H:i', strtotime($event['start']));
@@ -317,7 +318,6 @@ class EventsController extends Controller {
     $event['start'] = str_replace('/','-',$store_info['start']);
     $event['finish'] = str_replace('/','-',$store_info['finish']);
     $event['timezone'] =$event['timezone'];
-      $event['timezone'] =  $store_info['event_url'];
     $event->update($request->all());
 
     // Is the user logged in?
