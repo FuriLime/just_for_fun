@@ -312,7 +312,7 @@
                             }
 
                             if (splits.length >= 4) {
-                                street = splits[0] + ' ' +splits[1].replace(/(\s*)$/g, '');
+                                street = splits[0] + ' ' +splits[1].replace(/(^\s*)$/g, '');
 //                            street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#street').val(street);
 
