@@ -338,7 +338,8 @@ class EventsController extends Controller {
         $event = Event::whereUuid($uuid)->first();
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
-        $event = Event::whereUuid($uuid)->first();
+        $eventold = Event::whereUuid($uuid)->first();
+        $event = new Event();
         $event['title'] = $store_info['title'];
         $event['type'] = $store_info['type'];
         $event['description'] = $store_info['description'];
@@ -351,11 +352,11 @@ class EventsController extends Controller {
         $event['Country'] = $store_info['Country'];
         $event['status'] = $store_info['status'];
 
-        $date = new \DateTime($store_info['start'], new \DateTimeZone($event['timezone']));
+        $date = new \DateTime($store_info['start'], new \DateTimeZone($eventold['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
         $event_start_zero = $date;
 
-        $date = new \DateTime($store_info['finish'], new \DateTimeZone($event['timezone']));
+        $date = new \DateTime($store_info['finish'], new \DateTimeZone($eventold['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
         $event_finish_zero = $date;
 
@@ -363,7 +364,7 @@ class EventsController extends Controller {
         $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
-        $event->update();
+        $event->save();
 
         // Is the user logged in?
         if (Sentinel::check()) {
