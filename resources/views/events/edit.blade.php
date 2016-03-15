@@ -318,10 +318,9 @@
                                 street = splits[0].replace(/(^\s*)$/g, '');
                                 num_house = splits[1].replace(/(^\s*)$/g, '');
                                 if($.isNumeric(num_house)){
-                                    alert();
+                                    street = street + num_house
                                 }
-                                console.log($.isNumeric(num_house));
-                                console.log(num_house);
+                                console.log(street);
                                 $('#street').val(street);
 
 //                                street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
