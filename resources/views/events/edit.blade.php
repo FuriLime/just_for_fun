@@ -108,7 +108,7 @@
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-calendar"></span>
 								</span>
-                                    {!! Form::text('start', null, ['class' => 'form-control', 'id' => 'start', 'style' => 'width: 100%;', 'readonly' => 'readonly']) !!}
+                                    {!! Form::text('start', null, ['class' => 'form-control', 'id' => 'start', 'style' => 'width: 100%;']) !!}
                                 </div>
                             </div>
                         </div>
@@ -120,7 +120,7 @@
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-calendar"></span>
 								</span>
-                                    {!! Form::text('finish', null, ['class' => 'form-control', 'id' => 'finish', 'style' => 'width: 100%;', 'readonly' => 'readonly']) !!}
+                                    {!! Form::text('finish', null, ['class' => 'form-control', 'id' => 'finish', 'style' => 'width: 100%;']) !!}
                                 </div>
                             </div>
                         </div>
