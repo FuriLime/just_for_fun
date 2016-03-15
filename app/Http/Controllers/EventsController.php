@@ -323,6 +323,13 @@ class EventsController extends Controller {
 
         $event = Event::whereUuid($uuid)->first();
         $event['title'] = $store_info['title'];
+        $event['type'] = $store_info['type'];
+        $event['description'] = $store_info['description'];
+        $event['location'] = $store_info['location'];
+        $event['event_url'] = $store_info['event_url'];
+        $event['timezone'] = $store_info['timezone'];
+
+
         $date = new \DateTime($store_info['start'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
         $event_start_zero = $date;
