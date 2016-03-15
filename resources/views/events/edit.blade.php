@@ -316,13 +316,13 @@
                             street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#street').val(street);
 
-                                sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
+                                sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#city').val(sity);
 
-                                state = splits[3].replace(/(^\s*)|(\s*)$/g, '');
+                                state = splits[2].replace(/(^\s*)|(\s*)$/g, '');
                                 $('#state').val(state);
 
-                                country = splits[4];
+                                country = splits[3];
                                 $('#country').val(country);
 
                                 $('#country').attr('style', 'display:block');
