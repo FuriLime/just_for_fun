@@ -284,10 +284,17 @@ class EventsController extends Controller {
     {
         //$event = Event::findOrFail($id);
         $event = Event::whereUuid($uuid)->first();
+        $date = new \DateTime($event['start'], new \DateTimeZone($event['timezone']));
+        $date->setTimezone(new \DateTimeZone($event['timezone']));
+        $event_start_zero = $date;
+        $date = new \DateTime($event['finish'], new \DateTimeZone($event['timezone']));
+        $date->setTimezone(new \DateTimeZone($event['timezone']));
+        $event_finish_zero = $date;
+
         $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
         // for bootstrap-datepicker
-        $event['start'] = date('Y/m/d H:i', strtotime($event['start']));
-        $event['finish'] = date('Y/m/d H:i', strtotime($event['finish']));
+        $event['start'] = $event_start_zero;
+        $event['finish'] = $event_finish_zero;
         $event['timezone'] =$event['timezone'];
         return view('events.edit', compact('event'));
     }
