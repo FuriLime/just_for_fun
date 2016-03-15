@@ -2,286 +2,257 @@
 
 {{-- Page title --}}
 @section('title')
-Edit a event
-@parent
+    Edit a event
+    @parent
 @stop
 
 {{-- page level styles --}}
 @section('header_styles')
-	<link href="{{ asset('assets/vendors/datetimepicker/css/bootstrap-datetimepicker.css') }}" rel="stylesheet" type="text/css" media="screen"  />
-	<link href="{{ asset('assets/vendors/select2/select2.min.css') }}" rel="stylesheet" type="text/css" media="screen"  />
-	<style>
-		.pac-logo::after {
-			display: none !important;
-		}
-	</style>
+    <link href="{{ asset('assets/vendors/datetimepicker/css/bootstrap-datetimepicker.css') }}" rel="stylesheet" type="text/css" media="screen"  />
+    <link href="{{ asset('assets/vendors/select2/select2.min.css') }}" rel="stylesheet" type="text/css" media="screen"  />
+    <style>
+        .pac-logo::after {
+            display: none !important;
+        }
+    </style>
 @stop
 
 {{-- Page content --}}
 @section('content')
-<!-- Container Section Start -->
-<div class="container">
-	<div class="row">
-		<div class="col-md-1"></div>
-		<div class="col-md-10" id="add_event">
-            <div class="panel panel-primary ">
-                <div class="panel-heading">
-                    <h4 class="panel-title"> <i class="livicon" data-name="edit" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-                        Edit event
-                    </h4>
-                </div>
-                <div class="panel-body">
-                     @if ($errors->any())
-                        <ul class="alert alert-danger">
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    @endif
+    <!-- Container Section Start -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10" id="add_event">
+                <div class="panel panel-primary ">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"> <i class="livicon" data-name="edit" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
+                            Edit event
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        @if ($errors->any())
+                            <ul class="alert alert-danger">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        @endif
 
-                    {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@update', $event->uuid]]) !!}
+                        {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@update', $event->uuid]]) !!}
 
-                         <div class="form-group">
-                             <label for="title">@lang('frontend.title')</label>
-                             {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}
-                             <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-                             <div class="form-group">
-                                 @if ($errors->first('title'))
-                                     <ul class="alert alert-danger myalert">
-                                         <li>{{ $errors->first('title') }}</li>
-                                     </ul>
-                                 @endif
-                             </div>
+                        <div class="form-group">
+                            <label for="title">@lang('frontend.title')</label>
+                            {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '80', 'id' => 'title']) !!}
+                        </div>
 
+                        <div class="form-group">
+                            <label for="type">@lang('frontend.type')</label>
+                            <div class="form-control radio-group">
+                                <input type="radio" value="1" name="type" id="type_1"
+                                @if ($event->type === 1)
+                                       checked
+                                        @endif
+                                        ><label for="type_1">@lang('frontend.online')</label>
+                                <input type="radio" value="2" name="type" id="type_2"
+                                @if ($event->type === 2)
+                                       checked
+                                        @endif
+                                        ><label for="type_2">@lang('frontend.offline')</label>
+                                <input type="radio" value="3" name="type" id="type_3"
+                                @if ($event->type === 3)
+                                       checked
+                                        @endif
+                                        ><label for="type_3">@lang('frontend.online_and_offline')</label>
+                            </div>
+                        </div>
 
-                         </div>
-
-                         <div class="form-group add_event_section_link" id="add_dicription">
-                             <i class="fa fa-fw fa-comment"></i>
-                             <a >Add Description</a>
-                         </div>
-
-                         <div class="form-group" id="descprip" style="display: none">
-                             <label for="description">@lang('frontend.description')</label>
-
-                             {!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}
-                             <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-                             {{--<button type="button" class="btn btn-warning " title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title">!</button>--}}
-                         </div>
-                         <div id="hide_dicription" class="add_event_section_link" style="display: none">
-                             <i class="fa fa-fw fa-stop"></i>
-                             <a class="show_hide" >Hide Description</a>
-                         </div>
-                         <div class="form-group">
-                             <label for="start">@lang('frontend.date')</label>
-                             <div class="form-group form_datetime">
-                                 <div class="input-group date form_datetime3 col-md-12"  id="datestart">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-remove"></span>
-                                </span>
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
-                                 </div>
-                                 @if ($errors->first('start'))
-                                     <ul class="alert alert-danger">
-                                         <li>{{ $errors->first('start') }}</li>
-                                     </ul>
-                                 @endif
-                             </div>
-                             <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-                         </div>
-
-                         <div class="form-group" id="end_time_event" style="display:none" >
-                             <label for="start">@lang('frontend.enddate')</label>
-                             <div class="form-group form_datetime">
-                                 <div class="input-group date form_datetime3 col-md-12" id="datefinish">
-                                             <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-remove"></span>
-                                            </span>
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-th"></span>
-                                            </span>
+                        <div class="form-group">
+                            <label for="description">@lang('frontend.description')</label>
+                            {!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}
+                        </div>
+                        <div class="form-group">
+                            <label for="location">@lang('frontend.location')</label>
+                            {!! Form::text('location', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'location']) !!}
+                        </div>
 
 
-                                 </div>
-                                 @if ($errors->first('finish'))
-                                     <ul class="alert alert-danger">
-                                         <li>{{ $errors->first('finish') }}</li>
-                                     </ul>
-                                 @endif
-                             </div>
-                             <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-                         </div>
+                        <div class="form-group">
+                            <label for="event_url">@lang('frontend.url')</label>
+                            {!! Form::text('event_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'event_url']) !!}
+                        </div>
 
 
-                         <div class="form-group"  id="time_zone_change" style="display:none">
-                             <label for="timezone">@lang('frontend.timezone')</label>
-                             {!! $event->timezone_select !!}
-                             <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-                         </div>
+                        <div class="form-group">
+                            <label for="timezone">@lang('frontend.timezone')</label>
+                            {!! $event->timezone_select !!}
+                        </div>
 
-                         {{--<input type="hidden" value="1" name="active" id="active" readonly>--}}
+                        <div class="form-group">
+                            <label for="start">@lang('frontend.date')</label>
+                            <div class="form-group form_datetime">
+                                <div class="input-group date form_datetime3 col-md-12" id="datestart">
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+                                    {!! Form::text('start', null, ['class' => 'form-control', 'id' => 'start', 'style' => 'width: 100%;', 'readonly' => 'readonly']) !!}
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="form-group">
+                            <label for="start">@lang('frontend.enddate')</label>
+                            <div class="form-group form_datetime">
+                                <div class="input-group date form_datetime3 col-md-12 " id="datefinish">
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+                                    {!! Form::text('finish', null, ['class' => 'form-control', 'id' => 'finish', 'style' => 'width: 100%;', 'readonly' => 'readonly']) !!}
+                                </div>
+                            </div>
+                        </div>
 
-                         <div class="form-group locale">
-                             <label for="location">@lang('frontend.location')</label>
-                             {!! Form::text('location', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'location']) !!}
-                             <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-                         </div>
+                        <div class="form-group fields_loc">
+                            {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street','readonly']) !!}
+                        </div>
 
-                         <div class="fields_map" style="display: none">
-                             <div class="map_event_loc" id="map"></div>
-                             <div class="form-group fields_loc">
-                                 {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street','readonly']) !!}
-                             </div>
+                        <div class="form-group fields_loc">
+                            {!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city','readonly']) !!}
+                        </div>
 
-                             <div class="form-group fields_loc">
-                                 {!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city','readonly']) !!}
-                             </div>
+                        <div class="form-group fields_loc">
+                            {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}
+                        </div>
 
-                             <div class="form-group fields_loc">
-                                 {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}
-                             </div>
+                        <div class="form-group fields_loc">
+                            {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}
+                        </div>
+                        {{--<div class="form-group">--}}
+                        {{--<label for="status">@lang('frontend.status')</label>--}}
+                        {{--<select class="form-control active" name="active" id="active">--}}
+                        {{--<option value="0">@lang('frontend.draft')</option>--}}
+                        {{--<option value="1">@lang('frontend.published')</option>--}}
+                        {{--</select>--}}
+                        {{--</div>--}}
 
-                             <div class="form-group fields_loc">
-                                 {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}
-                             </div>
-                             <div class="form-group fields_loc">
-                                 <a id="reset_loc">Reset Address</a>
-                             </div>
-                         </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-0 col-sm-4" id="btn_group">
+                                <button type="submit" class="btn btn-primary text-white">
+                                    @lang('frontend.update')
+                                </button>
+                            </div>
+                        </div>
+                        {!! Form::close() !!}
 
-                         <div class="add_event_section_link">
-                             <i class="fa fa-fw fa-gears"></i>
-                             <a data-toggle="tooltip" title="Option not available">Advansed Options</a>
-                         </div>
-                         <div class="form-group" style="text-align: right; margin-right: 3%; margin-top: 9%;">
-                             <div class="col-sm-offset-0 col-sm-12" id="btn_group">
-                                 <button type="button" class="btn" onclick="(function($) { $('#active').val('0'); $('#btn_group .btn-primary').click(); })(jQuery);">
-                                     @lang('frontend.save_as_draft')
-                                 </button>
-                                 <button class="btn btn-primary text-white test submit">
-                                     @lang('frontend.save_and_publish')
-                                 </button>
+                        <div id="map" style="display: none;"></div>
 
-                                 <div class="checkbox add_event_section_link">
-                                     <label><input type="checkbox" value="">This is a test event</label>
-                                 </div>
-                             </div>
-
-                         </div>
-                    {!! Form::close() !!}
-					
-					<div id="map" style="display: none;"></div>
-
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @stop
 
 
 {{-- page level scripts --}}
 @section('footer_scripts')
-	<script src="{{ asset('assets/vendors/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/vendors/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/vendors/colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
     {{--<script src="{{asset('assets/vendors/timepicker/js/bootstrap-timepicker.min.js')}}"></script>--}}
     <script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
-	<script src="{{ asset('assets/vendors/maxlength/bootstrap-maxlength.min.js') }}" type="text/javascript"></script>
-	<script src="{{ asset('assets/vendors/select2/select2.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/vendors/maxlength/bootstrap-maxlength.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/vendors/select2/select2.js') }}" type="text/javascript"></script>
     <script type="text/javascript" src="{{ asset('assets/js/moment.js') }}"></script>
     <script src="{{ asset('assets/vendors/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
     <script type="text/javascript" src="{{ asset('assets/js/date.format.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/jquery.maskedinput.min.js') }}"></script>
-	
-	
-	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
+
+    <script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 
     <script>
-    $(document).ready(function() {
-    $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
-    var nowtimedate = new Date();
-    nowtimedate = nowtimedate.format('Y/m/d H:i');
-    $("#datestart").datetimepicker({
-    format: 'yyyy/mm/dd hh:ii',
-    autoclose: true,
-    todayBtn: true,
-    startDate: nowtimedate,
-    minuteStep: 10,
-    controlType: 'select',
-    minDate: nowtimedate
-    });
-    $("#datefinish").datetimepicker({
-    format: 'yyyy/mm/dd hh:ii',
-    autoclose: true,
-    todayBtn: true,
-    controlType: 'select',
-    startDate: $('#finish').val(),
-    minDate: $('#finish').val(),
-    minuteStep: 10
+        $(document).ready(function() {
+            $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
+            var nowtimedate = new Date();
+            nowtimedate = nowtimedate.format('Y/m/d H:i');
+            $("#datestart").datetimepicker({
+                format: 'yyyy/mm/dd hh:ii',
+                autoclose: true,
+                todayBtn: true,
+                startDate: nowtimedate,
+                minuteStep: 10,
+                controlType: 'select',
+                minDate: nowtimedate
+            });
+            $("#datefinish").datetimepicker({
+                format: 'yyyy/mm/dd hh:ii',
+                autoclose: true,
+                todayBtn: true,
+                controlType: 'select',
+                startDate: $('#finish').val(),
+                minDate: $('#finish').val(),
+                minuteStep: 10
 
-    });
-    });
+            });
+        });
 
-    $('#start').on('change', function() {
-    var nowtimedate = new Date();
-    nowtimedate = nowtimedate.format('Y/m/d H:i');
-    var start_def_date = new Date();
-    var start_date = new Date($('#start').val());
+        $('#start').on('change', function() {
+            var nowtimedate = new Date();
+            nowtimedate = nowtimedate.format('Y/m/d H:i');
+            var start_def_date = new Date();
+            var start_date = new Date($('#start').val());
 
 
-    if(start_date.getTime() < start_def_date.getTime()) {
-    $('#start').val(start_def_date.format('Y/m/d H:i'));
-    return false;
-    }
+            if(start_date.getTime() < start_def_date.getTime()) {
+                $('#start').val(start_def_date.format('Y/m/d H:i'));
+                return false;
+            }
 
-    var end_date = new Date(start_date);
-    end_date.setHours(start_date.getHours() + 1);
-    end_date = end_date.format('Y/m/d H:i');
-    $('#finish').val(end_date);
-    if($('#finish').val()=='NaN/NaN/NaN NaN:NaN'){
-    $('#finish').val('');
-    }
-    $("#datefinish").datetimepicker("remove");
-    $("#datefinish").datetimepicker({
-    onSelect: function() {alert('sdfsdfsdf')},
-    format: 'yyyy/mm/dd hh:ii',
-    autoclose: true,
-    todayBtn: true,
-    controlType: 'select',
-    startDate: $('#finish').val(),
-    minDate: $('#finish').val(),
-    minuteStep: 10
+            var end_date = new Date(start_date);
+            end_date.setHours(start_date.getHours() + 1);
+            end_date = end_date.format('Y/m/d H:i');
+            $('#finish').val(end_date);
+            if($('#finish').val()=='NaN/NaN/NaN NaN:NaN'){
+                $('#finish').val('');
+            }
+            $("#datefinish").datetimepicker("remove");
+            $("#datefinish").datetimepicker({
+                onSelect: function() {alert('sdfsdfsdf')},
+                format: 'yyyy/mm/dd hh:ii',
+                autoclose: true,
+                todayBtn: true,
+                controlType: 'select',
+                startDate: $('#finish').val(),
+                minDate: $('#finish').val(),
+                minuteStep: 10
 
-    });
+            });
 
-    });
+        });
 
-    $('#finish').on('change', function() {
-    var start_date = new Date($('#start').val());
-    var end_date = new Date($('#finish').val());
+        $('#finish').on('change', function() {
+            var start_date = new Date($('#start').val());
+            var end_date = new Date($('#finish').val());
 
-    if(end_date.getTime() < start_date.getTime()) {
-    var end_date = new Date(start_date);
-    end_date.setHours(start_date.getHours() + 1);
-    end_date = end_date.format('Y/m/d H:i');
+            if(end_date.getTime() < start_date.getTime()) {
+                var end_date = new Date(start_date);
+                end_date.setHours(start_date.getHours() + 1);
+                end_date = end_date.format('Y/m/d H:i');
 
-    $('#finish').val(end_date);
-    }
-    });
+                $('#finish').val(end_date);
+            }
+        });
     </script>
-	<script type="text/javascript">//<![CDATA[
-	window.onload=function(){
-		var autocomplete = new google.maps.places.Autocomplete(document.getElementById('location'), {
-			//componentRestrictions: {country: 'ru'}
-			//language: 'ru'
-		});
-	}//]]> 
-	
-	// Get timezone of the place
-	// 3 steps: get entered place, find it`s location (coordinates), find its timezone
+    <script type="text/javascript">//<![CDATA[
+        window.onload=function(){
+            var autocomplete = new google.maps.places.Autocomplete(document.getElementById('location'), {
+                //componentRestrictions: {country: 'ru'}
+                //language: 'ru'
+            });
+        }//]]>
+
+        // Get timezone of the place
+        // 3 steps: get entered place, find it`s location (coordinates), find its timezone
         $('#location').change(function () {
             $('.locale').attr('style', 'display:none');
             $('.fields_map').attr('style', 'display:block');
@@ -498,54 +469,54 @@ Edit a event
 
 
     <script type="text/javascript">
-	$('#timezone').select2();
-	
-	// select event timezone
-	$('#timezone option[value="{{$event->timezone}}"]').attr('selected','selected');
-	// select event status
-	$('#active option[value="{{$event->active}}"]').attr('selected','selected');
-	
-	// http://eonasdan.github.io/bootstrap-datetimepicker/Options/#locale
-	$("#datestart").on("dp.change", function (e) {
-		$('#datefinish').data("DateTimePicker").minDate(e.date);
-	});
-	// run second calendar after closing of first
-	$("#datestart").on("dp.hide", function (e) {
-		$('#datefinish .glyphicon-calendar').click();
-	});
-	/*
-	$("#datefinish").on("dp.change", function (e) {
-		$('#datestart').data("DateTimePicker").maxDate(e.date);
-	});
-	*/
-	
-	$('input#title').maxlength({ 
-		//alwaysShow: true,
-		threshold: 25, 
-		warningClass: "label label-success",
-		limitReachedClass: "label label-danger",
-		preText: '@lang('frontend.you_typed') ',
-		separator: ' @lang('frontend.chars_out_of') ',
-		postText: ' @lang('frontend.chars')',
-		validate: true
-	});
-	$('textarea#description').maxlength({ 
-		threshold: 80, 
-		warningClass: "label label-success",
-		limitReachedClass: "label label-danger",
-		preText: '@lang('frontend.you_typed') ',
-		separator: ' @lang('frontend.chars_out_of') ',
-		postText: ' @lang('frontend.chars')',
-		validate: true
-	});
-	$('#url, #location').maxlength({ 
-		threshold: 60, 
-		warningClass: "label label-success",
-		limitReachedClass: "label label-danger",
-		preText: '@lang('frontend.you_typed') ',
-		separator: ' @lang('frontend.chars_out_of') ',
-		postText: ' @lang('frontend.chars')',
-		validate: true
-	});
-	</script>
+        $('#timezone').select2();
+
+        // select event timezone
+        $('#timezone option[value="{{$event->timezone}}"]').attr('selected','selected');
+        // select event status
+        $('#active option[value="{{$event->active}}"]').attr('selected','selected');
+
+        // http://eonasdan.github.io/bootstrap-datetimepicker/Options/#locale
+        $("#datestart").on("dp.change", function (e) {
+            $('#datefinish').data("DateTimePicker").minDate(e.date);
+        });
+        // run second calendar after closing of first
+        $("#datestart").on("dp.hide", function (e) {
+            $('#datefinish .glyphicon-calendar').click();
+        });
+        /*
+         $("#datefinish").on("dp.change", function (e) {
+         $('#datestart').data("DateTimePicker").maxDate(e.date);
+         });
+         */
+
+        $('input#title').maxlength({
+            //alwaysShow: true,
+            threshold: 25,
+            warningClass: "label label-success",
+            limitReachedClass: "label label-danger",
+            preText: '@lang('frontend.you_typed') ',
+            separator: ' @lang('frontend.chars_out_of') ',
+            postText: ' @lang('frontend.chars')',
+            validate: true
+        });
+        $('textarea#description').maxlength({
+            threshold: 80,
+            warningClass: "label label-success",
+            limitReachedClass: "label label-danger",
+            preText: '@lang('frontend.you_typed') ',
+            separator: ' @lang('frontend.chars_out_of') ',
+            postText: ' @lang('frontend.chars')',
+            validate: true
+        });
+        $('#url, #location').maxlength({
+            threshold: 60,
+            warningClass: "label label-success",
+            limitReachedClass: "label label-danger",
+            preText: '@lang('frontend.you_typed') ',
+            separator: ' @lang('frontend.chars_out_of') ',
+            postText: ' @lang('frontend.chars')',
+            validate: true
+        });
+    </script>
 @stop
