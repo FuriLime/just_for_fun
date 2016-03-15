@@ -18,32 +18,6 @@ if (isset($ID) && $ID != "") {
 	$date_end = strip_tags($_GET['fd']);
 	$time_end = strip_tags($_GET['ft']);
 
-    $file =  "BEGIN:VCALENDAR\r\n";
-    $file .= "PRODID:-//Google Inc//Google Calendar 70.9054//EN\r\n";
-    $file .= "VERSION:2.0\r\n";
-    $file .= "CALSCALE:GREGORIAN\r\n";
-    $file .= "METHOD:PUBLISH\r\n";
-    $file .= "X-WR-CALNAME:".strip_tags($_GET['name'])."\r\n";
-    $file .= "X-WR-TIMEZONE:\r\n";
-    $file .= "BEGIN:VTIMEZONE\r\n";
-    $file .= "TZID:\r\n";
-    $file .= "X-LIC-LOCATION:".strip_tags($_GET['loc'])."\r\n";
-    $file .= "BEGIN:DAYLIGHT\r\n";
-    $file .= "TZOFFSETFROM:-0500\r\n";
-    $file .= "TZOFFSETTO:-0400\r\n";
-    $file .= "TZNAME:EDT\r\n";
-    $file .= "DTSTART:19700308T020000\r\n";
-    $file .= "RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\n";
-    $file .= "END:DAYLIGHT\r\n";
-    $file .= "BEGIN:STANDARD\r\n";
-    $file .= "TZOFFSETFROM:-0400\r\n";
-    $file .= "TZOFFSETTO:-0500\r\n";
-    $file .= "TZNAME:EST\r\n";
-    $file .= "DTSTART:19701101T020000\r\n";
-    $file .= "RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\n";
-    $file .= "END:STANDARD\r\n";
-    $file .= "END:VTIMEZONE\r\n";
-
     $file .= "BEGIN:VEVENT\r\n";
     $file .= "DTSTART;VALUE=DATE:".$date . "T" . $time ."Z\r\n";
     $file .= "DTEND;VALUE=DATE:". $date_end . "T" . $time_end ."Z\r\n";
@@ -57,7 +31,6 @@ if (isset($ID) && $ID != "") {
     $file .= "SUMMARY:".strip_tags($_GET['name'])."\r\n";
     $file .= "TRANSP:TRANSPARENT\r\n";
     $file .= "END:VEVENT\r\n";
-    $file .= "END:VCALENDAR\r\n";
 
     echo $file;
     exit;
