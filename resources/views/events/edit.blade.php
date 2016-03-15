@@ -166,6 +166,8 @@ Edit a event
 	<script src="{{ asset('assets/vendors/select2/select2.js') }}" type="text/javascript"></script>
     <script type="text/javascript" src="{{ asset('assets/js/moment.js') }}"></script>
     <script src="{{ asset('assets/vendors/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/date.format.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.maskedinput.min.js') }}"></script>
 	
 	
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
