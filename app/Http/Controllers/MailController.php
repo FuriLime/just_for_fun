@@ -79,6 +79,10 @@ class MailController extends Controller
 //        // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
 //        $send_email = \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
 //        return $send_email;
+        if(isset($_POST)){
+            dd($_POST);
+        }
+
         return view('welcome');
 //        return redirect()->route('oauthtwitter');
     }
