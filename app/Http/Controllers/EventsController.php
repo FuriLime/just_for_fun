@@ -320,7 +320,7 @@ class EventsController extends Controller {
         $event = Event::whereUuid($uuid)->first();
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
-
+dd($store_info);
         $event = Event::whereUuid($uuid)->first();
         $event['title'] = $store_info['title'];
         $event['type'] = $store_info['type'];
