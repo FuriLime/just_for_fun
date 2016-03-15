@@ -259,10 +259,7 @@
                                 {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
                             </div>
                         </div>
-
-
-
-                        <p class="login button">
+                          <p class="login button">
                             <input type="submit" value="Submit" class="btn btn-success" />
                         </p>
                         <p class="change_link">
