@@ -41,7 +41,7 @@
                             </ul>
                         @endif
 
-                        {!! Form::model($event, ['method' => 'POST', 'action' => ['EventsController@clonne', $event->uuid]]) !!}
+                        {!! Form::open(['url' => 'events', 'id' => 'clone_event']) !!}
 
                         <div class="form-group">
                             <label for="title">@lang('frontend.title')</label>
