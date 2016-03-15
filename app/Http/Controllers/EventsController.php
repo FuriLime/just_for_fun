@@ -302,11 +302,11 @@ class EventsController extends Controller {
     {
         $this->validate($request, [
             'title' => 'required|max:80',
-            'description' => 'required|max:500',
+            'description' => 'max:500',
             'type' => 'required',
-            'location' => 'required|max:255',
-            'parmanent_url' =>'required|max255',
-            'readable_url' =>'required|max255',
+            'location' => 'max:255',
+            'parmanent_url' =>'max:255',
+            'readable_url' =>'max:255',
             'url' => 'max:255',
             'timezone' => 'required',
             'start' => 'required',
