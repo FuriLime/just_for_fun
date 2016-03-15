@@ -197,6 +197,8 @@
 
     <script>
         $(document).ready(function() {
+            var asd = $('#select2-timezone-container').val('{{$event->timezone}}');
+            console.log(asd);
             $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
             var nowtimedate = new Date();
             nowtimedate = nowtimedate.format('Y/m/d H:i');
@@ -513,7 +515,7 @@
 
         // select event timezone
         $('#timezone option[value="{{$event->timezone}}"]').attr('selected','selected');
-        $('#select2-timezone-container').val('{{$event->timezone}}');
+
         // select event status
         $('#active option[value="{{$event->active}}"]').attr('selected','selected');
 
