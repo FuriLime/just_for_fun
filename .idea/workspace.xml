@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -56,8 +56,8 @@
       <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6415981" vertical-offset="4656" max-vertical-offset="11067">
-              <caret line="306" column="20" selection-start-line="306" selection-start-column="20" selection-end-line="306" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.5816686" vertical-offset="5217" max-vertical-offset="11067">
+              <caret line="336" column="30" selection-start-line="336" selection-start-column="30" selection-end-line="336" selection-end-column="30" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
               </folding>
@@ -134,9 +134,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/twitterController.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/config/filesystems.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/events/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
       </list>
     </option>
   </component>
@@ -340,12 +340,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-02417" summary="database">
-      <created>1458032829950</created>
-      <option name="number" value="02417" />
-      <option name="project" value="LOCAL" />
-      <updated>1458032829950</updated>
     </task>
     <task id="LOCAL-02418" summary="database">
       <created>1458033212496</created>
@@ -635,7 +629,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458046924007</updated>
     </task>
-    <option name="localTasksCounter" value="2466" />
+    <task id="LOCAL-02466" summary="database">
+      <created>1458046963865</created>
+      <option name="number" value="02466" />
+      <option name="project" value="LOCAL" />
+      <updated>1458046963865</updated>
+    </task>
+    <option name="localTasksCounter" value="2467" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1071,8 +1071,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6415981" vertical-offset="4656" max-vertical-offset="11067">
-          <caret line="306" column="20" selection-start-line="306" selection-start-column="20" selection-end-line="306" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.5816686" vertical-offset="5217" max-vertical-offset="11067">
+          <caret line="336" column="30" selection-start-line="336" selection-start-column="30" selection-end-line="336" selection-end-column="30" />
           <folding>
             <element signature="e#39#52#0#PHP" expanded="true" />
           </folding>
