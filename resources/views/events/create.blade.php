@@ -218,7 +218,6 @@ Create New event
 @section('footer_scripts')
 
     <script src="{{ asset('assets/vendors/colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
-     {{--<script src="{{asset('assets/vendors/timepicker/js/bootstrap-timepicker.min.js')}}"></script>--}}
      <script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
       <script src="{{ asset('assets/js/bootbox.js') }}"></script>
     <script>
