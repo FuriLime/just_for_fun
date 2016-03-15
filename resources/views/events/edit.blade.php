@@ -76,7 +76,21 @@
                             {!! Form::text('location', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'location']) !!}
                         </div>
 
+                            <div class="form-group fields_loc">
+                                {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street','readonly']) !!}
+                            </div>
 
+                            <div class="form-group fields_loc">
+                                {!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city','readonly']) !!}
+                            </div>
+
+                            <div class="form-group fields_loc">
+                                {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}
+                            </div>
+
+                            <div class="form-group fields_loc">
+                                {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}
+                            </div>
                         <div class="form-group">
                             <label for="event_url">@lang('frontend.url')</label>
                             {!! Form::text('event_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'event_url']) !!}
