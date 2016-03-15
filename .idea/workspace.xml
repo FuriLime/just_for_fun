@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/edit.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -31,28 +32,28 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.981818" vertical-offset="3041" max-vertical-offset="4522">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3041" max-vertical-offset="4522">
               <caret line="195" column="33" selection-start-line="195" selection-start-column="28" selection-end-line="195" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/events/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.961538" vertical-offset="1020" max-vertical-offset="6885">
-              <caret line="89" column="137" selection-start-line="89" selection-start-column="137" selection-end-line="89" selection-end-column="137" />
+            <state vertical-scroll-proportion="0.33449075" vertical-offset="1020" max-vertical-offset="6834">
+              <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334" vertical-offset="4962" max-vertical-offset="10812">
-              <caret line="308" column="37" selection-start-line="308" selection-start-column="37" selection-end-line="308" selection-end-column="37" />
+            <state vertical-scroll-proportion="-11.192307" vertical-offset="4945" max-vertical-offset="10795">
+              <caret line="308" column="42" selection-start-line="308" selection-start-column="42" selection-end-line="308" selection-end-column="42" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
               </folding>
@@ -120,8 +121,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/twitterController.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/config/filesystems.php" />
-        <option value="$PROJECT_DIR$/resources/views/events/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/events/edit.blade.php" />
       </list>
     </option>
   </component>
@@ -341,6 +342,9 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -348,9 +352,6 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -365,12 +366,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-02374" summary="database">
-      <created>1458027246522</created>
-      <option name="number" value="02374" />
-      <option name="project" value="LOCAL" />
-      <updated>1458027246522</updated>
     </task>
     <task id="LOCAL-02375" summary="database">
       <created>1458027411497</created>
@@ -660,14 +655,19 @@
       <option name="project" value="LOCAL" />
       <updated>1458039632298</updated>
     </task>
-    <option name="localTasksCounter" value="2423" />
+    <task id="LOCAL-02423" summary="database">
+      <created>1458039698012</created>
+      <option name="number" value="02423" />
+      <option name="project" value="LOCAL" />
+      <updated>1458039698012</updated>
+    </task>
+    <option name="localTasksCounter" value="2424" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -684,6 +684,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31139648" sideWeight="0.5307467" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -946,7 +947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42068157" vertical-offset="3059" max-vertical-offset="7327">
           <caret line="201" column="24" selection-start-line="201" selection-start-column="24" selection-end-line="201" selection-end-column="88" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -992,9 +992,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27546296" vertical-offset="0" max-vertical-offset="864">
           <caret line="48" column="72" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1002,7 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35069445" vertical-offset="2944" max-vertical-offset="3808">
           <caret line="195" column="17" selection-start-line="195" selection-start-column="17" selection-end-line="195" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,7 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.4171562" vertical-offset="238" max-vertical-offset="3468">
           <caret line="135" column="74" selection-start-line="135" selection-start-column="74" selection-end-line="135" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1018,7 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.3160987" vertical-offset="0" max-vertical-offset="4998">
           <caret line="166" column="78" selection-start-line="166" selection-start-column="73" selection-end-line="166" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1026,7 +1021,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.333725" vertical-offset="3688" max-vertical-offset="4539">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1034,7 +1028,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5277778" vertical-offset="1040" max-vertical-offset="1904">
           <caret line="88" column="43" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,7 +1035,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.1805556" vertical-offset="1020" max-vertical-offset="1955">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1050,7 +1042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49189815" vertical-offset="0" max-vertical-offset="864">
           <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1058,13 +1049,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29142186" vertical-offset="92" max-vertical-offset="1173">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.981818" vertical-offset="3041" max-vertical-offset="4522">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3041" max-vertical-offset="4522">
           <caret line="195" column="33" selection-start-line="195" selection-start-column="28" selection-end-line="195" selection-end-column="33" />
           <folding />
         </state>
@@ -1074,7 +1064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33449075" vertical-offset="0" max-vertical-offset="1054">
           <caret line="17" column="48" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1088,21 +1077,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.961538" vertical-offset="1020" max-vertical-offset="6885">
-          <caret line="89" column="137" selection-start-line="89" selection-start-column="137" selection-end-line="89" selection-end-column="137" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="4962" max-vertical-offset="10812">
-          <caret line="308" column="37" selection-start-line="308" selection-start-column="37" selection-end-line="308" selection-end-column="37" />
+        <state vertical-scroll-proportion="-11.192307" vertical-offset="4945" max-vertical-offset="10795">
+          <caret line="308" column="42" selection-start-line="308" selection-start-column="42" selection-end-line="308" selection-end-column="42" />
           <folding>
             <element signature="e#39#52#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33449075" vertical-offset="1020" max-vertical-offset="6834">
+          <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

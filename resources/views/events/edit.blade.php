@@ -75,10 +75,7 @@ Edit a event
                         <label for="location">@lang('frontend.location')</label>
                         {!! Form::text('location', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'location']) !!}
                     </div>
-					<div class="form-group">
-                        <label for="url">@lang('frontend.url')</label>
-                        {!! Form::text('url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'url']) !!}
-                    </div>
+
 
                          <div class="form-group">
                              <label for="parmanent_url">@lang('frontend.url')</label>
