@@ -298,7 +298,7 @@ class EventsController extends Controller {
         return view('events.edit', compact('event'));
     }
 
-    public function getClone($uuid)
+    public function cloned($uuid)
     {
         //$event = Event::findOrFail($id);
         $event = Event::whereUuid($uuid)->first();
@@ -313,7 +313,7 @@ class EventsController extends Controller {
         $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
-        return view('events.clone', compact('event'));
+        return view('events.cloned', compact('event'));
     }
 
     /**
