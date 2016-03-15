@@ -335,7 +335,7 @@ class EventsController extends Controller {
         $event['start'] = '2016-05-16 15:00';
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
-        $event->update($event);
+        $event->update();
 
         // Is the user logged in?
         if (Sentinel::check()) {
