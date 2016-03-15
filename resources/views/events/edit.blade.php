@@ -82,11 +82,7 @@ Edit a event
                              {!! Form::text('event_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'event_url']) !!}
                          </div>
 
-                         {{--<div class="form-group">--}}
-                             {{--<label for="readable_url">@lang('frontend.url')</label>--}}
-                             {{--{!! Form::text('readable_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'readable_url']) !!}--}}
-                         {{--</div>--}}
-					
+
 					<div class="form-group">
                         <label for="timezone">@lang('frontend.timezone')</label>
 						{!! $event->timezone_select !!}
@@ -94,7 +90,7 @@ Edit a event
 					
 					<div class="form-group">
                         <label for="start">@lang('frontend.date')</label>
-						<div class="form-group form_datetime">
+						<div class="form-group form_datetime3">
 							<div class="input-group date" id="datestart">
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-calendar"></span>
@@ -106,7 +102,7 @@ Edit a event
 					
 					<div class="form-group">
                         <label for="start">@lang('frontend.enddate')</label>
-						<div class="form-group form_datetime">
+						<div class="form-group form_datetime3">
 							<div class="input-group date" id="datefinish">
 								<span class="input-group-addon">
 									<span class="glyphicon glyphicon-calendar"></span>
