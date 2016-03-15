@@ -45,7 +45,7 @@ class twitterController extends Controller
         $listId = Config::get('mailchimp.listId');
         $userTwit = Socialite::driver('twitter')->user();
         if(isset($_POST)){
-            dd($_POST['email']);
+            dd($_POST);
         }
 //        if(empty($userTwit->email))
 //        {
