@@ -83,7 +83,10 @@ class MailController extends Controller
 //        return redirect()->route('oauthtwitter');
     }
 
-    public function postEmailSend(){
+    public function postEmailSend(Request $request){
+        $this->validate($request, [
+            'email'  => 'required|email|unique:users',
+    ]);
 
         return redirect()->route('oauthtwitter');
 
