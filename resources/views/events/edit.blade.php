@@ -116,13 +116,13 @@ Edit a event
 						</div>
                     </div>
 					
-					<div class="form-group">
-                        <label for="status">@lang('frontend.status')</label>
-						<select class="form-control active" name="active" id="active">
-							<option value="0">@lang('frontend.draft')</option>
-							<option value="1">@lang('frontend.published')</option>
-						</select>
-                    </div>
+					{{--<div class="form-group">--}}
+                        {{--<label for="status">@lang('frontend.status')</label>--}}
+						{{--<select class="form-control active" name="active" id="active">--}}
+							{{--<option value="0">@lang('frontend.draft')</option>--}}
+							{{--<option value="1">@lang('frontend.published')</option>--}}
+						{{--</select>--}}
+                    {{--</div>--}}
 
                     <div class="form-group">
 						<div class="col-sm-offset-0 col-sm-4" id="btn_group">
