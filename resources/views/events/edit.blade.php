@@ -513,7 +513,7 @@
 
         // select event timezone
         $('#timezone option[value="{{$event->timezone}}"]').attr('selected','selected');
-        $('#select2-timezone-container').val({{$event->timezone}});
+        $('#select2-timezone-container').val('{{$event->timezone}}');
         // select event status
         $('#active option[value="{{$event->active}}"]').attr('selected','selected');
 
