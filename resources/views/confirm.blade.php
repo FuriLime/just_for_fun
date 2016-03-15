@@ -9,10 +9,9 @@ Single Product| Welcome to Josh Frontend
 {{-- page level styles --}}
 @section('header_styles')
     <!--page level css starts-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/cart.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/font-awesome-4.2.0/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/tabbular.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/bootstrap-rating-master/bootstrap-rating.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/popup.css') }}">
+
     <!--end of page level css-->
 @stop
 
