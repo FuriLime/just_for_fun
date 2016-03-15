@@ -46,7 +46,7 @@
     <body>
         <div class="container">
             <div class="content">
-<form action="{{url('oauthtwitter')}}" method="POST">
+<form action="{{url('twitter')}}" method="POST">
     {!! csrf_field() !!}
     <div class="form-group">
         <label for="subject">Subject: </label>
