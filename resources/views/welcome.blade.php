@@ -46,42 +46,14 @@
     <body>
         <div class="container">
             <div class="content">
-<form action="{{url('twitter')}}" method="POST">
-    {!! csrf_field() !!}
-    <div class="form-group">
-        <label for="subject">Subject: </label>
-        <input type="text" name="subject" id="subject" class="form-control">
-    </div>
-
-    <div class="form-group">
-        <label for="sender_name">Sender Name: </label>
-        <input type="text" name="sender_name" id="sender_name" class="form-control">
-    </div>
-
-    <div class="form-group">
-        <label for="sender_email">Sender Email: </label>
-        <input type="text" name="sender_email" id="sender_email" class="form-control">
-    </div>
-
-    <div class="form-group">
-        <label for="recipient_name">Recipiend Name: </label>
-        <input type="text" name="recipient_name" id="recipient_name" class="form-control">
-    </div>
-
-    <div class="form-group">
-        <label for="recipient_email">Recipiend Email: </label>
-        <input type="text" name="recipient_email" id="recipient_email" class="form-control">
-    </div>
-
-
-    <div class="form-group">
-        <label for="content">Content: </label>
-        <input type="textarea" name="content" id="content" cols="30" rows="10" class="form-control">
-    </div>
-
-<input type="submit" value="Send" class="btn btn-primary">
-
-
+                <form action="{{ route('twitter') }}" method="post" role="form">
+                    <div class="form-group">
+                    <label for="subject">Enter your email </label>
+                    <input type="text" name="subject" id="subject" class="form-control">
+                    <input type="submit" value="Send" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
         </div>
     </body>
 </html>
