@@ -321,7 +321,7 @@ class EventsController extends Controller {
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
 
-        dd($store_info);
+        dd($store_info['title']);
 
 //        $event['start'] = str_replace('/','-',$store_info['start']);
 //        $event['finish'] = str_replace('/','-',$store_info['finish']);
