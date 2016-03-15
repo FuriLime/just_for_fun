@@ -14,7 +14,7 @@ $(document).ready(function(){
 			if ($('.estimated-time span')[0].innerHTML == 0){
 				clearInterval(clearID);
 				$('.succ-btn').addClass('enabled-btn');
-				$('.succ-btn').attr('href', 'some.html');
+				$('.succ-btn').attr('href', '/events');
 			}
 		}, 1000) 
 		var number_of_events = $('.popup-events-list li').length;
