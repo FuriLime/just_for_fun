@@ -357,11 +357,11 @@ class EventsController extends Controller {
         $event['Country'] = $store_info['Country'];
         $event['status'] = $store_info['status'];
 
-        $date = new \DateTime($store_info['start'], new \DateTimeZone($eventold['timezone']));
+        $date = new \DateTime($store_info['start'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
         $event_start_zero = $date;
 
-        $date = new \DateTime($store_info['finish'], new \DateTimeZone($eventold['timezone']));
+        $date = new \DateTime($store_info['finish'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
         $event_finish_zero = $date;
 
