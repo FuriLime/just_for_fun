@@ -193,10 +193,10 @@
 							$('#hidden_address').appendTo( $('#address_wr') ).css('position', 'static');
  
                         } else {
-                            alert("No results found");
+                            console.log("No results found");
                         }
                     } else {
-                        alert("Geocode was not successful for the following reason: " + status);
+                        console.log("Geocode was not successful for the following reason: " + status);
                     }
                 });
             }
