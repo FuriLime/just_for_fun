@@ -1,7 +1,7 @@
 <?php 
 
 $ID =  strip_tags($_GET['name']);
-dd($ID);
+var_dump($ID); die;
 if (isset($ID) && $ID != "") {
 	header('Content-Description: File Transfer');
 	header('Content-Type: application/octet-stream; charset=utf-8');
