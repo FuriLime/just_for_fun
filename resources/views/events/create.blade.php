@@ -246,7 +246,7 @@ Create New event
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
         $('#test').on('change', function() {
             console.log($('#test').prop("checked"));
-            if ($('#test').attr('checked') == 'checked') {
+            if ($('#test').prop("checked")==true) {
 //                console.log($('#test').val())
                 $('#test').val("1")
             } else {
