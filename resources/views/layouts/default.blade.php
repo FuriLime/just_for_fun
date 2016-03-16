@@ -16,7 +16,7 @@
 
     <title>
         @section('title')
-            | EEEEEEE
+        Page
         @show
     </title>
     <!--global css starts-->
