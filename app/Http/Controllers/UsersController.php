@@ -643,6 +643,7 @@ class UsersController extends JoshController
 //             Check if we are not trying to delete ourselves
             if ($user->id === Sentinel::getUser()->id)  {
                 // Prepare the error message
+                dd('asdasd');
                 $error = Lang::get('users/message.error.delete');
 
                 return View('admin/layouts/modal_confirmation', compact('error', 'model', 'confirm_route'));
