@@ -45,6 +45,7 @@
                         <div class="form-group">
                             <label for="title">@lang('frontend.title')</label>
                             {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '80', 'id' => 'title']) !!}
+                            <input class="form-control" size="16" id="title" name="title" type="text" value="{{$event['title']}}">
                         </div>
 
                         <div class="form-group">
