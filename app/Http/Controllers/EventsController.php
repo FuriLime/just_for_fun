@@ -526,9 +526,9 @@ class EventsController extends Controller {
                     '&dates='.$event_start_zero->format('Ymd').'T'.$event_start_zero->format('His').'Z/'.
                     $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His').'Z'.
                     $timezone.
-//                    '&details='.$event['description'].
                     '&sprop=website:'.route('events.show',$uuid).
-                    '&location='.$event['location'].'&pli=1&uid=&sf=true&output=xml';
+                    '&location='.$event['location'].'&pli=1&uid=&sf=true&output=xml'.
+                    '&details='.$event['description'];
                 break;
 
             case 'Yahoo':
