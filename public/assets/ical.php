@@ -5,7 +5,7 @@ $file_name = srt_replace(" ", "_", $ID);
 if (isset($ID) && $ID != "") {
 	header('Content-Description: File Transfer');
 	header('Content-Type: application/octet-stream; charset=utf-8');
-	header('Content-Disposition: attachment; filename=' . $file_name . '.ics');
+	header('Content-Disposition: attachment; filename=' . $ID . '.ics');
 	header('Content-Transfer-Encoding: binary');
 	header('Expires: 0');
 	header('Cache-Control: must-revalidate');
