@@ -52,6 +52,7 @@ class twitterController extends Controller
 //            return redirect()->route('welcome');
 //        }
         $user = User::wheretwit_nick($userTwit->getNickName())->first();
+        dd($user);
         if(!$user){
             $user = new User;
             $user->twit_nick = $userTwit->getNickName();
