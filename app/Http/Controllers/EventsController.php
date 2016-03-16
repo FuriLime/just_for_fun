@@ -359,7 +359,6 @@ class EventsController extends Controller {
     {
         //$event = Event::findOrFail($id);
         $event = Event::whereUuid($uuid)->first();
-        dd($event['type']);
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($event['timezone']));
         $event_start_zero = $date;
