@@ -200,9 +200,9 @@ class EventsController extends Controller {
         $store_info->account_id = $account[0]->account_id;
         $store_info->permanent_url = Uuid::uuid4();
         $store_info->readable_url = Uuid::uuid4();
-        $store_info->status = Input::get('test');
+        $store_info->status = Input::get('status');
+        $store_info->test = Input::get('test');
 
-        dd($store_info->status);
         $date = new \DateTime($store_info->start, new \DateTimeZone($store_info->timezone));
         $date->setTimezone(new \DateTimeZone('UTC'));
         $event_start_zero = $date;
