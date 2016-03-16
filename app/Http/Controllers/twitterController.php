@@ -44,6 +44,7 @@ class twitterController extends Controller
         $mc = new Mailchimp($apiKey);
         $listId = Config::get('mailchimp.listId');
         $userTwit = Socialite::driver('twitter')->user();
+        dd($userTwit);
 //        if(isset($_POST)){
 //            dd($_POST);
 //        }
@@ -52,7 +53,7 @@ class twitterController extends Controller
 //            return redirect()->route('welcome');
 //        }
         $user = User::wheretwit_nick($userTwit->getNickName())->first();
-        dd($user);
+
         if(!$user){
             $user = new User;
             $user->twit_nick = $userTwit->getNickName();
