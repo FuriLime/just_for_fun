@@ -72,7 +72,7 @@
                         <div class="form-group">
                             <label for="description">@lang('frontend.description')</label>
 {{--                            {!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}--}}
-                            <input class="textarea form-control" type="textarea" id="description" name="description", maxlength="500" value="{{$event['description']}}">
+                            <textarea class="textarea form-control" type="textarea" id="description" name="description", maxlength="500" value="{{$event['description']}}"></textarea>
                         </div>
 
                         <div class="form-group">
