@@ -1,7 +1,7 @@
 <?php 
 
 $ID =  strip_tags($_GET['name']);
-$file_name = srt_replace(" ", "_", $ID);
+$file_name = str_replace(" ", "_", $ID);
 var_dump($file_name); die;
 if (isset($ID) && $ID != "") {
 	header('Content-Description: File Transfer');
