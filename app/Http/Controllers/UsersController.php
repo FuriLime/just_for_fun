@@ -641,12 +641,12 @@ class UsersController extends JoshController
             $user = Sentinel::findById($id);
 
             // Check if we are not trying to delete ourselves
-            if ($user->id === Sentinel::getUser()->id)  {
-                // Prepare the error message
-                $error = Lang::get('users/message.error.delete');
-
-                return View('admin/layouts/modal_confirmation', compact('error', 'model', 'confirm_route'));
-            }
+//            if ($user->id === Sentinel::getUser()->id)  {
+//                // Prepare the error message
+//                $error = Lang::get('users/message.error.delete');
+//
+//                return View('admin/layouts/modal_confirmation', compact('error', 'model', 'confirm_route'));
+//            }
         } catch (UserNotFoundException $e) {
             // Prepare the error message
             $error = Lang::get('users/message.user_not_found', compact('id' ));
