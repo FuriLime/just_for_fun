@@ -248,7 +248,7 @@ Create New event
             if ($('#test').attr('checked') == 'checked') {
                 $('#test').val("1")
             } else {
-                console.log($('#test').attr('checked'))
+                console.log($('#test').val())
                 $('#test').val("0")
             }
         });

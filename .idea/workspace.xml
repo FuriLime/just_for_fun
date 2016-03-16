@@ -53,8 +53,8 @@
       <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57931846" vertical-offset="2414" max-vertical-offset="10897">
-              <caret line="171" column="60" selection-start-line="171" selection-start-column="60" selection-end-line="171" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.35957697" vertical-offset="3944" max-vertical-offset="10897">
+              <caret line="250" column="44" selection-start-line="250" selection-start-column="44" selection-end-line="250" selection-end-column="44" />
               <folding>
                 <element signature="e#3565#3586#0#HTML" expanded="true" />
                 <element signature="e#5457#5477#0#HTML" expanded="true" />
@@ -356,12 +356,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-02674" summary="database">
-      <created>1458121724519</created>
-      <option name="number" value="02674" />
-      <option name="project" value="LOCAL" />
-      <updated>1458121724519</updated>
-    </task>
     <task id="LOCAL-02675" summary="database">
       <created>1458121803567</created>
       <option name="number" value="02675" />
@@ -650,7 +644,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458137647619</updated>
     </task>
-    <option name="localTasksCounter" value="2723" />
+    <task id="LOCAL-02723" summary="database">
+      <created>1458137762000</created>
+      <option name="number" value="02723" />
+      <option name="project" value="LOCAL" />
+      <updated>1458137762000</updated>
+    </task>
+    <option name="localTasksCounter" value="2724" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1065,14 +1065,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614" vertical-offset="714" max-vertical-offset="9690">
-          <caret line="43" column="46" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.307692" vertical-offset="2932" max-vertical-offset="12563">
@@ -1083,10 +1075,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="714" max-vertical-offset="9690">
+          <caret line="43" column="46" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57931846" vertical-offset="2414" max-vertical-offset="10897">
-          <caret line="171" column="60" selection-start-line="171" selection-start-column="60" selection-end-line="171" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.35957697" vertical-offset="3944" max-vertical-offset="10897">
+          <caret line="250" column="44" selection-start-line="250" selection-start-column="44" selection-end-line="250" selection-end-column="44" />
           <folding>
             <element signature="e#3565#3586#0#HTML" expanded="true" />
             <element signature="e#5457#5477#0#HTML" expanded="true" />
