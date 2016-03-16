@@ -639,7 +639,6 @@ class UsersController extends JoshController
         try {
             // Get user information
             $user = Sentinel::findById($id);
-dd('sfsdfsdf');
 //             Check if we are not trying to delete ourselves
 //            if ($user->id === Sentinel::getUser()->id)  {
 //                // Prepare the error message
