@@ -251,7 +251,7 @@ Create New event
                 $('#test').val("1")
             } else {
 //                console.log($('#test').val())
-                $('#test').val("2")
+                $('#test').val("0")
             }
         });
         var nowtimedate = new Date();
