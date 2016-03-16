@@ -391,7 +391,7 @@ class EventsController extends Controller {
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
         $eventold = Event::whereUuid($uuid)->first();
-        dd($store_info);
+
         $event = new Event();
         $event['title'] = $store_info['title'];
         $event['account_id'] = $eventold['account_id'];
@@ -422,6 +422,7 @@ class EventsController extends Controller {
         $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
+        dd($event);
         $event->save();
 
         // Is the user logged in?
