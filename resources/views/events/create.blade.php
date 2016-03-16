@@ -169,7 +169,7 @@ Create New event
                             </button>
 
                             <div class="checkbox add_event_section_link">
-                              <label><input type="checkbox" name="test" id="test" value="2">This is a test event</label>
+                              <label><input type="checkbox" checked name="test" id="test" value="1">This is a test event</label>
                             </div>
                         </div>
 
@@ -210,19 +210,19 @@ Create New event
     </style>
 {{-- page level scripts --}}
 @section('footer_scripts')
-    <script type="text/javascript" src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>
+
     <script src="{{ asset('assets/vendors/colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
      <script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
       <script src="{{ asset('assets/js/bootbox.js') }}"></script>
     <script>
-//        $(document).on("click", ".submit", function(e) {
-//            event.preventDefault();
-//            bootbox.confirm("Do you want to publish this event?", function(result) {
-//                if (result == true) {
-//                   $('#create_event').submit();
-//                }
-//            });
-//        });
+        $(document).on("click", ".submit", function(e) {
+            event.preventDefault();
+            bootbox.confirm("Do you want to publish this event?", function(result) {
+                if (result == true) {
+                   $('#create_event').submit();
+                }
+            });
+        });
     </script>
 
     <script type="text/javascript" src="{{ asset('assets/vendors/tags/dist/bootstrap-tagsinput.js') }}"></script>
@@ -240,7 +240,7 @@ Create New event
 	<script src="{{ asset('assets/vendors/select2/select2.js') }}" type="text/javascript"></script>
     <script type="text/javascript" src="{{ asset('assets/js/date.format.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/jquery.maskedinput.min.js') }}"></script>
-
+    <script type="text/javascript" src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>
     <script>
     $(document).ready(function() {
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
