@@ -244,12 +244,14 @@ Create New event
     <script>
     $(document).ready(function() {
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
-        if ($('#test').attr('checked') == 'checked'){
-            $('#test').val("1")
-        }else{
-            console.log($('#test').attr('checked'))
-            $('#test').val("0")
-        }
+        $('#test').on('change', function() {
+            if ($('#test').attr('checked') == 'checked') {
+                $('#test').val("1")
+            } else {
+                console.log($('#test').attr('checked'))
+                $('#test').val("0")
+            }
+        });
         console.log($('#test').attr('checked'));
         var nowtimedate = new Date();
         nowtimedate = nowtimedate.format('Y/m/d H:i');
