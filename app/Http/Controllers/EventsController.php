@@ -157,7 +157,6 @@ class EventsController extends Controller {
             'timezone' => 'required',
             'start' => 'required',
             'finish' => 'required',
-            'status' => 'required',
         ]);
         if(Sentinel::check()){
             $userId = Sentinel::getUser()->id;
@@ -201,6 +200,7 @@ class EventsController extends Controller {
         $store_info->account_id = $account[0]->account_id;
         $store_info->permanent_url = Uuid::uuid4();
         $store_info->readable_url = Uuid::uuid4();
+        $store_info->status = Input::get('status');
 
         $date = new \DateTime($store_info->start, new \DateTimeZone($store_info->timezone));
         $date->setTimezone(new \DateTimeZone('UTC'));
