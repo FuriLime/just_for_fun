@@ -169,7 +169,7 @@ Create New event
                             </button>
 
                             <div class="checkbox add_event_section_link">
-                              <label><input type="checkbox" checked name="test" id="test" value="1">This is a test event</label>
+                              <label><input type="checkbox" name="test" id="test" value="0">This is a test event</label>
                             </div>
                         </div>
 
