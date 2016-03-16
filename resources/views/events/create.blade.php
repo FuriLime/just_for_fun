@@ -159,7 +159,7 @@ Create New event
                             <a data-toggle="tooltip" title="Option not available">Advansed Options</a>
                          </div>
                     <div class="form-group">
-                        <label for="test">@lang('frontend.type')</label>
+                        <label for="test">Test event</label>
                         <div class="form-control checkbox-group">
                             <input type="checkbox" checked />
                         </div>
