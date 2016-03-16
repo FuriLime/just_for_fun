@@ -245,12 +245,12 @@ Create New event
     $(document).ready(function() {
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
         $('#test').on('change', function() {
-            $('#test').attr('checked') == 'checked';
+            console.log($('#test').prop());
             if ($('#test').attr('checked') == 'checked') {
-                console.log($('#test').val())
+//                console.log($('#test').val())
                 $('#test').val("1")
             } else {
-                console.log($('#test').val())
+//                console.log($('#test').val())
                 $('#test').val("0")
             }
         });
