@@ -11,9 +11,7 @@
  */
 
 return array(
-    'create' => array(
         'title'        => 'Popover title',
         'content'     => 'Some content in Popover on right',
-    ),
 
 );
