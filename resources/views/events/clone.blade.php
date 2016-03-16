@@ -232,6 +232,7 @@
 
 
             $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
+            $('#select2-timezone-container').text('{{$event->timezone}}');
         });
 
         $('#start').on('change', function() {
