@@ -48,7 +48,7 @@ $app->configureMonologUsing(function($monolog) {
     $handler->setFormatter(new \Monolog\Formatter\LineFormatter('%channel%.%level_name%: %message% %context% %extra%'));
     $monolog->pushHandler($handler);
 });
-
+$app->register('Artesaos\SEOTools\Providers\SEOToolsServiceProvider');
 /*
 |--------------------------------------------------------------------------
 | Return The Application

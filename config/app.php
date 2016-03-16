@@ -166,6 +166,7 @@ return [
         Msurguy\Honeypot\HoneypotServiceProvider::class,
         Weblee\Mandrill\MandrillServiceProvider::class,
         Artdarek\OAuth\OAuthServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class
 //        Laravel\Cashier\CashierServiceProvider::class,
     ],
 
@@ -235,6 +236,7 @@ return [
         'Honeypot' => Msurguy\Honeypot\HoneypotFacade::class,
         'MandrillMail'  => Weblee\Mandrill\MandrillFacade::class,
         'OAuth' => Artdarek\OAuth\Facade\OAuth::class,
+        'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
     ],
 
 ];
