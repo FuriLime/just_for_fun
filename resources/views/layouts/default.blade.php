@@ -228,6 +228,10 @@
                             <a href="{{ URL::to('google') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/google.png" border="0" alt="Google"/></a>
                             <a href="{{ URL::to('oauthwindows') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/windows.png" border="0" alt="Google"/></a>
                         </div>
+
+                        <div class="col-sm-12">
+                            <input type="checkbox" name="vehicle" value="Terms of Service">I Accept Terms of Service</input>
+                        </div>
                         <p class="signin button">
                             <input type="submit" class="btn btn-success" value="Sign up" />
                         </p>
