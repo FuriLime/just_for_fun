@@ -142,9 +142,9 @@ Route::group(array('prefix' => 'admin'), function () {
 });
 
 
-//Route::group(array('prefix' => 'user'), function () {
-//    Route::get('{userId}/edit', array('as' => 'info.update', 'uses' => 'UsersController@getEdit'));
-//});
+Route::group(array('prefix' => 'user'), function () {
+    Route::get('{userId}/edit', array('as' => 'info.update', 'uses' => 'UsersController@getEdit'));
+});
 
 #frontend views
 
