@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/clone.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/clone.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -28,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="clone.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="clone.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/events/clone.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.769231" vertical-offset="730" max-vertical-offset="9826">
-              <caret line="64" column="56" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.80023503" vertical-offset="3280" max-vertical-offset="9877">
+              <caret line="233" column="83" selection-start-line="233" selection-start-column="83" selection-end-line="233" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -50,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.62044656" vertical-offset="3416" max-vertical-offset="7395">
+            <state vertical-scroll-proportion="-8.538462" vertical-offset="3722" max-vertical-offset="7395">
               <caret line="232" column="123" selection-start-line="232" selection-start-column="123" selection-end-line="232" selection-end-column="123" />
               <folding>
                 <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -123,8 +123,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/twitterController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
-        <option value="$PROJECT_DIR$/resources/views/events/clone.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/events/clone.blade.php" />
       </list>
     </option>
   </component>
@@ -314,12 +314,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-02640" summary="database">
-      <created>1458078162254</created>
-      <option name="number" value="02640" />
-      <option name="project" value="LOCAL" />
-      <updated>1458078162254</updated>
     </task>
     <task id="LOCAL-02641" summary="database">
       <created>1458078489822</created>
@@ -609,7 +603,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458124347413</updated>
     </task>
-    <option name="localTasksCounter" value="2689" />
+    <task id="LOCAL-02689" summary="database">
+      <created>1458125607561</created>
+      <option name="number" value="02689" />
+      <option name="project" value="LOCAL" />
+      <updated>1458125607561</updated>
+    </task>
+    <option name="localTasksCounter" value="2690" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1021,22 +1021,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/clone.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.769231" vertical-offset="730" max-vertical-offset="9826">
-          <caret line="64" column="56" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62044656" vertical-offset="3416" max-vertical-offset="7395">
+        <state vertical-scroll-proportion="-8.538462" vertical-offset="3722" max-vertical-offset="7395">
           <caret line="232" column="123" selection-start-line="232" selection-start-column="123" selection-end-line="232" selection-end-column="123" />
           <folding>
             <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/clone.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.80023503" vertical-offset="3280" max-vertical-offset="9877">
+          <caret line="233" column="83" selection-start-line="233" selection-start-column="83" selection-end-line="233" selection-end-column="83" />
+          <folding />
         </state>
       </provider>
     </entry>

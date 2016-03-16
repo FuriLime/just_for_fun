@@ -229,6 +229,9 @@
                 minuteStep: 10
 
             });
+
+
+            $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
         });
 
         $('#start').on('change', function() {
