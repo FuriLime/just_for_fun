@@ -62,22 +62,24 @@ Route::group(array('prefix' => 'admin'), function () {
 	Route::get('/', array('as' => 'dashboard','uses' => 'JoshController@showHome'));
 
             # User Management
-//            Route::group(array('prefix' => 'users', 'before' => 'Sentinel'), function () {
-//                Route::get('/', array('as' => 'users', 'uses' => 'UsersController@getIndex'));
-//                Route::get('create', array('as' => 'create/user', 'uses' => 'UsersController@getCreate'));
-//                Route::post('create', 'UsersController@postCreate');
-//                Route::get('{userId}/edit', array('as' => 'users.update', 'uses' => 'UsersController@getEdit'));
-//                Route::post('{userId}/edit', 'UsersController@postEdit');
-//                Route::get('{userId}/delete', array('as' => 'delete/user', 'uses' => 'UsersController@getDelete'));
+            Route::group(array('prefix' => 'users', 'before' => 'Sentinel'), function () {
+                Route::get('/', array('as' => 'users', 'uses' => 'UsersController@getIndex'));
+                Route::get('create', array('as' => 'create/user', 'uses' => 'UsersController@getCreate'));
+                Route::post('create', 'UsersController@postCreate');
+                Route::get('{userId}/edit', array('as' => 'users.update', 'uses' => 'UsersController@getEdit'));
+                Route::post('{userId}/edit', 'UsersController@postEdit');
+                Route::get('{userId}/delete', array('as' => 'delete/user', 'uses' => 'UsersController@getDelete'));
 //                Route::get('{userId}/confirm-delete', array('as' => 'confirm-delete/user', 'uses' => 'UsersController@getModalDelete'));
-//                Route::get('{userId}/restore', array('as' => 'restore/user', 'uses' => 'UsersController@getRestore'));
-//                Route::get('{userId}', array('as' => 'users.show', 'uses' => 'UsersController@show'));
-//                Route::get('index', 'UsersController@getBillingAndInvoices');
-//            });
+                Route::get('{userId}/restore', array('as' => 'restore/user', 'uses' => 'UsersController@getRestore'));
+                Route::get('{userId}', array('as' => 'users.show', 'uses' => 'UsersController@show'));
+                Route::get('index', 'UsersController@getBillingAndInvoices');
+            });
 
     Route::get('deleted_users', array('as' => 'deleted_users', 'before' => 'Sentinel', 'uses' => 'UsersController@getDeletedUsers'));
 
     Route::get('{userId}/confirm-delete', array('as' => 'confirm-delete/user', 'uses' => 'UsersController@getModalDelete'));
+
+
     Route::get('billing_and_invoices', 'UsersController@getBillingAndInvoices');
     Route::get('notisfaction', 'UsersController@getInterests');
     Route::post('notisfaction', 'UsersController@updateInterests');
