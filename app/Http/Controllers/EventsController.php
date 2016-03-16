@@ -427,10 +427,10 @@ class EventsController extends Controller {
         // Is the user logged in?
         if (Sentinel::check()) {
 
-            return redirect('events')->with('success', Lang::get('message.success.update'));
+            return redirect('events')->with('success', Lang::get('message.success.clone'));
 
         } else {
-            return redirect('events')->with('success', Lang::get('message.success.update'));
+            return redirect('events')->with('success', Lang::get('message.success.clone'));
         }
     }
     /**

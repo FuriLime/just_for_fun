@@ -14,6 +14,7 @@ return array(
         'create' => 'Item was successfully created.',
         'update' => 'Item was successfully updated.',
         'delete' => 'Item was successfully deleted.',
+        'clone'  => 'Event was successfully cloned',
     ),
 
     'delete' => array(
