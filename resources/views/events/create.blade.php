@@ -244,9 +244,11 @@ Create New event
     <script>
     $(document).ready(function() {
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
-
-
-        console.log($('#test').attr('checked'));
+        if ($('#test').attr('checked') == 'checked'){
+            $('#test').val("1")
+        }else{
+            $('#test').val("0")
+        }
         var nowtimedate = new Date();
         nowtimedate = nowtimedate.format('Y/m/d H:i');
         $("#datestart").datetimepicker({
