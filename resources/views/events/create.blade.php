@@ -159,11 +159,10 @@ Create New event
                             <a data-toggle="tooltip" title="Option not available">Advansed Options</a>
                          </div>
                     <div class="form-group">
-                        <input type="checkbox" name="test" checked>
                         <label for="test">Test event</label>
                         {{--<div class="form-control checkbox-group">--}}
 
-
+                            <input type="checkbox" name="test" checked>
                         {{--</div>--}}
                     </div>
                          <div class="form-group" style="text-align: right; margin-right: 3%; margin-top: 9%;">
