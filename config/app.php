@@ -150,6 +150,9 @@ return [
         // http://laravelcollective.com/docs/5.1/html
         Collective\Html\HtmlServiceProvider::class,
         // https://github.com/cviebrock/eloquent-sluggable/blob/master/README.md#installation
+//		Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
+//		// https://github.com/cviebrock/eloquent-taggable/blob/master/README.md#installation
+//		Cviebrock\EloquentTaggable\ServiceProvider::class,
         // JoshCrud
 		App\Providers\JoshCrudGeneratorServiceProvider::class,
 		// amazon AWS SDK https://github.com/aws/aws-sdk-php-laravel
