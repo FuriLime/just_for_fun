@@ -1,7 +1,7 @@
 <?php 
 
 $ID =  strip_tags($_GET['name']);
-
+$file_name = srt_replace(" ", "_", $ID);
 if (isset($ID) && $ID != "") {
 	header('Content-Description: File Transfer');
 	header('Content-Type: application/octet-stream; charset=utf-8');
