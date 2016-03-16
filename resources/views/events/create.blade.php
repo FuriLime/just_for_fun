@@ -245,6 +245,7 @@ Create New event
     $(document).ready(function() {
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
         $('#test').on('change', function() {
+            $('#test').attr('checked') == 'checked';
             if ($('#test').attr('checked') == 'checked') {
                 console.log($('#test').val())
                 $('#test').val("1")
