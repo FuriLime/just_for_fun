@@ -52,7 +52,7 @@
                             <label for="type">@lang('frontend.type')</label>
                             <div class="form-control radio-group">
                                 <input type="radio" value="1" name="type" id="type_1"
-                                @if ($event->type === 1)
+                                @if ($event->type === "1")
                                        checked
                                         @endif
                                         ><label for="type_1">@lang('frontend.online')</label>
