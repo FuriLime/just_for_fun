@@ -158,13 +158,7 @@ Create New event
                             <i class="fa fa-fw fa-gears"></i>
                             <a data-toggle="tooltip" title="Option not available">Advansed Options</a>
                          </div>
-                    <div class="form-group">
-                        <label for="test">Test event</label>
-                        {{--<div class="form-control checkbox-group">--}}
 
-                            <input type="checkbox" name="test" checked>
-                        {{--</div>--}}
-                    </div>
                          <div class="form-group" style="text-align: right; margin-right: 3%; margin-top: 9%;">
                         <div class="col-sm-offset-0 col-sm-12" id="btn_group">
                             <button type="button" class="btn" onclick="(function($) { $('#active').val('0'); $('#btn_group .btn-primary').click(); })(jQuery);">
