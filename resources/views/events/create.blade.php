@@ -170,7 +170,7 @@ Create New event
 
                             <div class="checkbox add_event_section_link">
                                 @if ($event->status == "1")
-                              <label><input type="checkbox" name="test" id="test" value="">This is a test event</label>
+                              <label><input type="checkbox" checked name="test" id="test" value="">This is a test event</label>
                                     @endif
                             </div>
                         </div>
