@@ -101,30 +101,30 @@ Route::group(array('prefix' => 'admin'), function () {
 
 
     /*routes for blog*/
-	Route::group(array('prefix' => 'blog','before' => 'Sentinel'), function () {
-		Route::get('/', array('as' => 'blogs', 'uses' => 'BlogController@getIndex'));
-		Route::get('create', array('as' => 'create/blog', 'uses' => 'BlogController@getCreate'));
-		Route::post('create', 'BlogController@postCreate');
-		Route::get('{blog}/edit', array('as' => 'update/blog', 'uses' => 'BlogController@getEdit'));
-		Route::post('{blog}/edit', 'BlogController@postEdit');
-		Route::get('{blog}/delete', array('as' => 'delete/blog', 'uses' => 'BlogController@getDelete'));
-		Route::get('{blog}/confirm-delete', array('as' => 'confirm-delete/blog', 'uses' => 'BlogController@getModalDelete'));
-		Route::get('{blog}/restore', array('as' => 'restore/blog', 'uses' => 'BlogController@getRestore'));
-        Route::get('{blog}/show', array('as' => 'blog/show', 'uses' => 'BlogController@show'));
-        Route::post('{blog}/storecomment', array('as' => 'restore/blog', 'uses' => 'BlogController@storecomment'));
-	});
+//	Route::group(array('prefix' => 'blog','before' => 'Sentinel'), function () {
+//		Route::get('/', array('as' => 'blogs', 'uses' => 'BlogController@getIndex'));
+//		Route::get('create', array('as' => 'create/blog', 'uses' => 'BlogController@getCreate'));
+//		Route::post('create', 'BlogController@postCreate');
+//		Route::get('{blog}/edit', array('as' => 'update/blog', 'uses' => 'BlogController@getEdit'));
+//		Route::post('{blog}/edit', 'BlogController@postEdit');
+//		Route::get('{blog}/delete', array('as' => 'delete/blog', 'uses' => 'BlogController@getDelete'));
+//		Route::get('{blog}/confirm-delete', array('as' => 'confirm-delete/blog', 'uses' => 'BlogController@getModalDelete'));
+//		Route::get('{blog}/restore', array('as' => 'restore/blog', 'uses' => 'BlogController@getRestore'));
+//        Route::get('{blog}/show', array('as' => 'blog/show', 'uses' => 'BlogController@show'));
+//        Route::post('{blog}/storecomment', array('as' => 'restore/blog', 'uses' => 'BlogController@storecomment'));
+//	});
 
     /*routes for blog category*/
-	Route::group(array('prefix' => 'blogcategory','before' => 'Sentinel'), function () {
-		Route::get('/', array('as' => 'blogcategories', 'uses' => 'BlogCategoryController@getIndex'));
-		Route::get('create', array('as' => 'create/blogcategory', 'uses' => 'BlogCategoryController@getCreate'));
-		Route::post('create', 'BlogCategoryController@postCreate');
-		Route::get('{blogcategory}/edit', array('as' => 'update/blogcategory', 'uses' => 'BlogCategoryController@getEdit'));
-		Route::post('{blogcategory}/edit', 'BlogCategoryController@postEdit');
-		Route::get('{blogcategory}/delete', array('as' => 'delete/blogcategory', 'uses' => 'BlogCategoryController@getDelete'));
-		Route::get('{blogcategory}/confirm-delete', array('as' => 'confirm-delete/blogcategory', 'uses' => 'BlogCategoryController@getModalDelete'));
-		Route::get('{blogcategory}/restore', array('as' => 'restore/blogcategory', 'uses' => 'BlogCategoryController@getRestore'));
-	});
+//	Route::group(array('prefix' => 'blogcategory','before' => 'Sentinel'), function () {
+//		Route::get('/', array('as' => 'blogcategories', 'uses' => 'BlogCategoryController@getIndex'));
+//		Route::get('create', array('as' => 'create/blogcategory', 'uses' => 'BlogCategoryController@getCreate'));
+//		Route::post('create', 'BlogCategoryController@postCreate');
+//		Route::get('{blogcategory}/edit', array('as' => 'update/blogcategory', 'uses' => 'BlogCategoryController@getEdit'));
+//		Route::post('{blogcategory}/edit', 'BlogCategoryController@postEdit');
+//		Route::get('{blogcategory}/delete', array('as' => 'delete/blogcategory', 'uses' => 'BlogCategoryController@getDelete'));
+//		Route::get('{blogcategory}/confirm-delete', array('as' => 'confirm-delete/blogcategory', 'uses' => 'BlogCategoryController@getModalDelete'));
+//		Route::get('{blogcategory}/restore', array('as' => 'restore/blogcategory', 'uses' => 'BlogCategoryController@getRestore'));
+//	});
 
     Route::post('crop_demo','JoshController@crop_demo');
 
