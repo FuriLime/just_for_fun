@@ -77,7 +77,7 @@ Route::group(array('prefix' => 'admin'), function () {
 
     Route::get('deleted_users', array('as' => 'deleted_users', 'before' => 'Sentinel', 'uses' => 'UsersController@getDeletedUsers'));
 
-
+    Route::get('{userId}/confirm-delete', array('as' => 'confirm-delete/user', 'uses' => 'UsersController@getModalDelete'));
     Route::get('billing_and_invoices', 'UsersController@getBillingAndInvoices');
     Route::get('notisfaction', 'UsersController@getInterests');
     Route::post('notisfaction', 'UsersController@updateInterests');
