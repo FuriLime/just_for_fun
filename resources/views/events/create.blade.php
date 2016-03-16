@@ -249,6 +249,7 @@ Create New event
         }else{
             $('#test').val("0")
         }
+        console.log($('#test').attr('checked'));
         var nowtimedate = new Date();
         nowtimedate = nowtimedate.format('Y/m/d H:i');
         $("#datestart").datetimepicker({
