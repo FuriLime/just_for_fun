@@ -57,12 +57,12 @@
                                         @endif
                                         ><label for="type_1">@lang('frontend.online')</label>
                                 <input type="radio" value="2" name="type" id="type_2"
-                                @if ($event->type === 2)
+                                @if ($event->type == "2")
                                        checked
                                         @endif
                                         ><label for="type_2">@lang('frontend.offline')</label>
                                 <input type="radio" value="3" name="type" id="type_3"
-                                @if ($event->type === 3)
+                                @if ($event->type == "3")
                                        checked
                                         @endif
                                         ><label for="type_3">@lang('frontend.online_and_offline')</label>
