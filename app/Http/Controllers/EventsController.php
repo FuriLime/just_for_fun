@@ -157,6 +157,7 @@ class EventsController extends Controller {
             'timezone' => 'required',
             'start' => 'required',
             'finish' => 'required',
+            'status' => 'required',
         ]);
         if(Sentinel::check()){
             $userId = Sentinel::getUser()->id;
