@@ -224,7 +224,7 @@ Create New event
             });
         });
     </script>
-    <script type="text/javascript" src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>
+    {{--<script type="text/javascript" src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>--}}
     <script type="text/javascript" src="{{ asset('assets/vendors/tags/dist/bootstrap-tagsinput.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/vendors/modal/js/classie.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/vendors/modal/js/modalEffects.js') }}"></script>
@@ -244,16 +244,16 @@ Create New event
     <script>
     $(document).ready(function() {
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
-        $('#test').on('change', function() {
-            console.log($('#test').prop("checked"));
-            if ($('#test').prop("checked")==true) {
-//                console.log($('#test').val())
-                $('#test').val("1")
-            } else {
-//                console.log($('#test').val())
-                $('#test').val("0")
-            }
-        });
+//        $('#test').on('change', function() {
+//            console.log($('#test').prop("checked"));
+//            if ($('#test').prop("checked")==true) {
+////                console.log($('#test').val())
+//                $('#test').val("1")
+//            } else {
+////                console.log($('#test').val())
+//                $('#test').val("0")
+//            }
+//        });
         var nowtimedate = new Date();
         nowtimedate = nowtimedate.format('Y/m/d H:i');
         $("#datestart").datetimepicker({
