@@ -237,6 +237,7 @@ return [
         'MandrillMail'  => Weblee\Mandrill\MandrillFacade::class,
         'OAuth' => Artdarek\OAuth\Facade\OAuth::class,
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+        'SEOMeta'   => Artesaos\SEOTools\Facades\SEOMeta::class,
     ],
 
 ];
