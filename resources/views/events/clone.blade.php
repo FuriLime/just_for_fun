@@ -44,8 +44,8 @@
                         {!! Form::open() !!}
                         <div class="form-group">
                             <label for="title">@lang('frontend.title')</label>
-                            {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '80', 'id' => 'title']) !!}
-                            <input class="form-control" size="16" id="title" name="title" type="text" value="{{$event['title']}}">
+{{--                            {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '80', 'id' => 'title']) !!}--}}
+                            <input class="tinymce_basic form-control" size="16" id="title" name="title" type="text", maxlength="80" value="{{$event['title']}}">
                         </div>
 
                         <div class="form-group">
@@ -71,31 +71,38 @@
 
                         <div class="form-group">
                             <label for="description">@lang('frontend.description')</label>
-                            {!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}
+{{--                            {!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}--}}
+                            <input class="textarea form-control" size="16" id="description" name="description" type="description", maxlength="500" value="{{$event['description']}}">
                         </div>
                         <div class="form-group">
                             <label for="location">@lang('frontend.location')</label>
-                            {!! Form::text('location', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'location']) !!}
+{{--                            {!! Form::text('location', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'location']) !!}--}}
+                            <input class="form-control" size="16" id="location" name="location" type="location", maxlength="255" value="{{$event['location']}}">
                         </div>
 
                         <div class="form-group fields_loc">
-                            {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street','readonly']) !!}
+{{--                            {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street','readonly']) !!}--}}
+                            <input class="form-control" size="16" id="Street" name="Street" type="Street", maxlength="255" value="{{$event['Street']}}">
                         </div>
 
                         <div class="form-group fields_loc">
-                            {!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city','readonly']) !!}
+                            {{--{!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city','readonly']) !!}--}}
+                            <input class="form-control" size="16" id="City" name="City" type="City", maxlength="255" value="{{$event['City']}}">
                         </div>
 
                         <div class="form-group fields_loc">
-                            {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}
+{{--                            {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}--}}
+                            <input class="form-control" size="16" id="State" name="State" type="State", maxlength="255" value="{{$event['State']}}">
                         </div>
 
                         <div class="form-group fields_loc">
-                            {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}
+{{--                            {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}--}}
+                            <input class="form-control" size="16" id="Country" name="Country" type="Country", maxlength="255" value="{{$event['Country']}}">
                         </div>
                         <div class="form-group">
                             <label for="event_url">@lang('frontend.url')</label>
-                            {!! Form::text('event_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'event_url']) !!}
+{{--                            {!! Form::text('event_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'event_url']) !!}--}}
+                            <input class="form-control" size="16" id="event_url" name="event_url" type="event_url", maxlength="255" value="{{$event['event_url']}}">
                         </div>
 
                         <div class="form-group">
