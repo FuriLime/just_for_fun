@@ -31,9 +31,21 @@
       <file leaf-file-name="clone.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/events/clone.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44065806" vertical-offset="883" max-vertical-offset="9809">
-              <caret line="74" column="126" selection-start-line="74" selection-start-column="126" selection-end-line="74" selection-end-column="126" />
+            <state vertical-scroll-proportion="0.520564" vertical-offset="832" max-vertical-offset="9826">
+              <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-43.5" vertical-offset="6077" max-vertical-offset="12546">
+              <caret line="424" column="0" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
+              <folding>
+                <element signature="e#39#52#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -190,12 +202,18 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -209,7 +227,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -289,12 +333,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-02630" summary="database">
-      <created>1458076814744</created>
-      <option name="number" value="02630" />
-      <option name="project" value="LOCAL" />
-      <updated>1458076814744</updated>
     </task>
     <task id="LOCAL-02631" summary="database">
       <created>1458076931568</created>
@@ -584,7 +622,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458123609943</updated>
     </task>
-    <option name="localTasksCounter" value="2679" />
+    <task id="LOCAL-02679" summary="database">
+      <created>1458123648306</created>
+      <option name="number" value="02679" />
+      <option name="project" value="LOCAL" />
+      <updated>1458123648306</updated>
+    </task>
+    <option name="localTasksCounter" value="2680" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -961,16 +1005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9400705" vertical-offset="6408" max-vertical-offset="12546">
-          <caret line="424" column="0" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
-          <folding>
-            <element signature="e#39#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42939815" vertical-offset="751" max-vertical-offset="1615">
@@ -1003,10 +1037,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-43.5" vertical-offset="6077" max-vertical-offset="12546">
+          <caret line="424" column="0" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
+          <folding>
+            <element signature="e#39#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/clone.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44065806" vertical-offset="883" max-vertical-offset="9809">
-          <caret line="74" column="126" selection-start-line="74" selection-start-column="126" selection-end-line="74" selection-end-column="126" />
+        <state vertical-scroll-proportion="0.520564" vertical-offset="832" max-vertical-offset="9826">
+          <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
           <folding />
         </state>
       </provider>
