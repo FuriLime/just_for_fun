@@ -394,19 +394,19 @@ class UsersController extends JoshController
             }
 
             //check for activation and send activation mail if not activated by default
-            if(!Input::get('activate')) {
-                // Data to be used on the email view
-                $data = array(
-                    'user'          => $user,
-                    'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
-                );
-
-                // Send the activation code through email
-                Mail::send('emails.register-activate', $data, function ($m) use ($user) {
-                    $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-                    $m->subject('Welcome ' . $user->first_name);
-                });
-            }
+//            if(!Input::get('activate')) {
+//                // Data to be used on the email view
+//                $data = array(
+//                    'user'          => $user,
+//                    'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
+//                );
+//
+//                // Send the activation code through email
+//                Mail::send('emails.register-activate', $data, function ($m) use ($user) {
+//                    $m->to($user->email, $user->first_name . ' ' . $user->last_name);
+//                    $m->subject('Welcome ' . $user->first_name);
+//                });
+//            }
 
             // Redirect to the home page with success menu
             return Redirect::route("users")->with('success', Lang::get('users/message.success.create'));
