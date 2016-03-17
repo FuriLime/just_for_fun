@@ -128,10 +128,9 @@
                     </div>
 
 
-                    <div class="form-group"  id="time_zone_change">
-                             <label for="timezone">@lang('frontend.timezone')</label>
-                             {!!$event->timezone_select!!}
-                             <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                    <div class="form-group">
+                        <label for="timezone">@lang('frontend.timezone')</label>
+                        {!! $event->timezone_select !!}
                     </div>
 
                     {{--<input type="hidden" value="1" name="active" id="active" readonly>--}}
