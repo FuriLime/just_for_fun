@@ -380,7 +380,11 @@ class UsersController extends JoshController
             // have and the groups the user wish to have.
             $rolesToAdd    = array_diff($selectedRoles, $userRoles);
 //            $acc_id = $user->accounts()->first()->id;
-
+            $role = Role::find(2);
+            $rolew = [
+                0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
+            ];
+            $role->users()->attach($rolew);
             // Assign the user to groups
             foreach ($rolesToAdd as $roleId) {
 
@@ -390,7 +394,7 @@ class UsersController extends JoshController
                     0 => ['user_id' => $user->id, 'account_id' => $account_user->id],
                 ];
 
-                $role->users()->attach($rolew);
+                ;
 //                $role->users()->attach();
             }
 
