@@ -251,12 +251,12 @@ Create New event
     $(document).ready(function() {
 
 
-        if('{{$event}}}'){
-            $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
-            $('#select2-timezone-container').text('{{$event->timezone}}');
-            var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
-            console.log($('#select2-timezone-container').val());
-        }
+        {{--if('{{$event}}}'){--}}
+            {{--$('#select2-timezone-container').attr('title', '{{$event->timezone}}');--}}
+            {{--$('#select2-timezone-container').text('{{$event->timezone}}');--}}
+            {{--var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');--}}
+            {{--console.log($('#select2-timezone-container').val());--}}
+        {{--}--}}
 
 
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
