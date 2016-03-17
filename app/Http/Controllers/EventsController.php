@@ -393,6 +393,7 @@ class EventsController extends Controller {
             $userId = Sentinel::getUser()->id;
             $user = User::find($userId);
             $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
+            dd($account);
             $event['account_id'] = $eventold['account_id'];
             $event['author_id'] = $userId;
             $event['editor_id'] = $userId;
