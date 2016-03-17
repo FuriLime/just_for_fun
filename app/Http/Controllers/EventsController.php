@@ -117,7 +117,7 @@ class EventsController extends Controller {
             //days
             else if ($duration >= 86400 && $duration < 2592000) {
                 $duration_day=floor($duration/86400);
-                $duration_time=floor($duration%86400);
+                $duration_time=floor($duration/86400);
 
             }else{
                 $duration_time = 1;
