@@ -792,7 +792,7 @@ class UsersController extends JoshController
 
             // Prepare the success message
             $success = Lang::get('users/message.success.restored');
-$user->activate();
+            $user->activate();
             // Redirect to the user management page
             return Redirect::route('deleted_users')->with('success', $success);
         } catch (UserNotFoundException $e) {
