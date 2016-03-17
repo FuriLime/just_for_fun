@@ -109,37 +109,41 @@ class EventsController extends Controller {
             }
             $duration = strtotime($finish_date) - strtotime($start_date);
             //hours
-//            if ($duration>= 3600 && $duration < 86400){
-//                $duration_day = 0 .'d';
-//                $duration_time=floor($duration/3600).'h';
-//
-//            }
-//            //days
-//            else if ($duration >= 86400 && $duration < 2592000) {
-//                $duration_day=floor($duration/86400);
-//                if($duration%86400==0){
-//                    $duration_day=floor($duration/86400).'d';
-//                    $duration_time= 0 .'h';
-//                }else{
-//                    $duration_day=floor($duration/86400) .'d';
-//                    $duration_time=$duration_day /3600 ;
-//                }
-//
-//
-//            }else{
-//                $duration_day = 0 .'d';
-//                $duration_time = 0 .'h';
-//            }
+            if ($duration>= 3600 && $duration < 86400){
+                if(($duration% 3600) == 0){
+                    $duration_day= 0 .'d';
+                    $duration_hour=( $duration / 3600 ) % 24 .'h';
+                    $duration_min=0 .'m';
+                }else {
+                    $duration_day = ($duration / 3600) % 24 . 'h';
+                }
 
-            $duration_time=floor($duration/3600).'h';
+            }
+            //days
+            else if ($duration >= 86400 && $duration < 2592000) {
+                $duration_day=floor($duration/86400);
+                if($duration%86400==0){
+                    $duration_day=floor($duration/86400).'d';
+                    $duration_time= 0 .'h';
+                }else{
+                    $duration_day=floor($duration/86400) .'d';
+                    $duration_time=$duration_day /3600 ;
+                }
+
+
+            }else{
+                $duration_day = 0 .'d';
+                $duration_time = 0 .'h';
+            }
 
                  return view('events.create', array(
                 'timezone_select' => $timezone_select,
                 'start_date' => $start_date,
                 'finish_date' => $finish_date,
                 'user_timezone' => $user_timezone,
-                'duration_time' => $duration_time,
-//                'duration_day' => $duration_day,
+                'duration_min' => $duration_min,
+                'duration_hour' => $duration_hour,
+                'duration_day' => $duration_day,
             ));
 //      }
         } else {
