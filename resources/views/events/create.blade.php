@@ -594,8 +594,8 @@ if($('#location').val()) {
                             state = splits[3].replace(/(^\s*)|(\s*)$/g, '');
                             $('#state').val(state);
 
-                            country = splits[4];
-                            $('#country').val(country);
+//                            country = splits[4];
+//                            $('#country').val(country);
                         }else{
                             street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
                             $('#street').val(street);
