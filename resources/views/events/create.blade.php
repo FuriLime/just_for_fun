@@ -237,6 +237,7 @@
             bootbox.confirm("Do you want to publish this event?", function(result) {
                 if (result == true) {
                    $('#create_event').submit();
+                   $('#edit_event').submit();
                 }
             });
         });
