@@ -379,7 +379,6 @@ class EventsController extends Controller {
         $this->validate($request, [
             'title' => 'required|max:80',
             'description' => 'max:500',
-            'type' => 'required',
             'location' => 'max:255',
             'event_url' => 'max:255',
             'timezone' => 'required',
