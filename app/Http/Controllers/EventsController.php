@@ -200,6 +200,7 @@ class EventsController extends Controller {
         $store_info->account_id = $account[0]->account_id;
         $store_info->permanent_url = Uuid::uuid4();
         $store_info->readable_url = Uuid::uuid4();
+        $store_info->test = Input::get('test');
 
         $date = new \DateTime($store_info->start, new \DateTimeZone($store_info->timezone));
         $date->setTimezone(new \DateTimeZone('UTC'));
@@ -231,7 +232,6 @@ class EventsController extends Controller {
             return redirect('confirm');
         }
     }
-
     /**
      * Display the specified resource.
      *
@@ -294,7 +294,7 @@ class EventsController extends Controller {
         $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
-        return view('events.edit', compact('event'));
+        return view('events.create', compact('event'));
     }
 
    /**
@@ -308,7 +308,6 @@ class EventsController extends Controller {
         $this->validate($request, [
             'title' => 'required|max:80',
             'description' => 'max:500',
-            'type' => 'required',
             'location' => 'max:255',
             'event_url' => 'max:255',
             'timezone' => 'required',
@@ -316,21 +315,18 @@ class EventsController extends Controller {
             'finish' => 'required',
         ]);
         //$event = Event::findOrFail($uuid);
-        $event = Event::whereUuid($uuid)->first();
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
         $event = Event::whereUuid($uuid)->first();
         $event['title'] = $store_info['title'];
-        $event['type'] = $store_info['type'];
         $event['description'] = $store_info['description'];
         $event['location'] = $store_info['location'];
-        $event['event_url'] = $store_info['event_url'];
         $event['timezone'] = $store_info['timezone'];
         $event['Street'] = $store_info['Street'];
         $event['City'] = $store_info['City'];
         $event['State'] = $store_info['State'];
         $event['Country'] = $store_info['Country'];
-        $event['status'] = $store_info['status'];
+        $event['test'] = Input::get('test');
 
         $date = new \DateTime($store_info['start'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
@@ -379,7 +375,6 @@ class EventsController extends Controller {
         $this->validate($request, [
             'title' => 'required|max:80',
             'description' => 'max:500',
-            'type' => 'required',
             'location' => 'max:255',
             'event_url' => 'max:255',
             'timezone' => 'required',
@@ -394,21 +389,29 @@ class EventsController extends Controller {
 
         $event = new Event();
         $event['title'] = $store_info['title'];
-        $event['account_id'] = $eventold['account_id'];
-        $event['author_id'] = $eventold['author_id'];
-        $event['editor_id'] = $eventold['editor_id'];
-        $event['permanent_url'] = $eventold['uuid'];
-        $event['readable_url'] = $eventold['uuid'];
-        $event['type'] = $store_info['type'];
+        if(Sentinel::check()){
+            $userId = Sentinel::getUser()->id;
+            $user = User::find($userId);
+            $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
+            $event['account_id'] = $account[0]->account_id;
+            $event['author_id'] = $userId;
+            $event['editor_id'] = $userId;
+        }else {
+            $event['account_id'] = $eventold['account_id'];
+            $event['author_id'] = $eventold['author_id'];
+            $event['editor_id'] = $eventold['editor_id'];
+        }
+        $event['permanent_url'] = Uuid::uuid4();
+        $event['readable_url'] = Uuid::uuid4();
         $event['description'] = $store_info['description'];
         $event['location'] = $store_info['location'];
-        $event['event_url'] = $store_info['event_url'];
+//        $event['event_url'] = $store_info['event_url'];
         $event['timezone'] = $store_info['timezone'];
         $event['Street'] = $store_info['Street'];
         $event['City'] = $store_info['City'];
         $event['State'] = $store_info['State'];
         $event['Country'] = $store_info['Country'];
-        $event['status'] = $store_info['status'];
+//        $event['status'] = $store_info['status'];
 
         $date = new \DateTime($store_info['start'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
@@ -525,9 +528,9 @@ class EventsController extends Controller {
                     '&dates='.$event_start_zero->format('Ymd').'T'.$event_start_zero->format('His').'Z/'.
                     $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His').'Z'.
                     $timezone.
-                    '&details='.$event['description'].
                     '&sprop=website:'.route('events.show',$uuid).
-                    '&location='.$event['location'].'&pli=1&uid=&sf=true&output=xml';
+                    '&location='.$event['location'].'&pli=1&uid=&sf=true&output=xml'.
+                    '&details='.$event['description'];
                 break;
 
             case 'Yahoo':

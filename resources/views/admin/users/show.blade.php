@@ -105,6 +105,7 @@ View User Details
                                                                 {{ $user->password }}
 
                                                             </td>
+
                                                         </tr>
 
                                                     </table>

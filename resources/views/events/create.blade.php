@@ -2,7 +2,11 @@
 
 {{-- Page title --}}
 @section('title')
-Create New event
+    @if (isset($event))
+        @lang('frontend.edit_event_header')
+    @else
+        @lang('frontend.add_event_header')
+    @endif
 @parent
 @stop
 
@@ -29,14 +33,27 @@ Create New event
             <div class="panel panel-primary ">
                 <div class="panel-heading">
                     <h4 class="panel-title"> <i class="livicon" data-name="plus-alt" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-						@lang('frontend.add_event_header')
+                        @if (isset($event))
+                            @lang('frontend.edit_event_header')
+                        @else
+                            @lang('frontend.add_event_header')
+                        @endif
                     </h4>
                 </div>
                 <div class="panel-body">
-					<h3 class="primary add_event_section_link">@lang('frontend.add_event_text')</h3>
+                    @if (isset($event))
+                        <h3 class="primary add_event_section_link">@lang('frontend.edit_event_text')</h3>
+                    @else
+                        <h3 class="primary add_event_section_link">@lang('frontend.add_event_text')</h3>
+                    @endif
+
+
+                    @if (isset($event))
+                        {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@update', $event->uuid], 'id'=>'edit_event']) !!}
+                    @else
                          {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
                          {{--<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }} " />--}}
-
+                    @endif
                     <div class="form-group">
                         <label for="title">@lang('frontend.title')</label>
                         {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}
@@ -78,7 +95,7 @@ Create New event
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
-                                <input class="form-control" size="16" id="start" name="start" type="datetime" value="{{$start_date}}">
+                                <input class="form-control" size="16" id="start" name="start" type="datetime" value="{{@isset($event)? $event['start'] : $start_date}}">
 
                             </div>
                             @if ($errors->first('start'))
@@ -92,7 +109,7 @@ Create New event
 
 
                          <div class="form-group add_event_section_link" id="change_time_zone">
-                            <span>Timezone is {{$user_timezone}}. Default duration is 1h. <a id="time_change">Change here.</a></span>
+                            <span>Timezone is {{@isset($event)? $event['timezone'] : $user_timezone}}. Default duration is 1h. <a id="time_change">Change here.</a></span>
                          </div>
         		<div class="form-group" id="end_time_event" style="display:none" >
                         <label for="start">@lang('frontend.enddate')</label>
@@ -104,7 +121,7 @@ Create New event
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-th"></span>
                                             </span>
-                                            <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{$finish_date}}">
+                                            <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{@isset($event)? $event['finish'] : $finish_date}}">
 
                                         </div>
                              @if ($errors->first('finish'))
@@ -119,7 +136,7 @@ Create New event
 
                     <div class="form-group"  id="time_zone_change" style="display:none">
                              <label for="timezone">@lang('frontend.timezone')</label>
-                             {!! $timezone_select !!}
+                             {!!@isset($event)?  $event->timezone_select : $timezone_select !!}
                              <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
 
@@ -169,7 +186,7 @@ Create New event
                             </button>
 
                             <div class="checkbox add_event_section_link">
-                              <label><input type="checkbox" name="test" id="test" value="">This is a test event</label>
+                              <label><input type="checkbox" checked name="test" id="test" value="1">This is a test event</label>
                             </div>
                         </div>
 
@@ -210,7 +227,7 @@ Create New event
     </style>
 {{-- page level scripts --}}
 @section('footer_scripts')
-
+    {{--<script type="text/javascript" src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>--}}
     <script src="{{ asset('assets/vendors/colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
      <script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
       <script src="{{ asset('assets/js/bootbox.js') }}"></script>
@@ -220,9 +237,12 @@ Create New event
             bootbox.confirm("Do you want to publish this event?", function(result) {
                 if (result == true) {
                    $('#create_event').submit();
+                   $('#edit_event').submit();
                 }
             });
         });
+
+
     </script>
 
     <script type="text/javascript" src="{{ asset('assets/vendors/tags/dist/bootstrap-tagsinput.js') }}"></script>
@@ -243,7 +263,23 @@ Create New event
 
     <script>
     $(document).ready(function() {
-        $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
+        @if (isset($event))
+        $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
+        $('#select2-timezone-container').text('{{$event->timezone}}');
+        var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
+        $('#timezone option[value="{{$event->timezone}}"]').attr('selected','selected');
+        $('#active option[value="{{$event->active}}"]').attr('selected','selected');
+       @endif
+
+       $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
+        $('#test').on('change', function() {
+            console.log($('#test').prop("checked"));
+            if ($('#test').prop("checked")==true) {
+                $('#test').val("1")
+            } else {
+                $('#test').val("0")
+            }
+        });
         var nowtimedate = new Date();
         nowtimedate = nowtimedate.format('Y/m/d H:i');
         $("#datestart").datetimepicker({
@@ -263,7 +299,7 @@ Create New event
             todayBtn: true,
             controlType: 'select',
             startDate: $('#finish').val(),
-            minDate: $('#finish').val(),
+            minDate: $('#start').val(),
             minuteStep: 10
 
         });
@@ -274,7 +310,6 @@ Create New event
         nowtimedate = nowtimedate.format('Y/m/d H:i');
         var start_def_date = new Date();
         var start_date = new Date($('#start').val());
-
 
         if(start_date.getTime() < start_def_date.getTime()) {
             $('#start').val(start_def_date.format('Y/m/d H:i'));
@@ -296,7 +331,7 @@ Create New event
             todayBtn: true,
             controlType: 'select',
             startDate: $('#finish').val(),
-            minDate: $('#finish').val(),
+            minDate: $('#start').val(),
             minuteStep: 10
 
         });
@@ -535,18 +570,31 @@ if($('#location').val()) {
                     }
 
                     if (splits.length >= 4) {
-                        num_house = splits[0];
-                        street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                        $('#street').val(num_house + ' ' + street);
+                        if($.isNumeric(splits[1])){
+                            street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
+                            $('#street').val(street);
 
-                        sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
-                        $('#city').val(sity);
+//                                street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
+                            sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
+                            $('#city').val(sity);
 
-                        state = splits[3].replace(/(^\s*)|(\s*)$/g, '');
-                        $('#state').val(state);
+                            state = splits[3].replace(/(^\s*)|(\s*)$/g, '');
+                            $('#state').val(state);
 
-                        country = splits[4];
-                        $('#country').val(country);
+//                            country = splits[4];
+//                            $('#country').val(country);
+                        }else{
+                            street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
+                            $('#street').val(street);
+                            sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
+                            $('#city').val(sity);
+
+                            state = splits[2].replace(/(^\s*)|(\s*)$/g, '');
+                            $('#state').val(state);
+
+                            country = splits[3];
+                            $('#country').val(country);
+                        }
 
                         $('#country').attr('style', 'display:block');
                         $('#state').attr('style', 'display:block');
@@ -592,7 +640,9 @@ if($('#location').val()) {
 //		$('#datefinish .glyphicon-calendar').click();
 //	});
 
-
+    $("#datestart").on("dp.change", function (e) {
+        $('#datefinish').data("DateTimePicker").minDate(e.date);
+    });
 
 	$('input#title').maxlength({
 		//alwaysShow: true,

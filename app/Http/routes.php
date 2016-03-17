@@ -77,6 +77,10 @@ Route::group(array('prefix' => 'admin'), function () {
 
     Route::get('deleted_users', array('as' => 'deleted_users', 'before' => 'Sentinel', 'uses' => 'UsersController@getDeletedUsers'));
 
+//    Route::group(array('prefix' => 'users/{userId}', 'before' => 'Sentinel'), function () {
+//        Route::get('{userId}/delete', array('as' => 'delete/user', 'uses' => 'UsersController@getDelete'));
+//        Route::get('{userId}/confirm-delete', array('as' => 'confirm-delete/user', 'uses' => 'UsersController@getModalDelete'));
+//    });
 
     Route::get('billing_and_invoices', 'UsersController@getBillingAndInvoices');
     Route::get('notisfaction', 'UsersController@getInterests');
@@ -141,9 +145,9 @@ Route::group(array('prefix' => 'admin'), function () {
 });
 
 
-//Route::group(array('prefix' => 'user'), function () {
-//    Route::get('{userId}/edit', array('as' => 'info.update', 'uses' => 'UsersController@getEdit'));
-//});
+Route::group(array('prefix' => 'user'), function () {
+    Route::get('{userId}/edit', array('as' => 'info.update', 'uses' => 'UsersController@getEdit'));
+});
 
 #frontend views
 

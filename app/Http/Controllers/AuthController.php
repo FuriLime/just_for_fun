@@ -70,6 +70,7 @@ class AuthController extends JoshController
         try {
 
             $user = User::where('email', $email['email'])->get();
+//            dd($user);
             if(!empty($user['0'])) {
                 $activeUser = $user['0']['original']['verified'];
                 if ($activeUser == 0) {
@@ -83,6 +84,7 @@ class AuthController extends JoshController
 
 
                 $user = Sentinel::check();
+
                 $user_email = $user["attributes"]["email"];
                 return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
             }
@@ -459,83 +461,4 @@ class AuthController extends JoshController
         // Redirect to the users page
         return Redirect::to('/')->with('success', 'You have successfully logged out!');
     }
-
-    /**
-     * Account sign up form processing for register2 page
-     *
-     * @return Redirect
-     */
-    public function postRegister2()
-    {
-        // Declare the rules for the form validation
-        $rules = array(
-            'first_name'       => 'required|min:3',
-            'last_name'        => 'required|min:3',
-            'email'            => 'required|email|unique:users',
-            'email_confirm'    => 'required|email|same:email',
-            'password'         => 'required|between:3,32',
-            'password_confirm' => 'required|same:password',
-            'terms'            => 'accepted',
-        );
-
-        // Create a new validator instance from our validation rules
-        $validator = Validator::make(Input::all(), $rules);
-
-        // If validation fails, we'll exit the operation now.
-        if ($validator->fails()) {
-            // Ooops.. something went wrong
-            return Redirect::back()->withInput()->withErrors($validator);
-        }
-        try {
-            // Register the user
-            $user = Sentinel::registerAndActivate(array(
-                'first_name' => Input::get('first_name'),
-                'last_name'  => Input::get('last_name'),
-                'email'      => Input::get('email'),
-                'password'   => Input::get('password'),
-            ));
-
-            //add user to 'User' group
-            $role = Sentinel::findRoleById(2);
-            $role->users()->attach($user);
-
-
-            /*
-            //un-comment below code incase if user have to activate manually
-
-            // Data to be used on the email view
-            $data = array(
-                'user'          => $user,
-                'activationUrl' => URL::route('activate', $user->getActivationCode()),
-            );
-
-            // Send the activation code through email
-            Mail::send('emails.register-activate', $data, function ($m) use ($user) {
-                $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-                $m->subject('Welcome ' . $user->first_name);
-            });
-
-            //Redirect to login page
-            return Redirect::to("admin/login")->with('success', Lang::get('auth/message.signup.success'));
-
-            */
-
-            // login user automatically
-
-
-
-            // Log the user in
-            Sentinel::login($user, false);
-
-            // Redirect to the home page with success menu
-            return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signup.success'));
-
-        } catch (UserExistsException $e) {
-            $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
-        }
-
-        // Ooops.. something went wrong
-        return Redirect::back()->withInput()->withErrors($this->messageBag);
-    }
-
 }

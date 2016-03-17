@@ -27,6 +27,7 @@ class Activation extends Model
     {
         $user = User::find($user_id);
         $user->verified = 1;
+        $user->status = "Verified";
         $user->save();
     }
 
@@ -34,6 +35,7 @@ class Activation extends Model
     {
         $user = User::find($user_id);
         if ($user->verified){
+
             return true;
         }
     }

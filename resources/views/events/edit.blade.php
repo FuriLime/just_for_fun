@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Edit a event
+    Clone an event
     @parent
 @stop
 
@@ -33,36 +33,36 @@
                         </h4>
                     </div>
                     <div class="panel-body">
-                        @if ($errors->any())
-                            <ul class="alert alert-danger">
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        @endif
+                        {{--@if ($errors->any())--}}
+                        {{--<ul class="alert alert-danger">--}}
+                        {{--@foreach ($errors->all() as $error)--}}
+                        {{--<li>{{ $error }}</li>--}}
+                        {{--@endforeach--}}
+                        {{--</ul>--}}
+                        {{--@endif--}}
 
-                        {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@update', $event->uuid]]) !!}
-
+                        {!! Form::open() !!}
                         <div class="form-group">
                             <label for="title">@lang('frontend.title')</label>
-                            {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '80', 'id' => 'title']) !!}
+                            {{--                            {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '80', 'id' => 'title']) !!}--}}
+                            <input class="tinymce_basic form-control" size="16" id="title" name="title" type="text", maxlength="80" value="{{$event['title']}}">
                         </div>
 
                         <div class="form-group">
                             <label for="type">@lang('frontend.type')</label>
                             <div class="form-control radio-group">
                                 <input type="radio" value="1" name="type" id="type_1"
-                                @if ($event->type === 1)
+                                @if ($event->type == "1")
                                        checked
                                         @endif
                                         ><label for="type_1">@lang('frontend.online')</label>
                                 <input type="radio" value="2" name="type" id="type_2"
-                                @if ($event->type === 2)
+                                @if ($event->type == "2")
                                        checked
                                         @endif
                                         ><label for="type_2">@lang('frontend.offline')</label>
                                 <input type="radio" value="3" name="type" id="type_3"
-                                @if ($event->type === 3)
+                                @if ($event->type == "3")
                                        checked
                                         @endif
                                         ><label for="type_3">@lang('frontend.online_and_offline')</label>
@@ -71,31 +71,39 @@
 
                         <div class="form-group">
                             <label for="description">@lang('frontend.description')</label>
-                            {!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}
+                            {{--                            {!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}--}}
+                            <textarea class="textarea form-control" type="textarea" id="description" name="description", maxlength="500" value="{{$event['description']}}">{{$event['description']}}</textarea>
                         </div>
+
                         <div class="form-group">
                             <label for="location">@lang('frontend.location')</label>
-                            {!! Form::text('location', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'location']) !!}
+                            {{--                            {!! Form::text('location', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'location']) !!}--}}
+                            <input class="form-control" size="16" id="location" name="location" type="location", maxlength="255" value="{{$event['location']}}">
                         </div>
 
-                            <div class="form-group fields_loc">
-                                {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street','readonly']) !!}
-                            </div>
+                        <div class="form-group fields_loc">
+                            {{--                            {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street','readonly']) !!}--}}
+                            <input class="form-control" size="16" id="Street" name="Street" type="Street", maxlength="255" value="{{$event['Street']}}">
+                        </div>
 
-                            <div class="form-group fields_loc">
-                                {!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city','readonly']) !!}
-                            </div>
+                        <div class="form-group fields_loc">
+                            {{--{!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city','readonly']) !!}--}}
+                            <input class="form-control" size="16" id="City" name="City" type="City", maxlength="255" value="{{$event['City']}}">
+                        </div>
 
-                            <div class="form-group fields_loc">
-                                {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}
-                            </div>
+                        <div class="form-group fields_loc">
+                            {{--                            {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}--}}
+                            <input class="form-control" size="16" id="State" name="State" type="State", maxlength="255" value="{{$event['State']}}">
+                        </div>
 
-                            <div class="form-group fields_loc">
-                                {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}
-                            </div>
+                        <div class="form-group fields_loc">
+                            {{--                            {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}--}}
+                            <input class="form-control" size="16" id="Country" name="Country" type="Country", maxlength="255" value="{{$event['Country']}}">
+                        </div>
                         <div class="form-group">
                             <label for="event_url">@lang('frontend.url')</label>
-                            {!! Form::text('event_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'event_url']) !!}
+                            {{--                            {!! Form::text('event_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'event_url']) !!}--}}
+                            <input class="form-control" size="16" id="event_url" name="event_url" type="event_url", maxlength="255" value="{{$event['event_url']}}">
                         </div>
 
                         <div class="form-group">
@@ -221,6 +229,10 @@
                 minuteStep: 10
 
             });
+
+
+            $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
+            $('#select2-timezone-container').text('{{$event->timezone}}');
         });
 
         $('#start').on('change', function() {
