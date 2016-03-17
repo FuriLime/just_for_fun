@@ -250,6 +250,7 @@ Create New event
     <script>
     $(document).ready(function() {
         var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
+        console.log($('#select2-timezone-container').val());
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
         $('#test').on('change', function() {
             console.log($('#test').prop("checked"));
