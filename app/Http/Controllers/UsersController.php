@@ -372,15 +372,10 @@ class UsersController extends JoshController
             $account_profile = new AccountProfile();
             $account_profile->account_id = $account_user->id;
             $account_profile->save();
-            $userRoles = $user->roles()->lists('id')->all();
-//            dd($userRoles);
-            // Get the selected groups
-            $selectedRoles = Input::get('groups', array());
-//            dd($selectedRoles);
-            // Groups comparison between the groups the user currently
-            // have and the groups the user wish to have.
-            $rolesToAdd    = array_diff($selectedRoles, $userRoles);
-//            $acc_id = $user->accounts()->first()->id;
+
+
+
+
             $role = Role::find(5);
             $rolew = [
                 0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
@@ -388,19 +383,19 @@ class UsersController extends JoshController
             $role->users()->attach($rolew);
 
             //check for activation and send activation mail if not activated by default
-//            if(!Input::get('activate')) {
-//                // Data to be used on the email view
-//                $data = array(
-//                    'user'          => $user,
-//                    'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
-//                );
-//
-//                // Send the activation code through email
-//                Mail::send('emails.register-activate', $data, function ($m) use ($user) {
-//                    $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-//                    $m->subject('Welcome ' . $user->first_name);
-//                });
-//            }
+            if(!Input::get('activate')) {
+                // Data to be used on the email view
+                $data = array(
+                    'user'          => $user,
+                    'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
+                );
+
+                // Send the activation code through email
+                Mail::send('emails.register-activate', $data, function ($m) use ($user) {
+                    $m->to($user->email, $user->first_name . ' ' . $user->last_name);
+                    $m->subject('Welcome ' . $user->first_name);
+                });
+            }
 
             // Redirect to the home page with success menu
             return Redirect::route("users")->with('success', Lang::get('users/message.success.create'));
