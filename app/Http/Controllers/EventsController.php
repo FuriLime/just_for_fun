@@ -107,7 +107,7 @@ class EventsController extends Controller {
             } else{
                 $user_timezone = $my_time_zone;
             }
-
+dd($start_date);
             return view('events.create', array(
                 'timezone_select' => $timezone_select,
                 'start_date' => $start_date,
