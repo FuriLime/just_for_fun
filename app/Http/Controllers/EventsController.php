@@ -593,9 +593,6 @@ class EventsController extends Controller {
 
     public static function getTimeZoneSelect()
     {
-        $events = Event::first()->get();
-        dd($events);
-
         $regions = array(
             'Africa' => \DateTimeZone::AFRICA,
             'America' => \DateTimeZone::AMERICA,
