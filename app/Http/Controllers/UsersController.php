@@ -372,8 +372,6 @@ class UsersController extends JoshController
             $account_profile = new AccountProfile();
             $account_profile->account_id = $account_user->id;
             $account_profile->save();
-
-dd($user->accounts()->first());
             $userRoles = $user->roles()->lists('id')->all();
 
             // Get the selected groups
@@ -388,7 +386,7 @@ dd($user->accounts()->first());
 
                 $role = Role::find($roleId);
                 $rolew = [
-                    0 => ['user_id' => $user->id, 'account_id' => $acc_id],
+                    0 => ['user_id' => $user->id, 'account_id' => $account_user->id],
                 ];
 
                 $role->users()->attach($rolew);
