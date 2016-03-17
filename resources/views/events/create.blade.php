@@ -268,28 +268,15 @@
         $('#select2-timezone-container').text('{{$event->timezone}}');
         var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
         $('#timezone option[value="{{$event->timezone}}"]').attr('selected','selected');
-
-        // select event status
         $('#active option[value="{{$event->active}}"]').attr('selected','selected');
+       @endif
 
-        // http://eonasdan.github.io/bootstrap-datetimepicker/Options/#locale
-
-        @endif
-
-        {{--if('{{$event}}'!= null){--}}
-            {{--$('#select2-timezone-container').attr('title', '{{$event->timezone}}');--}}
-            {{--$('#select2-timezone-container').text('{{$event->timezone}}');--}}
-            {{--var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');--}}
-            {{--console.log($('#select2-timezone-container').val());--}}
-        {{--}--}}
-        $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
+       $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
         $('#test').on('change', function() {
             console.log($('#test').prop("checked"));
             if ($('#test').prop("checked")==true) {
-//                console.log($('#test').val())
                 $('#test').val("1")
             } else {
-//                console.log($('#test').val())
                 $('#test').val("0")
             }
         });
@@ -324,7 +311,6 @@
         var start_def_date = new Date();
         var start_date = new Date($('#start').val());
 
-
         if(start_date.getTime() < start_def_date.getTime()) {
             $('#start').val(start_def_date.format('Y/m/d H:i'));
             return false;
@@ -352,18 +338,18 @@
 
     });
 
-//    $('#finish').on('change', function() {
-//        var start_date = new Date($('#start').val());
-//        var end_date = new Date($('#finish').val());
-//
-//        if(end_date.getTime() < start_date.getTime()) {
-//            var end_date = new Date(start_date);
-//            end_date.setHours(start_date.getHours() + 1);
-//            end_date = end_date.format('Y/m/d H:i');
-//
-//            $('#finish').val(end_date);
-//        }
-//    });
+    $('#finish').on('change', function() {
+        var start_date = new Date($('#start').val());
+        var end_date = new Date($('#finish').val());
+
+        if(end_date.getTime() < start_date.getTime()) {
+            var end_date = new Date(start_date);
+            end_date.setHours(start_date.getHours() + 1);
+            end_date = end_date.format('Y/m/d H:i');
+
+            $('#finish').val(end_date);
+        }
+    });
     </script>
 	<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 	<script type="text/javascript">//<![CDATA[
