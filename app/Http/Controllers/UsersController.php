@@ -370,6 +370,7 @@ class UsersController extends JoshController
             $account_user->name = $user->uuid;
             $account_user->slug = $user->uuid;
             $account_user->save();
+            dd($user);
             $acc_id = $user->accounts()->first()->id;
 
             // Assign the user to groups
