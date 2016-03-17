@@ -81,7 +81,7 @@
                         <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         {{--<button type="button" class="btn btn-warning " title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title">!</button>--}}
                     </div>
-                         <div id="hide_dicription" class="add_event_section_link" style="display: none">
+                         <div id="hide_dicription" class="add_event_section_link" {{@isset($event)}} ? style="display:block" : style="display:none">
                             <i class="fa fa-fw fa-stop"></i>
                             <a class="show_hide" >Hide Description</a>
                          </div>
