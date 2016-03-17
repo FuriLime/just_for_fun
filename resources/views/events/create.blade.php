@@ -69,7 +69,7 @@
 
                     </div>
 
-                    <div class="form-group add_event_section_link" id="add_dicription" {{@isset($event)}} ? style="display:block" : style="display:none">
+                    <div class="form-group add_event_section_link" id="add_dicription" {{@isset($event)}} ? style="display:none" : style="display:block">
                         <i class="fa fa-fw fa-comment"></i>
                         <a >Add Description</a>
                     </div>
