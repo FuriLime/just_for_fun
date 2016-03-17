@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/edit.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -28,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.576923" vertical-offset="5023" max-vertical-offset="12478">
-              <caret line="330" column="0" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.6897767" vertical-offset="5023" max-vertical-offset="12478">
+              <caret line="330" column="0" selection-start-line="330" selection-start-column="2" selection-end-line="330" selection-end-column="51" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
               </folding>
@@ -70,12 +71,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/events/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="835">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-4.4363637" vertical-offset="3122" max-vertical-offset="9690">
+              <caret line="198" column="38" selection-start-line="0" selection-start-column="0" selection-end-line="564" selection-end-column="5" />
+              <folding>
+                <element signature="e#9078#9100#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,8 +167,8 @@
         <option value="$PROJECT_DIR$/resources/views/events/clone.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Event.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
       </list>
     </option>
   </component>
@@ -441,12 +444,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-02824" summary="database">
-      <created>1458199393660</created>
-      <option name="number" value="02824" />
-      <option name="project" value="LOCAL" />
-      <updated>1458199393660</updated>
     </task>
     <task id="LOCAL-02825" summary="database">
       <created>1458199585483</created>
@@ -736,7 +733,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458206835468</updated>
     </task>
-    <option name="localTasksCounter" value="2873" />
+    <task id="LOCAL-02873" summary="database">
+      <created>1458207036675</created>
+      <option name="number" value="02873" />
+      <option name="project" value="LOCAL" />
+      <updated>1458207036676</updated>
+    </task>
+    <option name="localTasksCounter" value="2874" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1146,16 +1149,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.576923" vertical-offset="5023" max-vertical-offset="12478">
-          <caret line="330" column="0" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="49" />
-          <folding>
-            <element signature="e#39#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.109091" vertical-offset="3366" max-vertical-offset="10982">
@@ -1178,9 +1171,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="835">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-4.4363637" vertical-offset="3122" max-vertical-offset="9690">
+          <caret line="198" column="38" selection-start-line="0" selection-start-column="0" selection-end-line="564" selection-end-column="5" />
+          <folding>
+            <element signature="e#9078#9100#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6897767" vertical-offset="5023" max-vertical-offset="12478">
+          <caret line="330" column="0" selection-start-line="330" selection-start-column="2" selection-end-line="330" selection-end-column="51" />
+          <folding>
+            <element signature="e#39#52#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
