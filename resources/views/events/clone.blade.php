@@ -142,15 +142,15 @@
                         <div class="fields_map" style="display: none">
                             <div class="map_event_loc" id="map"></div>
                             <div class="form-group fields_loc">
-                                <input class="form-control" size="16" id="street" name="Street" type="Street", readonly, maxlength="255", value="{{$event['Street']}}">
+                                <input class="form-control" size="16" id="street" name="Street" type="Street", readonly="readonly", maxlength="255", value="{{$event['Street']}}">
                             </div>
 
                             <div class="form-group fields_loc">
-                                <input class="form-control" size="16" id="city" name="City" type="City", readonly, maxlength="255", value="{{$event['City']}}">
+                                <input class="form-control" size="16" id="city" name="City" type="City", readonly="readonly", maxlength="255", value="{{$event['City']}}">
                             </div>
 
                             <div class="form-group fields_loc">
-                                <input class="form-control" size="16" id="state" name="State" type="State", readonly, maxlength="255", value="{{$event['State']}}">
+                                <input class="form-control" size="16" id="state" name="State" type="State", readonly="readonly", maxlength="255", value="{{$event['State']}}">
                             </div>
 
                             <div class="form-group fields_loc">
