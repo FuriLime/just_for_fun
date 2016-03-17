@@ -407,7 +407,7 @@
                         if (results[0]) {
                             locale = results[0].formatted_address;
                             splits = locale.split(',');
-                            console.log(locale);
+                            console.log(splits);
 //
                             if (splits.length == 2) {
                                 sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
