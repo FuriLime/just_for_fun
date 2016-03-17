@@ -370,20 +370,20 @@ class UsersController extends JoshController
             $account_user->name = $user->uuid;
             $account_user->slug = $user->uuid;
             $account_user->save();
-            dd($user);
-            $acc_id = $user->accounts()->first()->id;
 
-            // Assign the user to groups
-            foreach ($rolesToAdd as $roleId) {
-
-                $role = Role::find($roleId);
-                $rolew = [
-                    0 => ['user_id' => $user->id, 'account_id' => $acc_id],
-                ];
-
-                $role->users()->attach($rolew);
-//                $role->users()->attach();
-            }
+//            $acc_id = $user->accounts()->first()->id;
+//
+//            // Assign the user to groups
+//            foreach ($rolesToAdd as $roleId) {
+//
+//                $role = Role::find($roleId);
+//                $rolew = [
+//                    0 => ['user_id' => $user->id, 'account_id' => $acc_id],
+//                ];
+//
+//                $role->users()->attach($rolew);
+////                $role->users()->attach();
+//            }
 
             //check for activation and send activation mail if not activated by default
             if(!Input::get('activate')) {
