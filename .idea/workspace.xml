@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/clone.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/clone.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -48,10 +48,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5182482" vertical-offset="6391" max-vertical-offset="12563">
+            <state vertical-scroll-proportion="-7.7454543" vertical-offset="6391" max-vertical-offset="12563">
               <caret line="401" column="0" selection-start-line="401" selection-start-column="2" selection-end-line="402" selection-end-column="50" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
@@ -60,13 +60,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clone.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="clone.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/events/clone.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-35.96154" vertical-offset="1938" max-vertical-offset="9894">
-              <caret line="169" column="30" selection-start-line="44" selection-start-column="23" selection-end-line="169" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.079905994" vertical-offset="0" max-vertical-offset="9894">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
               <folding>
-                <element signature="e#10367#10389#0#HTML" expanded="true" />
+                <element signature="e#10369#10391#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -198,9 +198,9 @@
         <option value="$PROJECT_DIR$/app/Event.php" />
         <option value="$PROJECT_DIR$/resources/views/events/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/resources/views/events/clone.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/events/clone.blade.php" />
       </list>
     </option>
   </component>
@@ -476,12 +476,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-02898" summary="database">
-      <created>1458209280044</created>
-      <option name="number" value="02898" />
-      <option name="project" value="LOCAL" />
-      <updated>1458209280044</updated>
     </task>
     <task id="LOCAL-02899" summary="database">
       <created>1458209546891</created>
@@ -771,7 +765,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458215286709</updated>
     </task>
-    <option name="localTasksCounter" value="2947" />
+    <task id="LOCAL-02947" summary="database">
+      <created>1458215309838</created>
+      <option name="number" value="02947" />
+      <option name="project" value="LOCAL" />
+      <updated>1458215309838</updated>
+    </task>
+    <option name="localTasksCounter" value="2948" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1190,16 +1190,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/clone.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-35.96154" vertical-offset="1938" max-vertical-offset="9894">
-          <caret line="169" column="30" selection-start-line="44" selection-start-column="23" selection-end-line="169" selection-end-column="30" />
-          <folding>
-            <element signature="e#10367#10389#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.181818" vertical-offset="459" max-vertical-offset="11305">
@@ -1257,10 +1247,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5182482" vertical-offset="6391" max-vertical-offset="12563">
+        <state vertical-scroll-proportion="-7.7454543" vertical-offset="6391" max-vertical-offset="12563">
           <caret line="401" column="0" selection-start-line="401" selection-start-column="2" selection-end-line="402" selection-end-column="50" />
           <folding>
             <element signature="e#39#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/clone.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.079905994" vertical-offset="0" max-vertical-offset="9894">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding>
+            <element signature="e#10369#10391#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
