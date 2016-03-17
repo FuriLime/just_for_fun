@@ -227,6 +227,8 @@ Create New event
 //                }
 //            });
 //        });
+
+
     </script>
 
     <script type="text/javascript" src="{{ asset('assets/vendors/tags/dist/bootstrap-tagsinput.js') }}"></script>
@@ -247,6 +249,7 @@ Create New event
 
     <script>
     $(document).ready(function() {
+        var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
         $('#test').on('change', function() {
             console.log($('#test').prop("checked"));
