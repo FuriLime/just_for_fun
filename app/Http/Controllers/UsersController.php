@@ -1,4 +1,5 @@
 <?php namespace App\Http\Controllers;
+use App\Account;
 use Sentinel;
 use View;
 use Validator;
@@ -364,6 +365,11 @@ class UsersController extends JoshController
             $selectedRoles = Input::get('groups', array());
             //add user to 'User' group
             $rolesToAdd    = array_diff($selectedRoles, $userRoles);
+            $account_user = new Account();
+            $account_user->	account_type_id = '1';
+            $account_user->name = $user->uuid;
+            $account_user->slug = $user->uuid;
+            $account_user->save();
             $acc_id = $user->accounts()->first()->id;
 
             // Assign the user to groups
