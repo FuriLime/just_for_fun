@@ -109,16 +109,17 @@ class EventsController extends Controller {
             }
             $duration = strtotime($finish_date) - strtotime($start_date);
             if ($duration >= 3600 && $duration < 86400){
-                $duration=floor($duration/3600);
+                $duration_time=floor($duration/3600);
+                dd($duration_time);
             } else{
-                $duration = 1;
+                $duration_time = 1;
             }
             return view('events.create', array(
                 'timezone_select' => $timezone_select,
                 'start_date' => $start_date,
                 'finish_date' => $finish_date,
                 'user_timezone' => $user_timezone,
-                'duration' => $duration,
+                'duration' => $duration_time,
             ));
 //      }
         } else {
