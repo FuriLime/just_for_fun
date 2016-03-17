@@ -44,7 +44,7 @@
                         {!! Form::open() !!}
                         <div class="form-group">
                             <label for="title">@lang('frontend.title')</label>
-                            {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}
+                            <input class="tinymce_basic form-control" size="16" id="title" name="title" type="text", maxlength="80" value="{{$event['title']}}">
                             <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="@lang('pop_over.content')" data-original-title="@lang('pop_over.title')"></i>
                             <div class="form-group">
                                 @if ($errors->first('title'))
