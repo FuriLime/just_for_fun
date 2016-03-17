@@ -373,7 +373,7 @@ class UsersController extends JoshController
             $account_profile->account_id = $account_user->id;
             $account_profile->save();
 
-
+dd($user->accounts());
             $userRoles = $user->roles()->lists('id')->all();
 
             // Get the selected groups
