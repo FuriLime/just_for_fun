@@ -373,9 +373,10 @@ class UsersController extends JoshController
             $account_profile->account_id = $account_user->id;
             $account_profile->save();
             $userRoles = $user->roles()->lists('id')->all();
-            dd($userRoles);
+//            dd($userRoles);
             // Get the selected groups
             $selectedRoles = Input::get('groups', array());
+            dd($selectedRoles);
             // Groups comparison between the groups the user currently
             // have and the groups the user wish to have.
             $rolesToAdd    = array_diff($selectedRoles, $userRoles);
@@ -385,18 +386,6 @@ class UsersController extends JoshController
                 0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
             ];
             $role->users()->attach($rolew);
-            // Assign the user to groups
-            foreach ($rolesToAdd as $roleId) {
-
-                $role = Role::find($roleId);
-
-                $rolew = [
-                    0 => ['user_id' => $user->id, 'account_id' => $account_user->id],
-                ];
-
-                ;
-//                $role->users()->attach();
-            }
 
             //check for activation and send activation mail if not activated by default
 //            if(!Input::get('activate')) {

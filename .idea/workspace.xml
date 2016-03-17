@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
+    <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="database">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -53,8 +53,8 @@
       <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33449075" vertical-offset="6273" max-vertical-offset="16286">
-              <caret line="386" column="43" selection-start-line="386" selection-start-column="43" selection-end-line="386" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.53125" vertical-offset="6018" max-vertical-offset="16099">
+              <caret line="381" column="40" selection-start-line="381" selection-start-column="40" selection-end-line="381" selection-end-column="40" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
               </folding>
@@ -65,8 +65,8 @@
       <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.115385" vertical-offset="2142" max-vertical-offset="9316">
-              <caret line="143" column="13" selection-start-line="143" selection-start-column="12" selection-end-line="146" selection-end-column="14" />
+            <state vertical-scroll-proportion="-12.423077" vertical-offset="1989" max-vertical-offset="9316">
+              <caret line="136" column="42" selection-start-line="136" selection-start-column="42" selection-end-line="136" selection-end-column="42" />
               <folding>
                 <element signature="e#38#51#0#PHP" expanded="true" />
               </folding>
@@ -446,12 +446,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-02770" summary="database">
-      <created>1458148702029</created>
-      <option name="number" value="02770" />
-      <option name="project" value="LOCAL" />
-      <updated>1458148702029</updated>
-    </task>
     <task id="LOCAL-02771" summary="database">
       <created>1458148901426</created>
       <option name="number" value="02771" />
@@ -740,14 +734,20 @@
       <option name="project" value="LOCAL" />
       <updated>1458198592038</updated>
     </task>
-    <option name="localTasksCounter" value="2819" />
+    <task id="LOCAL-02819" summary="database">
+      <created>1458198677624</created>
+      <option name="number" value="02819" />
+      <option name="project" value="LOCAL" />
+      <updated>1458198677624</updated>
+    </task>
+    <option name="localTasksCounter" value="2820" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897604" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1161,8 +1161,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385" vertical-offset="2142" max-vertical-offset="9316">
-          <caret line="143" column="13" selection-start-line="143" selection-start-column="12" selection-end-line="146" selection-end-column="14" />
+        <state vertical-scroll-proportion="-12.423077" vertical-offset="1989" max-vertical-offset="9316">
+          <caret line="136" column="42" selection-start-line="136" selection-start-column="42" selection-end-line="136" selection-end-column="42" />
           <folding>
             <element signature="e#38#51#0#PHP" expanded="true" />
           </folding>
@@ -1171,8 +1171,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33449075" vertical-offset="6273" max-vertical-offset="16286">
-          <caret line="386" column="43" selection-start-line="386" selection-start-column="43" selection-end-line="386" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.53125" vertical-offset="6018" max-vertical-offset="16099">
+          <caret line="381" column="40" selection-start-line="381" selection-start-column="40" selection-end-line="381" selection-end-column="40" />
           <folding>
             <element signature="e#39#52#0#PHP" expanded="true" />
           </folding>
