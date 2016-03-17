@@ -396,7 +396,7 @@ class EventsController extends Controller {
         $event['readable_url'] = $store_info['title'];
         $event['description'] = $store_info['description'];
         $event['location'] = $store_info['location'];
-        $event['event_url'] = $store_info['event_url'];
+//        $event['event_url'] = $store_info['event_url'];
         $event['timezone'] = $store_info['timezone'];
         $event['Street'] = $store_info['Street'];
         $event['City'] = $store_info['City'];
