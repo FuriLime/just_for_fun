@@ -110,9 +110,9 @@
 
                          <div class="form-group add_event_section_link" id="change_time_zone">
                              @if (isset($event))
-                            <span>Timezone is {{$event['timezone']}}. Default duration is {{$event['duration_time']}}. <a id="time_change">Change here.</a></span>
+                            <span>Timezone is {{$event['timezone']}}. Duration is {{$event['duration_time']}}. <a id="time_change">Change here.</a></span>
                              @else
-                            <span>Timezone is {{$user_timezone}}. Duration is {{$duration_day}} {{$duration_time}}. <a id="time_change">Change here.</a></span>
+                            <span>Timezone is {{$user_timezone}}. Default duration is {{$duration_day}} {{$duration_time}}. <a id="time_change">Change here.</a></span>
                              @endif
 {{--                            <span>Timezone is {{@isset($event)? $event['timezone'] : $user_timezone}}. Default duration is {{$event['duration_time']}} h. <a id="time_change">Change here.</a></span>--}}
                          </div>
