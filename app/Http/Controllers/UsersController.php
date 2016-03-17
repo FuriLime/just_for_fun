@@ -376,7 +376,8 @@ class UsersController extends JoshController
 
             $selectedRoles = Input::get('groups', array());
             $roles = Sentinel::getRoleRepository()->all();
-            dd($roles);
+            $userRoles = $user->getRoles()->lists('name', 'id')->all();
+            dd($userRoles);
 
             $role = Role::find(5);
             $rolew = [
