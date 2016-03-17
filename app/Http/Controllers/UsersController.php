@@ -593,7 +593,7 @@ class UsersController extends JoshController
             // Was the user updated?
             if ($user->save() && $user_profile->save()) {
 
-
+dd($user);
 
                 // Prepare the success message
                 $success = Lang::get('users/message.success.update');
