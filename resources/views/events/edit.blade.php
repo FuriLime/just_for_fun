@@ -29,7 +29,7 @@
                 <div class="panel panel-primary ">
                     <div class="panel-heading">
                         <h4 class="panel-title"> <i class="livicon" data-name="edit" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-                            Clone an Event
+                            Edit event
                         </h4>
                     </div>
                     <div class="panel-body">
@@ -45,7 +45,28 @@
                         <div class="form-group">
                             <label for="title">@lang('frontend.title')</label>
                             {{--                            {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '80', 'id' => 'title']) !!}--}}
-                            
+                            <input class="tinymce_basic form-control" size="16" id="title" name="title" type="text", maxlength="80" value="{{$event['title']}}">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="type">@lang('frontend.type')</label>
+                            <div class="form-control radio-group">
+                                <input type="radio" value="1" name="type" id="type_1"
+                                @if ($event->type == "1")
+                                       checked
+                                        @endif
+                                        ><label for="type_1">@lang('frontend.online')</label>
+                                <input type="radio" value="2" name="type" id="type_2"
+                                @if ($event->type == "2")
+                                       checked
+                                        @endif
+                                        ><label for="type_2">@lang('frontend.offline')</label>
+                                <input type="radio" value="3" name="type" id="type_3"
+                                @if ($event->type == "3")
+                                       checked
+                                        @endif
+                                        ><label for="type_3">@lang('frontend.online_and_offline')</label>
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -335,6 +356,8 @@
                                 if($.isNumeric(splits[1])){
                                     street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                     $('#street').val(street);
+
+//                                street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                     sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
                                     $('#city').val(sity);
 
