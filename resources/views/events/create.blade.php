@@ -253,14 +253,14 @@
 
     <script>
     $(document).ready(function() {
-console.log('{{$event}}}'!= null);
+console.log('{{$event}}'!= null);
 
-        {{--if('{{$event}}}'){--}}
-            {{--$('#select2-timezone-container').attr('title', '{{$event->timezone}}');--}}
-            {{--$('#select2-timezone-container').text('{{$event->timezone}}');--}}
-            {{--var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');--}}
-            {{--console.log($('#select2-timezone-container').val());--}}
-        {{--}--}}
+        if('{{$event}}'!= null){
+            $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
+            $('#select2-timezone-container').text('{{$event->timezone}}');
+            var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
+            console.log($('#select2-timezone-container').val());
+        }
         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
         $('#test').on('change', function() {
             console.log($('#test').prop("checked"));
