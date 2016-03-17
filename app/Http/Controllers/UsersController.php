@@ -753,7 +753,7 @@ class UsersController extends JoshController
 
                 // Prepare the success message
                 $success = Lang::get('users/message.success.delete');
-                return Redirect::route('users')->with('success', $success);
+                return Redirect::route('home')->with('success', $success);
             }
 
             // Delete the user
