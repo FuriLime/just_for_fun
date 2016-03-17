@@ -316,7 +316,6 @@ class EventsController extends Controller {
             'finish' => 'required',
         ]);
         //$event = Event::findOrFail($uuid);
-        $event = Event::whereUuid($uuid)->first();
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
         $event = Event::whereUuid($uuid)->first();
@@ -592,7 +591,7 @@ class EventsController extends Controller {
      *
      */
 
-    public static function getTimeZoneSelect()
+    public static function getTimeZoneSelect($uuid = null)
     {
         $regions = array(
             'Africa' => \DateTimeZone::AFRICA,
