@@ -42,7 +42,7 @@
                         {{--@endif--}}
                         <h3 class="primary add_event_section_link">@lang('frontend.clone_event_text')</h3>
 
-                        {!! Form::open() !!}
+                        {!! Form::open(['id'=>'clone_event']) !!}
                         <div class="form-group">
                             <label for="title">@lang('frontend.title')</label>
                             <input class="tinymce_basic form-control" size="16" id="title" name="title" type="text", maxlength="80" value="{{$event['title']}}">
@@ -218,14 +218,14 @@
     <script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/js/bootbox.js') }}"></script>
     <script>
-        //        $(document).on("click", ".submit", function(e) {
-        //            event.preventDefault();
-        //            bootbox.confirm("Do you want to publish this event?", function(result) {
-        //                if (result == true) {
-        //                   $('#create_event').submit();
-        //                }
-        //            });
-        //        });
+                $(document).on("click", ".submit", function(e) {
+                    event.preventDefault();
+                    bootbox.confirm("Do you want to publish this event?", function(result) {
+                        if (result == true) {
+                           $('#clone_event').submit();
+                        }
+                    });
+                });
 
 
     </script>
