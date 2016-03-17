@@ -432,6 +432,36 @@ class EventsController extends Controller {
         $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
+        $event['duration'] = strtotime($event['finish']) - strtotime($event['start']);
+
+
+        //hours
+        if ($event['duration']>= 3600 && $event['duration'] < 86400) {
+            if (($event['duration'] % 3600) == 0) {
+                $event['duration_day'] = 0 . 'd';
+                $event['duration_hour'] = ($event['duration'] / 3600) % 24 . 'h';
+                $event['duration_min'] = 0 . 'm';
+            }else {
+                $event['duration_day'] = 0 . 'd';
+                $event['duration_hour'] = ($event['duration'] / 3600) % 24 . 'h';
+                $event['duration_min'] = ($event['duration'] / 60) % 60 . 'm';
+            }
+            //days
+        }else if ($event['duration'] >= 86400) {
+            if($event['duration']%86400==0){
+                $event['duration_day']= ($event['duration'] / 86400 ) % 30 .'d';
+                $event['duration_hour']=0 .'h';
+                $event['duration_min']=0 .'m';
+            }else {
+                $event['duration_day']=($event['duration'] / 86400 ) % 30 .'d';
+                $event['duration_hour']=( $event['duration'] / 3600 ) % 24 .'h';
+                $event['duration_min']=( $event['duration']/ 60 ) % 60 .'m';
+            }
+        }else{
+            $event['duration_day']= 0 .'d';
+            $event['duration_hour']=0 .'h';
+            $event['duration_min']=0 .'m';
+        }
         return view('events.clone', compact('event'));
     }
 
