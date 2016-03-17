@@ -306,7 +306,11 @@ class EventsController extends Controller {
         if ($event['duration'] >= 3600 && $event['duration'] < 86400){
             $event['duration_time']=floor($event['duration']/3600);
 
-        } else{
+        }
+        else if ($event['duration'] >= 86400 && $event['duration'] < $event['duration']) {
+            // разница меньше месяца => ...дней назад
+            $event['duration_time']=$event['duration']/86400;
+        }else{
             $event['duration_time'] = 1;
         }
         return view('events.create', compact('event'));
