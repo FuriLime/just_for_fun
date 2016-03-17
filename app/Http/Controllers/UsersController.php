@@ -378,18 +378,6 @@ class UsersController extends JoshController
 
             // Get the selected groups
             $selectedRoles = Input::get('groups', array());
-            //add user to 'User' group
-            $rolesToAdd    = array_diff($selectedRoles, $userRoles);
-            $account_user = new Account();
-            $account_user->	account_type_id = '1';
-            $account_user->name = $user->uuid;
-            $account_user->slug = $user->uuid;
-            $account_user->save();
-            $userRoles = $user->roles()->lists('id')->all();
-
-            // Get the selected groups
-            $selectedRoles = Input::get('groups', array());
-
             // Groups comparison between the groups the user currently
             // have and the groups the user wish to have.
             $rolesToAdd    = array_diff($selectedRoles, $userRoles);
