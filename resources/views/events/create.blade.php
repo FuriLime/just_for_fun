@@ -40,7 +40,7 @@
 					<h3 class="primary add_event_section_link">@lang('frontend.add_event_text')</h3>
 
                     @if (isset($event))
-                        {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@update', $event->uuid]]) !!}
+                        {!! Form::open() !!}
                     @if((isset($event)))
                             {!! Form::model($event, ['method' => 'POST', 'action' => ['EventsController@clonne', $event->uuid]]) !!}
                         @else
