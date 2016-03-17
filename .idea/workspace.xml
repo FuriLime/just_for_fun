@@ -53,11 +53,21 @@
       <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.027777778" vertical-offset="6365" max-vertical-offset="16065">
-              <caret line="373" column="11" selection-start-line="373" selection-start-column="11" selection-end-line="385" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.4247685" vertical-offset="6314" max-vertical-offset="16371">
+              <caret line="393" column="0" selection-start-line="393" selection-start-column="0" selection-end-line="393" selection-end-column="0" />
               <folding>
                 <element signature="e#38#54#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.692307" vertical-offset="1632" max-vertical-offset="8959">
+              <caret line="141" column="37" selection-start-line="134" selection-start-column="12" selection-end-line="141" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,10 +169,10 @@
         <option value="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/public/assets/ical.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/app/Activation.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
       </list>
     </option>
@@ -433,12 +443,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-02759" summary="database">
-      <created>1458147646380</created>
-      <option name="number" value="02759" />
-      <option name="project" value="LOCAL" />
-      <updated>1458147646380</updated>
     </task>
     <task id="LOCAL-02760" summary="database">
       <created>1458147712860</created>
@@ -728,7 +732,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458196663071</updated>
     </task>
-    <option name="localTasksCounter" value="2808" />
+    <task id="LOCAL-02808" summary="database">
+      <created>1458196803305</created>
+      <option name="number" value="02808" />
+      <option name="project" value="LOCAL" />
+      <updated>1458196803305</updated>
+    </task>
+    <option name="localTasksCounter" value="2809" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1075,13 +1085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45053002" vertical-offset="510" max-vertical-offset="8959">
-          <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/en/users/modal.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="289">
@@ -1147,10 +1150,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.692307" vertical-offset="1632" max-vertical-offset="8959">
+          <caret line="141" column="37" selection-start-line="134" selection-start-column="12" selection-end-line="141" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.027777778" vertical-offset="6365" max-vertical-offset="16065">
-          <caret line="373" column="11" selection-start-line="373" selection-start-column="11" selection-end-line="385" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.4247685" vertical-offset="6314" max-vertical-offset="16371">
+          <caret line="393" column="0" selection-start-line="393" selection-start-column="0" selection-end-line="393" selection-end-column="0" />
           <folding>
             <element signature="e#38#54#0#PHP" expanded="true" />
           </folding>

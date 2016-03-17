@@ -359,6 +359,17 @@ class UsersController extends JoshController
                 'address'   => Input::get('address'),
                 'postal'   => Input::get('postal'),
             ),$activate);
+
+            $account_user = new Account();
+            $account_user->	account_type_id = '1';
+            $account_user->name = $user['uuid'];
+            $account_user->slug = $user['uuid'];
+            $account_user->save();
+            $account_profile = new AccountProfile();
+            $account_profile->account_id = $account_user->id;
+            $account_profile->save();
+
+
             $userRoles = $user->roles()->lists('id')->all();
 
             // Get the selected groups
@@ -370,27 +381,34 @@ class UsersController extends JoshController
             $account_user->name = $user->uuid;
             $account_user->slug = $user->uuid;
             $account_user->save();
+            $userRoles = $user->roles()->lists('id')->all();
 
-//            $acc_id = $user->accounts()->first()->id;
-//
-//            // Assign the user to groups
-//            foreach ($rolesToAdd as $roleId) {
-//
-//                $role = Role::find($roleId);
-//                $rolew = [
-//                    0 => ['user_id' => $user->id, 'account_id' => $acc_id],
-//                ];
-//
-//                $role->users()->attach($rolew);
-////                $role->users()->attach();
-//            }
+            // Get the selected groups
+            $selectedRoles = Input::get('groups', array());
+
+            // Groups comparison between the groups the user currently
+            // have and the groups the user wish to have.
+            $rolesToAdd    = array_diff($selectedRoles, $userRoles);
+            $acc_id = $user->accounts()->first()->id;
+
+            // Assign the user to groups
+            foreach ($rolesToAdd as $roleId) {
+
+                $role = Role::find($roleId);
+                $rolew = [
+                    0 => ['user_id' => $user->id, 'account_id' => $acc_id],
+                ];
+
+                $role->users()->attach($rolew);
+//                $role->users()->attach();
+            }
 
             //check for activation and send activation mail if not activated by default
             if(!Input::get('activate')) {
                 // Data to be used on the email view
                 $data = array(
                     'user'          => $user,
-                    'activationUrl' => URL::route('activate', $user->id, Activation::create($user)->code),
+                    'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
                 );
 
                 // Send the activation code through email
