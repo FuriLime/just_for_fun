@@ -114,7 +114,7 @@ Edit User
                                         {{--@if ((Sentinel::getUser()->id != $user->id) && ($user->id != 1))--}}
                                         <a type="button" class="btn" href="{{ route('confirm-delete/user', $user->id) }}" data-toggle="modal" data-target="#delete_confirm">
 
-                                            <i class="livicon" data-name="user-remove" data-size="18" data-loop="true" data-c="#f56954" data-hc="#f56954" title="delete user"></i></a>
+                                            <button type="button" class="btn">Remove your account</button></a>
                                         {{--@endif--}}
 
 
