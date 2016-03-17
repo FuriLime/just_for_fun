@@ -52,9 +52,6 @@ p {
 p label {
     text-align: justify;
 }
-.container .row{
-    background-color: white;
-}
 /* ----------Custom Color Code ---------- */
 
 .primary,
@@ -196,13 +193,6 @@ p label {
 
 .navbar-default .navbar-nav > li>a:hover {
     color: #0B83BD;
-}
-.navbar-brand{
-    width: calc(100% - 65px);
-    max-width: 330px;
-}
-.navbar-header img.logo_position{
-    width: 100%;
 }
 /* ---------- Navbar  Dropdown menu Css ---------- */
 
@@ -417,17 +407,9 @@ blockquote {
 
 .info > p {
     color: #787878;
-    font-size: 30px;
+    font-size: 14px;
     padding-top: 10px;
-    text-align: center;
-}
-.info > p +.text-center{
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #b4b4b4;
-}
-.primary.lite{
-    margin-top: 38px;
+    text-align: justify;
 }
 /* ---------- //Our services Text End ----------*/
 /* ---------- Our service Icon Css ---------- */
@@ -642,17 +624,10 @@ footer .btn-primary.text-white {
 #owl-demo {
     margin: 0px;
 }
-#owl-demo .item{
 
-    max-width: 966px;
-    margin: auto;
-    background-color: white;
-    background-image: url(../../images/slide-bg.png);
-    background-position: right bottom;
-    background-repeat: no-repeat;
-}
 #bar {
-    width: 0% !important;
+    width: 0%;
+    max-width: 100%;
     height: 3px;
     background: #01bc8c;
 }
@@ -660,154 +635,9 @@ footer .btn-primary.text-white {
 #progressBar {
     width: 100%;
     background: #EDEDED;
-    display: none;
-}
-.slide-content{
-    width: 50%;
-    left:0;
-    padding: 50px;
-    padding-bottom: 100px;
-}
-.slide-head{
-    font-size: 26px;
-    font-weight: bold;
-    color: #1f487c;
-}
-.slide-text{
-    margin: 30px 0;
-    font-size: 20px;
-    color: #7e7e7e;
-}
-.add-test-event{
-    width: 200px;
-    background-color: #e36c09;
-    color:white;
-    line-height: 44px;
-    font-size: 20px;
-    border: none;
-    border-radius: 7px;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-}
-.add-test-event:after{
-    content: '';
-    width: 205px;
-    height: 38px;
-    background-image: url(../../images/slide-arrow.png);
-    display: block;
-    position: absolute;
-    margin-top: 11px;
-    margin-left: 25px;
-}
-.owl-carousel {
-    display: block !important;
 }
 /* ---------- //About Us Slider Css End ---------- */
 
-/* ---------- //About Calendars Css Start---------- */
-.calendars img{
-    width: 100%;
-}
-/* ---------- //About Calendars Css End ---------- */
-
-
-/* ---------- //About UI-Slider Css Start---------- */
-.ui-slider.col-xs-12{
-    text-align: center;
-}
-.ui-slider-container{
-    width: 80px;
-    margin:auto;
-    background-color: white;
-    border-radius: 22px;
-    height: 44px;
-    padding-left: 10px;
-    border: 2px solid gray;
-    display: inline-block;
-}
-#slider{
-    width: 38px;
-    height: 40px;
-    background-color: transparent;
-    background: none;
-    border:none;
-}
-#slider.ui-slider-horizontal .ui-slider-handle{
-    height: 36px;
-    width: 36px;
-    border-radius: 50%;
-    top:2px;
-}
-#slider.ui-slider-horizontal .ui-slider-handle:focus{
-    outline:none;
-
-}
-.monthly,
-.yearly{
-    display: inline-block;
-    line-height: 44px;
-    vertical-align: top;
-}
-.yearly:after{
-    content: '';
-    width: 205px;
-    height: 38px;
-    background-image: url(../../images/slide-arrow.png);
-    display: block;
-    position: absolute;
-    margin-top: -11px;
-    margin-left: 5px;
-}
-/* ---------- //About UI-Slider Css End ---------- */
-.plans-for{
-    margin-top: 30px;
-    font-size: 14px;
-    color: #1f487c;
-}
-.plans-for-business{
-    display: none;
-    background-color: #d9d9d9;
-    color: #7e7e7e;
-    padding: 15px;
-    padding-top: 7px;
-    border-radius: 5px;
-    position: absolute;
-    width: 270px;
-    font-size: 14px;
-    text-align: left;
-    right: calc(50% - 380px);
-    top: 0;
-}
-.plans-for-business:before{
-    content: '';
-    position: absolute;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 8px 10px 8px 0;
-    border-color: transparent #d9d9d9 transparent transparent;
-    top: calc(50% - 8px);
-    left: -10px;
-}
-.plans-for-business .plans-for{
-    padding-bottom: 7px;
-    border-bottom: 3px solid rgba(255,225,255, 0.5);
-    color: #7e7e7e;
-    margin-bottom: 7px;
-    padding-left: 15px;
-    width: calc(100% + 30px);
-    margin-left: -15px;
-    margin-top: 0;
-}
-.businesses .text-center{
-    width: auto;
-    margin: auto;
-}
-.businesses .slide-head:hover + div{
-    display: block;
-}
 .center-block {
     margin-bottom: 0px;
     font-size: 18px;
@@ -876,47 +706,8 @@ footer .btn-primary.text-white {
     .navbar-nav .dropdown-menu:before {
         content: none;
     }
-    .slide-content{
-        width: 75%;
-    }
-    #prices-page + .col-xs-12 .text-center{
-        width: 50%;
-        margin-left: 25%;
-        float: none;
-    }
-     #prices-page + .col-xs-12,
-    .col-xs-12.ui-slider, 
-    .businesses{
-        margin-top: 30px;
-        float: none;
-        width: 100%;
-    }
-    .plans-for-business{
-        right: calc(50% - 135px);
-        top:100%;
-        z-index: 10000;
-    }
-    .plans-for-business:before{
-        top: -10px;
-        transform:rotate(90deg);
-        left: calc(50% - 8px);
-    }
 }
-@media(max-width: 590px) {
-    .yearly:after{
-        display: none;
-    }
-    .slide-content{
-        width: 100%;
-    }
-    #owl-demo .item{
-        background-image: none;
-    }
-    #prices-page + .col-xs-12 .text-center {
-        width: 100%;
-        margin-left: 0;
-    }
-}
+
 @media(max-width: 950px) {
     .profile {
         display: block;
