@@ -44,73 +44,35 @@
                         {!! Form::model($event, ['method' => 'POST', 'action' => ['EventsController@clonne', $event->uuid]]) !!}
                         <div class="form-group">
                             <label for="title">@lang('frontend.title')</label>
-{{--                            {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '80', 'id' => 'title']) !!}--}}
-                            <input class="tinymce_basic form-control" size="16" id="title" name="title" type="text", maxlength="80" value="{{$event['title']}}">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="type">@lang('frontend.type')</label>
-                            <div class="form-control radio-group">
-                                <input type="radio" value="1" name="type" id="type_1"
-                                @if ($event->type == "1")
-                                       checked
-                                        @endif
-                                        ><label for="type_1">@lang('frontend.online')</label>
-                                <input type="radio" value="2" name="type" id="type_2"
-                                @if ($event->type == "2")
-                                       checked
-                                        @endif
-                                        ><label for="type_2">@lang('frontend.offline')</label>
-                                <input type="radio" value="3" name="type" id="type_3"
-                                @if ($event->type == "3")
-                                       checked
-                                        @endif
-                                        ><label for="type_3">@lang('frontend.online_and_offline')</label>
+                            {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}
+                            <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="@lang('pop_over.content')" data-original-title="@lang('pop_over.title')"></i>
+                            <div class="form-group">
+                                @if ($errors->first('title'))
+                                    <ul class="alert alert-danger myalert">
+                                        <li>{{ $errors->first('title') }}</li>
+                                    </ul>
+                                @endif
                             </div>
+
+
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group add_event_section_link" id="add_dicription">
+                            <i class="fa fa-fw fa-comment"></i>
+                            <a >Add Description</a>
+                        </div>
+
+                        <div class="form-group" id="descprip" style="display: none">
                             <label for="description">@lang('frontend.description')</label>
-{{--                            {!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}--}}
-                            <textarea class="textarea form-control" type="textarea" id="description" name="description", maxlength="500" value="{{$event['description']}}">{{$event['description']}}</textarea>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="location">@lang('frontend.location')</label>
-{{--                            {!! Form::text('location', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'location']) !!}--}}
-                            <input class="form-control" size="16" id="location" name="location" type="location", maxlength="255" value="{{$event['location']}}">
+                            {!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}
+                            <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                            {{--<button type="button" class="btn btn-warning " title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title">!</button>--}}
                         </div>
-
-                        <div class="form-group fields_loc">
-{{--                            {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street','readonly']) !!}--}}
-                            <input class="form-control" size="16" id="Street" name="Street" type="Street", maxlength="255" value="{{$event['Street']}}">
+                        <div id="hide_dicription" class="add_event_section_link" style="display: none">
+                            <i class="fa fa-fw fa-stop"></i>
+                            <a class="show_hide" >Hide Description</a>
                         </div>
-
-                        <div class="form-group fields_loc">
-                            {{--{!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city','readonly']) !!}--}}
-                            <input class="form-control" size="16" id="City" name="City" type="City", maxlength="255" value="{{$event['City']}}">
-                        </div>
-
-                        <div class="form-group fields_loc">
-{{--                            {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}--}}
-                            <input class="form-control" size="16" id="State" name="State" type="State", maxlength="255" value="{{$event['State']}}">
-                        </div>
-
-                        <div class="form-group fields_loc">
-{{--                            {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}--}}
-                            <input class="form-control" size="16" id="Country" name="Country" type="Country", maxlength="255" value="{{$event['Country']}}">
-                        </div>
-                        <div class="form-group">
-                            <label for="event_url">@lang('frontend.url')</label>
-{{--                            {!! Form::text('event_url', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'event_url']) !!}--}}
-                            <input class="form-control" size="16" id="event_url" name="event_url" type="event_url", maxlength="255" value="{{$event['event_url']}}">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="timezone">@lang('frontend.timezone')</label>
-                            {!! $event->timezone_select !!}
-                        </div>
-
                         <div class="form-group">
                             <label for="start">@lang('frontend.date')</label>
                             <div class="form-group form_datetime">
@@ -121,7 +83,7 @@
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
-                                    <input class="form-control" size="16" id="start" name="start" type="datetime" value="{{$event['start']}}">
+                                    <input class="form-control" size="16" id="start" name="start" type="datetime" value="{{@isset($event)? $event['start'] : $start_date}}">
 
                                 </div>
                                 @if ($errors->first('start'))
@@ -130,9 +92,14 @@
                                     </ul>
                                 @endif
                             </div>
+                            <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         </div>
 
-                        <div class="form-group">
+
+                        <div class="form-group add_event_section_link" id="change_time_zone">
+                            <span>Timezone is {{@isset($event)? $event['timezone'] : $user_timezone}}. Default duration is 1h. <a id="time_change">Change here.</a></span>
+                        </div>
+                        <div class="form-group" id="end_time_event" style="display:none" >
                             <label for="start">@lang('frontend.enddate')</label>
                             <div class="form-group form_datetime">
                                 <div class="input-group date form_datetime3 col-md-12" id="datefinish">
@@ -142,7 +109,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-th"></span>
                                             </span>
-                                    <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{$event['finish']}}">
+                                    <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{@isset($event)? $event['finish'] : $finish_date}}">
 
                                 </div>
                                 @if ($errors->first('finish'))
@@ -151,22 +118,66 @@
                                     </ul>
                                 @endif
                             </div>
+                            <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         </div>
 
-                        <div class="form-group">
-                            <label for="status">@lang('frontend.status')</label>
-                            <select class="form-control active" name="status" id="status">
-                                <option value="Draft">@lang('frontend.draft')</option>
-                                <option value="Publish">@lang('frontend.published')</option>
-                            </select>
+
+                        <div class="form-group"  id="time_zone_change" style="display:none">
+                            <label for="timezone">@lang('frontend.timezone')</label>
+                            {!!@isset($event) ? $event->timezone_select : $timezone_select !!}
+                            <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-offset-0 col-sm-4" id="btn_group">
-                                <button type="submit" class="btn btn-primary text-white">
-                                    @lang('frontend.update')
-                                </button>
+                        {{--<input type="hidden" value="1" name="active" id="active" readonly>--}}
+
+
+                        <div class="form-group locale">
+                            <label for="location">@lang('frontend.location')</label>
+                            {!! Form::text('location', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'location']) !!}
+                            <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                        </div>
+
+                        <div class="fields_map" style="display: none">
+                            <div class="map_event_loc" id="map"></div>
+                            <div class="form-group fields_loc">
+                                {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street','readonly']) !!}
                             </div>
+
+                            <div class="form-group fields_loc">
+                                {!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city','readonly']) !!}
+                            </div>
+
+                            <div class="form-group fields_loc">
+                                {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}
+                            </div>
+
+                            <div class="form-group fields_loc">
+                                {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}
+                            </div>
+                            <div class="form-group fields_loc">
+                                <a id="reset_loc">Reset Address</a>
+                            </div>
+                        </div>
+
+                        <div class="add_event_section_link">
+                            <i class="fa fa-fw fa-gears"></i>
+                            <a data-toggle="tooltip" title="Option not available">Advansed Options</a>
+                        </div>
+
+                        <div class="form-group" style="text-align: right; margin-right: 3%; margin-top: 9%;">
+                            <div class="col-sm-offset-0 col-sm-12" id="btn_group">
+                                <button type="button" class="btn" onclick="(function($) { $('#active').val('0'); $('#btn_group .btn-primary').click(); })(jQuery);">
+                                    @lang('frontend.save_as_draft')
+                                </button>
+                                <button class="btn btn-primary text-white test submit">
+                                    @lang('frontend.save_and_publish')
+                                </button>
+
+                                <div class="checkbox add_event_section_link">
+                                    <label><input type="checkbox" checked name="test" id="test" value="1">This is a test event</label>
+                                </div>
+                            </div>
+
                         </div>
                         {!! Form::close() !!}
 
