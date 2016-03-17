@@ -34,7 +34,7 @@ Create New event
                 </div>
                 <div class="panel-body">
 					<h3 class="primary add_event_section_link">@lang('frontend.add_event_text')</h3>
-                         {!! Form::open() !!}
+                         {!! Form::open(['url' => 'events']) !!}
                          {{--<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }} " />--}}
 
                     <div class="form-group">
