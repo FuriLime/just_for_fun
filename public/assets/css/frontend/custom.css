@@ -999,6 +999,9 @@ footer .btn-primary.text-white {
     }
     #add_event .form_datetime  i{
         display: inline-block;
+        float:none;
     }
-    
+    .form-group i{
+        margin-top: 9px;
+    }
 }
