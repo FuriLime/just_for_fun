@@ -613,7 +613,19 @@
         //	});
 
 
+        $('#timezone option[value="{{$event->timezone}}"]').attr('selected','selected');
 
+        // select event status
+        $('#active option[value="{{$event->active}}"]').attr('selected','selected');
+
+        // http://eonasdan.github.io/bootstrap-datetimepicker/Options/#locale
+        $("#datestart").on("dp.change", function (e) {
+            $('#datefinish').data("DateTimePicker").minDate(e.date);
+        });
+        // run second calendar after closing of first
+        $("#datestart").on("dp.hide", function (e) {
+            $('#datefinish .glyphicon-calendar').click();
+        });
         $('input#title').maxlength({
             //alwaysShow: true,
             threshold: 25,
