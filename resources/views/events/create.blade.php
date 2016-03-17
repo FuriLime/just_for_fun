@@ -108,7 +108,7 @@
                     </div>
 
 
-                         <div class="form-group add_event_section_link" id="change_time_zone" {{@isset($event)}} ? style="display:block" : style="display:none">
+                         <div class="form-group add_event_section_link" id="change_time_zone" {{@isset($event)}} ? style="display:none" : style="display:block">
                             <span>Timezone is {{@isset($event)? $event['timezone'] : $user_timezone}}. Default duration is 1h. <a id="time_change">Change here.</a></span>
                          </div>
         		<div class="form-group" id="end_time_event" {{@isset($event)}} ? style="display:block" : style="display:none">
