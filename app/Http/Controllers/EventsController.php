@@ -121,7 +121,7 @@ class EventsController extends Controller {
                     $duration_day=floor($duration/86400).'d';
                     $duration_time= 0 .'h';
                 }else{
-                    $duration_day=$duration/86400 .'d';
+                    $duration_day=floor($duration/86400) .'d';
                     $duration_time=$duration_day /3600 ;
                 }
 
