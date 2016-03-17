@@ -141,11 +141,11 @@
                         <div class="fields_map" style="display: none">
                             <div class="map_event_loc" id="map"></div>
                             <div class="form-group fields_loc">
-                                {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street','readonly']) !!}
+                                <input class="form-control" size="16" id="street" name="Street" type="Street", maxlength="255" value="{{$event['Street']}}">
                             </div>
 
                             <div class="form-group fields_loc">
-                                {!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city','readonly']) !!}
+                                <input class="form-control" size="16" id="city" name="City" type="City", maxlength="255" value="{{$event['City']}}">
                             </div>
 
                             <div class="form-group fields_loc">
