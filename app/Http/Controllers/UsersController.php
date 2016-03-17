@@ -374,7 +374,8 @@ class UsersController extends JoshController
             $account_profile->save();
 
 
-
+            $selectedRoles = Input::get('groups', array());
+            dd($selectedRoles);
 
             $role = Role::find(5);
             $rolew = [
