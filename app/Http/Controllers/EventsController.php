@@ -295,7 +295,7 @@ class EventsController extends Controller {
         $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
-        $event['duration'] = (strtotime($event['finish']) - strtotime($event['start']))/3600;
+        $event['duration'] = ((strtotime($event['finish']) - strtotime($event['start']))/86400)%30;
         return view('events.create', compact('event'));
     }
 
