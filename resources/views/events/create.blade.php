@@ -3,9 +3,9 @@
 {{-- Page title --}}
 @section('title')
     @if (isset($event))
-        Edit an Event
+        @lang('frontend.edit_event_header')
     @else
-        Create an Event
+        @lang('frontend.add_event_header')
     @endif
 @parent
 @stop
@@ -33,11 +33,20 @@
             <div class="panel panel-primary ">
                 <div class="panel-heading">
                     <h4 class="panel-title"> <i class="livicon" data-name="plus-alt" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-						@lang('frontend.add_event_header')
+                        @if (isset($event))
+                            @lang('frontend.edit_event_header')
+                        @else
+                            @lang('frontend.add_event_header')
+                        @endif
                     </h4>
                 </div>
                 <div class="panel-body">
-					<h3 class="primary add_event_section_link">@lang('frontend.add_event_text')</h3>
+                    @if (isset($event))
+                        <h3 class="primary add_event_section_link">@lang('frontend.edit_event_text')</h3>
+                    @else
+                        <h3 class="primary add_event_section_link">@lang('frontend.add_event_text')</h3>
+                    @endif
+
 
                     @if (isset($event))
                         {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@update', $event->uuid]]) !!}
