@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Edit a event
+    Clone an event
     @parent
 @stop
 
