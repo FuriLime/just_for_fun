@@ -96,7 +96,7 @@ Create New event
 
 
                          <div class="form-group add_event_section_link" id="change_time_zone">
-                            <span>Timezone is {{$user_timezone}}. Default duration is 1h. <a id="time_change">Change here.</a></span>
+                            <span>Timezone is {{@isset($event)? $event['timezone'] : $user_timezone}}. Default duration is 1h. <a id="time_change">Change here.</a></span>
                          </div>
         		<div class="form-group" id="end_time_event" style="display:none" >
                         <label for="start">@lang('frontend.enddate')</label>
