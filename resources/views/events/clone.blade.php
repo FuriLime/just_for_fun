@@ -195,31 +195,69 @@
 </style>
 {{-- page level scripts --}}
 @section('footer_scripts')
-    <script type="text/javascript" src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>
-    <script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('assets/vendors/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
+    {{--<script type="text/javascript" src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>--}}
     <script src="{{ asset('assets/vendors/colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
-    {{--<script src="{{asset('assets/vendors/timepicker/js/bootstrap-timepicker.min.js')}}"></script>--}}
+    <script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/js/bootbox.js') }}"></script>
+    <script>
+        //        $(document).on("click", ".submit", function(e) {
+        //            event.preventDefault();
+        //            bootbox.confirm("Do you want to publish this event?", function(result) {
+        //                if (result == true) {
+        //                   $('#create_event').submit();
+        //                }
+        //            });
+        //        });
 
-    <script src="{{ asset('assets/vendors/maxlength/bootstrap-maxlength.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('assets/vendors/select2/select2.js') }}" type="text/javascript"></script>
+
+    </script>
+
+    <script type="text/javascript" src="{{ asset('assets/vendors/tags/dist/bootstrap-tagsinput.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/vendors/modal/js/classie.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/vendors/modal/js/modalEffects.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/vendors/switchery/switchery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/vendors/switch/js/bootstrap-switch.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/vendors/switchery/switchery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/vendors/switch/js/bootstrap-switch.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/frontend/advfeatures.js') }}"></script>
+
     <script type="text/javascript" src="{{ asset('assets/js/moment.js') }}"></script>
     <script src="{{ asset('assets/vendors/daterangepicker/moment.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/vendors/maxlength/bootstrap-maxlength.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/vendors/select2/select2.js') }}" type="text/javascript"></script>
     <script type="text/javascript" src="{{ asset('assets/js/date.format.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/jquery.maskedinput.min.js') }}"></script>
 
-
-
-    <script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
-
     <script>
         $(document).ready(function() {
+            @if (isset($event))
+            $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
+            $('#select2-timezone-container').text('{{$event->timezone}}');
             var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
             console.log($('#select2-timezone-container').val());
+            @endif
+
+            {{--if('{{$event}}'!= null){--}}
+            {{--$('#select2-timezone-container').attr('title', '{{$event->timezone}}');--}}
+            {{--$('#select2-timezone-container').text('{{$event->timezone}}');--}}
+            {{--var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');--}}
+            {{--console.log($('#select2-timezone-container').val());--}}
+            {{--}--}}
             $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
+            $('#test').on('change', function() {
+                console.log($('#test').prop("checked"));
+                if ($('#test').prop("checked")==true) {
+//                console.log($('#test').val())
+                    $('#test').val("1")
+                } else {
+//                console.log($('#test').val())
+                    $('#test').val("0")
+                }
+            });
             var nowtimedate = new Date();
             nowtimedate = nowtimedate.format('Y/m/d H:i');
             $("#datestart").datetimepicker({
+                onSelect: function() {alert('sdfsdfsdf')},
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
                 todayBtn: true,
@@ -229,6 +267,7 @@
                 minDate: nowtimedate
             });
             $("#datefinish").datetimepicker({
+                onSelect: function() {alert('sdfsdfsdf')},
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
                 todayBtn: true,
@@ -238,10 +277,6 @@
                 minuteStep: 10
 
             });
-
-
-            $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
-            $('#select2-timezone-container').text('{{$event->timezone}}');
         });
 
         $('#start').on('change', function() {
@@ -265,6 +300,7 @@
             }
             $("#datefinish").datetimepicker("remove");
             $("#datefinish").datetimepicker({
+                onSelect: function() {alert('sdfsdfsdf')},
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
                 todayBtn: true,
@@ -290,13 +326,39 @@
             }
         });
     </script>
+    <script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
     <script type="text/javascript">//<![CDATA[
+
+        $("#add_dicription").click(function () {
+            $('#descprip').attr('style', 'display:block');
+            $('#add_dicription').attr('style', 'display:none');
+            $('#hide_dicription').attr('style', 'display:block');
+        });
+
+        $("#hide_dicription").click(function () {
+            $('#descprip').attr('style', 'display:none');
+            $('#add_dicription').attr('style', 'display:block');
+            $('#hide_dicription').attr('style', 'display:none');
+        });
+
+        $('#time_change').click(function(){
+            $('#time_zone_change').attr('style', 'display:block');
+            $('#end_time_event').attr('style', 'display:block');
+            $('#change_time_zone').attr('style', 'display:none');
+            $('.select2-container--default').attr('style', 'width:70%');
+
+        });
+
         window.onload=function(){
             var autocomplete = new google.maps.places.Autocomplete(document.getElementById('location'), {
-                //componentRestrictions: {country: 'ru'}
-                //language: 'ru'
             });
         }//]]>
+        $('#reset_loc').click(function(){
+            $('.locale').attr('style', 'display:block');
+            $('.fields_map').attr('style', 'display:none');
+            $('#location').val('');
+
+        })
 
         // Get timezone of the place
         // 3 steps: get entered place, find it`s location (coordinates), find its timezone
@@ -365,6 +427,8 @@
                                 if($.isNumeric(splits[1])){
                                     street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                     $('#street').val(street);
+
+//                                street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                     sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
                                     $('#city').val(sity);
 
@@ -385,6 +449,9 @@
                                     country = splits[3];
                                     $('#country').val(country);
                                 }
+
+
+
                                 $('#country').attr('style', 'display:block');
                                 $('#state').attr('style', 'display:block');
                                 $('#city').attr('style', 'display:block');
@@ -525,29 +592,17 @@
         });
     </script>
 
-
     <script type="text/javascript">
         $('#timezone').select2();
+        //	$("#datestart").on("dp.change", function (e) {
+        //		$('#datefinish').data("DateTimePicker").minDate(e.date);
+        //	});
+        //	// run second calendar after closing of first
+        //	$("#datestart").on("dp.hide", function (e) {
+        //		$('#datefinish .glyphicon-calendar').click();
+        //	});
 
-        // select event timezone
-        $('#timezone option[value="{{$event->timezone}}"]').attr('selected','selected');
 
-        // select event status
-        $('#active option[value="{{$event->active}}"]').attr('selected','selected');
-
-        // http://eonasdan.github.io/bootstrap-datetimepicker/Options/#locale
-        $("#datestart").on("dp.change", function (e) {
-            $('#datefinish').data("DateTimePicker").minDate(e.date);
-        });
-        // run second calendar after closing of first
-        $("#datestart").on("dp.hide", function (e) {
-            $('#datefinish .glyphicon-calendar').click();
-        });
-        /*
-         $("#datefinish").on("dp.change", function (e) {
-         $('#datestart').data("DateTimePicker").maxDate(e.date);
-         });
-         */
 
         $('input#title').maxlength({
             //alwaysShow: true,
@@ -560,7 +615,7 @@
             validate: true
         });
         $('textarea#description').maxlength({
-            threshold: 80,
+            threshold: 500,
             warningClass: "label label-success",
             limitReachedClass: "label label-danger",
             preText: '@lang('frontend.you_typed') ',
@@ -577,5 +632,6 @@
             postText: ' @lang('frontend.chars')',
             validate: true
         });
+
     </script>
 @stop
