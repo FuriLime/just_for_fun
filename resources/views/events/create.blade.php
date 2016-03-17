@@ -219,14 +219,14 @@ Create New event
      <script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
       <script src="{{ asset('assets/js/bootbox.js') }}"></script>
     <script>
-        $(document).on("click", ".submit", function(e) {
-            event.preventDefault();
-            bootbox.confirm("Do you want to publish this event?", function(result) {
-                if (result == true) {
-                   $('#create_event').submit();
-                }
-            });
-        });
+//        $(document).on("click", ".submit", function(e) {
+//            event.preventDefault();
+//            bootbox.confirm("Do you want to publish this event?", function(result) {
+//                if (result == true) {
+//                   $('#create_event').submit();
+//                }
+//            });
+//        });
     </script>
 
     <script type="text/javascript" src="{{ asset('assets/vendors/tags/dist/bootstrap-tagsinput.js') }}"></script>
