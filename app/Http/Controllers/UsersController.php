@@ -751,7 +751,7 @@ class UsersController extends JoshController
                 // Prepare the error message
                 $data = array(
                     'user'          => $user,
-                    'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
+                    'activationUrl' => URL::route('home'),
                 );
                 User::destroy($id);
                 Mail::send('emails.register-activate', $data, function ($m) use ($user) {
