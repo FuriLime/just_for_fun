@@ -526,6 +526,7 @@ class UsersController extends JoshController
             // have and the groups the user wish to have.
             $rolesToAdd    = array_diff($selectedRoles, $userRoles);
             $rolesToRemove = array_diff($userRoles, $selectedRoles);
+            dd($user);
             $acc_id = $user->accounts()->first()->id;
 
             // Remove the user from groups
@@ -549,7 +550,7 @@ class UsersController extends JoshController
                 $role->users()->attach($rolew);
 //                $role->users()->attach();
             }
-            dd($user);
+
             $mc->post("lists/$listId/members/", [
                 'email_address' => $user->email,
                 'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
