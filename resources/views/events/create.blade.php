@@ -49,7 +49,7 @@
 
 
                     @if (isset($event))
-                        {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@update', $event->uuid]]) !!}
+                        {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@update', $event->uuid], 'id'=>'edit_event']) !!}
                     @else
                          {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
                          {{--<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }} " />--}}
@@ -232,14 +232,14 @@
      <script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
       <script src="{{ asset('assets/js/bootbox.js') }}"></script>
     <script>
-//        $(document).on("click", ".submit", function(e) {
-//            event.preventDefault();
-//            bootbox.confirm("Do you want to publish this event?", function(result) {
-//                if (result == true) {
-//                   $('#create_event').submit();
-//                }
-//            });
-//        });
+        $(document).on("click", ".submit", function(e) {
+            event.preventDefault();
+            bootbox.confirm("Do you want to publish this event?", function(result) {
+                if (result == true) {
+                   $('#create_event').submit();
+                }
+            });
+        });
 
 
     </script>
