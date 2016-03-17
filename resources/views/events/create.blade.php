@@ -253,7 +253,9 @@
 
     <script>
     $(document).ready(function() {
-console.log('{{$event}}'.length);
+        @if (isset($event)){
+
+        }
 
         {{--if('{{$event}}'!= null){--}}
             {{--$('#select2-timezone-container').attr('title', '{{$event->timezone}}');--}}
