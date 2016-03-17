@@ -149,11 +149,11 @@
                             </div>
 
                             <div class="form-group fields_loc">
-                                {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}
+                                <input class="form-control" size="16" id="state" name="State" type="State", maxlength="255" value="{{$event['State']}}">
                             </div>
 
                             <div class="form-group fields_loc">
-                                {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}
+                                <input class="form-control" size="16" id="country" name="Country" type="Country", maxlength="255" value="{{$event['Country']}}">
                             </div>
                             <div class="form-group fields_loc">
                                 <a id="reset_loc">Reset Address</a>
