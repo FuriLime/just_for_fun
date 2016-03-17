@@ -108,13 +108,20 @@ class EventsController extends Controller {
                 $user_timezone = $my_time_zone;
             }
             $duration = strtotime($finish_date) - strtotime($start_date);
-            if ($duration >= 3600 && $duration < 86400){
+
+            if ($duration>= 3600 && $duration < 86400){
                 $duration_time=floor($duration/3600);
 
-            } else{
+            }
+            else if ($duration >= 86400 && $duration < 2592000) {
+                $duration_time=floor($duration/86400);
+//                $duration_time=floor($duration%86400);
+
+            }else{
                 $duration_time = 1;
             }
-            return view('events.create', array(
+
+                 return view('events.create', array(
                 'timezone_select' => $timezone_select,
                 'start_date' => $start_date,
                 'finish_date' => $finish_date,
@@ -308,7 +315,6 @@ class EventsController extends Controller {
 
         }
         else if ($event['duration'] >= 86400 && $event['duration'] < 2592000) {
-            // разница меньше месяца => ...дней назад
             $event['duration_day']=floor($event['duration']/86400);
             $event['duration_time']=floor($event['duration_day']%86400);
 
