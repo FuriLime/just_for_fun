@@ -391,10 +391,10 @@ class EventsController extends Controller {
         $event['title'] = $store_info['title'];
         if(Sentinel::check()){
             $userId = Sentinel::getUser()->id;
-            dd($userId);
             $user = User::find($userId);
             $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
             $event['account_id'] = $eventold['account_id'];
+            dd($event['account_id']);
             $event['author_id'] = $eventold['author_id'];
             $event['editor_id'] = $eventold['editor_id'];
         }else {
