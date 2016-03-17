@@ -47,6 +47,7 @@
                          {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
                          {{--<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }} " />--}}
                     @endif
+                    @endif
                     <div class="form-group">
                         <label for="title">@lang('frontend.title')</label>
                         {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}
