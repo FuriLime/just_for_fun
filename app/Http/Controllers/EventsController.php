@@ -301,7 +301,7 @@ class EventsController extends Controller {
         $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
-        $event['duration'] = ((strtotime($event['finish']) - strtotime($event['start']))/86400)/30;
+        $event['duration'] = strtotime($event['finish']) - strtotime($event['start']);
 
         if ($event['duration'] >= 3600 && $event['duration'] < 86400){
             $event['duration_time']=floor($event['duration']/3600);
