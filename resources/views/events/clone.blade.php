@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Clone an event
+    @lang('frontend.add_event_header')
     @parent
 @stop
 
@@ -29,7 +29,7 @@
                 <div class="panel panel-primary ">
                     <div class="panel-heading">
                         <h4 class="panel-title"> <i class="livicon" data-name="edit" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-                            Clone an Event
+                            @lang('frontend.clone_event_header')
                         </h4>
                     </div>
                     <div class="panel-body">
@@ -40,6 +40,7 @@
                                 {{--@endforeach--}}
                             {{--</ul>--}}
                         {{--@endif--}}
+                        <h3 class="primary add_event_section_link">@lang('frontend.clone_event_text')</h3>
 
                         {!! Form::open() !!}
                         <div class="form-group">
