@@ -373,7 +373,7 @@ class UsersController extends JoshController
             $account_profile->account_id = $account_user->id;
             $account_profile->save();
             $userRoles = $user->roles()->lists('id')->all();
-
+            dd($userRoles);
             // Get the selected groups
             $selectedRoles = Input::get('groups', array());
             // Groups comparison between the groups the user currently
@@ -389,7 +389,7 @@ class UsersController extends JoshController
                 $rolew = [
                     0 => ['user_id' => $user->id, 'account_id' => $account_user->id],
                 ];
-                dd($rolew);
+
                 $role->users()->attach($rolew);
 //                $role->users()->attach();
             }
