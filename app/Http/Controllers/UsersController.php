@@ -549,7 +549,7 @@ class UsersController extends JoshController
                 $role->users()->attach($rolew);
 //                $role->users()->attach();
             }
-
+            dd($user);
             $mc->post("lists/$listId/members/", [
                 'email_address' => $user->email,
                 'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
@@ -593,7 +593,7 @@ class UsersController extends JoshController
             // Was the user updated?
             if ($user->save() && $user_profile->save()) {
 
-dd($user);
+
 
                 // Prepare the success message
                 $success = Lang::get('users/message.success.update');
