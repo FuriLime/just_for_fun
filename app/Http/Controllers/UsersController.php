@@ -15,6 +15,7 @@ use App\Account;
 use App\User;
 use App\UserProfile;
 use App\AccountProfile;
+//use App\Activation;
 use App\Role;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Hash;
@@ -749,16 +750,8 @@ class UsersController extends JoshController
             // Check if we are not trying to delete ourselves
             if ($user->id === Sentinel::getUser()->id) {
                 // Prepare the error message
-                $data = array(
-                    'user'          => $user,
-                    'activationUrl' => URL::route('home'),
-                );
-                User::destroy($id);
-                Mail::send('emails.register-activate', $data, function ($m) use ($user) {
-                        $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-                        $m->subject('Welcome ' . $user->first_name);
-                    });
-                // Prepare the success message
+               User::destroy($id);
+                             // Prepare the success message
                 $success = Lang::get('users/message.success.delete');
                 return Redirect::route('home')->with('success', $success);
             }
@@ -799,7 +792,7 @@ class UsersController extends JoshController
 
             // Prepare the success message
             $success = Lang::get('users/message.success.restored');
-
+$user->activate();
             // Redirect to the user management page
             return Redirect::route('deleted_users')->with('success', $success);
         } catch (UserNotFoundException $e) {
