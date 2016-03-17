@@ -747,13 +747,14 @@ class UsersController extends JoshController
             $user = Sentinel::findById($id);
 
             // Check if we are not trying to delete ourselves
-//            if ($user->id === Sentinel::getUser()->id) {
-//                // Prepare the error message
-//                $error = Lang::get('admin/users/message.error.delete');
-//
-//                // Redirect to the user management page
-//                return Redirect::route('users')->with('error', $error);
-//            }
+            if ($user->id === Sentinel::getUser()->id) {
+                // Prepare the error message
+                User::destroy($id);
+
+                // Prepare the success message
+                $success = Lang::get('users/message.success.delete');
+                return Redirect::route('users')->with('success', $success);
+            }
 
             // Delete the user
             //to allow soft deleted, we are performing query on users model instead of Sentinel model
