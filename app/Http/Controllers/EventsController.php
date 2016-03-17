@@ -107,8 +107,8 @@ class EventsController extends Controller {
             } else{
                 $user_timezone = $my_time_zone;
             }
-            $duration = (strtotime($finish_date) - strtotime($start_date))/360;
-//            dd($duration);
+            $duration = (strtotime($finish_date) - strtotime($start_date))/3600;
+            dd($duration);
             return view('events.create', array(
                 'timezone_select' => $timezone_select,
                 'start_date' => $start_date,
