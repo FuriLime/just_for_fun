@@ -2,7 +2,11 @@
 
 {{-- Page title --}}
 @section('title')
-Create New event
+    @if (isset($event))
+        Edit an Event
+    @else
+        Create an Event
+    @endif
 @parent
 @stop
 
