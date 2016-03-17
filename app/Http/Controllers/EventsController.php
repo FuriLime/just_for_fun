@@ -111,6 +111,7 @@ class EventsController extends Controller {
 
             //hours
             if ($duration>= 3600 && $duration < 86400){
+                $duration_day = 0 .'h';
                 $duration_time=floor($duration/3600).'h';
 
             }
