@@ -120,7 +120,8 @@ class EventsController extends Controller {
                 $duration_time=floor($duration/86400).'d';
 
             }else{
-                $duration_time = 1;
+                $duration_day = 0 .'d';
+                $duration_time = 1 .'h';
             }
 
                  return view('events.create', array(
@@ -129,7 +130,7 @@ class EventsController extends Controller {
                 'finish_date' => $finish_date,
                 'user_timezone' => $user_timezone,
                 'duration_time' => $duration_time,
-//                'duration_day' => $duration_day,
+                'duration_day' => $duration_day,
             ));
 //      }
         } else {
