@@ -257,7 +257,13 @@
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
         $('#select2-timezone-container').text('{{$event->timezone}}');
         var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
-        console.log($('#select2-timezone-container').val());
+        $('#timezone option[value="{{$event->timezone}}"]').attr('selected','selected');
+
+        // select event status
+        $('#active option[value="{{$event->active}}"]').attr('selected','selected');
+
+        // http://eonasdan.github.io/bootstrap-datetimepicker/Options/#locale
+
         @endif
 
         {{--if('{{$event}}'!= null){--}}
@@ -625,7 +631,9 @@ if($('#location').val()) {
 //		$('#datefinish .glyphicon-calendar').click();
 //	});
 
-
+    $("#datestart").on("dp.change", function (e) {
+        $('#datefinish').data("DateTimePicker").minDate(e.date);
+    });
 
 	$('input#title').maxlength({
 		//alwaysShow: true,
