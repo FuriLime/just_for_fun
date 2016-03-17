@@ -133,7 +133,8 @@
 
                         <div class="form-group locale">
                             <label for="location">@lang('frontend.location')</label>
-                            {!! Form::text('location', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'location']) !!}
+                            <input class="form-control" size="16" id="location" name="location" type="location", maxlength="255" value="{{$event['location']}}">
+                            {{--{!! Form::text('location', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'location']) !!}--}}
                             <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         </div>
 
