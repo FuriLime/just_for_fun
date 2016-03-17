@@ -108,7 +108,6 @@ class EventsController extends Controller {
                 $user_timezone = $my_time_zone;
             }
             $duration = strtotime($finish_date) - strtotime($start_date);
-dd($duration);
             //hours
             if ($duration>= 3600 && $duration < 86400){
                 $duration_day = 0 .'d';
