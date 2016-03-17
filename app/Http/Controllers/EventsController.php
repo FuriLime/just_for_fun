@@ -397,7 +397,6 @@ class EventsController extends Controller {
             $event['author_id'] = $userId;
             $event['editor_id'] = $userId;
         }else {
-
             $event['account_id'] = $eventold['account_id'];
             $event['author_id'] = $eventold['author_id'];
             $event['editor_id'] = $eventold['editor_id'];
