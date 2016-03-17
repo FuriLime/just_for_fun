@@ -34,9 +34,13 @@ Create New event
                 </div>
                 <div class="panel-body">
 					<h3 class="primary add_event_section_link">@lang('frontend.add_event_text')</h3>
+
+                    @if (isset($event))
+                        {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@update', $event->uuid]]) !!}
+                    @else
                          {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
                          {{--<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }} " />--}}
-
+                    @endif
                     <div class="form-group">
                         <label for="title">@lang('frontend.title')</label>
                         {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}
