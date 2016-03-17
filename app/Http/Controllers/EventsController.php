@@ -394,9 +394,8 @@ class EventsController extends Controller {
             $user = User::find($userId);
             $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
             $event['account_id'] = $eventold['account_id'];
-            dd($event['account_id']);
-            $event['author_id'] = $eventold['author_id'];
-            $event['editor_id'] = $eventold['editor_id'];
+            $event['author_id'] = $userId;
+            $event['editor_id'] = $userId;
         }else {
 
             $event['account_id'] = $eventold['account_id'];
