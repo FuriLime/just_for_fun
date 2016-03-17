@@ -232,7 +232,6 @@ class EventsController extends Controller {
             return redirect('confirm');
         }
     }
-
     /**
      * Display the specified resource.
      *
