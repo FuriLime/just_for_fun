@@ -526,7 +526,7 @@ class UsersController extends JoshController
             // have and the groups the user wish to have.
             $rolesToAdd    = array_diff($selectedRoles, $userRoles);
             $rolesToRemove = array_diff($userRoles, $selectedRoles);
-//            dd($user);
+            dd($user->accounts()->first()->id);
             $acc_id = $user->accounts()->first()->id;
 
             // Remove the user from groups
