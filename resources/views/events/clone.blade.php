@@ -48,26 +48,26 @@
                             <input class="tinymce_basic form-control" size="16" id="title" name="title" type="text", maxlength="80" value="{{$event['title']}}">
                         </div>
 
-                        <div class="form-group">
-                            <label for="type">@lang('frontend.type')</label>
-                            <div class="form-control radio-group">
-                                <input type="radio" value="1" name="type" id="type_1"
-                                @if ($event->type == "1")
-                                       checked
-                                        @endif
-                                        ><label for="type_1">@lang('frontend.online')</label>
-                                <input type="radio" value="2" name="type" id="type_2"
-                                @if ($event->type == "2")
-                                       checked
-                                        @endif
-                                        ><label for="type_2">@lang('frontend.offline')</label>
-                                <input type="radio" value="3" name="type" id="type_3"
-                                @if ($event->type == "3")
-                                       checked
-                                        @endif
-                                        ><label for="type_3">@lang('frontend.online_and_offline')</label>
-                            </div>
-                        </div>
+                        {{--<div class="form-group">--}}
+                            {{--<label for="type">@lang('frontend.type')</label>--}}
+                            {{--<div class="form-control radio-group">--}}
+                                {{--<input type="radio" value="1" name="type" id="type_1"--}}
+                                {{--@if ($event->type == "1")--}}
+                                       {{--checked--}}
+                                        {{--@endif--}}
+                                        {{--><label for="type_1">@lang('frontend.online')</label>--}}
+                                {{--<input type="radio" value="2" name="type" id="type_2"--}}
+                                {{--@if ($event->type == "2")--}}
+                                       {{--checked--}}
+                                        {{--@endif--}}
+                                        {{--><label for="type_2">@lang('frontend.offline')</label>--}}
+                                {{--<input type="radio" value="3" name="type" id="type_3"--}}
+                                {{--@if ($event->type == "3")--}}
+                                       {{--checked--}}
+                                        {{--@endif--}}
+                                        {{--><label for="type_3">@lang('frontend.online_and_offline')</label>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
                         <div class="form-group">
                             <label for="description">@lang('frontend.description')</label>
