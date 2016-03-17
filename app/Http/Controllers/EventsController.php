@@ -594,6 +594,7 @@ class EventsController extends Controller {
     public static function getTimeZoneSelect($uuid)
     {
         $event = Event::whereUuid($uuid)->first();
+        dd($event);
         $regions = array(
             'Africa' => \DateTimeZone::AFRICA,
             'America' => \DateTimeZone::AMERICA,
