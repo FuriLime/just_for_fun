@@ -123,13 +123,14 @@ class EventsController extends Controller {
             }
             //days
             else if ($duration >= 86400 && $duration < 2592000) {
-                $duration_day=floor($duration/86400);
                 if($duration%86400==0){
-                    $duration_day=floor($duration/86400).'d';
-                    $duration_time= 0 .'h';
-                }else{
-                    $duration_day=floor($duration/86400) .'d';
-                    $duration_time=$duration_day /3600 ;
+                    $duration_day= ($duration / 86400 ) % 30 .'d';
+                    $duration_hour=0 .'h';
+                    $duration_min=0 .'m';
+                }else {
+                    $duration_day=($duration / 86400 ) % 30 .'d';
+                    $duration_hour=( $duration / 3600 ) % 24 .'h';
+                    $duration_min=( $duration/ 60 ) % 60 .'m';
                 }
 
 
