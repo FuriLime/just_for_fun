@@ -28,7 +28,7 @@
             <div class="col-md-10" id="add_event">
                 <div class="panel panel-primary ">
                     <div class="panel-heading">
-                        <h4 class="panel-title"> <i class="livicon" data-name="edit" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
+                        <h4 class="panel-title"> <i class="livicon" data-name="clone" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
                             @lang('frontend.clone_event_header')
                         </h4>
                     </div>
