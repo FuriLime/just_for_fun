@@ -62,7 +62,7 @@ Route::group(array('prefix' => 'admin'), function () {
 	Route::get('/', array('as' => 'dashboard','uses' => 'JoshController@showHome'));
 
             # User Management
-            Route::group(array('prefix' => 'users', 'before' => 'Sentinel'), function () {
+            Route::group(array('prefix' => 'users/{userId}', 'before' => 'Sentinel'), function () {
                 Route::get('/', array('as' => 'users', 'uses' => 'UsersController@getIndex'));
                 Route::get('create', array('as' => 'create/user', 'uses' => 'UsersController@getCreate'));
                 Route::post('create', 'UsersController@postCreate');
