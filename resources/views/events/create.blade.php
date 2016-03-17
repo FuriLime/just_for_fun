@@ -41,9 +41,12 @@
 
                     @if (isset($event))
                         {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@update', $event->uuid]]) !!}
-                     @else
+                    @if((isset($event)))
+                            {!! Form::model($event, ['method' => 'POST', 'action' => ['EventsController@clonne', $event->uuid]]) !!}
+                        @else
                          {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
                          {{--<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }} " />--}}
+                    @endif
                     @endif
                     <div class="form-group">
                         <label for="title">@lang('frontend.title')</label>
@@ -102,7 +105,7 @@
                          <div class="form-group add_event_section_link" id="change_time_zone">
                             <span>Timezone is {{@isset($event)? $event['timezone'] : $user_timezone}}. Default duration is 1h. <a id="time_change">Change here.</a></span>
                          </div>
-        		<div class="form-group" id="end_time_event" >
+        		<div class="form-group" id="end_time_event" style="display:none" >
                         <label for="start">@lang('frontend.enddate')</label>
 						 <div class="form-group form_datetime">
                                         <div class="input-group date form_datetime3 col-md-12" id="datefinish">
@@ -125,9 +128,10 @@
                     </div>
 
 
-                    <div class="form-group">
-                        <label for="timezone">@lang('frontend.timezone')</label>
-                        {!! $event->timezone_select !!}
+                    <div class="form-group"  id="time_zone_change" style="display:none">
+                             <label for="timezone">@lang('frontend.timezone')</label>
+                             {!!@isset($event)?  $event->timezone_select : $timezone_select !!}
+                             <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
 
                     {{--<input type="hidden" value="1" name="active" id="active" readonly>--}}
@@ -256,7 +260,7 @@
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
         $('#select2-timezone-container').text('{{$event->timezone}}');
         var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
-        console.log('{!!$event->timezone!!}');
+        console.log($('#select2-timezone-container').val());
         @endif
 
         {{--if('{{$event}}'!= null){--}}
