@@ -309,7 +309,9 @@ class EventsController extends Controller {
         }
         else if ($event['duration'] >= 86400 && $event['duration'] < 2592000) {
             // разница меньше месяца => ...дней назад
-            $event['duration_time']=floor($event['duration']/86400);
+            $event['duration_day']=floor($event['duration']/86400);
+            $event['duration_time']=floor($event['duration']%86400);
+
         }else{
             $event['duration_time'] = 1;
         }
