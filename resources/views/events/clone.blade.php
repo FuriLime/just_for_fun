@@ -181,8 +181,6 @@
                         </div>
                         {!! Form::close() !!}
 
-                        <div id="map" style="display: none;"></div>
-
                     </div>
                 </div>
             </div>
