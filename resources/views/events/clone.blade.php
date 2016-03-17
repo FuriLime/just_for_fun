@@ -190,8 +190,24 @@
 @stop
 
 <style>
+    .fa{
+        font-size:20px !important;
+    }
+    .map_event_loc{
+        height: 250px;
+        width: 370px;
+        float: right;
+        left: -5%;
+    }
     .fields_loc{
-        display: none;
+        width: 35% !important;
+        position: relative;
+        float: right;
+    }
+    .myalert{
+        width: 70%;
+        float: right;
+        margin-right: 50px;
     }
 </style>
 {{-- page level scripts --}}
