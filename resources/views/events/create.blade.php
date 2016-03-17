@@ -69,12 +69,12 @@
 
                     </div>
 
-                    <div class="form-group add_event_section_link" id="add_dicription" {{@isset($event)}} ? style="display:none" : style="display:block">
+                    <div class="form-group add_event_section_link" id="add_dicription">
                         <i class="fa fa-fw fa-comment"></i>
                         <a >Add Description</a>
                     </div>
 
-					<div class="form-group" id="descprip" {{@isset($event)}} ? style="display:block" : style="display:none">
+					<div class="form-group" id="descprip" style="display: none">
                         <label for="description">@lang('frontend.description')</label>
 
 						{!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}
@@ -108,10 +108,10 @@
                     </div>
 
 
-                         <div class="form-group add_event_section_link" id="change_time_zone" {{@isset($event)}} ? style="display:none" : style="display:block">
+                         <div class="form-group add_event_section_link" id="change_time_zone">
                             <span>Timezone is {{@isset($event)? $event['timezone'] : $user_timezone}}. Default duration is 1h. <a id="time_change">Change here.</a></span>
                          </div>
-        		<div class="form-group" id="end_time_event" {{@isset($event)}} ? style="display:block" : style="display:none">
+        		<div class="form-group" id="end_time_event" style="display:none" >
                         <label for="start">@lang('frontend.enddate')</label>
 						 <div class="form-group form_datetime">
                                         <div class="input-group date form_datetime3 col-md-12" id="datefinish">
@@ -134,7 +134,7 @@
                     </div>
 
 
-                    <div class="form-group"  id="time_zone_change" {{@isset($event)}} ? style="display:block" : style="display:none">
+                    <div class="form-group"  id="time_zone_change" style="display:none">
                              <label for="timezone">@lang('frontend.timezone')</label>
                              {!!@isset($event)?  $event->timezone_select : $timezone_select !!}
                              <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
