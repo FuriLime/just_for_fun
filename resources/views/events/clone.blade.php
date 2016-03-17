@@ -83,22 +83,22 @@
 
                         <div class="form-group fields_loc">
 {{--                            {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street','readonly']) !!}--}}
-                            <input class="form-control" size="16" id="Street" name="Street" type="Street", maxlength="255" value="{{$event['Street']}}">
+                            <input class="form-control" size="16" id="street" name="Street" type="Street", maxlength="255" value="{{$event['Street']}}">
                         </div>
 
                         <div class="form-group fields_loc">
                             {{--{!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city','readonly']) !!}--}}
-                            <input class="form-control" size="16" id="City" name="City" type="City", maxlength="255" value="{{$event['City']}}">
+                            <input class="form-control" size="16" id="city" name="City" type="City", maxlength="255" value="{{$event['City']}}">
                         </div>
 
                         <div class="form-group fields_loc">
 {{--                            {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}--}}
-                            <input class="form-control" size="16" id="State" name="State" type="State", maxlength="255" value="{{$event['State']}}">
+                            <input class="form-control" size="16" id="state" name="State" type="State", maxlength="255" value="{{$event['State']}}">
                         </div>
 
                         <div class="form-group fields_loc">
 {{--                            {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}--}}
-                            <input class="form-control" size="16" id="Country" name="Country" type="Country", maxlength="255" value="{{$event['Country']}}">
+                            <input class="form-control" size="16" id="country" name="Country" type="Country", maxlength="255" value="{{$event['Country']}}">
                         </div>
                         <div class="form-group">
                             <label for="event_url">@lang('frontend.url')</label>
@@ -376,9 +376,6 @@
                                     country = splits[3];
                                     $('#country').val(country);
                                 }
-
-
-
                                 $('#country').attr('style', 'display:block');
                                 $('#state').attr('style', 'display:block');
                                 $('#city').attr('style', 'display:block');
