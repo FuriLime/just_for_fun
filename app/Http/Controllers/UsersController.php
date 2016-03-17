@@ -348,7 +348,7 @@ class UsersController extends JoshController
 
         try {
             // Register the user
-            $user = Sentinel::register(array(
+            $user = Sentinel::registerAndActivate(array(
                 'first_name' => Input::get('first_name'),
                 'last_name'  => Input::get('last_name'),
                 'email'      => Input::get('email'),
@@ -362,7 +362,7 @@ class UsersController extends JoshController
                 'city'   => Input::get('city'),
                 'address'   => Input::get('address'),
                 'postal'   => Input::get('postal'),
-            ),$activate);
+            ));
 
             $account_user = new Account();
             $account_user->	account_type_id = '1';
