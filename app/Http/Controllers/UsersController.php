@@ -379,7 +379,7 @@ class UsersController extends JoshController
             // Groups comparison between the groups the user currently
             // have and the groups the user wish to have.
             $rolesToAdd    = array_diff($selectedRoles, $userRoles);
-            $acc_id = $user->accounts()->first()->id;
+//            $acc_id = $user->accounts()->first()->id;
 
             // Assign the user to groups
             foreach ($rolesToAdd as $roleId) {
