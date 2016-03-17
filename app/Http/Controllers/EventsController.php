@@ -321,7 +321,6 @@ class EventsController extends Controller {
         $store_info = $request->all();
         $event = Event::whereUuid($uuid)->first();
         $event['title'] = $store_info['title'];
-        $event['type'] = $store_info['type'];
         $event['description'] = $store_info['description'];
         $event['location'] = $store_info['location'];
         $event['event_url'] = $store_info['event_url'];
