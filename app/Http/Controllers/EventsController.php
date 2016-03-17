@@ -109,27 +109,29 @@ class EventsController extends Controller {
             }
             $duration = strtotime($finish_date) - strtotime($start_date);
             //hours
-            if ($duration>= 3600 && $duration < 86400){
-                $duration_day = 0 .'d';
-                $duration_time=floor($duration/3600).'h';
+//            if ($duration>= 3600 && $duration < 86400){
+//                $duration_day = 0 .'d';
+//                $duration_time=floor($duration/3600).'h';
+//
+//            }
+//            //days
+//            else if ($duration >= 86400 && $duration < 2592000) {
+//                $duration_day=floor($duration/86400);
+//                if($duration%86400==0){
+//                    $duration_day=floor($duration/86400).'d';
+//                    $duration_time= 0 .'h';
+//                }else{
+//                    $duration_day=floor($duration/86400) .'d';
+//                    $duration_time=$duration_day /3600 ;
+//                }
+//
+//
+//            }else{
+//                $duration_day = 0 .'d';
+//                $duration_time = 0 .'h';
+//            }
 
-            }
-            //days
-            else if ($duration >= 86400 && $duration < 2592000) {
-                $duration_day=floor($duration/86400);
-                if($duration%86400==0){
-                    $duration_day=floor($duration/86400).'d';
-                    $duration_time= 0 .'h';
-                }else{
-                    $duration_day=floor($duration/86400) .'d';
-                    $duration_time=$duration_day /3600 ;
-                }
-
-
-            }else{
-                $duration_day = 0 .'d';
-                $duration_time = 0 .'h';
-            }
+            $duration_time=floor($duration/3600).'h';
 
                  return view('events.create', array(
                 'timezone_select' => $timezone_select,
@@ -137,7 +139,7 @@ class EventsController extends Controller {
                 'finish_date' => $finish_date,
                 'user_timezone' => $user_timezone,
                 'duration_time' => $duration_time,
-                'duration_day' => $duration_day,
+//                'duration_day' => $duration_day,
             ));
 //      }
         } else {
