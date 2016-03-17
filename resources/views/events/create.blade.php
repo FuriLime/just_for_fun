@@ -259,7 +259,7 @@
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
         $('#select2-timezone-container').text('{{$event->timezone}}');
         var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
-        console.log($('#select2-timezone-container').val());
+//        console.log($('#select2-timezone-container').val());
         @endif
 
         {{--if('{{$event}}'!= null){--}}
