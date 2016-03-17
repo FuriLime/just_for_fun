@@ -82,7 +82,7 @@ Create New event
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
-                                <input class="form-control" size="16" id="start" name="start" type="datetime" value="{{$start_date}}">
+                                <input class="form-control" size="16" id="start" name="start" type="datetime" value="{{@isset($user)? $event['start'] : $start_date}}">
 
                             </div>
                             @if ($errors->first('start'))
@@ -108,7 +108,7 @@ Create New event
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-th"></span>
                                             </span>
-                                            <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{$finish_date}}">
+                                            <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{@isset($event)? $event['finish'] : $finish_date}}">
 
                                         </div>
                              @if ($errors->first('finish'))
