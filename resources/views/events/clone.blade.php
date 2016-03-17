@@ -29,7 +29,7 @@
                 <div class="panel panel-primary ">
                     <div class="panel-heading">
                         <h4 class="panel-title"> <i class="livicon" data-name="edit" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-                            Edit event
+                            Clone an Event
                         </h4>
                     </div>
                     <div class="panel-body">
