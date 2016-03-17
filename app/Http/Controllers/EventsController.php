@@ -401,8 +401,8 @@ class EventsController extends Controller {
 //            $event['author_id'] = $eventold['author_id'];
 //            $event['editor_id'] = $eventold['editor_id'];
 //        }
-        $event['permanent_url'] = Uuid::uuid4();
-        $event['readable_url'] = Uuid::uuid4();
+        $event['permanent_url'] = $eventold['author_id'];
+        $event['readable_url'] = $eventold['author_id'];
         $event['description'] = $store_info['description'];
         $event['location'] = $store_info['location'];
 //        $event['event_url'] = $store_info['event_url'];
