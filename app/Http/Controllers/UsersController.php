@@ -1,5 +1,5 @@
 <?php namespace App\Http\Controllers;
-use App\Account;
+
 use Sentinel;
 use View;
 use Validator;
@@ -11,11 +11,15 @@ use URL;
 use Mail;
 use File;
 use Config;
+use App\Account;
 use App\User;
+use App\UserProfile;
+use App\AccountProfile;
+use App\Role;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Hash;
 use Mailchimp\Mailchimp;
-use App\Role;
+
 class UsersController extends JoshController
 {
     protected $countries = array(
