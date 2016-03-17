@@ -109,13 +109,15 @@ class EventsController extends Controller {
             }
             $duration = strtotime($finish_date) - strtotime($start_date);
 
+            //hours
             if ($duration>= 3600 && $duration < 86400){
                 $duration_time=floor($duration/3600);
 
             }
+            //days
             else if ($duration >= 86400 && $duration < 2592000) {
-                $duration_time=floor($duration/86400);
-//                $duration_time=floor($duration%86400);
+                $duration_day=floor($duration/86400);
+                $duration_time=floor($duration%86400);
 
             }else{
                 $duration_time = 1;
@@ -126,7 +128,8 @@ class EventsController extends Controller {
                 'start_date' => $start_date,
                 'finish_date' => $finish_date,
                 'user_timezone' => $user_timezone,
-                'duration' => $duration_time,
+                'duration_time' => $duration_time,
+                'duration_day' => $duration_day,
             ));
 //      }
         } else {
