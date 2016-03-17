@@ -154,7 +154,7 @@
                             </div>
 
                             <div class="form-group fields_loc">
-                                <input class="form-control" size="16" id="country" name="Country" type="Country", readonly, maxlength="255", value="{{$event['Country']}}">
+                                <input class="form-control" size="16" id="country" name="Country" type="Country", readonly="readonly", maxlength="255", value="{{$event['Country']}}">
                             </div>
                             <div class="form-group fields_loc">
                                 <a id="reset_loc">Reset Address</a>
