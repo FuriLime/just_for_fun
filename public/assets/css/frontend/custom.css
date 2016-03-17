@@ -981,6 +981,11 @@ footer .btn-primary.text-white {
 .add_event_section_link#hide_dicription {
     margin-bottom: 12px;
 }
+#add_event .form_datetime + i{
+        margin-top: 9px;
+        display: block;
+        float: right;
+    }
 @media(max-width:600px){
     #add_event label {
         width:auto;
@@ -992,4 +997,5 @@ footer .btn-primary.text-white {
     #add_event .form_datetime{
         margin-bottom: 0;
     }
+    
 }
