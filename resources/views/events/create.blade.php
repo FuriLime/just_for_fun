@@ -69,19 +69,19 @@
 
                     </div>
 
-                    <div class="form-group add_event_section_link" id="add_dicription">
+                    <div class="form-group add_event_section_link" id="add_dicription" {{@isset($event)}} ? style="display:none" : style="display:block">
                         <i class="fa fa-fw fa-comment"></i>
                         <a >Add Description</a>
                     </div>
 
-					<div class="form-group" id="descprip" style="display: none">
+					<div class="form-group" id="descprip" {{@isset($event)}} ? style="display:block" : style="display:none">
                         <label for="description">@lang('frontend.description')</label>
 
 						{!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}
                         <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         {{--<button type="button" class="btn btn-warning " title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title">!</button>--}}
                     </div>
-                         <div id="hide_dicription" class="add_event_section_link" {{@isset($event)}} ? style="display:block" : style="display:none">
+                         <div id="hide_dicription" class="add_event_section_link" style="display: none">
                             <i class="fa fa-fw fa-stop"></i>
                             <a class="show_hide" >Hide Description</a>
                          </div>
