@@ -556,18 +556,31 @@
                                 }
 
                                 if (splits.length >= 4) {
-                                    num_house = splits[0];
-                                    street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                                    $('#street').val(num_house + ' ' + street);
+                                    if($.isNumeric(splits[1])){
+                                        street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
+                                        $('#street').val(street);
 
-                                    sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
-                                    $('#city').val(sity);
+//                                street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
+                                        sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
+                                        $('#city').val(sity);
 
-                                    state = splits[3].replace(/(^\s*)|(\s*)$/g, '');
-                                    $('#state').val(state);
+                                        state = splits[3].replace(/(^\s*)|(\s*)$/g, '');
+                                        $('#state').val(state);
 
-                                    country = splits[4];
-                                    $('#country').val(country);
+                                        country = splits[4];
+                                        $('#country').val(country);
+                                    }else{
+                                        street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
+                                        $('#street').val(street);
+                                        sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
+                                        $('#city').val(sity);
+
+                                        state = splits[2].replace(/(^\s*)|(\s*)$/g, '');
+                                        $('#state').val(state);
+
+                                        country = splits[3];
+                                        $('#country').val(country);
+                                    };
 
                                     $('#country').attr('style', 'display:block');
                                     $('#state').attr('style', 'display:block');
