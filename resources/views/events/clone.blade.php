@@ -142,19 +142,19 @@
                         <div class="fields_map" style="display: none">
                             <div class="map_event_loc" id="map"></div>
                             <div class="form-group fields_loc">
-                                <input class="form-control" size="16" id="street" name="Street" type="Street", maxlength="255" value="{{$event['Street']}}">
+                                <input class="form-control" size="16" id="street" name="Street" type="Street", readonly, maxlength="255", value="{{$event['Street']}}">
                             </div>
 
                             <div class="form-group fields_loc">
-                                <input class="form-control" size="16" id="city" name="City" type="City", maxlength="255" value="{{$event['City']}}">
+                                <input class="form-control" size="16" id="city" name="City" type="City", readonly, maxlength="255", value="{{$event['City']}}">
                             </div>
 
                             <div class="form-group fields_loc">
-                                <input class="form-control" size="16" id="state" name="State" type="State", maxlength="255" value="{{$event['State']}}">
+                                <input class="form-control" size="16" id="state" name="State" type="State", readonly, maxlength="255", value="{{$event['State']}}">
                             </div>
 
                             <div class="form-group fields_loc">
-                                <input class="form-control" size="16" id="country" name="Country" type="Country", maxlength="255" value="{{$event['Country']}}">
+                                <input class="form-control" size="16" id="country" name="Country" type="Country", readonly, maxlength="255" value="{{$event['Country']}}">
                             </div>
                             <div class="form-group fields_loc">
                                 <a id="reset_loc">Reset Address</a>
