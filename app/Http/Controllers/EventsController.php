@@ -110,7 +110,7 @@ class EventsController extends Controller {
             $duration = strtotime($finish_date) - strtotime($start_date);
             if ($duration >= 3600 && $duration < 86400){
                 $duration_time=floor($duration/3600);
-                dd($duration_time);
+
             } else{
                 $duration_time = 1;
             }
