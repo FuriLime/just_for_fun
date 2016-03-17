@@ -356,8 +356,6 @@
                                 if($.isNumeric(splits[1])){
                                     street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                     $('#street').val(street);
-
-//                                street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                     sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
                                     $('#city').val(sity);
 
