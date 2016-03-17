@@ -41,7 +41,9 @@
 
                     @if (isset($event))
                         {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@update', $event->uuid]]) !!}
-                    @else
+                    @if((isset($event)))
+                            {!! Form::model($event, ['method' => 'POST', 'action' => ['EventsController@clonne', $event->uuid]]) !!}
+                        @else
                          {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
                          {{--<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }} " />--}}
                     @endif
