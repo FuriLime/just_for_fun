@@ -358,10 +358,25 @@ class UsersController extends JoshController
                 'address'   => Input::get('address'),
                 'postal'   => Input::get('postal'),
             ),$activate);
+            $userRoles = $user->roles()->lists('id')->all();
 
+            // Get the selected groups
+            $selectedRoles = Input::get('groups', array());
             //add user to 'User' group
-            $role = Sentinel::findRoleById(Input::get('group'));
-            $role->users()->attach($user);
+            $rolesToAdd    = array_diff($selectedRoles, $userRoles);
+            $acc_id = $user->accounts()->first()->id;
+
+            // Assign the user to groups
+            foreach ($rolesToAdd as $roleId) {
+
+                $role = Role::find($roleId);
+                $rolew = [
+                    0 => ['user_id' => $user->id, 'account_id' => $acc_id],
+                ];
+
+                $role->users()->attach($rolew);
+//                $role->users()->attach();
+            }
 
             //check for activation and send activation mail if not activated by default
             if(!Input::get('activate')) {
