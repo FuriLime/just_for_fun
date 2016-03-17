@@ -390,17 +390,18 @@ class EventsController extends Controller {
         $event = new Event();
         $event['title'] = $store_info['title'];
         $event['account_id'] = $eventold['account_id'];
-        if(Sentinel::check()) {
-            $userId = Sentinel::getUser()->id;
-            $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
-            $event['author_id'] = $userId;
-            $event['editor_id'] = $account;
-        }else {
+//        if(Sentinel::check()) {
+//            $userId = Sentinel::getUser()->id;
+//            $user = User::find($userId);
+//            $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
+//            $event['author_id'] = $userId;
+//            $event['editor_id'] = $account;
+//        }else {
             $event['author_id'] = $eventold['author_id'];
             $event['editor_id'] = $eventold['editor_id'];
-        }
-//        $event['permanent_url'] = 'asdasdasdasd';
-//        $event['readable_url'] = 'asdasdasdasd';
+//        }
+        $event['permanent_url'] = Uuid::uuid4();
+        $event['readable_url'] = Uuid::uuid4();
         $event['description'] = $store_info['description'];
         $event['location'] = $store_info['location'];
 //        $event['event_url'] = $store_info['event_url'];
