@@ -749,8 +749,15 @@ class UsersController extends JoshController
             // Check if we are not trying to delete ourselves
             if ($user->id === Sentinel::getUser()->id) {
                 // Prepare the error message
+                $data = array(
+                    'user'          => $user,
+                    'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
+                );
                 User::destroy($id);
-
+                Mail::send('emails.register-activate', $data, function ($m) use ($user) {
+                        $m->to($user->email, $user->first_name . ' ' . $user->last_name);
+                        $m->subject('Welcome ' . $user->first_name);
+                    });
                 // Prepare the success message
                 $success = Lang::get('users/message.success.delete');
                 return Redirect::route('home')->with('success', $success);

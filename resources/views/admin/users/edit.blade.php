@@ -118,11 +118,7 @@ Edit User
 
                                     </td>
                                     <p>(*) Mandatory</p>
-                                    <div class="modal fade" id="delete_confirm" tabindex="-1" role="dialog" aria-labelledby="user_delete_confirm_title" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content"></div>
-                                        </div>
-                                    </div>
+
                                 </section>
 
                                 <!-- second tab -->
@@ -300,7 +296,11 @@ Edit User
     <script src="{{ asset('assets/vendors/wizard/jquery-steps/js/jquery.steps.js') }}"></script>
     <script src="{{ asset('assets/vendors/jasny-bootstrap/js/jasny-bootstrap.js') }}"></script>
     <script src="{{ asset('assets/js/pages/form_wizard.js') }}"></script>
-
+    <div class="modal fade" id="delete_confirm" tabindex="-1" role="dialog" aria-labelledby="user_delete_confirm_title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
     <script>
         $(function () {
             $('body').on('hidden.bs.modal', '.modal', function () {
