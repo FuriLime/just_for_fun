@@ -258,6 +258,7 @@ class EventsController extends Controller {
 
             return redirect('confirm');
         } else {
+            $store_info->test = '1';
             $store_info->save();
             Session::forget('timezone');
             Session::forget('start');
