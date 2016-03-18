@@ -324,11 +324,11 @@
     <script>
     $(document).ready(function() {
 
-        $('.form-group').keydown(function (e) {
+        $('.form-control').keydown(function (e) {
             if (e.which === 13) {
                 e.preventDefault();
-                var index = $('.form-group').index(this) + 1;
-                $('.form-group').eq(index).attr("style", "display: block").focus();
+                var index = $('.form-control').index(this) + 1;
+                $('.form-control').eq(index).attr("style", "display: block").focus();
             }
         });
         @if (isset($event))
