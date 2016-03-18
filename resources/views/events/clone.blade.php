@@ -248,6 +248,9 @@
 
     <script>
         $(document).ready(function() {
+            if($("#adicription").val()!= null){
+                alert('sdfsdf');
+            }
             var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
             console.log($('#select2-timezone-container').val());
             {{--if('{{$event}}'!= null){--}}
