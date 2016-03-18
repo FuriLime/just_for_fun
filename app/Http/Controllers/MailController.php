@@ -14,9 +14,10 @@ class MailController extends Controller
 {
     //
 
-    public function getEmailSend(){
+    public function getEmailSend()
+    {
 
-       if(isset($_POST)){
+        if (isset($_POST)) {
             var_dump($_POST);
         }
 
@@ -24,11 +25,13 @@ class MailController extends Controller
 //        return redirect()->route('oauthtwitter');
     }
 
-    public function postEmailSend(Request $request){
+    public function postEmailSend(Request $request)
+    {
         $this->validate($request, [
-            'email'  => 'required|email|unique:users',
-    ]);
-        return redirect()->route('oauthtwitter');
+            'email' => 'required|email|unique:users',
+        ]);
 
+
+        return redirect()->route('welcome');
     }
 }
