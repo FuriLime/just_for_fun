@@ -719,13 +719,19 @@ class UsersController extends JoshController
             // Get user information
             $user = Sentinel::findById($id);
 //             Check if we are not trying to delete ourselves
-//            if ($user->id === Sentinel::getUser()->id)  {
-//                // Prepare the error message
-//                dd('asdasd');
-//                $error = Lang::get('users/message.error.delete');
-//
-//                return View('admin/layouts/modal_confirmation', compact('error', 'model', 'confirm_route'));
-//            }
+            if ($user->id === Sentinel::getUser()->id)  {
+                $delete_code = str_random(30);
+                $data = array(
+//                        'user'          => $user,
+                    'deleteUrl' => URL::route('delete', array('user_id' => $user->id, '?delete_code' => $delete_code)),
+//                        'deleteUrl' => 'http://event.test-y-sbm.com/admin/users/125/delete?{{$delete_code}}',
+                );
+
+                Mail::send('emails.register-activate', $data, function ($m) use ($user) {
+                    $m->to($user->email, $user->first_name . ' ' . $user->last_name);
+                    $m->subject('Hello ' . $user->first_name);
+                });
+            }
         } catch (UserNotFoundException $e) {
             // Prepare the error message
             $error = Lang::get('users/message.user_not_found', compact('id' ));
