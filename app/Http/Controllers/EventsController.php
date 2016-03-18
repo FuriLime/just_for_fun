@@ -479,7 +479,7 @@ class EventsController extends Controller {
         $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
-        $event['duration'] = strtotime($event['finish']) - strtotime($event['start']);
+
 
         if(session()->get('start')) {
             $event['start'] = session()->get('start');
@@ -497,6 +497,7 @@ class EventsController extends Controller {
         }else {
             $event['timezone'] = $event['timezone'];
         }
+        $event['duration'] = strtotime($event['finish']) - strtotime($event['start']);
         //hours
         if ($event['duration']>= 3600 && $event['duration'] < 86400) {
             if (($event['duration'] % 3600) == 0) {
