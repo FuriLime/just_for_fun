@@ -296,18 +296,18 @@
             controlType: 'select',
             minDate: nowtimedate
         });
-
+        $("#datefinish").datetimepicker("remove");
         $("#datefinish").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
             controlType: 'select',
-            startDate: $('#finish').val(),
-            minDate: nowtimedate,
+//            startDate: $('#finish').val(),
+//            minDate: nowtimedate,
             minuteStep: 10
 
         });
-        $("#datefinish").datetimepicker("remove");
+
     });
 
     $('#start').on('change', function() {
