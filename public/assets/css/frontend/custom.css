@@ -985,6 +985,13 @@ footer .btn-primary.text-white {
     position: absolute;
     margin-top: 9px;
 }
+.text-center.event-show{
+    padding: 15px 0;
+}
+.text-center.event-show a{
+    font-weight: bold;
+    color: #2f8fce;
+}
 @media(max-width:600px){
     #add_event label {
         width:auto;
