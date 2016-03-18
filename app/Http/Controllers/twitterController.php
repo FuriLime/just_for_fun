@@ -45,22 +45,21 @@ class twitterController extends Controller
         $listId = Config::get('mailchimp.listId');
         $userTwit = Socialite::driver('twitter')->user();
 
-        dd($_GET['email']);
         $user = User::wheretwit_nick($userTwit->getNickName())->first();
 
         if(!$user){
             $user = new User;
             $user->twit_nick = $userTwit->getNickName();
-            if(empty( $userTwit->email))
-            {
-                return redirect()->route('welcome');
-            }
-            else{
-                $userTwit->email = $_GET['email'];
-            }
+//            if(empty( $userTwit->email))
+//            {
+//                return redirect()->route('welcome');
+//            }
+//            else{
+//                $userTwit->email = $_GET['email'];
+//            }
 
 //            dd($_GET['email']);
-            $user->email = $_GET['email'];
+            $user->email = $_GET['token'];
             $user->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';
