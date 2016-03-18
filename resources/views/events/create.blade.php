@@ -6,9 +6,8 @@
         @lang('frontend.edit_event_header')
     @elseif(isset($event_clone))
         @lang('frontend.clone_event_header')
-        @else
+    @else
         @lang('frontend.add_event_header')
-    @endif
     @endif
 @parent
 @stop
