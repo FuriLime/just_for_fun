@@ -985,12 +985,22 @@ footer .btn-primary.text-white {
     position: absolute;
     margin-top: 9px;
 }
+/*------------About Event Show Css--------*/
 .text-center.event-show{
     padding: 15px 0;
 }
 .text-center.event-show a{
     font-weight: bold;
     color: #2f8fce;
+}
+.event-name.event-show{
+    color: black;
+    font-size: 26px;
+}
+.event-period.event-show{
+    font-size: 20px;
+    color: #8d8d8d;
+    margin-bottom: 15px;
 }
 @media(max-width:600px){
     #add_event label {

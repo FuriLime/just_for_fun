@@ -51,8 +51,8 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 <div class="container">
 	<div class="row content">
 		<div class="col-sm-8 col-md-8">
-			<h2 class="primary marl12">{{$event->title}}</h2>
-			<div class="event_period">{{$event->period}}</div>
+			<div class="event-name event-show">{{$event->title}}</div>
+			<div class="event_period event-show">{{$event->period}}</div>
 			
 			<div class="input-group">
 				<button id="register_but" class="btn btn-primary text-white" >
