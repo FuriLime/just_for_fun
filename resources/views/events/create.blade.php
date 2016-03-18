@@ -302,8 +302,8 @@
             autoclose: true,
             todayBtn: true,
             controlType: 'select',
-//            startDate: $('#finish').val(),
-//            minDate: nowtimedate,
+            startDate: nowtimedate,
+            minDate: nowtimedate,
             minuteStep: 10
 
         });
