@@ -694,44 +694,49 @@ class EventsController extends Controller {
             $duration = $hourDifference.$minutesLeft;
         }
         $result = $error_massage = $calendar_link = '';
+        $desc = urlencode($event['description']);
+        $loc = urlencode($event['location']);
+        $title = urlencode($event['title']);
         switch ($calendar) {
 
             case 'Google':
                 $timezone = '';
                 $result = 'success';
                 $calendar_link = 'https://www.google.com/calendar/render?action=TEMPLATE'.
-                    '&text='.$event['title'].
+                    '&text='.$title.
                     '&dates='.$event_start_zero->format('Ymd').'T'.$event_start_zero->format('His').'Z/'.
                     $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His').'Z'.
                     $timezone.
                     '&sprop=website:'.route('events.show',$uuid).
-                    '&location='.$event['location'].'&pli=1&uid=&sf=true&output=xml'.
-                    '&details='.$event['description'];
+                    '&location='.$loc.'&pli=1&uid=&sf=true&output=xml'.
+                    '&details='.$desc;
                 break;
 
             case 'Yahoo':
                 // https://docs.google.com/document/d/1scDk4WxGzDSGAF6OWiRkKwdQg9zD8kDReTH9cvTZnVo/edit
+
                 $result = 'success';
                 $calendar_link = 'https://calendar.yahoo.com/?v=60'.
-                    '&TITLE='.$event['title'].
+                    '&TITLE='.$title.
                     '&ST='.$event_start_zero->format('Ymd').'T'.$event_start_zero->format('His').'Z'.
                     // 'Z' does not work at End Time (Yahoo bug), using duration parameter
                     //'&ET='.$event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His').'Z'.
                     '&DUR='.$duration.
                     '&URL='.route('events.show',$uuid).
-                    '&in_loc='.$event['location'].
-                    '&DESC='.$event['description'];
+                    '&in_loc='.$loc.
+                    '&DESC='.$desc;
                 break;
 
             case 'Microsoft':
+
                 $result = 'success';
                 $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='.
                     $event_start_zero->format('Ymd').'T'.
                     $event_start_zero->format('His').'Z' .
                     '&dtend='. $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His').'Z' .
-                    '&summary='. $event['title'] .
-                    '&location='. $event['location'] .
-                    '&description='. $event['description'];
+                    '&summary='. $title .
+                    '&location='. $loc .
+                    '&description='. $desc;
                 break;
 
             case 'Outloock':

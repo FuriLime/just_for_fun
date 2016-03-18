@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -29,53 +28,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63243246" vertical-offset="618" max-vertical-offset="3961">
-              <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+            <state vertical-scroll-proportion="-5.2181816" vertical-offset="682" max-vertical-offset="3961">
+              <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register-activate.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/emails/register-activate.blade.php">
+      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.269231" vertical-offset="3331" max-vertical-offset="5236">
-              <caret line="204" column="83" selection-start-line="204" selection-start-column="83" selection-end-line="204" selection-end-column="83" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="event.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/js/event.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4181818" vertical-offset="4019" max-vertical-offset="7973">
-              <caret line="241" column="29" selection-start-line="241" selection-start-column="29" selection-end-line="241" selection-end-column="29" />
+            <state vertical-scroll-proportion="-35.692307" vertical-offset="10649" max-vertical-offset="14722">
+              <caret line="737" column="38" selection-start-line="737" selection-start-column="38" selection-end-line="737" selection-end-column="38" />
               <folding>
-                <element signature="e#38#51#0#PHP" expanded="true" />
+                <element signature="e#5978#7048#0#PHP" expanded="false" />
+                <element signature="e#9259#10586#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Activation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Activation.php">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="816">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.6882662" vertical-offset="1205" max-vertical-offset="4522">
+              <caret line="94" column="44" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -84,8 +64,8 @@
       <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.230769" vertical-offset="8583" max-vertical-offset="13260">
-              <caret line="756" column="68" selection-start-line="756" selection-start-column="68" selection-end-line="756" selection-end-column="68" />
+            <state vertical-scroll-proportion="-13.461538" vertical-offset="8592" max-vertical-offset="13294">
+              <caret line="763" column="0" selection-start-line="763" selection-start-column="0" selection-end-line="763" selection-end-column="0" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
                 <element signature="e#440#7787#0#PHP" expanded="false" />
@@ -136,7 +116,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/twitterController.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/message.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/pop_over.php" />
-        <option value="$PROJECT_DIR$/resources/views/events/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/events/index.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/ical.php" />
@@ -151,11 +130,12 @@
         <option value="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/events/clone.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/public/assets/js/event.js" />
         <option value="$PROJECT_DIR$/resources/views/emails/register-activate.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/events/show.blade.php" />
       </list>
     </option>
   </component>
@@ -212,6 +192,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="event.test-y-sbm.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -360,301 +380,301 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-03083" summary="database">
-      <created>1458280226316</created>
-      <option name="number" value="03083" />
-      <option name="project" value="LOCAL" />
-      <updated>1458280226325</updated>
-    </task>
-    <task id="LOCAL-03084" summary="database">
-      <created>1458280276890</created>
-      <option name="number" value="03084" />
-      <option name="project" value="LOCAL" />
-      <updated>1458280276890</updated>
-    </task>
-    <task id="LOCAL-03085" summary="database">
-      <created>1458280350224</created>
-      <option name="number" value="03085" />
-      <option name="project" value="LOCAL" />
-      <updated>1458280350224</updated>
-    </task>
-    <task id="LOCAL-03086" summary="database">
-      <created>1458280442106</created>
-      <option name="number" value="03086" />
-      <option name="project" value="LOCAL" />
-      <updated>1458280442106</updated>
-    </task>
-    <task id="LOCAL-03087" summary="database">
-      <created>1458280483406</created>
-      <option name="number" value="03087" />
-      <option name="project" value="LOCAL" />
-      <updated>1458280483407</updated>
-    </task>
-    <task id="LOCAL-03088" summary="database">
-      <created>1458280677499</created>
-      <option name="number" value="03088" />
-      <option name="project" value="LOCAL" />
-      <updated>1458280677499</updated>
-    </task>
-    <task id="LOCAL-03089" summary="database">
-      <created>1458280749871</created>
-      <option name="number" value="03089" />
-      <option name="project" value="LOCAL" />
-      <updated>1458280749871</updated>
-    </task>
-    <task id="LOCAL-03090" summary="database">
-      <created>1458281084962</created>
-      <option name="number" value="03090" />
-      <option name="project" value="LOCAL" />
-      <updated>1458281084962</updated>
-    </task>
-    <task id="LOCAL-03091" summary="database">
-      <created>1458281177340</created>
-      <option name="number" value="03091" />
-      <option name="project" value="LOCAL" />
-      <updated>1458281177340</updated>
-    </task>
-    <task id="LOCAL-03092" summary="database">
-      <created>1458281232299</created>
-      <option name="number" value="03092" />
-      <option name="project" value="LOCAL" />
-      <updated>1458281232299</updated>
-    </task>
-    <task id="LOCAL-03093" summary="database">
-      <created>1458281279698</created>
-      <option name="number" value="03093" />
-      <option name="project" value="LOCAL" />
-      <updated>1458281279698</updated>
-    </task>
-    <task id="LOCAL-03094" summary="database">
-      <created>1458281349610</created>
-      <option name="number" value="03094" />
-      <option name="project" value="LOCAL" />
-      <updated>1458281349610</updated>
-    </task>
-    <task id="LOCAL-03095" summary="database">
-      <created>1458281411146</created>
-      <option name="number" value="03095" />
-      <option name="project" value="LOCAL" />
-      <updated>1458281411147</updated>
-    </task>
-    <task id="LOCAL-03096" summary="database">
-      <created>1458281443454</created>
-      <option name="number" value="03096" />
-      <option name="project" value="LOCAL" />
-      <updated>1458281443454</updated>
-    </task>
-    <task id="LOCAL-03097" summary="database">
-      <created>1458281573184</created>
-      <option name="number" value="03097" />
-      <option name="project" value="LOCAL" />
-      <updated>1458281573184</updated>
-    </task>
-    <task id="LOCAL-03098" summary="database">
-      <created>1458281656157</created>
-      <option name="number" value="03098" />
-      <option name="project" value="LOCAL" />
-      <updated>1458281656158</updated>
-    </task>
-    <task id="LOCAL-03099" summary="database">
-      <created>1458281795740</created>
-      <option name="number" value="03099" />
-      <option name="project" value="LOCAL" />
-      <updated>1458281795740</updated>
-    </task>
-    <task id="LOCAL-03100" summary="database">
-      <created>1458282000686</created>
-      <option name="number" value="03100" />
-      <option name="project" value="LOCAL" />
-      <updated>1458282000686</updated>
-    </task>
-    <task id="LOCAL-03101" summary="database">
-      <created>1458282137005</created>
-      <option name="number" value="03101" />
-      <option name="project" value="LOCAL" />
-      <updated>1458282137005</updated>
-    </task>
-    <task id="LOCAL-03102" summary="database">
-      <created>1458282292649</created>
-      <option name="number" value="03102" />
-      <option name="project" value="LOCAL" />
-      <updated>1458282292649</updated>
-    </task>
-    <task id="LOCAL-03103" summary="database">
-      <created>1458282342436</created>
-      <option name="number" value="03103" />
-      <option name="project" value="LOCAL" />
-      <updated>1458282342436</updated>
-    </task>
-    <task id="LOCAL-03104" summary="database">
-      <created>1458282371508</created>
-      <option name="number" value="03104" />
-      <option name="project" value="LOCAL" />
-      <updated>1458282371508</updated>
-    </task>
-    <task id="LOCAL-03105" summary="database">
-      <created>1458282408532</created>
-      <option name="number" value="03105" />
-      <option name="project" value="LOCAL" />
-      <updated>1458282408532</updated>
-    </task>
-    <task id="LOCAL-03106" summary="database">
-      <created>1458282432325</created>
-      <option name="number" value="03106" />
-      <option name="project" value="LOCAL" />
-      <updated>1458282432325</updated>
-    </task>
-    <task id="LOCAL-03107" summary="database">
-      <created>1458283601606</created>
-      <option name="number" value="03107" />
-      <option name="project" value="LOCAL" />
-      <updated>1458283601606</updated>
-    </task>
-    <task id="LOCAL-03108" summary="database">
-      <created>1458284064154</created>
-      <option name="number" value="03108" />
-      <option name="project" value="LOCAL" />
-      <updated>1458284064154</updated>
-    </task>
-    <task id="LOCAL-03109" summary="database">
-      <created>1458284248266</created>
-      <option name="number" value="03109" />
-      <option name="project" value="LOCAL" />
-      <updated>1458284248266</updated>
-    </task>
-    <task id="LOCAL-03110" summary="database">
-      <created>1458284428377</created>
-      <option name="number" value="03110" />
-      <option name="project" value="LOCAL" />
-      <updated>1458284428377</updated>
-    </task>
-    <task id="LOCAL-03111" summary="database">
-      <created>1458284582541</created>
-      <option name="number" value="03111" />
-      <option name="project" value="LOCAL" />
-      <updated>1458284582541</updated>
-    </task>
-    <task id="LOCAL-03112" summary="database">
-      <created>1458284742164</created>
-      <option name="number" value="03112" />
-      <option name="project" value="LOCAL" />
-      <updated>1458284742164</updated>
-    </task>
-    <task id="LOCAL-03113" summary="database">
-      <created>1458284969475</created>
-      <option name="number" value="03113" />
-      <option name="project" value="LOCAL" />
-      <updated>1458284969475</updated>
-    </task>
-    <task id="LOCAL-03114" summary="database">
-      <created>1458285117651</created>
-      <option name="number" value="03114" />
-      <option name="project" value="LOCAL" />
-      <updated>1458285117651</updated>
-    </task>
-    <task id="LOCAL-03115" summary="database">
-      <created>1458285123062</created>
-      <option name="number" value="03115" />
-      <option name="project" value="LOCAL" />
-      <updated>1458285123062</updated>
-    </task>
-    <task id="LOCAL-03116" summary="database">
-      <created>1458285250426</created>
-      <option name="number" value="03116" />
-      <option name="project" value="LOCAL" />
-      <updated>1458285250426</updated>
-    </task>
-    <task id="LOCAL-03117" summary="database">
-      <created>1458285614045</created>
-      <option name="number" value="03117" />
-      <option name="project" value="LOCAL" />
-      <updated>1458285614045</updated>
-    </task>
-    <task id="LOCAL-03118" summary="database">
-      <created>1458285771204</created>
-      <option name="number" value="03118" />
-      <option name="project" value="LOCAL" />
-      <updated>1458285771204</updated>
-    </task>
-    <task id="LOCAL-03119" summary="database">
-      <created>1458285982332</created>
-      <option name="number" value="03119" />
-      <option name="project" value="LOCAL" />
-      <updated>1458285982332</updated>
-    </task>
-    <task id="LOCAL-03120" summary="database">
-      <created>1458286052375</created>
-      <option name="number" value="03120" />
-      <option name="project" value="LOCAL" />
-      <updated>1458286052375</updated>
-    </task>
-    <task id="LOCAL-03121" summary="database">
-      <created>1458286551178</created>
-      <option name="number" value="03121" />
-      <option name="project" value="LOCAL" />
-      <updated>1458286551178</updated>
-    </task>
-    <task id="LOCAL-03122" summary="database">
-      <created>1458286712791</created>
-      <option name="number" value="03122" />
-      <option name="project" value="LOCAL" />
-      <updated>1458286712791</updated>
-    </task>
-    <task id="LOCAL-03123" summary="database">
-      <created>1458287222254</created>
-      <option name="number" value="03123" />
-      <option name="project" value="LOCAL" />
-      <updated>1458287222254</updated>
-    </task>
-    <task id="LOCAL-03124" summary="database">
-      <created>1458287658232</created>
-      <option name="number" value="03124" />
-      <option name="project" value="LOCAL" />
-      <updated>1458287658232</updated>
-    </task>
-    <task id="LOCAL-03125" summary="database">
-      <created>1458287852417</created>
-      <option name="number" value="03125" />
-      <option name="project" value="LOCAL" />
-      <updated>1458287852417</updated>
-    </task>
-    <task id="LOCAL-03126" summary="database">
-      <created>1458288076702</created>
-      <option name="number" value="03126" />
-      <option name="project" value="LOCAL" />
-      <updated>1458288076702</updated>
-    </task>
-    <task id="LOCAL-03127" summary="database">
-      <created>1458288187314</created>
-      <option name="number" value="03127" />
-      <option name="project" value="LOCAL" />
-      <updated>1458288187314</updated>
-    </task>
-    <task id="LOCAL-03128" summary="database">
-      <created>1458288266138</created>
-      <option name="number" value="03128" />
-      <option name="project" value="LOCAL" />
-      <updated>1458288266138</updated>
-    </task>
-    <task id="LOCAL-03129" summary="database">
-      <created>1458288315188</created>
-      <option name="number" value="03129" />
-      <option name="project" value="LOCAL" />
-      <updated>1458288315188</updated>
-    </task>
-    <task id="LOCAL-03130" summary="database">
-      <created>1458288527300</created>
-      <option name="number" value="03130" />
-      <option name="project" value="LOCAL" />
-      <updated>1458288527300</updated>
-    </task>
     <task id="LOCAL-03131" summary="database">
       <created>1458288666595</created>
       <option name="number" value="03131" />
       <option name="project" value="LOCAL" />
       <updated>1458288666595</updated>
     </task>
-    <option name="localTasksCounter" value="3132" />
+    <task id="LOCAL-03132" summary="database">
+      <created>1458288896106</created>
+      <option name="number" value="03132" />
+      <option name="project" value="LOCAL" />
+      <updated>1458288896106</updated>
+    </task>
+    <task id="LOCAL-03133" summary="database">
+      <created>1458289036422</created>
+      <option name="number" value="03133" />
+      <option name="project" value="LOCAL" />
+      <updated>1458289036422</updated>
+    </task>
+    <task id="LOCAL-03134" summary="database">
+      <created>1458289144975</created>
+      <option name="number" value="03134" />
+      <option name="project" value="LOCAL" />
+      <updated>1458289144976</updated>
+    </task>
+    <task id="LOCAL-03135" summary="database">
+      <created>1458289210817</created>
+      <option name="number" value="03135" />
+      <option name="project" value="LOCAL" />
+      <updated>1458289210817</updated>
+    </task>
+    <task id="LOCAL-03136" summary="database">
+      <created>1458289367397</created>
+      <option name="number" value="03136" />
+      <option name="project" value="LOCAL" />
+      <updated>1458289367397</updated>
+    </task>
+    <task id="LOCAL-03137" summary="database">
+      <created>1458289438260</created>
+      <option name="number" value="03137" />
+      <option name="project" value="LOCAL" />
+      <updated>1458289438260</updated>
+    </task>
+    <task id="LOCAL-03138" summary="database">
+      <created>1458289495702</created>
+      <option name="number" value="03138" />
+      <option name="project" value="LOCAL" />
+      <updated>1458289495702</updated>
+    </task>
+    <task id="LOCAL-03139" summary="database">
+      <created>1458289548254</created>
+      <option name="number" value="03139" />
+      <option name="project" value="LOCAL" />
+      <updated>1458289548254</updated>
+    </task>
+    <task id="LOCAL-03140" summary="database">
+      <created>1458289594200</created>
+      <option name="number" value="03140" />
+      <option name="project" value="LOCAL" />
+      <updated>1458289594200</updated>
+    </task>
+    <task id="LOCAL-03141" summary="database">
+      <created>1458289638971</created>
+      <option name="number" value="03141" />
+      <option name="project" value="LOCAL" />
+      <updated>1458289638971</updated>
+    </task>
+    <task id="LOCAL-03142" summary="database">
+      <created>1458290452622</created>
+      <option name="number" value="03142" />
+      <option name="project" value="LOCAL" />
+      <updated>1458290452622</updated>
+    </task>
+    <task id="LOCAL-03143" summary="database">
+      <created>1458290503875</created>
+      <option name="number" value="03143" />
+      <option name="project" value="LOCAL" />
+      <updated>1458290503875</updated>
+    </task>
+    <task id="LOCAL-03144" summary="database">
+      <created>1458290644984</created>
+      <option name="number" value="03144" />
+      <option name="project" value="LOCAL" />
+      <updated>1458290644985</updated>
+    </task>
+    <task id="LOCAL-03145" summary="database">
+      <created>1458290750244</created>
+      <option name="number" value="03145" />
+      <option name="project" value="LOCAL" />
+      <updated>1458290750244</updated>
+    </task>
+    <task id="LOCAL-03146" summary="database">
+      <created>1458290951919</created>
+      <option name="number" value="03146" />
+      <option name="project" value="LOCAL" />
+      <updated>1458290951919</updated>
+    </task>
+    <task id="LOCAL-03147" summary="database">
+      <created>1458290961454</created>
+      <option name="number" value="03147" />
+      <option name="project" value="LOCAL" />
+      <updated>1458290961454</updated>
+    </task>
+    <task id="LOCAL-03148" summary="database">
+      <created>1458290995916</created>
+      <option name="number" value="03148" />
+      <option name="project" value="LOCAL" />
+      <updated>1458290995916</updated>
+    </task>
+    <task id="LOCAL-03149" summary="database">
+      <created>1458291106398</created>
+      <option name="number" value="03149" />
+      <option name="project" value="LOCAL" />
+      <updated>1458291106399</updated>
+    </task>
+    <task id="LOCAL-03150" summary="database">
+      <created>1458291208781</created>
+      <option name="number" value="03150" />
+      <option name="project" value="LOCAL" />
+      <updated>1458291208781</updated>
+    </task>
+    <task id="LOCAL-03151" summary="database">
+      <created>1458291251024</created>
+      <option name="number" value="03151" />
+      <option name="project" value="LOCAL" />
+      <updated>1458291251024</updated>
+    </task>
+    <task id="LOCAL-03152" summary="database">
+      <created>1458291371684</created>
+      <option name="number" value="03152" />
+      <option name="project" value="LOCAL" />
+      <updated>1458291371684</updated>
+    </task>
+    <task id="LOCAL-03153" summary="database">
+      <created>1458291458220</created>
+      <option name="number" value="03153" />
+      <option name="project" value="LOCAL" />
+      <updated>1458291458220</updated>
+    </task>
+    <task id="LOCAL-03154" summary="database">
+      <created>1458291592615</created>
+      <option name="number" value="03154" />
+      <option name="project" value="LOCAL" />
+      <updated>1458291592615</updated>
+    </task>
+    <task id="LOCAL-03155" summary="database">
+      <created>1458291773919</created>
+      <option name="number" value="03155" />
+      <option name="project" value="LOCAL" />
+      <updated>1458291773919</updated>
+    </task>
+    <task id="LOCAL-03156" summary="database">
+      <created>1458291868963</created>
+      <option name="number" value="03156" />
+      <option name="project" value="LOCAL" />
+      <updated>1458291868963</updated>
+    </task>
+    <task id="LOCAL-03157" summary="database">
+      <created>1458292924636</created>
+      <option name="number" value="03157" />
+      <option name="project" value="LOCAL" />
+      <updated>1458292924636</updated>
+    </task>
+    <task id="LOCAL-03158" summary="database">
+      <created>1458293032667</created>
+      <option name="number" value="03158" />
+      <option name="project" value="LOCAL" />
+      <updated>1458293032667</updated>
+    </task>
+    <task id="LOCAL-03159" summary="database">
+      <created>1458293192842</created>
+      <option name="number" value="03159" />
+      <option name="project" value="LOCAL" />
+      <updated>1458293192842</updated>
+    </task>
+    <task id="LOCAL-03160" summary="database">
+      <created>1458293302378</created>
+      <option name="number" value="03160" />
+      <option name="project" value="LOCAL" />
+      <updated>1458293302378</updated>
+    </task>
+    <task id="LOCAL-03161" summary="database">
+      <created>1458293576868</created>
+      <option name="number" value="03161" />
+      <option name="project" value="LOCAL" />
+      <updated>1458293576868</updated>
+    </task>
+    <task id="LOCAL-03162" summary="database">
+      <created>1458294112043</created>
+      <option name="number" value="03162" />
+      <option name="project" value="LOCAL" />
+      <updated>1458294112043</updated>
+    </task>
+    <task id="LOCAL-03163" summary="database">
+      <created>1458294222003</created>
+      <option name="number" value="03163" />
+      <option name="project" value="LOCAL" />
+      <updated>1458294222003</updated>
+    </task>
+    <task id="LOCAL-03164" summary="database">
+      <created>1458294387560</created>
+      <option name="number" value="03164" />
+      <option name="project" value="LOCAL" />
+      <updated>1458294387561</updated>
+    </task>
+    <task id="LOCAL-03165" summary="database">
+      <created>1458294447892</created>
+      <option name="number" value="03165" />
+      <option name="project" value="LOCAL" />
+      <updated>1458294447892</updated>
+    </task>
+    <task id="LOCAL-03166" summary="database">
+      <created>1458294502425</created>
+      <option name="number" value="03166" />
+      <option name="project" value="LOCAL" />
+      <updated>1458294502425</updated>
+    </task>
+    <task id="LOCAL-03167" summary="database">
+      <created>1458294542429</created>
+      <option name="number" value="03167" />
+      <option name="project" value="LOCAL" />
+      <updated>1458294542429</updated>
+    </task>
+    <task id="LOCAL-03168" summary="database">
+      <created>1458294667260</created>
+      <option name="number" value="03168" />
+      <option name="project" value="LOCAL" />
+      <updated>1458294667261</updated>
+    </task>
+    <task id="LOCAL-03169" summary="database">
+      <created>1458294706429</created>
+      <option name="number" value="03169" />
+      <option name="project" value="LOCAL" />
+      <updated>1458294706429</updated>
+    </task>
+    <task id="LOCAL-03170" summary="database">
+      <created>1458294768903</created>
+      <option name="number" value="03170" />
+      <option name="project" value="LOCAL" />
+      <updated>1458294768903</updated>
+    </task>
+    <task id="LOCAL-03171" summary="database">
+      <created>1458294806572</created>
+      <option name="number" value="03171" />
+      <option name="project" value="LOCAL" />
+      <updated>1458294806572</updated>
+    </task>
+    <task id="LOCAL-03172" summary="database">
+      <created>1458294824745</created>
+      <option name="number" value="03172" />
+      <option name="project" value="LOCAL" />
+      <updated>1458294824745</updated>
+    </task>
+    <task id="LOCAL-03173" summary="database">
+      <created>1458294911808</created>
+      <option name="number" value="03173" />
+      <option name="project" value="LOCAL" />
+      <updated>1458294911808</updated>
+    </task>
+    <task id="LOCAL-03174" summary="database">
+      <created>1458294939372</created>
+      <option name="number" value="03174" />
+      <option name="project" value="LOCAL" />
+      <updated>1458294939372</updated>
+    </task>
+    <task id="LOCAL-03175" summary="database">
+      <created>1458295155655</created>
+      <option name="number" value="03175" />
+      <option name="project" value="LOCAL" />
+      <updated>1458295155655</updated>
+    </task>
+    <task id="LOCAL-03176" summary="database">
+      <created>1458295276828</created>
+      <option name="number" value="03176" />
+      <option name="project" value="LOCAL" />
+      <updated>1458295276828</updated>
+    </task>
+    <task id="LOCAL-03177" summary="database">
+      <created>1458295315674</created>
+      <option name="number" value="03177" />
+      <option name="project" value="LOCAL" />
+      <updated>1458295315674</updated>
+    </task>
+    <task id="LOCAL-03178" summary="database">
+      <created>1458295447434</created>
+      <option name="number" value="03178" />
+      <option name="project" value="LOCAL" />
+      <updated>1458295447435</updated>
+    </task>
+    <task id="LOCAL-03179" summary="database">
+      <created>1458295619023</created>
+      <option name="number" value="03179" />
+      <option name="project" value="LOCAL" />
+      <updated>1458295619023</updated>
+    </task>
+    <option name="localTasksCounter" value="3180" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -821,13 +841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="374">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.2181816" vertical-offset="3602" max-vertical-offset="4522">
-          <caret line="195" column="39" selection-start-line="195" selection-start-column="39" selection-end-line="195" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1030,22 +1043,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5393655" vertical-offset="7072" max-vertical-offset="14637">
-          <caret line="499" column="86" selection-start-line="499" selection-start-column="86" selection-end-line="499" selection-end-column="86" />
-          <folding>
-            <element signature="e#5978#7048#0#PHP" expanded="false" />
-            <element signature="e#9259#10586#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Role.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="890">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Activation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17465754" vertical-offset="0" max-vertical-offset="816">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/emails/register-activate.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23992994" vertical-offset="3331" max-vertical-offset="5236">
+          <caret line="204" column="83" selection-start-line="204" selection-start-column="83" selection-end-line="204" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6789668" vertical-offset="5549" max-vertical-offset="7973">
+          <caret line="241" column="29" selection-start-line="241" selection-start-column="29" selection-end-line="241" selection-end-column="29" />
+          <folding>
+            <element signature="e#38#51#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1057,36 +1085,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/emails/register-activate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.269231" vertical-offset="3331" max-vertical-offset="5236">
-          <caret line="204" column="83" selection-start-line="204" selection-start-column="83" selection-end-line="204" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4181818" vertical-offset="4019" max-vertical-offset="7973">
-          <caret line="241" column="29" selection-start-line="241" selection-start-column="29" selection-end-line="241" selection-end-column="29" />
-          <folding>
-            <element signature="e#38#51#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Activation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="816">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.230769" vertical-offset="8583" max-vertical-offset="13260">
-          <caret line="756" column="68" selection-start-line="756" selection-start-column="68" selection-end-line="756" selection-end-column="68" />
+        <state vertical-scroll-proportion="-13.461538" vertical-offset="8592" max-vertical-offset="13294">
+          <caret line="763" column="0" selection-start-line="763" selection-start-column="0" selection-end-line="763" selection-end-column="0" />
           <folding>
             <element signature="e#39#52#0#PHP" expanded="true" />
             <element signature="e#440#7787#0#PHP" expanded="false" />
@@ -1096,8 +1098,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63243246" vertical-offset="618" max-vertical-offset="3961">
-          <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+        <state vertical-scroll-proportion="-5.2181816" vertical-offset="682" max-vertical-offset="3961">
+          <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-35.692307" vertical-offset="10649" max-vertical-offset="14722">
+          <caret line="737" column="38" selection-start-line="737" selection-start-column="38" selection-end-line="737" selection-end-column="38" />
+          <folding>
+            <element signature="e#5978#7048#0#PHP" expanded="false" />
+            <element signature="e#9259#10586#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6882662" vertical-offset="1205" max-vertical-offset="4522">
+          <caret line="94" column="44" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
           <folding />
         </state>
       </provider>
