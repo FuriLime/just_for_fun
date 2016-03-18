@@ -18,7 +18,7 @@ class MailController extends Controller
     {
 
 
-
+        return view('oauthtwitter');
 //        return redirect()->route('oauthtwitter');
     }
 
@@ -28,6 +28,6 @@ class MailController extends Controller
             'email' => 'required|email|unique:users',
         ]);
 
-        return view('oauthtwitter');
+
     }
 }
