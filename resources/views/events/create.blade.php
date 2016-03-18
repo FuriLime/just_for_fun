@@ -331,14 +331,20 @@
         $('#active option[value="{{$event->active}}"]').attr('selected','selected');
         @endif
 
-         @if (isset($event_clone))
+         @if(isset($event_clone))
         $('#select2-timezone-container').attr('title', '{{$event_clone->timezone}}');
         $('#select2-timezone-container').text('{{$event_clone->timezone}}');
         var asd = $('#select2-timezone-container').attr('value', '{{$event_clone->timezone}}');
         $('#timezone option[value="{{$event_clone->timezone}}"]').attr('selected','selected');
         $('#active option[value="{{$event_clone->active}}"]').attr('selected','selected');
         @endif
-
+        @if(isset($event_clone))
+        if($("#description").text().length != 0 ){
+            $('#descprip').attr('style', 'display:block');
+            $('#add_dicription').attr('style', 'display:none');
+            $('#hide_dicription').attr('style', 'display:block');
+        }
+        @endif
          $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
         $('#test').on('change', function() {
             console.log($('#test').prop("checked"));
