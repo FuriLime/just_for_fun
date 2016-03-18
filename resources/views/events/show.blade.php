@@ -49,7 +49,7 @@
 Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href="#">Start here!</a>
 </div>
 <div class="container">
-	<div class="row content">
+	<div class="row content event-show">
 		<div class="col-sm-8 col-md-8">
 			<div class="event-name event-show">{{$event->title}}</div>
 			<div class="event_period event-show">{{$event->period}}</div>
