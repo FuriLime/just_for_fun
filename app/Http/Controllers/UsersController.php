@@ -752,12 +752,13 @@ class UsersController extends JoshController
                 // Prepare the error message
                 $delete_code = str_random(30);
                 $data = array(
-                        'user'          => $user,
-                        'deleteUrl' => URL::route('delete', array('user_id' => $user->id, 'delete_code' => $delete_code)),
+//                        'user'          => $user,
+//                        'deleteUrl' => URL::route('delete', array('user_id' => $user->id, 'delete_code' => $delete_code)),
+                        'deleteUrl' => 'http://event.test-y-sbm.com',
                     );
                 Mail::send('emails.register-activate', $data, function ($m) use ($user) {
                         $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-                        $m->subject('Welcome ' . $user->first_name);
+                        $m->subject('Hello ' . $user->first_name);
                     });
 //               User::destroy($id);
                              // Prepare the success message

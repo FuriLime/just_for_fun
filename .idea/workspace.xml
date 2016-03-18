@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
+    <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="database">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -41,8 +41,8 @@
       <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6042403" vertical-offset="8634" max-vertical-offset="13175">
-              <caret line="765" column="46" selection-start-line="765" selection-start-column="46" selection-end-line="765" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.4540636" vertical-offset="8634" max-vertical-offset="13192">
+              <caret line="760" column="42" selection-start-line="760" selection-start-column="42" selection-end-line="760" selection-end-column="42" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
                 <element signature="e#440#7787#0#PHP" expanded="false" />
@@ -74,7 +74,7 @@
       <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846" vertical-offset="3536" max-vertical-offset="7973">
+            <state vertical-scroll-proportion="-48.384617" vertical-offset="2516" max-vertical-offset="7973">
               <caret line="222" column="195" selection-start-line="222" selection-start-column="11" selection-end-line="222" selection-end-column="195" />
               <folding>
                 <element signature="e#38#51#0#PHP" expanded="true" />
@@ -217,46 +217,6 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-ef" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event.test-y-sbm.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="emails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-ef" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event.test-y-sbm.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -334,12 +294,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-03072" summary="database">
-      <created>1458240483799</created>
-      <option name="number" value="03072" />
-      <option name="project" value="LOCAL" />
-      <updated>1458240483800</updated>
     </task>
     <task id="LOCAL-03073" summary="database">
       <created>1458240610197</created>
@@ -629,7 +583,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458286052375</updated>
     </task>
-    <option name="localTasksCounter" value="3121" />
+    <task id="LOCAL-03121" summary="database">
+      <created>1458286551178</created>
+      <option name="number" value="03121" />
+      <option name="project" value="LOCAL" />
+      <updated>1458286551178</updated>
+    </task>
+    <option name="localTasksCounter" value="3122" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1058,7 +1018,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="3536" max-vertical-offset="7973">
+        <state vertical-scroll-proportion="-48.384617" vertical-offset="2516" max-vertical-offset="7973">
           <caret line="222" column="195" selection-start-line="222" selection-start-column="11" selection-end-line="222" selection-end-column="195" />
           <folding>
             <element signature="e#38#51#0#PHP" expanded="true" />
@@ -1068,8 +1028,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6042403" vertical-offset="8634" max-vertical-offset="13175">
-          <caret line="765" column="46" selection-start-line="765" selection-start-column="46" selection-end-line="765" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.4540636" vertical-offset="8634" max-vertical-offset="13192">
+          <caret line="760" column="42" selection-start-line="760" selection-start-column="42" selection-end-line="760" selection-end-column="42" />
           <folding>
             <element signature="e#39#52#0#PHP" expanded="true" />
             <element signature="e#440#7787#0#PHP" expanded="false" />
