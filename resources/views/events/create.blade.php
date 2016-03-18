@@ -505,7 +505,7 @@
                         splits = locale.replace(/[/.,!-?;]*/g, '');
                         console.log(splits);
 
-                        splits = locale.split(' ');
+                        splits = splits.split(' ');
 
                         console.log(splits);
 //
