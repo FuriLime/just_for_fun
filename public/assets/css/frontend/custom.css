@@ -1005,6 +1005,11 @@ footer .btn-primary.text-white {
 .content.event-show .input-group{
     margin-bottom: 15px;
 }
+.share42-item{
+    width: 30px !important;
+    height: 30px !important;
+    background-size: cover;
+}
 @media(max-width:600px){
     #add_event label {
         width:auto;
