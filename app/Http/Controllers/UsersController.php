@@ -754,10 +754,10 @@ class UsersController extends JoshController
                         'deleteUrl' => 'http://event.test-y-sbm.com/admin/users/'.$user->id.'/delete?delete_code='.$delete_code,
                 );
 //
-                Mail::send('emails.register-activate', $data, function ($m) use ($user) {
-                    $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-                    $m->subject('Hello ' . $user->first_name);
-                });
+//                Mail::send('emails.register-activate', $data, function ($m) use ($user) {
+//                    $m->to($user->email, $user->first_name . ' ' . $user->last_name);
+//                    $m->subject('Hello ' . $user->first_name);
+//                });
                 return Redirect::route('home')->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would delete your account.');
 
                 if($_GET) {
