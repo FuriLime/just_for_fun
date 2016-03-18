@@ -706,7 +706,7 @@ class EventsController extends Controller {
                     $timezone.
                     '&sprop=website:'.route('events.show',$uuid).
                     '&location='.$event['location'].'&pli=1&uid=&sf=true&output=xml'.
-                    '&details='.json_encode($event['description']);
+                    '&details='.$desc;
                 break;
 
             case 'Yahoo':
