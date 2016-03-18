@@ -503,9 +503,10 @@
                     if (results[0]) {
                         locale = results[0].formatted_address;
                         splits = locale.replace(/[/.,!-?;]*/g, '');
+                        console.log(splits);
 
                         splits = locale.split(' ');
-                        console.log(locale);
+
                         console.log(splits);
 //
                         if (splits.length == 2) {
