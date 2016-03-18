@@ -686,7 +686,7 @@ class EventsController extends Controller {
         $minuteDifference = (int) ($difference / 60);
         $hourDifference = (int) ($minuteDifference / 60);
         $minutesLeft = $minuteDifference - $hourDifference * 60;
-
+        $desc = json_encode($event['description']);
         if ($hourDifference > 99) { $duration = '9900'; }
         else {
             if ($hourDifference < 10) { $hourDifference = '0'.$hourDifference; }
@@ -725,8 +725,7 @@ class EventsController extends Controller {
                 break;
 
             case 'Microsoft':
-                $desc = json_encode($event['description']);
-               var_dump($desc);
+
                 $result = 'success';
                 $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='.
                     $event_start_zero->format('Ymd').'T'.
