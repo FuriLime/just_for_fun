@@ -92,27 +92,58 @@ class EventsController extends Controller {
             $my_time_zone = session()->get('timezone');
         }
 
+        $duration = strtotime($finish_date) - strtotime($start_date);
+        //hours
+        if ($duration>= 3600 && $duration < 86400){
+            if(($duration% 3600) == 0){
+                $duration_day= 0 .'d';
+                $duration_hour=( $duration / 3600 ) % 24 .'h';
+                $duration_min=0 .'m';
+            }else {
+                $duration_day= 0 .'d';
+                $duration_hour=( $duration / 3600 ) % 24 .'h';
+                $duration_min=( $duration/ 60 ) % 60 .'m';
+            }
+
+        }
+        //days
+        else if ($duration >= 86400) {
+            if($duration%86400==0){
+                $duration_day= ($duration / 86400 ) % 30 .'d';
+                $duration_hour=0 .'h';
+                $duration_min=0 .'m';
+            }else {
+                $duration_day=($duration / 86400 ) % 30 .'d';
+                $duration_hour=( $duration / 3600 ) % 24 .'h';
+                $duration_min=( $duration/ 60 ) % 60 .'m';
+            }
+
+
+        }else{
+            $duration_day= 0 .'d';
+            $duration_hour=0 .'h';
+            $duration_min=0 .'m';
+        }
+
         Session::forget('timezone');
         Session::forget('start');
         Session::forget('finish');
 
         // Is the user logged in?
         if (Sentinel::check()) {
-//      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
-            // for bootstrap-datepicker
-            //registered user
-//                $start_date_tmp = strtotime("+1 day");
             if(Sentinel::getUser()->timezone){
                 $user_timezone = Sentinel::getUser()->timezone;
             } else{
                 $user_timezone = $my_time_zone;
             }
-
-            return view('events.create', array(
+                 return view('events.create', array(
                 'timezone_select' => $timezone_select,
                 'start_date' => $start_date,
                 'finish_date' => $finish_date,
                 'user_timezone' => $user_timezone,
+                'duration_min' => $duration_min,
+                'duration_hour' => $duration_hour,
+                'duration_day' => $duration_day,
             ));
 //      }
         } else {
@@ -125,6 +156,9 @@ class EventsController extends Controller {
                 'start_date' => $start_date,
                 'finish_date' => $finish_date,
                 'user_timezone' => $user_timezone,
+                'duration_min' => $duration_min,
+                'duration_hour' => $duration_hour,
+                'duration_day' => $duration_day,
             ));
         }
     }
@@ -222,8 +256,7 @@ class EventsController extends Controller {
             Session::forget('start');
             Session::forget('finish');
 
-            return redirect('events')->with('success', Lang::get('message.success.create'));
-
+            return redirect('confirm');
         } else {
             $store_info->save();
             Session::forget('timezone');
@@ -281,6 +314,15 @@ class EventsController extends Controller {
      */
     public function edit($uuid)
     {
+        if(session()->get('start')) {
+            $event['start'] = session()->get('start');
+        }
+        if(session()->get('finish')) {
+            $event['finish'] = session()->get('finish');
+        }
+        if(session()->get('timezone')) {
+            $event['timezone'] = session()->get('timezone');
+        }
         //$event = Event::findOrFail($id);
         $event = Event::whereUuid($uuid)->first();
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
@@ -291,9 +333,57 @@ class EventsController extends Controller {
         $event_finish_zero = $date;
         $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
         // for bootstrap-datepicker
-        $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
-        $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
+
+        if(session()->get('start')) {
+            $event['start'] = session()->get('start');
+        }else {
+            $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
+        }
+        if(session()->get('start')) {
+            $event['finish'] = session()->get('finish');
+        }else {
+            $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
+        }
+
+        if(session()->get('timezone')) {
+            $event['timezone'] = session()->get('timezone');
+        }else {
+            $event['timezone'] = $event['timezone'];
+        }
 //        $event['timezone'] =$event['timezone'];
+        $event['duration'] = strtotime($event['finish']) - strtotime($event['start']);
+
+
+        //hours
+        if ($event['duration']>= 3600 && $event['duration'] < 86400) {
+            if (($event['duration'] % 3600) == 0) {
+                $event['duration_day'] = 0 . 'd';
+                $event['duration_hour'] = ($event['duration'] / 3600) % 24 . 'h';
+                $event['duration_min'] = 0 . 'm';
+            }else {
+                $event['duration_day'] = 0 . 'd';
+                $event['duration_hour'] = ($event['duration'] / 3600) % 24 . 'h';
+                $event['duration_min'] = ($event['duration'] / 60) % 60 . 'm';
+            }
+            //days
+            }else if ($event['duration'] >= 86400) {
+                if($event['duration']%86400==0){
+                    $event['duration_day']= ($event['duration'] / 86400 ) % 30 .'d';
+                    $event['duration_hour']=0 .'h';
+                    $event['duration_min']=0 .'m';
+                }else {
+                    $event['duration_day']=($event['duration'] / 86400 ) % 30 .'d';
+                    $event['duration_hour']=( $event['duration'] / 3600 ) % 24 .'h';
+                    $event['duration_min']=( $event['duration']/ 60 ) % 60 .'m';
+                }
+            }else{
+            $event['duration_day']= 0 .'d';
+            $event['duration_hour']=0 .'h';
+            $event['duration_min']=0 .'m';
+            }
+        Session::forget('start');
+        Session::forget('finish');
+        Session::forget('timezone');
         return view('events.create', compact('event'));
     }
 
@@ -305,6 +395,19 @@ class EventsController extends Controller {
      */
     public function update($uuid, Request $request)
     {
+        if(isset($_POST['timezone'])) {
+            session()->put('timezone', $_POST['timezone']);
+        }
+        if(isset($_POST['start'])) {
+            session()->put('start', $_POST['start']);
+        }
+        if(isset($_POST['finish'])) {
+            session()->put('finish', $_POST['finish']);
+        }
+        if(isset($_POST['timezone'])) {
+            session()->put('timezone', $_POST['timezone']);
+        }
+
         $this->validate($request, [
             'title' => 'required|max:80',
             'description' => 'max:500',
@@ -353,6 +456,16 @@ class EventsController extends Controller {
     }
     public function cloned($uuid)
     {
+
+        if(session()->get('start')) {
+            $event['start'] = session()->get('start');
+        }
+        if(session()->get('finish')) {
+            $event['finish'] = session()->get('finish');
+        }
+        if(session()->get('timezone')) {
+            $event['timezone'] = session()->get('timezone');
+        }
         //$event = Event::findOrFail($id);
         $event = Event::whereUuid($uuid)->first();
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
@@ -366,12 +479,75 @@ class EventsController extends Controller {
         $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
+
+
+        if(session()->get('start')) {
+            $event['start'] = session()->get('start');
+        }else {
+            $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
+        }
+        if(session()->get('start')) {
+            $event['finish'] = session()->get('finish');
+        }else {
+            $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
+        }
+
+        if(session()->get('timezone')) {
+            $event['timezone'] = session()->get('timezone');
+        }else {
+            $event['timezone'] = $event['timezone'];
+        }
+        $event['duration'] = strtotime($event['finish']) - strtotime($event['start']);
+        //hours
+        if ($event['duration']>= 3600 && $event['duration'] < 86400) {
+            if (($event['duration'] % 3600) == 0) {
+                $event['duration_day'] = 0 . 'd';
+                $event['duration_hour'] = ($event['duration'] / 3600) % 24 . 'h';
+                $event['duration_min'] = 0 . 'm';
+            }else {
+                $event['duration_day'] = 0 . 'd';
+                $event['duration_hour'] = ($event['duration'] / 3600) % 24 . 'h';
+                $event['duration_min'] = ($event['duration'] / 60) % 60 . 'm';
+            }
+            //days
+        }else if ($event['duration'] >= 86400) {
+            if($event['duration']%86400==0){
+                $event['duration_day']= ($event['duration'] / 86400 ) % 30 .'d';
+                $event['duration_hour']=0 .'h';
+                $event['duration_min']=0 .'m';
+            }else {
+                $event['duration_day']=($event['duration'] / 86400 ) % 30 .'d';
+                $event['duration_hour']=( $event['duration'] / 3600 ) % 24 .'h';
+                $event['duration_min']=( $event['duration']/ 60 ) % 60 .'m';
+            }
+        }else{
+            $event['duration_day']= 0 .'d';
+            $event['duration_hour']=0 .'h';
+            $event['duration_min']=0 .'m';
+        }
+
+        Session::forget('start');
+        Session::forget('finish');
+        Session::forget('timezone');
+
         return view('events.clone', compact('event'));
     }
 
 
     public function clonne($uuid, Request $request)
     {
+        if(isset($_POST['timezone'])) {
+            session()->put('timezone', $_POST['timezone']);
+        }
+        if(isset($_POST['start'])) {
+            session()->put('start', $_POST['start']);
+        }
+        if(isset($_POST['finish'])) {
+            session()->put('finish', $_POST['finish']);
+        }
+        if(isset($_POST['timezone'])) {
+            session()->put('timezone', $_POST['timezone']);
+        }
         $this->validate($request, [
             'title' => 'required|max:80',
             'description' => 'max:500',

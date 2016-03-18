@@ -65,7 +65,7 @@
 
                         <div class="form-group" id="descprip" style="display: none">
                             <label for="description">@lang('frontend.description')</label>
-                            <textarea class="textarea form-control" type="textarea" id="description" name="description", maxlength="500" value="{{$event['description']}}">{{$event['description']}}</textarea>
+                            <textarea class="textarea form-control" type="textarea" id="description" name="description", maxlength="500">{{$event['description']}}</textarea>
 {{--                            {!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}--}}
                             <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                             {{--<button type="button" class="btn btn-warning " title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title">!</button>--}}
@@ -98,7 +98,7 @@
 
 
                         <div class="form-group add_event_section_link" id="change_time_zone">
-                            <span>Timezone is {{@isset($event)? $event['timezone'] : $user_timezone}}. Default duration is 1h. <a id="time_change">Change here.</a></span>
+                            <span>Timezone is {{$event['timezone']}}. Duration is {{$event['duration_day']}} {{$event['duration_hour']}} {{$event['duration_min']}}. <a id="time_change">Change here.</a></span>
                         </div>
                         <div class="form-group" id="end_time_event" style="display:none" >
                             <label for="start">@lang('frontend.enddate')</label>
@@ -248,6 +248,11 @@
 
     <script>
         $(document).ready(function() {
+            if($("#description").text().length != 0 ){
+                $('#descprip').attr('style', 'display:block');
+                $('#add_dicription').attr('style', 'display:none');
+                $('#hide_dicription').attr('style', 'display:block');
+            }
             var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
             console.log($('#select2-timezone-container').val());
             {{--if('{{$event}}'!= null){--}}
@@ -274,14 +279,19 @@
                 controlType: 'select',
                 minDate: nowtimedate
             });
+            $("#datefinish").datetimepicker("remove");
+            var start_date = new Date($('#start').val());
+            var end_date = new Date(start_date);
+            end_date.setHours(start_date.getHours() + 1);
+            end_date = end_date.format('Y/m/d H:i');
+
             $("#datefinish").datetimepicker({
-                onSelect: function() {alert('sdfsdfsdf')},
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
                 todayBtn: true,
                 controlType: 'select',
-                startDate: $('#finish').val(),
-                minDate: $('#finish').val(),
+                startDate: end_date,
+                minDate: end_date,
                 minuteStep: 10
 
             });
@@ -340,6 +350,9 @@
     <script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
     <script type="text/javascript">//<![CDATA[
 
+        if($("#adicription").val()!= null){
+            alert('sdfsdf');
+        }
         $("#add_dicription").click(function () {
             $('#descprip').attr('style', 'display:block');
             $('#add_dicription').attr('style', 'display:none');

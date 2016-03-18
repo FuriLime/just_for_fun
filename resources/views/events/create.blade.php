@@ -109,7 +109,12 @@
 
 
                          <div class="form-group add_event_section_link" id="change_time_zone">
-                            <span>Timezone is {{@isset($event)? $event['timezone'] : $user_timezone}}. Default duration is 1h. <a id="time_change">Change here.</a></span>
+                             @if (isset($event))
+                            <span>Timezone is {{$event['timezone']}}. Duration is {{$event['duration_day']}} {{$event['duration_hour']}} {{$event['duration_min']}}. <a id="time_change">Change here.</a></span>
+                             @else
+                            <span>Timezone is {{$user_timezone}}. Default duration is {{$duration_day}} {{$duration_hour}} {{$duration_min}}. <a id="time_change">Change here.</a></span>
+                             @endif
+{{--                            <span>Timezone is {{@isset($event)? $event['timezone'] : $user_timezone}}. Default duration is {{$event['duration_time']}} h. <a id="time_change">Change here.</a></span>--}}
                          </div>
         		<div class="form-group" id="end_time_event" style="display:none" >
                         <label for="start">@lang('frontend.enddate')</label>
@@ -283,7 +288,6 @@
         var nowtimedate = new Date();
         nowtimedate = nowtimedate.format('Y/m/d H:i');
         $("#datestart").datetimepicker({
-            onSelect: function() {alert('sdfsdfsdf')},
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
@@ -292,17 +296,23 @@
             controlType: 'select',
             minDate: nowtimedate
         });
+        $("#datefinish").datetimepicker("remove");
+        var start_date = new Date($('#start').val());
+        var end_date = new Date(start_date);
+        end_date.setHours(start_date.getHours() + 1);
+        end_date = end_date.format('Y/m/d H:i');
+
         $("#datefinish").datetimepicker({
-            onSelect: function() {alert('sdfsdfsdf')},
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
             controlType: 'select',
-            startDate: $('#finish').val(),
-            minDate: $('#start').val(),
+            startDate: end_date,
+            minDate: end_date,
             minuteStep: 10
 
         });
+
     });
 
     $('#start').on('change', function() {
@@ -339,6 +349,7 @@
     });
 
     $('#finish').on('change', function() {
+
         var start_date = new Date($('#start').val());
         var end_date = new Date($('#finish').val());
 
@@ -510,126 +521,125 @@
                     });
 
         $( document ).ready(function() {
-if($('#location').val()) {
+            if($('#location').val()) {
 //            $('#location').change(function () {
-    $('.locale').attr('style', 'display:none');
-    $('.fields_map').attr('style', 'display:block');
-    setTimeout(function get_timezone() {
-        var map;
-        var service;
-        var infowindow;
+                $('.locale').attr('style', 'display:none');
+                $('.fields_map').attr('style', 'display:block');
+                setTimeout(function get_timezone() {
+                    var map;
+                    var service;
+                    var infowindow;
 
-        function initialize2() {
-            map = new google.maps.Map(document.getElementById('map'));
-            var request = {
-                query: $('#location').val()
-            };
-            service = new google.maps.places.PlacesService(map);
-            service.textSearch(request, callback);
-        }
+                    function initialize2() {
+                        map = new google.maps.Map(document.getElementById('map'));
+                        var request = {
+                            query: $('#location').val()
+                        };
+                        service = new google.maps.places.PlacesService(map);
+                        service.textSearch(request, callback);
+                    }
 
-        function callback(results, status) {
-            if (status == google.maps.places.PlacesServiceStatus.OK) {
-                for (var i = 0; i < results.length; i++) {
-                    var place = results[i];
-                    break;
-                }
-                var locale = ($('#location').val());
-                var splits = '';
-                var sity = '';
-                var street = '';
-                var state = '';
-                var country = '';
-                var num_house = '';
+                    function callback(results, status) {
+                        if (status == google.maps.places.PlacesServiceStatus.OK) {
+                            for (var i = 0; i < results.length; i++) {
+                                var place = results[i];
+                                break;
+                            }
+                            var locale = ($('#location').val());
+                            var splits = '';
+                            var sity = '';
+                            var street = '';
+                            var state = '';
+                            var country = '';
+                            var num_house = '';
 
-                if (results[0]) {
-                    locale = results[0].formatted_address;
-                    splits = locale.split(',');
-                    console.log(locale);
+                            if (results[0]) {
+                                locale = results[0].formatted_address;
+                                splits = locale.split(',');
+                                console.log(splits);
 //
-                    if (splits.length == 2) {
-                        sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
-                        $('#street').val(sity);
-                        country = splits[1];
-                        $('#state').val(country);
-                        $('#country').attr('style', 'display:none');
-                        $('#state').attr('style', 'display:none');
-                    }
+                                if (splits.length == 2) {
+                                    sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
+                                    $('#street').val(sity);
+                                    country = splits[1];
+                                    $('#state').val(country);
+                                    $('#country').attr('style', 'display:none');
+                                    $('#state').attr('style', 'display:none');
+                                }
 
-                    if (splits.length == 3) {
-                        street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
-                        $('#street').val(num_house + ' ' + street);
-                        sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                        $('#city').val(sity);
-                        country = splits[2];
-                        $('#country').val(country);
-                        $('#state').attr('style', 'display:none');
-                        $('#city').attr('style', 'display:block');
-                        $('#street').attr('style', 'display:block');
-                        $('#country').attr('style', 'display:block');
-                    }
+                                if (splits.length == 3) {
+                                    street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
+                                    $('#street').val(num_house + ' ' + street);
+                                    sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
+                                    $('#city').val(sity);
+                                    country = splits[2];
+                                    $('#country').val(country);
+                                    $('#state').attr('style', 'display:none');
+                                    $('#city').attr('style', 'display:block');
+                                    $('#street').attr('style', 'display:block');
+                                    $('#country').attr('style', 'display:block');
+                                }
 
-                    if (splits.length >= 4) {
-                        if($.isNumeric(splits[1])){
-                            street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                            $('#street').val(street);
+                                if (splits.length >= 4) {
+                                    if($.isNumeric(splits[1])){
+                                        street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
+                                        $('#street').val(street);
 
 //                                street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                            sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
-                            $('#city').val(sity);
+                                        sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
+                                        $('#city').val(sity);
 
-                            state = splits[3].replace(/(^\s*)|(\s*)$/g, '');
-                            $('#state').val(state);
+                                        state = splits[3].replace(/(^\s*)|(\s*)$/g, '');
+                                        $('#state').val(state);
 
-//                            country = splits[4];
-//                            $('#country').val(country);
-                        }else{
-                            street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
-                            $('#street').val(street);
-                            sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                            $('#city').val(sity);
+                                        country = splits[4];
+                                        $('#country').val(country);
+                                    }else{
+                                        street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
+                                        $('#street').val(street);
+                                        sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
+                                        $('#city').val(sity);
 
-                            state = splits[2].replace(/(^\s*)|(\s*)$/g, '');
-                            $('#state').val(state);
+                                        state = splits[2].replace(/(^\s*)|(\s*)$/g, '');
+                                        $('#state').val(state);
 
-                            country = splits[3];
-                            $('#country').val(country);
+                                        country = splits[3];
+                                        $('#country').val(country);
+                                    };
+
+                                    $('#country').attr('style', 'display:block');
+                                    $('#state').attr('style', 'display:block');
+                                    $('#city').attr('style', 'display:block');
+                                    $('#street').attr('style', 'display:block');
+
+                                }
+                            }
+
+                            var place_id = place["place_id"];
+                            location_lat = place["geometry"]["location"].lat();
+                            location_lng = place["geometry"]["location"].lng();
+
+                            var pyrmont = new google.maps.LatLng(location_lat, location_lng);
+                            map = new google.maps.Map(document.getElementById('map'), {
+                                center: pyrmont,
+                                zoom: 15
+                            });
+                            var request = {
+                                query: $('#location').val()
+                            };
+                            var marker = new google.maps.Marker({
+                                position: pyrmont,
+                                map: map
+                            });
+                            service = new google.maps.places.PlacesService(map);
                         }
-
-                        $('#country').attr('style', 'display:block');
-                        $('#state').attr('style', 'display:block');
-                        $('#city').attr('style', 'display:block');
-                        $('#street').attr('style', 'display:block');
-
                     }
-                }
 
-                var place_id = place["place_id"];
-                location_lat = place["geometry"]["location"].lat();
-                location_lng = place["geometry"]["location"].lng();
-
-                var pyrmont = new google.maps.LatLng(location_lat, location_lng);
-                map = new google.maps.Map(document.getElementById('map'), {
-                    center: pyrmont,
-                    zoom: 15
-                });
-                var request = {
-                    query: $('#location').val()
-                };
-                var marker = new google.maps.Marker({
-                    position: pyrmont,
-                    map: map
-                });
-                service = new google.maps.places.PlacesService(map);
+                    initialize2();
+                }, 200);
             }
-        }
-
-        initialize2();
-    }, 200);
-}
         });
-	</script>
-
+    </script>
 	<script type="text/javascript">
 	$('#timezone').select2();
 //	$("#datestart").on("dp.change", function (e) {
