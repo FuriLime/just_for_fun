@@ -324,6 +324,13 @@
     <script>
     $(document).ready(function() {
 
+        $('.form-control').keydown(function (e) {
+            if (e.which === 13) {
+                //$(this).next('.inputs').focus();
+                $(this).closest('td').nextAll().eq(1).find('.form-control').focus()
+            }
+        });
+
         @if (isset($event))
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
         $('#select2-timezone-container').text('{{$event->timezone}}');
