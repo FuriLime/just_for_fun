@@ -761,10 +761,10 @@ class UsersController extends JoshController
                         $m->to($user->email, $user->first_name . ' ' . $user->last_name);
                         $m->subject('Hello ' . $user->first_name);
                     });
-                if ($_GET['delete_from_email'] == 1){
-                    Sentinel::logout();
-                    User::destroy($id);
-                }
+//                if ($_GET['delete_from_email'] == 1){
+//                    Sentinel::logout();
+//                    User::destroy($id);
+//                }
                              // Prepare the success message
                 $success = Lang::get('users/message.success.delete');
 //                return Redirect::route('home')->with('success', $success);
