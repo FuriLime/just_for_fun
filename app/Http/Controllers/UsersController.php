@@ -749,7 +749,6 @@ class UsersController extends JoshController
                 $delete_code = str_random(30);
                 if($_GET) {
                     if ($_GET['delete_code'] == $delete_code) {
-                        dd('sdfsdf');
                         User::destroy($id);
                         return Redirect::route('home')->with('success', 'You account was delete');
                     }
@@ -757,7 +756,7 @@ class UsersController extends JoshController
                 $data = array(
 //                        'user'          => $user,
 //                    'deleteUrl' => URL::route('delete', array('user_id' => $user->id, '?delete_code' => $delete_code)),
-                        'deleteUrl' => 'http://event.test-y-sbm.com/admin/users/'.$user->id.'delete?delete_code='.$delete_code,
+                        'deleteUrl' => 'http://event.test-y-sbm.com/admin/users/'.$user->id.'/delete?delete_code='.$delete_code,
                 );
 //
                 Mail::send('emails.register-activate', $data, function ($m) use ($user) {
