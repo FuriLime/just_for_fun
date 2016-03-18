@@ -313,7 +313,7 @@
          @if (isset($event_clone))
         $('#select2-timezone-container').attr('title', '{{$event_clone->timezone}}');
         $('#select2-timezone-container').text('{{$event_clone->timezone}}');
-        var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
+        var asd = $('#select2-timezone-container').attr('value', '{{$event_clone->timezone}}');
         $('#timezone option[value="{{$event_clone->timezone}}"]').attr('selected','selected');
         $('#active option[value="{{$event_clone->active}}"]').attr('selected','selected');
         @endif
