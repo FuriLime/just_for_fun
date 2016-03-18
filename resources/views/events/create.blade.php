@@ -296,6 +296,7 @@
             controlType: 'select',
             minDate: nowtimedate
         });
+        $("#datefinish").datetimepicker("remove");
         $("#datefinish").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
@@ -342,7 +343,7 @@
     });
 
     $('#finish').on('change', function() {
-        $("#datefinish").datetimepicker("remove");
+
         var start_date = new Date($('#start').val());
         var end_date = new Date($('#finish').val());
 
