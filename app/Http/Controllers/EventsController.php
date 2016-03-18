@@ -323,7 +323,7 @@ class EventsController extends Controller {
             $event['start'] = session()->get('start');
         }
         if(session()->get('finish')) {
-            $event['finish_date'] = session()->get('finish');
+            $event['finish'] = session()->get('finish');
         }
         //$event = Event::findOrFail($id);
         $event = Event::whereUuid($uuid)->first();
