@@ -296,7 +296,7 @@
             controlType: 'select',
             minDate: nowtimedate
         });
-        $("#datefinish").datetimepicker("remove");
+
         $("#datefinish").datetimepicker({
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
@@ -307,6 +307,7 @@
             minuteStep: 10
 
         });
+        $("#datefinish").datetimepicker("remove");
     });
 
     $('#start').on('change', function() {
