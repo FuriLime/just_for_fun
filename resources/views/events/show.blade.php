@@ -104,7 +104,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 				
 			</div>
 			
-      <div class="share42init"></div>
+      
 
 			
 			<div id="hidden_address">
@@ -122,6 +122,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 			</div>
 			
 		</div>
+		<div class="col-xs-12 share42init"></div>
 	</div>
 </div>
 
