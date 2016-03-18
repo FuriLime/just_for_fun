@@ -17,11 +17,8 @@ class MailController extends Controller
     public function getEmailSend()
     {
 
-        if (isset($_POST)) {
-            var_dump($_POST);
-        }
 
-        return view('welcome');
+
 //        return redirect()->route('oauthtwitter');
     }
 
@@ -31,7 +28,6 @@ class MailController extends Controller
             'email' => 'required|email|unique:users',
         ]);
 
-
-        return redirect()->route('welcome');
+        return view('oauthtwitter');
     }
 }
