@@ -753,18 +753,19 @@ class UsersController extends JoshController
                 $delete_code = str_random(30);
                 $data = array(
 //                        'user'          => $user,
-                        'deleteUrl' => URL::route('activate', array('user_id' => $user->id, 'delete_code' => $delete_code)),
-//                        'deleteUrl' => 'http://event.test-y-sbm.com/?delete_from_email=1',
+//                        'deleteUrl' => URL::route('activate', array('user_id' => $user->id, 'delete_code' => $delete_code)),
+                        'deleteUrl' => 'http://event.test-y-sbm.com/?delete=1',
                     );
 
                 Mail::send('emails.register-activate', $data, function ($m) use ($user) {
                         $m->to($user->email, $user->first_name . ' ' . $user->last_name);
                         $m->subject('Hello ' . $user->first_name);
                     });
-//                if ($_GET['delete_from_email'] == 1){
-//                    Sentinel::logout();
-//                    User::destroy($id);
-//                }
+                if ($_GET['delete'] == 1){
+                    dd('sdfsdf');
+                    Sentinel::logout();
+                    User::destroy($id);
+                }
                              // Prepare the success message
                 $success = Lang::get('users/message.success.delete');
 //                return Redirect::route('home')->with('success', $success);
