@@ -342,6 +342,7 @@
     });
 
     $('#finish').on('change', function() {
+        $("#datefinish").datetimepicker("remove");
         var start_date = new Date($('#start').val());
         var end_date = new Date($('#finish').val());
 
