@@ -42,7 +42,7 @@
                             @else
                             @lang('frontend.add_event_header')
                         @endif
-                        @endif
+
                     </h4>
                 </div>
                 <div class="panel-body">
@@ -53,7 +53,7 @@
                     @else
                         <h3 class="primary add_event_section_link">@lang('frontend.add_event_text')</h3>
                     @endif
-                    @endif
+
 
 
                     @if (isset($event))
