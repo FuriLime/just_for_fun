@@ -747,12 +747,7 @@ class UsersController extends JoshController
             if ($user->id === Sentinel::getUser()->id) {
                 // Prepare the error message
                 $delete_code = str_random(30);
-                if($_GET) {
-                    if ($_GET['delete_code'] == $delete_code) {
-                        User::destroy($id);
-                        return Redirect::route('home')->with('success', 'You account was delete');
-                    }
-                }
+
                 $data = array(
 //                        'user'          => $user,
 //                    'deleteUrl' => URL::route('delete', array('user_id' => $user->id, '?delete_code' => $delete_code)),
@@ -765,7 +760,12 @@ class UsersController extends JoshController
                 });
                 return Redirect::route('home')->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would delete your account.');
 
-
+                if($_GET) {
+                    if ($_GET['delete_code'] == $delete_code) {
+                        User::destroy($id);
+                        return Redirect::route('home')->with('success', 'You account was delete');
+                    }
+                }
                              // Prepare the success message
 //                return Redirect::route('home')->with('success', $success);
 
