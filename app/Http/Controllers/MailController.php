@@ -17,10 +17,6 @@ class MailController extends Controller
     public function getEmailSend()
     {
 
-        if (isset($_GET)) {
-            var_dump($_GET);
-        }
-$email = 'serg@adfsdf.codf';
         return view('welcome', compact('email'));
 //        return redirect()->route('oauthtwitter');
     }

@@ -215,6 +215,7 @@ Route::get('/oauthgoogle','googleController@oauthgoogle');
 
 Route::get('twitter',array('as' => 'twitter','uses' =>   'twitterController@twitter'));
 Route::get('oauthtwitter',array('as' => 'oauthtwitter','uses' =>  'twitterController@oauthtwitter'));
+Route::post('oauthtwitter',array('as' => 'oauthtwitter','uses' =>  'twitterController@oauthtwitter'));
 
 Route::get('/linked', 'LinkedController@linked');
 Route::get('/oauthlinked','LinkedController@oauthlinked');
