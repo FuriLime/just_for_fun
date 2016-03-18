@@ -753,8 +753,8 @@ class UsersController extends JoshController
                 $delete_code = str_random(30);
                 $data = array(
 //                        'user'          => $user,
-//                        'deleteUrl' => URL::route('activate', array('user_id' => $user->id, 'delete_code' => $delete_code)),
-                        'deleteUrl' => 'http://event.test-y-sbm.com/admin/users/125/delete?delete=1',
+                        'deleteUrl' => URL::route('delete', array('user_id' => $user->id, 'delete_code' => $delete_code)),
+//                        'deleteUrl' => 'http://event.test-y-sbm.com/admin/users/125/delete?{{$delete_code}}',
                     );
 
                 Mail::send('emails.register-activate', $data, function ($m) use ($user) {
@@ -762,7 +762,7 @@ class UsersController extends JoshController
                         $m->subject('Hello ' . $user->first_name);
                     });
 
-                if ($_GET['delete'] == 1){
+                if ($_GET['delete_code'] == $delete_code){
                     User::destroy($id);
                 }
                              // Prepare the success message
