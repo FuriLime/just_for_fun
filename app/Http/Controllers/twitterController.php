@@ -51,6 +51,7 @@ class twitterController extends Controller
 //        {
 //            return redirect()->route('welcome');
 //        }
+        dd($_GET['email']);
         $user = User::wheretwit_nick($userTwit->getNickName())->first();
 
         if(!$user){
@@ -63,7 +64,7 @@ class twitterController extends Controller
             else{
                 $userTwit->email = $_GET['email'];
             }
-            dd($_GET['email']);
+
 //            dd($_GET['email']);
             $user->email = $_GET['email'];
             $user->save();
