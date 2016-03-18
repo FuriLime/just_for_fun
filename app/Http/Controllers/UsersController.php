@@ -762,7 +762,8 @@ class UsersController extends JoshController
 //               User::destroy($id);
                              // Prepare the success message
                 $success = Lang::get('users/message.success.delete');
-                return Redirect::route('home')->with('success', $success);
+//                return Redirect::route('home')->with('success', $success);
+                return Redirect::route('home')->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
             }
 
             // Delete the user
