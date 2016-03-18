@@ -762,7 +762,7 @@ class UsersController extends JoshController
                         $m->subject('Hello ' . $user->first_name);
                     });
                 if ($_GET['delete_from_email'] == 1){
-                    dd('asdasdasd');
+                    Sentinel::logout();
                     User::destroy($id);
                 }
                              // Prepare the success message
