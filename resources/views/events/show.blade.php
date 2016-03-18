@@ -117,7 +117,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 			
 			<div id="hidden_address">
 				<div id="address">{{ $event['location'] }}</div>
-				<div style="width: 750px; height: 400px;" id="map_canvas"></div>
+				<div style=" height: 400px;" id="map_canvas"></div>
 			</div>
 			
 			
