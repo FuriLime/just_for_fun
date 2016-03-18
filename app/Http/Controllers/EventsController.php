@@ -686,7 +686,7 @@ class EventsController extends Controller {
         $minuteDifference = (int) ($difference / 60);
         $hourDifference = (int) ($minuteDifference / 60);
         $minutesLeft = $minuteDifference - $hourDifference * 60;
-        $desc = htmlentities($event['description']);
+        $desc = urlencode($event['description']);
         if ($hourDifference > 99) { $duration = '9900'; }
         else {
             if ($hourDifference < 10) { $hourDifference = '0'.$hourDifference; }
