@@ -320,6 +320,9 @@ class EventsController extends Controller {
         if(session()->get('finish')) {
             $event['finish'] = session()->get('finish');
         }
+        if(session()->get('timezone')) {
+            $event['timezone'] = session()->get('timezone');
+        }
         //$event = Event::findOrFail($id);
         $event = Event::whereUuid($uuid)->first();
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
@@ -375,6 +378,7 @@ class EventsController extends Controller {
             }
         Session::forget('start');
         Session::forget('finish');
+        Session::forget('timezone');
         return view('events.create', compact('event'));
     }
 
