@@ -754,13 +754,16 @@ class UsersController extends JoshController
                 $data = array(
 //                        'user'          => $user,
 //                        'deleteUrl' => URL::route('delete', array('user_id' => $user->id, 'delete_code' => $delete_code)),
-                        'deleteUrl' => 'http://event.test-y-sbm.com',
+                        'deleteUrl' => 'http://event.test-y-sbm.com?delete_from_email=1',
                     );
+
                 Mail::send('emails.register-activate', $data, function ($m) use ($user) {
                         $m->to($user->email, $user->first_name . ' ' . $user->last_name);
                         $m->subject('Hello ' . $user->first_name);
                     });
-               User::destroy($id);
+                if ($_GET('delete_from_email') ==1){
+                    User::destroy($id);
+                }
                              // Prepare the success message
                 $success = Lang::get('users/message.success.delete');
 //                return Redirect::route('home')->with('success', $success);
