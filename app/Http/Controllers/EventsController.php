@@ -131,10 +131,6 @@ class EventsController extends Controller {
 
         // Is the user logged in?
         if (Sentinel::check()) {
-//      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
-            // for bootstrap-datepicker
-            //registered user
-//                $start_date_tmp = strtotime("+1 day");
             if(Sentinel::getUser()->timezone){
                 $user_timezone = Sentinel::getUser()->timezone;
             } else{
@@ -260,8 +256,7 @@ class EventsController extends Controller {
             Session::forget('start');
             Session::forget('finish');
 
-            return redirect('events')->with('success', Lang::get('message.success.create'));
-
+            return redirect('confirm');
         } else {
             $store_info->save();
             Session::forget('timezone');
@@ -339,7 +334,12 @@ class EventsController extends Controller {
         $event_finish_zero = $date;
         $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
         // for bootstrap-datepicker
-        $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
+
+        if(session()->get('start')) {
+            $event['start'] = session()->get('start');
+        }else {
+            $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
+        }
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
         $event['duration'] = strtotime($event['finish']) - strtotime($event['start']);
