@@ -279,14 +279,19 @@
                 controlType: 'select',
                 minDate: nowtimedate
             });
+            $("#datefinish").datetimepicker("remove");
+            var start_date = new Date($('#start').val());
+            var end_date = new Date(start_date);
+            end_date.setHours(start_date.getHours() + 1);
+            end_date = end_date.format('Y/m/d H:i');
+
             $("#datefinish").datetimepicker({
-                onSelect: function() {alert('sdfsdfsdf')},
                 format: 'yyyy/mm/dd hh:ii',
                 autoclose: true,
                 todayBtn: true,
                 controlType: 'select',
-                startDate: $('#finish').val(),
-                minDate: $('#finish').val(),
+                startDate: end_date,
+                minDate: end_date,
                 minuteStep: 10
 
             });
