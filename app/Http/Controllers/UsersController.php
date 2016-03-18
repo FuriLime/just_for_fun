@@ -741,8 +741,9 @@ class UsersController extends JoshController
      * @param  int      $id
      * @return Redirect
      */
-    public function getDelete($id = null)
+    public function getDelete($id = null, Request $request)
     {
+        $request->all();
         try {
             // Get user information
             $user = Sentinel::findById($id);
@@ -761,7 +762,7 @@ class UsersController extends JoshController
                         $m->to($user->email, $user->first_name . ' ' . $user->last_name);
                         $m->subject('Hello ' . $user->first_name);
                     });
-                if ($_GET['delete_from_email'] ==1){
+                if ($request ==1){
                     User::destroy($id);
                 }
                              // Prepare the success message
