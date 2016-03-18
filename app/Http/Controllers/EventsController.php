@@ -456,6 +456,16 @@ class EventsController extends Controller {
     }
     public function cloned($uuid)
     {
+
+        if(session()->get('start')) {
+            $event['start'] = session()->get('start');
+        }
+        if(session()->get('finish')) {
+            $event['finish'] = session()->get('finish');
+        }
+        if(session()->get('timezone')) {
+            $event['timezone'] = session()->get('timezone');
+        }
         //$event = Event::findOrFail($id);
         $event = Event::whereUuid($uuid)->first();
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
@@ -471,7 +481,22 @@ class EventsController extends Controller {
 //        $event['timezone'] =$event['timezone'];
         $event['duration'] = strtotime($event['finish']) - strtotime($event['start']);
 
+        if(session()->get('start')) {
+            $event['start'] = session()->get('start');
+        }else {
+            $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
+        }
+        if(session()->get('start')) {
+            $event['finish'] = session()->get('finish');
+        }else {
+            $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
+        }
 
+        if(session()->get('timezone')) {
+            $event['timezone'] = session()->get('timezone');
+        }else {
+            $event['timezone'] = $event['timezone'];
+        }
         //hours
         if ($event['duration']>= 3600 && $event['duration'] < 86400) {
             if (($event['duration'] % 3600) == 0) {
@@ -499,12 +524,29 @@ class EventsController extends Controller {
             $event['duration_hour']=0 .'h';
             $event['duration_min']=0 .'m';
         }
+
+        Session::forget('start');
+        Session::forget('finish');
+        Session::forget('timezone');
+
         return view('events.clone', compact('event'));
     }
 
 
     public function clonne($uuid, Request $request)
     {
+        if(isset($_POST['timezone'])) {
+            session()->put('timezone', $_POST['timezone']);
+        }
+        if(isset($_POST['start'])) {
+            session()->put('start', $_POST['start']);
+        }
+        if(isset($_POST['finish'])) {
+            session()->put('finish', $_POST['finish']);
+        }
+        if(isset($_POST['timezone'])) {
+            session()->put('timezone', $_POST['timezone']);
+        }
         $this->validate($request, [
             'title' => 'required|max:80',
             'description' => 'max:500',
