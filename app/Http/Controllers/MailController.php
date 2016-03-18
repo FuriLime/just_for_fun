@@ -91,7 +91,6 @@ class MailController extends Controller
         $this->validate($request, [
             'email'  => 'required|email|unique:users',
     ]);
-dd($_GET);
         return redirect()->route('oauthtwitter');
 
     }
