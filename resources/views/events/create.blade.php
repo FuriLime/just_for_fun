@@ -328,7 +328,7 @@
             if (e.which === 13) {
                 e.preventDefault();
                 var index = $('.form-control').index(this) + 1;
-                $('.form-control').eq(index).show().focus();
+                $('.form-control').eq(index).attr("style", "display: block").focus();
             }
         });
         @if (isset($event))
