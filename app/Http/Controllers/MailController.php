@@ -27,6 +27,5 @@ class MailController extends Controller
             'email' => 'required|email|unique:users',
         ]);
         $email = $_POST['email'];
-        return view('welcome', compact('email'));
     }
 }
