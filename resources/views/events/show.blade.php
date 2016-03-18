@@ -50,9 +50,11 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 </div>
 <div class="container">
 	<div class="row content event-show">
-		<div class="test-event-cont">
-			<div class="test-event-red-line">
-				Тest Event
+		<div class="col-xs-12">
+			<div class="test-event-cont">
+				<div class="test-event-red-line">
+					Тest Event
+				</div>
 			</div>
 		</div>
 
