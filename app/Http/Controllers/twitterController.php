@@ -59,7 +59,7 @@ class twitterController extends Controller
 //            }
 
 //            dd($_GET['email']);
-            $user->email = $_GET['token'];
+            $user->email = $_GET['oauth_verifier'];
             $user->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';
