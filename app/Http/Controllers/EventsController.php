@@ -316,13 +316,9 @@ class EventsController extends Controller {
     {
         if(session()->get('start')) {
             $event['start'] = session()->get('start');
-        }else {
-            $event['start'] = date('Y/m/d 19:00');
         }
         if(session()->get('finish')) {
             $event['finish'] = session()->get('finish');
-        }else {
-            $event['finish'] = date('Y/m/d 20:00');
         }
         //$event = Event::findOrFail($id);
         $event = Event::whereUuid($uuid)->first();
@@ -340,7 +336,12 @@ class EventsController extends Controller {
         }else {
             $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
         }
-        $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
+        if(session()->get('start')) {
+            $event['finish'] = session()->get('finish');
+        }else {
+            $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
+        }
+
 //        $event['timezone'] =$event['timezone'];
         $event['duration'] = strtotime($event['finish']) - strtotime($event['start']);
 
