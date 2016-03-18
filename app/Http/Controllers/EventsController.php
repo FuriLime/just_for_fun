@@ -587,7 +587,7 @@ class EventsController extends Controller {
         $event_clone['City'] = $store_info['City'];
         $event_clone['State'] = $store_info['State'];
         $event_clone['Country'] = $store_info['Country'];
-//        $event['status'] = $store_info['status'];
+        $event_clone['status'] =  Input::get('test');
 
         $date = new \DateTime($store_info['start'], new \DateTimeZone($event_clone['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
