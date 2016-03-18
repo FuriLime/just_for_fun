@@ -1005,7 +1005,12 @@ footer .btn-primary.text-white {
 .content.event-show .input-group{
     margin-bottom: 15px;
 }
-
+.add-to-calendar-btn{
+    margin: 0 15px;
+}
+.see-details-btn{
+    color: #2f8fce;
+}
 @media(max-width:600px){
     #add_event label {
         width:auto;

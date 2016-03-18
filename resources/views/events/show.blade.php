@@ -122,7 +122,8 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 			</div>
 			
 		</div>
-		<div class="col-xs-12 share42init"></div>
+		<div class="text-center">Share this event</div>
+		<div class="col-xs-12 text-center share42init"></div>
 	</div>
 </div>
 
