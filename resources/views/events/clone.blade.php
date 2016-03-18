@@ -248,7 +248,7 @@
 
     <script>
         $(document).ready(function() {
-            if($("#adicription").val()!= null){
+            if($("#adicription").val().length != 0 ){
                 alert('sdfsdf');
             }
             var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
