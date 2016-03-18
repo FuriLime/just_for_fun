@@ -750,8 +750,8 @@ class UsersController extends JoshController
 
                 $data = array(
 //                        'user'          => $user,
-//                    'deleteUrl' => URL::route('delete', array('user_id' => $user->id, '?delete_code' => $delete_code)),
-                        'deleteUrl' =>'/admin/users/'.$user->id.'/delete?delete_code='.$delete_code,
+                    'deleteUrl' => URL::route('delete', array('user_id' => $user->id, '?delete_code' => $delete_code)),
+//                        'deleteUrl' =>'/admin/users/'.$user->id.'/delete?delete_code='.$delete_code,
                 );
  if($_GET) {
                 if ($_GET['delete_code'] == $delete_code) {
