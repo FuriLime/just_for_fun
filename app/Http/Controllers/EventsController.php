@@ -92,6 +92,39 @@ class EventsController extends Controller {
             $my_time_zone = session()->get('timezone');
         }
 
+        $duration = strtotime($finish_date) - strtotime($start_date);
+        //hours
+        if ($duration>= 3600 && $duration < 86400){
+            if(($duration% 3600) == 0){
+                $duration_day= 0 .'d';
+                $duration_hour=( $duration / 3600 ) % 24 .'h';
+                $duration_min=0 .'m';
+            }else {
+                $duration_day= 0 .'d';
+                $duration_hour=( $duration / 3600 ) % 24 .'h';
+                $duration_min=( $duration/ 60 ) % 60 .'m';
+            }
+
+        }
+        //days
+        else if ($duration >= 86400) {
+            if($duration%86400==0){
+                $duration_day= ($duration / 86400 ) % 30 .'d';
+                $duration_hour=0 .'h';
+                $duration_min=0 .'m';
+            }else {
+                $duration_day=($duration / 86400 ) % 30 .'d';
+                $duration_hour=( $duration / 3600 ) % 24 .'h';
+                $duration_min=( $duration/ 60 ) % 60 .'m';
+            }
+
+
+        }else{
+            $duration_day= 0 .'d';
+            $duration_hour=0 .'h';
+            $duration_min=0 .'m';
+        }
+
         Session::forget('timezone');
         Session::forget('start');
         Session::forget('finish');
@@ -107,39 +140,6 @@ class EventsController extends Controller {
             } else{
                 $user_timezone = $my_time_zone;
             }
-            $duration = strtotime($finish_date) - strtotime($start_date);
-            //hours
-            if ($duration>= 3600 && $duration < 86400){
-                if(($duration% 3600) == 0){
-                    $duration_day= 0 .'d';
-                    $duration_hour=( $duration / 3600 ) % 24 .'h';
-                    $duration_min=0 .'m';
-                }else {
-                    $duration_day= 0 .'d';
-                    $duration_hour=( $duration / 3600 ) % 24 .'h';
-                    $duration_min=( $duration/ 60 ) % 60 .'m';
-                }
-
-            }
-            //days
-            else if ($duration >= 86400) {
-                if($duration%86400==0){
-                    $duration_day= ($duration / 86400 ) % 30 .'d';
-                    $duration_hour=0 .'h';
-                    $duration_min=0 .'m';
-                }else {
-                    $duration_day=($duration / 86400 ) % 30 .'d';
-                    $duration_hour=( $duration / 3600 ) % 24 .'h';
-                    $duration_min=( $duration/ 60 ) % 60 .'m';
-                }
-
-
-            }else{
-                $duration_day= 0 .'d';
-                $duration_hour=0 .'h';
-                $duration_min=0 .'m';
-            }
-
                  return view('events.create', array(
                 'timezone_select' => $timezone_select,
                 'start_date' => $start_date,
@@ -160,6 +160,9 @@ class EventsController extends Controller {
                 'start_date' => $start_date,
                 'finish_date' => $finish_date,
                 'user_timezone' => $user_timezone,
+                'duration_min' => $duration_min,
+                'duration_hour' => $duration_hour,
+                'duration_day' => $duration_day,
             ));
         }
     }
