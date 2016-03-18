@@ -530,7 +530,7 @@ class EventsController extends Controller {
         Session::forget('finish');
         Session::forget('timezone');
 
-        return view('events.clone', compact('event'));
+        return view('events.create', compact('event_clone'));
     }
 
 
