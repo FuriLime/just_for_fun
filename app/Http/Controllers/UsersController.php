@@ -756,9 +756,9 @@ class UsersController extends JoshController
  if($_GET) {
                 if ($_GET['delete_code'] == $delete_code) {
                     User::destroy($id);
-                    if(!$user) {
+
                         return Redirect::route('home')->with('success', 'You account was delete');
-                    }
+
                 }
             }else {
      Mail::send('emails.register-activate', $data, function ($m) use ($user) {
