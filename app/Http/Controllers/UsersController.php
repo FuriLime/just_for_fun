@@ -759,7 +759,7 @@ class UsersController extends JoshController
                         $m->to($user->email, $user->first_name . ' ' . $user->last_name);
                         $m->subject('Welcome ' . $user->first_name);
                     });
-               User::destroy($id);
+//               User::destroy($id);
                              // Prepare the success message
                 $success = Lang::get('users/message.success.delete');
                 return Redirect::route('home')->with('success', $success);

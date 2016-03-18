@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/emails/register-activate.blade.php" afterPath="$PROJECT_DIR$/resources/views/emails/register-activate.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -39,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5" vertical-offset="8481" max-vertical-offset="13158">
-              <caret line="755" column="34" selection-start-line="755" selection-start-column="25" selection-end-line="755" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.6042403" vertical-offset="8583" max-vertical-offset="13158">
+              <caret line="762" column="17" selection-start-line="762" selection-start-column="17" selection-end-line="762" selection-end-column="17" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
                 <element signature="e#440#7787#0#PHP" expanded="false" />
@@ -52,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register-activate.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="register-activate.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/emails/register-activate.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24204947" vertical-offset="3331" max-vertical-offset="5236">
+            <state vertical-scroll-proportion="-5.269231" vertical-offset="3331" max-vertical-offset="5236">
               <caret line="204" column="83" selection-start-line="204" selection-start-column="83" selection-end-line="204" selection-end-column="83" />
               <folding />
             </state>
@@ -142,8 +141,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/public/assets/js/event.js" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/resources/views/emails/register-activate.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
       </list>
     </option>
   </component>
@@ -333,12 +332,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-03070" summary="database">
-      <created>1458240340861</created>
-      <option name="number" value="03070" />
-      <option name="project" value="LOCAL" />
-      <updated>1458240340861</updated>
     </task>
     <task id="LOCAL-03071" summary="database">
       <created>1458240447452</created>
@@ -628,7 +621,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458285771204</updated>
     </task>
-    <option name="localTasksCounter" value="3119" />
+    <task id="LOCAL-03119" summary="database">
+      <created>1458285982332</created>
+      <option name="number" value="03119" />
+      <option name="project" value="LOCAL" />
+      <updated>1458285982332</updated>
+    </task>
+    <option name="localTasksCounter" value="3120" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1055,22 +1054,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/emails/register-activate.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.269231" vertical-offset="3331" max-vertical-offset="5236">
+          <caret line="204" column="83" selection-start-line="204" selection-start-column="83" selection-end-line="204" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5" vertical-offset="8481" max-vertical-offset="13158">
-          <caret line="755" column="34" selection-start-line="755" selection-start-column="25" selection-end-line="755" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.6042403" vertical-offset="8583" max-vertical-offset="13158">
+          <caret line="762" column="17" selection-start-line="762" selection-start-column="17" selection-end-line="762" selection-end-column="17" />
           <folding>
             <element signature="e#39#52#0#PHP" expanded="true" />
             <element signature="e#440#7787#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/emails/register-activate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24204947" vertical-offset="3331" max-vertical-offset="5236">
-          <caret line="204" column="83" selection-start-line="204" selection-start-column="83" selection-end-line="204" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
