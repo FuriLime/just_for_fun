@@ -753,7 +753,7 @@ class UsersController extends JoshController
                 $delete_code = str_random(30);
                 $data = array(
 //                        'user'          => $user,
-                        'deleteUrl' => URL::route('delete', array('user_id' => $user->id, '?delete_code' => $delete_code)),
+                        'deleteUrl' => URL::route('delete', array('user_id' => $user->id, 'delete_code','?delete_code' => $delete_code)),
 //                        'deleteUrl' => 'http://event.test-y-sbm.com/admin/users/125/delete?{{$delete_code}}',
                     );
 
