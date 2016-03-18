@@ -210,12 +210,17 @@
                          </div>
 
                          <div class="form-group fields_loc">
+                             @if(isset($event_clone))
+                                 <input class="form-control" size="16" id="state" name="State" type="State", readonly="readonly", maxlength="255", value="{{$event_clone['State']}}">
+
+                             @else
                              {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}
+                             @endif
                          </div>
 
                          <div class="form-group fields_loc">
                              @if(isset($event_clone))
-                                 <input class="form-control" size="16" id="state" name="State" type="State", readonly="readonly", maxlength="255", value="{{$event['State']}}">
+                                 <input class="form-control" size="16" id="country" name="Country" type="Country", readonly="readonly", maxlength="255", value="{{$event_clone['Country']}}">
                              @else
                              {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}
                              @endif
