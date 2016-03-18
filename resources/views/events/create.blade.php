@@ -501,6 +501,7 @@
                     if (results[0]) {
                         locale = results[0].formatted_address;
                         splits = locale.split('-');
+                        splits = locale.split(',');
                         console.log(locale);
 //
                         if (splits.length == 2) {
