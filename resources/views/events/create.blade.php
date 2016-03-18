@@ -4,12 +4,12 @@
 @section('title')
     @if (isset($event))
         @lang('frontend.edit_event_header')
-    @else
+    @elseif(isset($event_clone))
+        @lang('frontend.clone_event_header')
+        @else
         @lang('frontend.add_event_header')
     @endif
-    @if(isset($event_clone))
-        @lang('frontend.clone_event_header')
-        @endif
+    @endif
 @parent
 @stop
 
