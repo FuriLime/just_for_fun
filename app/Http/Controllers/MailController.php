@@ -20,7 +20,7 @@ class MailController extends Controller
         if (isset($_GET)) {
             var_dump($_GET);
         }
-
+$email = 'serg@adfsdf.codf';
         return view('oauthtwitter', compact('email'));
 //        return redirect()->route('oauthtwitter');
     }
@@ -30,5 +30,8 @@ class MailController extends Controller
         $this->validate($request, [
             'email' => 'required|email|unique:users',
         ]);
+        if (isset($_GET)) {
+            var_dump($_GET);
+        }
     }
 }
