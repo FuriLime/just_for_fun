@@ -498,13 +498,15 @@
                     var state = '';
                     var country = '';
                     var num_house = '';
+                    var asdas = '';
 
                     if (results[0]) {
                         locale = results[0].formatted_address;
-                        var asdas = locale.replace(/,-./g,"");
-                        console.log(asdas);
+                        asdas = locale.replace(/,-./g,"");
+
                         splits = locale.split(',');
                         console.log(locale);
+                        console.log(asdas);
 //
                         if (splits.length == 2) {
                             sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
