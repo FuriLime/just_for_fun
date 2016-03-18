@@ -30,8 +30,6 @@ $email = 'serg@adfsdf.codf';
         $this->validate($request, [
             'email' => 'required|email|unique:users',
         ]);
-        if (isset($_GET)) {
-            var_dump($_GET);
-        }
+
     }
 }
