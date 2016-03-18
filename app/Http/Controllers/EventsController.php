@@ -726,6 +726,7 @@ class EventsController extends Controller {
 
             case 'Microsoft':
                 $desc = json_encode($event['description']);
+                dd($desc);
                 $result = 'success';
                 $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='.
                     $event_start_zero->format('Ymd').'T'.
