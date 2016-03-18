@@ -38,29 +38,43 @@
                     <h4 class="panel-title"> <i class="livicon" data-name="plus-alt" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
                         @if (isset($event))
                             @lang('frontend.edit_event_header')
-                        @else
+                        @elseif(isset($event_clone))
+                            @lang('frontend.clone_event_header')
+                            @else
                             @lang('frontend.add_event_header')
+                        @endif
                         @endif
                     </h4>
                 </div>
                 <div class="panel-body">
                     @if (isset($event))
                         <h3 class="primary add_event_section_link">@lang('frontend.edit_event_text')</h3>
+                    @elseif(isset($event_clone))
+                        <h3 class="primary add_event_section_link">@lang('frontend.clone_event_text')</h3>
                     @else
                         <h3 class="primary add_event_section_link">@lang('frontend.add_event_text')</h3>
+                    @endif
                     @endif
 
 
                     @if (isset($event))
                         {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@update', $event->uuid], 'id'=>'edit_event']) !!}
+
+                            @if (isset($event_clone))
+                                {!! Form::open(['id'=>'clone_event']) !!}
                     @else
                          {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
                          {{--<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }} " />--}}
                     @endif
+                        @endif
                     <div class="form-group">
                         <label for="title">@lang('frontend.title')</label>
+                        @if (isset($event_clone))
+                            <input class="tinymce_basic form-control" size="16" id="title" name="title" type="text", maxlength="80" value="{{$event_clone['title']}}">
+                            @else
                         {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}
-                        <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="@lang('pop_over.content')" data-original-title="@lang('pop_over.title')"></i>
+                        @endif
+                            <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="@lang('pop_over.content')" data-original-title="@lang('pop_over.title')"></i>
                         <div class="form-group">
                         @if ($errors->first('title'))
                             <ul class="alert alert-danger myalert">
@@ -79,8 +93,11 @@
 
 					<div class="form-group" id="descprip" style="display: none">
                         <label for="description">@lang('frontend.description')</label>
-
+                        @if (isset($event_clone))
+                            <textarea class="textarea form-control" type="textarea" id="description" name="description", maxlength="500">{{$event_clone['description']}}</textarea>
+                        @else
 						{!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}
+                        @endif
                         <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         {{--<button type="button" class="btn btn-warning " title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title">!</button>--}}
                     </div>
@@ -98,8 +115,11 @@
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
+                                @if (isset($event_clone))
+                                    <input class="form-control" size="16" id="start" name="start" type="datetime" value="{{$event_clone['start']}}">
+                                    @else
                                 <input class="form-control" size="16" id="start" name="start" type="datetime" value="{{@isset($event)? $event['start'] : $start_date}}">
-
+                                @endif
                             </div>
                             @if ($errors->first('start'))
                                 <ul class="alert alert-danger">
@@ -114,8 +134,11 @@
                          <div class="form-group add_event_section_link" id="change_time_zone">
                              @if (isset($event))
                             <span>Timezone is {{$event['timezone']}}. Duration is {{$event['duration_day']}} {{$event['duration_hour']}} {{$event['duration_min']}}. <a id="time_change">Change here.</a></span>
+                             @elseif(isset($event_clone))
+                              <span>Timezone is {{$event_clone['timezone']}}. Duration is {{$event_clone['duration_day']}} {{$event_clone['duration_hour']}} {{$event_clone['duration_min']}}. <a id="time_change">Change here.</a></span>
                              @else
                             <span>Timezone is {{$user_timezone}}. Default duration is {{$duration_day}} {{$duration_hour}} {{$duration_min}}. <a id="time_change">Change here.</a></span>
+                             @endif
                              @endif
 {{--                            <span>Timezone is {{@isset($event)? $event['timezone'] : $user_timezone}}. Default duration is {{$event['duration_time']}} h. <a id="time_change">Change here.</a></span>--}}
                          </div>
@@ -129,8 +152,11 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-th"></span>
                                             </span>
+                                            @if(isset($event_clone))
+                                                <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{$event_clone['finish']}}">
+                                                @else
                                             <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{@isset($event)? $event['finish'] : $finish_date}}">
-
+                                            @endif
                                         </div>
                              @if ($errors->first('finish'))
                                  <ul class="alert alert-danger">
@@ -144,7 +170,12 @@
 
                     <div class="form-group"  id="time_zone_change" style="display:none">
                              <label for="timezone">@lang('frontend.timezone')</label>
-                             {!!@isset($event)?  $event->timezone_select : $timezone_select !!}
+                        @if(isset($event_clone))
+                            {!!$event_clone->timezone_select!!}
+                            @else
+                            {!!@isset($event)?  $event->timezone_select : $timezone_select !!}
+                            @endif
+
                              <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
 
@@ -246,6 +277,7 @@
                 if (result == true) {
                    $('#create_event').submit();
                    $('#edit_event').submit();
+                    $('#clone_event').submit();
                 }
             });
         });
@@ -277,9 +309,17 @@
         var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
         $('#timezone option[value="{{$event->timezone}}"]').attr('selected','selected');
         $('#active option[value="{{$event->active}}"]').attr('selected','selected');
-       @endif
+        @endif
 
-       $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
+         @if (isset($event_clone))
+        $('#select2-timezone-container').attr('title', '{{$event_clone->timezone}}');
+        $('#select2-timezone-container').text('{{$event_clone->timezone}}');
+        var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
+        $('#timezone option[value="{{$event_clone->timezone}}"]').attr('selected','selected');
+        $('#active option[value="{{$event_clone->active}}"]').attr('selected','selected');
+        @endif
+
+         $('#start, #finish').mask('9999/99/99 99:99', {placeholder: 'yyyy/mm/dd hh:mm'});
         $('#test').on('change', function() {
             console.log($('#test').prop("checked"));
             if ($('#test').prop("checked")==true) {
