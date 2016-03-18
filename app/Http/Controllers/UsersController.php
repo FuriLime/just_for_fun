@@ -758,7 +758,7 @@ class UsersController extends JoshController
 //                    $m->to($user->email, $user->first_name . ' ' . $user->last_name);
 //                    $m->subject('Hello ' . $user->first_name);
 //                });
-                return Redirect::route('home')->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would delete your account.');
+//                return Redirect::route('home')->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would delete your account.');
 
                 if($_GET) {
                     if ($_GET['delete_code'] == $delete_code) {
