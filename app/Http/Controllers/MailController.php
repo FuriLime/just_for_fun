@@ -21,7 +21,7 @@ class MailController extends Controller
             var_dump($_GET);
         }
 $email = 'serg@adfsdf.codf';
-        return view('oauthtwitter', compact('email'));
+        return view('welcome', compact('email'));
 //        return redirect()->route('oauthtwitter');
     }
 
