@@ -21,7 +21,7 @@ class MailController extends Controller
             var_dump($_GET);
         }
 
-        return view('welcome');
+        return view('oauthtwitter', compact('email'));
 //        return redirect()->route('oauthtwitter');
     }
 
@@ -30,8 +30,5 @@ class MailController extends Controller
         $this->validate($request, [
             'email' => 'required|email|unique:users',
         ]);
-
-
-        return redirect()->route('welcome');
     }
 }
