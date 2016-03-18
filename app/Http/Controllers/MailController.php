@@ -26,6 +26,7 @@ class MailController extends Controller
         $this->validate($request, [
             'email' => 'required|email|unique:users',
         ]);
-        var_dump($_POST['email']);
+        $email = $_POST['email'];
+        return view('welcome', compact('email'));
     }
 }
