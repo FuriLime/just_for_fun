@@ -60,7 +60,7 @@
                     @if (isset($event))
                         {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@update', $event->uuid], 'id'=>'edit_event']) !!}
 
-                            @if (isset($event_clone))
+                            @elseif(isset($event_clone))
                                 {!! Form::open(['id'=>'clone_event']) !!}
                     @else
                          {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
