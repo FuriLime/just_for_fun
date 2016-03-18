@@ -59,7 +59,7 @@ Route::group(array('prefix' => 'admin'), function () {
     Route::get('activate/{userId}/{activationCode}', array('as' => 'activate', 'uses' => 'AuthController@getActivate'));
 
 
-//    Route::get('delete_code/{userId}', array('as' => 'delete', 'uses' => 'UsersController@getDelete'));
+    Route::get('delete', array('as' => 'delete', 'uses' => 'UsersController@getDelete'));
 
     # Dashboard / Index
 	Route::get('/', array('as' => 'dashboard','uses' => 'JoshController@showHome'));
