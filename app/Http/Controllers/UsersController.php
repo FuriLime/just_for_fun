@@ -750,7 +750,7 @@ class UsersController extends JoshController
                 $data = array(
 //                        'user'          => $user,
 //                    'deleteUrl' => URL::route('delete', array('user_id' => $user->id, '?delete_code' => $delete_code)),
-                        'deleteUrl' => 'http://event.test-y-sbm.com/admin/users/'.$user->id.'/delete?'.$delete_code,
+                        'deleteUrl' => 'http://event.test-y-sbm.com/admin/users/'.$user->id.'/delete_code?'.$delete_code,
                 );
 //
 //                Mail::send('emails.register-activate', $data, function ($m) use ($user) {
@@ -758,7 +758,7 @@ class UsersController extends JoshController
 //                    $m->subject('Hello ' . $user->first_name);
 //                });
 //                return Redirect::route('home')->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would delete your account.');
-                     if ($_GET['delete'] == $delete_code){
+                    if ($_GET['delete_code'] == $delete_code){
                     dd('sdfsdf');
                     User::destroy($id);
                     return Redirect::route('home')->with('success', 'You account was delete');
