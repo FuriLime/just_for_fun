@@ -369,7 +369,8 @@ class EventsController extends Controller {
             $event['duration_hour']=0 .'h';
             $event['duration_min']=0 .'m';
             }
-
+        Session::forget('start');
+        Session::forget('finish');
         return view('events.create', compact('event'));
     }
 
