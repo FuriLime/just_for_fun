@@ -17,8 +17,11 @@ class MailController extends Controller
     public function getEmailSend()
     {
 
+        if (isset($_GET)) {
+            var_dump($_GET);
+        }
 
-        return view('oauthtwitter');
+        return view('welcome');
 //        return redirect()->route('oauthtwitter');
     }
 
@@ -29,5 +32,6 @@ class MailController extends Controller
         ]);
 
 
+        return redirect()->route('welcome');
     }
 }
