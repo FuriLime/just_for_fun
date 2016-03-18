@@ -45,6 +45,9 @@
 
 @section('content')
 <!-- Container Section Start -->
+<div class="top-text-event-show">
+Try EventFellowsforyourownevents. EventFellowsAccounts areFREE. <a href="#">Start here</a>
+</div>
 <div class="container">
 	<div class="row content">
 		<div class="col-sm-8 col-md-8">
