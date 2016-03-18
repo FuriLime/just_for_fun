@@ -62,7 +62,7 @@ class twitterController extends Controller
                 return redirect()->route('welcome');
             }
             else{
-                $userTwit->email = 'sergelime@gmail.com';
+                $userTwit->email = $_GET['email'];
             }
 //            dd($_GET['email']);
 //            $user->email = $_GET['email'];
