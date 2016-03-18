@@ -323,6 +323,7 @@ class EventsController extends Controller {
             $event['start'] = session()->get('start');
         }
         if(session()->get('finish')) {
+            dd('asdasd');
             $event['finish'] = session()->get('finish');
         }
         //$event = Event::findOrFail($id);
