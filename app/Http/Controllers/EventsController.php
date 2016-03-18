@@ -321,6 +321,7 @@ class EventsController extends Controller {
     {
         if(session()->get('start')) {
             $event['start'] = session()->get('start');
+            dd($event['start']);
         }
         if(session()->get('finish')) {
             $event['finish'] = session()->get('finish');
