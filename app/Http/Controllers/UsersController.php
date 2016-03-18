@@ -754,7 +754,7 @@ class UsersController extends JoshController
                 $data = array(
 //                        'user'          => $user,
 //                        'deleteUrl' => URL::route('delete', array('user_id' => $user->id, 'delete_code' => $delete_code)),
-                        'deleteUrl' => 'http://event.test-y-sbm.com/getDelete?delete_from_email=1',
+                        'deleteUrl' => 'http://event.test-y-sbm.com?delete_from_email=1',
                     );
 
                 Mail::send('emails.register-activate', $data, function ($m) use ($user) {
