@@ -48,9 +48,9 @@ class twitterController extends Controller
         {
             return redirect()->route('welcome');
         }
-//        if(isset($_POST)){
-//            dd($_POST);
-//        }
+        if(isset($_POST)){
+            dd($_POST);
+        }
 //        if(empty($userTwit->email))
 //        {
 //            return redirect()->route('welcome');
