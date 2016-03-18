@@ -753,7 +753,7 @@ class UsersController extends JoshController
                 $delete_code = str_random(30);
                 $data = array(
                         'user'          => $user,
-                        'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'delete_code' => $delete_code)),
+                        'activationUrl' => URL::route('delete', array('user_id' => $user->id, 'delete_code' => $delete_code)),
                     );
                 Mail::send('emails.register-activate', $data, function ($m) use ($user) {
                         $m->to($user->email, $user->first_name . ' ' . $user->last_name);
