@@ -686,7 +686,7 @@ class EventsController extends Controller {
         $minuteDifference = (int) ($difference / 60);
         $hourDifference = (int) ($minuteDifference / 60);
         $minutesLeft = $minuteDifference - $hourDifference * 60;
-        $desc = urlencode($event['description']);
+
         if ($hourDifference > 99) { $duration = '9900'; }
         else {
             if ($hourDifference < 10) { $hourDifference = '0'.$hourDifference; }
@@ -694,18 +694,21 @@ class EventsController extends Controller {
             $duration = $hourDifference.$minutesLeft;
         }
         $result = $error_massage = $calendar_link = '';
+        $desc = urlencode($event['description']);
+        $loc = urlencode($event['location']);
+        $title = urlencode($event['title']);
         switch ($calendar) {
 
             case 'Google':
                 $timezone = '';
                 $result = 'success';
                 $calendar_link = 'https://www.google.com/calendar/render?action=TEMPLATE'.
-                    '&text='.$event['title'].
+                    '&text='.$title.
                     '&dates='.$event_start_zero->format('Ymd').'T'.$event_start_zero->format('His').'Z/'.
                     $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His').'Z'.
                     $timezone.
                     '&sprop=website:'.route('events.show',$uuid).
-                    '&location='.$event['location'].'&pli=1&uid=&sf=true&output=xml'.
+                    '&location='.$loc.'&pli=1&uid=&sf=true&output=xml'.
                     '&details='.$desc;
                 break;
 
@@ -714,14 +717,14 @@ class EventsController extends Controller {
 
                 $result = 'success';
                 $calendar_link = 'https://calendar.yahoo.com/?v=60'.
-                    '&TITLE='.$event['title'].
+                    '&TITLE='.$title.
                     '&ST='.$event_start_zero->format('Ymd').'T'.$event_start_zero->format('His').'Z'.
                     // 'Z' does not work at End Time (Yahoo bug), using duration parameter
                     //'&ET='.$event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His').'Z'.
                     '&DUR='.$duration.
                     '&URL='.route('events.show',$uuid).
-                    '&in_loc='.$event['location'].
-                    '&DESC='.$event['description'];
+                    '&in_loc='.$loc.
+                    '&DESC='.$desc;
                 break;
 
             case 'Microsoft':
@@ -731,8 +734,8 @@ class EventsController extends Controller {
                     $event_start_zero->format('Ymd').'T'.
                     $event_start_zero->format('His').'Z' .
                     '&dtend='. $event_finish_zero->format('Ymd').'T'.$event_finish_zero->format('His').'Z' .
-                    '&summary='. $event['title'] .
-                    '&location='. $event['location'] .
+                    '&summary='. $title .
+                    '&location='. $loc .
                     '&description='. $desc;
                 break;
 
