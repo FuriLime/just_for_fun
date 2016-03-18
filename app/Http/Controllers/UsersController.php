@@ -747,10 +747,12 @@ class UsersController extends JoshController
             if ($user->id === Sentinel::getUser()->id) {
                 // Prepare the error message
                 $delete_code = str_random(30);
-                if ($_GET['delete_code'] == $delete_code){
-                    dd('sdfsdf');
-                    User::destroy($id);
-                    return Redirect::route('home')->with('success', 'You account was delete');
+                if($_GET) {
+                    if ($_GET['delete_code'] == $delete_code) {
+                        dd('sdfsdf');
+                        User::destroy($id);
+                        return Redirect::route('home')->with('success', 'You account was delete');
+                    }
                 }
                 $data = array(
 //                        'user'          => $user,
