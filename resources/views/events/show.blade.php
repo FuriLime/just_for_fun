@@ -50,6 +50,12 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 </div>
 <div class="container">
 	<div class="row content event-show">
+		<div class="test-event-cont">
+			<div class="test-event-red-line"
+				Тest Event
+			</div>
+		</div>
+
 		<div class="col-sm-8 col-md-8">
 			<div class="event-name event-show">{{$event->title}}</div>
 			<div class="event_period event-show">{{$event->period}}</div>
@@ -124,6 +130,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 		</div>
 		<div class="text-center col-xs-12 share-event">Share this event</div>
 		<div class="col-xs-12 text-center share42init"></div>
+
 	</div>
 </div>
 

@@ -1002,6 +1002,9 @@ footer .btn-primary.text-white {
     color: #8d8d8d;
     margin-bottom: 15px;
 }
+.content.event-show {
+    border-radius: 10px;
+}
 .content.event-show .input-group{
     margin-bottom: 15px;
 }
@@ -1013,6 +1016,27 @@ footer .btn-primary.text-white {
 }
 .text-center.share-event{
     color: black;
+    margin-top: 50px;
+}
+.test-event-cont{
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    float:right;
+    top: -5px;
+    right: -5px;
+}
+.test-event-cont .test-event-red-line{
+    transform:rotate(30deg);
+}
+.test-event-red-line{
+    width: 100%;
+    line-height: 50px;
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+    background-color: red;
 }
 @media(max-width:600px){
     #add_event label {
