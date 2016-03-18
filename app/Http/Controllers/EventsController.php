@@ -345,6 +345,11 @@ class EventsController extends Controller {
             $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
         }
 
+        if(session()->get('timezone')) {
+            $event['timezone'] = session()->get('timezone');
+        }else {
+            $event['timezone'] = $event['timezone'];
+        }
 //        $event['timezone'] =$event['timezone'];
         $event['duration'] = strtotime($event['finish']) - strtotime($event['start']);
 
