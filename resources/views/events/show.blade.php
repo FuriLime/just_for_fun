@@ -92,7 +92,7 @@
 					@lang('frontend.description2')
 				</div>
 				<div class="details_item">
-					{{ $event['description'] }}
+					{{ html_entity_decode($event['description']) }}
 				</div>
 				
 				<div class="details_item_header">
