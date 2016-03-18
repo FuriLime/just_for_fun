@@ -326,6 +326,7 @@
 
         $('.form-control').keydown(function (e) {
             if (e.which === 13) {
+                e.preventDefault();
                 //$(this).next('.inputs').focus();
                 $(this).closest('td').nextAll().eq(1).find('.form-control').focus()
             }
