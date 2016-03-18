@@ -711,6 +711,7 @@ class EventsController extends Controller {
 
             case 'Yahoo':
                 // https://docs.google.com/document/d/1scDk4WxGzDSGAF6OWiRkKwdQg9zD8kDReTH9cvTZnVo/edit
+                $desc = json_encode($event['description']);
                 $result = 'success';
                 $calendar_link = 'https://calendar.yahoo.com/?v=60'.
                     '&TITLE='.$event['title'].
@@ -720,7 +721,7 @@ class EventsController extends Controller {
                     '&DUR='.$duration.
                     '&URL='.route('events.show',$uuid).
                     '&in_loc='.$event['location'].
-                    '&DESC='.$event['description'];
+                    '&DESC='.$desc;
                 break;
 
             case 'Microsoft':
