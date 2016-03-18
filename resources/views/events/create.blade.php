@@ -502,7 +502,7 @@
 
                     if (results[0]) {
                         locale = results[0].formatted_address;
-                        asdas = locale.replace(/,-/g,"");
+                        asdas = locale.replace(/[/.,!-?;]*/g, '');;
 
                         splits = locale.split(',');
                         console.log(locale);
