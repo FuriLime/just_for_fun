@@ -80,10 +80,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
       <g:plus action="share"></g:plus>
       <a href="http://test-ef.com/events/{{$event->uuid}}"  text = '{{$event->title}}'class="twitter-share-button"{count} data-via="LimeFuri">Tweet</a> -->
       <script>/*!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');*/</script>
-
-      <div class="share42init"></div>
-
-			<div class="input-group">
+		<div class="input-group">
 				<button id="see-details-btn" class="btn btn-default">
 					<span class="toggle"><i class="fa fa-search"></i>&nbsp;See event details</span>
 					<span class="toggle" style="display: none;"><i class="fa fa-search"></i>&nbsp;Hide event details</span>
@@ -106,6 +103,9 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 				</div>
 				
 			</div>
+			
+      <div class="share42init"></div>
+
 			
 			<div id="hidden_address">
 				<div id="address">{{ $event['location'] }}</div>
