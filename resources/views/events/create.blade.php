@@ -324,20 +324,6 @@
     <script>
     $(document).ready(function() {
 
-
-        $("#edit_event").keyup(function (event) {
-            if (event.keyCode == 13) {
-                textboxes = $("title");
-                currentBoxNumber = textboxes.index(this);
-                if (textboxes[currentBoxNumber + 1] != null) {
-                    nextBox = textboxes[currentBoxNumber + 1];
-                    nextBox.focus();
-                    nextBox.select();
-                }
-                event.preventDefault();
-                return false;
-            }
-        });
         @if (isset($event))
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
         $('#select2-timezone-container').text('{{$event->timezone}}');
