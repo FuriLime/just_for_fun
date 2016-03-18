@@ -288,7 +288,6 @@
         var nowtimedate = new Date();
         nowtimedate = nowtimedate.format('Y/m/d H:i');
         $("#datestart").datetimepicker({
-            onSelect: function() {alert('sdfsdfsdf')},
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
@@ -298,13 +297,12 @@
             minDate: nowtimedate
         });
         $("#datefinish").datetimepicker({
-            onSelect: function() {alert('sdfsdfsdf')},
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
             controlType: 'select',
             startDate: $('#finish').val(),
-            minDate: $('#start').val(),
+            minDate: nowtimedate,
             minuteStep: 10
 
         });
