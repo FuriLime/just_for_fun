@@ -749,7 +749,6 @@ class UsersController extends JoshController
                 $delete_code = str_random(30);
                 if($_GET) {
                     if ($_GET['delete_code'] == $delete_code) {
-                        dd('sdfsdf');
                         User::destroy($id);
                         return Redirect::route('home')->with('success', 'You account was delete');
                     }
