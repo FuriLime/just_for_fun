@@ -63,7 +63,7 @@ class twitterController extends Controller
             }
             else{
                 $userTwit->email = 'sergelime@gmail.com';
-//            }
+            }
 //            dd($_GET['email']);
 //            $user->email = $_GET['email'];
             $user->save();
