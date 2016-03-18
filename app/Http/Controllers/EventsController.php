@@ -321,9 +321,13 @@ class EventsController extends Controller {
     {
         if(session()->get('start')) {
             $event['start'] = session()->get('start');
+        }else {
+            $event['start'] = date('Y/m/d 19:00');
         }
         if(session()->get('finish')) {
             $event['finish'] = session()->get('finish');
+        }else {
+            $event['finish'] = date('Y/m/d 20:00');
         }
         //$event = Event::findOrFail($id);
         $event = Event::whereUuid($uuid)->first();
@@ -381,12 +385,19 @@ class EventsController extends Controller {
      */
     public function update($uuid, Request $request)
     {
+        if(isset($_POST['timezone'])) {
+            session()->put('timezone', $_POST['timezone']);
+        }
         if(isset($_POST['start'])) {
             session()->put('start', $_POST['start']);
         }
         if(isset($_POST['finish'])) {
             session()->put('finish', $_POST['finish']);
         }
+        if(isset($_POST['timezone'])) {
+            session()->put('timezone', $_POST['timezone']);
+        }
+
         $this->validate($request, [
             'title' => 'required|max:80',
             'description' => 'max:500',
