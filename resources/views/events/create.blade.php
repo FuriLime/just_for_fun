@@ -502,11 +502,11 @@
 
                     if (results[0]) {
                         locale = results[0].formatted_address;
-                        asdas = locale.replace(/[/.,!-?;]*/g, '');;
+                        splits = locale.replace(/[/.,!-?;]*/g, '');
 
-                        splits = locale.split(',');
+                        splits = locale.split(' ');
                         console.log(locale);
-                        console.log(asdas);
+                        console.log(splits);
 //
                         if (splits.length == 2) {
                             sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
