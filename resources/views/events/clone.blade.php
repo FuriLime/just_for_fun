@@ -340,6 +340,9 @@
     <script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
     <script type="text/javascript">//<![CDATA[
 
+        if($("#adicription").val()!= null){
+            alert('sdfsdf');
+        }
         $("#add_dicription").click(function () {
             $('#descprip').attr('style', 'display:block');
             $('#add_dicription').attr('style', 'display:none');
