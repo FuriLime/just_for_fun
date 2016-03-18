@@ -249,7 +249,9 @@
     <script>
         $(document).ready(function() {
             if($("#description").text().length != 0 ){
-                alert('sdfsdf');
+                $('#descprip').attr('style', 'display:block');
+                $('#add_dicription').attr('style', 'display:none');
+                $('#hide_dicription').attr('style', 'display:block');
             }
             var asd = $('#select2-timezone-container').attr('value', '{{$event->timezone}}');
             console.log($('#select2-timezone-container').val());
