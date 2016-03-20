@@ -66,7 +66,7 @@ class JoshController extends Controller {
             
 			// return View('user/index');
 		 }else
-			return Redirect::to('admin/signin')->with('error', 'You must be logged in!');
+			return Redirect::to('home')->with('error', 'You must be logged in!');
     }
 
     public function showView($name=null)
@@ -85,7 +85,7 @@ class JoshController extends Controller {
             }
 				
 			else
-				return Redirect::to('admin/signin')->with('error', 'You must be logged in!');
+				return Redirect::to('home')->with('error', 'You must be logged in!');
 		}
 		else
 		{
