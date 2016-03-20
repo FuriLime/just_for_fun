@@ -8,7 +8,7 @@
 Route::filter('Sentinel', function()
 {
 	if ( ! Sentinel::check()) {
- 		return Redirect::to('home')->with('error', 'You must be logged in!');
+ 		return Redirect::to('/')->with('error', 'You must be logged in!');
  	}
 });
 
