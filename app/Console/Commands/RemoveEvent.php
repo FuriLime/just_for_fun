@@ -40,7 +40,7 @@ class RemoveEvent extends Command
     public function handle()
     {
         //
-        $events = Event::whereCreatedAt(date(('Y-m-d H:i')))->get();
+        $events = Event::whereCreatedAt(date(('Y-m-d H:i:s')))->get();
 
         foreach($events as $event){
             if($event->test('1')){
