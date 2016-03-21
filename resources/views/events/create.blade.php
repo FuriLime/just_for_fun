@@ -510,6 +510,7 @@
 
                     if (results[0]) {
                         console.log(results[0].types);
+                        console.log(results[1].types);
                         locale = results[0].formatted_address;
 
                         splits = locale.replace(/-/g,",");
@@ -549,7 +550,6 @@
 
                             if($.isNumeric(splits[1])){
                                 street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                                console.log(street.types);
                                 $('#street').val(street);
 
 //                                street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
