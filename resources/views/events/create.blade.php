@@ -510,7 +510,7 @@
 
                     if (results[0]) {
                         locale = results[0].formatted_address;
-                        console.log(results[0].address_components[0]);
+                        console.log(results[0].geometry.location);
                         splits = locale.replace(/-/g,",");
 
                         splits = splits.split(',');
