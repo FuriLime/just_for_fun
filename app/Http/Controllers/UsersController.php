@@ -569,7 +569,6 @@ class UsersController extends JoshController
             $user_profile->city   = Input::get('city');
             $user_profile->address   = Input::get('address');
             $user_profile->timezone   = Input::get('timezone');
-dd(Input::get('email'));
             // Do we want to update the user password?
             if ($password) {
                 $user->password = Hash::make($password);
@@ -629,46 +628,13 @@ dd(Input::get('email'));
                 $role->users()->attach($rolew);
 //                $role->users()->attach();
             }
-if($us_email != Input::get('email')) {
-    $mc->put("lists/$listId/members/$email", [
+
+$new_email = md5(Input::get('email'));
+    $mc->put("lists/$listId/members/$new_email", [
         'email_address' => $user->email,
         'merge_fields' => ['FNAME' => $user->first_name, 'LNAME' => $user->last_name, 'CHENGED' => $us_email],
         'status_if_new' => 'subscribed',
     ]);
-}
-            // Activate / De-activate user
-//            $status = $activation = Activation::completed($user);
-//            if(Input::get('activate') != $status)
-//            {
-//                if(Input::get('activate'))
-//                {
-//                    $activation = Activation::exists($user);
-//                    if($activation)
-//                    {
-//                        Activation::complete($user, $activation->code);
-//                    }
-//                }
-//                else
-//                {
-//                    //remove existing activation record
-//                    Activation::remove($user);
-//                    //add new record
-//                    Activation::create($user);
-//
-//                    //send activation mail
-//                    $data = array(
-//                        'user'          => $user,
-//                        'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
-//                    );
-//
-//                    // Send the activation code through email
-//                    Mail::send('emails.register-activate', $data, function ($m) use ($user) {
-//                        $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-//                        $m->subject('Welcome ' . $user->first_name);
-//                    });
-//
-//                }
-//            }
 
             // Was the user updated?
             if ($user->save() && $user_profile->save()) {
