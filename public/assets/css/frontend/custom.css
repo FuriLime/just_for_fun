@@ -1055,8 +1055,12 @@ footer .btn-primary.text-white {
     transition: all ease 0.5s;
     border-bottom: 4px solid #0073a7;
     margin-top: -4px;
+    font-size: 18px;
 }
-
+.share-container .row.content{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 .share-event-top .show-details{
     cursor: pointer;
     font-size: 24px;
@@ -1068,8 +1072,8 @@ footer .btn-primary.text-white {
 }
 
 .share-event-top.opened .share-container{
-    height: 50px;
-    margin-top: 0;
+    margin-top: -20px;
+    height: 250px;
 }
 .share-event-top.opened{
     position: relative;
@@ -1078,6 +1082,38 @@ footer .btn-primary.text-white {
     position: absolute;
     vertical-align: bottom;
     margin-left: calc(50% - 188.5px);
+}
+.share-text{
+    color: black;
+}
+.share-text a{
+    color: #2e6da4;
+}
+.share-container .input-group button{
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+#shortlink{
+    width: 75%;
+    float: left;
+    margin-top: 15px;
+}
+#shortlink:focus{
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #757B87;
+    height: 31px;
+}
+.exit-show-details{
+    float: right;
+    top: 20px;
+    margin-right: 20px;
+    transition: all ease 0.5s;
+    cursor: pointer
+}
+.exit-show-details:hover{
+    transform:rotate(90deg);
+    opacity: 0.9;
 }
 @media(max-width:600px){
     #add_event label {

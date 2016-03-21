@@ -24,7 +24,7 @@
 <div class="share-event-top">
   <div class="container share-container">
     <div class="row content">
-      <div class="col-sm-8 col-md-8 ">
+      <div class="col-sm-7 col-md-7 ">
         <div class="input-group">
           <button id="social_but" class="btn btn-primary text-white" >
             <span>&nbsp;Social&nbsp;</span>
@@ -39,8 +39,15 @@
             <span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three" data-size="20" data-c="#fff" data-hc="#fff" data-loop="true"></i></span>
           </button>
         </div>
+        <div class="text-left share-text">
+          Please update <b>Your Profile</b> so we can add the relevant information to your events. You can set the visibility of your details in your <a href="#">Profile Settings</a>.
+        </div>
+        <div class="col-xs-12 text-left share42init"></div>
+        <input type="text" id="shortlink">
       </div>
+      <img src="http://event.test-y-sbm.com/assets/images/exit-show-details.png" class="exit-show-details">
     </div>
+    
   </div>
   <div class="show-details">
     Share this event
@@ -315,7 +322,16 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
           $('.share-event-top').addClass('opened');
           $('.show-details')[0].innerText = 'Hide Details';
         }
-      })
+      });
+      $('.exit-show-details').click(function(){
+        if ($('.share-event-top').hasClass('opened')){
+          $('.show-details')[0].innerText = 'Share your event!';
+          $('.share-event-top').removeClass('opened');
+        } else{
+          $('.share-event-top').addClass('opened');
+          $('.show-details')[0].innerText = 'Hide Details';
+        }
+      });
     })
   </script>
 @stop
