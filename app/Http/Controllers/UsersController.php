@@ -629,11 +629,11 @@ class UsersController extends JoshController
 //                $role->users()->attach();
             }
 
-//            $mc->post("lists/$listId/members/", [
-//                'email_address' => $member_email,
-//                'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
-//                'status'        => 'subscribed',
-//            ]);
+            $mc->put("lists/$listId/members/", [
+                'email_address' => $email,
+                'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
+                'status_if_new'        => 'subscribed',
+            ]);
 
             // Activate / De-activate user
 //            $status = $activation = Activation::completed($user);
@@ -671,11 +671,7 @@ class UsersController extends JoshController
 
             // Was the user updated?
             if ($user->save() && $user_profile->save()) {
-                $mc->post("lists/$listId/members/", [
-                    'email_address' => $user->email,
-                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
-                    'status'        => 'subscribed',
-                ]);
+
 
                 // Prepare the success message
                 $success = Lang::get('users/message.success.update');
