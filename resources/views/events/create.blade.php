@@ -657,6 +657,7 @@
                                     $('#city').val(sity);
                                     country = splits[2];
                                     $('#country').val(country);
+                                    $('#state').val('');
                                     $('#state').attr('style', 'display:none');
                                     $('#city').attr('style', 'display:block');
                                     $('#street').attr('style', 'display:block');
