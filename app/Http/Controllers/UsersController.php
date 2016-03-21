@@ -1,4 +1,5 @@
 <?php namespace App\Http\Controllers;
+
 use Sentinel;
 use View;
 use Validator;
@@ -10,7 +11,12 @@ use URL;
 use Mail;
 use File;
 use Config;
+use App\Account;
 use App\User;
+use App\UserProfile;
+use App\AccountProfile;
+//use App\Activation;
+use App\Role;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Hash;
 use Mailchimp\Mailchimp;
@@ -270,7 +276,7 @@ class UsersController extends JoshController
         'pic' => 'mimes:jpg,jpeg,bmp,png|max:10000'
     );
 
-    // Id of newsletter list
+       // Id of newsletter list
 
     /**
      * Show a list of all the users.
@@ -343,7 +349,7 @@ class UsersController extends JoshController
 
         try {
             // Register the user
-            $user = Sentinel::register(array(
+            $user = Sentinel::registerAndActivate(array(
                 'first_name' => Input::get('first_name'),
                 'last_name'  => Input::get('last_name'),
                 'email'      => Input::get('email'),
@@ -357,25 +363,98 @@ class UsersController extends JoshController
                 'city'   => Input::get('city'),
                 'address'   => Input::get('address'),
                 'postal'   => Input::get('postal'),
-            ),$activate);
+            ));
 
-            //add user to 'User' group
-            $role = Sentinel::findRoleById(Input::get('group'));
-            $role->users()->attach($user);
+            $account_user = new Account();
+            $account_user->	account_type_id = '1';
+            $account_user->name = $user['uuid'];
+            $account_user->slug = $user['uuid'];
+            $account_user->save();
+            $account_profile = new AccountProfile();
+            $account_profile->account_id = $account_user->id;
+            $account_profile->save();
+
+
+            $selectedRoles = Input::get('groups', array());
+            $roles = Sentinel::getRoleRepository()->all();
+
+            $role = Role::find(2);
+            $rolew = [
+                0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
+            ];
+            $role->users()->attach($rolew);
 
             //check for activation and send activation mail if not activated by default
             if(!Input::get('activate')) {
                 // Data to be used on the email view
                 $data = array(
                     'user'          => $user,
-                    'activationUrl' => URL::route('activate', $user->id, Activation::create($user)->code),
+                    'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
                 );
 
                 // Send the activation code through email
-                Mail::send('emails.register-activate', $data, function ($m) use ($user) {
-                    $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-                    $m->subject('Welcome ' . $user->first_name);
-                });
+                $subject = date('Y-m-d H:i:s') . " Subjectline";  // using a time in there to easily now which email was received for testing
+                $to_email = $user->email;
+                $to_name = 'asdasd';
+                $from_email = 'test@eventfellows.org';
+                $from_name = 'From Name Here';
+
+                $template_content = array(
+                    array(
+                        'name' => 'example name from first array in file',
+                        'content' => 'example content from first array in file'
+                    )
+                );
+
+                $global_merge_vars = [
+                    ['name' => 'emailname',             'content' => $to_email],
+                    ['name' => 'NNAME',                 'content' => 'User reigester without first nickname'],
+                    ['name' => 'FNAME',                 'content' => 'User reigester without first name'],
+                    ['name' => 'LNAME',                 'content' => 'User reigester without last name'],
+                    ['name' => 'LOGINCOUNT',            'content' => 'We not have this data yet'],
+                    ['name' => 'PASSRESET',             'content' => $data['activationUrl']],
+                    ['name' => 'RESETVALID',            'content' => 'We not have this data yet'],
+                    ['name' => 'DCREDITS',              'content' => '30'],
+                    ['name' => 'ECREDITS',              'content' => 'We not have this data yet'],
+                    ['name' => 'ACCTYPE',               'content' => 'We not have this data yet'],
+                    ['name' => 'RENEWDATE',             'content' => 'We not have this data yet'],
+                    ['name' => 'FREETEXT',              'content' => 'content-FREETEXT'],
+                    ['name' => 'COLOR1',                'content' => '#ee12ab'], // merge value not in mandrill code yet
+                    // ['name' => 'logo',              'content' => 'https://gallery.mailchimp.com/af80e28befb4c13871210c7c0/images/9db15bbf-b6f3-4fa2-9afe-402ec9b558f6.jpg'],
+                    ['name' => 'logo',              'content' => 'https://gallery.mailchimp.com/af80e28befb4c13871210c7c0/images/868e7c81-a24b-4468-931e-8d8a5ff5dc92.png'],
+                ];
+                $message = [
+                    'html' => '<p>Example HTML content 12345</p>',
+                    'text' => 'Example text content 56789',
+                    'subject' => $subject,
+                    'from_email' => $from_email ,
+                    'from_name' => $from_name,
+                    'to' => array(
+                        array(
+                            'email' => $to_email,
+                            'name' => $to_name,
+                        ),
+                    ),
+                    'headers' => array('Reply-To' => 'message.reply@twofy.de'),
+                    'important' => false,
+                    'track_opens' => null,
+                    'track_clicks' => null,
+                    'auto_text' => null,
+                    'auto_html' => null,
+                    'inline_css' => null,
+                    'url_strip_qs' => null,
+                    'preserve_recipients' => null,
+                    'view_content_link' => null,
+                    'tracking_domain' => null,
+                    'signing_domain' => null,
+                    'return_path_domain' => null,
+                    'merge' => true,
+                    'merge_language' => 'mailchimp',
+                    'global_merge_vars' => $global_merge_vars,
+                ];
+
+                // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
+                \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
             }
 
             // Redirect to the home page with success menu
@@ -401,30 +480,31 @@ class UsersController extends JoshController
      */
     public function getEdit($id = null)
     {
-        // Get the user information
-        if($user = Sentinel::findById($id))
-        {
-            // Get this user groups
-            $userRoles = $user->getRoles()->lists('name', 'id')->all();
+            // Get the user information
+            if($user = Sentinel::findById($id))
+            {
+                // Get this user groups
+                $userRoles = $user->getRoles()->lists('name', 'id')->all();
+                $user_profile = $user->user_profile()->first();
 
-            // Get a list of all the available groups
-            $roles = Sentinel::getRoleRepository()->all();
+                // Get a list of all the available groups
+                $roles = Sentinel::getRoleRepository()->all();
 
-        }
-        else
-        {
-            // Prepare the error message
-            $error = Lang::get('users/message.user_not_found', compact('id'));
+            }
+            else
+            {
+                // Prepare the error message
+                $error = Lang::get('users/message.user_not_found', compact('id'));
 
-            // Redirect to the user management page
-            return Redirect::route('users')->with('error', $error);
-        }
+                // Redirect to the user management page
+                return Redirect::route('users')->with('error', $error);
+            }
 
         $countries = $this->countries;
         $status = Activation::completed($user);
 
         // Show the page
-        return View('admin/users/edit', compact('user', 'roles', 'userRoles','countries','status'));
+        return View('admin/users/edit', compact('user', 'user_profile', 'roles', 'userRoles','countries','status'));
 //        return View('admin/layouts/edit', compact('user', 'roles', 'userRoles','countries','status'));
     }
 
@@ -441,7 +521,7 @@ class UsersController extends JoshController
         try {
             // Get the user information
             $user = Sentinel::findById($id);
-            dd($user);
+            $user_profile = $user->user_profile()->first();
 
             $us_email = Sentinel::getUser()->email;
             $email = md5(Sentinel::getUser()->email);
@@ -480,14 +560,14 @@ class UsersController extends JoshController
             $user->first_name  = Input::get('first_name');
             $user->last_name   = Input::get('last_name');
             $user->email       = Input::get('email');
-            $user->dob   = Input::get('dob');
-            $user->bio   = Input::get('bio');
-            $user->gender   = Input::get('gender');
-            $user->country   = Input::get('country');
-            $user->state   = Input::get('state');
-            $user->city   = Input::get('city');
-            $user->address   = Input::get('address');
-            $user->timezone   = Input::get('timezone');
+            $user_profile->dob   = Input::get('dob');
+            $user_profile->bio   = Input::get('bio');
+            $user_profile->gender   = Input::get('gender');
+            $user_profile->country   = Input::get('country');
+            $user_profile->state   = Input::get('state');
+            $user_profile->city   = Input::get('city');
+            $user_profile->address   = Input::get('address');
+            $user_profile->timezone   = Input::get('timezone');
 
             // Do we want to update the user password?
             if ($password) {
@@ -525,20 +605,35 @@ class UsersController extends JoshController
             // have and the groups the user wish to have.
             $rolesToAdd    = array_diff($selectedRoles, $userRoles);
             $rolesToRemove = array_diff($userRoles, $selectedRoles);
-
-            // Assign the user to groups
-            foreach ($rolesToAdd as $roleId) {
-                $role = Sentinel::findRoleById($roleId);
-
-                $role->users()->attach($user);
-            }
+            $acc_id = $user->accounts()->first()->id;
 
             // Remove the user from groups
             foreach ($rolesToRemove as $roleId) {
-                $role = Sentinel::findRoleById($roleId);
+                $role = Role::find($roleId);
+                $rolew = [
+                    0 => ['user_id' => $user->id, 'account_id' => $acc_id],
+                ];
+                $role->users()->detach($rolew);
 
-                $role->users()->detach($user);
             }
+
+            // Assign the user to groups
+            foreach ($rolesToAdd as $roleId) {
+
+                $role = Role::find($roleId);
+                $rolew = [
+                    0 => ['user_id' => $user->id, 'account_id' => $acc_id],
+                ];
+
+                $role->users()->attach($rolew);
+//                $role->users()->attach();
+            }
+
+            $mc->post("lists/$listId/members/", [
+                'email_address' => $user->email,
+                'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
+                'status'        => 'subscribed',
+            ]);
 
             // Activate / De-activate user
 //            $status = $activation = Activation::completed($user);
@@ -575,13 +670,9 @@ class UsersController extends JoshController
 //            }
 
             // Was the user updated?
-            if ($user->save()) {
+            if ($user->save() && $user_profile->save()) {
 
-                $mc->post("lists/$listId/members", [
-                    'email_address' => $user->email,
-                    'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
-                    'status'        => 'subscribed',
-                ]);
+
 
                 // Prepare the success message
                 $success = Lang::get('users/message.success.update');
@@ -627,14 +718,10 @@ class UsersController extends JoshController
         try {
             // Get user information
             $user = Sentinel::findById($id);
-
-            // Check if we are not trying to delete ourselves
-            if ($user->id === Sentinel::getUser()->id)  {
-                // Prepare the error message
-                $error = Lang::get('users/message.error.delete');
-
-                return View('admin/layouts/modal_confirmation', compact('error', 'model', 'confirm_route'));
-            }
+//             Check if we are not trying to delete ourselves
+//            if ($user->id === Sentinel::getUser()->id)  {
+//
+//            }
         } catch (UserNotFoundException $e) {
             // Prepare the error message
             $error = Lang::get('users/message.user_not_found', compact('id' ));
@@ -659,10 +746,25 @@ class UsersController extends JoshController
             // Check if we are not trying to delete ourselves
             if ($user->id === Sentinel::getUser()->id) {
                 // Prepare the error message
-                $error = Lang::get('admin/users/message.error.delete');
+                $delete_code = str_random(30);
 
-                // Redirect to the user management page
-                return Redirect::route('users')->with('error', $error);
+                $data = array(
+//                        'user'          => $user,
+//                    'deleteUrl' => URL::route('delete', array('user_id' => $user->id, '?delete_code' => $delete_code)),
+                        'deleteUrl' => 'http://event.test-y-sbm.com/admin/users/'.$user->id.'/delete?delete_code='.$delete_code,
+                );
+                if($_GET) {
+                    if ($_GET['delete_code'] == $delete_code) {
+                        User::destroy($id);
+                        return Redirect::route('home')->with('success', 'You account was delete');
+                }
+                    }else {
+                    Mail::send('emails.register-activate', $data, function ($m) use ($user) {
+                    $m->to($user->email, $user->first_name . ' ' . $user->last_name);
+                    $m->subject('Hello ' . $user->first_name);
+                    });
+                    return Redirect::route('home')->with('success', 'Message with confirmation link has been sent to ' . $user->email . '. Please click on the link in the letter that would delete your account.');
+                }
             }
 
             // Delete the user
@@ -701,7 +803,7 @@ class UsersController extends JoshController
 
             // Prepare the success message
             $success = Lang::get('users/message.success.restored');
-
+            $user->activate();
             // Redirect to the user management page
             return Redirect::route('deleted_users')->with('success', $success);
         } catch (UserNotFoundException $e) {
@@ -823,12 +925,12 @@ class UsersController extends JoshController
         $apiKey = Config::get('mailchimp.apikey');
         $listId = Config::get('mailchimp.listId');
         $mc = new Mailchimp($apiKey);
+
         $result_member = $mc->get("lists/$listId/members");
         $categories = $mc->get("lists/$listId/interest-categories");
         foreach($categories['categories'] as $cat_id){
-            $new_cat_id[] = $cat_id->id;
+                $new_cat_id[] = $cat_id->id;
         }
-//        dd($new_cat_id[0]);
         foreach($result_member['members'] as $email_user){
             $member_user[] = $email_user->email_address;
         }
@@ -851,6 +953,7 @@ class UsersController extends JoshController
                     }
                 }
             }
+            return View('admin.notisfaction', compact('val_name'));
         }
         else{
             try {
@@ -858,6 +961,7 @@ class UsersController extends JoshController
                     'email_address' => $user_email,
                     'status'        => 'subscribed',
                 ]);
+
             }
             catch (\Mailchimp_List_AlreadySubscribed $e){
 //                $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
@@ -865,13 +969,16 @@ class UsersController extends JoshController
             catch (\Mailchimp_Error $e) {
                 // do something
             }
+            return View('admin.notisfaction');
         }
-        return View('admin.notisfaction', compact('val_name'));
+
     }
 
 
     public function updateInterests(){
         $email = md5(Sentinel::getUser()->email);
+        $user_name = Sentinel::getUser()->first_name;
+        $user_last = Sentinel::getUser()->last_name;
         $check_true= array();
         foreach($_POST['check'] as $check){
             $check_id[] = $check["'id'"];
@@ -891,7 +998,7 @@ class UsersController extends JoshController
         $mc = new Mailchimp($apiKey);
         $listId = Config::get('mailchimp.listId');
         $mc->patch("lists/$listId/members/$email", [
-            'merge_fields' => ['FNAME'=>'Davy', 'LNAME'=>'Jones'],
+            'merge_fields' => ['FNAME'=>$user_name, 'LNAME'=>$user_last],
             'interests'    => $data
         ]);
         return redirect('admin/notisfaction')->with('success', Lang::get('message.success.update'));
