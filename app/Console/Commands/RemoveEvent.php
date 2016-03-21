@@ -46,8 +46,9 @@ class RemoveEvent extends Command
             $when_del = $event['created_at']. '+ 2 days';
             if($event['created_at']> $date_del) {
 //                DB::table('events')->delete();
-                $this->info($when_del);
+
             }
+            $this->info($when_del);
         }
 //        $this->info($events[0]['created_at']);
     }
