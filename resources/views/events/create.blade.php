@@ -646,7 +646,12 @@
 
                                 splits = splits.split(',');
 
-                                console.log(splits.length);
+                                if (splits.length == 0) {
+                                    $('#street').val('');
+                                    $('#state').val('');
+                                    $('#city').val('');
+                                    $('#country').val('');
+                                }
 //
 
                                 if (splits.length == 2) {
