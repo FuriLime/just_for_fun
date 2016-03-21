@@ -88,13 +88,14 @@ class twitterController extends Controller
 
         if (Activation::complete($user, $activation->code))
         {
+            if($user->email==NULL){
+                return redirect()->route('welcome');
+            }
             Sentinel::authenticate($user);
               if(Sentinel::authenticate($user))
             {
                 $user = Sentinel::check();
-                if($user->email==NULL){
-                    return redirect()->route('welcome');
-                }
+
                 return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
 
             }
