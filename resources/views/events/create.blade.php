@@ -509,7 +509,7 @@
                     var asdas = '';
 
                     if (results[0]) {
-                        console.log(results[0].places);
+                        console.log(results[0].types);
                         locale = results[0].formatted_address;
 
                         splits = locale.replace(/-/g,",");
