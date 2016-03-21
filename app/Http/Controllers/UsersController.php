@@ -671,8 +671,8 @@ class UsersController extends JoshController
 
             // Was the user updated?
             if ($user->save() && $user_profile->save()) {
-
-                $mc->put("lists/$listId/members/", [
+dd($mc-get("lists/$listId/members"));
+                $mc->post("lists/$listId/members/", [
                     'email_address' => $user->email,
                     'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
                     'status'        => 'subscribed',
