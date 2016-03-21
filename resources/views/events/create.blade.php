@@ -641,17 +641,24 @@
 
                             if (results[0]) {
                                 locale = results[0].formatted_address;
-                                console.log(locale['country']);
-                                splits = locale.split(',');
+
+                                splits = locale.replace(/-/g,",");
+
+                                splits = splits.split(',');
+
                                 console.log(splits);
 //
                                 if (splits.length == 2) {
                                     sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
-                                    $('#street').val(sity);
+                                    $('#city').val(sity);
                                     country = splits[1];
-                                    $('#state').val(country);
-                                    $('#country').attr('style', 'display:none');
+                                    $('#country').val(country);
+                                    $('#street').val('');
+                                    $('#state').val('');
+                                    $('#street').attr('style', 'display:none');
                                     $('#state').attr('style', 'display:none');
+                                    $('#city').attr('style', 'display:block');
+                                    $('#country').attr('style', 'display:block');
                                 }
 
                                 if (splits.length == 3) {
@@ -669,6 +676,7 @@
                                 }
 
                                 if (splits.length >= 4) {
+
                                     if($.isNumeric(splits[1])){
                                         street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
                                         $('#street').val(street);
@@ -693,7 +701,9 @@
 
                                         country = splits[3];
                                         $('#country').val(country);
-                                    };
+                                    }
+
+
 
                                     $('#country').attr('style', 'display:block');
                                     $('#state').attr('style', 'display:block');
