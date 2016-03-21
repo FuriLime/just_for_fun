@@ -628,13 +628,13 @@ class UsersController extends JoshController
                 $role->users()->attach($rolew);
 //                $role->users()->attach();
             }
-
-            $mc->put("lists/$listId/members/$email", [
-                'email_address' =>  $user->email,
-                'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
-                'status_if_new'        => 'subscribed',
-            ]);
-
+if($us_email != Input::get('email')) {
+    $mc->put("lists/$listId/members/$email", [
+        'email_address' => $user->email,
+        'merge_fields' => ['FNAME' => $user->first_name, 'LNAME' => $user->last_name, 'CHENGED' => $us_email],
+        'status_if_new' => 'subscribed',
+    ]);
+}
             // Activate / De-activate user
 //            $status = $activation = Activation::completed($user);
 //            if(Input::get('activate') != $status)
