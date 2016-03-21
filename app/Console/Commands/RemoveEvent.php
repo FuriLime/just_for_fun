@@ -39,8 +39,6 @@ class RemoveEvent extends Command
      */
     public function handle()
     {
-        //
-
        DB::table('events')->where('test', '=', '1')->where(DB::raw('DATEDIFF(CURDATE(), STR_TO_DATE(`created_at`, \'%Y-%m-%d %k:%i:%s\'))'), '>=', '2')->delete();
 
        $this->info('asdasd');
