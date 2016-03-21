@@ -43,8 +43,9 @@ class RemoveEvent extends Command
         $events = Event::whereTest('1')->get();
 
         foreach($events as $event){
+            if($event['created_at']=='')
                 DB::table('events')->where('created_at', '=', '2016-03-11 09:13:26')->delete();
         }
-        $this->info($events);
+        $this->info($events->id);
     }
 }
