@@ -1041,6 +1041,44 @@ footer .btn-primary.text-white {
     font-weight: bold;
     background-color: red;
 }
+.share-event-top {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 10000;
+    color: white;
+    top: 0;
+}
+.share-container{ 
+    height: 0;
+    overflow: hidden;
+    transition: all ease 0.5s;
+    border-bottom: 4px solid #0073a7;
+    margin-top: -4px;
+}
+
+.share-event-top .show-details{
+    cursor: pointer;
+    font-size: 24px;
+    width: 377px;
+    margin:auto;
+    background-image: url(../../images/share_event.png);
+    height: 41px;
+    clear: both;
+}
+
+.share-event-top.opened .share-container{
+    height: 50px;
+    margin-top: 0;
+}
+.share-event-top.opened{
+    position: relative;
+}
+.share-event-top.opened .show-details{
+    position: absolute;
+    vertical-align: bottom;
+    margin-left: calc(50% - 188.5px);
+}
 @media(max-width:600px){
     #add_event label {
         width:auto;

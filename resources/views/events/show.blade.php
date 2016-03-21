@@ -21,7 +21,31 @@
     }
 	</style>
 @stop
-
+<div class="share-event-top">
+  <div class="container share-container">
+    <div class="row content">
+      <div class="col-sm-8 col-md-8 ">
+        <div class="input-group">
+          <button id="social_but" class="btn btn-primary text-white" >
+            <span>&nbsp;Social&nbsp;</span>
+            <span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three" data-size="20" data-c="#fff" data-hc="#fff" data-loop="true"></i></span>
+          </button>
+          <button id="embed_but" class="btn btn-primary text-white" >
+            <span>&nbsp;Embed&nbsp;</span>
+            <span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three" data-size="20" data-c="#fff" data-hc="#fff" data-loop="true"></i></span>
+          </button>
+          <button id="email_but" class="btn btn-primary text-white" >
+            <span>&nbsp;Email&nbsp;</span>
+            <span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three" data-size="20" data-c="#fff" data-hc="#fff" data-loop="true"></i></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="show-details">
+    Share this event
+  </div>
+</div>
 {{-- breadcrumb --}}
 @section('top')
 <div class="breadcum">
@@ -281,4 +305,17 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 		
 	});
 	</script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.show-details').click(function(){
+        if ($('.share-event-top').hasClass('opened')){
+          $('.show-details')[0].innerText = 'Share your event!';
+          $('.share-event-top').removeClass('opened');
+        } else{
+          $('.share-event-top').addClass('opened');
+          $('.show-details')[0].innerText = 'Hide Details';
+        }
+      })
+    })
+  </script>
 @stop
