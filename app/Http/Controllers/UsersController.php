@@ -630,7 +630,7 @@ class UsersController extends JoshController
             }
 
             $mc->put("lists/$listId/members/$email", [
-                'email_address' => $email,
+//                'email_address' => $email,
                 'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
                 'status_if_new'        => 'subscribed',
             ]);
