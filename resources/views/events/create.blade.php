@@ -501,6 +501,7 @@
                     var locale = ($('#location').val());
                     var splits = '';
                     var sity = '';
+                    var city='0;'
                     var street = '';
                     var state = '';
                     var country = '';
@@ -509,6 +510,12 @@
 
                     if (results[0]) {
                         locale = results[0].formatted_address;
+                        switch(this.types[0]) {
+                            case "locality":
+                                city = this.short_name;
+                                    console.log(city);
+                                break;
+                        }
                         console.log(locale.country);
                         splits = locale.replace(/-/g,",");
 
