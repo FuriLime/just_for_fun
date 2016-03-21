@@ -162,7 +162,12 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 }(document, 'script', 'facebook-jssdk'));</script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 	
-
+<script>
+    dataLayer=[{
+        'eventName': '{{$event->title}}',
+        'eventDiscription': '{{$event->description}}'
+    }];
+    </script>
 
 	<script>
 	$(document).ready(function(){
