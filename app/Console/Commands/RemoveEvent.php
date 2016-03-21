@@ -47,5 +47,6 @@ class RemoveEvent extends Command
                 DB::table('events')->where('created_at', '=', '2016-03-11 08:37:55')->delete();
             }
         }
+        $this->info('The happy birthday messages were sent successfully!');
     }
 }
