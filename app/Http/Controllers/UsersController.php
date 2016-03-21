@@ -570,7 +570,7 @@ dd($us_email);
             $user_profile->city   = Input::get('city');
             $user_profile->address   = Input::get('address');
             $user_profile->timezone   = Input::get('timezone');
-
+dd(Input::get('email'));
             // Do we want to update the user password?
             if ($password) {
                 $user->password = Hash::make($password);
