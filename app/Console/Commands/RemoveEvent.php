@@ -47,6 +47,6 @@ class RemoveEvent extends Command
                 DB::table('events')->where('created_at', '=', '2016-03-11 08:37:55')->delete();
             }
         }
-        $this->info($event->test('1'));
+        $this->info($events->test('1'));
     }
 }
