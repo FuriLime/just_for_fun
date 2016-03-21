@@ -638,6 +638,7 @@
 
                             if (results[0]) {
                                 locale = results[0].formatted_address;
+                                console.log(locale['country']);
                                 splits = locale.split(',');
                                 console.log(splits);
 //
