@@ -12,12 +12,5 @@ use Weblee\Mandrill\Mail;
 
 class MailController extends Controller
 {
-    //
-    public function postEmailSend(Request $request)
-    {
-        $this->validate($request, [
-            'email' => 'required|email|unique:users',
-        ]);
-        $email = $_POST['email'];
-    }
+
 }
