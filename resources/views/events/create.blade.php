@@ -603,7 +603,7 @@
                     });
                     service = new google.maps.places.PlacesService(map);
                 }
-            }
+            });
 
             initialize2();
         }, 200);
