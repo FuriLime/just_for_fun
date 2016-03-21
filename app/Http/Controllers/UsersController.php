@@ -533,7 +533,7 @@ class UsersController extends JoshController
                 'offset' => 10,
                 'count' => 10
             ]);
-            dd($mc);
+            dd($mc->get("lists/$listId/members/$us_email"););
             $mc->delete("lists/$listId/members/$us_email");
         } catch (UserNotFoundException $e) {
             // Prepare the error message
