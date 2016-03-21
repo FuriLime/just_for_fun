@@ -43,10 +43,10 @@ class RemoveEvent extends Command
         $events = Event::whereTest('1')->get();
         foreach($events as $event){
             $date_del = date('Y-m-d H:i:s', strtotime($event['created_at']. ' + 2 days'));
-            if($event['test']=='1'){
-                DB::table('events')->where('test', '=', '1');
+//            if($event['test']=='1'){
+                DB::table('events')->where('test', '=', '1' AND 'created_at', '<', $date_del);
                 $this->info($date_del);
-            }
+//            }
 
         }
 //        $this->info($events[0]['created_at']);
