@@ -492,7 +492,7 @@
                 service.textSearch(request, callback);
             }
 
-            geocoder.geocode( { 'address': inputAddress}, function callback(results, status) {
+            function callback(results, status) {
                 if (status == google.maps.places.PlacesServiceStatus.OK) {
                     for (var i = 0; i < results.length; i++) {
                         var place = results[i];
@@ -510,12 +510,7 @@
 
                     if (results[0]) {
                         locale = results[0].formatted_address;
-                        switch(this.types[0]) {
-                            case "locality":
-                                city = this.short_name;
-                                    console.log(city);
-                                break;
-                        }
+
                         console.log(locale.country);
                         splits = locale.replace(/-/g,",");
 
@@ -603,7 +598,7 @@
                     });
                     service = new google.maps.places.PlacesService(map);
                 }
-            });
+            }
 
             initialize2();
         }, 200);
