@@ -744,28 +744,28 @@ class UsersController extends JoshController
             $user = Sentinel::findById($id);
 
             // Check if we are not trying to delete ourselves
-            if ($user->id === Sentinel::getUser()->id) {
-                // Prepare the error message
-                $delete_code = str_random(30);
-
-                $data = array(
-//                        'user'          => $user,
-//                    'deleteUrl' => URL::route('delete', array('user_id' => $user->id, '?delete_code' => $delete_code)),
-                        'deleteUrl' => 'http://event.test-y-sbm.com/admin/users/'.$user->id.'/delete?delete_code='.$delete_code,
-                );
-                if($_GET) {
-                    if ($_GET['delete_code'] == $delete_code) {
-                        User::destroy($id);
-                        return Redirect::route('home')->with('success', 'You account was delete');
-                }
-                    }else {
-                    Mail::send('emails.register-activate', $data, function ($m) use ($user) {
-                    $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-                    $m->subject('Hello ' . $user->first_name);
-                    });
-                    return Redirect::route('home')->with('success', 'Message with confirmation link has been sent to ' . $user->email . '. Please click on the link in the letter that would delete your account.');
-                }
-            }
+//            if ($user->id === Sentinel::getUser()->id) {
+//                // Prepare the error message
+//                $delete_code = str_random(30);
+//
+//                $data = array(
+////                        'user'          => $user,
+////                    'deleteUrl' => URL::route('delete', array('user_id' => $user->id, '?delete_code' => $delete_code)),
+//                        'deleteUrl' => 'http://event.test-y-sbm.com/admin/users/'.$user->id.'/delete?delete_code='.$delete_code,
+//                );
+//                if($_GET) {
+//                    if ($_GET['delete_code'] == $delete_code) {
+//                        User::destroy($id);
+//                        return Redirect::route('home')->with('success', 'You account was delete');
+//                }
+//                    }else {
+//                    Mail::send('emails.register-activate', $data, function ($m) use ($user) {
+//                    $m->to($user->email, $user->first_name . ' ' . $user->last_name);
+//                    $m->subject('Hello ' . $user->first_name);
+//                    });
+//                    return Redirect::route('home')->with('success', 'Message with confirmation link has been sent to ' . $user->email . '. Please click on the link in the letter that would delete your account.');
+//                }
+//            }
 
             // Delete the user
             //to allow soft deleted, we are performing query on users model instead of Sentinel model
