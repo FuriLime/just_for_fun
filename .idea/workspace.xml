@@ -54,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/admin/users/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.43948296" vertical-offset="867" max-vertical-offset="2074">
-              <caret line="73" column="186" selection-start-line="73" selection-start-column="186" selection-end-line="73" selection-end-column="186" />
+              <caret line="73" column="51" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -396,12 +396,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-03363" summary="database">
-      <created>1458560355481</created>
-      <option name="number" value="03363" />
-      <option name="project" value="LOCAL" />
-      <updated>1458560355481</updated>
-    </task>
     <task id="LOCAL-03364" summary="database">
       <created>1458560667884</created>
       <option name="number" value="03364" />
@@ -690,7 +684,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458584459109</updated>
     </task>
-    <option name="localTasksCounter" value="3412" />
+    <task id="LOCAL-03412" summary="database">
+      <created>1458584808555</created>
+      <option name="number" value="03412" />
+      <option name="project" value="LOCAL" />
+      <updated>1458584808555</updated>
+    </task>
+    <option name="localTasksCounter" value="3413" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1095,14 +1095,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5" vertical-offset="867" max-vertical-offset="3978">
-          <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/UserProfile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="610">
@@ -1121,10 +1113,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5" vertical-offset="867" max-vertical-offset="3978">
+          <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/users/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43948296" vertical-offset="867" max-vertical-offset="2074">
-          <caret line="73" column="186" selection-start-line="73" selection-start-column="186" selection-end-line="73" selection-end-column="186" />
+          <caret line="73" column="51" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
           <folding />
         </state>
       </provider>
