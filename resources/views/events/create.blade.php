@@ -509,9 +509,8 @@
 
                     if (results[0]) {
                         locale = results[0].formatted_address;
-                        console.log(locale);
+                        console.log(locale['country']);
                         splits = locale.replace(/-/g,",");
-                        console.log(splits);
 
                         splits = splits.split(',');
 
