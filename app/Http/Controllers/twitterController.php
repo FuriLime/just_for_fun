@@ -59,10 +59,7 @@ class twitterController extends Controller
 //            }
 
 //            dd($_GET['email']);
-//            $user->email = $userTwit->getNickName().'@twitter.com';
-            if(empty($user->email)){
-                return redirect()->route('welcome');
-            }
+            $user->email = $userTwit->getNickName().'@twitter.com';
             $user->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';
