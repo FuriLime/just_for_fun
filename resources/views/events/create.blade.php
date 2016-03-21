@@ -549,6 +549,7 @@
 
                             if($.isNumeric(splits[1])){
                                 street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
+                                console.log(street.types);
                                 $('#street').val(street);
 
 //                                street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
