@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\Events;
+use App\Event;
 use DB;
 
 class RemoveEvent extends Command
@@ -40,7 +40,7 @@ class RemoveEvent extends Command
     public function handle()
     {
         //
-        $events = Events::whereCreateAt(date(('Y-m-d H:i')))->get();
+        $events = Event::whereCreateAt(date(('Y-m-d H:i')))->get();
 
         foreach($events as $event){
             if($event->test('1')){
