@@ -631,7 +631,6 @@ class UsersController extends JoshController
 //                $role->users()->attach();
             }
 if($us_email != Input::get('email')) {
-    dd($us_email);
     $mc->put("lists/$listId/members/$email", [
         'email_address' => $user->email,
         'merge_fields' => ['FNAME' => $user->first_name, 'LNAME' => $user->last_name, 'CHENGED' => $us_email],
