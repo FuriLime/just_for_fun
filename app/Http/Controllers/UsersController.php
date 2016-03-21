@@ -528,12 +528,8 @@ class UsersController extends JoshController
             $apiKey = Config::get('mailchimp.apikey');
             $mc = new Mailchimp($apiKey);
             $listId = Config::get('mailchimp.listId');
-            $result = $mc->request('lists', [
-                'fields' => 'lists.id,lists.name,lists.stats.member_count',
-                'offset' => 10,
-                'count' => 10
-            ]);
-            dd($mc->get("lists/$listId/members/$us_email"););
+
+            dd($mc->get("lists/$listId/members/$email"));
             $mc->delete("lists/$listId/members/$us_email");
         } catch (UserNotFoundException $e) {
             // Prepare the error message
