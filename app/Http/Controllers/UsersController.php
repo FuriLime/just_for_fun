@@ -524,7 +524,7 @@ class UsersController extends JoshController
             $user_profile = $user->user_profile()->first();
 
             $us_email = Sentinel::getUser()->email;
-
+dd($us_email);
             $email = strtolower(md5(Sentinel::getUser()->email));
             $apiKey = Config::get('mailchimp.apikey');
             $mc = new Mailchimp($apiKey);
@@ -631,7 +631,6 @@ class UsersController extends JoshController
 //                $role->users()->attach();
             }
 if($us_email != Input::get('email')) {
-    dd('sddsds');
     $mc->put("lists/$listId/members/$email", [
         'email_address' => $user->email,
         'merge_fields' => ['FNAME' => $user->first_name, 'LNAME' => $user->last_name, 'CHENGED' => $us_email],
