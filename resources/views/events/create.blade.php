@@ -509,7 +509,6 @@
                     var asdas = '';
 
                     if (results[0]) {
-                        console.log(results[0].length);
                         locale = results[0].formatted_address;
 
                         splits = locale.replace(/-/g,",");
