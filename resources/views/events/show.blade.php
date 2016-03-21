@@ -165,7 +165,9 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 <script>
     dataLayer=[{
         'eventName': '{{$event->title}}',
-        'eventDiscription': '{{$event->description}}'
+        'eventDiscription': '{{$event->description}}',
+        'eventPeriod': '{{$event->period}}',
+        'eventLocation': '{{$event->location}}'
     }];
     </script>
 
