@@ -523,6 +523,8 @@
                             $('#city').val(sity);
                             country = splits[1];
                             $('#country').val(country);
+                            $('#street').val('');
+                            $('#state').val('');
                             $('#street').attr('style', 'display:none');
                             $('#state').attr('style', 'display:none');
                             $('#city').attr('style', 'display:block');
@@ -536,6 +538,7 @@
                             $('#city').val(sity);
                             country = splits[2];
                             $('#country').val(country);
+                            $('#state').val('');
                             $('#state').attr('style', 'display:none');
                             $('#city').attr('style', 'display:block');
                             $('#street').attr('style', 'display:block');
