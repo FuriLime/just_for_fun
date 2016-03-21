@@ -528,9 +528,7 @@ class UsersController extends JoshController
             $apiKey = Config::get('mailchimp.apikey');
             $mc = new Mailchimp($apiKey);
             $listId = Config::get('mailchimp.listId');
-
-            dd($mc->get("lists/$listId/members/$us_email"));
-            $mc->delete("lists/$listId/members/$us_email");
+//            $mc->delete("lists/$listId/members/$us_email");
         } catch (UserNotFoundException $e) {
             // Prepare the error message
             $error = Lang::get('users/message.user_not_found', compact('id'));
@@ -674,7 +672,7 @@ class UsersController extends JoshController
             // Was the user updated?
             if ($user->save() && $user_profile->save()) {
 
-                $mc->post("lists/$listId/members/", [
+                $mc->patch("lists/$listId/members/", [
                     'email_address' => $user->email,
                     'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
                     'status'        => 'subscribed',
