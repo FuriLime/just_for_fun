@@ -40,15 +40,9 @@ class RemoveEvent extends Command
     public function handle()
     {
         //
-        $events = Event::whereTest('1')->get();
-        foreach($events as $event){
-            $date_del = date('Y-m-d H:i:s', strtotime($event['created_at']. ' + 2 days'));
-//            if($event['test']=='1'){
-                DB::table('events')->where('test', '=', '1', 'AND', 'created_at', '<', $date_del)->delete();
-                $this->info($date_del);
-//            }
 
-        }
-//        $this->info($events[0]['created_at']);
+//                DB::table('events')->where('test', '=', '1', 'AND', 'created_at', '=', 'DATEDIFF(CURDATE(),STR_TO_DATE("created_at", "Y-m-d H:m:s")) = 2')->delete();
+
+       $this->info('success');
     }
 }
