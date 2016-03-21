@@ -13,14 +13,6 @@ use Weblee\Mandrill\Mail;
 class MailController extends Controller
 {
     //
-
-    public function getEmailSend()
-    {
-
-        return view('welcome', compact('email'));
-//        return redirect()->route('oauthtwitter');
-    }
-
     public function postEmailSend(Request $request)
     {
         $this->validate($request, [
