@@ -41,8 +41,8 @@ class RemoveEvent extends Command
     {
         //
 
-        $sdfsdf=  DB::table('events')->where('test', '=', '1')->where(DB::raw('DATEDIFF(CURDATE(), STR_TO_DATE(\'created_at\', \'%Y-%m-%d %k:%i:%s\'))'), '>=', '2')->toSql();
+       DB::table('events')->where('test', '=', '1')->where(DB::raw('DATEDIFF(CURDATE(), STR_TO_DATE(`created_at`, \'%Y-%m-%d %k:%i:%s\'))'), '>=', '2')->toSql();
 
-       $this->info($sdfsdf);
+       $this->info('asdasd');
     }
 }
