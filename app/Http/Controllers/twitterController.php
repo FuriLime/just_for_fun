@@ -59,7 +59,7 @@ class twitterController extends Controller
 //            }
 
 //            dd($_GET['email']);
-            $user->email = $userTwit->getNickName().'@twitter.com';
+//            $user->email = $userTwit->getNickName().'@twitter.com';
             $user->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';
@@ -84,13 +84,14 @@ class twitterController extends Controller
             $user_profile->user_id = $user->id;
             $user_profile->save();
             $user = Sentinel::findById($user->id);
+            if(empty($user->email)){
+                return redirect()->route('welcome');
+            }
             $activation = Activation::create($user);
 
         if (Activation::complete($user, $activation->code))
         {
-            if($user->email==NULL){
-                return redirect()->route('welcome');
-            }
+
             Sentinel::authenticate($user);
               if(Sentinel::authenticate($user))
             {
