@@ -287,7 +287,6 @@ class UsersController extends JoshController
     {
         // Grab all the users
         $users = User::All();
-        dd($users);
 
         // Show the page
         return View('admin.users.index', compact('users'));

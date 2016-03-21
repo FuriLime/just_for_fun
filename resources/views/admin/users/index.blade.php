@@ -66,7 +66,7 @@ Users List
             						Pending
             					@endif
             				</td>
-            				<td>{!! $user->created_at->diffForHumans() !!}</td>
+            				{{--<td>{!! $user->created_at->diffForHumans() !!}</td>--}}
 
             			</tr>
                     @endforeach
