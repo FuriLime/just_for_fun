@@ -470,6 +470,10 @@
             $('.locale').attr('style', 'display:block');
             $('.fields_map').attr('style', 'display:none');
             $('#location').val('');
+            $('#street').val('');
+            $('#state').val('');
+            $('#city').val('');
+            $('#country').val('');
 
         })
 
