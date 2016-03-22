@@ -21,6 +21,7 @@ use App\Activation;
 use Mailchimp\Mailchimp;
 use Config;
 use Ramsey\Uuid\Uuid;
+use Honeypot;
 
 class AuthController extends JoshController
 {
