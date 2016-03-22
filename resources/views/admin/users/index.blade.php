@@ -75,7 +75,7 @@ Users List
                                 @if ((Sentinel::getUser()->id != $user->id) && ($user->id != 1))
                                 <a href="{{ route('confirm-delete/user', $user->id) }}" data-toggle="modal" data-target="#delete_confirm"><i class="livicon" data-name="user-remove" data-size="18" data-loop="true" data-c="#f56954" data-hc="#f56954" title="delete user"></i></a>
                                 @endif
-                                <a href="{{ route('create/user', $user->id) }}"><i class="livicon" data-name="create" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="create user"></i></a>
+
 
                             </td>
 
