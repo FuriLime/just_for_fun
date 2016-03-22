@@ -430,7 +430,6 @@
         var minutes_end = new Date(start_date);;
         minutes_end.setMinutes(start_date.getMinutes() + 10);
         minutes_end = minutes_end.format('Y/m/d H:i');
-        console.log(minutes_end)
         $('#finish').val(end_date);
         if($('#finish').val()=='NaN/NaN/NaN NaN:NaN'){
             $('#finish').val('');
