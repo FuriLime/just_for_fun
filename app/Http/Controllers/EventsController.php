@@ -224,7 +224,7 @@ class EventsController extends Controller {
 //        else{
             $store_info->test = "1";
 //        }
-        dd($store_info->timezone);
+//        dd($store_info->timezone);
         $date = new \DateTime($store_info->start, new \DateTimeZone($store_info->timezone));
         $date->setTimezone(new \DateTimeZone('UTC'));
         $event_start_zero = $date;
