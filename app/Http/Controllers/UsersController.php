@@ -611,9 +611,9 @@ class UsersController extends JoshController
 
                 $role = Role::find($roleId);
                 $rolew = [
-                    0 => ['user_id' => $user->id, 'account_id' => $acc_id, 'role_id' =>$role->id],
+                    0 => ['user_id' => $user->id, 'account_id' => $acc_id],
                 ];
-                $role->users()->above($rolew);
+                $role->users()->detach($rolew);
 
             }
 
