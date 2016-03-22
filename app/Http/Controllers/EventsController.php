@@ -566,7 +566,6 @@ class EventsController extends Controller {
         $eventold = Event::whereUuid($uuid)->first();
 
         $event_clone = new Event();
-        dd($event_clone->id);
         $event_clone['title'] = $store_info['title'];
         if(Sentinel::check()){
             $userId = Sentinel::getUser()->id;
@@ -581,7 +580,7 @@ class EventsController extends Controller {
             $event_clone['editor_id'] = $eventold['editor_id'];
         }
         $event_clone['permanent_url'] = Uuid::uuid4();
-        $event_clone['readable_url'] = $event_clone->id .'_'. str_replace(" ", "_", $store_info['title']);
+        $event_clone['readable_url'] = $store_info['id'] .'_'. str_replace(" ", "_", $store_info['title']);
         $event_clone['description'] = $store_info['description'];
         $event_clone['location'] = $store_info['location'];
 //        $event['event_url'] = $store_info['event_url'];
