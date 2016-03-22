@@ -618,16 +618,16 @@ class UsersController extends JoshController
             }
 
             // Assign the user to groups
-//            foreach ($selectedRoles as $roleId) {
-//
-//                $role = Role::find($roleId);
-//                $rolew = [
-//                    0 => ['user_id' => $user->id, 'account_id' => $acc_id],
-//                ];
-//
-//                $role->users()->sync($rolew);
-////                $role->users()->attach();
-//            }
+            foreach ($selectedRoles as $roleId) {
+
+                $role = Role::find($roleId);
+                $rolew = [
+                    0 => ['user_id' => $user->id, 'account_id' => $acc_id, 'role_id'=>$role->id],
+                ];
+
+                $role->users()->sync($rolew);
+//                $role->users()->attach();
+            }
 
 $new_email = md5(Input::get('email'));
     $mc->put("lists/$listId/members/$new_email", [
