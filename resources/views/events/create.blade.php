@@ -425,9 +425,10 @@
 
         var end_date = new Date(start_date);
         end_date.setHours(start_date.getHours() + 1);
-        var minutes_end = new Date(start_date);;
-        minutes_end = minutes_end.setMinutes(start_date.getMinutes() + 1);
         end_date = end_date.format('Y/m/d H:i');
+
+        var minutes_end = new Date(start_date);;
+        minutes_end.setMinutes(start_date.getMinutes() + 1);
         minutes_end = minutes_end.format('Y/m/d H:i');
         $('#finish').val(end_date);
         if($('#finish').val()=='NaN/NaN/NaN NaN:NaN'){
