@@ -56,7 +56,6 @@ class AuthController extends JoshController
             'email'    => 'required|honeypot',
             'password' => 'required|between:3,32',
             'my_name'   => 'honeypot',
-            'my_time'   => 'required|honeytime:1'
 
         );
 
