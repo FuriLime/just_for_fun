@@ -363,7 +363,7 @@ class UsersController extends JoshController
                 'state'   => Input::get('state'),
                 'city'   => Input::get('city'),
                 'address'   => Input::get('address'),
-                'postal'   => Input::get('postal'),
+                'timezone'   => Input::get('timezone'),
             ));
             $user_profile = new UserProfile();
             $user_profile->user_id = $user['id'];
@@ -374,7 +374,7 @@ class UsersController extends JoshController
             $user_profile->state =  Input::get('state');
             $user_profile->city =  Input::get('city');
             $user_profile->address =  Input::get('address');
-            $user_profile->postal =  Input::get('postal');
+            $user_profile->timezone =  Input::get('timezone');
 
             $user_profile->save();
             $account_user = new Account();
