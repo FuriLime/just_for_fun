@@ -601,7 +601,6 @@ class UsersController extends JoshController
 
             // Get the selected groups
             $selectedRoles = Input::get('groups', array());
-            dd($selectedRoles);
             // Groups comparison between the groups the user currently
             // have and the groups the user wish to have.
             $rolesToAdd    = array_diff($selectedRoles, $userRoles);;
