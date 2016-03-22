@@ -176,10 +176,10 @@ Route::resource('events', 'EventsController');
 Route::get('event/add', 'EventsController@create');
 Route::post('event/add', 'EventsController@store');
 
-Route::get('events/{readable_url}/delete', array('as' => 'events.delete', 'uses' => 'EventsController@getDelete'));
-Route::get('events/{title}/clone', array('as' => 'events.clone', 'uses' => 'EventsController@cloned'));
-Route::post('events/{title}/clone', array('as' => 'events.clone', 'uses' => 'EventsController@clonne'));
-Route::get('events/{readable_url}/confirm-delete', array('as' => 'events.confirm-delete', 'uses' => 'EventsController@getModalDelete'));
+Route::get('events/{uuid}/delete', array('as' => 'events.delete', 'uses' => 'EventsController@getDelete'));
+Route::get('events/{uuid}/clone', array('as' => 'events.clone', 'uses' => 'EventsController@cloned'));
+Route::post('events/{uuid}/clone', array('as' => 'events.clone', 'uses' => 'EventsController@clonne'));
+Route::get('events/{uuid}/confirm-delete', array('as' => 'events.confirm-delete', 'uses' => 'EventsController@getModalDelete'));
 Route::post('event/addtocalendar', array('as' => 'event.addtocalendar', 'uses' => 'EventsController@addToCalendar'));
 
 Route::get('/', array('as' => 'home', function () {
