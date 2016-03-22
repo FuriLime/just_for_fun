@@ -358,10 +358,20 @@ class EventsController extends Controller {
         }
 //        $event['timezone'] =$event['timezone'];
         $event['duration'] = strtotime($event['finish']) - strtotime($event['start']);
-
-
+//minutes
+        if ($event['duration']< 3600 ) {
+            if (($event['duration'] % 3600) == 0) {
+                $event['duration_day'] = 0 . 'd';
+                $event['duration_hour'] = 0 . 'h';
+                $event['duration_min'] = ($event['duration'] / 3600) % 60 . 'm';
+            } else {
+                $event['duration_day'] = 0 . 'd';
+                $event['duration_hour'] = 0 . 'h';
+                $event['duration_min'] = ($event['duration'] / 60) % 60 . 'm';
+            }
+        }
         //hours
-        if ($event['duration']>= 3600 && $event['duration'] < 86400) {
+        elseif ($event['duration']>= 3600 && $event['duration'] < 86400) {
             if (($event['duration'] % 3600) == 0) {
                 $event['duration_day'] = 0 . 'd';
                 $event['duration_hour'] = ($event['duration'] / 3600) % 24 . 'h';
