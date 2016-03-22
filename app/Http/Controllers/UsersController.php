@@ -17,6 +17,7 @@ use App\UserProfile;
 use App\AccountProfile;
 //use App\Activation;
 use App\Role;
+use DB;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Hash;
 use Mailchimp\Mailchimp;
