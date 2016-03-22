@@ -455,7 +455,7 @@ class EventsController extends Controller {
             return redirect('events')->with('success', Lang::get('message.success.update'));
         }
     }
-    public function cloned($uuid, $title)
+    public function cloned($title)
     {
 
         if(session()->get('start')) {
@@ -468,7 +468,8 @@ class EventsController extends Controller {
             $event_clone['timezone'] = session()->get('timezone');
         }
         //$event = Event::findOrFail($id);
-        $event_clone = Event::whereUuid($uuid)->first();
+        $event_clone = Event::whereUuid($title)->first();
+//        $title = $event_clone->title;
         $date = new \DateTime($event_clone['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($event_clone['timezone']));
         $event_start_zero = $date;
