@@ -515,6 +515,18 @@ class EventsController extends Controller {
             $event_clone['timezone'] = $event_clone['timezone'];
         }
         $event_clone['duration'] = strtotime($event_clone['finish']) - strtotime($event_clone['start']);
+        //minutes
+        if ($event_clone['duration']< 3600 ) {
+            if (($event_clone['duration'] % 3600) == 0) {
+                $event_clone['duration_day'] = 0 . 'd';
+                $event_clone['duration_hour'] = 0 . 'h';
+                $event_clone['duration_min'] = ($event_clone['duration'] / 3600) % 60 . 'm';
+            } else {
+                $event_clone['duration_day'] = 0 . 'd';
+                $event_clone['duration_hour'] = 0 . 'h';
+                $event_clone['duration_min'] = ($event_clone['duration'] / 60) % 60 . 'm';
+            }
+        }
         //hours
         if ($event_clone['duration']>= 3600 && $event_clone['duration'] < 86400) {
             if (($event_clone['duration'] % 3600) == 0) {
