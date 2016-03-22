@@ -346,6 +346,7 @@ class UsersController extends JoshController
 
         //check whether use should be activated by default or not
         $activate = Input::get('activate')?true:false;
+        dd($activate);
 
         try {
             // Register the user
