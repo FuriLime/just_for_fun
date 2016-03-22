@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-Confirm Page
+    @lang('frontend.confirm_title')
 @parent
 @stop
 
@@ -45,10 +45,10 @@ Confirm Page
             <div class="row">
                 <div class="col-xs-10 col-xs-offset-1 popup-content">
                     <div class="popup-head">
-                        We are now preparing <span>Eventname</span> for you
+                        @lang('frontend.location')<span>Eventname</span> @lang('frontend.location')
                     </div>
                     <div class="estimated-time">
-                        Estimated time: <span>10</span> seconds
+                        @lang('frontend.location') <span>10</span> seconds
                     </div>
                     <ul class="col-xs-4 col-xs-offset-4 popup-events-list">
                         <li>
