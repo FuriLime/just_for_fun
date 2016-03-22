@@ -442,8 +442,8 @@
             todayBtn: true,
             controlType: 'select',
             startDate: $('#finish').val(),
-            minDate: minutes_end,
-            minuteStep: 10
+
+            minuteStep: 1
 
         });
 
