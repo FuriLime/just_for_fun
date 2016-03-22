@@ -219,7 +219,7 @@ class EventsController extends Controller {
         if(Sentinel::check()) {
             $store_info = Input::get('test');
         }else{$store_info->test = "1"; }
-dd($store_info->timezone);
+dd(Input::get('timezone'));
         $date = new \DateTime($store_info->start, new \DateTimeZone($store_info->timezone));
         $date->setTimezone(new \DateTimeZone('UTC'));
         $event_start_zero = $date;
