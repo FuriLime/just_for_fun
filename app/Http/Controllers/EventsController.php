@@ -201,6 +201,7 @@ class EventsController extends Controller {
         $store_info->timezone = Input::get('timezone');
         $store_info->finish = Input::get('finish');
         $store_info->start = Input::get('start');
+        dd($store_info->timezone);
         if(Sentinel::check()){
             $userId = Sentinel::getUser()->id;
             $user = User::find($userId);
@@ -219,7 +220,7 @@ class EventsController extends Controller {
         if(Sentinel::check()) {
             $store_info = Input::get('test');
         }else{$store_info->test = "1"; }
-dd(Input::get('timezone'));
+
         $date = new \DateTime($store_info->start, new \DateTimeZone($store_info->timezone));
         $date->setTimezone(new \DateTimeZone('UTC'));
         $event_start_zero = $date;
