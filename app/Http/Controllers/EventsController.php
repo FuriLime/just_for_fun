@@ -581,15 +581,14 @@ class EventsController extends Controller {
             $event_clone['author_id'] = $userId;
             $event_clone['editor_id'] = $userId;
         }else {
-            $event_clone['account_id'] = $eventold['account_id'];
-            $event_clone['author_id'] = $eventold['author_id'];
-            $event_clone['editor_id'] = $eventold['editor_id'];
+            $event_clone['account_id'] = "Null";
+            $event_clone['author_id'] = "Null";
+            $event_clone['editor_id'] = "Null";
         }
         $event_clone['permanent_url'] = Uuid::uuid4();
         $event_clone['readable_url'] = Uuid::uuid4();
         $event_clone['description'] = $store_info['description'];
         $event_clone['location'] = $store_info['location'];
-//        $event['event_url'] = $store_info['event_url'];
         $event_clone['timezone'] = $store_info['timezone'];
         $event_clone['Street'] = $store_info['Street'];
         $event_clone['City'] = $store_info['City'];
