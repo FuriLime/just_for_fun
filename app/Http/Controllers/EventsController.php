@@ -201,7 +201,7 @@ class EventsController extends Controller {
         $store_info->timezone = Input::get('timezone');
         $store_info->finish = Input::get('finish');
         $store_info->start = Input::get('start');
-        dd($store_info->timezone);
+
         if(Sentinel::check()){
             $userId = Sentinel::getUser()->id;
             $user = User::find($userId);
@@ -217,6 +217,7 @@ class EventsController extends Controller {
         $store_info->permanent_url = Uuid::uuid4();
         $store_info->readable_url = Uuid::uuid4();
         $store_info->status = Input::get('active');
+        dd($store_info->timezone);
         if(Sentinel::check()) {
             $store_info = Input::get('test');
         }else{$store_info->test = "1"; }
