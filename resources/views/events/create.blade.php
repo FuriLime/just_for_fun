@@ -245,7 +245,7 @@
                             </button>
 
                             <div class="checkbox add_event_section_link">
-                              <label><input type="checkbox" checked name="test" id="test" @if(!Sentinale::checked()) disabled="disabled" @endif value="1">This is a test event</label>
+                              <label><input type="checkbox" checked name="test" id="test" @if(!Sentinel::check()) disabled="disabled" @endif value="1">This is a test event</label>
                             </div>
                         </div>
 
