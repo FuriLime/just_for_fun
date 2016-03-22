@@ -205,7 +205,7 @@ Add User
                                     <div class="form-group">
                                         <label for="timezone" class="col-sm-2 control-label">@lang('users/title.timezone')</label>
                                         <div class="col-sm-10">
-                                            <input id="timezone" name="timezone" type="text" class="form-control" value="{!! Input::old('timezone', $user_profile->timezone) !!}" />
+                                            <input id="timezone" name="timezone" type="text" class="form-control" value="{!! Input::old('timezone') !!}" />
                                         </div>
                                     </div>
 
