@@ -253,7 +253,7 @@
                                 @lang('frontend.save_as_draft')
                             </button>
                             @endif
-                            <button class="btn btn-primary text-white test publish submit">
+                            <button class="btn btn-primary text-white test publish submit" name="publish">
                                 @lang('frontend.save_and_publish')
                             </button>
 
@@ -306,10 +306,7 @@
     <script>
         $(document).on("click", ".submit", function(e) {
             event.preventDefault();
-            if($(this).hasClass('draft')){
-                $('#active').val('Draft');
-            }
-            else if($(this).hasClass('publish')){
+            if($(this).hasClass('publish')){
                 $('#active').val('Publish');
             }
             else{
