@@ -620,7 +620,6 @@ class UsersController extends JoshController
             foreach ($selectedRoles as $roleId) {
 
                 $role = Role::find($roleId);
-                dd($role);
                 $rolew = [
                     0 => ['user_id' => $user->id, 'account_id' => $acc_id],
                 ];
