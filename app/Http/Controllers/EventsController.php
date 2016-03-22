@@ -528,7 +528,7 @@ class EventsController extends Controller {
             }
         }
         //hours
-        if ($event_clone['duration']>= 3600 && $event_clone['duration'] < 86400) {
+        elseif ($event_clone['duration']>= 3600 && $event_clone['duration'] < 86400) {
             if (($event_clone['duration'] % 3600) == 0) {
                 $event_clone['duration_day'] = 0 . 'd';
                 $event_clone['duration_hour'] = ($event_clone['duration'] / 3600) % 24 . 'h';
