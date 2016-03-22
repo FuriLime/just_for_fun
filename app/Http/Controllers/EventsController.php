@@ -608,7 +608,7 @@ class EventsController extends Controller {
 
 //        $store_info['status'] = Input::get('active');
 
-
+dd(Input::get('active'));
         $date = new \DateTime($store_info['start'], new \DateTimeZone($event_clone['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
         $event_start_zero = $date;
