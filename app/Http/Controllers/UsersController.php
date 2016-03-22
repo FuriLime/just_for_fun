@@ -607,14 +607,14 @@ class UsersController extends JoshController
             $rolesToRemove = array_diff($userRoles, $selectedRoles);
             $acc_id = $user->accounts()->first()->id;
             // Remove the user from groups
-            foreach ($userRoles as $roleId) {
-                $role = Role::find($roleId);
-                $rolew = [
-                    0 => ['user_id' => $user->id, 'account_id' => $acc_id],
-                ];
-                $role->users()->detach($rolew);
-
-            }
+//            foreach ($userRoles as $roleId) {
+//                $role = Role::find($roleId);
+//                $rolew = [
+//                    0 => ['user_id' => $user->id, 'account_id' => $acc_id],
+//                ];
+//                $role->users()->detach($rolew);
+//
+//            }
 
             // Assign the user to groups
             foreach ($selectedRoles as $roleId) {
