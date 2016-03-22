@@ -192,27 +192,6 @@ class EventsController extends Controller {
             'start' => 'required',
             'finish' => 'required',
         ]);
-         {
-            $user = new User();
-            $user->email = Uuid::uuid4();
-            $user->save();
-            $userId = $user->id;
-            $user = User::find($userId);
-            $account_user = new Account();
-            $account_user->	account_type_id = '1';
-            $account_user->name = $user->uuid;
-            $account_user->slug = $user->uuid;
-            $account_user->save();
-
-            //add user to 'User' group
-            $role = Role::find(2);
-            $rolew = [
-                0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
-            ];
-
-            $role->users()->attach($rolew);
-            $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
-        }
         $store_info = new Event();
         $store_info->uuid = Uuid::uuid4(4);
         $store_info->title = Input::get('title');
