@@ -428,9 +428,9 @@
         end_date = end_date.format('Y/m/d H:i');
 
         var minutes_end = new Date(start_date);;
-        minutes_end.setMinutes(start_date.getMinutes() + 10);
+        minutes_end.setMinutes(start_date.getMinutes() + 1);
         minutes_end = minutes_end.format('Y/m/d H:i');
-        console.log(minutes_end);
+        console.log(minutes_end)
         $('#finish').val(end_date);
         if($('#finish').val()=='NaN/NaN/NaN NaN:NaN'){
             $('#finish').val('');
@@ -442,7 +442,7 @@
             todayBtn: true,
             controlType: 'select',
             startDate: $('#finish').val(),
-            minDate: minutes_end,
+            minDate:$('#finish').val(),
             minuteStep: 10
 
         });
