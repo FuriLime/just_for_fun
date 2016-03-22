@@ -443,7 +443,7 @@
             controlType: 'select',
             startDate: $('#finish').val(),
             minDate:$('#finish').val(),
-            minuteStep: 10
+            minuteStep: 1
 
         });
 
