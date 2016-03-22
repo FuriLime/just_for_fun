@@ -598,7 +598,7 @@ class UsersController extends JoshController
 
             // Get the current user groups
             $userRoles = $user->roles()->lists('id')->all();
-
+dd($userRoles);
             // Get the selected groups
             $selectedRoles = Input::get('groups', array());
 
