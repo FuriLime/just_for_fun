@@ -217,11 +217,14 @@ class EventsController extends Controller {
         $store_info->permanent_url = Uuid::uuid4();
         $store_info->readable_url = Uuid::uuid4();
         $store_info->status = Input::get('active');
-        dd($store_info->timezone);
+
         if(Sentinel::check()) {
             $store_info = Input::get('test');
-        }else{$store_info->test = "1"; }
-
+        }
+        else{
+            $store_info->test = "1";
+        }
+        dd($store_info->timezone);
         $date = new \DateTime($store_info->start, new \DateTimeZone($store_info->timezone));
         $date->setTimezone(new \DateTimeZone('UTC'));
         $event_start_zero = $date;
