@@ -621,6 +621,7 @@ class UsersController extends JoshController
             foreach ($rolesToAdd as $roleId) {
 
                 $role = Role::find($roleId);
+                dd($role);
                 $rolew = [
                     0 => ['user_id' => $user->id, 'account_id' => $acc_id],
                 ];
