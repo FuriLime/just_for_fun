@@ -294,13 +294,13 @@
         $(document).on("click", ".submit", function(e) {
             event.preventDefault();
             if($(this).hasClass('draft')){
-                $('#active').val('draft');
+                $('#active').val('Draft');
             }
             else if($(this).hasClass('publish')){
-                $('#active').val('publish');
+                $('#active').val('Publish');
             }
             else{
-                $('#active').val('draft');
+                $('#active').val('Draft');
             }
             bootbox.confirm("Do you want to publish this event?", function(result) {
                 if (result == true) {
