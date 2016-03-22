@@ -622,7 +622,7 @@ class EventsController extends Controller {
         $event_clone['start'] = date($event_start_zero->format('Y-m-d H:i'));
         $event_clone['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
-        dd($event_clone);
+
         $event_clone->save();
 
         // Is the user logged in?
