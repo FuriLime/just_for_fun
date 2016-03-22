@@ -237,10 +237,10 @@
 
                          <div class="form-group" style="text-align: right; margin-right: 3%; margin-top: 9%;">
                         <div class="col-sm-offset-0 col-sm-12" id="btn_group">
-                            <button type="button" name="draft" class="btn submit" onclick="(function($) { $('#active').val('draft'); })">
+                            <button type="button" name="draft" class="btn draft submit">
                                 @lang('frontend.save_as_draft')
                             </button>
-                            <button class="btn btn-primary text-white test submit" onclick="(function($) { $('#active').val('publish');})">
+                            <button class="btn btn-primary text-white test publish submit">
                                 @lang('frontend.save_and_publish')
                             </button>
 
@@ -293,6 +293,15 @@
     <script>
         $(document).on("click", ".submit", function(e) {
             event.preventDefault();
+            if($(this).hasClass('draft')){
+                $('#active').val('draft');
+            }
+            else if($(this).hasClass('publish')){
+                $('#active').val('publish');
+            }
+            else{
+                $('#active').val('draft');
+            }
             bootbox.confirm("Do you want to publish this event?", function(result) {
                 if (result == true) {
                    $('#create_event').submit();
