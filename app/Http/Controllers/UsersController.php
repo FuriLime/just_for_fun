@@ -613,6 +613,7 @@ class UsersController extends JoshController
                 $rolew = [
                     0 => ['user_id' => $user->id, 'account_id' => $acc_id],
                 ];
+                dd($rolew);
                 $role->users()->detach($rolew);
 
             }
