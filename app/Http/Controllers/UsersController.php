@@ -365,7 +365,9 @@ class UsersController extends JoshController
                 'address'   => Input::get('address'),
                 'postal'   => Input::get('postal'),
             ));
-
+            $user_profile = new UserProfile();
+            $user_profile->user_id = $user['id'];
+            $user_profile->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';
             $account_user->name = $user['uuid'];
