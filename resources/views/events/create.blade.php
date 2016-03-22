@@ -310,7 +310,7 @@
                 $('#active').val('Publish');
             }
             else{
-                $('#active').val('sdfsdf');
+                $('#active').val('Draft');
             }
             bootbox.confirm("Do you want to publish this event?", function(result) {
                 if (result == true) {
