@@ -170,6 +170,7 @@ class EventsController extends Controller {
      */
     public function store(Request $request)
     {
+        dd($_POST);
         if(isset($_POST['timezone'])) {
             session()->put('timezone', $_POST['timezone']);
         }
