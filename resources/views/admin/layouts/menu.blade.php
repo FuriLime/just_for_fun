@@ -95,14 +95,14 @@
                     Users
                 </a>
             </li>
-            <li class="active" id="active">
-                <a href="{{ URL::to('admin/create/user') }}">
+            <li {!! (Request::is('admin/users') ? 'class="active" id="active"' : '') !!}>
+                <a href="{{ URL::to('create/user') }}">
                     <i class="fa fa-angle-double-right"></i>
                     Create user
                 </a>
             </li>
             <li {!! (Request::is('admin/events') ? 'class="active" id="active"' : '') !!}>
-                <a href="{{ URL::to('admin/events') }}">
+                <a href="{{ route('create/user') }}">
                     <i class="fa fa-angle-double-right"></i>
                     events
                 </a>
