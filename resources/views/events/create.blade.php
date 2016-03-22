@@ -441,7 +441,7 @@
             autoclose: true,
             todayBtn: true,
             controlType: 'select',
-            startDate: $('#finish').val(),
+            startDate: minutes_end,
             minDate: minutes_end,
             minuteStep: 10
 
