@@ -36,6 +36,9 @@ Users List
             <div class="panel-heading">
                 <h4 class="panel-title"> <i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
                     Users List
+                    <a type="button" class="btn" href="{{ route('create/user') }}" data-toggle="modal" data-target="#delete_confirm">
+                        <button type="button" class="btn">Remove your account</button>
+                    </a>
                 </h4>
             </div>
             <br />
