@@ -49,7 +49,7 @@ Events List
 					<td>{{ $event->startt }}</td>
 					<td>{{$event->finisht }}</td>
 					<td>
-						@if ($event->active == 'Publish')
+						@if ($event->status == 'Publish')
 						+
 						@else
 						-
