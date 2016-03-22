@@ -40,7 +40,7 @@ class RemoveEvent extends Command
     public function handle()
     {
 //       DB::table('events')->where('test', '=', '1')->where(DB::raw('DATEDIFF(CURDATE(), STR_TO_DATE(`created_at`, \'%Y-%m-%d %k:%i:%s\'))'), '>=', '2')->delete();
-DB::table('events')->update();
+DB::table('events')->update(['votes' => 1]);
        $this->info('asdasd');
     }
 }
