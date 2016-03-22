@@ -443,8 +443,8 @@
             autoclose: true,
             todayBtn: true,
             controlType: 'select',
-            startDate: end_date,
-            minDate: $('#finish').val(),
+            startDate: $('#finish').val(),
+            minDate: end_date,
             minuteStep: 10
 
         });
