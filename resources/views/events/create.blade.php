@@ -425,7 +425,8 @@
 
         var end_date = new Date(start_date);
         end_date.setHours(start_date.getHours() + 1);
-        var minutes_end = end_date.setMinutes(start_date.getMinutes() + 1);
+        var minutes_end = new Date(start_date);;
+        minutes_end = end_date.setMinutes(start_date.getMinutes() + 1);
         end_date = end_date.format('Y/m/d H:i');
         minutes_end = minutes_end('Y/m/d H:i');
         $('#finish').val(end_date);
