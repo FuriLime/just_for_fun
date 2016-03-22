@@ -566,6 +566,7 @@ class EventsController extends Controller {
         $eventold = Event::whereUuid($uuid)->first();
 
         $event_clone = new Event();
+        dd($event_clone->id);
         $event_clone['title'] = $store_info['title'];
         if(Sentinel::check()){
             $userId = Sentinel::getUser()->id;
