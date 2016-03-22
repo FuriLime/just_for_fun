@@ -617,7 +617,6 @@ class UsersController extends JoshController
             }
 
             // Assign the user to groups
-            foreach ($rolesToAdd as $roleId) {
 
                 $role = Role::find($selectedRoles);
                 $rolew = [
@@ -626,7 +625,7 @@ class UsersController extends JoshController
 
                 $role->users()->attach($rolew);
 //                $role->users()->attach();
-            }
+
 
 $new_email = md5(Input::get('email'));
     $mc->put("lists/$listId/members/$new_email", [
