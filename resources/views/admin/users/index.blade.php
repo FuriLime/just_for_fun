@@ -36,9 +36,6 @@ Users List
             <div class="panel-heading">
                 <h4 class="panel-title"> <i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
                     Users List
-                    <a type="button" class="btn" href="{{ route('create/user') }}" data-toggle="modal" data-target="#delete_confirm">
-                        <button type="button" class="btn">Remove your account</button>
-                    </a>
                 </h4>
             </div>
             <br />
@@ -78,7 +75,7 @@ Users List
                                 @if ((Sentinel::getUser()->id != $user->id) && ($user->id != 1))
                                 <a href="{{ route('confirm-delete/user', $user->id) }}" data-toggle="modal" data-target="#delete_confirm"><i class="livicon" data-name="user-remove" data-size="18" data-loop="true" data-c="#f56954" data-hc="#f56954" title="delete user"></i></a>
                                 @endif
-
+                                <a href="{{ route('create.user', $user->id) }}"><i class="livicon" data-name="create" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="create user"></i></a>
 
                             </td>
 
