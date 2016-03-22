@@ -455,7 +455,7 @@ class EventsController extends Controller {
             return redirect('events')->with('success', Lang::get('message.success.update'));
         }
     }
-    public function cloned($uuid)
+    public function cloned($uuid, $title)
     {
 
         if(session()->get('start')) {
