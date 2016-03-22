@@ -32,6 +32,7 @@ Events List
 			</thead>
 			<tbody>
 			@foreach ($events as $event)
+                @if($event->status!='Draft')
 				<tr>
 					<td>{{ $event->title }}</td>
 					<td>
@@ -69,6 +70,7 @@ Events List
 						</a>
 					</td>
 				</tr>
+                @endif
 			@endforeach
 
 			</tbody>
