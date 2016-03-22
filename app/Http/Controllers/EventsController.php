@@ -240,7 +240,9 @@ class EventsController extends Controller {
         $store_info->permanent_url = Uuid::uuid4();
         $store_info->readable_url = Uuid::uuid4();
         $store_info->status = Input::get('active');
-        $store_info->test = Input::get('test');
+        if(Sentinel::check()) {
+            $store_info = Input::get('test');
+        }else{$store_info->test = "1"; }
 
         $date = new \DateTime($store_info->start, new \DateTimeZone($store_info->timezone));
         $date->setTimezone(new \DateTimeZone('UTC'));
@@ -445,7 +447,10 @@ class EventsController extends Controller {
         $event['City'] = $store_info['City'];
         $event['State'] = $store_info['State'];
         $event['Country'] = $store_info['Country'];
-        $event['test'] = Input::get('test');
+        if(Sentinel::check()) {
+            $event['test'] = Input::get('test');
+        }else{$event['test'] = "1"; }
+
         $event['status'] = Input::get('active');
 
         $date = new \DateTime($store_info['start'], new \DateTimeZone($event['timezone']));
@@ -615,7 +620,9 @@ class EventsController extends Controller {
         $event_clone['City'] = $store_info['City'];
         $event_clone['State'] = $store_info['State'];
         $event_clone['Country'] = $store_info['Country'];
-        $event_clone['test'] =  Input::get('test');
+        if(Sentinel::check()) {
+            $event_clone['test'] = Input::get('test');
+        }else{$event_clone['test'] = "1"; }
         $store_info['status'] = Input::get('active');
 
         $date = new \DateTime($store_info['start'], new \DateTimeZone($event_clone['timezone']));
