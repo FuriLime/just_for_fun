@@ -233,9 +233,9 @@ class EventsController extends Controller {
             $store_info->editor_id = $user->id;
             $store_info->account_id = $account[0]->account_id;
         }else{
-            $store_info->author_id = 'Null';
-            $store_info->editor_id = 'Null';
-            $store_info->account_id = 'Null';
+            $store_info->author_id = "NULL";
+            $store_info->editor_id = "NULL";
+            $store_info->account_id = "NULL";
         }
 
         $store_info->permanent_url = Uuid::uuid4();
