@@ -237,7 +237,6 @@ Edit User
                                             @if(Sentinel::check())
                                             {{--@if(Sentinel::inRole('admin'))--}}
                                             <select class="form-control " title="Select group..." name="groups[]" id="groups" required>
-                                                <option value="">Select</option>
                                                 @foreach($roles as $role)
                                                     <option value="{!! $role->id !!}" {{ (array_key_exists($role->id, $userRoles) ? ' selected="selected"' : '') }}>{{ $role->name }}</option>
                                                 @endforeach
