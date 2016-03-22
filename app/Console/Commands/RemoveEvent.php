@@ -13,7 +13,7 @@ class RemoveEvent extends Command
      *
      * @var string
      */
-    protected $signature = 'db:remove';
+    protected $signature = 'event_test:remove';
 
     /**
      * The console command description.
