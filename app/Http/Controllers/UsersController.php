@@ -483,7 +483,6 @@ class UsersController extends JoshController
             // Get the user information
             if($user = Sentinel::findById($id))
             {
-                dd($user);
                 // Get this user groups
                 $userRoles = $user->getRoles()->lists('name', 'id')->all();
                 $user_profile = $user->user_profile()->first();
@@ -502,10 +501,10 @@ class UsersController extends JoshController
             }
 
         $countries = $this->countries;
-//        $status = Activation::completed($user);
+        $status = Activation::completed($user);
 
         // Show the page
-        return View('admin/users/edit', compact('user', 'user_profile', 'roles', 'userRoles','countries'));
+        return View('admin/users/edit', compact('user', 'user_profile', 'roles', 'userRoles','countries','status'));
 //        return View('admin/layouts/edit', compact('user', 'roles', 'userRoles','countries','status'));
     }
 
