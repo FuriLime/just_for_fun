@@ -524,12 +524,12 @@ class UsersController extends JoshController
             $user_profile = $user->user_profile()->first();
 
             $us_email = Sentinel::getUser()->email;
-            $email = strtolower(md5(Sentinel::getUser()->email));
+            $email = strtolower(md5($user->email));
             $apiKey = Config::get('mailchimp.apikey');
             $mc = new Mailchimp($apiKey);
             $listId = Config::get('mailchimp.listId');
 //            dd( $mc->get("lists/$listId/members/$us_email"));
-            $mc->delete("lists/$listId/members/$us_email");
+            $mc->delete("lists/$listId/members/$email");
         } catch (UserNotFoundException $e) {
             // Prepare the error message
             $error = Lang::get('users/message.user_not_found', compact('id'));
