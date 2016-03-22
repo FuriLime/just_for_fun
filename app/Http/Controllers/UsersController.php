@@ -625,7 +625,7 @@ class UsersController extends JoshController
                 $rolew = [
                     0 => ['user_id' => $user->id, 'account_id' => $acc_id],
                 ];
-
+                dd($rolew);
                 $role->users()->attach($rolew);
 //                $role->users()->attach();
             }
@@ -640,7 +640,7 @@ $new_email = md5(Input::get('email'));
             // Was the user updated?
             if ($user->save() && $user_profile->save()) {
 
-
+dd();
                 // Prepare the success message
                 $success = Lang::get('users/message.success.update');
 
