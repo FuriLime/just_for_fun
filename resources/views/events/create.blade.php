@@ -240,7 +240,7 @@
                             <button type="button" name="draft" class="btn" onclick="(function($) { $('#active').val('draft');})">
                                 @lang('frontend.save_as_draft')
                             </button>
-                            <button class="btn btn-primary text-white test submit" onclick="(function($) { $('#active').val('draft');})">
+                            <button class="btn btn-primary text-white test submit" onclick="(function($) { $('#active').val('publish');})">
                                 @lang('frontend.save_and_publish')
                             </button>
 
