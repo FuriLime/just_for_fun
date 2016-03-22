@@ -32,7 +32,7 @@ Events List
 			</thead>
 			<tbody>
 			@foreach ($events as $event)
-                @if($event->status!='Draft' && (!Sentinel::check()))
+                @if($event->status!='Draft' && (!Sentinel::check()) || Sentinel::check())
 				<tr>
 					<td>{{ $event->title }}</td>
 					<td>
