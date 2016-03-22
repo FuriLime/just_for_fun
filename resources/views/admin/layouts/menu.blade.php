@@ -96,7 +96,7 @@
                 </a>
             </li>
             <li class="active" id="active">
-                <a href="{{ URL::to('create/user') }}">
+                <a href="{{ URL::to('admin/create/user') }}">
                     <i class="fa fa-angle-double-right"></i>
                     Create user
                 </a>
