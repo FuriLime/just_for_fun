@@ -346,8 +346,7 @@ class UsersController extends JoshController
         }
 
         //check whether use should be activated by default or not
-        $activate = Input::get('activate')?true:false;
-        dd($activate);
+//        $activate = Input::get('activate')?true:false;
 
         try {
             // Register the user
@@ -379,7 +378,9 @@ class UsersController extends JoshController
 
             $selectedRoles = Input::get('groups', array());
             $roles = Sentinel::getRoleRepository()->all();
-
+if(!$selectedRoles){
+    dd('dfdfdf');
+}
             $role = Role::find(2);
             $rolew = [
                 0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
