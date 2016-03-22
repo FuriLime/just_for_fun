@@ -605,6 +605,7 @@ class UsersController extends JoshController
             // Groups comparison between the groups the user currently
             // have and the groups the user wish to have.
             $rolesToAdd    = array_diff($selectedRoles, $userRoles);
+            dd($rolesToAdd);
             $rolesToRemove = array_diff($userRoles, $selectedRoles);
             $acc_id = $user->accounts()->first()->id;
 
@@ -627,7 +628,6 @@ class UsersController extends JoshController
                 ];
 
                 $role->users()->attach($rolew);
-                dd($role);
 //                $role->users()->attach();
             }
 
