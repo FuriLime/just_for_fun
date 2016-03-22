@@ -237,7 +237,7 @@
 
                          <div class="form-group" style="text-align: right; margin-right: 3%; margin-top: 9%;">
                         <div class="col-sm-offset-0 col-sm-12" id="btn_group">
-                            <button type="button" name="draft" class="btn" onclick="(function($) { $('#active').val('draft'); $('#btn_group .btn-primary').click(); })(jQuery);">
+                            <button type="button" name="draft" class="btn submit" onclick="(function($) { $('#active').val('draft'); $('#btn_group .btn-primary').click(); })(jQuery);">
                                 @lang('frontend.save_as_draft')
                             </button>
                             <button class="btn btn-primary text-white test submit" onclick="(function($) { $('#active').val('publish');})">
