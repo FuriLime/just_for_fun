@@ -483,6 +483,7 @@ class UsersController extends JoshController
             // Get the user information
             if($user = Sentinel::findById($id))
             {
+                dd($user);
                 // Get this user groups
                 $userRoles = $user->getRoles()->lists('name', 'id')->all();
                 $user_profile = $user->user_profile()->first();
