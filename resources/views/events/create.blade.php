@@ -248,9 +248,11 @@
 
                          <div class="form-group" style="text-align: right; margin-right: 3%; margin-top: 9%;">
                         <div class="col-sm-offset-0 col-sm-12" id="btn_group">
+                            @if(Sentinel::check()))
                             <button type="button" name="draft" class="btn draft submit">
                                 @lang('frontend.save_as_draft')
                             </button>
+                            @endif
                             <button class="btn btn-primary text-white test publish submit">
                                 @lang('frontend.save_and_publish')
                             </button>
