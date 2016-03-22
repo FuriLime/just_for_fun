@@ -225,6 +225,17 @@
                              {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}
                              @endif
                          </div>
+
+                            @if(isset($event_clone))
+                                <input style="display:none" size="16" id="lat" name="lat" type="lat", maxlength="255", value="{{$event_clone['lat']}}">
+                            @else
+                                {!! Form::text('lat', null, ['style' => 'display:none', 'maxlength' => '255', 'id' => 'lat']) !!}
+                            @endif
+                            @if(isset($event_clone))
+                                <input style="display:none", size="16" id="lng" name="lng" type="lng", readonly="readonly", maxlength="255", value="{{$event_clone['lng']}}">
+                            @else
+                                {!! Form::text('lng', null, ['style' => 'display:none', 'maxlength' => '255', 'id' => 'lng']) !!}
+                            @endif
                          <div class="form-group fields_loc">
                             <a id="reset_loc">Reset Address</a>
                          </div>
