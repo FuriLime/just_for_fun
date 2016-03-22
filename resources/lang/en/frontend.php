@@ -56,7 +56,7 @@ return array(
 
     //confirm page
     'confirm_title'	=> 'Confirm Page',
-    'confirm_head'	=> 'We are now preparing',
+    'confirm_head'	=> 'We are now preparing ',
     'confirm_head_cont'	=> 'for you',
     'confirm_time'	=> 'Estimated time: ',
     'confirm_time_cont'	=> 'seconds',
