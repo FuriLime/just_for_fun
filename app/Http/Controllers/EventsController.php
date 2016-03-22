@@ -433,7 +433,7 @@ class EventsController extends Controller {
         }else{$event['test'] = "1"; }
 
         $event['status'] = Input::get('active');
-        dd(Input::get('active'));
+
 
         $date = new \DateTime($store_info['start'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
