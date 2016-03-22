@@ -54,6 +54,7 @@ Users List
                     </thead>
                     <tbody>
                     @foreach ($users as $user)
+                        @if($user->varified==1)
                     	<tr>
                             <td>{!! $user->id !!}</td>
                     		<td>{!! $user->first_name !!}</td>
@@ -74,6 +75,7 @@ Users List
                             </td>
 
             			</tr>
+                        @elseif
                     @endforeach
                         
                     </tbody>
