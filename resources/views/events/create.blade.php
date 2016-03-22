@@ -428,7 +428,7 @@
         end_date = end_date.format('Y/m/d H:i');
 
         var minutes_end = new Date(start_date);;
-        minutes_end.setMinutes(start_date.getMinutes() + 1);
+        minutes_end.setMinutes(start_date.getMinutes() + 10);
         minutes_end = minutes_end.format('Y/m/d H:i');
         console.log(minutes_end);
         $('#finish').val(end_date);
@@ -441,8 +441,8 @@
             autoclose: true,
             todayBtn: true,
             controlType: 'select',
-            startDate: $('#finish').val(),
-
+            startDate: minutes_end,
+            minDate: minutes_end,
             minuteStep: 1
 
         });
