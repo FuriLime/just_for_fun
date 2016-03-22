@@ -178,7 +178,7 @@
                              <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
 
-                    {{--<input type="hidden" value="1" name="active" id="active" readonly>--}}
+                    <input type="hidden" value="publish" name="active" id="active" readonly>
 
 
                     <div class="form-group locale">
@@ -237,10 +237,10 @@
 
                          <div class="form-group" style="text-align: right; margin-right: 3%; margin-top: 9%;">
                         <div class="col-sm-offset-0 col-sm-12" id="btn_group">
-                            <button type="button" name="draft" class="btn" onclick="(function($) { $('#active').val('0'); $('#btn_group .btn-primary').click(); })(jQuery);">
+                            <button type="button" name="draft" class="btn" onclick="(function($) { $('#active').val('draft');})">
                                 @lang('frontend.save_as_draft')
                             </button>
-                            <button class="btn btn-primary text-white test submit" name="publish">
+                            <button class="btn btn-primary text-white test submit" onclick="(function($) { $('#active').val('draft');})">
                                 @lang('frontend.save_and_publish')
                             </button>
 
