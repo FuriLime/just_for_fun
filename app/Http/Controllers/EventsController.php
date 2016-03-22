@@ -192,31 +192,6 @@ class EventsController extends Controller {
             'start' => 'required',
             'finish' => 'required',
         ]);
-        if(Sentinel::check()){
-            $userId = Sentinel::getUser()->id;
-            $user = User::find($userId);
-            $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
-        }else {
-            $user = new User();
-            $user->email = Uuid::uuid4();
-            $user->save();
-            $userId = $user->id;
-            $user = User::find($userId);
-            $account_user = new Account();
-            $account_user->	account_type_id = '1';
-            $account_user->name = $user->uuid;
-            $account_user->slug = $user->uuid;
-            $account_user->save();
-
-            //add user to 'User' group
-            $role = Role::find(2);
-            $rolew = [
-                0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
-            ];
-
-            $role->users()->attach($rolew);
-            $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
-        }
         $store_info = new Event();
         $store_info->uuid = Uuid::uuid4(4);
         $store_info->title = Input::get('title');
@@ -229,9 +204,19 @@ class EventsController extends Controller {
         $store_info->timezone = Input::get('timezone');
         $store_info->finish = Input::get('finish');
         $store_info->start = Input::get('start');
-        $store_info->author_id = $user->id;
-        $store_info->editor_id = $user->id;
-        $store_info->account_id = $account[0]->account_id;
+        if(Sentinel::check()) {
+            $userId = Sentinel::getUser()->id;
+            $user = User::find($userId);
+            $account = DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
+
+            $store_info->author_id = $user->id;
+            $store_info->editor_id = $user->id;
+            $store_info->account_id = $account[0]->account_id;
+        }else{
+            $store_info->author_id = '';
+            $store_info->editor_id = '';
+            $store_info->account_id = '';
+        }
         $store_info->permanent_url = Uuid::uuid4();
         $store_info->readable_url = Uuid::uuid4();
         $store_info->status = Input::get('active');
