@@ -52,6 +52,8 @@ class twitterController extends Controller
                     $user = Sentinel::check();
                     return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
                 }
+            }else{
+                return Redirect::route("home")->with('error', Lang::get('auth/message.account_not_activated'));
             }
         }else{
             $user=NULL;
