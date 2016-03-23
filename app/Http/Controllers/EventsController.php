@@ -20,7 +20,7 @@ use App\UserProfile;
 use App\Role;
 use GeoIP;
 use DB;
-use Slugify;
+use Cocur\Slugify\SlugifyInterface;
 
 class EventsController extends Controller {
 
@@ -180,7 +180,7 @@ class EventsController extends Controller {
         if(isset($_POST['finish'])) {
             session()->put('finish', $_POST['finish']);
         }
-        $slugify = new \Slugify();
+        $slugify = new Slugify();
 
         $this->validate($request, [
             'title' => 'required|max:80',
