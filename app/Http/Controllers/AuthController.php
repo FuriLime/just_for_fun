@@ -112,6 +112,19 @@ class AuthController extends JoshController
      *
      * @return Redirect
      */
+
+    public function getSignup()
+    {
+        // Is the user logged in?
+        if (Sentinel::check()) {
+            return Redirect::route('dashboard');
+        }
+
+        // Show the page
+        return View('register');
+    }
+
+
     public function postSignup()
     {
         // Declare the rules for the form validation

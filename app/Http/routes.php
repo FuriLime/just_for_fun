@@ -157,6 +157,7 @@ Route::group(array('prefix' => 'user'), function () {
 # Signin / Signup / Forgot-password
 Route::get('signin', array('as' => 'signin','uses' => 'AuthController@getSignin'));
 Route::post('signin','AuthController@postSignin');
+Route::get('signup', array('as' => 'signup','uses' => 'AuthController@getSignup'));
 Route::post('signup',array('as' => 'signup','uses' => 'AuthController@postSignup'));
 Route::post('forgot-password',array('as' => 'forgot-password','uses' => 'AuthController@postForgotPassword'));
 
