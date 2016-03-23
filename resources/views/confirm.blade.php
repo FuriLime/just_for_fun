@@ -52,34 +52,34 @@
                     </div>
                     <ul class="col-xs-4 col-xs-offset-4 popup-events-list">
                         <li>
-                            @lang('frontend.confirm_staff[0]')
+                            @lang('frontend.confirm_staff')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff[0]')
+                            @lang('frontend.creating_outlook')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff[0]')
+                            @lang('frontend.creating_google')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff[0]')
+                            @lang('frontend.creating_yahoo')
                         </li>
                         <li>
-                            @lang[('frontend.confirm_staff')(0)]
+                            @lang('frontend.creating_ical')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff[0]')
+                            @lang('frontend.creating_eventpage')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff[0]')
+                            @lang('frontend.adding_links')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff[0]')
+                            @lang('frontend.optimizing_for_mobile')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff[0]')
+                            @lang('frontend.adding_to_profile')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff[0]')
+                            @lang('frontend.sending_confirmation')
                         </li>
                     </ul>
                     <a href="#" class="col-xs-4 col-xs-offset-4 succ-btn">
