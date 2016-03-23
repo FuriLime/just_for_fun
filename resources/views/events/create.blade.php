@@ -362,13 +362,13 @@
                     $('.select2-selection').focus();
                     $('.select2-selection').trigger('click');
                 }
-                
+                if ($('.form-control').index(this)==5){
+                    $('.publish').focus();
+                }
             }
 
         });
-        
            
-       
         @if (isset($event))
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
         $('#select2-timezone-container').text('{{$event->timezone}}');
