@@ -94,35 +94,37 @@ class twitterController extends Controller
             $user_profile = new UserProfile();
             $user_profile->user_id = $user->id;
             $user_profile->save();
-            $user = Sentinel::findById($user->id);
+            return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
 
-            $activation = Activation::create($user);
-
-        if (Activation::complete($user, $activation->code))
-        {
-
-            Sentinel::authenticate($user);
-              if(Sentinel::authenticate($user))
-            {
-                $user = Sentinel::check();
-
-                return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-
-            }
-        }
-
-
-        }
-        if (Activation::completed($user))
-        {
-            Sentinel::authenticate($user);
-              if(Sentinel::authenticate($user))
-            {
-                $user = Sentinel::check();
-
-                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-
-            }
+//            $user = Sentinel::findById($user->id);
+//
+//            $activation = Activation::create($user);
+//
+//        if (Activation::complete($user, $activation->code))
+//        {
+//
+//            Sentinel::authenticate($user);
+//              if(Sentinel::authenticate($user))
+//            {
+//                $user = Sentinel::check();
+//
+//                return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
+//
+//            }
+//        }
+//
+//
+//        }
+//        if (Activation::completed($user))
+//        {
+//            Sentinel::authenticate($user);
+//              if(Sentinel::authenticate($user))
+//            {
+//                $user = Sentinel::check();
+//
+//                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
+//
+//            }
         }
                 // Show the page
         return Redirect::route("home")->with('error', Lang::get('auth/message.signin.error'));
