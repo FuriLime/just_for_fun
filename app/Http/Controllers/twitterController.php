@@ -12,6 +12,7 @@ use App\Role;
 use App\UserProfile;
 use App\AccountProfile;
 use Auth;
+use Illuminate\Support\Facades\Route;
 use Redirect;
 use Lang;
 use URL;
@@ -40,6 +41,7 @@ class twitterController extends Controller
 
     public function oauthtwitter()
     {
+        dd($_POST);
         $apiKey = Config::get('mailchimp.apikey');
         $mc = new Mailchimp($apiKey);
         $listId = Config::get('mailchimp.listId');
@@ -51,7 +53,11 @@ class twitterController extends Controller
             $user = new User;
             $user->twit_nick = $userTwit->getNickName();
 
-            $user->email = $userTwit->getNickName().'@twitter.com';
+//            $user->email = $userTwit->getNickName().'@twitter.com';
+            if(empty($user->email)){
+                return redirect('welcome');
+            }
+
             $user->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';
