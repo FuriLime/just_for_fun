@@ -1146,7 +1146,7 @@ footer .btn-primary.text-white {
     color: white;
 
 }
-#btn_group .add_event_section_link{
+#btn_group > .add_event_section_link:first-child{
     float: left;
 }
 @media(max-width:600px){
