@@ -41,7 +41,6 @@ class twitterController extends Controller
 
     public function oauthtwitter()
     {
-        dd($_GET);
         $apiKey = Config::get('mailchimp.apikey');
         $mc = new Mailchimp($apiKey);
         $listId = Config::get('mailchimp.listId');
@@ -55,9 +54,10 @@ class twitterController extends Controller
 
 //            $user->email = $userTwit->getNickName().'@twitter.com';
             if(empty($user->email)){
-                return redirect('welcome');
-            }
+                $user->email = $_GET['email'];
 
+            }
+            dd($user);
             $user->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';
