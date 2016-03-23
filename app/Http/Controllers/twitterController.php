@@ -50,8 +50,6 @@ class twitterController extends Controller
 
         $userTwit = Socialite::driver('twitter')->user();
 
-        dd();
-
         $user = User::wheretwit_nick($userTwit->getNickName())->first();
 
         if(!$user){
