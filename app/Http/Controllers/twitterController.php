@@ -41,10 +41,12 @@ class twitterController extends Controller
 
     public function oauthtwitter()
     {
+        $apiKey = Config::get('mailchimp.apikey');
+        $mc = new Mailchimp($apiKey);
+        $listId = Config::get('mailchimp.listId');
+
         if(!isset($_GET['email'])){
-            $apiKey = Config::get('mailchimp.apikey');
-            $mc = new Mailchimp($apiKey);
-            $listId = Config::get('mailchimp.listId');
+
 
             $userTwit = Socialite::driver('twitter')->user();
             $user = User::wheretwit_nick($userTwit->getNickName())->first();
