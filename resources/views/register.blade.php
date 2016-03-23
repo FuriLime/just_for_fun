@@ -75,9 +75,9 @@
     </div>
 </div>
 <!-- global js -->
-<script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
-<!-- Bootstrap -->
-<script src="{{ asset('assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
+{{--<script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>--}}
+{{--<!-- Bootstrap -->--}}
+{{--<script src="{{ asset('assets/js/bootstrap.min.js') }}" type="text/javascript"></script>--}}
 <!--livicons-->
 <script src="{{ asset('assets/vendors/livicons/minified/raphael-min.js') }}"></script>
 <script src="{{ asset('assets/vendors/livicons/minified/livicons-1.4.min.js') }}"></script>
