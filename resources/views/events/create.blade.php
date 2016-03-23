@@ -360,11 +360,12 @@
                     $('#time_zone_change').attr("style", "display: block");
                     $('#time_change').trigger('click');
                     $('.select2-selection').focus();
+                    $('.select2-selection').trigger('click');
                 }
             }
 
         });
-        $('body').on('keypress', '.select2-dropdown.select2-dropdown--below', function (e) {
+        $('body').on('keypress', '.select2-selection', function (e) {
             if (e.which == 13) {
                 $('#location').focus();
             }
