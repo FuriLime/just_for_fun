@@ -115,6 +115,7 @@ class twitterController extends Controller
         }
         if (Activation::completed($user))
         {
+            dd('sdfsdf');
             Sentinel::authenticate($user);
               if(Sentinel::authenticate($user))
             {
