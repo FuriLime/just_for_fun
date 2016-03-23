@@ -159,7 +159,6 @@ class AuthController extends JoshController
 
 
             //un-comment below code incase if user have to activate manually
-dd($account_user->account_type('name'));
             // Data to be used on the email view
             $data = array(
                 'user'          => $user,
