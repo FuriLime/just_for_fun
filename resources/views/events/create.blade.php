@@ -343,8 +343,10 @@
     <script>
     $(document).ready(function() {
 
-        $('.form-control').keydown(function (e) {
-            if (e.which === 13) {
+        $('.form-control').keypress(function (e) {
+            console.log('lol');
+            if (e.which == 13) {
+
                 e.preventDefault();
                 var index = $('.form-control').index(this) + 1;
                 $('.form-control').eq(index).attr("style", "display: block").focus();
