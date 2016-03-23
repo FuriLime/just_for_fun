@@ -59,14 +59,12 @@ class twitterController extends Controller
             }else{
                 $user = new User;
                 $user->twit_nick = $userTwit->getNickName();
-
-//            $user->email = $userTwit->getNickName().'@twitter.com';
-
                 if(empty( $user->email))
                 {
                     return view('welcome', ['twitnick'=> $userTwit->getNickName()]);
                 }
             }
+            dd($user);
 //            $user->save();
 //
 //            $apiKey = Config::get('mailchimp.apikey');
