@@ -67,7 +67,7 @@ class twitterController extends Controller
                     return view('welcome', ['twitnick'=> $userTwit->getNickName()]);
                 }
             }
-            $user = Sentinel::findByCredentials($user->email);
+            $user = Sentinel::findByCredentials(['email' => $user->email]);
             if($user)
             {
                 //get reminder for user
