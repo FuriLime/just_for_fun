@@ -125,7 +125,7 @@ class twitterController extends Controller
             }
         }
         // Show the page
-        return Redirect::route("home")->with('error', Lang::get('auth/message.signin.error'));
+        return Redirect::route("home")->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
         // }
         // Auth::login($user);
     }
