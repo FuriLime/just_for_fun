@@ -75,6 +75,8 @@ class twitterController extends Controller
         }
             else{
                 try{
+                    $member_email = md5($user->email);
+                    dd($mc->get("lists/$listId/members/$member_email"));
                     $user_profile = new UserProfile();
                     $user_profile->user_id = $user['id'];
                     $user_profile->save();
@@ -93,9 +95,9 @@ class twitterController extends Controller
                     ];
 
                     $role->users()->attach($rolew);
-                    $member_email = md5($user->email);
+
 //                    $member = $mc->get("lists/$listId/members/$member_email");
-                    dd($mc->get("lists/$listId/members/$member_email")->email);
+
 //                    if($mc->get("lists/$listId/members/$member_email")) {
 //                        dd($member);
 //                    }
