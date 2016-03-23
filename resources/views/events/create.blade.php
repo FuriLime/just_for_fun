@@ -257,6 +257,7 @@
                                 @lang('frontend.save_and_publish')
                             </button>
 
+
                             <div class="checkbox add_event_section_link">
                               <label><input type="checkbox" checked name="test" id="test" @if(!Sentinel::check()) disabled="disabled" @endif value="1">This is a test event</label>
                             </div>
@@ -348,23 +349,26 @@
                 e.preventDefault();
                 var index = $('.form-control').index(this) + 1;
                 $('.form-control').eq(index).attr("style", "display: block").focus();
-                if ($('.form-control').index(this)==0){
-                    $('#add_dicription').trigger('click');
-                    $('#description').focus();
+                switch($('.form-control').index(this)) {
+                    case 0:
+                        $('#add_dicription').trigger('click');
+                        $('#description').focus();
+                        break;
+                    case 2:
+                        $('#end_time_event').attr("style", "display: block");
+                        $('#finish').focus();
+                        break;
+                    case 3:
+                        $('#time_zone_change').attr("style", "display: block");
+                        $('#time_change').trigger('click');
+                        $('.select2-selection').focus();
+                        $('.select2-selection').trigger('click');
+                    case 5:
+                       $('.publish').focus();
+                        $('.draft').focus();
+                        break;
                 }
-                if ($('.form-control').index(this)==2){
-                    $('#end_time_event').attr("style", "display: block");
-                    $('#finish').focus();
-                }
-                if ($('.form-control').index(this)==3){
-                    $('#time_zone_change').attr("style", "display: block");
-                    $('#time_change').trigger('click');
-                    $('.select2-selection').focus();
-                    $('.select2-selection').trigger('click');
-                }
-                if ($('.form-control').index(this)==5){
-                    $('.publish').focus();
-                }
+               
             }
 
         });
