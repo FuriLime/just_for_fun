@@ -364,7 +364,7 @@
             }
 
         });
-        $('body').on('keypress', '.select2-search__field', function (e) {
+        $('body').on('keypress', '.select2-dropdown.select2-dropdown--below', function (e) {
             if (e.which == 13) {
                 $('#location').focus();
             }
