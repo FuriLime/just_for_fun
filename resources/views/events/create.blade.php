@@ -375,14 +375,7 @@
             }
 
         });
-        $('body').on('keypress','.pac-container.pac-logo', function (e) {
-            console.log('lol');
-            if (e.which == 13) {
-                $('#location').trigger('change');
-                $('.publish').focus();
-                $('.draft').focus();
-            }
-        });
+        
            
         @if (isset($event))
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
@@ -537,6 +530,7 @@
 	// Get timezone of the place
 	// 3 steps: get entered place, find it`s location (coordinates), find its timezone
     $('#location').change(function () {
+        console.log('lol');
         $('.locale').attr('style', 'display:none');
         $('.fields_map').attr('style', 'display:block');
         setTimeout(function get_timezone() {
