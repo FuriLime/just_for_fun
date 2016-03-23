@@ -64,7 +64,7 @@
                             @lang('frontend.confirm_staff[0]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff[0]')
+                            @lang('frontend.confirm_staff'[0])
                         </li>
                         <li>
                             @lang('frontend.confirm_staff[0]')
@@ -73,13 +73,13 @@
                             @lang('frontend.confirm_staff[0]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff')
+                            @lang('frontend.confirm_staff[0]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff')
+                            @lang('frontend.confirm_staff[0]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff')
+                            @lang('frontend.confirm_staff[0]')
                         </li>
                     </ul>
                     <a href="#" class="col-xs-4 col-xs-offset-4 succ-btn">
