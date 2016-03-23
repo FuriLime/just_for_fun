@@ -217,7 +217,7 @@ class EventsController extends Controller {
             $store_info->account_id = NULL;
         }
         $store_info->permanent_url = Uuid::uuid4();
-        $store_info->readable_url = Slugify::slugify(Input::get('title'));
+        $store_info->readable_url = rand()%50 .'-'.Slugify::slugify(Input::get('title'));
         $store_info->status = Input::get('active');
 
         if(Sentinel::check()) {
