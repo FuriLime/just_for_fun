@@ -353,7 +353,7 @@
                     $('#description').focus();
                 }
                 if ($('.form-control').index(this)==2){
-                    $('.form-control').eq(4).attr("style", "display: block").focus();
+                    $('#end_time_event').attr("style", "display: block").focus();
                 }
             }
         });
