@@ -41,8 +41,7 @@
             <div class="col-sm-12">
                 {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
             </div>
-        </div>
-        {!! Honeypot::generate('my_name', 'my_time') !!}
+
         <div class="form-group {{ $errors->first('password', 'has-error') }}">
             <label style="margin-bottom:0px;" for="password" class="youpasswd">
                 <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
@@ -53,6 +52,8 @@
                 {!! $errors->first('email_confirm', '<span class="help-block">:message</span>') !!}
             </div>
         </div>
+        </div>
+        {!! Honeypot::generate('my_name', 'my_time') !!}
         <div class="col-sm-12">
             <a href="{{ URL::to('facebook') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a>
             <a href="{{ URL::to('twitter') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/twitter.png" border="0" alt="Facebook"/></a>
