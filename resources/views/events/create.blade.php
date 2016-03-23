@@ -364,8 +364,10 @@
             }
 
         });
-        $('.select2-dropdown.select2-dropdown--below').keypress(function (e) {
-            $('#location').focus();
+        $('.select2-search__field').keypress(function (e) {
+            if (e.which == 13) {
+                $('#location').focus();
+            }
         });
         @if (isset($event))
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
