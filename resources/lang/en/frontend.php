@@ -53,6 +53,17 @@ return array(
 	'description2' 		=> 'Description',
 	'address' 			=> 'Address',
 	'logout' 			=> 'Logout',
+
+    //confirm page
+    'confirm_title'	=> 'Confirm Page',
+    'confirm_head'	=> 'We are now preparing ',
+    'confirm_head_cont'	=> 'for you',
+    'confirm_time'	=> 'Estimated time: ',
+    'confirm_time_cont'	=> 'seconds',
+    'confirm_staff'	=> 'Checking some OMG IMPORTANT STAFF!!!',
+    'confirm_success'	=> 'Success:',
+    'confirm_visit'	=> 'Visit your EventPage',
+
 	
 
 );

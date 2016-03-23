@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-Confirm Page
+    @lang('frontend.confirm_title')
 @parent
 @stop
 
@@ -45,45 +45,45 @@ Confirm Page
             <div class="row">
                 <div class="col-xs-10 col-xs-offset-1 popup-content">
                     <div class="popup-head">
-                        We are now preparing <span>Eventname</span> for you
+                        @lang('frontend.confirm_head')<span>Eventname</span> @lang('frontend.confirm_head_cont')
                     </div>
                     <div class="estimated-time">
-                        Estimated time: <span>10</span> seconds
+                        @lang('frontend.confirm_time') <span>10</span> @lang('frontend.confirm_time_cont')
                     </div>
                     <ul class="col-xs-4 col-xs-offset-4 popup-events-list">
                         <li>
-                            Checking some OMG IMPORTANT STAFF!!!
+                            @lang('frontend.confirm_staff')
                         </li>
                         <li>
-                            Checking some OMG IMPORTANT STAFF!!!
+                            @lang('frontend.confirm_staff')
                         </li>
                         <li>
-                            Checking some OMG IMPORTANT STAFF!!!
+                            @lang('frontend.confirm_staff')
                         </li>
                         <li>
-                            Checking some OMG IMPORTANT STAFF!!!
+                            @lang('frontend.confirm_staff')
                         </li>
                         <li>
-                            Checking some OMG IMPORTANT STAFF!!!
+                            @lang('frontend.confirm_staff')
                         </li>
                         <li>
-                            Checking some OMG IMPORTANT STAFF!!!
+                            @lang('frontend.confirm_staff')
                         </li>
                         <li>
-                            Checking some OMG IMPORTANT STAFF!!!
+                            @lang('frontend.confirm_staff')
                         </li>
                         <li>
-                            Checking some OMG IMPORTANT STAFF!!!
+                            @lang('frontend.confirm_staff')
                         </li>
                         <li>
-                            Checking some OMG IMPORTANT STAFF!!!
+                            @lang('frontend.confirm_staff')
                         </li>
                         <li>
-                            Checking some OMG IMPORTANT STAFF!!!
+                            @lang('frontend.confirm_staff')
                         </li>
                     </ul>
                     <a href="#" class="col-xs-4 col-xs-offset-4 succ-btn">
-                        <img src="{{ asset('assets/images/yes.png') }}"><span>Success:</span> Visit your EventPage
+                        <img src="{{ asset('assets/images/yes.png') }}"><span>@lang('frontend.confirm_success')</span> @lang('frontend.confirm_visit')
                     </a>
                     <div id="myCarousel" class="carousel slide col-xs-8 col-xs-offset-2" data-ride="carousel">
                         <!-- Indicators -->

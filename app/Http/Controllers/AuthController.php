@@ -21,6 +21,7 @@ use App\Activation;
 use Mailchimp\Mailchimp;
 use Config;
 use Ramsey\Uuid\Uuid;
+use Honeypot;
 
 class AuthController extends JoshController
 {
@@ -54,10 +55,14 @@ class AuthController extends JoshController
         $rules = array(
             'email'    => 'required|email',
             'password' => 'required|between:3,32',
+            'my_name'   => 'honeypot',
+            'my_time'   => 'required|honeytime:5'
+
         );
 
         // Create a new validator instance from our validation rules
         $validator = Validator::make(Input::all(), $rules);
+
 
         // If validation fails, we'll exit the operation now.
         if ($validator->fails()) {
@@ -114,7 +119,7 @@ class AuthController extends JoshController
             'email'            => 'required|email|unique:users',
             'password'         => 'required|between:3,32',
             'my_email'   => 'honeypot',
-            'my_password'   => 'required|honeytime:5'
+            'my_time'   => 'required|honeytime:5'
         );
 
         // Create a new validator instance from our validation rules

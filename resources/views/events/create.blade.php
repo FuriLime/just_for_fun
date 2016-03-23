@@ -178,7 +178,7 @@
                              <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
 
-                    <input type="hidden" value="" name="active" id="active" readonly>
+
 
 
                     <div class="form-group locale">
@@ -245,13 +245,15 @@
                             <i class="fa fa-fw fa-gears"></i>
                             <a data-toggle="tooltip" title="Option not available">Advansed Options</a>
                          </div>
-
+                        <input type="hidden" value="" name="active" id="active" readonly>
                          <div class="form-group" style="text-align: right; margin-right: 3%; margin-top: 9%;">
                         <div class="col-sm-offset-0 col-sm-12" id="btn_group">
+                            @if(Sentinel::check())
                             <button type="button" name="draft" class="btn draft submit">
                                 @lang('frontend.save_as_draft')
                             </button>
-                            <button class="btn btn-primary text-white test publish submit">
+                            @endif
+                            <button class="btn btn-primary text-white test publish submit" name="publish">
                                 @lang('frontend.save_and_publish')
                             </button>
 
@@ -304,10 +306,7 @@
     <script>
         $(document).on("click", ".submit", function(e) {
             event.preventDefault();
-            if($(this).hasClass('draft')){
-                $('#active').val('Draft');
-            }
-            else if($(this).hasClass('publish')){
+            if($(this).hasClass('publish')){
                 $('#active').val('Publish');
             }
             else{
@@ -428,10 +427,10 @@
         end_date = end_date.format('Y/m/d H:i');
 
         var minutes_end = new Date(start_date);;
-        minutes_end.setMinutes(start_date.getMinutes() + 1);
+        minutes_end.setMinutes(start_date.getMinutes() + 10);
         minutes_end = minutes_end.format('Y/m/d H:i');
-        console.log(minutes_end)
-        $('#finish').val(minutes_end);
+        $('#finish').val(end_date);
+        console.log($('#finish').val());
         if($('#finish').val()=='NaN/NaN/NaN NaN:NaN'){
             $('#finish').val('');
         }
@@ -441,9 +440,9 @@
             autoclose: true,
             todayBtn: true,
             controlType: 'select',
-            startDate: $('#finish').val(),
-            minDate:$('#finish').val(),
-            minuteStep: 1
+            startDate: minutes_end,
+            minDate: minutes_end,
+            minuteStep: 10
 
         });
 
