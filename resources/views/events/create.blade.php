@@ -359,7 +359,7 @@
                 if ($('.form-control').index(this)==3){
                     $('#time_zone_change').attr("style", "display: block");
                     $('#time_change').trigger('click');
-                    $('#select2-timezone-container').focus();
+                    $('.select2-selection').focus();
                 }
             }
         });
