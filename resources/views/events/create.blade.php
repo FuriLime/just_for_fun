@@ -366,7 +366,10 @@
             }
 
         });
-        
+        $('body').on('click', '.select2-results', function(){
+          console.log('lol');
+        });
+           
        
         @if (isset($event))
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
