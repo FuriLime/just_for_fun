@@ -195,7 +195,7 @@ class AuthController extends JoshController
                 ['name' => 'NNAME',                 'content' => 'User reigester without nickname'],
                 ['name' => 'LOGINCOUNT',            'content' => 'We not have this data yet'],
                 ['name' => 'PASSRESET',             'content' => 'reset password'],
-                ['name' => 'RESETVALID',            'content' => $data],
+                ['name' => 'RESETVALID',            'content' => $data['activationUrl']],
                 ['name' => 'DCREDITS',              'content' => '30'],
                 ['name' => 'ECREDITS',              'content' => 'We not have this data yet'],
                 ['name' => 'ACCTYPE',               'content' => ''],
