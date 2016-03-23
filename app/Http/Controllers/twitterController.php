@@ -56,7 +56,7 @@ class twitterController extends Controller
 
             if(empty( $user->email))
             {
-                return redirect()->route('welcome');
+                return redirect('/welcome');
             }
             else{
                 $user->email = $_GET['email'];
