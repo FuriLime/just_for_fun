@@ -177,7 +177,7 @@ class twitterController extends Controller
             } catch (UserExistsException $e) {
                 $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
             }
-
+dd();
 //            $activation = Activation::create($user);
 //            dd($activation);
 //
