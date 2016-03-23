@@ -52,7 +52,7 @@
                     </div>
                     <ul class="col-xs-4 col-xs-offset-4 popup-events-list">
                         <li>
-                            @lang('frontend.confirm_staff.[0]')
+                            @lang('frontend.confirm_staff(0)')
                         </li>
                         <li>
                             @lang('frontend.confirm_staff.[1]')
