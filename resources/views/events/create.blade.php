@@ -368,8 +368,7 @@
                         break;
                     case 5:
                         $("#location").trigger('change');
-                        $('.publish').focus();
-                        $('.draft').focus();
+                        
                         break;
                 }
                
@@ -532,7 +531,8 @@
 	// Get timezone of the place
 	// 3 steps: get entered place, find it`s location (coordinates), find its timezone
     $('#location').change(function () {
-
+        $('.publish').focus();
+        $('.draft').focus();
         $('.locale').attr('style', 'display:none');
         $('.fields_map').attr('style', 'display:block');
         setTimeout(function get_timezone() {
