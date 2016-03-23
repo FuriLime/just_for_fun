@@ -52,34 +52,34 @@
                     </div>
                     <ul class="col-xs-4 col-xs-offset-4 popup-events-list">
                         <li>
-                            @lang('frontend.confirm_staff(0)')
+                            @lang('frontend.confirm_staff[0]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff.[1]')
+                            @lang('frontend.confirm_staff[0]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff.[2]')
+                            @lang('frontend.confirm_staff[0]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff.[3]')
+                            @lang('frontend.confirm_staff[0]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff.[4]')
+                            @lang[('frontend.confirm_staff')(0)]
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff.[5]')
+                            @lang('frontend.confirm_staff[0]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff.[6]')
+                            @lang('frontend.confirm_staff[0]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff.[7]')
+                            @lang('frontend.confirm_staff[0]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff.[8]')
+                            @lang('frontend.confirm_staff[0]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff.[9]')
+                            @lang('frontend.confirm_staff[0]')
                         </li>
                     </ul>
                     <a href="#" class="col-xs-4 col-xs-offset-4 succ-btn">
