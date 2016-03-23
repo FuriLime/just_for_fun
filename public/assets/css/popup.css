@@ -71,7 +71,7 @@ div.item{
 .succ-btn:hover,
 .succ-btn:focus{
 	background-color: #00af50;
-	Color: white;
+	color: white !important;
 	border-radius: 7px;
 	line-height: 48px;
 	border: 1px solid #d1e9e6;
@@ -96,6 +96,21 @@ div.item{
 }
 .succ-btn span{
 	font-weight: bold;
+}
+.item .slide-head{
+	margin-top: 30px;
+	font-size: 24px;
+	color: white;
+	font-weight: bold;
+	width:70%;
+	margin-left: 15%;
+}
+.item .slide-text{
+	font-size: 16px;
+	color: white;
+	width:70%;
+	margin-top: 0;
+	margin-left: 15%;
 }
 @media(min-width: 992px) and (max-width: 1200px){
 	.popup-events-list,
