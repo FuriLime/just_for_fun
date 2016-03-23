@@ -58,6 +58,7 @@ class twitterController extends Controller
             {
                 if(isset($_GET['email'])){
                     $user->email = $_GET['email'];
+                    dd($user->email);
                 }else {
                     return redirect('/welcome');
                 }
