@@ -990,7 +990,7 @@ S2.define('select2/results',[
     });
 
     container.on('select', function () {
-        $('#location').focus();
+        
         if (!container.isOpen()) {
             return;
         }
@@ -998,7 +998,7 @@ S2.define('select2/results',[
     });
 
     container.on('unselect', function () {
-        $('#location').focus();
+        
         if (!container.isOpen()) {
             return;
         }
@@ -1020,6 +1020,7 @@ S2.define('select2/results',[
       self.$results.attr('aria-expanded', 'false');
       self.$results.attr('aria-hidden', 'true');
       self.$results.removeAttr('aria-activedescendant');
+      $('#location').focus();
     });
 
     container.on('results:toggle', function () {
