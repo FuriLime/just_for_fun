@@ -98,10 +98,10 @@ class twitterController extends Controller
             $user = Sentinel::findById($user->id);
 
             $activation = Activation::create($user);
-
-        if (Activation::complete($user, $activation->code))
+dd($user->id);
+        if (Activation::complete($user, $activation->code) )
         {
-            Sentinel::authenticate($user);
+              Sentinel::authenticate($user);
               if(Sentinel::authenticate($user))
             {
                 $user = Sentinel::check();
@@ -113,18 +113,18 @@ class twitterController extends Controller
 
 
         }
-        if (Activation::completed($user))
-        {
-            dd('sdfsdf');
-            Sentinel::authenticate($user);
-              if(Sentinel::authenticate($user))
-            {
-                $user = Sentinel::check();
-
-                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-
-            }
-        }
+//        if (Activation::completed($user))
+//        {
+//            dd('sdfsdf');
+//            Sentinel::authenticate($user);
+//              if(Sentinel::authenticate($user))
+//            {
+//                $user = Sentinel::check();
+//
+//                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
+//
+//            }
+//        }
         // Show the page
         return Redirect::route("home")->with('error', Lang::get('auth/message.signin.error'));
         // }
