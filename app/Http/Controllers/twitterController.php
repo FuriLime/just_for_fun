@@ -29,25 +29,26 @@ class twitterController extends Controller
 {
 
 
-     public function index()
+    public function index()
     {
         //
     }
 
-   public function twitter()
+    public function twitter()
     {
         return Socialite::driver('twitter')->redirect();
     }
 
     public function oauthtwitter()
     {
-        if(!isset($_GET['email'])){
-            $apiKey = Config::get('mailchimp.apikey');
-            $mc = new Mailchimp($apiKey);
-            $listId = Config::get('mailchimp.listId');
 
+
+        if(!isset($_GET['email'])){
             $userTwit = Socialite::driver('twitter')->user();
             $user = User::wheretwit_nick($userTwit->getNickName())->first();
+        }
+        else{
+            $user=NULL;
         }
         if(!$user){
             if(isset($_GET['email'])){
@@ -66,9 +67,11 @@ class twitterController extends Controller
                     return view('welcome', ['twitnick'=> $userTwit->getNickName()]);
                 }
             }
-
-
             $user->save();
+
+            $apiKey = Config::get('mailchimp.apikey');
+            $mc = new Mailchimp($apiKey);
+            $listId = Config::get('mailchimp.listId');
             $account_user = new Account();
             $account_user->	account_type_id = '1';
             $account_user->name = $user->uuid;
@@ -83,14 +86,15 @@ class twitterController extends Controller
             $rolew = [
                 0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
             ];
-            $mc->post("lists/$listId/members", [
-                'email_address' => $user->email,
-                'status'        => 'subscribed',
-            ]);
+//            $mc->post("lists/$listId/members", [
+//                'email_address' => $user->email,
+//                'status'        => 'subscribed',
+//            ]);
             $role->users()->attach($rolew);
             $user_profile = new UserProfile();
             $user_profile->user_id = $user->id;
             $user_profile->save();
+
             $user = Sentinel::findById($user->id);
 
             $activation = Activation::create($user);
@@ -110,8 +114,6 @@ class twitterController extends Controller
 
 
         }
-
-
         if (Activation::completed($user))
         {
             Sentinel::authenticate($user);
@@ -123,7 +125,7 @@ class twitterController extends Controller
 
             }
         }
-                // Show the page
+        // Show the page
         return Redirect::route("home")->with('error', Lang::get('auth/message.signin.error'));
         // }
         // Auth::login($user);
