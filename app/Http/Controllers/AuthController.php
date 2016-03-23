@@ -201,7 +201,11 @@ class AuthController extends JoshController
                 ['name' => 'ACCTYPE',               'content' => ''],
                 ['name' => 'RENEWDATE',             'content' => 'We not have this data yet'],
                 ['name' => 'FREETEXT',              'content' => 'content-FREETEXT'],
-                ['name' => 'COLOR1',                'content' => '#ee12ab'], // merge value not in mandrill code yet
+                ['name' => 'COLOR1',                'content' => '#ee12ab'],
+                ['name' => 'COLOR1',                'content' => '#ee12ab'],
+
+
+                 // merge value not in mandrill code yet
                 // ['name' => 'logo',              'content' => 'https://gallery.mailchimp.com/af80e28befb4c13871210c7c0/images/9db15bbf-b6f3-4fa2-9afe-402ec9b558f6.jpg'],
                 ['name' => 'logo',              'content' => 'https://gallery.mailchimp.com/af80e28befb4c13871210c7c0/images/868e7c81-a24b-4468-931e-8d8a5ff5dc92.png'],
             ];
