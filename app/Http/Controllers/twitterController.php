@@ -99,18 +99,18 @@ class twitterController extends Controller
 
             $activation = Activation::create($user);
 
-//        if (Activation::complete($user, $activation->code))
-//        {
-//
-//            Sentinel::authenticate($user);
-//              if(Sentinel::authenticate($user))
-//            {
-//                $user = Sentinel::check();
-//
-//                return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-//
-//            }
-//        }
+        if (Activation::complete($user, $activation->code))
+        {
+
+            Sentinel::authenticate($user);
+              if(Sentinel::authenticate($user))
+            {
+                $user = Sentinel::check();
+
+                return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
+
+            }
+        }
 
 
         }
