@@ -67,35 +67,31 @@ class twitterController extends Controller
                     return view('welcome', ['twitnick'=> $userTwit->getNickName()]);
                 }
             }
-            $user->save();
-
-            $apiKey = Config::get('mailchimp.apikey');
-            $mc = new Mailchimp($apiKey);
-            $listId = Config::get('mailchimp.listId');
-            $account_user = new Account();
-            $account_user->	account_type_id = '1';
-            $account_user->name = $user->uuid;
-
-            $account_user->slug = $user->uuid;
-            $account_user->save();
-            $account_profile = new AccountProfile();
-            $account_profile->account_id = $account_user->id;
-            $account_profile->save();
-
-            $role = Role::find(2);
-            $rolew = [
-                0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
-            ];
-//            $mc->post("lists/$listId/members", [
-//                'email_address' => $user->email,
-//                'status'        => 'subscribed',
-//            ]);
-            $role->users()->attach($rolew);
-            $user_profile = new UserProfile();
-            $user_profile->user_id = $user->id;
-            $user_profile->save();
-
-
+//            $apiKey = Config::get('mailchimp.apikey');
+//            $mc = new Mailchimp($apiKey);
+//            $listId = Config::get('mailchimp.listId');
+//            $account_user = new Account();
+//            $account_user->	account_type_id = '1';
+//            $account_user->name = $user->uuid;
+//
+//            $account_user->slug = $user->uuid;
+//            $account_user->save();
+//            $account_profile = new AccountProfile();
+//            $account_profile->account_id = $account_user->id;
+//            $account_profile->save();
+//
+//            $role = Role::find(2);
+//            $rolew = [
+//                0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
+//            ];
+////            $mc->post("lists/$listId/members", [
+////                'email_address' => $user->email,
+////                'status'        => 'subscribed',
+////            ]);
+//            $role->users()->attach($rolew);
+//            $user_profile = new UserProfile();
+//            $user_profile->user_id = $user->id;
+//            $user_profile->save();
 
             try {
                 $user = Sentinel::registerAndActivate(array(
