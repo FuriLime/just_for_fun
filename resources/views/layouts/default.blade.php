@@ -17,7 +17,6 @@
 
     <title>
         @section('title')
-        Page
         @show
     </title>
     <!--global css starts-->
