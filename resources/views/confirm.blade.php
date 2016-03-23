@@ -106,15 +106,30 @@
                             </div>
 
                             <div class="item">
-                                <img src="{{ asset('assets/images/yes.png') }}" alt="Chania" width="460" height="345">
+                                <div class="slide-head">
+                                    Did you know?
+                                </div>
+                                <div class="slide-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere vitae massa quis euismod. Suspendisse potenti. Vestibulum ultricies tortor et orci dignissim tincidunt. In rhoncus posuere leo at efficitur. Duis molestie scelerisque lacinia. Fusce non mattis est, eu euismod arcu. Fusce id turpis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse dignissim neque at nulla scelerisque rutrum. Praesent ac commodo quam. In ac vulputate nunc. 
+                                </div>
                             </div>
 
                             <div class="item">
-                                <img src="{{ asset('assets/images/yes.png') }}" alt="Flower" width="460" height="345">
+                                <div class="slide-head">
+                                    Did you know?
+                                </div>
+                                <div class="slide-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere vitae massa quis euismod. Suspendisse potenti. Vestibulum ultricies tortor et orci dignissim tincidunt. In rhoncus posuere leo at efficitur. Duis molestie scelerisque lacinia. Fusce non mattis est, eu euismod arcu. Fusce id turpis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse dignissim neque at nulla scelerisque rutrum. Praesent ac commodo quam. In ac vulputate nunc. 
+                                </div>
                             </div>
 
                             <div class="item">
-                                <img src="{{ asset('assets/images/yes.png') }}" alt="Flower" width="460" height="345">
+                                <div class="slide-head">
+                                    Did you know?
+                                </div>
+                                <div class="slide-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere vitae massa quis euismod. Suspendisse potenti. Vestibulum ultricies tortor et orci dignissim tincidunt. In rhoncus posuere leo at efficitur. Duis molestie scelerisque lacinia. Fusce non mattis est, eu euismod arcu. Fusce id turpis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse dignissim neque at nulla scelerisque rutrum. Praesent ac commodo quam. In ac vulputate nunc. 
+                                </div>
                             </div>
                         </div>
 
