@@ -183,7 +183,7 @@ class twitterController extends Controller
         } catch (UserExistsException $e) {
                 $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
             }
-//            return Redirect::route("home")->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
+            return Redirect::route("home")->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
         }
 
 
