@@ -66,35 +66,6 @@ class twitterController extends Controller
                 }
             }
             $user->save();
-            $user_profile = new UserProfile();
-            $user_profile->user_id = $user['id'];
-            $user_profile->save();
-            $account_user = new Account();
-            $account_user->	account_type_id = '1';
-            $account_user->name = $user['uuid'];
-            $account_user->slug = $user['uuid'];
-            $account_user->save();
-            $account_profile = new AccountProfile();
-            $account_profile->account_id = $account_user->id;
-            $account_profile->save();
-            //add user to 'User' group
-            $role = Role::find(2);
-            $rolew = [
-                0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
-            ];
-
-            $role->users()->attach($rolew);
-
-            $mc->post("lists/$listId/members", [
-                'email_address' => $user->email,
-                'status'        => 'subscribed',
-            ]);
-            $role->users()->attach($rolew);
-            $user_profile = new UserProfile();
-            $user_profile->user_id = $user->id;
-            $user_profile->save();
-
-            $user = Sentinel::findById($user->id);
 
             $activation = Activation::create($user);
 
@@ -184,7 +155,30 @@ class twitterController extends Controller
             Sentinel::authenticate($user);
             if(Sentinel::authenticate($user))
             {
-                $user = Sentinel::check();
+                $user_profile = new UserProfile();
+                $user_profile->user_id = $user['id'];
+                $user_profile->save();
+                $account_user = new Account();
+                $account_user->	account_type_id = '1';
+                $account_user->name = $user['uuid'];
+                $account_user->slug = $user['uuid'];
+                $account_user->save();
+                $account_profile = new AccountProfile();
+                $account_profile->account_id = $account_user->id;
+                $account_profile->save();
+                //add user to 'User' group
+                $role = Role::find(2);
+                $rolew = [
+                    0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
+                ];
+
+                $role->users()->attach($rolew);
+
+//                $mc->post("lists/$listId/members", [
+//                    'email_address' => $user->email,
+//                    'status'        => 'subscribed',
+//                ]);
+
                 return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
             }
         }else{
