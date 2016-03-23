@@ -102,14 +102,15 @@ div.item{
 	font-size: 24px;
 	color: white;
 	font-weight: bold;
-	width:50%;
-	margin-left: 25%;
+	width:70%;
+	margin-left: 15%;
 }
 .item .slide-text{
-	font-size: 18px;
+	font-size: 16px;
 	color: white;
-	width:50%;
-	margin-left: 25%;
+	width:70%;
+	margin-top: 0;
+	margin-left: 15%;
 }
 @media(min-width: 992px) and (max-width: 1200px){
 	.popup-events-list,
