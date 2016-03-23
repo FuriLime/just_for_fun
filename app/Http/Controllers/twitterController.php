@@ -41,8 +41,6 @@ class twitterController extends Controller
 
     public function oauthtwitter()
     {
-
-
         if(!isset($_GET['email'])){
             $userTwit = Socialite::driver('twitter')->user();
             $user = User::wheretwit_nick($userTwit->getNickName())->first();
@@ -59,9 +57,6 @@ class twitterController extends Controller
             }else{
                 $user = new User;
                 $user->twit_nick = $userTwit->getNickName();
-
-//            $user->email = $userTwit->getNickName().'@twitter.com';
-
                 if(empty( $user->email))
                 {
                     return view('welcome', ['twitnick'=> $userTwit->getNickName()]);
@@ -187,21 +182,6 @@ class twitterController extends Controller
 
 
         }
-//        if (Activation::completed($user))
-//        {
-//            dd('sdfsdf');
-//            Sentinel::authenticate($user);
-//              if(Sentinel::authenticate($user))
-//            {
-//                $user = Sentinel::check();
-//
-//                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-//
-//            }
-//        }
-        // Show the page
-        return Redirect::route("home")->with('error', Lang::get('auth/message.signin.error'));
-        // }
-        // Auth::login($user);
+        return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
     }
 }
