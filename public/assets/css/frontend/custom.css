@@ -988,6 +988,7 @@ footer .btn-primary.text-white {
 #add_event .form_datetime + i{
     position: absolute;
     margin-top: 9px;
+    margin-left: 3px;
 }
 #consultation_info #photo-file{
     width: calc(100% - 22px);
@@ -1140,6 +1141,14 @@ footer .btn-primary.text-white {
     padding: 0;
     border: none;
     width: 70%;
+}
+.bootstrap-maxlength.label-success.label{
+    background-color: #c0504d;
+    color: white;
+
+}
+#btn_group > .add_event_section_link:first-child{
+    float: left;
 }
 @media(max-width:600px){
     #add_event label {
