@@ -17,6 +17,7 @@ use App\UserProfile;
 use App\AccountProfile;
 //use App\Activation;
 use App\Role;
+use DB;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Hash;
 use Mailchimp\Mailchimp;
@@ -345,7 +346,7 @@ class UsersController extends JoshController
         }
 
         //check whether use should be activated by default or not
-        $activate = Input::get('activate')?true:false;
+//        $activate = Input::get('activate')?true:false;
 
         try {
             // Register the user
@@ -362,9 +363,20 @@ class UsersController extends JoshController
                 'state'   => Input::get('state'),
                 'city'   => Input::get('city'),
                 'address'   => Input::get('address'),
-                'postal'   => Input::get('postal'),
+                'timezone'   => Input::get('timezone'),
             ));
+            $user_profile = new UserProfile();
+            $user_profile->user_id = $user['id'];
+            $user_profile->dob = Input::get('dob');
+            $user_profile->bio =  Input::get('bio');
+            $user_profile->gender =  Input::get('gender');
+            $user_profile->country =  Input::get('country');
+            $user_profile->state =  Input::get('state');
+            $user_profile->city =  Input::get('city');
+            $user_profile->address =  Input::get('address');
+            $user_profile->timezone =  Input::get('timezone');
 
+            $user_profile->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';
             $account_user->name = $user['uuid'];
@@ -377,8 +389,7 @@ class UsersController extends JoshController
 
             $selectedRoles = Input::get('groups', array());
             $roles = Sentinel::getRoleRepository()->all();
-
-            $role = Role::find(5);
+            $role = Role::find(2);
             $rolew = [
                 0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
             ];
@@ -524,11 +535,12 @@ class UsersController extends JoshController
             $user_profile = $user->user_profile()->first();
 
             $us_email = Sentinel::getUser()->email;
-            $email = md5(Sentinel::getUser()->email);
+            $email = md5($user->email);
             $apiKey = Config::get('mailchimp.apikey');
             $mc = new Mailchimp($apiKey);
             $listId = Config::get('mailchimp.listId');
-            $mc->delete("lists/$listId/members/$email");
+//            dd( $mc->get("lists/$listId/members/$us_email"));
+//            $mc->delete("lists/$listId/members/$email");
         } catch (UserNotFoundException $e) {
             // Prepare the error message
             $error = Lang::get('users/message.user_not_found', compact('id'));
@@ -568,7 +580,6 @@ class UsersController extends JoshController
             $user_profile->city   = Input::get('city');
             $user_profile->address   = Input::get('address');
             $user_profile->timezone   = Input::get('timezone');
-
             // Do we want to update the user password?
             if ($password) {
                 $user->password = Hash::make($password);
@@ -600,79 +611,40 @@ class UsersController extends JoshController
 
             // Get the selected groups
             $selectedRoles = Input::get('groups', array());
-
             // Groups comparison between the groups the user currently
             // have and the groups the user wish to have.
-            $rolesToAdd    = array_diff($selectedRoles, $userRoles);
+            $rolesToAdd    = array_diff($selectedRoles, $userRoles);;
             $rolesToRemove = array_diff($userRoles, $selectedRoles);
             $acc_id = $user->accounts()->first()->id;
-
             // Remove the user from groups
-            foreach ($rolesToRemove as $roleId) {
-                $role = Role::find($roleId);
-                $rolew = [
-                    0 => ['user_id' => $user->id, 'account_id' => $acc_id],
-                ];
-                $role->users()->detach($rolew);
+            foreach ($userRoles as $roleId) {
+                DB::table('account_user')->where('account_id', '=', $acc_id)
+                    ->where('user_id', '=', $user->id)
+                    ->where('role_id', '=', $roleId)->delete();
 
             }
 
             // Assign the user to groups
-            foreach ($rolesToAdd as $roleId) {
+            foreach ($selectedRoles as $roleId) {
 
                 $role = Role::find($roleId);
                 $rolew = [
-                    0 => ['user_id' => $user->id, 'account_id' => $acc_id],
+                    0 => ['user_id' => $user->id, 'account_id' => $acc_id, 'role_id'=>$role->id],
                 ];
 
                 $role->users()->attach($rolew);
 //                $role->users()->attach();
             }
 
-            $mc->post("lists/$listId/members/", [
-                'email_address' => $user->email,
-                'merge_fields' => ['FNAME'=>$user->first_name, 'LNAME'=>$user->last_name, 'CHENGED'=>$us_email],
-                'status'        => 'subscribed',
-            ]);
-
-            // Activate / De-activate user
-//            $status = $activation = Activation::completed($user);
-//            if(Input::get('activate') != $status)
-//            {
-//                if(Input::get('activate'))
-//                {
-//                    $activation = Activation::exists($user);
-//                    if($activation)
-//                    {
-//                        Activation::complete($user, $activation->code);
-//                    }
-//                }
-//                else
-//                {
-//                    //remove existing activation record
-//                    Activation::remove($user);
-//                    //add new record
-//                    Activation::create($user);
-//
-//                    //send activation mail
-//                    $data = array(
-//                        'user'          => $user,
-//                        'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
-//                    );
-//
-//                    // Send the activation code through email
-//                    Mail::send('emails.register-activate', $data, function ($m) use ($user) {
-//                        $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-//                        $m->subject('Welcome ' . $user->first_name);
-//                    });
-//
-//                }
-//            }
+$new_email = md5(Input::get('email'));
+    $mc->put("lists/$listId/members/$new_email", [
+        'email_address' => $user->email,
+        'merge_fields' => ['FNAME' => $user->first_name, 'LNAME' => $user->last_name, 'CHENGED' => $us_email],
+        'status_if_new' => 'subscribed',
+    ]);
 
             // Was the user updated?
             if ($user->save() && $user_profile->save()) {
-
-
 
                 // Prepare the success message
                 $success = Lang::get('users/message.success.update');

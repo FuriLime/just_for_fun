@@ -21,6 +21,7 @@ use App\Activation;
 use Mailchimp\Mailchimp;
 use Config;
 use Ramsey\Uuid\Uuid;
+use Honeypot;
 
 class AuthController extends JoshController
 {
@@ -54,10 +55,14 @@ class AuthController extends JoshController
         $rules = array(
             'email'    => 'required|email',
             'password' => 'required|between:3,32',
+            'my_name'   => 'honeypot',
+            'my_time'   => 'required|honeytime:5'
+
         );
 
         // Create a new validator instance from our validation rules
         $validator = Validator::make(Input::all(), $rules);
+
 
         // If validation fails, we'll exit the operation now.
         if ($validator->fails()) {
@@ -107,14 +112,27 @@ class AuthController extends JoshController
      *
      * @return Redirect
      */
+
+    public function getSignup()
+    {
+        // Is the user logged in?
+        if (Sentinel::check()) {
+            return Redirect::route('dashboard');
+        }
+
+        // Show the page
+        return View('register');
+    }
+
+
     public function postSignup()
     {
         // Declare the rules for the form validation
         $rules = array(
             'email'            => 'required|email|unique:users',
             'password'         => 'required|between:3,32',
-            'my_email'   => 'honeypot',
-            'my_password'   => 'required|honeytime:5'
+            'my_name'   => 'honeypot',
+            'my_time'   => 'required|honeytime:5'
         );
 
         // Create a new validator instance from our validation rules
@@ -123,7 +141,7 @@ class AuthController extends JoshController
         // If validation fails, we'll exit the operation now.
         if ($validator->fails()) {
             // Ooops.. something went wrong
-            return Redirect::to(URL::previous() . '#toregister')->withInput()->withErrors($validator);
+            return Redirect::to(URL::previous())->withInput()->withErrors($validator);
         }
 
         try {
@@ -132,6 +150,9 @@ class AuthController extends JoshController
                 'email'      => Input::get('email'),
                 'password'   => Input::get('password'),
             ));
+            $user_profile = new UserProfile();
+            $user_profile->user_id = $user['id'];
+            $user_profile->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';
             $account_user->name = $user['uuid'];
@@ -151,7 +172,6 @@ class AuthController extends JoshController
 
 
             //un-comment below code incase if user have to activate manually
-
             // Data to be used on the email view
             $data = array(
                 'user'          => $user,
@@ -161,7 +181,7 @@ class AuthController extends JoshController
             $to_email = $user->email;
             $to_name = 'asdasd';
             $from_email = 'test@eventfellows.org';
-            $from_name = 'From Name Here';
+            $from_name = 'EventFellow';
 
             $template_content = array(
                 array(
@@ -172,15 +192,13 @@ class AuthController extends JoshController
 
             $global_merge_vars = [
                 ['name' => 'emailname',             'content' => $to_email],
-                ['name' => 'NNAME',                 'content' => 'User reigester without first nickname'],
-                ['name' => 'FNAME',                 'content' => 'User reigester without first name'],
-                ['name' => 'LNAME',                 'content' => 'User reigester without last name'],
+                ['name' => 'NNAME',                 'content' => 'User reigester without nickname'],
                 ['name' => 'LOGINCOUNT',            'content' => 'We not have this data yet'],
-                ['name' => 'PASSRESET',             'content' => $data['activationUrl']],
-                ['name' => 'RESETVALID',            'content' => 'We not have this data yet'],
+                ['name' => 'PASSRESET',             'content' => 'reset password'],
+                ['name' => 'RESETVALID',            'content' => 'reset valid'],
                 ['name' => 'DCREDITS',              'content' => '30'],
                 ['name' => 'ECREDITS',              'content' => 'We not have this data yet'],
-                ['name' => 'ACCTYPE',               'content' => 'We not have this data yet'],
+                ['name' => 'ACCTYPE',               'content' => ''],
                 ['name' => 'RENEWDATE',             'content' => 'We not have this data yet'],
                 ['name' => 'FREETEXT',              'content' => 'content-FREETEXT'],
                 ['name' => 'COLOR1',                'content' => '#ee12ab'], // merge value not in mandrill code yet
@@ -218,7 +236,7 @@ class AuthController extends JoshController
             ];
 
             // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
-            \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
+            \MandrillMail::messages()->sendTemplate('email-confirmation', $template_content, $message);
             // Redirect to the home page with success menu
             return Redirect::back()->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
         } catch (UserExistsException $e) {
@@ -245,9 +263,6 @@ class AuthController extends JoshController
         $hash_email = md5($email);
         $apiKey = Config::get('mailchimp.apikey');
         $mc = new Mailchimp($apiKey);
-        $user_profile = new UserProfile();
-        $user_profile->user_id = $user->id;
-        $user_profile->save();
         $listId = Config::get('mailchimp.listId');
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);

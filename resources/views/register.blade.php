@@ -1,5 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- global level css -->
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <!-- end of global level css -->
+    <!-- page level css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/login.css') }}" />
+    <!-- end of page level css -->
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row vertical-offset-100">
+        <!-- Notifications -->
+        @include('notifications')
+
+        <div class="col-sm-6 col-sm-offset-3  col-md-5 col-md-offset-4 col-lg-4 col-lg-offset-4">
+            <div id="container_demo">
+                <a class="hiddenanchor" id="toregister"></a>
+                <a class="hiddenanchor" id="tologin"></a>
+                <a class="hiddenanchor" id="toforgot"></a>
+                <div id="wrapper">
 <div id="register" class="animate form">
-    <form action="{{ route('register') }}" autocomplete="on" method="post" role="form">
+    <form action="{{ route('signup') }}" autocomplete="on" method="post" role="form">
         <h3 class="black_bg">
             <img src="{{ asset('assets/img/logo.png') }}" alt="josh logo">
             <br>Sign Up</h3>
@@ -36,9 +63,24 @@
             <input type="submit" class="btn btn-success" value="Sign up" />
         </p>
         <p class="change_link">
-            <a href="#tologin" class="to_register">
+            <a href="{{ URL::to('signin') }}" class="to_register">
                 <button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Back</button>
             </a>
         </p>
     </form>
 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- global js -->
+<script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
+<!-- Bootstrap -->
+<script src="{{ asset('assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
+<!--livicons-->
+<script src="{{ asset('assets/vendors/livicons/minified/raphael-min.js') }}"></script>
+<script src="{{ asset('assets/vendors/livicons/minified/livicons-1.4.min.js') }}"></script>
+<!-- end of global js -->
+</body>
+</html>

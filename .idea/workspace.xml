@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Commands/RemoveEvent.php" afterPath="$PROJECT_DIR$/app/Console/Commands/RemoveEvent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -28,69 +28,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/register.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-23.958334" vertical-offset="400" max-vertical-offset="1365">
+              <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/pages/login.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2205" max-vertical-offset="6210">
+              <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/login.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.125" vertical-offset="885" max-vertical-offset="1860">
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3482143" vertical-offset="1485" max-vertical-offset="6930">
+              <caret line="134" column="48" selection-start-line="134" selection-start-column="48" selection-end-line="134" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.875" vertical-offset="810" max-vertical-offset="6540">
+              <caret line="65" column="58" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.625" vertical-offset="2730" max-vertical-offset="3510">
-              <caret line="203" column="24" selection-start-line="203" selection-start-column="24" selection-end-line="203" selection-end-column="24" />
+            <state vertical-scroll-proportion="-6.6346154" vertical-offset="1980" max-vertical-offset="3525">
+              <caret line="159" column="79" selection-start-line="159" selection-start-column="79" selection-end-line="159" selection-end-column="79" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.0" vertical-offset="3225" max-vertical-offset="13770">
-              <caret line="259" column="16" selection-start-line="259" selection-start-column="16" selection-end-line="259" selection-end-column="16" />
-              <folding>
-                <element signature="e#39#52#0#PHP" expanded="true" />
-                <element signature="e#5978#7048#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Event.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Event.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="1125">
-              <caret line="25" column="136" selection-start-line="25" selection-start-column="136" selection-end-line="25" selection-end-column="136" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.625" vertical-offset="417" max-vertical-offset="990">
-              <caret line="48" column="73" selection-start-line="48" selection-start-column="73" selection-end-line="48" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Kernel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="570">
-              <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
-              <folding>
-                <element signature="e#31#74#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RemoveEvent.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Console/Commands/RemoveEvent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7285714" vertical-offset="237" max-vertical-offset="810">
-              <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
-              <folding>
-                <element signature="e#40#71#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -106,9 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071855_create_download_trasactions_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071939_create_event_transactions_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_03_11_072526_create_cashier_table_settings.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071240_create_features_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071819_create_dowload_credits_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_11_071203_create_credit_types_table.php" />
@@ -119,44 +109,47 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/linkedController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MicrosoftController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/googleController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/login.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/config/filesystems.php" />
         <option value="$PROJECT_DIR$/resources/views/single_product.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/popup.css" />
         <option value="$PROJECT_DIR$/public/assets/js/popup.js" />
-        <option value="$PROJECT_DIR$/resources/views/confirm.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/events/cloned.blade.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/resources/lang/en/message.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/pop_over.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/events/index.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/ical.php" />
         <option value="$PROJECT_DIR$/app/Activation.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/app/Event.php" />
         <option value="$PROJECT_DIR$/resources/views/events/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/lang/en/frontend.php" />
         <option value="$PROJECT_DIR$/bootstrap/app.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/events/clone.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/js/event.js" />
         <option value="$PROJECT_DIR$/resources/views/emails/register-activate.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/JoshController.php" />
         <option value="$PROJECT_DIR$/resources/views/events/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MailController.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/twitterController.php" />
-        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/RemoveEvent.php" />
+        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
+        <option value="$PROJECT_DIR$/resources/views/events/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/resources/views/confirm.blade.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/frontend.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/JoshController.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/pages/login.css" />
+        <option value="$PROJECT_DIR$/resources/views/register.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/login.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
       </list>
     </option>
   </component>
@@ -227,6 +220,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -245,7 +270,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Console" />
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -257,21 +304,21 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ef-test" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="170" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="228" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="175" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="234" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="179" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="236" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="797" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="939" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="181" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="262" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="186" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="265" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="193" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="275" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="761" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="835" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
@@ -325,301 +372,301 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-03340" summary="database">
-      <created>1458555777470</created>
-      <option name="number" value="03340" />
+    <task id="LOCAL-03659" summary="database">
+      <created>1458680805267</created>
+      <option name="number" value="03659" />
       <option name="project" value="LOCAL" />
-      <updated>1458555777470</updated>
+      <updated>1458680805267</updated>
     </task>
-    <task id="LOCAL-03341" summary="database">
-      <created>1458555820339</created>
-      <option name="number" value="03341" />
+    <task id="LOCAL-03660" summary="database">
+      <created>1458680960100</created>
+      <option name="number" value="03660" />
       <option name="project" value="LOCAL" />
-      <updated>1458555820339</updated>
+      <updated>1458680960100</updated>
     </task>
-    <task id="LOCAL-03342" summary="database">
-      <created>1458555865522</created>
-      <option name="number" value="03342" />
+    <task id="LOCAL-03661" summary="database">
+      <created>1458681132151</created>
+      <option name="number" value="03661" />
       <option name="project" value="LOCAL" />
-      <updated>1458555865522</updated>
+      <updated>1458681132151</updated>
     </task>
-    <task id="LOCAL-03343" summary="database">
-      <created>1458555929552</created>
-      <option name="number" value="03343" />
+    <task id="LOCAL-03662" summary="database">
+      <created>1458681279095</created>
+      <option name="number" value="03662" />
       <option name="project" value="LOCAL" />
-      <updated>1458555929552</updated>
+      <updated>1458681279095</updated>
     </task>
-    <task id="LOCAL-03344" summary="database">
-      <created>1458555999177</created>
-      <option name="number" value="03344" />
+    <task id="LOCAL-03663" summary="database">
+      <created>1458681328374</created>
+      <option name="number" value="03663" />
       <option name="project" value="LOCAL" />
-      <updated>1458555999177</updated>
+      <updated>1458681328375</updated>
     </task>
-    <task id="LOCAL-03345" summary="database">
-      <created>1458558232589</created>
-      <option name="number" value="03345" />
+    <task id="LOCAL-03664" summary="database">
+      <created>1458681389571</created>
+      <option name="number" value="03664" />
       <option name="project" value="LOCAL" />
-      <updated>1458558232595</updated>
+      <updated>1458681389571</updated>
     </task>
-    <task id="LOCAL-03346" summary="database">
-      <created>1458558355117</created>
-      <option name="number" value="03346" />
+    <task id="LOCAL-03665" summary="database">
+      <created>1458681492590</created>
+      <option name="number" value="03665" />
       <option name="project" value="LOCAL" />
-      <updated>1458558355117</updated>
+      <updated>1458681492590</updated>
     </task>
-    <task id="LOCAL-03347" summary="database">
-      <created>1458558545739</created>
-      <option name="number" value="03347" />
+    <task id="LOCAL-03666" summary="database">
+      <created>1458681563440</created>
+      <option name="number" value="03666" />
       <option name="project" value="LOCAL" />
-      <updated>1458558545739</updated>
+      <updated>1458681563440</updated>
     </task>
-    <task id="LOCAL-03348" summary="database">
-      <created>1458558694755</created>
-      <option name="number" value="03348" />
+    <task id="LOCAL-03667" summary="database">
+      <created>1458681717332</created>
+      <option name="number" value="03667" />
       <option name="project" value="LOCAL" />
-      <updated>1458558694755</updated>
+      <updated>1458681717332</updated>
     </task>
-    <task id="LOCAL-03349" summary="database">
-      <created>1458558753664</created>
-      <option name="number" value="03349" />
+    <task id="LOCAL-03668" summary="database">
+      <created>1458681974942</created>
+      <option name="number" value="03668" />
       <option name="project" value="LOCAL" />
-      <updated>1458558753664</updated>
+      <updated>1458681974943</updated>
     </task>
-    <task id="LOCAL-03350" summary="database">
-      <created>1458558780713</created>
-      <option name="number" value="03350" />
+    <task id="LOCAL-03669" summary="database">
+      <created>1458681990203</created>
+      <option name="number" value="03669" />
       <option name="project" value="LOCAL" />
-      <updated>1458558780713</updated>
+      <updated>1458681990203</updated>
     </task>
-    <task id="LOCAL-03351" summary="database">
-      <created>1458558929245</created>
-      <option name="number" value="03351" />
+    <task id="LOCAL-03670" summary="database">
+      <created>1458682019872</created>
+      <option name="number" value="03670" />
       <option name="project" value="LOCAL" />
-      <updated>1458558929245</updated>
+      <updated>1458682019872</updated>
     </task>
-    <task id="LOCAL-03352" summary="database">
-      <created>1458558995972</created>
-      <option name="number" value="03352" />
+    <task id="LOCAL-03671" summary="database">
+      <created>1458682075593</created>
+      <option name="number" value="03671" />
       <option name="project" value="LOCAL" />
-      <updated>1458558995972</updated>
+      <updated>1458682075593</updated>
     </task>
-    <task id="LOCAL-03353" summary="database">
-      <created>1458559022800</created>
-      <option name="number" value="03353" />
+    <task id="LOCAL-03672" summary="database">
+      <created>1458682163724</created>
+      <option name="number" value="03672" />
       <option name="project" value="LOCAL" />
-      <updated>1458559022800</updated>
+      <updated>1458682163724</updated>
     </task>
-    <task id="LOCAL-03354" summary="database">
-      <created>1458559053743</created>
-      <option name="number" value="03354" />
+    <task id="LOCAL-03673" summary="database">
+      <created>1458682242949</created>
+      <option name="number" value="03673" />
       <option name="project" value="LOCAL" />
-      <updated>1458559053743</updated>
+      <updated>1458682242949</updated>
     </task>
-    <task id="LOCAL-03355" summary="database">
-      <created>1458559399322</created>
-      <option name="number" value="03355" />
+    <task id="LOCAL-03674" summary="database">
+      <created>1458682305723</created>
+      <option name="number" value="03674" />
       <option name="project" value="LOCAL" />
-      <updated>1458559399322</updated>
+      <updated>1458682305723</updated>
     </task>
-    <task id="LOCAL-03356" summary="database">
-      <created>1458559411009</created>
-      <option name="number" value="03356" />
+    <task id="LOCAL-03675" summary="database">
+      <created>1458682433860</created>
+      <option name="number" value="03675" />
       <option name="project" value="LOCAL" />
-      <updated>1458559411009</updated>
+      <updated>1458682433860</updated>
     </task>
-    <task id="LOCAL-03357" summary="database">
-      <created>1458559435725</created>
-      <option name="number" value="03357" />
+    <task id="LOCAL-03676" summary="database">
+      <created>1458682486577</created>
+      <option name="number" value="03676" />
       <option name="project" value="LOCAL" />
-      <updated>1458559435725</updated>
+      <updated>1458682486578</updated>
     </task>
-    <task id="LOCAL-03358" summary="database">
-      <created>1458559548580</created>
-      <option name="number" value="03358" />
+    <task id="LOCAL-03677" summary="database">
+      <created>1458682530978</created>
+      <option name="number" value="03677" />
       <option name="project" value="LOCAL" />
-      <updated>1458559548580</updated>
+      <updated>1458682530978</updated>
     </task>
-    <task id="LOCAL-03359" summary="database">
-      <created>1458559857365</created>
-      <option name="number" value="03359" />
+    <task id="LOCAL-03678" summary="database">
+      <created>1458682625648</created>
+      <option name="number" value="03678" />
       <option name="project" value="LOCAL" />
-      <updated>1458559857365</updated>
+      <updated>1458682625648</updated>
     </task>
-    <task id="LOCAL-03360" summary="database">
-      <created>1458559898860</created>
-      <option name="number" value="03360" />
+    <task id="LOCAL-03679" summary="database">
+      <created>1458682654287</created>
+      <option name="number" value="03679" />
       <option name="project" value="LOCAL" />
-      <updated>1458559898860</updated>
+      <updated>1458682654287</updated>
     </task>
-    <task id="LOCAL-03361" summary="database">
-      <created>1458559929959</created>
-      <option name="number" value="03361" />
+    <task id="LOCAL-03680" summary="database">
+      <created>1458682928929</created>
+      <option name="number" value="03680" />
       <option name="project" value="LOCAL" />
-      <updated>1458559929959</updated>
+      <updated>1458682928929</updated>
     </task>
-    <task id="LOCAL-03362" summary="database">
-      <created>1458560282040</created>
-      <option name="number" value="03362" />
+    <task id="LOCAL-03681" summary="database">
+      <created>1458682975502</created>
+      <option name="number" value="03681" />
       <option name="project" value="LOCAL" />
-      <updated>1458560282041</updated>
+      <updated>1458682975502</updated>
     </task>
-    <task id="LOCAL-03363" summary="database">
-      <created>1458560355481</created>
-      <option name="number" value="03363" />
+    <task id="LOCAL-03682" summary="database">
+      <created>1458683068353</created>
+      <option name="number" value="03682" />
       <option name="project" value="LOCAL" />
-      <updated>1458560355481</updated>
+      <updated>1458683068353</updated>
     </task>
-    <task id="LOCAL-03364" summary="database">
-      <created>1458560667884</created>
-      <option name="number" value="03364" />
+    <task id="LOCAL-03683" summary="database">
+      <created>1458714818620</created>
+      <option name="number" value="03683" />
       <option name="project" value="LOCAL" />
-      <updated>1458560667884</updated>
+      <updated>1458714818620</updated>
     </task>
-    <task id="LOCAL-03365" summary="database">
-      <created>1458560884875</created>
-      <option name="number" value="03365" />
+    <task id="LOCAL-03684" summary="database">
+      <created>1458716617529</created>
+      <option name="number" value="03684" />
       <option name="project" value="LOCAL" />
-      <updated>1458560884875</updated>
+      <updated>1458716617529</updated>
     </task>
-    <task id="LOCAL-03366" summary="database">
-      <created>1458560918018</created>
-      <option name="number" value="03366" />
+    <task id="LOCAL-03685" summary="database">
+      <created>1458716734739</created>
+      <option name="number" value="03685" />
       <option name="project" value="LOCAL" />
-      <updated>1458560918018</updated>
+      <updated>1458716734739</updated>
     </task>
-    <task id="LOCAL-03367" summary="database">
-      <created>1458560943931</created>
-      <option name="number" value="03367" />
+    <task id="LOCAL-03686" summary="database">
+      <created>1458716794071</created>
+      <option name="number" value="03686" />
       <option name="project" value="LOCAL" />
-      <updated>1458560943931</updated>
+      <updated>1458716794071</updated>
     </task>
-    <task id="LOCAL-03368" summary="database">
-      <created>1458560981545</created>
-      <option name="number" value="03368" />
+    <task id="LOCAL-03687" summary="database">
+      <created>1458716844827</created>
+      <option name="number" value="03687" />
       <option name="project" value="LOCAL" />
-      <updated>1458560981545</updated>
+      <updated>1458716844827</updated>
     </task>
-    <task id="LOCAL-03369" summary="database">
-      <created>1458564525938</created>
-      <option name="number" value="03369" />
+    <task id="LOCAL-03688" summary="database">
+      <created>1458716887370</created>
+      <option name="number" value="03688" />
       <option name="project" value="LOCAL" />
-      <updated>1458564525938</updated>
+      <updated>1458716887370</updated>
     </task>
-    <task id="LOCAL-03370" summary="database">
-      <created>1458564568256</created>
-      <option name="number" value="03370" />
+    <task id="LOCAL-03689" summary="database">
+      <created>1458716964332</created>
+      <option name="number" value="03689" />
       <option name="project" value="LOCAL" />
-      <updated>1458564568256</updated>
+      <updated>1458716964333</updated>
     </task>
-    <task id="LOCAL-03371" summary="database">
-      <created>1458564669662</created>
-      <option name="number" value="03371" />
+    <task id="LOCAL-03690" summary="database">
+      <created>1458717023044</created>
+      <option name="number" value="03690" />
       <option name="project" value="LOCAL" />
-      <updated>1458564669662</updated>
+      <updated>1458717023044</updated>
     </task>
-    <task id="LOCAL-03372" summary="database">
-      <created>1458564832578</created>
-      <option name="number" value="03372" />
+    <task id="LOCAL-03691" summary="database">
+      <created>1458718756135</created>
+      <option name="number" value="03691" />
       <option name="project" value="LOCAL" />
-      <updated>1458564832578</updated>
+      <updated>1458718756135</updated>
     </task>
-    <task id="LOCAL-03373" summary="database">
-      <created>1458564858539</created>
-      <option name="number" value="03373" />
+    <task id="LOCAL-03692" summary="database">
+      <created>1458718863637</created>
+      <option name="number" value="03692" />
       <option name="project" value="LOCAL" />
-      <updated>1458564858539</updated>
+      <updated>1458718863637</updated>
     </task>
-    <task id="LOCAL-03374" summary="database">
-      <created>1458564918842</created>
-      <option name="number" value="03374" />
+    <task id="LOCAL-03693" summary="database">
+      <created>1458718897869</created>
+      <option name="number" value="03693" />
       <option name="project" value="LOCAL" />
-      <updated>1458564918842</updated>
+      <updated>1458718897869</updated>
     </task>
-    <task id="LOCAL-03375" summary="database">
-      <created>1458564982013</created>
-      <option name="number" value="03375" />
+    <task id="LOCAL-03694" summary="database">
+      <created>1458718929484</created>
+      <option name="number" value="03694" />
       <option name="project" value="LOCAL" />
-      <updated>1458564982013</updated>
+      <updated>1458718929484</updated>
     </task>
-    <task id="LOCAL-03376" summary="database">
-      <created>1458565024564</created>
-      <option name="number" value="03376" />
+    <task id="LOCAL-03695" summary="database">
+      <created>1458719176684</created>
+      <option name="number" value="03695" />
       <option name="project" value="LOCAL" />
-      <updated>1458565024572</updated>
+      <updated>1458719176684</updated>
     </task>
-    <task id="LOCAL-03377" summary="database">
-      <created>1458565062092</created>
-      <option name="number" value="03377" />
+    <task id="LOCAL-03696" summary="database">
+      <created>1458719352309</created>
+      <option name="number" value="03696" />
       <option name="project" value="LOCAL" />
-      <updated>1458565062092</updated>
+      <updated>1458719352309</updated>
     </task>
-    <task id="LOCAL-03378" summary="database">
-      <created>1458565129427</created>
-      <option name="number" value="03378" />
+    <task id="LOCAL-03697" summary="database">
+      <created>1458719387148</created>
+      <option name="number" value="03697" />
       <option name="project" value="LOCAL" />
-      <updated>1458565129427</updated>
+      <updated>1458719387148</updated>
     </task>
-    <task id="LOCAL-03379" summary="database">
-      <created>1458565178055</created>
-      <option name="number" value="03379" />
+    <task id="LOCAL-03698" summary="database">
+      <created>1458719503953</created>
+      <option name="number" value="03698" />
       <option name="project" value="LOCAL" />
-      <updated>1458565178055</updated>
+      <updated>1458719503953</updated>
     </task>
-    <task id="LOCAL-03380" summary="database">
-      <created>1458565204888</created>
-      <option name="number" value="03380" />
+    <task id="LOCAL-03699" summary="database">
+      <created>1458719602146</created>
+      <option name="number" value="03699" />
       <option name="project" value="LOCAL" />
-      <updated>1458565204888</updated>
+      <updated>1458719602146</updated>
     </task>
-    <task id="LOCAL-03381" summary="database">
-      <created>1458565455971</created>
-      <option name="number" value="03381" />
+    <task id="LOCAL-03700" summary="database">
+      <created>1458719638734</created>
+      <option name="number" value="03700" />
       <option name="project" value="LOCAL" />
-      <updated>1458565455971</updated>
+      <updated>1458719638734</updated>
     </task>
-    <task id="LOCAL-03382" summary="database">
-      <created>1458565508725</created>
-      <option name="number" value="03382" />
+    <task id="LOCAL-03701" summary="database">
+      <created>1458719662624</created>
+      <option name="number" value="03701" />
       <option name="project" value="LOCAL" />
-      <updated>1458565508725</updated>
+      <updated>1458719662624</updated>
     </task>
-    <task id="LOCAL-03383" summary="database">
-      <created>1458565592407</created>
-      <option name="number" value="03383" />
+    <task id="LOCAL-03702" summary="database">
+      <created>1458719879684</created>
+      <option name="number" value="03702" />
       <option name="project" value="LOCAL" />
-      <updated>1458565592407</updated>
+      <updated>1458719879684</updated>
     </task>
-    <task id="LOCAL-03384" summary="database">
-      <created>1458566047647</created>
-      <option name="number" value="03384" />
+    <task id="LOCAL-03703" summary="database">
+      <created>1458719973651</created>
+      <option name="number" value="03703" />
       <option name="project" value="LOCAL" />
-      <updated>1458566047647</updated>
+      <updated>1458719973651</updated>
     </task>
-    <task id="LOCAL-03385" summary="database">
-      <created>1458566598990</created>
-      <option name="number" value="03385" />
+    <task id="LOCAL-03704" summary="database">
+      <created>1458720197241</created>
+      <option name="number" value="03704" />
       <option name="project" value="LOCAL" />
-      <updated>1458566598990</updated>
+      <updated>1458720197241</updated>
     </task>
-    <task id="LOCAL-03386" summary="database">
-      <created>1458566701546</created>
-      <option name="number" value="03386" />
+    <task id="LOCAL-03705" summary="database">
+      <created>1458720215423</created>
+      <option name="number" value="03705" />
       <option name="project" value="LOCAL" />
-      <updated>1458566701546</updated>
+      <updated>1458720215423</updated>
     </task>
-    <task id="LOCAL-03387" summary="database">
-      <created>1458566774160</created>
-      <option name="number" value="03387" />
+    <task id="LOCAL-03706" summary="database">
+      <created>1458721126843</created>
+      <option name="number" value="03706" />
       <option name="project" value="LOCAL" />
-      <updated>1458566774160</updated>
+      <updated>1458721126843</updated>
     </task>
-    <task id="LOCAL-03388" summary="database">
-      <created>1458566821046</created>
-      <option name="number" value="03388" />
+    <task id="LOCAL-03707" summary="database">
+      <created>1458721163169</created>
+      <option name="number" value="03707" />
       <option name="project" value="LOCAL" />
-      <updated>1458566821046</updated>
+      <updated>1458721163169</updated>
     </task>
-    <option name="localTasksCounter" value="3389" />
+    <option name="localTasksCounter" value="3708" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -628,13 +675,13 @@
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23792094" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2137628" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897604" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3125" sideWeight="0.4692533" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31154683" sideWeight="0.4692533" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7271268" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7254902" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -672,205 +719,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Jobs/Job.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/events/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="33.346153" vertical-offset="867" max-vertical-offset="1785">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/invite/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65922445" vertical-offset="561" max-vertical-offset="1445">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.41319445" vertical-offset="357" max-vertical-offset="1394">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="890">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/modal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="890">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="612">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/pop_over.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="374">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/notifications.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="890">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0340776" vertical-offset="4386" max-vertical-offset="7395">
-          <caret line="6" column="72" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/notisfaction.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077" vertical-offset="612" max-vertical-offset="2210">
-          <caret line="55" column="68" selection-start-line="55" selection-start-column="68" selection-end-line="55" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/confirm.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.6749117" vertical-offset="832" max-vertical-offset="2550">
-          <caret line="138" column="3" selection-start-line="138" selection-start-column="3" selection-end-line="138" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/modal_confirmation.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/layouts/modal_confirmation.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/users/modal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="289">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/layouts/default.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4165">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30082256" vertical-offset="3535" max-vertical-offset="4539">
-          <caret line="223" column="95" selection-start-line="223" selection-start-column="95" selection-end-line="223" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/deleted_users.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8178613" vertical-offset="696" max-vertical-offset="1547">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6157462" vertical-offset="1006" max-vertical-offset="1870">
-          <caret line="90" column="9" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.13983549" vertical-offset="1938" max-vertical-offset="3077">
-          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.346154" vertical-offset="725" max-vertical-offset="1615">
-          <caret line="60" column="54" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8425926" vertical-offset="3" max-vertical-offset="1530">
-          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.059027776" vertical-offset="0" max-vertical-offset="864">
-          <caret line="3" column="40" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3604">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="890">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.33796296" vertical-offset="309" max-vertical-offset="1173">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33449075" vertical-offset="0" max-vertical-offset="1037">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1546" max-vertical-offset="5236">
-          <caret line="108" column="56" selection-start-line="108" selection-start-column="56" selection-end-line="108" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -895,14 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Role.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="890">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Activation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17465754" vertical-offset="0" max-vertical-offset="816">
@@ -910,23 +759,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/emails/register-activate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23992994" vertical-offset="3331" max-vertical-offset="5236">
-          <caret line="204" column="83" selection-start-line="204" selection-start-column="83" selection-end-line="204" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6789668" vertical-offset="5549" max-vertical-offset="7973">
-          <caret line="241" column="29" selection-start-line="241" selection-start-column="29" selection-end-line="241" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/event.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54613936" vertical-offset="2245" max-vertical-offset="4335">
+          <caret line="169" column="44" selection-start-line="169" selection-start-column="44" selection-end-line="169" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MailController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="240">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/Inspire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="596">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/DownloadCredit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="1125">
+          <caret line="25" column="136" selection-start-line="25" selection-start-column="136" selection-end-line="25" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52879584" vertical-offset="417" max-vertical-offset="990">
+          <caret line="48" column="73" selection-start-line="48" selection-start-column="73" selection-end-line="48" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.41964287" vertical-offset="1840" max-vertical-offset="2715">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.169642" vertical-offset="6435" max-vertical-offset="9090">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/user_profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6556993" vertical-offset="3111" max-vertical-offset="17442">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/view_user.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1319444" vertical-offset="2706" max-vertical-offset="3570">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -939,128 +844,253 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/user/profile/edit_profile.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25569177" vertical-offset="8694" max-vertical-offset="13192">
-          <caret line="757" column="43" selection-start-line="757" selection-start-column="43" selection-end-line="757" selection-end-column="43" />
+        <state vertical-scroll-proportion="-3.355872" vertical-offset="1886" max-vertical-offset="2652">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JoshController.php">
+    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1260" max-vertical-offset="1680">
-          <caret line="87" column="41" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.7329843" vertical-offset="0" max-vertical-offset="573">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/RemoveEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33035713" vertical-offset="10" max-vertical-offset="750">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.580357" vertical-offset="2565" max-vertical-offset="3765">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54464287" vertical-offset="1165" max-vertical-offset="1860">
+          <caret line="98" column="53" selection-start-line="98" selection-start-column="53" selection-end-line="98" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.31239092" vertical-offset="179" max-vertical-offset="780">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54613936" vertical-offset="2245" max-vertical-offset="4335">
-          <caret line="169" column="44" selection-start-line="169" selection-start-column="44" selection-end-line="169" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53107345" vertical-offset="7338" max-vertical-offset="12000">
-          <caret line="508" column="32" selection-start-line="508" selection-start-column="32" selection-end-line="508" selection-end-column="32" />
-          <folding>
-            <element signature="e#4283#4304#0#HTML" expanded="true" />
-            <element signature="e#5400#5421#0#HTML" expanded="true" />
-            <element signature="e#8482#8502#0#HTML" expanded="true" />
-            <element signature="e#10391#10411#0#HTML" expanded="true" />
-            <element signature="e#11981#12002#0#HTML" expanded="true" />
-            <element signature="e#14780#14840#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MailController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="240">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.14285715" vertical-offset="565" max-vertical-offset="1350">
+          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/twitterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.833334" vertical-offset="166" max-vertical-offset="1515">
+        <state vertical-scroll-proportion="-0.23734729" vertical-offset="706" max-vertical-offset="1515">
           <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/Inspire.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="596">
+        <state vertical-scroll-proportion="-5.1714287" vertical-offset="8386" max-vertical-offset="14775">
+          <caret line="366" column="15" selection-start-line="366" selection-start-column="15" selection-end-line="366" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59821427" vertical-offset="2770" max-vertical-offset="4005">
+          <caret line="207" column="146" selection-start-line="207" selection-start-column="146" selection-end-line="207" selection-end-column="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25" vertical-offset="3055" max-vertical-offset="4605">
+          <caret line="213" column="40" selection-start-line="213" selection-start-column="36" selection-end-line="218" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83035713" vertical-offset="705" max-vertical-offset="1755">
+          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7853403" vertical-offset="450" max-vertical-offset="2385">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/EventCredit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/ical.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5" vertical-offset="9" max-vertical-offset="630">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35069445" vertical-offset="785" max-vertical-offset="1649">
+          <caret line="64" column="70" selection-start-line="64" selection-start-column="70" selection-end-line="64" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_11_071747_create_events_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3148148" vertical-offset="34" max-vertical-offset="1394">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5052879" vertical-offset="2681" max-vertical-offset="8993">
+          <caret line="597" column="52" selection-start-line="597" selection-start-column="39" selection-end-line="597" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/confirm.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-32.692307" vertical-offset="0" max-vertical-offset="2550">
+          <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/frontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6655093" vertical-offset="360" max-vertical-offset="1224">
+          <caret line="58" column="45" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/emails/auth/reminder.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="890">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/emails/register-activate.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5992949" vertical-offset="2107" max-vertical-offset="5236">
+          <caret line="204" column="83" selection-start-line="204" selection-start-column="83" selection-end-line="204" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/emails/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2023">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4233">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/DownloadCredit.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JoshController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+        <state vertical-scroll-proportion="0.73214287" vertical-offset="850" max-vertical-offset="1680">
+          <caret line="87" column="38" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4017857" vertical-offset="2535" max-vertical-offset="12345">
+          <caret line="184" column="72" selection-start-line="184" selection-start-column="46" selection-end-line="184" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.39267015" vertical-offset="225" max-vertical-offset="1920">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Event.php">
+    <entry file="file://$PROJECT_DIR$/public/assets/css/pages/login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="1125">
-          <caret line="25" column="136" selection-start-line="25" selection-start-column="136" selection-end-line="25" selection-end-column="136" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2205" max-vertical-offset="6210">
+          <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.625" vertical-offset="417" max-vertical-offset="990">
-          <caret line="48" column="73" selection-start-line="48" selection-start-column="73" selection-end-line="48" selection-end-column="73" />
+        <state vertical-scroll-proportion="-6.875" vertical-offset="810" max-vertical-offset="6540">
+          <caret line="65" column="58" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.125" vertical-offset="885" max-vertical-offset="1860">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625" vertical-offset="2730" max-vertical-offset="3510">
-          <caret line="203" column="24" selection-start-line="203" selection-start-column="24" selection-end-line="203" selection-end-column="24" />
+        <state vertical-scroll-proportion="-6.6346154" vertical-offset="1980" max-vertical-offset="3525">
+          <caret line="159" column="79" selection-start-line="159" selection-start-column="79" selection-end-line="159" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.0" vertical-offset="3225" max-vertical-offset="13770">
-          <caret line="259" column="16" selection-start-line="259" selection-start-column="16" selection-end-line="259" selection-end-column="16" />
-          <folding>
-            <element signature="e#39#52#0#PHP" expanded="true" />
-            <element signature="e#5978#7048#0#PHP" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-23.958334" vertical-offset="400" max-vertical-offset="1365">
+          <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="570">
-          <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
-          <folding>
-            <element signature="e#31#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/RemoveEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7285714" vertical-offset="237" max-vertical-offset="810">
-          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
-          <folding>
-            <element signature="e#40#71#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.3482143" vertical-offset="1485" max-vertical-offset="6930">
+          <caret line="134" column="48" selection-start-line="134" selection-start-column="48" selection-end-line="134" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>

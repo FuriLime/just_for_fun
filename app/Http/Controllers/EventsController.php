@@ -179,9 +179,6 @@ class EventsController extends Controller {
         if(isset($_POST['finish'])) {
             session()->put('finish', $_POST['finish']);
         }
-        if(isset($_POST['timezone'])) {
-            session()->put('timezone', $_POST['timezone']);
-        }
         $this->validate($request, [
             'title' => 'required|max:80',
             'description' => 'max:500',
@@ -192,31 +189,6 @@ class EventsController extends Controller {
             'start' => 'required',
             'finish' => 'required',
         ]);
-        if(Sentinel::check()){
-            $userId = Sentinel::getUser()->id;
-            $user = User::find($userId);
-            $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
-        }else {
-            $user = new User();
-            $user->email = Uuid::uuid4();
-            $user->save();
-            $userId = $user->id;
-            $user = User::find($userId);
-            $account_user = new Account();
-            $account_user->	account_type_id = '1';
-            $account_user->name = $user->uuid;
-            $account_user->slug = $user->uuid;
-            $account_user->save();
-
-            //add user to 'User' group
-            $role = Role::find(2);
-            $rolew = [
-                0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
-            ];
-
-            $role->users()->attach($rolew);
-            $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
-        }
         $store_info = new Event();
         $store_info->uuid = Uuid::uuid4(4);
         $store_info->title = Input::get('title');
@@ -229,12 +201,29 @@ class EventsController extends Controller {
         $store_info->timezone = Input::get('timezone');
         $store_info->finish = Input::get('finish');
         $store_info->start = Input::get('start');
-        $store_info->author_id = $user->id;
-        $store_info->editor_id = $user->id;
-        $store_info->account_id = $account[0]->account_id;
+
+        if(Sentinel::check()){
+            $userId = Sentinel::getUser()->id;
+            $user = User::find($userId);
+            $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
+            $store_info->author_id = $user->id;
+            $store_info->editor_id = $user->id;
+            $store_info->account_id = $account[0]->account_id;
+        }else{
+            $store_info->author_id = NULL;
+            $store_info->editor_id = NULL;
+            $store_info->account_id = NULL;
+        }
         $store_info->permanent_url = Uuid::uuid4();
         $store_info->readable_url = Uuid::uuid4();
-        $store_info->test = Input::get('test');
+        $store_info->status = Input::get('active');
+
+        if(Sentinel::check()) {
+            $store_info->test = Input::get('test');
+        }
+        else{
+            $store_info->test = "1";
+        }
 
         $date = new \DateTime($store_info->start, new \DateTimeZone($store_info->timezone));
         $date->setTimezone(new \DateTimeZone('UTC'));
@@ -352,10 +341,20 @@ class EventsController extends Controller {
         }
 //        $event['timezone'] =$event['timezone'];
         $event['duration'] = strtotime($event['finish']) - strtotime($event['start']);
-
-
+//minutes
+        if ($event['duration']< 3600 ) {
+            if (($event['duration'] % 3600) == 0) {
+                $event['duration_day'] = 0 . 'd';
+                $event['duration_hour'] = 0 . 'h';
+                $event['duration_min'] = ($event['duration'] / 3600) % 60 . 'm';
+            } else {
+                $event['duration_day'] = 0 . 'd';
+                $event['duration_hour'] = 0 . 'h';
+                $event['duration_min'] = ($event['duration'] / 60) % 60 . 'm';
+            }
+        }
         //hours
-        if ($event['duration']>= 3600 && $event['duration'] < 86400) {
+        elseif ($event['duration']>= 3600 && $event['duration'] < 86400) {
             if (($event['duration'] % 3600) == 0) {
                 $event['duration_day'] = 0 . 'd';
                 $event['duration_hour'] = ($event['duration'] / 3600) % 24 . 'h';
@@ -429,7 +428,12 @@ class EventsController extends Controller {
         $event['City'] = $store_info['City'];
         $event['State'] = $store_info['State'];
         $event['Country'] = $store_info['Country'];
-        $event['test'] = Input::get('test');
+        if(Sentinel::check()) {
+            $event['test'] = Input::get('test');
+        }else{$event['test'] = "1"; }
+
+        $event['status'] = Input::get('active');
+
 
         $date = new \DateTime($store_info['start'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
@@ -443,6 +447,7 @@ class EventsController extends Controller {
         $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
+
         $event->update();
 
         // Is the user logged in?
@@ -498,8 +503,20 @@ class EventsController extends Controller {
             $event_clone['timezone'] = $event_clone['timezone'];
         }
         $event_clone['duration'] = strtotime($event_clone['finish']) - strtotime($event_clone['start']);
+        //minutes
+        if ($event_clone['duration']< 3600 ) {
+            if (($event_clone['duration'] % 3600) == 0) {
+                $event_clone['duration_day'] = 0 . 'd';
+                $event_clone['duration_hour'] = 0 . 'h';
+                $event_clone['duration_min'] = ($event_clone['duration'] / 3600) % 60 . 'm';
+            } else {
+                $event_clone['duration_day'] = 0 . 'd';
+                $event_clone['duration_hour'] = 0 . 'h';
+                $event_clone['duration_min'] = ($event_clone['duration'] / 60) % 60 . 'm';
+            }
+        }
         //hours
-        if ($event_clone['duration']>= 3600 && $event_clone['duration'] < 86400) {
+        elseif ($event_clone['duration']>= 3600 && $event_clone['duration'] < 86400) {
             if (($event_clone['duration'] % 3600) == 0) {
                 $event_clone['duration_day'] = 0 . 'd';
                 $event_clone['duration_hour'] = ($event_clone['duration'] / 3600) % 24 . 'h';
@@ -573,21 +590,24 @@ class EventsController extends Controller {
             $event_clone['author_id'] = $userId;
             $event_clone['editor_id'] = $userId;
         }else {
-            $event_clone['account_id'] = $eventold['account_id'];
-            $event_clone['author_id'] = $eventold['author_id'];
-            $event_clone['editor_id'] = $eventold['editor_id'];
+            $event_clone['account_id'] = NULL;
+            $event_clone['author_id'] = NULL;
+            $event_clone['editor_id'] = NULL;
         }
         $event_clone['permanent_url'] = Uuid::uuid4();
         $event_clone['readable_url'] = Uuid::uuid4();
         $event_clone['description'] = $store_info['description'];
         $event_clone['location'] = $store_info['location'];
-//        $event['event_url'] = $store_info['event_url'];
         $event_clone['timezone'] = $store_info['timezone'];
         $event_clone['Street'] = $store_info['Street'];
         $event_clone['City'] = $store_info['City'];
         $event_clone['State'] = $store_info['State'];
         $event_clone['Country'] = $store_info['Country'];
-        $event_clone['test'] =  Input::get('test');
+        if(Sentinel::check()) {
+            $event_clone['test'] = Input::get('test');
+        }else{$event_clone['test'] = "1"; }
+
+        $event_clone['status'] = Input::get('active');
 
         $date = new \DateTime($store_info['start'], new \DateTimeZone($event_clone['timezone']));
         $date->setTimezone(new \DateTimeZone('UTC'));
@@ -601,6 +621,7 @@ class EventsController extends Controller {
         $event_clone['start'] = date($event_start_zero->format('Y-m-d H:i'));
         $event_clone['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
+
         $event_clone->save();
 
         // Is the user logged in?

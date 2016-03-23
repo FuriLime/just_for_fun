@@ -203,9 +203,9 @@ Add User
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="postal" class="col-sm-2 control-label">Postal/zip</label>
+                                        <label for="timezone" class="col-sm-2 control-label">@lang('users/title.timezone')</label>
                                         <div class="col-sm-10">
-                                            <input id="postal" name="postal" type="text" class="form-control" value="{!! Input::old('postal') !!}" />
+                                            <input id="timezone" name="timezone" type="text" class="form-control" value="{!! Input::old('timezone') !!}" />
                                         </div>
                                     </div>
 

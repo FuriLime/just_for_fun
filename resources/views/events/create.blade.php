@@ -178,7 +178,7 @@
                              <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
 
-                    {{--<input type="hidden" value="1" name="active" id="active" readonly>--}}
+
 
 
                     <div class="form-group locale">
@@ -225,6 +225,17 @@
                              {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}
                              @endif
                          </div>
+
+                            @if(isset($event_clone))
+                                <input style="display:none" size="16" id="lat" name="lat" type="lat", maxlength="255", value="{{$event_clone['lat']}}">
+                            @else
+                                {!! Form::text('lat', null, ['style' => 'display:none', 'maxlength' => '255', 'id' => 'lat']) !!}
+                            @endif
+                            @if(isset($event_clone))
+                                <input style="display:none", size="16" id="lng" name="lng" type="lng", readonly="readonly", maxlength="255", value="{{$event_clone['lng']}}">
+                            @else
+                                {!! Form::text('lng', null, ['style' => 'display:none', 'maxlength' => '255', 'id' => 'lng']) !!}
+                            @endif
                          <div class="form-group fields_loc">
                             <a id="reset_loc">Reset Address</a>
                          </div>
@@ -234,18 +245,20 @@
                             <i class="fa fa-fw fa-gears"></i>
                             <a data-toggle="tooltip" title="Option not available">Advansed Options</a>
                          </div>
-
+                        <input type="hidden" value="" name="active" id="active" readonly>
                          <div class="form-group" style="text-align: right; margin-right: 3%; margin-top: 9%;">
                         <div class="col-sm-offset-0 col-sm-12" id="btn_group">
-                            <button type="button" class="btn" onclick="(function($) { $('#active').val('0'); $('#btn_group .btn-primary').click(); })(jQuery);">
+                            @if(Sentinel::check())
+                            <button type="button" name="draft" class="btn draft submit">
                                 @lang('frontend.save_as_draft')
                             </button>
-                            <button class="btn btn-primary text-white test submit">
+                            @endif
+                            <button class="btn btn-primary text-white test publish submit" name="publish">
                                 @lang('frontend.save_and_publish')
                             </button>
 
                             <div class="checkbox add_event_section_link">
-                              <label><input type="checkbox" checked name="test" id="test" value="1">This is a test event</label>
+                              <label><input type="checkbox" checked name="test" id="test" @if(!Sentinel::check()) disabled="disabled" @endif value="1">This is a test event</label>
                             </div>
                         </div>
 
@@ -293,6 +306,12 @@
     <script>
         $(document).on("click", ".submit", function(e) {
             event.preventDefault();
+            if($(this).hasClass('publish')){
+                $('#active').val('Publish');
+            }
+            else{
+                $('#active').val('Draft');
+            }
             bootbox.confirm("Do you want to publish this event?", function(result) {
                 if (result == true) {
                    $('#create_event').submit();
@@ -406,19 +425,23 @@
         var end_date = new Date(start_date);
         end_date.setHours(start_date.getHours() + 1);
         end_date = end_date.format('Y/m/d H:i');
+
+        var minutes_end = new Date(start_date);;
+        minutes_end.setMinutes(start_date.getMinutes() + 10);
+        minutes_end = minutes_end.format('Y/m/d H:i');
         $('#finish').val(end_date);
+        console.log($('#finish').val());
         if($('#finish').val()=='NaN/NaN/NaN NaN:NaN'){
             $('#finish').val('');
         }
         $("#datefinish").datetimepicker("remove");
         $("#datefinish").datetimepicker({
-            onSelect: function() {alert('sdfsdfsdf')},
             format: 'yyyy/mm/dd hh:ii',
             autoclose: true,
             todayBtn: true,
             controlType: 'select',
-            startDate: $('#finish').val(),
-            minDate: $('#start').val(),
+            startDate: minutes_end,
+            minDate: minutes_end,
             minuteStep: 10
 
         });

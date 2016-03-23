@@ -32,6 +32,7 @@ Events List
 			</thead>
 			<tbody>
 			@foreach ($events as $event)
+                @if(($event->status!='Draft' && (!Sentinel::check())) || Sentinel::check())
 				<tr>
 					<td>{{ $event->title }}</td>
 					<td>
@@ -48,7 +49,7 @@ Events List
 					<td>{{ $event->startt }}</td>
 					<td>{{$event->finisht }}</td>
 					<td>
-						@if ($event->active === 1)
+						@if ($event->status == 'Publish')
 						+
 						@else
 						-
@@ -69,6 +70,7 @@ Events List
 						</a>
 					</td>
 				</tr>
+                @endif
 			@endforeach
 
 			</tbody>
