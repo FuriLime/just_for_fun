@@ -48,8 +48,8 @@
             <div class="content">
                 <form action=" {{ action('twitterController@oauthtwitter') }}" method="" role="form">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-                    <input type="hidden" name="oauth_token" value="{{ $oauth }}" />
-                    <input type="hidden" name="oauth_verifier" value="{{ $oauthv }}" />
+                    <input type="hidden" name="twitnick" value="{{ $twitnick }}" />
+                    {{--<input type="hidden" name="oauth_verifier" value="{{ $oauthv }}" />--}}
                     <div class="form-group">
                     <label for="subject">Enter your email </label>
                     <input type="email" name="email" id="email" class="form-control">
