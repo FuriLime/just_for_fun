@@ -375,13 +375,14 @@
             }
 
         });
-        $('.pac-container.pac-logo').keypress(function (e) {
+        $('body').on('keypress','.pac-container.pac-logo', function (e) {
+            console.log('lol');
             if (e.which == 13) {
                 $('#location').trigger('change');
                 $('.publish').focus();
                 $('.draft').focus();
             }
-        })
+        });
            
         @if (isset($event))
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
