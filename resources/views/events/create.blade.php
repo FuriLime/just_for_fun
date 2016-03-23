@@ -362,14 +362,14 @@
                     $('.select2-selection').focus();
                     $('.select2-selection').trigger('click');
                 }
+                
             }
 
         });
-        $('body').on('change', '#timezone', function () {
-          
-                $('#location').focus();
-            
-        });
+        $('body').on('click', '.select2-search__field', function()){
+            console.log('lol');
+        }
+       
         @if (isset($event))
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
         $('#select2-timezone-container').text('{{$event->timezone}}');
