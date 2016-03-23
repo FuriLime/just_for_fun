@@ -180,7 +180,7 @@ class EventsController extends Controller {
         if(isset($_POST['finish'])) {
             session()->put('finish', $_POST['finish']);
         }
-        $slugify = new Slugify();
+        $slugify = new \Slugify();
 
         $this->validate($request, [
             'title' => 'required|max:80',
