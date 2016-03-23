@@ -76,7 +76,7 @@ class twitterController extends Controller
             else{
                 try{
                     $member_email = md5($user->email);
-                    dd($mc->get("lists/$listId/members/$member_email"));
+                    dd($mc->get("lists/$listId/members/$member_email")->email_address);
                     $user_profile = new UserProfile();
                     $user_profile->user_id = $user['id'];
                     $user_profile->save();
