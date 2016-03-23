@@ -159,7 +159,7 @@ class AuthController extends JoshController
 
 
             //un-comment below code incase if user have to activate manually
-
+dd($account_user->account_type());
             // Data to be used on the email view
             $data = array(
                 'user'          => $user,
@@ -169,7 +169,7 @@ class AuthController extends JoshController
             $to_email = $user->email;
             $to_name = 'asdasd';
             $from_email = 'test@eventfellows.org';
-            $from_name = 'From Name Here';
+            $from_name = 'EventFellow';
 
             $template_content = array(
                 array(
@@ -180,15 +180,13 @@ class AuthController extends JoshController
 
             $global_merge_vars = [
                 ['name' => 'emailname',             'content' => $to_email],
-                ['name' => 'NNAME',                 'content' => 'User reigester without first nickname'],
-                ['name' => 'FNAME',                 'content' => 'User reigester without first name'],
-                ['name' => 'LNAME',                 'content' => 'User reigester without last name'],
+                ['name' => 'NNAME',                 'content' => 'User reigester without nickname'],
                 ['name' => 'LOGINCOUNT',            'content' => 'We not have this data yet'],
-                ['name' => 'PASSRESET',             'content' => $data['activationUrl']],
-                ['name' => 'RESETVALID',            'content' => 'We not have this data yet'],
+                ['name' => 'PASSRESET',             'content' => 'reset password'],
+                ['name' => 'RESETVALID',            'content' => 'reset valid'],
                 ['name' => 'DCREDITS',              'content' => '30'],
                 ['name' => 'ECREDITS',              'content' => 'We not have this data yet'],
-                ['name' => 'ACCTYPE',               'content' => 'We not have this data yet'],
+                ['name' => 'ACCTYPE',               'content' => ''],
                 ['name' => 'RENEWDATE',             'content' => 'We not have this data yet'],
                 ['name' => 'FREETEXT',              'content' => 'content-FREETEXT'],
                 ['name' => 'COLOR1',                'content' => '#ee12ab'], // merge value not in mandrill code yet
@@ -226,7 +224,7 @@ class AuthController extends JoshController
             ];
 
             // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
-            \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
+            \MandrillMail::messages()->sendTemplate('email-confirmation', $template_content, $message);
             // Redirect to the home page with success menu
             return Redirect::back()->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
         } catch (UserExistsException $e) {
