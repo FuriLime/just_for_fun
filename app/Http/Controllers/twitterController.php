@@ -49,6 +49,7 @@ class twitterController extends Controller
             $userTwit = Socialite::driver('twitter')->user();
             $user = User::wheretwit_nick($userTwit->getNickName())->first();
         }
+        else{ $user=NULL; }
         if(!$user){
             if(isset($_GET['email'])){
                 $user = new User;
@@ -66,8 +67,6 @@ class twitterController extends Controller
                     return view('welcome', ['twitnick'=> $userTwit->getNickName()]);
                 }
             }
-
-
             $user->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';
