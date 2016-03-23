@@ -940,6 +940,10 @@ footer .btn-primary.text-white {
     display: inline-block;
     width: 70%;
 }
+
+#add_event .form-control{
+    display: inline-block !important; 
+}
 #add_event .form_datetime .form-control {
 	width: 100%;
 } 
@@ -1135,6 +1139,7 @@ footer .btn-primary.text-white {
     margin-top: 15px;
     padding: 0;
     border: none;
+    width: 70%;
 }
 @media(max-width:600px){
     #add_event label {
