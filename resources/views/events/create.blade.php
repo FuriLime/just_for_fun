@@ -365,7 +365,7 @@
             }
 
         });
-        $('body').on('keypress', '#timezone', function (e) {
+        $('body').on('change', '#timezone', function (e) {
             if (e.which == 13) {
                 $('#location').focus();
             }
