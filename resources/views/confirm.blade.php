@@ -67,7 +67,7 @@
                             @lang('frontend.creating_ical')
                         </li>
                         <li>
-                            @lang('frontend.creating_eventpage')
+                            @lang('frontend.creating_eventpage') Event
                         </li>
                         <li>
                             @lang('frontend.adding_links')
