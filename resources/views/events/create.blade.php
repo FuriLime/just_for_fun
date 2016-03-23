@@ -350,7 +350,7 @@
                 $('.form-control').eq(index).attr("style", "display: block").focus();
                 if ($('.form-control').index(this)==0){
                     $('#add_dicription').trigger('click');
-                    $('.form-control textarea').focus();
+                    $('#description').focus();
                 }
             }
         });
