@@ -118,7 +118,7 @@ class AuthController extends JoshController
         $rules = array(
             'email'            => 'required|email|unique:users',
             'password'         => 'required|between:3,32',
-            'my_email'   => 'honeypot',
+            'my_name'   => 'honeypot',
             'my_time'   => 'required|honeytime:1'
         );
 
