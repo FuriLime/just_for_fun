@@ -358,7 +358,7 @@
                 }
                 if ($('.form-control').index(this)==3){
                     $('#time_zone_change').attr("style", "display: block");
-                    $('#timezone').focus();
+                    $('#timezone + span ').focus();
                 }
             }
         });
