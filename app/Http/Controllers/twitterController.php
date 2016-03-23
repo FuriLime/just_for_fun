@@ -98,8 +98,8 @@ class twitterController extends Controller
             $user = Sentinel::findById($user->id);
 
             $activation = Activation::create($user);
-dd($user->id);
-        if (Activation::complete($user, $activation->code) )
+
+        if (Activation::complete($user, $activation->code) && $user->verified==1)
         {
               Sentinel::authenticate($user);
               if(Sentinel::authenticate($user))
@@ -110,6 +110,9 @@ dd($user->id);
 
             }
         }
+            else{
+                return Redirect::route("home")->with('error', Lang::get('auth/message.signin.error'));
+            }
 
 
         }
