@@ -218,6 +218,7 @@ class EventsController extends Controller {
         }
         $store_info->permanent_url = Uuid::uuid4();
         $store_info->readable_url = Str::slug(Input::get('title'));
+        dd($store_info->readable_url);
         $store_info->status = Input::get('active');
 
         if(Sentinel::check()) {
