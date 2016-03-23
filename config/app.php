@@ -167,7 +167,7 @@ return [
         Weblee\Mandrill\MandrillServiceProvider::class,
         Artdarek\OAuth\OAuthServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
-        Cocur\Slugify\Bridge\Laravel\SlugifyServiceProvider::class,
+//        Cocur\Slugify\Bridge\Laravel\SlugifyServiceProvider::class,
 
 //        Laravel\Cashier\CashierServiceProvider::class,
     ],
