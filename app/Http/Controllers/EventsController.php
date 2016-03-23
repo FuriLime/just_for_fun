@@ -20,7 +20,7 @@ use App\UserProfile;
 use App\Role;
 use GeoIP;
 use DB;
-use Cocur\Slugify\SlugifyInterface;
+use Slugify;
 
 class EventsController extends Controller {
 
