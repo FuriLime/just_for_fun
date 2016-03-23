@@ -66,7 +66,6 @@ class twitterController extends Controller
             }
 
 //            dd($_GET['email']);
-            dd($user);
             $user->save();
             $account_user = new Account();
             $account_user->	account_type_id = '1';
