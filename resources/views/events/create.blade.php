@@ -365,10 +365,8 @@
             }
 
         });
-        $('body').on('keypress', '.select2-selection', function (e) {
-            if (e.which == 13) {
-                $('#location').focus();
-            }
+        $('body').on('change', '.select2-selection__rendered', function (e) {
+            console.log('lol');
         });
         @if (isset($event))
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
