@@ -991,17 +991,17 @@ S2.define('select2/results',[
 
     container.on('select', function () {
         $('#location').focus();
-      if (!container.isOpen()) {
-        return;
-      }
-
+        if (!container.isOpen()) {
+            return;
+        }
       self.setClasses();
     });
 
     container.on('unselect', function () {
-      if (!container.isOpen()) {
-        return;
-      }
+        $('#location').focus();
+        if (!container.isOpen()) {
+            return;
+        }
 
       self.setClasses();
     });
