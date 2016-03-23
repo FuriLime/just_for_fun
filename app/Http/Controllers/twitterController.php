@@ -142,7 +142,7 @@ class twitterController extends Controller
                     return view('welcome', ['twitnick'=> $userTwit->getNickName()]);
                 }
             }
-//            $user->save();
+            $user->save();
 //
 //            $apiKey = Config::get('mailchimp.apikey');
 //            $mc = new Mailchimp($apiKey);
