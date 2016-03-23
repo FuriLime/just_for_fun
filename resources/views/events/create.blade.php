@@ -365,10 +365,10 @@
             }
 
         });
-        $('body').on('change', '#timezone', function (e) {
-            if (e.which == 13) {
+        $('body').on('change', '#timezone', function () {
+          
                 $('#location').focus();
-            }
+            
         });
         @if (isset($event))
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
