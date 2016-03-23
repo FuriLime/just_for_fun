@@ -1144,7 +1144,10 @@ footer .btn-primary.text-white {
 .bootstrap-maxlength.label-success.label{
     background-color: #c0504d;
     color: white;
-    
+
+}
+.add_event_section_link{
+    float: left;
 }
 @media(max-width:600px){
     #add_event label {
