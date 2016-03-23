@@ -46,6 +46,9 @@ class twitterController extends Controller
         if(!isset($_GET['email'])){
             $userTwit = Socialite::driver('twitter')->user();
             $user = User::wheretwit_nick($userTwit->getNickName())->first();
+            if($user->verified==0){
+                    dd('sdfdsfdsf');
+            }
         }
         else{
             $user=NULL;
@@ -64,7 +67,6 @@ class twitterController extends Controller
                     return view('welcome', ['twitnick'=> $userTwit->getNickName()]);
                 }
             }
-            dd($user);
 //            $user->save();
 //
 //            $apiKey = Config::get('mailchimp.apikey');
