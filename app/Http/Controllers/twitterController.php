@@ -44,8 +44,7 @@ class twitterController extends Controller
         if(!isset($_GET['email'])){
             $userTwit = Socialite::driver('twitter')->user();
             $user = User::wheretwit_nick($userTwit->getNickName())->first();
-            if (Activation::completed($user)
-            )
+            if (Activation::completed($user))
             {
                 Sentinel::authenticate($user);
                 if(Sentinel::authenticate($user))
