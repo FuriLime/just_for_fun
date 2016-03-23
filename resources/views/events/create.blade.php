@@ -356,6 +356,10 @@
                     $('#end_time_event').attr("style", "display: block");
                     $('#finish').focus();
                 }
+                if ($('.form-control').index(this)==3){
+                    $('#time_zone_change').attr("style", "display: block");
+                    $('#timezone').focus();
+                }
             }
         });
         @if (isset($event))
