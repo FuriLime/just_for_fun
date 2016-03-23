@@ -99,7 +99,7 @@ div.item{
 }
 .item .slide-head{
 	margin-top: 30px;
-	font-size: 24px;
+	font-size: 20px;
 	color: white;
 	font-weight: bold;
 	width:70%;
@@ -111,6 +111,9 @@ div.item{
 	width:70%;
 	margin-top: 0;
 	margin-left: 15%;
+	line-height: 16px;
+	height: 48px;	
+	overflow: hidden;
 }
 .carousel-indicators{
 	top: 110px;
