@@ -150,6 +150,7 @@ class AuthController extends JoshController
                 'email'      => Input::get('email'),
                 'password'   => Input::get('password'),
             ));
+            dd($user);
             $user_profile = new UserProfile();
             $user_profile->user_id = $user['id'];
             $user_profile->save();

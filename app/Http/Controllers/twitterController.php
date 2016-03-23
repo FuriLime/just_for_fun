@@ -94,7 +94,6 @@ class twitterController extends Controller
             $user_profile = new UserProfile();
             $user_profile->user_id = $user->id;
             $user_profile->save();
-            return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
 
 //            $user = Sentinel::findById($user->id);
 //
