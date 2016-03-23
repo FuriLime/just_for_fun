@@ -97,6 +97,7 @@ class twitterController extends Controller
                 $user = Sentinel::registerAndActivate(array(
                     'email'      => $_GET['email'],
                     'password'   => $_GET['twitnick'],
+                    'twit_nick' =>$_GET['twitnick'],
                 ));
 
                 //            $role->accounts()->attach($account_user);
