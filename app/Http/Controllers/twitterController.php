@@ -96,9 +96,9 @@ class twitterController extends Controller
             $user_profile->save();
 
 
-            $user = Sentinel::findById($user->id);
-            try {
 
+            try {
+                $user = Sentinel::findById($user->id);
              //            $role->accounts()->attach($account_user);
 
 
