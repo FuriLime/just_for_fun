@@ -362,9 +362,10 @@
                     $('.select2-selection').focus();
                 }
             }
+
+        });
         $('.select2-selection.select2-selection--single').keypress(function (e) {
             $('#location').focus();
-        } 
         });
         @if (isset($event))
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
