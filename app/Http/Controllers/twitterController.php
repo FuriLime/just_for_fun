@@ -86,10 +86,10 @@ class twitterController extends Controller
             $rolew = [
                 0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
             ];
-            $mc->post("lists/$listId/members", [
-                'email_address' => $user->email,
-                'status'        => 'subscribed',
-            ]);
+//            $mc->post("lists/$listId/members", [
+//                'email_address' => $user->email,
+//                'status'        => 'subscribed',
+//            ]);
             $role->users()->attach($rolew);
             $user_profile = new UserProfile();
             $user_profile->user_id = $user->id;
