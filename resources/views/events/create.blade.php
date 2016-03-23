@@ -367,6 +367,7 @@
                         $('.select2-selection').trigger('click');
                         break;
                     case 5:
+                        $("#location").trigger('change');
                         $('.publish').focus();
                         $('.draft').focus();
                         break;
@@ -525,12 +526,13 @@
             $('#city').val('');
             $('#country').val('');
 
-        })
+        });
+
 
 	// Get timezone of the place
 	// 3 steps: get entered place, find it`s location (coordinates), find its timezone
     $('#location').change(function () {
-        console.log('lol');
+
         $('.locale').attr('style', 'display:none');
         $('.fields_map').attr('style', 'display:block');
         setTimeout(function get_timezone() {
