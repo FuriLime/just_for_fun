@@ -366,7 +366,7 @@
             }
 
         });
-        $('body').on('click', '.select2-dropdown', function(){
+        $(document).on('click', '.select2-dropdown', function(){
           console.log('lol');
         });
            
