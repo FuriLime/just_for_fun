@@ -151,15 +151,15 @@ class twitterController extends Controller
                 //un-comment below code incase if user have to activate manually
                 // Data to be used on the email view
 
-
-
-            $apiKey = Config::get('mailchimp.apikey');
-            $mc = new Mailchimp($apiKey);
-            $listId = Config::get('mailchimp.listId');
-            $mc->post("lists/$listId/members", [
-                'email_address' => $user->email,
-                'status'        => 'subscribed',
-            ]);
+//
+//
+//            $apiKey = Config::get('mailchimp.apikey');
+//            $mc = new Mailchimp($apiKey);
+//            $listId = Config::get('mailchimp.listId');
+//            $mc->post("lists/$listId/members", [
+//                'email_address' => $user->email,
+//                'status'        => 'subscribed',
+//            ]);
 //            $user = Sentinel::findById($user->id);
 //
 //            $activation = Activation::create($user);
