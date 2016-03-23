@@ -366,7 +366,7 @@
             }
 
         });
-        $(document).on('click', '.select2-dropdown', function(){
+        $(document).on('change', '.select2-timezone-container', function(){
           console.log('lol');
         });
            
