@@ -125,7 +125,7 @@ class twitterController extends Controller
             }
         }
         // Show the page
-        return Redirect::route("home")->with('error', Lang::get('auth/message.signin.error'));
+//        return Redirect::route("home")->with('error', Lang::get('auth/message.signin.error'));
         // }
         // Auth::login($user);
     }
