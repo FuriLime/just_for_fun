@@ -41,6 +41,10 @@ class twitterController extends Controller
 
     public function oauthtwitter()
     {
+        $apiKey = Config::get('mailchimp.apikey');
+        $mc = new Mailchimp($apiKey);
+        $listId = Config::get('mailchimp.listId');
+
         if(!isset($_GET['email'])){
             $userTwit = Socialite::driver('twitter')->user();
             $user = User::wheretwit_nick($userTwit->getNickName())->first();
@@ -62,10 +66,6 @@ class twitterController extends Controller
                 }
             }
             $user->save();
-
-            $apiKey = Config::get('mailchimp.apikey');
-            $mc = new Mailchimp($apiKey);
-            $listId = Config::get('mailchimp.listId');
             $account_user = new Account();
             $account_user->	account_type_id = '1';
             $account_user->name = $user->uuid;
@@ -80,10 +80,10 @@ class twitterController extends Controller
             $rolew = [
                 0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
             ];
-//            $mc->post("lists/$listId/members", [
-//                'email_address' => $user->email,
-//                'status'        => 'subscribed',
-//            ]);
+            $mc->post("lists/$listId/members", [
+                'email_address' => $user->email,
+                'status'        => 'subscribed',
+            ]);
             $role->users()->attach($rolew);
             $user_profile = new UserProfile();
             $user_profile->user_id = $user->id;
@@ -95,12 +95,7 @@ class twitterController extends Controller
 
         if (Activation::complete($user, $activation->code) && $user->verified==1)
         {
-//              Sentinel::authenticate($user);
-//              if(Sentinel::authenticate($user))
-//            {
                 return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-
-            //}
         }
             else{
                 try{
@@ -178,8 +173,6 @@ class twitterController extends Controller
                     $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
                 }
             }
-
-
         }
         if (Activation::completed($user) && $user->verified==1)
         {

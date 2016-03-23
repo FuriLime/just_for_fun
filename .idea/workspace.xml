@@ -51,21 +51,11 @@
       <file leaf-file-name="twitterController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/twitterController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.840188" vertical-offset="2583" max-vertical-offset="3434">
-              <caret line="194" column="0" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+            <state vertical-scroll-proportion="3.1962397" vertical-offset="255" max-vertical-offset="3315">
+              <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/lang/en/auth/message.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="731">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="26" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -78,6 +68,16 @@
               <folding>
                 <element signature="e#1204#2771#0#PHP" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="message.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/lang/en/auth/message.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="731">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -379,12 +379,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-03780" summary="database">
-      <created>1458738620002</created>
-      <option name="number" value="03780" />
-      <option name="project" value="LOCAL" />
-      <updated>1458738620002</updated>
-    </task>
     <task id="LOCAL-03781" summary="database">
       <created>1458738759868</created>
       <option name="number" value="03781" />
@@ -673,7 +667,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458760209651</updated>
     </task>
-    <option name="localTasksCounter" value="3829" />
+    <task id="LOCAL-03829" summary="database">
+      <created>1458760708455</created>
+      <option name="number" value="03829" />
+      <option name="project" value="LOCAL" />
+      <updated>1458760708455</updated>
+    </task>
+    <option name="localTasksCounter" value="3830" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1086,6 +1086,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/auth/message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="731">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FacebookController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-24.076923" vertical-offset="122" max-vertical-offset="986">
@@ -1096,18 +1104,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/auth/message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="731">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/twitterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.840188" vertical-offset="2583" max-vertical-offset="3434">
-          <caret line="194" column="0" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+        <state vertical-scroll-proportion="3.1962397" vertical-offset="255" max-vertical-offset="3315">
+          <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
