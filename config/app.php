@@ -170,7 +170,6 @@ return [
 //        Cocur\Slugify\Bridge\Laravel\SlugifyServiceProvider::class,
 
 //        Laravel\Cashier\CashierServiceProvider::class,
-        "Cocur\Slugify\Bridge\Laravel\SlugifyServiceProvider",
     ],
 
     /*
@@ -242,7 +241,6 @@ return [
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
         'SEOMeta'   => Artesaos\SEOTools\Facades\SEOMeta::class,
 //        "Slugify" => Cocur\Slugify\Bridge\Laravel\SlugifyFacade::class,
-        "Slugify" => "Cocur\Slugify\Bridge\Laravel\SlugifyFacade",
     ],
 
 ];
