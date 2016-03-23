@@ -141,7 +141,7 @@ class AuthController extends JoshController
         // If validation fails, we'll exit the operation now.
         if ($validator->fails()) {
             // Ooops.. something went wrong
-            return Redirect::to(URL::previous() . '#toregister')->withInput()->withErrors($validator);
+            return Redirect::to(URL::previous())->withInput()->withErrors($validator);
         }
 
         try {
