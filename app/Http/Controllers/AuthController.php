@@ -132,7 +132,7 @@ class AuthController extends JoshController
             'email'            => 'required|email|unique:users',
             'password'         => 'required|between:3,32',
             'my_name'   => 'honeypot',
-            'my_time'   => 'required|honeytime:10'
+            'my_time'   => 'required|honeytime:5'
         );
 
         // Create a new validator instance from our validation rules
