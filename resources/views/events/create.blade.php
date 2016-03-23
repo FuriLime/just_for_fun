@@ -366,9 +366,7 @@
             }
 
         });
-        $('body').on('click', '.select2-search__field', function()){
-            console.log('lol');
-        }
+        
        
         @if (isset($event))
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
