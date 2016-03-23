@@ -101,12 +101,12 @@ class twitterController extends Controller
 
         if (Activation::complete($user, $activation->code) && $user->verified==1)
         {
-              Sentinel::authenticate($user);
-              if(Sentinel::authenticate($user))
-            {
+//              Sentinel::authenticate($user);
+//              if(Sentinel::authenticate($user))
+//            {
                 return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
 
-            }
+            //}
         }
             else{
                 try{
