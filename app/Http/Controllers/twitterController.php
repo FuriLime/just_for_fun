@@ -125,6 +125,7 @@ class twitterController extends Controller
 //                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
 //
 //            }
+            $user->save();
         $activation = Activation::create($user);
             if (Activation::complete($user, $activation->code)) {
                 try {
