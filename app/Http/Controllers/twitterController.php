@@ -105,7 +105,6 @@ class twitterController extends Controller
               if(Sentinel::authenticate($user))
             {
 
-                dd('hhgg');
                 $user = Sentinel::check();
 
                 return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
