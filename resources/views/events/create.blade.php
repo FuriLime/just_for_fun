@@ -365,6 +365,7 @@
 
         });
         $('.select2-search__field').keypress(function (e) {
+            console.log('lol');
             if (e.which == 13) {
                 $('#location').focus();
             }
