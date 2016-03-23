@@ -41,13 +41,16 @@ class twitterController extends Controller
 
     public function oauthtwitter()
     {
+        if(!isset($_GET['email'])){
+            return view('welcome', ['oauth'=>$_GET['oauth_token'], 'oauthv'=>$_GET['oauth_verifier']]);
+        }
         $apiKey = Config::get('mailchimp.apikey');
         $mc = new Mailchimp($apiKey);
         $listId = Config::get('mailchimp.listId');
 
         $userTwit = Socialite::driver('twitter')->user();
 
-        dd($userTwit);
+        dd();
 
         $user = User::wheretwit_nick($userTwit->getNickName())->first();
 
@@ -59,12 +62,9 @@ class twitterController extends Controller
 
             if(empty( $user->email))
             {
-                if(isset($_GET['email'])){
+
                     $user->email = $_GET['email'];
-                    dd($user->email);
-                }else {
-                    return view('welcome', ['oauth'=>$_GET['oauth_token'], 'oauthv'=>$_GET['oauth_verifier']]);
-                }
+
             }
 
 //            dd($_GET['email']);
