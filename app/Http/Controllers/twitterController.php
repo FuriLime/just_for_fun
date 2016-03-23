@@ -87,15 +87,12 @@ class twitterController extends Controller
                     $account_profile = new AccountProfile();
                     $account_profile->account_id = $account_user->id;
                     $account_profile->save();
-                    //add user to 'User' group
                     $role = Role::find(2);
                     $rolew = [
                         0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
                     ];
 
                     $role->users()->attach($rolew);
-
-//                    $member = $mc->get("lists/$listId/members/$member_email");
                     $member_email = md5($user->email);
                     if(!$mc->get("lists/$listId/members/$member_email")){
                         $mc->post("lists/$listId/members", [
