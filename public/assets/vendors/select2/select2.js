@@ -990,7 +990,7 @@ S2.define('select2/results',[
     });
 
     container.on('select', function () {
-        console.log('lol');
+        $('location').focus();
       if (!container.isOpen()) {
         return;
       }

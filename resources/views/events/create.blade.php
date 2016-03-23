@@ -366,9 +366,7 @@
             }
 
         });
-        $(document).on('change', '.select2-timezone-container', function(){
-          console.log('lol');
-        });
+        
            
        
         @if (isset($event))
