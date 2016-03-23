@@ -52,34 +52,34 @@
                     </div>
                     <ul class="col-xs-4 col-xs-offset-4 popup-events-list">
                         <li>
-                            @lang('frontend.confirm_staff')
+                            @lang('frontend.confirm_staff[0]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff')
+                            @lang('frontend.confirm_staff[1]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff')
+                            @lang('frontend.confirm_staff[2]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff')
+                            @lang('frontend.confirm_staff[3]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff')
+                            @lang('frontend.confirm_staff[4]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff')
+                            @lang('frontend.confirm_staff[5]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff')
+                            @lang('frontend.confirm_staff[6]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff')
+                            @lang('frontend.confirm_staff[7]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff')
+                            @lang('frontend.confirm_staff[8]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff')
+                            @lang('frontend.confirm_staff[9]')
                         </li>
                     </ul>
                     <a href="#" class="col-xs-4 col-xs-offset-4 succ-btn">
