@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/twitterController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/twitterController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -31,8 +32,8 @@
       <file leaf-file-name="twitterController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/twitterController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63350785" vertical-offset="222" max-vertical-offset="1710">
-              <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.68586385" vertical-offset="222" max-vertical-offset="1710">
+              <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -51,8 +52,8 @@
       <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.625" vertical-offset="417" max-vertical-offset="990">
-              <caret line="48" column="72" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="72" />
+            <state vertical-scroll-proportion="-13.875" vertical-offset="417" max-vertical-offset="1005">
+              <caret line="50" column="70" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -114,9 +115,9 @@
         <option value="$PROJECT_DIR$/resources/views/register.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
-        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/twitterController.php" />
+        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
       </list>
     </option>
   </component>
@@ -443,12 +444,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-03699" summary="database">
-      <created>1458719602146</created>
-      <option name="number" value="03699" />
-      <option name="project" value="LOCAL" />
-      <updated>1458719602146</updated>
-    </task>
     <task id="LOCAL-03700" summary="database">
       <created>1458719638734</created>
       <option name="number" value="03700" />
@@ -737,7 +732,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458730348032</updated>
     </task>
-    <option name="localTasksCounter" value="3748" />
+    <task id="LOCAL-03748" summary="database">
+      <created>1458730398535</created>
+      <option name="number" value="03748" />
+      <option name="project" value="LOCAL" />
+      <updated>1458730398535</updated>
+    </task>
+    <option name="localTasksCounter" value="3749" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1151,14 +1152,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.625" vertical-offset="417" max-vertical-offset="990">
-          <caret line="48" column="72" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.625" vertical-offset="2745" max-vertical-offset="3525">
@@ -1167,10 +1160,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.875" vertical-offset="417" max-vertical-offset="1005">
+          <caret line="50" column="70" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/twitterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63350785" vertical-offset="222" max-vertical-offset="1710">
-          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.68586385" vertical-offset="222" max-vertical-offset="1710">
+          <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
           <folding />
         </state>
       </provider>

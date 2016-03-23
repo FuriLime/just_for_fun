@@ -60,7 +60,7 @@ class twitterController extends Controller
                     $user->email = $_GET['email'];
                     dd($user->email);
                 }else {
-                    return redirect('/welcome');
+                    return view('welcome', ['oauth'=>$_GET['OAuth']]);
                 }
             }
 
