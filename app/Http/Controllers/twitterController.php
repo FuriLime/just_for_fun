@@ -110,7 +110,6 @@ class twitterController extends Controller
         }
             else{
                 try{
-
                     $data = array(
                         'user'          => $user,
                         'activationUrl' => URL::route('activate', array('user_id' => $user->id, 'activation_code' => User::find($user->id)->activate->code)),
@@ -180,7 +179,7 @@ class twitterController extends Controller
                     // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
                     \MandrillMail::messages()->sendTemplate('email-confirmation', $template_content, $message);
                     // Redirect to the home page with success menu
-                    return Redirect::back()->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
+                    return Redirect::route("home")->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
                 } catch (UserExistsException $e) {
                     $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
                 }
