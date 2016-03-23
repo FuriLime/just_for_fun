@@ -97,7 +97,12 @@ class twitterController extends Controller
 
             $user = Sentinel::findById($user->id);
 
-            $activation = Activation::create($user);
+            $activation = new Activation();
+
+            if(!Activation::complete($user, $activation->code)){
+                dd('fdgdfgfg');
+            }
+
 
         if (Activation::complete($user, $activation->code))
         {
