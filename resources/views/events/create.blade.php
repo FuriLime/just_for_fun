@@ -365,7 +365,7 @@
                         $('.select2-selection').trigger('click');
                         break;
                     case 5:
-                       $('.publish').focus();
+                        $('.publish').focus();
                         $('.draft').focus();
                         break;
                 }
