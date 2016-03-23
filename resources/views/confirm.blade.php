@@ -64,7 +64,7 @@
                             @lang('frontend.confirm_staff[0]')
                         </li>
                         <li>
-                            @lang('frontend.confirm_staff'(0))
+                            @lang('frontend.confirm_staff('0')
                         </li>
                         <li>
                             @lang('frontend.confirm_staff[0]')
