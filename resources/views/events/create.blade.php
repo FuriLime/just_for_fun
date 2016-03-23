@@ -352,9 +352,9 @@
                     $('#add_dicription').trigger('click');
                     $('#description').focus();
                 }
-                
-                    console.log($('#start').index());
-               
+                if ($('.form-control').index(this)==2){
+                    console.log('2');
+                }
             }
         });
         @if (isset($event))
