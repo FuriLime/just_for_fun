@@ -129,21 +129,9 @@
                         <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
 
-
-                         <div class="form-group add_event_section_link" id="change_time_zone">
-                             @if (isset($event))
-                            <span>Timezone is {{$event['timezone']}}. Duration is {{$event['duration_day']}} {{$event['duration_hour']}} {{$event['duration_min']}}. <a id="time_change">Change here.</a></span>
-                             @elseif(isset($event_clone))
-                              <span>Timezone is {{$event_clone['timezone']}}. Duration is {{$event_clone['duration_day']}} {{$event_clone['duration_hour']}} {{$event_clone['duration_min']}}. <a id="time_change">Change here.</a></span>
-                             @else
-                            <span>Timezone is {{$user_timezone}}. Default duration is {{$duration_day}} {{$duration_hour}} {{$duration_min}}. <a id="time_change">Change here.</a></span>
-                             @endif
-
-{{--                            <span>Timezone is {{@isset($event)? $event['timezone'] : $user_timezone}}. Default duration is {{$event['duration_time']}} h. <a id="time_change">Change here.</a></span>--}}
-                         </div>
-        		<div class="form-group" id="end_time_event" style="display:none" >
+                    <div class="form-group" id="end_time_event" style="display:none" >
                         <label for="start">@lang('frontend.enddate')</label>
-						 <div class="form-group form_datetime">
+                         <div class="form-group form_datetime">
                                         <div class="input-group date form_datetime3 col-md-12" id="datefinish">
                                              <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-remove"></span>
@@ -166,6 +154,18 @@
                         <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
 
+                         <div class="form-group add_event_section_link" id="change_time_zone">
+                             @if (isset($event))
+                            <span>Timezone is {{$event['timezone']}}. Duration is {{$event['duration_day']}} {{$event['duration_hour']}} {{$event['duration_min']}}. <a id="time_change">Change here.</a></span>
+                             @elseif(isset($event_clone))
+                              <span>Timezone is {{$event_clone['timezone']}}. Duration is {{$event_clone['duration_day']}} {{$event_clone['duration_hour']}} {{$event_clone['duration_min']}}. <a id="time_change">Change here.</a></span>
+                             @else
+                            <span>Timezone is {{$user_timezone}}. Default duration is {{$duration_day}} {{$duration_hour}} {{$duration_min}}. <a id="time_change">Change here.</a></span>
+                             @endif
+
+{{--                            <span>Timezone is {{@isset($event)? $event['timezone'] : $user_timezone}}. Default duration is {{$event['duration_time']}} h. <a id="time_change">Change here.</a></span>--}}
+                         </div>
+        		
 
                     <div class="form-group"  id="time_zone_change" style="display:none">
                              <label for="timezone">@lang('frontend.timezone')</label>
