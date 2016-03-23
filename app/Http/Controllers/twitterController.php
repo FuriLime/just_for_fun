@@ -75,10 +75,7 @@ class twitterController extends Controller
         }
             else{
                 try{
-                    $member_email = md5($user->email);
-                    if($mc->get("lists/$listId/members/$member_email")){
-                        dd('sdfsdf');
-                    }
+
                     $user_profile = new UserProfile();
                     $user_profile->user_id = $user['id'];
                     $user_profile->save();
@@ -99,15 +96,13 @@ class twitterController extends Controller
                     $role->users()->attach($rolew);
 
 //                    $member = $mc->get("lists/$listId/members/$member_email");
-
-//                    if($mc->get("lists/$listId/members/$member_email")) {
-//                        dd($member);
-//                    }
-
-//                $mc->post("lists/$listId/members", [
-//                    'email_address' => $user->email,
-//                    'status'        => 'subscribed',
-//                ]);
+                    $member_email = md5($user->email);
+                    if(!$mc->get("lists/$listId/members/$member_email")){
+                        $mc->post("lists/$listId/members", [
+                            'email_address' => $user->email,
+                            'status'        => 'subscribed',
+                        ]);
+                    }
 
                     $data = array(
                         'user'          => $user,
