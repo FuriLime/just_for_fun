@@ -41,7 +41,7 @@ class twitterController extends Controller
 
     public function oauthtwitter()
     {
-        dd($_POST);
+        dd($_GET);
         $apiKey = Config::get('mailchimp.apikey');
         $mc = new Mailchimp($apiKey);
         $listId = Config::get('mailchimp.listId');
