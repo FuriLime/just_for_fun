@@ -17,7 +17,7 @@ class CreateEventsTable extends Migration
             $table->uuid('uuid')->unique()->index();           // $table->string('uuid');  // this was the wrong way round, field type must be uuid, too
 
             //account the event belongs to
-            $table->integer('account_id')->unsigned()->index();
+            $table->integer('account_id')->unsigned()->nullable();
             $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
 
             // user who has initially created the event
