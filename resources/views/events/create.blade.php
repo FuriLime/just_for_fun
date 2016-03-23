@@ -365,7 +365,7 @@
             }
 
         });
-        $('body').on('change', '.select2-selection__rendered', function (e) {
+        $('body').on('change', '.select2-selection', function (e) {
             console.log('lol');
         });
         @if (isset($event))
