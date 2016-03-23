@@ -49,8 +49,6 @@ class twitterController extends Controller
             $userTwit = Socialite::driver('twitter')->user();
             $user = User::wheretwit_nick($userTwit->getNickName())->first();
         }
-        $userTwit = Socialite::driver('twitter')->user();
-        $user = User::wheretwit_nick($userTwit->getNickName())->first();
         if(!$user){
             if(isset($_GET['email'])){
                 $user = new User;
