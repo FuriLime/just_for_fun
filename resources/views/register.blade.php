@@ -37,7 +37,7 @@
                 <i class="livicon" data-name="mail" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
                 E-mail
             </label>
-            <input id="email" name="email" required type="email" placeholder="mysupermail@mail.com" value="{!! Input::old('email') !!}" />
+            <input id="email" name="email" autocomplete="off" required type="email" placeholder="mysupermail@mail.com" value="{!! Input::old('email') !!}" />
             <div class="col-sm-12">
                 {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
             </div>
@@ -48,7 +48,7 @@
                 <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
                 Password
             </label>
-            <input id="password" name="password" required type="password" placeholder="eg. X8df!90EO" />
+            <input id="password" name="password" autocomplete="off" required type="password" placeholder="eg. X8df!90EO" />
             <div class="col-sm-12">
                 {!! $errors->first('email_confirm', '<span class="help-block">:message</span>') !!}
             </div>
