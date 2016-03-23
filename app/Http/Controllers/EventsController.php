@@ -20,6 +20,7 @@ use App\UserProfile;
 use App\Role;
 use GeoIP;
 use DB;
+use Cocur\Slugify\Slugify;
 
 class EventsController extends Controller {
 
@@ -179,6 +180,7 @@ class EventsController extends Controller {
         if(isset($_POST['finish'])) {
             session()->put('finish', $_POST['finish']);
         }
+        $slugify = new Slugify();
         $this->validate($request, [
             'title' => 'required|max:80',
             'description' => 'max:500',
@@ -215,7 +217,7 @@ class EventsController extends Controller {
             $store_info->account_id = NULL;
         }
         $store_info->permanent_url = Uuid::uuid4();
-        $store_info->readable_url = Uuid::uuid4();
+        $store_info->readable_url = $slugify->slugify(Input::get('title'));
         $store_info->status = Input::get('active');
 
         if(Sentinel::check()) {
