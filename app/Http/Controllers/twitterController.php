@@ -94,8 +94,11 @@ class twitterController extends Controller
 
                     $role->users()->attach($rolew);
                     $member_email = md5($user->email);
-                    $member = $mc->get("lists/$listId/members/$member_email");
-                    dd($member);
+//                    $member = $mc->get("lists/$listId/members/$member_email");
+                    dd($mc->get("lists/$listId/members/$member_email")->email);
+//                    if($mc->get("lists/$listId/members/$member_email")) {
+//                        dd($member);
+//                    }
 
 //                $mc->post("lists/$listId/members", [
 //                    'email_address' => $user->email,
