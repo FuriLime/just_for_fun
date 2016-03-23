@@ -363,6 +363,7 @@
                         $('#time_change').trigger('click');
                         $('.select2-selection').focus();
                         $('.select2-selection').trigger('click');
+                        break;
                     case 5:
                        $('.publish').focus();
                         $('.draft').focus();
