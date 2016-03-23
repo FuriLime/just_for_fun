@@ -101,7 +101,7 @@ class twitterController extends Controller
 
         if (Activation::complete($user, $activation->code))
         {
-            Sentinel::authenticate($user);
+//            Sentinel::authenticate($user);
               if(Sentinel::authenticate($user))
             {
                 $user = Sentinel::check();
