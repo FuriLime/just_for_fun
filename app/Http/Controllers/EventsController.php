@@ -216,7 +216,7 @@ class EventsController extends Controller {
             $store_info->account_id = NULL;
         }
         $store_info->permanent_url = Uuid::uuid4();
-        $store_info->readable_url = Uuid::uuid4();
+//        $store_info->readable_url = Uuid::uuid4();
         $store_info->status = Input::get('active');
 
         if(Sentinel::check()) {
@@ -241,6 +241,7 @@ class EventsController extends Controller {
         if (Sentinel::check()) {
 //          dd($store_info);
 //        event::create($store_info);
+            dd($store_info);
             $store_info->save();
             Session::forget('timezone');
             Session::forget('start');
