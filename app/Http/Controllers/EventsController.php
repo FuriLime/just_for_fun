@@ -276,9 +276,15 @@ class EventsController extends Controller {
         $event = Event::whereReadable_url($readable_url)->first();
         SEOMeta::setTitle($event->title);
         SEOMeta::setDescription($event->decsription);
-        SEOMeta::addMeta('article:created', $event->created_at->toW3CString(), 'property');
+        SEOMeta::addMeta('article:start', $event->start->toW3CString(), 'property');
+        SEOMeta::addMeta('article:finish', $event->finish->toW3CString(), 'property');
         SEOMeta::addMeta('article:stutus', $event->status, 'property');
+        SEOMeta::addMeta('article:location', $event->location, 'property');
+        SEOMeta::addMeta('article:timezone', $event->timezone, 'property');
+        SEOMeta::addMeta('article:slug', $event->readable_url, 'property');
         SEOMeta::addKeyword(['event', $event->title, $event->status]);
+
+
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($my_time_zone));
         $event_start_zero = $date;
