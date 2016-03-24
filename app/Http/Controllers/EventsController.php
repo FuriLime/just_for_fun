@@ -339,6 +339,21 @@ class EventsController extends Controller {
         }
         //$event = Event::findOrFail($id);
         $event = Event::whereReadable_url($readable_url)->first();
+        SEOMeta::setDescription($event->description);
+        SEOMeta::addMeta('article:start', $event->start, 'property');
+        SEOMeta::addMeta('article:finish', $event->finish, 'property');
+        SEOMeta::addMeta('article:stutus', $event->status, 'property');
+        SEOMeta::addMeta('article:location', $event->location, 'property');
+        SEOMeta::addMeta('article:timezone', $event->timezone, 'property');
+        SEOMeta::addMeta('article:slug', $event->readable_url, 'property');
+        SEOMeta::addKeyword(['event', $event->title, $event->status]);
+
+        OpenGraph::setDescription($event->resume);
+        OpenGraph::setTitle($event->title);
+        OpenGraph::setUrl('http://event.test-y-sbm.com/events/'. $event->readable_url);
+        OpenGraph::addProperty('type', 'article');
+        OpenGraph::addProperty('locale', 'en-us');
+
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($event['timezone']));
         $event_start_zero = $date;
@@ -601,6 +616,22 @@ class EventsController extends Controller {
         //$event = Event::findOrFail($uuid);
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
+        SEOMeta::setDescription($store_info->description);
+        SEOMeta::addMeta('article:start', $store_info->start, 'property');
+        SEOMeta::addMeta('article:finish', $store_info->finish, 'property');
+        SEOMeta::addMeta('article:stutus', $store_info->status, 'property');
+        SEOMeta::addMeta('article:location', $store_info->location, 'property');
+        SEOMeta::addMeta('article:timezone', $store_info->timezone, 'property');
+        SEOMeta::addMeta('article:slug', $store_info->readable_url, 'property');
+        SEOMeta::addKeyword(['event', $store_info->title, $store_info->status]);
+
+        OpenGraph::setDescription($store_info->resume);
+        OpenGraph::setTitle($store_info->title);
+        OpenGraph::setUrl('http://event.test-y-sbm.com/events/'. $store_info->readable_url);
+        OpenGraph::addProperty('type', 'article');
+        OpenGraph::addProperty('locale', 'en-us');
+
+
         $event_clone = new Event();
         $event_clone['title'] = $store_info['title'];
         if(Sentinel::check()){
