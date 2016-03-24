@@ -20,6 +20,7 @@ use App\UserProfile;
 use App\Role;
 use GeoIP;
 use DB;
+use SEO;
 
 class EventsController extends Controller {
 
@@ -273,6 +274,11 @@ class EventsController extends Controller {
             $my_time_zone = 'UTC';
         }
         $event = Event::whereReadable_url($readable_url)->first();
+        SEOMeta::setTitle($event->title);
+        SEOMeta::setDescription($event->decsription);
+        SEOMeta::addMeta('article:created', $event->created_at->toW3CString(), 'property');
+        SEOMeta::addMeta('article:stutus', $event->status, 'property');
+        SEOMeta::addKeyword(['event', $event->title, $event->status]);
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($my_time_zone));
         $event_start_zero = $date;
