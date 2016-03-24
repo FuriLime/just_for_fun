@@ -45,15 +45,10 @@
   <div class="panel panel-default">
     <form action="{{ route('signup') }}" autocomplete="off" method="post" role="form">
         <h3 class="black_bg">
-            <img src="{{ asset('assets/img/logo.png') }}" alt="josh logo">
-            <br>Sign Up</h3>
         <!-- CSRF Token -->
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
         <div class="form-group {{ $errors->first('email', 'has-error') }}">
-            <label style="margin-bottom:0px;" for="email" class="youmail">
-                <i class="livicon" data-name="mail" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
-                E-mail
-            </label>
+            <label style="margin-bottom:0px;" for="email" class="youmail">E-mail</label>
             <input id="email" name="email" autocomplete="off" required type="email" placeholder="mysupermail@mail.com" value="{!! Input::old('email') !!}" />
             <div class="col-sm-12">
                 {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
