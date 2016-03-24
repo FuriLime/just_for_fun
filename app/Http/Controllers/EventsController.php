@@ -276,6 +276,7 @@ class EventsController extends Controller {
             $my_time_zone = 'UTC';
         }
         $event = Event::whereUuid($readable_url)->first();
+        dd($event);
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($my_time_zone));
         $event_start_zero = $date;
@@ -303,7 +304,7 @@ class EventsController extends Controller {
      * @param  int  $uuid
      * @return Response
      */
-    public function edit($uuid)
+    public function edit($readable_url)
     {
         if(session()->get('start')) {
             $event['start'] = session()->get('start');
@@ -315,7 +316,7 @@ class EventsController extends Controller {
             $event['timezone'] = session()->get('timezone');
         }
         //$event = Event::findOrFail($id);
-        $event = Event::whereUuid($uuid)->first();
+        $event = Event::whereUuid($readable_url)->first();
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($event['timezone']));
         $event_start_zero = $date;
@@ -394,7 +395,7 @@ class EventsController extends Controller {
      * @param  int  $uuid
      * @return Response
      */
-    public function update($uuid, Request $request)
+    public function update($readable_url, Request $request)
     {
         if(isset($_POST['timezone'])) {
             session()->put('timezone', $_POST['timezone']);
@@ -421,7 +422,7 @@ class EventsController extends Controller {
         //$event = Event::findOrFail($uuid);
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
-        $event = Event::whereUuid($uuid)->first();
+        $event = Event::whereUuid($readable_url)->first();
         $event['title'] = $store_info['title'];
         $event['description'] = $store_info['description'];
         $event['location'] = $store_info['location'];
