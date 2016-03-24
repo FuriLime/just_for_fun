@@ -40,7 +40,6 @@ class EventsController extends Controller {
         SEOMeta::addKeyword(['event', 'show', 'timezone', 'time']);
         OpenGraph::setDescription('Show events');
         OpenGraph::setTitle('Events');
-        OpenGraph::setUrl('http://event.test-y-sbm.com/events');
         OpenGraph::addProperty('type', 'articles');
         foreach ($events as $event) {
             $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
