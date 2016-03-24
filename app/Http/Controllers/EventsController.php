@@ -276,7 +276,6 @@ class EventsController extends Controller {
             $my_time_zone = 'UTC';
         }
         $event = Event::whereReadable_url($readable_url)->first();
-        dd($event);
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($my_time_zone));
         $event_start_zero = $date;
@@ -316,7 +315,7 @@ class EventsController extends Controller {
             $event['timezone'] = session()->get('timezone');
         }
         //$event = Event::findOrFail($id);
-        $event = Event::whereUuid($readable_url)->first();
+        $event = Event::whereReadable_url($readable_url)->first();
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($event['timezone']));
         $event_start_zero = $date;
@@ -422,7 +421,7 @@ class EventsController extends Controller {
         //$event = Event::findOrFail($uuid);
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
-        $event = Event::whereUuid($readable_url)->first();
+        $event = Event::whereReadable_url($readable_url)->first();
         $event['title'] = $store_info['title'];
         $event['description'] = $store_info['description'];
         $event['location'] = $store_info['location'];
@@ -475,7 +474,7 @@ class EventsController extends Controller {
             $event_clone['timezone'] = session()->get('timezone');
         }
         //$event = Event::findOrFail($id);
-        $event_clone = Event::whereUuid($readable_url)->first();
+        $event_clone = Event::whereReadable_url($readable_url)->first();
         $date = new \DateTime($event_clone['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($event_clone['timezone']));
         $event_start_zero = $date;
@@ -578,10 +577,10 @@ class EventsController extends Controller {
             'finish' => 'required',
         ]);
         //$event = Event::findOrFail($uuid);
-        $event = Event::whereUuid($readable_url)->first();
+        $event = Event::whereReadable_url($readable_url)->first();
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
-        $eventold = Event::whereUuid($readable_url)->first();
+        $eventold = Event::whereReadable_url($readable_url)->first();
 
         $event_clone = new Event();
         $event_clone['title'] = $store_info['title'];
