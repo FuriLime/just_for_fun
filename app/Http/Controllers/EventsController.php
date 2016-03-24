@@ -511,6 +511,23 @@ class EventsController extends Controller {
         }
         //$event = Event::findOrFail($id);
         $event_clone = Event::whereReadable_url($readable_url)->first();
+
+        SEOMeta::setTitle($event_clone->title);
+        SEOMeta::setDescription($event_clone->description);
+        SEOMeta::addMeta('article:start', $event_clone->start, 'property');
+        SEOMeta::addMeta('article:finish', $event_clone->finish, 'property');
+        SEOMeta::addMeta('article:stutus', $event_clone->status, 'property');
+        SEOMeta::addMeta('article:location', $event_clone->location, 'property');
+        SEOMeta::addMeta('article:timezone', $event_clone->timezone, 'property');
+        SEOMeta::addMeta('article:slug', $event_clone->readable_url, 'property');
+        SEOMeta::addKeyword(['event', $event_clone->title, $event_clone->status]);
+
+        OpenGraph::setDescription($event_clone->resume);
+        OpenGraph::setTitle($event_clone->title);
+        OpenGraph::setUrl('http://event.test-y-sbm.com/events/'. $event_clone->readable_url);
+        OpenGraph::addProperty('type', 'article');
+        OpenGraph::addProperty('locale', 'en-us');
+
         $date = new \DateTime($event_clone['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($event_clone['timezone']));
         $event_start_zero = $date;
@@ -616,23 +633,6 @@ class EventsController extends Controller {
         //$event = Event::findOrFail($uuid);
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
-        SEOMeta::setTitle($store_info['title']);
-        SEOMeta::setDescription($store_info->description);
-        SEOMeta::addMeta('article:start', $store_info->start, 'property');
-        SEOMeta::addMeta('article:finish', $store_info->finish, 'property');
-        SEOMeta::addMeta('article:stutus', $store_info->status, 'property');
-        SEOMeta::addMeta('article:location', $store_info->location, 'property');
-        SEOMeta::addMeta('article:timezone', $store_info->timezone, 'property');
-        SEOMeta::addMeta('article:slug', $store_info->readable_url, 'property');
-        SEOMeta::addKeyword(['event', $store_info->title, $store_info->status]);
-
-        OpenGraph::setDescription($store_info->resume);
-        OpenGraph::setTitle($store_info->title);
-        OpenGraph::setUrl('http://event.test-y-sbm.com/events/'. $store_info->readable_url);
-        OpenGraph::addProperty('type', 'article');
-        OpenGraph::addProperty('locale', 'en-us');
-
-
         $event_clone = new Event();
         $event_clone['title'] = $store_info['title'];
         if(Sentinel::check()){
