@@ -550,7 +550,7 @@ dd($event);
     }
 
 
-    public function clonne($readable_url, Request $request)
+    public function clonne(Request $request)
     {
         if(isset($_POST['timezone'])) {
             session()->put('timezone', $_POST['timezone']);
@@ -575,16 +575,12 @@ dd($event);
             'finish' => 'required',
         ]);
         //$event = Event::findOrFail($uuid);
-        $event = Event::whereReadable_url($readable_url)->first();
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
-        $eventold = Event::whereReadable_url($readable_url)->first();
-
         $event_clone = new Event();
         $event_clone['title'] = $store_info['title'];
         if(Sentinel::check()){
             $userId = Sentinel::getUser()->id;
-            $user = User::find($userId);
             $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
             $event_clone['account_id'] = $account[0]->account_id;
             $event_clone['author_id'] = $userId;
