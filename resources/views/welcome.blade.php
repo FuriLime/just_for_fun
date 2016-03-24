@@ -52,6 +52,7 @@
                     {{--<input type="hidden" name="oauth_verifier" value="{{ $oauthv }}" />--}}
                     <div class="form-group">
                     <label for="subject">Enter your email </label>
+                        <div class="form-group {{ $errors->first('email', 'has-error') }}">
                     <input type="email" name="email" id="email" class="form-control">
                     <input type="submit" value="Send" class="btn btn-primary">
                     </div>
