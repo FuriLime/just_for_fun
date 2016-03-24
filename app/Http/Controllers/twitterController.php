@@ -55,11 +55,15 @@ class twitterController extends Controller
         }
         if(!$user){
             if(isset($_GET['email'])){
-                dd();
                 $user = new User;
                 $user->twit_nick = $_GET['twitnick'];
-                $user->email = $_GET['email'];
-
+                $user_email = DB::table('users')->where('email', $_GET['email'])->first();
+                dd($user_email);
+                if($user_email != $_GET['email']){
+                    $user->email = $_GET['email'];
+                }else{
+                    return Redirect::route("home")->with('error', Lang::get('auth/message.account_not_activated'));
+                }
             }else{
                 $user = new User;
                 $user->twit_nick = $userTwit->getNickName();
