@@ -274,15 +274,15 @@ class EventsController extends Controller {
             $my_time_zone = 'UTC';
         }
         $event = Event::whereReadable_url($readable_url)->first();
-        SEOMeta::setTitle($event->title);
-        SEOMeta::setDescription($event->decsription);
-        SEOMeta::addMeta('article:start', $event->start->toW3CString(), 'property');
-        SEOMeta::addMeta('article:finish', $event->finish->toW3CString(), 'property');
-        SEOMeta::addMeta('article:stutus', $event->status, 'property');
-        SEOMeta::addMeta('article:location', $event->location, 'property');
-        SEOMeta::addMeta('article:timezone', $event->timezone, 'property');
-        SEOMeta::addMeta('article:slug', $event->readable_url, 'property');
-        SEOMeta::addKeyword(['event', $event->title, $event->status]);
+        SEO::setTitle($event->title);
+        SEO::setDescription($event->decsription);
+        SEO::addMeta('article:start', $event->start->toW3CString(), 'property');
+        SEO::addMeta('article:finish', $event->finish->toW3CString(), 'property');
+        SEO::addMeta('article:stutus', $event->status, 'property');
+        SEO::addMeta('article:location', $event->location, 'property');
+        SEO::addMeta('article:timezone', $event->timezone, 'property');
+        SEO::addMeta('article:slug', $event->readable_url, 'property');
+        SEO::addKeyword(['event', $event->title, $event->status]);
 
 
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
