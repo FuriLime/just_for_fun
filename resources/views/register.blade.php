@@ -141,6 +141,7 @@
                             <div class="col-sm-6">
                                 <input type="email" name="email" required class="form-control"  autocomplete="off" id="email-address">
                                 {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
+                                {!! $errors->first('my_name', '<span class="help-block">:message</span>') !!}
                             </div>
                             </div>
                         </div>
