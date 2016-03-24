@@ -293,6 +293,11 @@ class EventsController extends Controller {
         SEOMeta::addMeta('article:slug', $event->readable_url, 'property');
         SEOMeta::addKeyword(['event', $event->title, $event->status]);
 
+        OpenGraph::setDescription($event->resume);
+        OpenGraph::setTitle($event->title);
+        OpenGraph::setUrl('http://event.test-y-sbm.com/events/'. $event->readable_url);
+        OpenGraph::addProperty('type', 'article');
+        OpenGraph::addProperty('locale', 'en-us');
 
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($my_time_zone));
