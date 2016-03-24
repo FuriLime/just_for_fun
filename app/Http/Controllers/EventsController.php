@@ -419,6 +419,7 @@ class EventsController extends Controller {
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
         $event = Event::whereReadable_url($readable_url)->first();
+        dd($event);
         $event['title'] = $store_info['title'];
         $event['description'] = $store_info['description'];
         $event['location'] = $store_info['location'];
@@ -446,7 +447,6 @@ class EventsController extends Controller {
         $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
-dd($event);
         $event->update();
 
         // Is the user logged in?
