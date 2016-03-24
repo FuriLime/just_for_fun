@@ -338,7 +338,6 @@ class EventsController extends Controller {
         }else {
             $event['timezone'] = $event['timezone'];
         }
-//        $event['timezone'] =$event['timezone'];
         $event['duration'] = strtotime($event['finish']) - strtotime($event['start']);
 //minutes
         if ($event['duration']< 3600 ) {
@@ -391,7 +390,7 @@ class EventsController extends Controller {
      * @param  int  $uuid
      * @return Response
      */
-    public function update($readable_url, Request $request)
+    public function update($uuid, Request $request)
     {
         if(isset($_POST['timezone'])) {
             session()->put('timezone', $_POST['timezone']);
@@ -418,7 +417,7 @@ class EventsController extends Controller {
         //$event = Event::findOrFail($uuid);
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
-        $event = Event::whereReadable_url($readable_url)->first();
+        $event = Event::whereUuid($uuid)->first();
         dd($event);
         $event['title'] = $store_info['title'];
         $event['description'] = $store_info['description'];
