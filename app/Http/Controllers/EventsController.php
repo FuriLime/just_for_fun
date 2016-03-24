@@ -275,7 +275,7 @@ class EventsController extends Controller {
         else{
             $my_time_zone = 'UTC';
         }
-        $event = Event::whereUuid($readable_url)->first();
+        $event = Event::whereReadableurl($readable_url)->first();
         dd($event);
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($my_time_zone));
