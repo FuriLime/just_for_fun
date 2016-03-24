@@ -174,7 +174,7 @@ class twitterController extends Controller
                     ];
 
                     // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
-                    \MandrillMail::messages()->sendTemplate('test_template', $template_content, $message);
+                    \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
                     // Redirect to the home page with success menu
                     return Redirect::route("home")->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
                 } catch (UserExistsException $e) {
