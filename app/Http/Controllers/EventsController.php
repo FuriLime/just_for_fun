@@ -112,7 +112,7 @@ class EventsController extends Controller {
 
         OpenGraph::setDescription('Create your event');
         OpenGraph::setTitle('Create event');
-        OpenGraph::setUrl('http://event.test-y-sbm.com/event/add');
+        OpenGraph::setUrl($request->path());
         OpenGraph::addProperty('type', 'article');
         OpenGraph::addProperty('locale', 'en-us');
         $duration = strtotime($finish_date) - strtotime($start_date);
