@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "aca13987e8197804897a5070444dfd0f",
-    "content-hash": "a660acb05fbfad3044a0c096fdafbb7a",
+    "hash": "c21d1e70d0d36c3668d8603c4e875138",
+    "content-hash": "8a198bcf0da10b36fa395bf3a03a3cba",
     "packages": [
         {
             "name": "artesaos/seotools",
@@ -354,16 +354,16 @@
         },
         {
             "name": "chencha/share",
-            "version": "5.2.0",
+            "version": "5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/prodeveloper/social-share.git",
-                "reference": "be4497608acc64d34426106326f997dd2d32c4c3"
+                "reference": "c25fff7eaac8352df0195ead424de28335464303"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/prodeveloper/social-share/zipball/be4497608acc64d34426106326f997dd2d32c4c3",
-                "reference": "be4497608acc64d34426106326f997dd2d32c4c3",
+                "url": "https://api.github.com/repos/prodeveloper/social-share/zipball/c25fff7eaac8352df0195ead424de28335464303",
+                "reference": "c25fff7eaac8352df0195ead424de28335464303",
                 "shasum": ""
             },
             "require": {
@@ -408,7 +408,7 @@
                 "laravel5",
                 "share"
             ],
-            "time": "2016-03-08 08:07:55"
+            "time": "2016-03-24 08:05:57"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -466,34 +466,34 @@
         },
         {
             "name": "cocur/slugify",
-            "version": "v2.0",
+            "version": "v1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cocur/slugify.git",
-                "reference": "912bf41f940f9a4e38ff1284b1841eaa71911d7f"
+                "reference": "2b67d4e2b75dbaed2ebefa9eb5683e8940513847"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cocur/slugify/zipball/912bf41f940f9a4e38ff1284b1841eaa71911d7f",
-                "reference": "912bf41f940f9a4e38ff1284b1841eaa71911d7f",
+                "url": "https://api.github.com/repos/cocur/slugify/zipball/2b67d4e2b75dbaed2ebefa9eb5683e8940513847",
+                "reference": "2b67d4e2b75dbaed2ebefa9eb5683e8940513847",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9"
+                "php": ">=5.3.3"
             },
             "require-dev": {
-                "laravel/framework": "~5.1",
+                "codeclimate/php-test-reporter": "dev-master",
+                "laravel/framework": "~4.1",
                 "latte/latte": "~2.2",
-                "mikey179/vfsstream": "~1.6",
                 "mockery/mockery": "~0.9",
                 "nette/di": "~2.2",
-                "phpunit/phpunit": "~4.8|~5.2",
-                "pimple/pimple": "~1.1",
-                "plumphp/plum": "~0.1",
-                "silex/silex": "~1.3",
-                "symfony/dependency-injection": "~2.4|~3.0",
-                "symfony/http-kernel": "~2.4|~3.0",
-                "twig/twig": "~1.12",
+                "phpunit/phpunit": "~3.7",
+                "sami/sami": "~1.3",
+                "satooshi/php-coveralls": "0.6.*",
+                "silex/silex": "~1.2",
+                "symfony/dependency-injection": "~2.4",
+                "symfony/http-kernel": "~2.4",
+                "twig/twig": "~1",
                 "zendframework/zend-modulemanager": "~2.2",
                 "zendframework/zend-servicemanager": "~2.2",
                 "zendframework/zend-view": "~2.2"
@@ -524,7 +524,7 @@
                 "slug",
                 "slugify"
             ],
-            "time": "2016-02-24 21:50:50"
+            "time": "2015-03-18 08:21:30"
         },
         {
             "name": "danielstjules/stringy",
@@ -2995,6 +2995,60 @@
                 "uuid"
             ],
             "time": "2016-03-22 18:40:53"
+        },
+        {
+            "name": "rolies106/eloquent-sluggable",
+            "version": "3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rolies106/eloquent-sluggable.git",
+                "reference": "708e9a5968d7f4dc4b47207a6d42a8d5a9aa1a2e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rolies106/eloquent-sluggable/zipball/708e9a5968d7f4dc4b47207a6d42a8d5a9aa1a2e",
+                "reference": "708e9a5968d7f4dc4b47207a6d42a8d5a9aa1a2e",
+                "shasum": ""
+            },
+            "require": {
+                "cocur/slugify": "1.1.*",
+                "illuminate/config": "5.*",
+                "illuminate/database": "5.*",
+                "illuminate/support": "5.*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.0.*",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rolies106\\EloquentSluggable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Colin Viebrock",
+                    "email": "colin@viebrock.ca"
+                },
+                {
+                    "name": "Rolies Deby",
+                    "email": "rolies106@gmail.com"
+                }
+            ],
+            "description": "Easy creation of slugs for your Eloquent models in Laravel",
+            "homepage": "https://github.com/rolies106/eloquent-sluggable",
+            "keywords": [
+                "eloquent",
+                "laravel",
+                "slug"
+            ],
+            "time": "2015-08-14 07:45:51"
         },
         {
             "name": "spatie/laravel-backup",
