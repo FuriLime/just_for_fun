@@ -1,0 +1,21 @@
+<?php namespace App\Http\Controllers;
+
+use Sentinel;
+use View;
+use Validator;
+use Input;
+use Session;
+use Redirect;
+use Lang;
+use URL;
+use Mail;
+use File;
+use Config;
+use App\Account;
+use App\User;
+use App\UserProfile;
+use App\AccountProfile;
+use App\Role;
+use DB;
+use Hash;
+use Carbon\Carbon;
