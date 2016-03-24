@@ -62,7 +62,7 @@ class twitterController extends Controller
                 if($user_email != $_GET['email']){
                     $user->email = $_GET['email'];
                 }else{
-                    return Redirect::route("home")->with('error', Lang::get('auth/message.account_not_activated'));
+                    return Redirect::route("home")->with('error', Lang::get('auth/message.account_already_exists'));
                 }
             }else{
                 $user = new User;
