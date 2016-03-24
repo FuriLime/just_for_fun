@@ -295,6 +295,9 @@ class AuthController extends JoshController
                 }
             }
         }
+        else{
+            return Redirect::route("home")->with('error', Lang::get('auth/message.account_not_activated'));
+        }
     }
 
 
