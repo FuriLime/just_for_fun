@@ -240,6 +240,7 @@ return [
         'OAuth' => Artdarek\OAuth\Facade\OAuth::class,
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
         'SEOMeta'   => Artesaos\SEOTools\Facades\SEOMeta::class,
+        'OpenGraph' => Artesaos\SEOTools\Facades\OpenGraph::class,
     ],
 
 ];
