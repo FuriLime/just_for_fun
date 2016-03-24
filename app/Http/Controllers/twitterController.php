@@ -135,7 +135,7 @@ class twitterController extends Controller
                         ['name' => 'ACCTYPE',               'content' => ''],
                         ['name' => 'RENEWDATE',             'content' => 'We not have this data yet'],
                         ['name' => 'FREETEXT',              'content' => 'content-FREETEXT'],
-                        ['name' => 'COLOR1',                'content' => '#ee12ab'],
+                        ['name' => 'CONFEMAIL',                'content' => $data['activationUrl']],
                         ['name' => 'COLOR1',                'content' => '#ee12ab'],
 
 
