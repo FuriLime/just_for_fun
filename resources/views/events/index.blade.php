@@ -56,7 +56,7 @@ Events List
 						@endif
 					</td>
 					<td>
-						<a href="{{ route('events.show', $event->readable_url) }}">
+						<a href="{{ route('events.show', $event->uuid) }}">
 							<i class="livicon" data-name="info" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="view event"></i>
 						</a>
 						<a href="{{ route('events.edit', $event->readable_url) }}">
