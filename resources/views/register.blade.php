@@ -132,7 +132,7 @@
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">Basics</div>
-                <div class="panel-body" id="register">
+                <div class="panel-body">
                     <form action="{{ route('signup') }}" autocomplete="off" class="form-horizontal" method="post" role="form">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                         <div class="form-group">
