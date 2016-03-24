@@ -589,7 +589,6 @@ class EventsController extends Controller {
             $event_clone['editor_id'] = NULL;
         }
         $event_clone['permanent_url'] = Uuid::uuid4();
-        $event_clone['readable_url'] = Uuid::uuid4();
         $event_clone['description'] = $store_info['description'];
         $event_clone['location'] = $store_info['location'];
         $event_clone['timezone'] = $store_info['timezone'];
