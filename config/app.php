@@ -167,7 +167,6 @@ return [
         Weblee\Mandrill\MandrillServiceProvider::class,
         Artdarek\OAuth\OAuthServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
-        Cocur\Slugify\Bridge\Laravel\SlugifyServiceProvider::class,
 
 //        Laravel\Cashier\CashierServiceProvider::class,
     ],
@@ -240,7 +239,6 @@ return [
         'OAuth' => Artdarek\OAuth\Facade\OAuth::class,
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
         'SEOMeta'   => Artesaos\SEOTools\Facades\SEOMeta::class,
-        "Slugify" => Cocur\Slugify\Bridge\Laravel\SlugifyFacade::class,
     ],
 
 ];
