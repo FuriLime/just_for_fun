@@ -101,7 +101,18 @@ class EventsController extends Controller {
         if(session()->get('timezone')) {
             $my_time_zone = session()->get('timezone');
         }
+        SEOMeta::setTitle('Create event');
+        SEOMeta::setDescription('Create your event');
+        SEOMeta::addMeta('article:location', $location, 'property');
+        SEOMeta::addMeta('article:timezone', $my_time_zone, 'property');
+        SEOMeta::addMeta('article:slug', $timezone_select, 'property');
+        SEOMeta::addKeyword(['event', 'create', 'timezone']);
 
+        OpenGraph::setDescription('Create your event');
+        OpenGraph::setTitle('Create event');
+        OpenGraph::setUrl('http://event.test-y-sbm.com/event/add');
+        OpenGraph::addProperty('type', 'article');
+        OpenGraph::addProperty('locale', 'en-us');
         $duration = strtotime($finish_date) - strtotime($start_date);
         //hours
         if ($duration>= 3600 && $duration < 86400){
