@@ -136,7 +136,8 @@
                     <form action="{{ route('signup') }}" autocomplete="off" class="form-horizontal" method="post" role="form">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                         <div class="form-group">
-                            <div class="form-group {{ $errors->first('email', 'has-error') }}">
+                            <div class="form-group" {{ $errors->first('email', 'has-error') }}>
+                                {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
                             <label for="email" class="col-sm-4 control-label">E-Mail Address</label>
                             <div class="col-sm-6">
                                 <input type="email" name="email" required class="form-control"  autocomplete="off" id="email-address">
