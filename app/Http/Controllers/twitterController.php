@@ -56,6 +56,7 @@ class twitterController extends Controller
                 $user = new User;
                 $user->twit_nick = $_GET['twitnick'];
                 try{
+                    var_dump($user->email);
                     $user->email = $_GET['email'];
                     var_dump('ddd');
                 }catch (UserExistsException $e){
