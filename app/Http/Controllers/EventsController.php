@@ -105,7 +105,7 @@ class EventsController extends Controller {
         SEOMeta::setDescription('Create your event');
         SEOMeta::addMeta('article:location', $location, 'property');
         SEOMeta::addMeta('article:timezone', $my_time_zone, 'property');
-        SEOMeta::addMeta('article:slug', $timezone_select, 'property');
+//        SEOMeta::addMeta('article:slug', $timezone_select, 'property');
         SEOMeta::addKeyword(['event', 'create', 'timezone']);
 
         OpenGraph::setDescription('Create your event');
