@@ -144,9 +144,11 @@
                             </div>
                         </div>
                             <div class="form-group">
+                                <div class="form-group {{ $errors->first('password', 'has-error') }}">
                                 <label for="password" class="col-sm-4 control-label">Password</label>
                                 <div class="col-sm-6">
                                     <input class="form-control" id="password" name="password" autocomplete="off" required type="password">
+                                    {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
                                 </div>
                             </div>
                         <div class="form-group">
