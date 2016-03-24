@@ -20,7 +20,8 @@ use App\UserProfile;
 use App\Role;
 use GeoIP;
 use DB;
-use SEO;
+use OpenGraph;
+use Twitter;
 use SEOMeta;
 
 class EventsController extends Controller {
@@ -34,6 +35,13 @@ class EventsController extends Controller {
     public function index()
     {
         $events = Event::latest()->get();
+        SEOMeta::setTitle('Events');
+        SEOMeta::setDescription('user`s events');
+        SEOMeta::addKeyword(['event', 'show', 'timezone', 'time']);
+        OpenGraph::setDescription('This is my page description');
+        OpenGraph::setTitle('Events');
+        OpenGraph::setUrl('../events');
+        OpenGraph::addProperty('type', 'articles');
         foreach ($events as $event) {
             $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
             $date->setTimezone(new \DateTimeZone($event->timezone));
