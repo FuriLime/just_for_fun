@@ -88,7 +88,6 @@ class EventsController extends Controller {
         $timezone_select = self::getTimeZoneSelect();
         $ip = $_SERVER["REMOTE_ADDR"];
         $location = GeoIP::getLocation($ip);
-        dd($location);
         $pre_timezone = null;
         if($location['timezone']!=NULL || $location['timezone']!='') {
             $my_time_zone = $location['timezone'];
@@ -104,7 +103,9 @@ class EventsController extends Controller {
         }
         SEOMeta::setTitle('Create event');
         SEOMeta::setDescription('Create your event');
-//        SEOMeta::addMeta('article:location', $location, 'property');
+        SEOMeta::addMeta('article:country', $location['country'], 'property');
+        SEOMeta::addMeta('article:city', $location['city'], 'property');
+        SEOMeta::addMeta('article:continent', $location['continent'], 'property');
         SEOMeta::addMeta('article:timezone', $my_time_zone, 'property');
 //        SEOMeta::addMeta('article:slug', $timezone_select, 'property');
         SEOMeta::addKeyword(['event', 'create', 'timezone']);
