@@ -92,11 +92,11 @@
     <title>Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- global level css -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- global level css -->
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" />
     <!-- end of global level css -->
     <!-- page level css -->
-    <link rel="stylesheet" type="text/css" href="css/login.css">
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/login.css') }}" />
     <!-- end of page level css -->
 
 </head>
