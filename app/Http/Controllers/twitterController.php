@@ -135,7 +135,7 @@ class twitterController extends Controller
                         ['name' => 'ACCTYPE',               'content' => ''],
                         ['name' => 'RENEWDATE',             'content' => 'We not have this data yet'],
                         ['name' => 'FREETEXT',              'content' => 'content-FREETEXT'],
-                        ['name' => 'CONFEMAIL',                'content' => $data['activationUrl']],
+                        ['name' => 'CONFEMAIL',              'content' => $data['activationUrl']],
                         ['name' => 'COLOR1',                'content' => '#ee12ab'],
 
 
@@ -174,7 +174,7 @@ class twitterController extends Controller
                     ];
 
                     // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
-                    \MandrillMail::messages()->sendTemplate('email-confirmation', $template_content, $message);
+                    \MandrillMail::messages()->sendTemplate('test_template', $template_content, $message);
                     // Redirect to the home page with success menu
                     return Redirect::route("home")->with('success', 'Message with confirmation link has been sent to '.$user->email.'. Please click on the link in the letter that would activate your account.');
                 } catch (UserExistsException $e) {
