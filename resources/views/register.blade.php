@@ -179,8 +179,7 @@
                         </div>
                     </form>
                 </div>
-            </div>
-            </div>
+
             <div class="panel panel-default">
                 <div class="panel-heading">Billing Information</div>
                 <div class="panel-body">
