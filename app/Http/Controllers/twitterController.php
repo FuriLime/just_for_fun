@@ -26,6 +26,7 @@ use Mailchimp\Mailchimp;
 use Config;
 use DB;
 
+
 class twitterController extends Controller
 {
 
@@ -54,14 +55,11 @@ class twitterController extends Controller
         }
         if(!$user){
             if(isset($_GET['email'])){
+                dd();
                 $user = new User;
                 $user->twit_nick = $_GET['twitnick'];
-                $user_email = DB::table('users')->where('email', $_GET['email'])->first();
-                if($user_email != $_GET['email']){
-                    $user->email = $_GET['email'];
-                }else{
-                    return Redirect::route("home")->with('error', Lang::get('auth/message.account_not_activated'));
-                }
+                $user->email = $_GET['email'];
+
             }else{
                 $user = new User;
                 $user->twit_nick = $userTwit->getNickName();
