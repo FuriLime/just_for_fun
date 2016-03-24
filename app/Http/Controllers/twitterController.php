@@ -57,12 +57,11 @@ class twitterController extends Controller
             if(isset($_GET['email'])){
                 $user = new User;
                 $user->twit_nick = $_GET['twitnick'];
-                $user_isset = DB::table('users')->where('email', $_GET['email'])->first();
-                $user_email = $user_isset->email;
-                if($user_email != $_GET['email']){
-                    $user->email = $_GET['email'];
-                }else{
+                $user_isset=DB::table('users')->where('email', $_GET['email'])->first();
+                if($user_isset) {
                     return Redirect::route("home")->with('error', Lang::get('auth/message.account_already_exists'));
+                }else{
+                    $user->email = $_GET['email'];
                 }
             }else{
                 $user = new User;
