@@ -21,6 +21,7 @@ use App\Role;
 use GeoIP;
 use DB;
 use SEO;
+use SEOMeta;
 
 class EventsController extends Controller {
 
@@ -274,15 +275,15 @@ class EventsController extends Controller {
             $my_time_zone = 'UTC';
         }
         $event = Event::whereReadable_url($readable_url)->first();
-        SEO::setTitle($event->title);
-        SEO::setDescription($event->decsription);
-        SEO::addMeta('article:start', $event->start, 'property');
-        SEO::addMeta('article:finish', $event->finish, 'property');
-        SEO::addMeta('article:stutus', $event->status, 'property');
-        SEO::addMeta('article:location', $event->location, 'property');
-        SEO::addMeta('article:timezone', $event->timezone, 'property');
-        SEO::addMeta('article:slug', $event->readable_url, 'property');
-        SEO::addKeyword(['event', $event->title, $event->status]);
+        SEOMeta::setTitle($event->title);
+        SEOMeta::setDescription($event->decsription);
+        SEOMeta::addMeta('article:start', $event->start, 'property');
+        SEOMeta::addMeta('article:finish', $event->finish, 'property');
+        SEOMeta::addMeta('article:stutus', $event->status, 'property');
+        SEOMeta::addMeta('article:location', $event->location, 'property');
+        SEOMeta::addMeta('article:timezone', $event->timezone, 'property');
+        SEOMeta::addMeta('article:slug', $event->readable_url, 'property');
+        SEOMeta::addKeyword(['event', $event->title, $event->status]);
 
 
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
