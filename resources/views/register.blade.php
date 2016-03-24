@@ -97,6 +97,7 @@
     <!-- end of global level css -->
     <!-- page level css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/login.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/custom.css') }}" />
     <!-- end of page level css -->
 
 </head>
