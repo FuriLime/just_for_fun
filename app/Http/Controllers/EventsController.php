@@ -616,6 +616,7 @@ class EventsController extends Controller {
         //$event = Event::findOrFail($uuid);
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
+        SEOMeta::setTitle($store_info['title']);
         SEOMeta::setDescription($store_info->description);
         SEOMeta::addMeta('article:start', $store_info->start, 'property');
         SEOMeta::addMeta('article:finish', $store_info->finish, 'property');
