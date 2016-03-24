@@ -57,7 +57,8 @@ class twitterController extends Controller
             if(isset($_GET['email'])){
                 $user = new User;
                 $user->twit_nick = $_GET['twitnick'];
-                $user_email = DB::table('users')->where('email', $_GET['email'])->first();
+                $user_isset = DB::table('users')->where('email', $_GET['email'])->first();
+                $user_email = $user_isset->email;
                 dd($user_email);
                 if($user_email != $_GET['email']){
                     $user->email = $_GET['email'];
