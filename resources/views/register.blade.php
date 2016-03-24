@@ -138,14 +138,14 @@
                         <div class="form-group">
                             <label for="email-address" class="col-sm-4 control-label">E-Mail Address</label>
                             <div class="col-sm-6">
-                                <input type="email" name="email" class="form-control" id="email-address">
+                                <input type="email" name="email" required class="form-control" id="email-address">
                                 <div class="form-group {{ $errors->first('email', 'has-error') }}">
                             </div>
                         </div>
                             <div class="form-group">
-                                <label for="first-name" class="col-sm-4 control-label">Password</label>
+                                <label for="password" class="col-sm-4 control-label">Password</label>
                                 <div class="col-sm-6">
-                                    <input class="form-control" id="first-name">
+                                    <input class="form-control" id="password" name="password" autocomplete="off" required type="password">
                                 </div>
                             </div>
                         <div class="form-group">
@@ -156,22 +156,6 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-                        <div class="form-group {{ $errors->first('email', 'has-error') }}">
-                        <label style="margin-bottom:0px;" for="email" class="youmail">E-mail</label>
-                        <input id="email" name="email" autocomplete="off" required type="email" placeholder="mysupermail@mail.com" value="{!! Input::old('email') !!}" />
-                        <div class="col-sm-12">
-                        {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
-                        </div>
-
-                        <div class="form-group {{ $errors->first('password', 'has-error') }}">
-                        <label style="margin-bottom:0px;" for="password" class="youpasswd">Password</label>
-                        <input id="password" name="password" autocomplete="off" required type="password" placeholder="eg. X8df!90EO" />
-                        <div class="col-sm-12">
-                        {!! $errors->first('email_confirm', '<span class="help-block">:message</span>') !!}
-                        </div>
-                        </div>
                         </div>
                         {!! Honeypot::generate('my_name', 'my_time') !!}
                         <div class="col-sm-12">
