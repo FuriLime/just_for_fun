@@ -461,7 +461,7 @@ class EventsController extends Controller {
             return redirect('events')->with('success', Lang::get('message.success.update'));
         }
     }
-    public function cloned($uuid)
+    public function cloned($readable_url)
     {
 
         if(session()->get('start')) {
@@ -474,7 +474,7 @@ class EventsController extends Controller {
             $event_clone['timezone'] = session()->get('timezone');
         }
         //$event = Event::findOrFail($id);
-        $event_clone = Event::whereUuid($uuid)->first();
+        $event_clone = Event::whereUuid($readable_url)->first();
         $date = new \DateTime($event_clone['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($event_clone['timezone']));
         $event_start_zero = $date;
@@ -553,7 +553,7 @@ class EventsController extends Controller {
     }
 
 
-    public function clonne($uuid, Request $request)
+    public function clonne($readable_url, Request $request)
     {
         if(isset($_POST['timezone'])) {
             session()->put('timezone', $_POST['timezone']);
@@ -577,10 +577,10 @@ class EventsController extends Controller {
             'finish' => 'required',
         ]);
         //$event = Event::findOrFail($uuid);
-        $event = Event::whereUuid($uuid)->first();
+        $event = Event::whereUuid($readable_url)->first();
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
-        $eventold = Event::whereUuid($uuid)->first();
+        $eventold = Event::whereUuid($readable_url)->first();
 
         $event_clone = new Event();
         $event_clone['title'] = $store_info['title'];
