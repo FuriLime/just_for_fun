@@ -158,7 +158,7 @@
                             </div>
                         </div>
                         {!! Honeypot::generate('my_name', 'my_time') !!}
-                        <div class="col-sm-12">
+                        <div class="col-sm-offset-4 col-sm-8">
                         <a href="{{ URL::to('facebook') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a>
                         <a href="{{ URL::to('twitter') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/twitter.png" border="0" alt="Facebook"/></a>
                         <a href="{{ URL::to('linked') }}"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/linkedin.png" border="0" alt="Linked"/></a>
