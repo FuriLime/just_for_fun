@@ -167,6 +167,7 @@ return [
         Weblee\Mandrill\MandrillServiceProvider::class,
         Artdarek\OAuth\OAuthServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        Rolies106\EloquentSluggable\SluggableServiceProvider::class,
 
 //        Laravel\Cashier\CashierServiceProvider::class,
     ],
