@@ -284,7 +284,7 @@ class EventsController extends Controller {
         }
         $event = Event::whereReadable_url($readable_url)->first();
         SEOMeta::setTitle($event->title);
-        SEOMeta::setDescription($event->decsription);
+        SEOMeta::setDescription($event->description);
         SEOMeta::addMeta('article:start', $event->start, 'property');
         SEOMeta::addMeta('article:finish', $event->finish, 'property');
         SEOMeta::addMeta('article:stutus', $event->status, 'property');
