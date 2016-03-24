@@ -38,9 +38,9 @@ class EventsController extends Controller {
         SEOMeta::setTitle('Events');
         SEOMeta::setDescription('user`s events');
         SEOMeta::addKeyword(['event', 'show', 'timezone', 'time']);
-        OpenGraph::setDescription('This is my page description');
+        OpenGraph::setDescription('Show events');
         OpenGraph::setTitle('Events');
-        OpenGraph::setUrl('../events');
+        OpenGraph::setUrl('http://event.test-y-sbm.com/events');
         OpenGraph::addProperty('type', 'articles');
         foreach ($events as $event) {
             $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
