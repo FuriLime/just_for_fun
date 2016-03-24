@@ -158,7 +158,7 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />--}}
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                         <div class="form-group {{ $errors->first('email', 'has-error') }}">
                         <label style="margin-bottom:0px;" for="email" class="youmail">E-mail</label>
                         <input id="email" name="email" autocomplete="off" required type="email" placeholder="mysupermail@mail.com" value="{!! Input::old('email') !!}" />
