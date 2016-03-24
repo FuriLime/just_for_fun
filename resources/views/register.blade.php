@@ -133,7 +133,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Basics</div>
                 <div class="panel-body">
-                    <form action="{{ route('signup') }}" autocomplete="off" method="post" role="form">
+                    <form action="{{ route('signup') }}" autocomplete="off" class="form-horizontal" method="post" role="form">
                         <div class="form-group">
                             <label for="first-name" class="col-sm-4 control-label">First Name</label>
                             <div class="col-sm-6">
