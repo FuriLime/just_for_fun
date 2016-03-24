@@ -53,6 +53,7 @@ class twitterController extends Controller
         }
         if(!$user){
             if(isset($_GET['email'])){
+                dd();
                 $user = new User;
                 $user->twit_nick = $_GET['twitnick'];
                 if($user->email != $_GET['email']){
