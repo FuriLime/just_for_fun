@@ -239,9 +239,6 @@ class EventsController extends Controller {
 
         // Is the user logged in?
         if (Sentinel::check()) {
-//          dd($store_info);
-//        event::create($store_info);
-            dd($store_info);
             $store_info->save();
             Session::forget('timezone');
             Session::forget('start');
@@ -570,6 +567,7 @@ class EventsController extends Controller {
         $this->validate($request, [
             'title' => 'required|max:80',
             'description' => 'max:500',
+            'location' => 'max:255',
             'location' => 'max:255',
             'event_url' => 'max:255',
             'timezone' => 'required',
