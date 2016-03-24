@@ -262,7 +262,7 @@ class EventsController extends Controller {
      * @param  int  $uuid
      * @return Response
      */
-    public function show($uuid)
+    public function show($readable_url)
     {
 
         $ip = $_SERVER["REMOTE_ADDR"];
@@ -275,7 +275,7 @@ class EventsController extends Controller {
         else{
             $my_time_zone = 'UTC';
         }
-        $event = Event::whereUuid($uuid)->first();
+        $event = Event::whereUuid($readable_url)->first();
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($my_time_zone));
         $event_start_zero = $date;

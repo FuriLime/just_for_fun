@@ -32,11 +32,6 @@ class Event extends Model implements SluggableInterface
     protected $sluggable = [
         'build_from'        => 'title',
         'save_to'           => 'readable_url',
-//        'generate_path'     => true, // Generate path to save to table
-//        'path_with_domain'  => false, // Include domain in path
-//        'is_tree'           => true, // Generate path for tree e.g categories
-//        'parent_relation'   => 'parent', // Function for relation to parent
-//        'path_column'       => 'path' // Column where path will be saved
     ];
 
 
