@@ -57,6 +57,7 @@ class twitterController extends Controller
                 $user->twit_nick = $_GET['twitnick'];
                 try{
                     $user->email = $_GET['email'];
+                    var_dump('ddd');
                 }catch (UserExistsException $e){
                     return Redirect::route("home")->with('error', Lang::get('auth/message.account_not_activated'));
                 }
