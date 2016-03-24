@@ -24,6 +24,7 @@ use Activation;
 use Ramsey\Uuid\Uuid;
 use Mailchimp\Mailchimp;
 use Config;
+use DB;
 
 class twitterController extends Controller
 {
@@ -55,14 +56,12 @@ class twitterController extends Controller
             if(isset($_GET['email'])){
                 $user = new User;
                 $user->twit_nick = $_GET['twitnick'];
-                try{
-                    var_dump($user->email);
+                $user_email = DB::table('users')->where('email', $_GET['email'])->first();
+                if($user_email != $_GET['email']){
                     $user->email = $_GET['email'];
-                    var_dump('ddd');
-                }catch (UserExistsException $e){
+                }else{
                     return Redirect::route("home")->with('error', Lang::get('auth/message.account_not_activated'));
                 }
-
             }else{
                 $user = new User;
                 $user->twit_nick = $userTwit->getNickName();
