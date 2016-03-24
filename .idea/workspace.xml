@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/social-share.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -323,12 +323,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-03837" summary="database">
-      <created>1458762631183</created>
-      <option name="number" value="03837" />
-      <option name="project" value="LOCAL" />
-      <updated>1458762631183</updated>
-    </task>
     <task id="LOCAL-03838" summary="database">
       <created>1458762670930</created>
       <option name="number" value="03838" />
@@ -617,12 +611,18 @@
       <option name="project" value="LOCAL" />
       <updated>1458807333804</updated>
     </task>
-    <option name="localTasksCounter" value="3886" />
+    <task id="LOCAL-03886" summary="readable url">
+      <created>1458807398583</created>
+      <option name="number" value="03886" />
+      <option name="project" value="LOCAL" />
+      <updated>1458807398583</updated>
+    </task>
+    <option name="localTasksCounter" value="3887" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -667,7 +667,8 @@
     <MESSAGE value="invite system" />
     <MESSAGE value="database" />
     <MESSAGE value="register form" />
-    <option name="LAST_COMMIT_MESSAGE" value="register form" />
+    <MESSAGE value="readable url" />
+    <option name="LAST_COMMIT_MESSAGE" value="readable url" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
