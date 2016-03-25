@@ -224,6 +224,8 @@ class EventsController extends Controller {
         $store_info->timezone = Input::get('timezone');
         $store_info->finish = Input::get('finish');
         $store_info->start = Input::get('start');
+        $store_info->lat = Input::get('lat');
+        $store_info->lng = Input::get('lng');
 
         if(Sentinel::check()){
             $userId = Sentinel::getUser()->id;
