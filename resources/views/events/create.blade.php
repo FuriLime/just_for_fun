@@ -359,11 +359,7 @@
                         $('#description').focus();
                         break;
                     case 2:
-                        if (e.shiftKey==1){
-                            console.log('lol');
-                        };
-                        $('#end_time_event').attr("style", "display: block");
-                        $('#finish').focus();
+                        
                         break;
                     case 3:
                         $('#time_zone_change').attr("style", "display: block");
