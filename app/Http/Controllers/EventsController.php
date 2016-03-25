@@ -803,8 +803,9 @@ class EventsController extends Controller {
         $dec_title = "This calendar entry has been created with a " .$acc_type_name." Personal Account from EventFellows";
         $dec_footer = "Powered by EventFellows - start creating calendar entries for your own event now. https://eventfellows.com/referrer/{$event->uuid} ";
 
-        $desc = urlencode($dec_title) . urlencode("\r\n".$event['description'] . "\r\n".$dec_footer);
+
         $loc = urlencode($event['location']);
+        $desc = urlencode($dec_title) . urlencode("\r\n".$event['description']. "\r\n".$dec_footer);
         $title = urlencode($event['title']);
         switch ($calendar) {
 
