@@ -28,7 +28,7 @@ class SiteMap extends Controller {
         $events = Events::remember(59) // chach this query for 59 minutes
         ->select(["id", "updated_at"])
             // you may want to add where clauses here according to your needs
-            ->orderBy("id", "desc")
+            ->orderBy("id", "title")
             ->take(50000) // each Sitemap file must have no more than 50,000 URLs and must be no larger than 10MB
             ->get();
 
