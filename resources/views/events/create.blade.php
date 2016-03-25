@@ -524,6 +524,8 @@
             $('#state').val('');
             $('#city').val('');
             $('#country').val('');
+            $('#lat').val('');
+            $('#lng').val('');
 
         });
 
