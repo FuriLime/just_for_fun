@@ -37,7 +37,7 @@ class EventsController extends Controller {
     {
         $user_id = Sentinel::getUser()->id;
         $acc = DB::table('account_user')->where('user_id', '=', $user_id)->get(['account_id']);
-        dd($acc);
+        dd($acc[0]);
         $events = Event::latest()->get();
         SEOMeta::setTitle('Events');
         SEOMeta::setDescription('user`s events');
