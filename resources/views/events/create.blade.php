@@ -345,7 +345,7 @@
 
     <script>
     $(document).ready(function() {
-        $('.form-control').keydown(function(){
+        $('.form-control').keydown(function(e){
             if (e.shiftKey){
                 console.log('lol');
             };
