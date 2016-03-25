@@ -19,6 +19,7 @@ use App\Role;
 use App\Event;
 use DB;
 use Hash;
+use Cache;
 use Carbon\Carbon;
 
 class SiteMap extends Controller {
