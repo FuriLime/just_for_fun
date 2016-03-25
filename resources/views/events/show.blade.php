@@ -164,8 +164,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 
             <div class="date">
                 {{date("F dS, Y",strtotime($event->start))}}
-                {{date("H:m",strtotime($event->start))}}
-                Time: {{date("H:m", strtotime($event->finish))}}
+                Time: {{date("H:m",strtotime($event->start))}} - {{date("H:m", strtotime($event->finish))}}
                 Timezone:{{$event->timezone}}
             </div>
 			
