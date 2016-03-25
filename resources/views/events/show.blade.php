@@ -336,7 +336,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 	</script>
   <script type="text/javascript">
     $(document).ready(function(){
-      $('.show-details').click(function(){
+      $('#show_detail').click(function(){
         if ($('.share-event-top').hasClass('opened')){
           $('.show-details')[0].innerText = 'Share your event!';
           $('.share-event-top').removeClass('opened');
@@ -346,7 +346,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
         }
       });
       $('.exit-show-details').click(function(){
-        if ($('.share-event-top').hasClass('opened')&&($('.share-event-top').attr('id')=='show_detail')){
+        if ($('.share-event-top').hasClass('opened')){
           $('.show-details')[0].innerText = 'Share your event!';
           $('.share-event-top').removeClass('opened');
         } else{
