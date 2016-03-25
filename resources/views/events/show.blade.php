@@ -337,7 +337,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
   <script type="text/javascript">
     $(document).ready(function(){
       $('.show-details').click(function(){
-        if ($('.share-event-top').hasClass('opened')){
+        if ($('.share-event-top').hasClass('opened')&&($('.share-event-top').attr('id')=='show_detail')){
           $('.show-details')[0].innerText = 'Share your event!';
           $('.share-event-top').removeClass('opened');
         } else{
