@@ -347,8 +347,12 @@
     $(document).ready(function() {
 
         $('.form-control').keypress(function (e) {
+            if (e.shiftkey==1){
+                            console.log('lol');
+                        }
             if (e.which == 13) {
                 e.preventDefault();
+
                 var index = $('.form-control').index(this) + 1;
                 $('.form-control').eq(index).attr("style", "display: block").focus();
                 switch($('.form-control').index(this)) {
@@ -357,6 +361,7 @@
                         $('#description').focus();
                         break;
                     case 2:
+
                         $('#end_time_event').attr("style", "display: block");
                         $('#finish').focus();
                         break;
