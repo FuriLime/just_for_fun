@@ -40,6 +40,7 @@
         </div>
     </div>
 @stop
+
 <div class="share-event-top">
   <div class="container share-container">
     <div class="row content">
@@ -68,9 +69,12 @@
     </div>
     
   </div>
+    @if(Sentinel::check())
+        {{--@if(Sentinel::getUser()->id == )--}}
   <div class="show-details">
     Share this event
   </div>
+        @endif
 </div>
 {{-- breadcrumb --}}
 
@@ -93,7 +97,6 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 	@endif
 	
 		<div class="col-sm-8 col-md-8">
-            {{date('Y-m-d H:m')}}
 			<div class="event-name event-show">{{$event->title}}</div>
 			<div class="event_period event-show">{{$event->period}}</div>
 			
