@@ -347,7 +347,7 @@
     $(document).ready(function() {
 
         $('.form-control').keypress(function (e) {
-            if (e.shiftKey){
+            if (e.which==16){
                             console.log('lol');
                         }
             if (e.which == 13) {
