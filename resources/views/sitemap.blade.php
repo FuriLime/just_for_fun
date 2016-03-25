@@ -2,12 +2,11 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     @foreach($events as $event)
-        {{var_dump($event)}}
         <url>
             <loc>{{ URL::route("events.show", [$event->id]) }}</loc>
-            <title>{{ $event->id}}</title>
-            <lastmod>{{ gmdate(DateTime::W3C, strtotime($event->updated_at)) }}</lastmod>
-            <lastmod>{{ gmdate(DateTime::W3C, strtotime($event->updated_at)) }}</lastmod>
+            <title>{{ $event->title}}</title>
+            <lastmod>{{ $event->description }}</lastmod>
+            <lastmod>{{ $event->location }}</lastmod>
             <lastmod>{{ gmdate(DateTime::W3C, strtotime($event->updated_at)) }}</lastmod>
             <lastmod>{{ gmdate(DateTime::W3C, strtotime($event->updated_at)) }}</lastmod>
             <lastmod>{{ gmdate(DateTime::W3C, strtotime($event->updated_at)) }}</lastmod>
