@@ -69,13 +69,10 @@
     </div>
     
   </div>
-    @if(Sentinel::check())
-    @if(Sentinel::getUser()->id == $event->author_id)
-  <div class="show-details">
+
+  <div class="show-details" id="show_detail">
     Share this event
   </div>
-@endif
-        @endif
 </div>
 {{-- breadcrumb --}}
 
@@ -150,15 +147,10 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 				</div>
 				
 			</div>
-			
-      
-
-			
 			<div id="hidden_address">
 				<div id="address">{{ $event['location'] }}</div>
 				<div style="height: 400px;" id="map_canvas"></div>
 			</div>
-			
 			
 			
 			<div class="input-group" id="learn_more" style="display:none">
@@ -200,12 +192,15 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 	
 <script>
-    dataLayer=[{
-        'eventName': '{{$event->title}}',
-        'eventDiscription': '{{$event->description}}',
-        'eventPeriod': '{{$event->period}}',
-        'eventLocation': '{{$event->location}}'
-    }];
+    @if(!Sentinel::check())
+    @if(Sentinel::getUser()->id != $event->author_id)
+        $('#show_detail').click(function(e){
+            e.preventDefault();
+            return false;
+        })
+
+    @endif
+    @endif
     </script>
 
 	<script>
