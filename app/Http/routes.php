@@ -187,6 +187,12 @@ Route::get('/', array('as' => 'home', function () {
     return View::make('index');
 }));
 
+
+Route::get("sitemap.xml", array(
+    "as"   => "sitemap",
+    "uses" => "SiteMap@sitemap"
+));
+
 Route::get('oauthwindows', 'MicrosoftController@index');
 Route::get('oauthpocket', 'PocketController@index');
 
