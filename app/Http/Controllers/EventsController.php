@@ -784,7 +784,7 @@ class EventsController extends Controller {
             $duration = $hourDifference.$minutesLeft;
         }
         $result = $error_massage = $calendar_link = '';
-        $desc = urlencode($event['description']);
+        $desc = "sdfsdfsdfsdfsdf" . urlencode($event['description']);
         $loc = urlencode($event['location']);
         $title = urlencode($event['title']);
         switch ($calendar) {
