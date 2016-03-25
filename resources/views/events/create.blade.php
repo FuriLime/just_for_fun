@@ -307,7 +307,7 @@
      <script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
       <script src="{{ asset('assets/js/bootbox.js') }}"></script>
     <script>
-        $('body').on("click", ".submit", function(e) {
+        $('html').on("click", ".submit", function(e) {
             console.log('lol');
             event.preventDefault();
             if($(this).hasClass('publish')){
