@@ -18,6 +18,7 @@ use App\Account;
 use App\User;
 use App\UserProfile;
 use App\Role;
+use App\AccountType;
 use GeoIP;
 use DB;
 use OpenGraph;
@@ -784,7 +785,7 @@ class EventsController extends Controller {
             $duration = $hourDifference.$minutesLeft;
         }
         $result = $error_massage = $calendar_link = '';
-        $desc = "sdfsdfsdfsdfsdf" . urlencode($event['description']);
+        $desc = urlencode($event['description']);
         $loc = urlencode($event['location']);
         $title = urlencode($event['title']);
         switch ($calendar) {
