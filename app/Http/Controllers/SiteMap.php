@@ -27,7 +27,7 @@ class SiteMap extends Controller {
 
     public function sitemap()
     {
-        $events = Cache::remember('users', 50, function()
+        $events = Cache::remember('events', 50, function()
         {
             return DB::table('events')->get();
         });
