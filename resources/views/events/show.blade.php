@@ -73,7 +73,7 @@
   <div class="show-details" id="show_detail">
     Share this event
   </div>
-  else
+  @else
   <div class="show-details">
     Share this event
   </div>
