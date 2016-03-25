@@ -348,7 +348,9 @@
 
         $('.form-control').keydown(function (e) {
             if(e.shiftKey==1){
-                console.log('lol');
+                if (e.which == 13) {
+                    console.log('lol');
+                }
             };
             if (e.which == 13) {
                 e.preventDefault();
