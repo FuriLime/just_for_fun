@@ -348,7 +348,7 @@
         
         $('.form-control').keydown(function (e) {
             if (e.shiftKey){
-                console.log('lol');
+                var shift_Key = true;
             };
             if (e.which == 13) {
                 e.preventDefault();
@@ -361,7 +361,9 @@
                         $('#description').focus();
                         break;
                     case 2:
-
+                        if (shift_Key){
+                            console.log('lol');
+                        };
                         $('#end_time_event').attr("style", "display: block");
                         $('#finish').focus();
                         break;
