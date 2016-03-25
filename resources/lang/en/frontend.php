@@ -51,7 +51,7 @@ return array(
 	'save_and_publish' 	=> 'Save & Publish',
 	'update' 			=> 'Update',
 	'description2' 		=> 'Description',
-	'address' 			=> 'Address',
+	'address' 			=> 'Event Location',
 	'logout' 			=> 'Logout',
 
     //confirm page
