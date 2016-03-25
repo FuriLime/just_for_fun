@@ -69,11 +69,13 @@
     </div>
     
   </div>
-    @if(Sentinel::check() && Sentinel::getUser()->id == $event->author_id)
+    @if(Sentinel::check())
+    @if(Sentinel::getUser()->id == $event->author_id)
   <div class="show-details">
     Share this event
   </div>
 @endif
+        @endif
 </div>
 {{-- breadcrumb --}}
 
