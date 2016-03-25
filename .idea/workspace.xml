@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/create.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -137,22 +136,21 @@
       <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40535715" vertical-offset="673" max-vertical-offset="3270">
-              <caret line="227" column="42" selection-start-line="227" selection-start-column="42" selection-end-line="227" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.61071426" vertical-offset="3633" max-vertical-offset="4890">
+              <caret line="673" column="46" selection-start-line="673" selection-start-column="46" selection-end-line="673" selection-end-column="46" />
               <folding>
                 <element signature="e#575#1864#0#PHP" expanded="false" />
                 <element signature="e#1966#6177#0#PHP" expanded="false" />
-                <element signature="e#12202#16676#0#PHP" expanded="false" />
-                <element signature="e#16803#19312#0#PHP" expanded="false" />
-                <element signature="e#19317#24434#0#PHP" expanded="false" />
-                <element signature="e#24441#27666#0#PHP" expanded="false" />
-                <element signature="e#27671#27787#0#PHP" expanded="false" />
-                <element signature="e#27792#28565#0#PHP" expanded="false" />
-                <element signature="e#28571#28674#0#PHP" expanded="false" />
-                <element signature="e#28679#29191#0#PHP" expanded="false" />
-                <element signature="e#29317#34101#0#PHP" expanded="false" />
-                <element signature="e#34167#38128#0#PHP" expanded="false" />
-                <element signature="e#38134#38997#0#PHP" expanded="false" />
+                <element signature="e#6280#9702#0#PHP" expanded="false" />
+                <element signature="e#9819#12066#0#PHP" expanded="false" />
+                <element signature="e#19405#24522#0#PHP" expanded="false" />
+                <element signature="e#27859#27975#0#PHP" expanded="false" />
+                <element signature="e#27980#28753#0#PHP" expanded="false" />
+                <element signature="e#28759#28862#0#PHP" expanded="false" />
+                <element signature="e#28867#29379#0#PHP" expanded="false" />
+                <element signature="e#29505#34289#0#PHP" expanded="false" />
+                <element signature="e#34355#38316#0#PHP" expanded="false" />
+                <element signature="e#38322#39185#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -420,12 +418,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-03938" summary="readable url">
-      <created>1458820797540</created>
-      <option name="number" value="03938" />
-      <option name="project" value="LOCAL" />
-      <updated>1458820797540</updated>
     </task>
     <task id="LOCAL-03939" summary="readable url">
       <created>1458820814536</created>
@@ -715,7 +707,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458898902604</updated>
     </task>
-    <option name="localTasksCounter" value="3987" />
+    <task id="LOCAL-03987" summary="readable url">
+      <created>1458899032243</created>
+      <option name="number" value="03987" />
+      <option name="project" value="LOCAL" />
+      <updated>1458899032243</updated>
+    </task>
+    <option name="localTasksCounter" value="3988" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1200,22 +1198,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40535715" vertical-offset="673" max-vertical-offset="3270">
-          <caret line="227" column="42" selection-start-line="227" selection-start-column="42" selection-end-line="227" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.61071426" vertical-offset="3633" max-vertical-offset="4890">
+          <caret line="673" column="46" selection-start-line="673" selection-start-column="46" selection-end-line="673" selection-end-column="46" />
           <folding>
             <element signature="e#575#1864#0#PHP" expanded="false" />
             <element signature="e#1966#6177#0#PHP" expanded="false" />
-            <element signature="e#12202#16676#0#PHP" expanded="false" />
-            <element signature="e#16803#19312#0#PHP" expanded="false" />
-            <element signature="e#19317#24434#0#PHP" expanded="false" />
-            <element signature="e#24441#27666#0#PHP" expanded="false" />
-            <element signature="e#27671#27787#0#PHP" expanded="false" />
-            <element signature="e#27792#28565#0#PHP" expanded="false" />
-            <element signature="e#28571#28674#0#PHP" expanded="false" />
-            <element signature="e#28679#29191#0#PHP" expanded="false" />
-            <element signature="e#29317#34101#0#PHP" expanded="false" />
-            <element signature="e#34167#38128#0#PHP" expanded="false" />
-            <element signature="e#38134#38997#0#PHP" expanded="false" />
+            <element signature="e#6280#9702#0#PHP" expanded="false" />
+            <element signature="e#9819#12066#0#PHP" expanded="false" />
+            <element signature="e#19405#24522#0#PHP" expanded="false" />
+            <element signature="e#27859#27975#0#PHP" expanded="false" />
+            <element signature="e#27980#28753#0#PHP" expanded="false" />
+            <element signature="e#28759#28862#0#PHP" expanded="false" />
+            <element signature="e#28867#29379#0#PHP" expanded="false" />
+            <element signature="e#29505#34289#0#PHP" expanded="false" />
+            <element signature="e#34355#38316#0#PHP" expanded="false" />
+            <element signature="e#38322#39185#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

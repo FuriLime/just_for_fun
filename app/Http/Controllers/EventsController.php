@@ -481,6 +481,8 @@ class EventsController extends Controller {
         $event['City'] = $store_info['City'];
         $event['State'] = $store_info['State'];
         $event['Country'] = $store_info['Country'];
+        $event['lat'] = $store_info['lat'];
+        $event['lng'] = $store_info['lng'];
         if(Sentinel::check()) {
             $event['test'] = Input::get('test');
         }else{$event['test'] = "1"; }
@@ -668,6 +670,8 @@ class EventsController extends Controller {
         $event_clone['City'] = $store_info['City'];
         $event_clone['State'] = $store_info['State'];
         $event_clone['Country'] = $store_info['Country'];
+        $event_clone['lng'] = $store_info['lng'];
+        $event_clone['lat'] = $store_info['lat'];
         if(Sentinel::check()) {
             $event_clone['test'] = Input::get('test');
         }else{$event_clone['test'] = "1"; }
