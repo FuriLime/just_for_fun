@@ -16,7 +16,7 @@ use App\User;
 use App\UserProfile;
 use App\AccountProfile;
 use App\Role;
-use App\Events;
+use App\Event;
 use DB;
 use Hash;
 use Carbon\Carbon;
@@ -25,7 +25,7 @@ class SiteMap extends Controller {
 
     public function sitemap()
     {
-        $events = Events::remember(59) // chach this query for 59 minutes
+        $events = Event::remember(59) // chach this query for 59 minutes
         ->select(["id", "updated_at"])
             // you may want to add where clauses here according to your needs
             ->orderBy("id", "title")
