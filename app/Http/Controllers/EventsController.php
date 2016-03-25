@@ -771,7 +771,7 @@ class EventsController extends Controller {
         $acc_type_name= $acc_type_name[0]->name;
 
         //end
-        $text = "This calendar entry has been created with a " .$acc_type_name." Personal Account from EventFellows\r\n";
+        $text = "This calendar entry has been created with a " .$acc_type_name." Personal Account from EventFellows";
         $info = $request->all();
 
         $uuid = $info['uuid'];
@@ -799,7 +799,7 @@ class EventsController extends Controller {
             $duration = $hourDifference.$minutesLeft;
         }
         $result = $error_massage = $calendar_link = '';
-        $desc = $text . urlencode($event['description']);
+        $desc = $text . urlencode("\r\n".$event['description']);
         $loc = urlencode($event['location']);
         $title = urlencode($event['title']);
         switch ($calendar) {
