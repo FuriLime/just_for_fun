@@ -69,10 +69,11 @@
     </div>
     
   </div>
-
+@if($event->user=="1")
   <div class="show-details" id="show_detail">
     Share this event
   </div>
+@endif
 </div>
 {{-- breadcrumb --}}
 
@@ -212,6 +213,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
         $('#show_detail').click(function(e){
             e.preventDefault();
             return false;
+            //Сделать серого цвета кнопку и при клике чтоб ничего не происходило
         })
 
         {{--@endif--}}
