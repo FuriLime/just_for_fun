@@ -5,7 +5,7 @@
         {{var_dump($event)}}
         <url>
             <loc>{{ URL::route("events.show", [$event->id]) }}</loc>
-            <title>{{ $event->timezone}}</title>
+            <title>{{ $event->id}}</title>
             <lastmod>{{ gmdate(DateTime::W3C, strtotime($event->updated_at)) }}</lastmod>
             <lastmod>{{ gmdate(DateTime::W3C, strtotime($event->updated_at)) }}</lastmod>
             <lastmod>{{ gmdate(DateTime::W3C, strtotime($event->updated_at)) }}</lastmod>
