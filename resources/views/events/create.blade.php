@@ -347,7 +347,7 @@
     $(document).ready(function() {
 
         $('.form-control').keypress(function (e) {
-            if (e.shiftkey==1){
+            if (e.shiftKey){
                             console.log('lol');
                         }
             if (e.which == 13) {
