@@ -311,7 +311,7 @@ class EventsController extends Controller {
 
         OpenGraph::setDescription($event->resume);
         OpenGraph::setTitle($event->title);
-        OpenGraph::setUrl('http://event.test-y-sbm.com/events/'. $event->readable_url);
+        OpenGraph::setUrl(url().'/events/'. $event->readable_url);
         OpenGraph::addProperty('type', 'article');
         OpenGraph::addProperty('locale', 'en-us');
 
