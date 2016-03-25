@@ -39,7 +39,11 @@ class EventsController extends Controller {
         $acc = DB::table('account_user')->where('user_id', '=', $user_id)->get(['account_id']);
         $acc_id = $acc[0]->account_id;
         $acc_type = DB::table('accounts')->where('id','=',$acc_id )->get(['account_type_id']);
-        dd($acc_type[0]->account_type_id);
+        $acc_type_id= $acc_type[0]->account_type_id;
+
+        $acc_type_name = DB::table('account_type')->where('id','=',$acc_type_id )->get(['name']);
+        $acc_type_name= $acc_type_name[0]->name;
+        dd($acc_type_name);
         $events = Event::latest()->get();
         SEOMeta::setTitle('Events');
         SEOMeta::setDescription('user`s events');
