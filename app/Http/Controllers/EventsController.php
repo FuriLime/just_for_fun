@@ -41,7 +41,7 @@ class EventsController extends Controller {
         $acc_type = DB::table('accounts')->where('id','=',$acc_id )->get(['account_type_id']);
         $acc_type_id= $acc_type[0]->account_type_id;
 
-        $acc_type_name = DB::table('account_type')->where('id','=',$acc_type_id )->get(['name']);
+        $acc_type_name = DB::table('account_types')->where('id','=',$acc_type_id )->get(['name']);
         $acc_type_name= $acc_type_name[0]->name;
         dd($acc_type_name);
         $events = Event::latest()->get();
