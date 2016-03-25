@@ -771,7 +771,8 @@ class EventsController extends Controller {
         $acc_type_name= $acc_type_name[0]->name;
 
         //end
-        $text = "This calendar entry has been created with a " .$acc_type_name." Personal Account from EventFellows";
+
+
         $info = $request->all();
 
         $uuid = $info['uuid'];
@@ -799,7 +800,10 @@ class EventsController extends Controller {
             $duration = $hourDifference.$minutesLeft;
         }
         $result = $error_massage = $calendar_link = '';
-        $desc = $text . urlencode("\r\n".$event['description']);
+        $dec_title = "This calendar entry has been created with a " .$acc_type_name." Personal Account from EventFellows";
+        $dec_footer = "Powered by EventFellows - start creating calendar entries for your own event now. https://eventfellows.com/referrer/{{$event->uuid}} ";
+
+        $desc = urlencode($dec_title) . urlencode("\r\n".$event['description'] . urlencode("\r\n".$dec_footer));
         $loc = urlencode($event['location']);
         $title = urlencode($event['title']);
         switch ($calendar) {
