@@ -118,7 +118,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 					<span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three" data-size="20" data-c="#fff" data-hc="#fff" data-loop="true"></i></span>
 				</button>
 
-				<!-- <a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=http%3A%2F%2F{{$event->title}}&pubid=USERNAME&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a> -->
+
 			</div>
 			<!-- <div class="fb-share-button" data-href="http://test-ef.com/events/{{$event->uuid}}" data-layout="button_count"></div>
       <g:plus action="share"></g:plus>
