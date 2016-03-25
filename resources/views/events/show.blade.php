@@ -74,7 +74,7 @@
     Share this event
   </div>
   @else
-  <div class="show-details">
+  <div class="show-details disabled">
     Share this event
   </div>
 @endif

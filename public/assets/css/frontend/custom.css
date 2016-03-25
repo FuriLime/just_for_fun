@@ -1098,6 +1098,10 @@ footer .btn-primary.text-white {
     vertical-align: bottom;
     margin-left: calc(50% - 188.5px);
 }
+.share-event-top .show-details.disabled{
+    color: black;
+    background-image: url(../../images/share_event_dis.png);
+}
 .share-text{
     color: black;
 }
