@@ -3,7 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     @foreach($events as $event)
         <url>
-            <loc>{{ URL::route("events", [$event->readable_url]) }}</loc>
+            <loc>{{ URL::route("events", [$event->id]) }}</loc>
             <lastmod>{{ gmdate(DateTime::W3C, strtotime($event->updated_at)) }}</lastmod>
             <changefreq>daily</changefreq>
             <priority>1.0</priority>
