@@ -4,6 +4,12 @@
     @foreach($events as $event)
         <url>
             <loc>{{ URL::route("events.show", [$event->id]) }}</loc>
+            <title>{{ $event->title)) }}</title>
+            <lastmod>{{ gmdate(DateTime::W3C, strtotime($event->updated_at)) }}</lastmod>
+            <lastmod>{{ gmdate(DateTime::W3C, strtotime($event->updated_at)) }}</lastmod>
+            <lastmod>{{ gmdate(DateTime::W3C, strtotime($event->updated_at)) }}</lastmod>
+            <lastmod>{{ gmdate(DateTime::W3C, strtotime($event->updated_at)) }}</lastmod>
+            <lastmod>{{ gmdate(DateTime::W3C, strtotime($event->updated_at)) }}</lastmod>
             <lastmod>{{ gmdate(DateTime::W3C, strtotime($event->updated_at)) }}</lastmod>
             <changefreq>daily</changefreq>
             <priority>1.0</priority>
