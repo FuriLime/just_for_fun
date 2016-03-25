@@ -93,7 +93,7 @@
 					<div class="form-group" id="descprip" style="display: none">
                         <label for="description">@lang('frontend.description')</label>
                         @if (isset($event_clone))
-                            <textarea class="textarea form-control" type="textarea" id="description" name="description", maxlength="500" rows="10">{{$event_clone['description']}}</textarea>
+                            <textarea class="textarea form-control" type="textarea" id="description" name="description", maxlength="500" onkeydown="if(event.keyCode == 13){ if (event.shiftKey==1) { return true;} else { return false;}}" rows="10">{{$event_clone['description']}}</textarea>
                         @else
 						{!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}
                         @endif
@@ -345,14 +345,10 @@
 
     <script>
     $(document).ready(function() {
-        
-        $('.form-control').keydown(function (e) {
-            if (e.shiftKey){
-                var shift_Key = true;
-            };
+
+        $('.form-control').keypress(function (e) {
             if (e.which == 13) {
                 e.preventDefault();
-
                 var index = $('.form-control').index(this) + 1;
                 $('.form-control').eq(index).attr("style", "display: block").focus();
                 switch($('.form-control').index(this)) {
@@ -361,9 +357,6 @@
                         $('#description').focus();
                         break;
                     case 2:
-                        if (shift_Key){
-                            console.log('lol');
-                        };
                         $('#end_time_event').attr("style", "display: block");
                         $('#finish').focus();
                         break;
@@ -531,8 +524,6 @@
             $('#state').val('');
             $('#city').val('');
             $('#country').val('');
-            $('#lat').val('');
-            $('#lng').val('');
 
         });
 
@@ -651,8 +642,7 @@
                     var place_id = place["place_id"];
                     location_lat = place["geometry"]["location"].lat();
                     location_lng = place["geometry"]["location"].lng();
-                    $('#lat').val(location_lat);
-                    $('#lng').val(location_lng);
+
                     var pyrmont = new google.maps.LatLng(location_lat, location_lng);
                     map = new google.maps.Map(document.getElementById('map'), {
                         center: pyrmont,
@@ -789,8 +779,6 @@
                             var place_id = place["place_id"];
                             location_lat = place["geometry"]["location"].lat();
                             location_lng = place["geometry"]["location"].lng();
-                            console.log(location_lat);
-                            console.log(location_lng);
 
                             var pyrmont = new google.maps.LatLng(location_lat, location_lng);
                             map = new google.maps.Map(document.getElementById('map'), {
