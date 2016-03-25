@@ -650,6 +650,9 @@
                     var place_id = place["place_id"];
                     location_lat = place["geometry"]["location"].lat();
                     location_lng = place["geometry"]["location"].lng();
+                    $('#lat').val(location_lat);
+                    $('#lng').val(location_lng);
+
 
                     var pyrmont = new google.maps.LatLng(location_lat, location_lng);
                     map = new google.maps.Map(document.getElementById('map'), {
@@ -787,6 +790,9 @@
                             var place_id = place["place_id"];
                             location_lat = place["geometry"]["location"].lat();
                             location_lng = place["geometry"]["location"].lng();
+                            $('#lat').val(location_lat);
+                            $('#lng').val(location_lng);
+
 
                             var pyrmont = new google.maps.LatLng(location_lat, location_lng);
                             map = new google.maps.Map(document.getElementById('map'), {
