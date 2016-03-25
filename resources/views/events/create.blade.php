@@ -93,7 +93,7 @@
 					<div class="form-group" id="descprip" style="display: none">
                         <label for="description">@lang('frontend.description')</label>
                         @if (isset($event_clone))
-                            <textarea class="textarea form-control" type="textarea" id="description" name="description", maxlength="500" onkeydown="if(event.keyCode == 13){ if (event.shiftKey==1) { return true;} else { return false;}}" rows="10">{{$event_clone['description']}}</textarea>
+                            <textarea class="textarea form-control" type="textarea" id="description" name="description", maxlength="500" onkeydown="if(e.keyCode == 13){ if (e.shiftKey==1) { return true;} else { return false;}}" rows="10">{{$event_clone['description']}}</textarea>
                         @else
 						{!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}
                         @endif
