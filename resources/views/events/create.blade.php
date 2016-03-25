@@ -308,6 +308,7 @@
       <script src="{{ asset('assets/js/bootbox.js') }}"></script>
     <script>
         $('body').on("click", ".submit", function(e) {
+            console.log('lol');
             event.preventDefault();
             if($(this).hasClass('publish')){
                 $('#active').val('Publish');
