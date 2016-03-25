@@ -29,7 +29,7 @@ class SiteMap extends Controller {
     {
         $events = Cache::remember('users', 50, function()
         {
-            return DB::table('users')->get();
+            return DB::table('events')->get();
         });
 
         $content = View::make('sitemap', ['events' => $events]);
