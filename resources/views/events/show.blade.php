@@ -71,7 +71,7 @@
   </div>
         {{--@if(Sentinel::getUser()->id == )--}}
   <div class="show-details" @if(Sentinel::check() && Sentinel::getUser()->id == $event->author_id) ? style="display: block" : style="display:none"  @endif>
-    Share this event
+    Share this event {{var_dump(Sentinel::getUser()->id)}}
   </div>
 
 </div>
