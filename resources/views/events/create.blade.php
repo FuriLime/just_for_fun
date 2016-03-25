@@ -93,7 +93,7 @@
 					<div class="form-group" id="descprip" style="display: none">
                         <label for="description">@lang('frontend.description')</label>
                         @if (isset($event_clone))
-                            <textarea class="textarea form-control" type="textarea" id="description" name="description", maxlength="500" onkeydown="if(event.keyCode == 13){ if (event.shiftKey==1) { return true;} else { return false;}}">{{$event_clone['description']}}</textarea>
+                            <textarea class="textarea form-control" type="textarea" id="description" name="description", maxlength="500" rows="10">{{$event_clone['description']}}</textarea>
                         @else
 						{!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}
                         @endif
@@ -345,10 +345,16 @@
 
     <script>
     $(document).ready(function() {
-
+        
         $('.form-control').keypress(function (e) {
+            $('.form-control').keydown(function(e){
+                if (e.shiftKey){
+                    console.log('lol');
+                };
+            });
             if (e.which == 13) {
                 e.preventDefault();
+
                 var index = $('.form-control').index(this) + 1;
                 $('.form-control').eq(index).attr("style", "display: block").focus();
                 switch($('.form-control').index(this)) {
@@ -357,6 +363,7 @@
                         $('#description').focus();
                         break;
                     case 2:
+
                         $('#end_time_event').attr("style", "display: block");
                         $('#finish').focus();
                         break;
