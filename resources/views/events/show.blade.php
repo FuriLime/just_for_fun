@@ -155,7 +155,10 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 				<div id="country">{{ $event['country'] }}</div>
 				<div style="height: 400px;" id="map_canvas"></div>
 			</div>
-			
+
+            <div class="date">
+                {{$event->start}}
+            </div>
 			
 			<div class="input-group" id="learn_more" style="display:none">
 				<button id="learn-more-btn" class="btn btn-default">
