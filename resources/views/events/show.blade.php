@@ -208,7 +208,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 	
 <script>
     @if(!Sentinel::check())
-//        $('#show_detail').attr('style', 'display:none');
+        $('#show_detail').attr('style', 'display:none');
         $('#show_detail').click(function(e){
             e.preventDefault();
             return false;
