@@ -644,7 +644,7 @@
                     location_lng = place["geometry"]["location"].lng();
                     $('#lat').val(location_lat);
                     console.log(location_lng);
-
+console.log($('#lat').val());
                     var pyrmont = new google.maps.LatLng(location_lat, location_lng);
                     map = new google.maps.Map(document.getElementById('map'), {
                         center: pyrmont,
