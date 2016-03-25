@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteMap.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteMap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/sitemap.blade.php" afterPath="$PROJECT_DIR$/resources/views/sitemap.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -38,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SiteMap.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SiteMap.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SiteMap.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5026178" vertical-offset="42" max-vertical-offset="645">
+            <state vertical-scroll-proportion="-10.75" vertical-offset="72" max-vertical-offset="645">
               <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
               <folding />
             </state>
@@ -68,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sitemap.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sitemap.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/sitemap.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="255">
-              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.13089006" vertical-offset="0" max-vertical-offset="573">
+              <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -144,9 +144,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/twitterController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/resources/views/sitemap.blade.php" />
         <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SiteMap.php" />
+        <option value="$PROJECT_DIR$/resources/views/sitemap.blade.php" />
       </list>
     </option>
   </component>
@@ -296,12 +296,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-03907" summary="readable url">
-      <created>1458813923295</created>
-      <option name="number" value="03907" />
-      <option name="project" value="LOCAL" />
-      <updated>1458813923304</updated>
     </task>
     <task id="LOCAL-03908" summary="readable url">
       <created>1458814047090</created>
@@ -591,7 +585,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458889116686</updated>
     </task>
-    <option name="localTasksCounter" value="3956" />
+    <task id="LOCAL-03956" summary="readable url">
+      <created>1458889143015</created>
+      <option name="number" value="03956" />
+      <option name="project" value="LOCAL" />
+      <updated>1458889143015</updated>
+    </task>
+    <option name="localTasksCounter" value="3957" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1022,6 +1022,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SiteMap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.75" vertical-offset="72" max-vertical-offset="645">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.0833335" vertical-offset="2650" max-vertical-offset="3615">
@@ -1032,16 +1040,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/sitemap.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="255">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SiteMap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5026178" vertical-offset="42" max-vertical-offset="645">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.13089006" vertical-offset="0" max-vertical-offset="573">
+          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
           <folding />
         </state>
       </provider>
