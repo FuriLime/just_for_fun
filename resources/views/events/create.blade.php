@@ -346,12 +346,10 @@
     <script>
     $(document).ready(function() {
         
-        $('.form-control').keypress(function (e) {
-            $('.form-control').keydown(function(e){
-                if (e.shiftKey){
-                    console.log('lol');
-                };
-            });
+        $('.form-control').keydown(function (e) {
+            if (e.shiftKey){
+                console.log('lol');
+            };
             if (e.which == 13) {
                 e.preventDefault();
 
