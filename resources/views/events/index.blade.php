@@ -56,13 +56,13 @@ Events List
 						@endif
 					</td>
 					<td>
-						<a href="{{ route('events.show', $event->uuid) }}">
+						<a href="{{ route('events.show', $event->readable_url) }}">
 							<i class="livicon" data-name="info" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="view event"></i>
 						</a>
-						<a href="{{ route('events.edit', $event->uuid) }}">
+						<a href="{{ route('events.edit', $event->readable_url) }}">
 							<i class="livicon" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="edit event"></i>
 						</a>
-                        <a href="{{ route('events.clone', $event->uuid) }}">
+                        <a href="{{ route('events.clone', $event->readable_url) }}">
                             <i class="livicon" data-name="clone" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="clone event"></i>
                         </a>
 						<a href="{{ route('events.confirm-delete', $event->uuid) }}" data-toggle="modal" data-target="#delete_confirm">

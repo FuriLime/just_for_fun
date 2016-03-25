@@ -28,5 +28,18 @@ class Kernel extends ConsoleKernel
 //        $schedule->command('inspire')
 //                 ->hourly();
         $schedule->command('event_test:remove')->everyMinute();
+
+        $schedule->command('backup:run',['--only-files' => '','--suffix' => '_files'])
+            ->weekly()->mondays()->at('03:00')
+            ->description('My-project Files backup')
+            ->sendOutputTo('storage/logs/backup.log')
+            ->before(function(){
+                Log::info('Commencing Files Backup');
+            })
+            ->after(function(){
+                Log::info('My-project Files backup complete');
+            });
     }
+
+
 }

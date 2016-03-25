@@ -53,10 +53,9 @@ class FacebookController extends Controller
         $mc = new Mailchimp($apiKey);
         $listId = Config::get('mailchimp.listId');
         $userFace = Socialite::driver('facebook')->user();
-        $user = User::whereemail($userFace->getEmail(), $userFace->getName())->first();
+        $user = User::whereemail($userFace->getEmail())->first();
         if(!$user){
             $user = new User;
-            $user->first_name = $userFace->getName();
             $user->email = $userFace->getEmail();
             $user->save();
             $account_user = new Account();
@@ -71,11 +70,13 @@ class FacebookController extends Controller
             $rolew = [
                 0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
             ];
-            $hash_email = md5($user->email);
-            $mc->post("lists/$listId/members", [
-                'email_address' => $user->email,
-                'status'        => 'subscribed',
-            ]);
+            $member_email = md5($user->email);
+            if(!$mc->get("lists/$listId/members/$member_email")){
+                $mc->post("lists/$listId/members", [
+                    'email_address' => $user->email,
+                    'status'        => 'subscribed',
+                ]);
+            }
             $role->users()->attach($rolew);
             $user_profile = new UserProfile();
             $user_profile->user_id = $user->id;

@@ -5,10 +5,12 @@ namespace App;
 use App\Custom\AutomaticUuidKey;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Rolies106\EloquentSluggable\SluggableInterface;
+use Rolies106\EloquentSluggable\SluggableTrait;
 
-class Event extends Model
+class Event extends Model implements SluggableInterface
 {
-    use AutomaticUuidKey, SoftDeletes;
+    use AutomaticUuidKey,SluggableTrait, SoftDeletes;
 
     /**
      * The attributes that should be mutated to dates.
@@ -27,6 +29,12 @@ class Event extends Model
     /**
      * Get the account that owns the event.
      */
+    protected $sluggable = [
+        'build_from'        => 'title',
+        'save_to'           => 'readable_url',
+    ];
+
+
     public function account()
     {
         return $this->belongsTo('App\Account');

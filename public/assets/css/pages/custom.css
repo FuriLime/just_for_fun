@@ -1,0 +1,32 @@
+.sign-up-form h1 {
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+.panel-body-success {
+    background-color: #dff0d8;
+}
+.panel-body-primary {
+    color: #fff;
+    background-color: #337ab7;
+}
+.panel-body-info {
+    color: #31708f;
+    background-color: #d9edf7;
+}
+.panel-body-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+}
+.panel-body-danger {
+    color: #a94442;
+    background-color: #f2dede;
+}
+.cancel-saving {
+    position: fixed;
+    top: 40px;
+    right: 30px;
+    font-size: 35px;
+    color: #6D6767;
+    cursor: pointer;
+}

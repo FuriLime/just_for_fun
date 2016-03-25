@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {!! SEO::generate() !!}
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -16,7 +17,6 @@
 
     <title>
         @section('title')
-        Page
         @show
     </title>
     <!--global css starts-->
@@ -31,12 +31,12 @@
 
 <body>
 <!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KGDVW9&gtm_auth=5wQO1SzIu7QKQs73d13OGw&gtm_preview=env-33&gtm_cookies_win=x"
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id={{env('GTM_ID')}}"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            '//www.googletagmanager.com/gtm.js?id='+i+dl+'&gtm_auth=5wQO1SzIu7QKQs73d13OGw&gtm_preview=env-33&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+            '//www.googletagmanager.com/gtm.js?id='+i+dl+'&gtm_auth={{env('GTM_AUTH')}}&gtm_preview=env-33&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KGDVW9');</script>
 <!-- End Google Tag Manager -->
 <!-- Header Start -->

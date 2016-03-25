@@ -18,9 +18,12 @@ use App\Account;
 use App\User;
 use App\UserProfile;
 use App\Role;
+use App\AccountType;
 use GeoIP;
 use DB;
-use Slugify;
+use OpenGraph;
+use Twitter;
+use SEOMeta;
 
 class EventsController extends Controller {
 
@@ -32,7 +35,14 @@ class EventsController extends Controller {
 
     public function index()
     {
+
         $events = Event::latest()->get();
+        SEOMeta::setTitle('Events');
+        SEOMeta::setDescription('user`s events');
+        SEOMeta::addKeyword(['event', 'show', 'timezone', 'time']);
+        OpenGraph::setDescription('Show events');
+        OpenGraph::setTitle('Events');
+        OpenGraph::addProperty('type', 'articles');
         foreach ($events as $event) {
             $date = new \DateTime($event->start, new \DateTimeZone('UTC'));
             $date->setTimezone(new \DateTimeZone($event->timezone));
@@ -92,7 +102,20 @@ class EventsController extends Controller {
         if(session()->get('timezone')) {
             $my_time_zone = session()->get('timezone');
         }
+        SEOMeta::setTitle('Create event');
+        SEOMeta::setDescription('Create your event');
+        SEOMeta::addMeta('article:country', $location['country'], 'property');
+        SEOMeta::addMeta('article:city', $location['city'], 'property');
+        SEOMeta::addMeta('article:continent', $location['continent'], 'property');
+        SEOMeta::addMeta('article:timezone', $my_time_zone, 'property');
+//        SEOMeta::addMeta('article:slug', $timezone_select, 'property');
+        SEOMeta::addKeyword(['event', 'create', 'timezone']);
 
+        OpenGraph::setDescription('Create your event');
+        OpenGraph::setTitle('Create event');
+        OpenGraph::setUrl($request->path());
+        OpenGraph::addProperty('type', 'article');
+        OpenGraph::addProperty('locale', 'en-us');
         $duration = strtotime($finish_date) - strtotime($start_date);
         //hours
         if ($duration>= 3600 && $duration < 86400){
@@ -203,6 +226,8 @@ class EventsController extends Controller {
         $store_info->timezone = Input::get('timezone');
         $store_info->finish = Input::get('finish');
         $store_info->start = Input::get('start');
+        $store_info->lat = Input::get('lat');
+        $store_info->lng = Input::get('lng');
 
         if(Sentinel::check()){
             $userId = Sentinel::getUser()->id;
@@ -217,7 +242,7 @@ class EventsController extends Controller {
             $store_info->account_id = NULL;
         }
         $store_info->permanent_url = Uuid::uuid4();
-        $store_info->readable_url = rand()%50 .'-'.Slugify::slugify(Input::get('title'));
+//        $store_info->readable_url = Uuid::uuid4();
         $store_info->status = Input::get('active');
 
         if(Sentinel::check()) {
@@ -240,8 +265,6 @@ class EventsController extends Controller {
 
         // Is the user logged in?
         if (Sentinel::check()) {
-//          dd($store_info);
-//        event::create($store_info);
             $store_info->save();
             Session::forget('timezone');
             Session::forget('start');
@@ -262,7 +285,7 @@ class EventsController extends Controller {
      * @param  int  $uuid
      * @return Response
      */
-    public function show($uuid)
+    public function show($readable_url)
     {
 
         $ip = $_SERVER["REMOTE_ADDR"];
@@ -275,7 +298,23 @@ class EventsController extends Controller {
         else{
             $my_time_zone = 'UTC';
         }
-        $event = Event::whereUuid($uuid)->first();
+        $event = Event::whereReadable_url($readable_url)->first();
+        SEOMeta::setTitle($event->title);
+        SEOMeta::setDescription($event->description);
+        SEOMeta::addMeta('article:start', $event->start, 'property');
+        SEOMeta::addMeta('article:finish', $event->finish, 'property');
+        SEOMeta::addMeta('article:stutus', $event->status, 'property');
+        SEOMeta::addMeta('article:location', $event->location, 'property');
+        SEOMeta::addMeta('article:timezone', $event->timezone, 'property');
+        SEOMeta::addMeta('article:slug', $event->readable_url, 'property');
+        SEOMeta::addKeyword(['event', $event->title, $event->status]);
+
+        OpenGraph::setDescription($event->resume);
+        OpenGraph::setTitle($event->title);
+        OpenGraph::setUrl('http://event.test-y-sbm.com/events/'. $event->readable_url);
+        OpenGraph::addProperty('type', 'article');
+        OpenGraph::addProperty('locale', 'en-us');
+
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($my_time_zone));
         $event_start_zero = $date;
@@ -303,7 +342,7 @@ class EventsController extends Controller {
      * @param  int  $uuid
      * @return Response
      */
-    public function edit($uuid)
+    public function edit($readable_url)
     {
         if(session()->get('start')) {
             $event['start'] = session()->get('start');
@@ -315,7 +354,22 @@ class EventsController extends Controller {
             $event['timezone'] = session()->get('timezone');
         }
         //$event = Event::findOrFail($id);
-        $event = Event::whereUuid($uuid)->first();
+        $event = Event::whereReadable_url($readable_url)->first();
+        SEOMeta::setDescription($event->description);
+        SEOMeta::addMeta('article:start', $event->start, 'property');
+        SEOMeta::addMeta('article:finish', $event->finish, 'property');
+        SEOMeta::addMeta('article:stutus', $event->status, 'property');
+        SEOMeta::addMeta('article:location', $event->location, 'property');
+        SEOMeta::addMeta('article:timezone', $event->timezone, 'property');
+        SEOMeta::addMeta('article:slug', $event->readable_url, 'property');
+        SEOMeta::addKeyword(['event', $event->title, $event->status]);
+
+        OpenGraph::setDescription($event->resume);
+        OpenGraph::setTitle($event->title);
+        OpenGraph::setUrl('http://event.test-y-sbm.com/events/'. $event->readable_url);
+        OpenGraph::addProperty('type', 'article');
+        OpenGraph::addProperty('locale', 'en-us');
+
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($event['timezone']));
         $event_start_zero = $date;
@@ -341,7 +395,6 @@ class EventsController extends Controller {
         }else {
             $event['timezone'] = $event['timezone'];
         }
-//        $event['timezone'] =$event['timezone'];
         $event['duration'] = strtotime($event['finish']) - strtotime($event['start']);
 //minutes
         if ($event['duration']< 3600 ) {
@@ -430,6 +483,8 @@ class EventsController extends Controller {
         $event['City'] = $store_info['City'];
         $event['State'] = $store_info['State'];
         $event['Country'] = $store_info['Country'];
+        $event['lat'] = $store_info['lat'];
+        $event['lng'] = $store_info['lng'];
         if(Sentinel::check()) {
             $event['test'] = Input::get('test');
         }else{$event['test'] = "1"; }
@@ -449,7 +504,6 @@ class EventsController extends Controller {
         $event['start'] = date($event_start_zero->format('Y-m-d H:i'));
         $event['finish'] = date($event_finish_zero->format('Y-m-d H:i'));
 //        $event['timezone'] =$event['timezone'];
-
         $event->update();
 
         // Is the user logged in?
@@ -461,7 +515,7 @@ class EventsController extends Controller {
             return redirect('events')->with('success', Lang::get('message.success.update'));
         }
     }
-    public function cloned($uuid)
+    public function cloned($readable_url)
     {
 
         if(session()->get('start')) {
@@ -474,7 +528,24 @@ class EventsController extends Controller {
             $event_clone['timezone'] = session()->get('timezone');
         }
         //$event = Event::findOrFail($id);
-        $event_clone = Event::whereUuid($uuid)->first();
+        $event_clone = Event::whereReadable_url($readable_url)->first();
+
+        SEOMeta::setTitle($event_clone->title);
+        SEOMeta::setDescription($event_clone->description);
+        SEOMeta::addMeta('article:start', $event_clone->start, 'property');
+        SEOMeta::addMeta('article:finish', $event_clone->finish, 'property');
+        SEOMeta::addMeta('article:stutus', $event_clone->status, 'property');
+        SEOMeta::addMeta('article:location', $event_clone->location, 'property');
+        SEOMeta::addMeta('article:timezone', $event_clone->timezone, 'property');
+        SEOMeta::addMeta('article:slug', $event_clone->readable_url, 'property');
+        SEOMeta::addKeyword(['event', $event_clone->title, $event_clone->status]);
+
+        OpenGraph::setDescription($event_clone->resume);
+        OpenGraph::setTitle($event_clone->title);
+        OpenGraph::setUrl('http://event.test-y-sbm.com/events/'. $event_clone->readable_url);
+        OpenGraph::addProperty('type', 'article');
+        OpenGraph::addProperty('locale', 'en-us');
+
         $date = new \DateTime($event_clone['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($event_clone['timezone']));
         $event_start_zero = $date;
@@ -553,7 +624,7 @@ class EventsController extends Controller {
     }
 
 
-    public function clonne($uuid, Request $request)
+    public function clonne(Request $request)
     {
         if(isset($_POST['timezone'])) {
             session()->put('timezone', $_POST['timezone']);
@@ -571,22 +642,19 @@ class EventsController extends Controller {
             'title' => 'required|max:80',
             'description' => 'max:500',
             'location' => 'max:255',
+            'location' => 'max:255',
             'event_url' => 'max:255',
             'timezone' => 'required',
             'start' => 'required',
             'finish' => 'required',
         ]);
         //$event = Event::findOrFail($uuid);
-        $event = Event::whereUuid($uuid)->first();
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
         $store_info = $request->all();
-        $eventold = Event::whereUuid($uuid)->first();
-
         $event_clone = new Event();
         $event_clone['title'] = $store_info['title'];
         if(Sentinel::check()){
             $userId = Sentinel::getUser()->id;
-            $user = User::find($userId);
             $account= DB::table('account_user')->select('account_user.account_id')->where('account_user.user_id', '=', $userId)->get('account_id');
             $event_clone['account_id'] = $account[0]->account_id;
             $event_clone['author_id'] = $userId;
@@ -597,7 +665,6 @@ class EventsController extends Controller {
             $event_clone['editor_id'] = NULL;
         }
         $event_clone['permanent_url'] = Uuid::uuid4();
-        $event_clone['readable_url'] = Uuid::uuid4();
         $event_clone['description'] = $store_info['description'];
         $event_clone['location'] = $store_info['location'];
         $event_clone['timezone'] = $store_info['timezone'];
@@ -605,6 +672,8 @@ class EventsController extends Controller {
         $event_clone['City'] = $store_info['City'];
         $event_clone['State'] = $store_info['State'];
         $event_clone['Country'] = $store_info['Country'];
+        $event_clone['lng'] = $store_info['lng'];
+        $event_clone['lat'] = $store_info['lat'];
         if(Sentinel::check()) {
             $event_clone['test'] = Input::get('test');
         }else{$event_clone['test'] = "1"; }
@@ -690,6 +759,20 @@ class EventsController extends Controller {
      */
     public function addToCalendar(Request $request)
     {
+        //get account type
+
+        $user_id = Sentinel::getUser()->id;
+        $acc = DB::table('account_user')->where('user_id', '=', $user_id)->get(['account_id']);
+        $acc_id = $acc[0]->account_id;
+        $acc_type = DB::table('accounts')->where('id','=',$acc_id )->get(['account_type_id']);
+        $acc_type_id= $acc_type[0]->account_type_id;
+
+        $acc_type_name = DB::table('account_types')->where('id','=',$acc_type_id )->get(['name']);
+        $acc_type_name= $acc_type_name[0]->name;
+
+        //end
+
+
         $info = $request->all();
 
         $uuid = $info['uuid'];
@@ -717,8 +800,14 @@ class EventsController extends Controller {
             $duration = $hourDifference.$minutesLeft;
         }
         $result = $error_massage = $calendar_link = '';
-        $desc = urlencode($event['description']);
+        $dec_title = "This calendar entry has been created with a " .$acc_type_name." Personal Account from EventFellows";
+        $dec_footer = "Powered by EventFellows - start creating calendar entries for your own event now. https://eventfellows.com/referrer/{$event->uuid} ";
+
+
         $loc = urlencode($event['location']);
+        $desc = urlencode($dec_title."\r\n")."-----------------------------------------------------------".
+            urlencode("\r\n".$event['description'].
+                "\r\n\n---------------------------------------------------".$dec_footer);
         $title = urlencode($event['title']);
         switch ($calendar) {
 

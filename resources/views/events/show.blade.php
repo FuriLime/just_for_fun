@@ -1,10 +1,10 @@
 @extends('layouts/default')
 
 {{-- Page title --}}
-@section('title')
-{{ $event['title'] }}
-@parent
-@stop
+{{--@section('title')--}}
+{{--{{ $event['title'] }}--}}
+{{--@parent--}}
+{{--@stop--}}
 
 {{-- page level styles --}}
 @section('header_styles')
@@ -21,6 +21,26 @@
     }
 	</style>
 @stop
+@section('top')
+    <div class="breadcum">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="{{ route('home') }}"> <i class="livicon icon3 icon4" data-name="home" data-size="18" data-loop="true" data-c="#3d3d3d" data-hc="#3d3d3d"></i>Dashboard
+                    </a>
+                </li>
+                <li class="hidden-xs">
+                    <i class="livicon icon3" data-name="angle-double-right" data-size="18" data-loop="true" data-c="#01bc8c" data-hc="#01bc8c"></i>
+                    <a href="{{ URL::to('events') }}">Events</a>
+                </li>
+            </ol>
+            <div class="pull-right">
+                <i class="livicon icon3" data-name="doc-landscape" data-size="20" data-loop="true" data-c="#3d3d3d" data-hc="#3d3d3d"></i> {{ $event['title'] }}
+            </div>
+        </div>
+    </div>
+@stop
+
 <div class="share-event-top">
   <div class="container share-container">
     <div class="row content">
@@ -49,30 +69,13 @@
     </div>
     
   </div>
-  <div class="show-details">
+
+  <div class="show-details" id="show_detail">
     Share this event
   </div>
 </div>
 {{-- breadcrumb --}}
-@section('top')
-<div class="breadcum">
-	<div class="container">
-		<ol class="breadcrumb">
-			<li>
-				<a href="{{ route('home') }}"> <i class="livicon icon3 icon4" data-name="home" data-size="18" data-loop="true" data-c="#3d3d3d" data-hc="#3d3d3d"></i>Dashboard
-				</a>
-			</li>
-			<li class="hidden-xs">
-				<i class="livicon icon3" data-name="angle-double-right" data-size="18" data-loop="true" data-c="#01bc8c" data-hc="#01bc8c"></i>
-				<a href="{{ URL::to('events') }}">Events</a>
-			</li>
-		</ol>
-		<div class="pull-right">
-			<i class="livicon icon3" data-name="doc-landscape" data-size="20" data-loop="true" data-c="#3d3d3d" data-hc="#3d3d3d"></i> {{ $event['title'] }}
-		</div>
-	</div>
-</div>
-@stop
+
 
 @section('content')
 <!-- Container Section Start -->
@@ -144,15 +147,10 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 				</div>
 				
 			</div>
-			
-      
-
-			
 			<div id="hidden_address">
 				<div id="address">{{ $event['location'] }}</div>
 				<div style="height: 400px;" id="map_canvas"></div>
 			</div>
-			
 			
 			
 			<div class="input-group" id="learn_more" style="display:none">
@@ -194,12 +192,15 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 	
 <script>
-    dataLayer=[{
-        'eventName': '{{$event->title}}',
-        'eventDiscription': '{{$event->description}}',
-        'eventPeriod': '{{$event->period}}',
-        'eventLocation': '{{$event->location}}'
-    }];
+    @if(!Sentinel::check())
+//        $('#show_detail').attr('style', 'display:none');
+        $('#show_detail').click(function(e){
+            e.preventDefault();
+            return false;
+        })
+
+        {{--@endif--}}
+    @endif
     </script>
 
 	<script>
