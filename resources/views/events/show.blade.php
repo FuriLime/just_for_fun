@@ -193,13 +193,13 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 	
 <script>
     @if(!Sentinel::check())
-    @if(Sentinel::getUser()->id != $event->author_id)
+        {{--@if(Sentinel::getUser()->id != $event->author_id)--}}
         $('#show_detail').click(function(e){
             e.preventDefault();
             return false;
         })
 
-    @endif
+        {{--@endif--}}
     @endif
     </script>
 
