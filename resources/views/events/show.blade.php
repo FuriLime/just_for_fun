@@ -157,7 +157,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 			</div>
 
             <div class="date">
-                {{$event->start}}
+                {{date("F dS, Y",strtotime($event->start))}}
             </div>
 			
 			<div class="input-group" id="learn_more" style="display:none">
