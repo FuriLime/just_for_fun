@@ -161,6 +161,12 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                 Time: {{date("H:m", strtotime($event->period))}}
                 Timezone:{{$event->timezone}}
             </div>
+
+            <div class="date">
+                {{date("F dS, Y",strtotime($event->start))}}
+                Time: {{date("H:m", strtotime($event->period))}}
+                Timezone:{{$event->timezone}}
+            </div>
 			
 			<div class="input-group" id="learn_more" style="display:none">
 				<button id="learn-more-btn" class="btn btn-default">
