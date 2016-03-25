@@ -349,36 +349,39 @@
         $('.form-control').keydown(function (e) {
             if(e.shiftKey==1){
                 if (e.which == 13) {
-                    console.log('lol');
+                    var index = $('.form-control').index(this) + 1;
+                    if ($('.form-control').index(this)==2){
+                        return true;
+                    }
                 }
-            };
-            if (e.which == 13) {
-                e.preventDefault();
-                var index = $('.form-control').index(this) + 1;
-                $('.form-control').eq(index).attr("style", "display: block").focus();
-                switch($('.form-control').index(this)) {
-                    case 0:
-                        $('#add_dicription').trigger('click');
-                        $('#description').focus();
-                        break;
-                    case 2:
-                        $('#end_time_event').attr("style", "display: block");
-                        $('#finish').focus();
-                        break;
-                    case 3:
-                        $('#time_zone_change').attr("style", "display: block");
-                        $('#time_change').trigger('click');
-                        $('.select2-selection').focus();
-                        $('.select2-selection').trigger('click');
-                        break;
-                    case 5:
-                        $("#location").trigger('change');
-                        
-                        break;
+            } else{
+                if (e.which == 13) {
+                    e.preventDefault();
+                    var index = $('.form-control').index(this) + 1;
+                    $('.form-control').eq(index).attr("style", "display: block").focus();
+                    switch($('.form-control').index(this)) {
+                        case 0:
+                            $('#add_dicription').trigger('click');
+                            $('#description').focus();
+                            break;
+                        case 2:
+                            $('#end_time_event').attr("style", "display: block");
+                            $('#finish').focus();
+                            break;
+                        case 3:
+                            $('#time_zone_change').attr("style", "display: block");
+                            $('#time_change').trigger('click');
+                            $('.select2-selection').focus();
+                            $('.select2-selection').trigger('click');
+                            break;
+                        case 5:
+                            $("#location").trigger('change');
+                            
+                            break;
+                    }
+                   
                 }
-               
             }
-
         });
         
            
