@@ -25,12 +25,10 @@ class SiteMap extends Controller {
 
     public function sitemap()
     {
-        $events = Event::remember(59) // chach this query for 59 minutes
-        ->select(["id", "updated_at"])
-            // you may want to add where clauses here according to your needs
-            ->orderBy("id", "title")
-            ->take(50000) // each Sitemap file must have no more than 50,000 URLs and must be no larger than 10MB
-            ->get();
+        $events = Cache::remember('users', 50, function()
+        {
+            return DB::table('users')->get();
+        });
 
         $content = View::make('sitemap', ['events' => $events]);
         return Response::make($content)->header('Content-Type', 'text/xml;charset=utf-8');
