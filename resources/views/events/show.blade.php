@@ -93,7 +93,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 	@endif
 	
 		<div class="col-sm-8 col-md-8">
-            {{date('Y-m-d')}}
+            {{date('Y-m-d H:m')}}
 			<div class="event-name event-show">{{$event->title}}</div>
 			<div class="event_period event-show">{{$event->period}}</div>
 			
