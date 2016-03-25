@@ -345,11 +345,11 @@
 
     <script>
     $(document).ready(function() {
-        $('form-control').keydown(function(){
+        $('.form-control').keydown(function(){
             if (e.shiftKey){
                 console.log('lol');
             };
-        })
+        });
         $('.form-control').keypress(function (e) {
             
             if (e.which == 13) {
