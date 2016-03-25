@@ -642,7 +642,7 @@
                     var place_id = place["place_id"];
                     location_lat = place["geometry"]["location"].lat();
                     location_lng = place["geometry"]["location"].lng();
-                    console.log(location_lat);
+                    $('#lat').val(location_lat);
                     console.log(location_lng);
 
                     var pyrmont = new google.maps.LatLng(location_lat, location_lng);
