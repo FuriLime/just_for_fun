@@ -801,17 +801,16 @@ class EventsController extends Controller {
             $duration = $hourDifference.$minutesLeft;
         }
         $result = $error_massage = $calendar_link = '';
-//        $dec_title = "This calendar entry has been created with a " .$acc_type_name." Personal Account from EventFellows";
+        $dec_title = "This calendar entry has been created with a Free Personal Account from EventFellows";
         $dec_footer = "Powered by EventFellows - start creating calendar entries for your own event now. https://eventfellows.com/referrer/{$event->uuid} ";
 
 
         $loc = urlencode($event['location']);
-//        $desc = urlencode($dec_title."\r\n")."-------------------------------------------------------------------------------------------------------".
-//            urlencode("\r\n".$event['description']."\r\n".
-//                "-------------------------------------------------------------------------------------------------------\r\n".$dec_footer);
+        $desc = urlencode($dec_title."\r\n")."-------------------------------------------------------------------------------------------------------".
+            urlencode("\r\n".$event['description']."\r\n".
+                "-------------------------------------------------------------------------------------------------------\r\n".$dec_footer);
         $title = urlencode($event['title']);
 
-        $desc = urlencode($event['description']);
         switch ($calendar) {
 
             case 'Google':
