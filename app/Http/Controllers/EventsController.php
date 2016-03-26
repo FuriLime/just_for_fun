@@ -760,16 +760,16 @@ class EventsController extends Controller {
     public function addToCalendar(Request $request)
     {
         //get account type
-        if (Sentinel::check()){
-            $user_id = Sentinel::getUser()->id;
-        $acc = DB::table('account_user')->where('user_id', '=', $user_id)->get(['account_id']);
-        $acc_id = $acc[0]->account_id;
-        $acc_type = DB::table('accounts')->where('id', '=', $acc_id)->get(['account_type_id']);
-        $acc_type_id = $acc_type[0]->account_type_id;
-
-        $acc_type_name = DB::table('account_types')->where('id', '=', $acc_type_id)->get(['name']);
-        $acc_type_name = $acc_type_name[0]->name;
-    }
+//        if (Sentinel::check()){
+//            $user_id = Sentinel::getUser()->id;
+//        $acc = DB::table('account_user')->where('user_id', '=', $user_id)->get(['account_id']);
+//        $acc_id = $acc[0]->account_id;
+//        $acc_type = DB::table('accounts')->where('id', '=', $acc_id)->get(['account_type_id']);
+//        $acc_type_id = $acc_type[0]->account_type_id;
+//
+//        $acc_type_name = DB::table('account_types')->where('id', '=', $acc_type_id)->get(['name']);
+//        $acc_type_name = $acc_type_name[0]->name;
+//    }
 
         //end
 
@@ -801,14 +801,14 @@ class EventsController extends Controller {
             $duration = $hourDifference.$minutesLeft;
         }
         $result = $error_massage = $calendar_link = '';
-        $dec_title = "This calendar entry has been created with a " .$acc_type_name." Personal Account from EventFellows";
+//        $dec_title = "This calendar entry has been created with a " .$acc_type_name." Personal Account from EventFellows";
         $dec_footer = "Powered by EventFellows - start creating calendar entries for your own event now. https://eventfellows.com/referrer/{$event->uuid} ";
 
 
         $loc = urlencode($event['location']);
-        $desc = urlencode($dec_title."\r\n")."-------------------------------------------------------------------------------------------------------".
-            urlencode("\r\n".$event['description']."\r\n".
-                "-------------------------------------------------------------------------------------------------------\r\n".$dec_footer);
+//        $desc = urlencode($dec_title."\r\n")."-------------------------------------------------------------------------------------------------------".
+//            urlencode("\r\n".$event['description']."\r\n".
+//                "-------------------------------------------------------------------------------------------------------\r\n".$dec_footer);
         $title = urlencode($event['title']);
 
         $desc = urlencode($event['description']);
