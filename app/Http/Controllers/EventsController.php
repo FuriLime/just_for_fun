@@ -780,6 +780,7 @@ class EventsController extends Controller {
         $calendar = $info['calendar'];
 
         $event = Event::whereUuid($uuid)->first();
+        dd($event);
         // perform events time to 00.00 timezone
         $date = new \DateTime($event['start'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone($event->timezone));
