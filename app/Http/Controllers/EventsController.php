@@ -809,6 +809,8 @@ class EventsController extends Controller {
             urlencode("\r\n".$event['description']."\r\n".
                 "-------------------------------------------------------------------------------------------------------\r\n".$dec_footer);
         $title = urlencode($event['title']);
+
+        $desc = urlencode($event['description']);
         switch ($calendar) {
 
             case 'Google':
