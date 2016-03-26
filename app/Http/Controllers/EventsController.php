@@ -760,15 +760,16 @@ class EventsController extends Controller {
     public function addToCalendar(Request $request)
     {
         //get account type
-
-        $user_id = Sentinel::getUser()->id;
+        if (Sentinel::check()){
+            $user_id = Sentinel::getUser()->id;
         $acc = DB::table('account_user')->where('user_id', '=', $user_id)->get(['account_id']);
         $acc_id = $acc[0]->account_id;
-        $acc_type = DB::table('accounts')->where('id','=',$acc_id )->get(['account_type_id']);
-        $acc_type_id= $acc_type[0]->account_type_id;
+        $acc_type = DB::table('accounts')->where('id', '=', $acc_id)->get(['account_type_id']);
+        $acc_type_id = $acc_type[0]->account_type_id;
 
-        $acc_type_name = DB::table('account_types')->where('id','=',$acc_type_id )->get(['name']);
-        $acc_type_name= $acc_type_name[0]->name;
+        $acc_type_name = DB::table('account_types')->where('id', '=', $acc_type_id)->get(['name']);
+        $acc_type_name = $acc_type_name[0]->name;
+    }
 
         //end
 
