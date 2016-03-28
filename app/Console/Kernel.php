@@ -27,7 +27,7 @@ class Kernel extends ConsoleKernel
     {
 //        $schedule->command('inspire')
 //                 ->hourly();
-        $schedule->command('event_test:remove')->everyMinute();
+//        $schedule->command('event_test:remove')->everyMinute();
 
         $schedule->command('backup:run',['--only-files' => '','--suffix' => '_files'])
             ->weekly()->mondays()->at('03:00')
