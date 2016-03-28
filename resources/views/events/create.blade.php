@@ -45,7 +45,6 @@
 
                     </h4>
                 </div>
-                {{date('H:m')}}
                 <div class="panel-body">
                     @if (isset($event))
                         <h3 class="primary add_event_section_link">@lang('frontend.edit_event_text')</h3>
