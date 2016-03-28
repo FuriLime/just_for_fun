@@ -30,7 +30,7 @@ class Kernel extends ConsoleKernel
 //        $schedule->command('event_test:remove')->everyMinute();
 
         $schedule->command('backup:run --only-files')
-            ->weekly()->mondays()->at('14:10')
+            ->weekly()->mondays()->at('14:50')
             ->description('My-project Files backup');
     }
 
