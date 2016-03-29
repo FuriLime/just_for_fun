@@ -11,7 +11,7 @@ return [
              * specify individual files as well.
              */
             'include' => [
-                base_path(),
+                app_path(),
             ],
 
             /*
