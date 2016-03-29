@@ -12,6 +12,7 @@ return [
              */
             'include' => [
                 app_path(),
+                base_path().'/config',
             ],
 
             /*
