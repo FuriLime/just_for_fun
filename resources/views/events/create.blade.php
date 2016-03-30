@@ -351,13 +351,25 @@
         $('.form-control').keydown(function (e) {
             if(e.shiftKey==1){
                 if (e.which == 13) {
-                    var index = $('.form-control').index(this) + 1;
                     if ($('.form-control').index(this)==2){
                         return true;
                     }
                 }
-            } else{
-                if (e.which == 13) {
+            } else {
+                    if (e.which == 13) {
+                        e.preventDefault();
+                        $('#end_time_event').attr("style", "display: block");
+                        $('#finish').focus();
+                }
+            }
+        });
+        $('.form-control').keypress(function (e) {
+            
+            if($('.form-control').index(this)==2){
+                return;
+            }
+            else{
+            if (e.which == 13) {
                     e.preventDefault();
                     var index = $('.form-control').index(this) + 1;
                     $('.form-control').eq(index).attr("style", "display: block").focus();
@@ -367,8 +379,7 @@
                             $('#description').focus();
                             break;
                         case 2:
-                            $('#end_time_event').attr("style", "display: block");
-                            $('#finish').focus();
+                            
                             break;
                         case 3:
                             $('#time_zone_change').attr("style", "display: block");
@@ -385,7 +396,6 @@
                 }
             }
         });
-        
            
         @if (isset($event))
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
