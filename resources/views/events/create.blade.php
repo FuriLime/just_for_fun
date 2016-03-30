@@ -307,10 +307,12 @@
      <script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
       <script src="{{ asset('assets/js/bootbox.js') }}"></script>
     <script>
-        $('html').on("click", ".submit", function(e) {
+        $(document).on("click", ".submit", function(e) {
+            
             e.preventDefault();
             if($(this).hasClass('publish')){
                 $('#active').val('Publish');
+                console.log('lol');
             }
             else{
                 $('#active').val('Draft');
@@ -356,8 +358,7 @@
             } else {
                     if (e.which == 13) {
                         e.preventDefault();
-                        $('#end_time_event').attr("style", "display: block");
-                        $('#finish').focus();
+                        alert('lol');
                 }
             }
         });
@@ -377,7 +378,8 @@
                             $('#description').focus();
                             break;
                         case 2:
-                            
+                            $('#end_time_event').attr("style", "display: block");
+                            $('#finish').focus();
                             break;
                         case 3:
                             $('#time_zone_change').attr("style", "display: block");
