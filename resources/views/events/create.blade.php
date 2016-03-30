@@ -366,7 +366,7 @@
         });
         $('.form-control').keypress(function (e) {
             
-            if($('.form-control').index(this)==2){
+            if($('.form-control').index(this)==1){
                 return;
             }
             else{
