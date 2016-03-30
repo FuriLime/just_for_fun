@@ -357,8 +357,10 @@
                 }
             } else {
                     if (e.which == 13) {
-                        e.preventDefault();
-                        alert('lol');
+                        if ($('.form-control').index(this)==2){
+                            e.preventDefault();
+                            alert('lol');
+                        }
                 }
             }
         });
