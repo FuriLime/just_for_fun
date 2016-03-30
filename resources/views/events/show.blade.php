@@ -10,6 +10,7 @@
 @section('header_styles')
 	<link href="{{ asset('assets/vendors/daterangepicker/css/daterangepicker-bs3.css') }}" rel="stylesheet" type="text/css" media="screen" />
 	<link href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+	<link href="{{ asset('assets/css/pages/custom.css') }}" rel="stylesheet" type="text/css" />
 	<style>
 		.daterangepicker .range_inputs, .daterangepicker .calendar { display: none !important; }
 		.daterangepicker .ranges li:last-child { display: none; }
@@ -69,14 +70,14 @@
     </div>
     
   </div>
-@if($event->user=="1")
-  <div class="show-details" id="show_detail">
-    Share this event
-  </div>
-  @else
-  <div class="show-details disabled">
-    Share this event
-  </div>
+@if(Sentinel::check() && $event->author_id == Sentinel::getUser()->id)
+        <div class="show-details" id="show_detail">
+            Share this event
+        </div>
+    @else
+        <div class="show-details disabled">
+            Share this event
+        </div>
 @endif
 </div>
 {{-- breadcrumb --}}
@@ -88,103 +89,148 @@
 Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href="#">Start here!</a>
 </div>
 <div class="container">
-	<div class="row content event-show">
-	@if($event->test=="1")
-		<div class="col-xs-12">
-			<div class="test-event-cont">
-				<div class="test-event-red-line">
-					Тest Event
-				</div>
-			</div>
-		</div>
-	@endif
-	
-		<div class="col-sm-8 col-md-8">
-			<div class="event-name event-show">{{$event->title}}</div>
-			<div class="event_period event-show">{{$event->period}}</div>
-			
-			<div class="input-group">
-				<button id="register_but" class="btn btn-primary text-white" >
-					<i class="fa fa-pencil-square-o"></i>
-					<span>&nbsp;Register&nbsp;</span>
-					<span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three" data-size="20" data-c="#fff" data-hc="#fff" data-loop="true"></i></span>
-				</button>
-
-				<button id="add-to-calendar-btn" class="btn btn-primary text-white">
-					<i class="fa fa-calendar"></i>
-					<span>&nbsp;Add to Calendar&nbsp;</span>
-					<span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three" data-size="20" data-c="#fff" data-hc="#fff" data-loop="true"></i></span>
-					<i class="fa fa-caret-down"></i>
-				</button>
-
-				<button id="follow_but" class="btn btn-primary text-white">
-					<i class="fa fa-bookmark-o"></i>
-					<span>&nbsp;Follow&nbsp;</span>
-					<span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three" data-size="20" data-c="#fff" data-hc="#fff" data-loop="true"></i></span>
-				</button>
-
-
-			</div>
-			<!-- <div class="fb-share-button" data-href="http://test-ef.com/events/{{$event->uuid}}" data-layout="button_count"></div>
-      <g:plus action="share"></g:plus>
-      <a href="http://test-ef.com/events/{{$event->uuid}}"  text = '{{$event->title}}'class="twitter-share-button"{count} data-via="LimeFuri">Tweet</a> -->
-      <script>/*!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');*/</script>
-		<div class="input-group">
-				<button id="see-details-btn" class="btn btn-default">
-					<span class="toggle"><i class="fa fa-search"></i>&nbsp;See event details</span>
-					<span class="toggle" style="display: none;"><i class="fa fa-search"></i>&nbsp;Hide event details</span>
-				</button>
-			</div>
-			
-			<div id="events_details">
-				<div class="details_item_header">
-					@lang('frontend.description2')
-				</div>
-				<div class="details_item">
-					{{ $event['description'] }}
-				</div>
-				
-				<div class="details_item_header">
-					@lang('frontend.address')
-				</div>
-				<div class="details_item" id="address_wr">
-
-				</div>
-				
-			</div>
-			<div id="hidden_address">
-				<div id="address">{{ $event['location'] }}</div>
-				<div id="street">{{ $event['street'] }}</div>
-				<div id="city">{{ $event['city'] }}</div>
-				<div id="state">{{ $event['state'] }}</div>
-				<div id="country">{{ $event['country'] }}</div>
-				<div style="height: 400px;" id="map_canvas"></div>
-			</div>
-
-            <div class="date">
-                {{date("F dS, Y",strtotime($event->start))}}
-                Time: {{date("H:m",strtotime($event->start))}} - {{date("H:m", strtotime($event->finish))}}
-                Timezone:{{$event->timezone}}
+    <div class="row new-event-holder">
+        <div class="col-sm-8 col-md-8 col-md-offset-2 col-sm-offset-2 content event-show">
+            @if($event->test=="1")
+            <div class="test-event-cont">
+                <div class="test-event-red-line">
+                    Test Event
+                </div>
             </div>
+            @endif
+            <div class="even-date-holder pull-right">{{date("d",strtotime($event->start))}}</div>
+            <div class="event-name event-show">{{$event->title}}</div>
+            <div class="event_period event-show">{{date("F dS, Y", strtotime($event->start))}} - {{$event['start_time_event']}}</div>
+            <div class="input-group">
+                <button id="register_but" class="btn btn-primary text-white">
+                    <i class="fa fa-pencil-square-o"></i>
+                    <span>&nbsp;Register&nbsp;</span>
+                    <span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three"
+                                                                   data-size="20" data-c="#fff" data-hc="#fff"
+                                                                   data-loop="true"></i></span>
+                </button>
 
-            <div class="date">
-                {{date("F dS, Y",strtotime($event->start))}}
-                Time: {{date("H:m",strtotime($event->start))}} - {{date("H:m", strtotime($event->finish))}}
-                Timezone:{{$event->timezone}}
+                <button id="add-to-calendar-btn" class="btn btn-primary text-white">
+                    <i class="fa fa-calendar"></i>
+                    <span>&nbsp;Add to Calendar&nbsp;</span>
+                    <span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three"
+                                                                   data-size="20" data-c="#fff" data-hc="#fff"
+                                                                   data-loop="true"></i></span>
+                    <i class="fa fa-caret-down"></i>
+                </button>
+
+                <button id="follow_but" class="btn btn-primary text-white">
+                    <i class="fa fa-bookmark-o"></i>
+                    <span>&nbsp;Follow&nbsp;</span>
+                    <span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three"
+                                                                   data-size="20" data-c="#fff" data-hc="#fff"
+                                                                   data-loop="true"></i></span>
+                </button>
+
+
             </div>
-			
-			<div class="input-group" id="learn_more" style="display:none">
-				<button id="learn-more-btn" class="btn btn-default">
-					<i class="fa fa-key"></i>
-					&nbsp;Learn more about promoting events with EventFellows
-				</button>
-			</div>
-			
-		</div>
-		<div class="text-center col-xs-12 share-event">Share this event</div>
-		<div class="col-xs-12 text-center share42init"></div>
+            <div class="input-group">
+                <div id="see-details-btn">
+                    <span class="toggle" id="show-event"><i class="fa fa-search"></i>&nbsp;Show Details</span>
+                    <span class="toggle" id="hide-event" style="display: none;"><i
+                                class="fa fa-search"></i>&nbsp;Hide Details</span>
+                </div>
+            </div>
+            <div id="events_details">
+                <div class="row marg-bot-50">
+                    <div class="details_item_header col-md-12">
+                        @lang('frontend.description2')
+                    </div>
+                    <div class="details_item col-md-7">
+                        {{ $event['description'] }}
+                    </div>
+                    <div class="event-details-image col-md-5">
+                        <img src="{{ asset('assets/img/no-image.jpg')}}">
+                    </div>
+                </div>
+                <div class="row marg-bot-50">
+                    <div class="col-md-6">
+                        <div style="height: 335px;" id="map_canvas"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="details_item_header">
+                            Event Location
+                        </div>
+                        <div class="details_item" id="address_wr">
 
-	</div>
+                        </div>
+                    </div>
+                    <div id="hidden_address">
+                        <div id="address">{{ $event['location'] }}
+                        </div>
+                        <div id="street">{{ $event['street'] }}</div>
+                        <div id="city">{{ $event['city'] }}</div>
+                        <div id="state">{{ $event['state'] }}</div>
+                        <div id="country">{{ $event['country'] }}</div>
+                    </div>
+                </div>
+                <div class="row marg-bot-30">
+                    <div class="col-md-7">
+                        <div class="event-date">
+                            {{date("F dS, Y",strtotime($event->start))}}
+                        </div>
+                        <div class="event-time">
+                            {{$event['start_time_user']}} - {{$event['finish_time_user']}}
+                        </div>
+                        <div class="event-timezone">
+                            Timezone: {{$event['user_time_zone']}}
+                        </div>
+                        <div class="event-time">
+                            {{$event['start_time_event']}} - {{$event['finish_time_event']}}
+                        </div>
+                        <div class="event-timezone">
+                            Timezone: {{$event->timezone}}
+                            {{--<select>{{$event['timezone_select']}}--}}
+                            {{--</select>--}}
+                        </div>
+                    </div>
+                    <div class="event-details-image col-md-5">
+                        <img src="{{ asset('assets/img/calendar.jpg')}}">
+                    </div>
+                </div>
+                {{--<div class="input-group">--}}
+                    {{--<button id="register_but" class="btn btn-primary text-white">--}}
+                        {{--<i class="fa fa-pencil-square-o"></i>--}}
+                        {{--<span>&nbsp;Register&nbsp;</span>--}}
+                        {{--<span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three"--}}
+                                                                       {{--data-size="20" data-c="#fff" data-hc="#fff"--}}
+                                                                       {{--data-loop="true"></i></span>--}}
+                    {{--</button>--}}
+
+                    {{--<button id="add-to-calendar-btn" class="btn btn-primary text-white">--}}
+                        {{--<i class="fa fa-calendar"></i>--}}
+                        {{--<span>&nbsp;Add to Calendar&nbsp;</span>--}}
+                        {{--<span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three"--}}
+                                                                       {{--data-size="20" data-c="#fff" data-hc="#fff"--}}
+                                                                       {{--data-loop="true"></i></span>--}}
+                        {{--<i class="fa fa-caret-down"></i>--}}
+                    {{--</button>--}}
+
+                    {{--<button id="follow_but" class="btn btn-primary text-white">--}}
+                        {{--<i class="fa fa-bookmark-o"></i>--}}
+                        {{--<span>&nbsp;Follow&nbsp;</span>--}}
+                        {{--<span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three"--}}
+                                                                       {{--data-size="20" data-c="#fff" data-hc="#fff"--}}
+                                                                       {{--data-loop="true"></i></span>--}}
+                    {{--</button>--}}
+                {{--</div>--}}
+                <div class="input-group" id="learn_more" style="display:none">
+                    <button id="learn-more-btn" class="btn btn-default">
+                        <i class="fa fa-key"></i>
+                        &nbsp;Learn more about promoting events with EventFellows
+                    </button>
+                </div>
+            </div>
+            </div>
+            <div class="text-center col-xs-12 share-event">Share this event</div>
+            <div class="col-xs-12 text-center share42init"></div>
+        </div>
+    </div>
 </div>
 
 <input type="hidden" name="_token" id="token_for_ajax" value="{{ csrf_token() }}" />
@@ -210,20 +256,6 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
-	
-<script>
-    @if(!Sentinel::check())
-//        $('#show_detail').attr('style', 'display:none');
-        $('#show_detail').click(function(e){
-            e.preventDefault();
-            return false;
-            //Сделать серого цвета кнопку и при клике чтоб ничего не происходило
-        })
-
-        {{--@endif--}}
-    @endif
-    </script>
-
 	<script>
 	$(document).ready(function(){
         var geocoder;

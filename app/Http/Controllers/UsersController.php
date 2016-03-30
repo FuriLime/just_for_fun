@@ -15,12 +15,14 @@ use App\Account;
 use App\User;
 use App\UserProfile;
 use App\AccountProfile;
-//use App\Activation;
 use App\Role;
 use DB;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Hash;
 use Mailchimp\Mailchimp;
+use Illuminate\Http\Request;
+use Storage;
+
 
 class UsersController extends JoshController
 {
@@ -274,7 +276,7 @@ class UsersController extends JoshController
         'email'            => 'required|email|unique:users',
         'password'         => 'required|between:3,32',
         'password_confirm' => 'required|same:password',
-        'pic' => 'mimes:jpg,jpeg,bmp,png|max:10000'
+        'image' => 'mimes:jpg,jpeg,bmp,png|max:10000'
     );
 
        // Id of newsletter list
@@ -322,7 +324,7 @@ class UsersController extends JoshController
             'password'         => 'required|between:3,32',
             'password_confirm' => 'required|same:password',
             'group'            => 'required|numeric',
-            'pic'              => 'mimes:jpg,jpeg,bmp,png|max:10000'
+            'image'              => 'mimes:jpg,jpeg,bmp,png|max:10000'
         );
 
         // Create a new validator instance from our validation rules
@@ -335,7 +337,7 @@ class UsersController extends JoshController
         }
 
         //upload image
-        if ($file = Input::file('pic'))
+        if ($file = Input::file('image'))
         {
             $fileName        = $file->getClientOriginalName();
             $extension       = $file->getClientOriginalExtension() ?: 'png';
@@ -357,7 +359,7 @@ class UsersController extends JoshController
                 'password'   => Input::get('password'),
                 'dob'   => Input::get('dob'),
                 'bio'   => Input::get('bio'),
-                'pic'   => isset($safeName)?$safeName:'',
+                'image'   => isset($safeName)?$safeName:'',
                 'gender'   => Input::get('gender'),
                 'country'   => Input::get('country'),
                 'state'   => Input::get('state'),
@@ -525,7 +527,7 @@ class UsersController extends JoshController
      * @param  int      $id
      * @return Redirect
      */
-    public function postEdit($id = null)
+    public function postEdit($id = null, Request $request)
     {
 
 
@@ -553,7 +555,7 @@ class UsersController extends JoshController
         $this->validationRules['email'] = "required|email|unique:users,email,{$user->email},email";
 
         // Do we want to update the user password?
-        if ( ! $password = Input::get('password')) {
+        if (!$password = Input::get('password')) {
             unset($this->validationRules['password']);
             unset($this->validationRules['password_confirm']);
         }
@@ -586,23 +588,44 @@ class UsersController extends JoshController
             }
 
             // is new image uploaded?
-            if ($file = Input::file('pic'))
+            if (Input::file('image'))
             {
-                $fileName        = $file->getClientOriginalName();
-                $extension       = $file->getClientOriginalExtension() ?: 'png';
-                $folderName      = '/uploads/users/';
-                $destinationPath = public_path() . $folderName;
-                $safeName        = str_random(10).'.'.$extension;
-                $file->move($destinationPath, $safeName);
+//                $file= Input::file('image');
+//                $fileName        = $file->getClientOriginalName();
+//                $extension       = $file->getClientOriginalExtension();
+//                $folderName      = '/uploads/users/';
+//                $destinationPath = base_path().'/public/uploads/users/';
+//                $safeName        = $user->id.'.'.$extension;
+//                $file->move($destinationPath, $safeName);
+
+//                $image = $request->file('image');
+//                $stream = fopen($image->getRealPath(), 'r+');
+//                $filesystem->writeStream(base_path().'/public/uploads/users/'.$image->getClientOriginalName(), $stream);
+//                fclose($stream);
+
+
+                $destinationPath = base_path().'/public/uploads/users/'; // upload path
+                $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
+
+                $fileName = rand(11111,99999).'.'.$extension; // renameing image
+                Input::file('image')->move($destinationPath, $fileName);
+
+                $image = $request->file('image');
+                $imageFileName = time() . '.' . $image->getClientOriginalExtension();
+
+//                $s3 = \Storage::disk('S3_BUCKET_USERDATA');
+//                $filePath = '/ef-test-userdata/' . $imageFileName;
+//                $s3->put($filePath, file_get_contents($image), 'public');
+
 
                 //delete old pic if exists
-                if(File::exists(public_path() . $folderName.$user->pic))
+                if(File::exists(public_path() . $destinationPath.$user_profile->image))
                 {
-                    File::delete(public_path() . $folderName.$user->pic);
+                    File::delete(public_path() . $destinationPath.$user_profile->image);
                 }
 
                 //save new file path into db
-                $user->pic   = $safeName;
+                $user_profile->image   = $fileName;
 
             }
 
@@ -613,8 +636,6 @@ class UsersController extends JoshController
             $selectedRoles = Input::get('groups', array());
             // Groups comparison between the groups the user currently
             // have and the groups the user wish to have.
-            $rolesToAdd    = array_diff($selectedRoles, $userRoles);;
-            $rolesToRemove = array_diff($userRoles, $selectedRoles);
             $acc_id = $user->accounts()->first()->id;
             // Remove the user from groups
             foreach ($userRoles as $roleId) {
@@ -633,7 +654,6 @@ class UsersController extends JoshController
                 ];
 
                 $role->users()->attach($rolew);
-//                $role->users()->attach();
             }
 
 $new_email = md5(Input::get('email'));

@@ -1,4 +1,4 @@
- <IfModule mod_rewrite.c>
+<IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews
     </IfModule>
@@ -14,11 +14,3 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
-<<<<<<< HEAD
-=======
-
->>>>>>> 1e31573f7476960a930cfc56f81ced9272c8301b
-AuthType Basic
-AuthName "My Protected Area"
-AuthUserFile  /srv/app/ef-test/htdocs/.htpasswd
-Require valid-user

@@ -5,22 +5,23 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Event;
 use DB;
+use Storage;
 
-class RemoveEvent extends Command
+class UserData extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'event_test:remove';
+    protected $signature = 'userdata:run';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Remove test events';
+    protected $description = 'BackUp User Data';
 
     /**
      * Create a new command instance.
@@ -39,7 +40,14 @@ class RemoveEvent extends Command
      */
     public function handle()
     {
-       DB::table('events')->where('test', '=', '1')->where(DB::raw('DATEDIFF(CURDATE(), STR_TO_DATE(`created_at`, \'%Y-%m-%d %k:%i:%s\'))'), '>=', '2')->delete();
-       return 'GoGoGO';
+        //user data backup
+        $zipperUser = new \Chumper\Zipper\Zipper;
+        $filesUser = glob(base_path().'/public/uploads/*');
+        $zipperUser->make(base_path().'/userdata.zip')->add($filesUser);
+        $filePathUser = '/ef-test-userdata/' . 'userdata';
+        Storage::disk("S3_BUCKET_USERDATA")->put($filePathUser, file_get_contents('userdata.zip'));
+
+
+        $this->info('done');
     }
 }

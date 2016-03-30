@@ -65,7 +65,7 @@ return array(
     'creating_google' =>  'Creating Google Calendar integration', 
     'creating_yahoo' =>  'Creating Yahoo Calendar integration', 
     'creating_ical' => 'Creating iCal integration', 
-    'creating_eventpage' =>  'Creating EventPage for Your', 
+    'creating_eventpage' =>  'Creating EventPage for',
     'adding_links' =>  'Adding links to calendar integrations',
     'optimizing_for_mobile' =>  'Optimizing for mobile access ',
     'adding_to_profile' =>  'Adding to your user profile ',

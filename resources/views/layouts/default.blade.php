@@ -71,8 +71,8 @@
                     @if(Sentinel::check())
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                @if(Sentinel::getUser()->pic)
-                                    <img src="{!! url('/').'/uploads/users/'.Sentinel::getUser()->pic !!}" alt="img" class="img-circle img-responsive pull-left" height="35px" width="35px"/>
+                                @if(Sentinel::getUser()->image)
+                                    <img src="{!! url('/').'/uploads/users/'.Sentinel::getUser()->image !!}" alt="img" class="img-circle img-responsive pull-left" height="35px" width="35px"/>
                                 @else
                                     <img src="{!! asset('assets/img/authors/avatar3.jpg') !!} " width="35" class="img-circle img-responsive pull-left" height="35" alt="riot">
                                 @endif
@@ -89,8 +89,8 @@
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
-                                    @if(Sentinel::getUser()->pic)
-                                        <img src="{!! url('/').'/uploads/users/'.Sentinel::getUser()->pic !!}" alt="img" class="img-circle img-bor"/>
+                                    @if(Sentinel::getUser()->image)
+                                        <img src="{!! url('/').'/uploads/users/'.Sentinel::getUser()->image !!}" alt="img" class="img-circle img-bor"/>
                                     @else
                                         <img src="{!! asset('assets/img/authors/avatar3.jpg') !!}" class="img-responsive img-circle" alt="User Image">
                                     @endif

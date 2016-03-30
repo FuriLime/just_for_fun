@@ -311,6 +311,8 @@ class AuthController extends JoshController
         // Declare the rules for the validator
         $rules = array(
             'email' => 'required|email',
+            'my_email'   => 'honeypot',
+            'my_time'   => 'required|honeytime:5',
         );
 
         // Create a new validator instance from our dynamic rules
@@ -447,7 +449,9 @@ class AuthController extends JoshController
         // Declare the rules for the form validation
         $rules = array(
             'password'         => 'required|between:3,32',
-            'password_confirm' => 'required|same:password'
+            'password_confirm' => 'required|same:password',
+            'my_pass'   => 'honeypot',
+            'my_time'   => 'required|honeytime:5',
         );
 
         // Create a new validator instance from our dynamic rules

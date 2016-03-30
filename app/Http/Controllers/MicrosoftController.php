@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\Account;
 use App\Role;
+use App\UserProfile;
 use App\AccountProfile;
 use Auth;
 use Redirect;
@@ -28,7 +29,7 @@ class MicrosoftController extends Controller {
       $apiKey = Config::get('mailchimp.apikey');
       $mc = new Mailchimp($apiKey);
       $listId = Config::get('mailchimp.listId');
-    $code = $request->get('code');
+      $code = $request->get('code');
 
     $ms = \OAuth::consumer('Microsoft');
 
@@ -43,10 +44,13 @@ class MicrosoftController extends Controller {
         $user->first_name = $result['first_name'];
         $user->email = $result['emails']['account'];
         $user->save();
+          $user_profile = new UserProfile();
+          $user_profile->user_id = $user['id'];
+          $user_profile->save();
           $account_user = new Account();
           $account_user->	account_type_id = '1';
-          $account_user->name = $user->uuid;
-          $account_user->slug = $user->uuid;
+          $account_user->name = $user['uuid'];
+          $account_user->slug = $user['uuid'];
           $account_user->save();
           $account_profile = new AccountProfile();
           $account_profile->account_id = $account_user->id;
@@ -55,14 +59,13 @@ class MicrosoftController extends Controller {
           $rolew = [
               0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
           ];
-          $mc->post("lists/$listId/members", [
+
+          $role->users()->attach($rolew);
+          $member_email = md5($user->email);
+          $mc->put("lists/$listId/members/$member_email", [
               'email_address' => $user->email,
               'status'        => 'subscribed',
           ]);
-          $role->users()->attach($rolew);
-          $user_profile = new UserProfile();
-          $user_profile->user_id = $user->id;
-          $user_profile->save();
 
         $user = Sentinel::findById($user->id);
         $activation = Activation::create($user);

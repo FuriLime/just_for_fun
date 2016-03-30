@@ -25,13 +25,15 @@
                             <!-- CSRF Token -->
                             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
+
+
                             <!-- New Password -->
                             <div class="form-group{{ $errors->first('password', ' has-error') }} col-sm-12">
                                 <label for="password">@lang('auth/form.newpassword')</label>
                                 <input type="password" name="password" id="password" value="{{ Input::old('password') }}" class="form-control" />
                                 {{ $errors->first('password', '<span class="help-block">:message</span>') }}
                             </div>
-
+                            {!! Honeypot::generate('my_pass', 'my_time') !!}
                             <!-- Password Confirm -->
                             <div class="form-group{{ $errors->first('password_confirm', ' has-error') }} col-sm-12">
                                 <label class="control-label" for="password_confirm">@lang('auth/form.confirmpassword')</label>
