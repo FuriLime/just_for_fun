@@ -85,7 +85,7 @@
                     <a href="#" class="col-xs-4 col-xs-offset-4 succ-btn">
                         <img src="{{ asset('assets/images/yes.png') }}"><span>@lang('frontend.confirm_success')</span> @lang('frontend.confirm_visit')
                     </a>
-                    <div id="myCarousel" class="carousel slide col-xs-8 col-xs-offset-2" data-ride="carousel">
+                    <div id="myCarousel" class="carousel slide col-xs-10 col-xs-offset-1" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
