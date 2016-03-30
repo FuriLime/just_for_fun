@@ -351,13 +351,13 @@
         $('.form-control').keydown(function (e) {
             if(e.shiftKey==1){
                 if (e.which == 13) {
-                    if ($('.form-control').index(this)==2){
+                    if ($('.form-control').index(this)==1){
                         return true;
                     }
                 }
             } else {
                     if (e.which == 13) {
-                        if ($('.form-control').index(this)==2){
+                        if ($('.form-control').index(this)==1){
                             e.preventDefault();
                             alert('lol');
                         }
