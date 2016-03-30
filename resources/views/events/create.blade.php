@@ -359,13 +359,13 @@
                     if (e.which == 13) {
                         if ($('.form-control').index(this)==1){
                             e.preventDefault();
-                            alert('lol');
+                            var index = $('.form-control').index(this) + 1;
+                            $('.form-control').eq(index).attr("style", "display: block").focus();
                         }
                 }
             }
         });
         $('.form-control').keypress(function (e) {
-            
             if($('.form-control').index(this)==1){
                 return;
             }
