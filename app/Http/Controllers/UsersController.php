@@ -339,6 +339,7 @@ class UsersController extends JoshController
         //upload image
         if ($file = Input::file('image'))
         {
+            dd();
             $fileName        = $file->getClientOriginalName();
             $extension       = $file->getClientOriginalExtension() ?: 'png';
             $folderName      = '/uploads/users/';
