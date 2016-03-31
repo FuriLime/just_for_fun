@@ -610,14 +610,6 @@ class UsersController extends JoshController
                 $fileName = rand(11111,99999).'.'.$extension; // renameing image
                 Input::file('image')->move($destinationPath, $fileName);
 
-                $image = $request->file('image');
-                $imageFileName = time() . '.' . $image->getClientOriginalExtension();
-//
-//                $s3 = \Storage::disk('user_data');
-//                $filePath = '/ef-test-userdata/' . $imageFileName;
-//                $s3->put($filePath, file_get_contents($image), 'public');
-
-
                 //delete old pic if exists
                 if(File::exists(public_path() . $destinationPath.$user_profile->image))
                 {
@@ -628,6 +620,10 @@ class UsersController extends JoshController
                 $user_profile->image   = $fileName;
 
             }
+
+            $s3 = \Storage::disk('user_data');
+            $filePath = '/ef-test-userdata/' . $fileName;
+            $s3->put($filePath, file_get_contents($user_profile->image), 'public');
 
             // Get the current user groups
             $userRoles = $user->roles()->lists('id')->all();
