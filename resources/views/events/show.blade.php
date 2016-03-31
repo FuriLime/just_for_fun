@@ -228,7 +228,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
             </div>
             </div>
 
-        @include('components.share', [
+        @include('events.show', [
             'url' => request()->fullUrl(),
             'description' => 'This is really cool link',
             'image' => 'http://placehold.it/300x300?text=Cool+link'
