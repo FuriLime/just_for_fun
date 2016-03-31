@@ -14,9 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \App\Console\Commands\Inspire::class,
-        \App\Console\Commands\RemoveEvent::class,
-        \App\Console\Commands\BackUp::class,
-        \App\Console\Commands\UserData::class,
+        \App\Console\Commands\RemoveEvent::class
     ];
 
     /**
@@ -29,27 +27,12 @@ class Kernel extends ConsoleKernel
     {
 //        $schedule->command('inspire')
 //                 ->hourly();
+//        $schedule->command('event_test:remove')->everyMinute();
 
-        //remove test events oldest then 2 days
-        $schedule->command('event_test:remove')
-            ->description('Remove old events')
-            ->everyMinute()->when(function () {
-                return "Remove Done";
-            });
-
-        //backup every day at 3:00
-       $schedule->command('backup:run')->dailyAt('03:00')->when(function () {
-            return "DOneDDDDD";
-        });
-//
-//        $schedule->command('backupfiles:run')->weekly()->mondays()->at('03:00')->when(function () {
-//            return "DOneDDDDD";
-//        });
-//
-//        $schedule->command('userdata:run')->weekly()->mondays()->at('03:00')->when(function () {
-//            return "DOneDDDDD";
-//        });
-
+        $schedule->command('backup:run --only-files')
+            ->weekly()->mondays()->at('14:50')
+            ->description('My-project Files backup');
     }
+
 
 }

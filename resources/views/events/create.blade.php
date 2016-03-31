@@ -18,8 +18,7 @@
 	<link href="{{ asset('assets/vendors/select2/select2.min.css') }}" rel="stylesheet" type="text/css" media="screen"  />
     <link href="{{ asset('assets/css/font-awesome.css') }}" rel="stylesheet" type="text/css" media="screen"  />
     <link href="{{ asset('assets/vendors/datetimepicker/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" type="text/css" media="screen"  />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
-    <style>
+	<style>
 		.pac-logo::after {
 			display: none !important;
 		}
@@ -59,13 +58,11 @@
 
                     @if (isset($event))
                         {!! Form::model($event, ['method' => 'PATCH', 'action' => ['EventsController@update', $event->uuid], 'id'=>'edit_event']) !!}
-                            {!! Honeypot::generate('my_title', 'my_time') !!}
+
                             @elseif(isset($event_clone))
                                 {!! Form::open(['id'=>'clone_event']) !!}
-                            {!! Honeypot::generate('my_title', 'my_time') !!}
                     @else
                          {!! Form::open(['url' => 'events', 'id' => 'create_event']) !!}
-                            {!! Honeypot::generate('my_title', 'my_time') !!}
                          {{--<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }} " />--}}
                     @endif
 
@@ -111,9 +108,9 @@
                             <label for="start">@lang('frontend.date')</label>
                         <div class="form-group form_datetime">
                             <div class="input-group date form_datetime3 col-md-12"  id="datestart">
-                                {{--<span class="input-group-addon">--}}
-                                    {{--<span class="glyphicon glyphicon-remove"></span>--}}
-                                {{--</span>--}}
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </span>
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
@@ -136,11 +133,11 @@
                         <label for="start">@lang('frontend.enddate')</label>
                          <div class="form-group form_datetime">
                                         <div class="input-group date form_datetime3 col-md-12" id="datefinish">
-                                             {{--<span class="input-group-addon">--}}
-                                                {{--<span class="glyphicon glyphicon-remove"></span>--}}
-                                            {{--</span>--}}
+                                             <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </span>
                                             <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                <span class="glyphicon glyphicon-th"></span>
                                             </span>
                                             @if(isset($event_clone))
                                                 <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{$event_clone['finish']}}">
@@ -310,10 +307,12 @@
      <script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
       <script src="{{ asset('assets/js/bootbox.js') }}"></script>
     <script>
-        $('html').on("click", ".submit", function(e) {
+        $(document).on("click", ".submit", function(e) {
+            
             e.preventDefault();
             if($(this).hasClass('publish')){
                 $('#active').val('Publish');
+                console.log('lol');
             }
             else{
                 $('#active').val('Draft');
@@ -357,12 +356,12 @@
                     }
                 }
             } else {
-                if (e.which == 13) {
-                    if ($('.form-control').index(this)==1){
-                        e.preventDefault();
-                        var index = $('.form-control').index(this) + 1;
-                        $('.form-control').eq(index).attr("style", "display: block").focus();
-                    }
+                    if (e.which == 13) {
+                        if ($('.form-control').index(this)==1){
+                            e.preventDefault();
+                            var index = $('.form-control').index(this) + 1;
+                            $('.form-control').eq(index).attr("style", "display: block").focus();
+                        }
                 }
             }
         });
@@ -371,7 +370,7 @@
                 return;
             }
             else{
-                if (e.which == 13) {
+            if (e.which == 13) {
                     e.preventDefault();
                     var index = $('.form-control').index(this) + 1;
                     $('.form-control').eq(index).attr("style", "display: block").focus();
@@ -392,15 +391,14 @@
                             break;
                         case 5:
                             $("#location").trigger('change');
-
+                            
                             break;
                     }
-
+                   
                 }
             }
         });
-
-
+           
         @if (isset($event))
         $('#select2-timezone-container').attr('title', '{{$event->timezone}}');
         $('#select2-timezone-container').text('{{$event->timezone}}');
