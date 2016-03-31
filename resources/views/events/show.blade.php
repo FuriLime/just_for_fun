@@ -228,7 +228,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
             </div>
             </div>
         <div class="social-buttons">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://event.test-y-sbm.com/events/qwe-1"
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{url()}}./events/{{$event->readable_url}}"
                target="_blank">
                 <i class="fa fa-facebook-official"></i>
             </a>
