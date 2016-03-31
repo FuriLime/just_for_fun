@@ -201,6 +201,11 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                 </div>
             </div>
             </div>
+
+
+
+            <div class="text-center col-xs-12 share-event">Share this event</div>
+            <div class="col-xs-12 text-center share42init"></div>
         <div class="social-buttons">
             <a href="https://www.facebook.com/sharer/sharer.php?u={{url()}}./events/{{$event->readable_url}}"
                target="_blank">
@@ -215,10 +220,6 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                 <i class="fa fa-google-plus-square"></i>
             </a>
         </div>
-
-
-            <div class="text-center col-xs-12 share-event">Share this event</div>
-            <div class="col-xs-12 text-center share42init"></div>
         </div>
     </div>
 </div>
