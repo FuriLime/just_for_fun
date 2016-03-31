@@ -475,6 +475,7 @@ class UsersController extends JoshController
                 \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
             }else{
                 $user->verified ="1";
+                dd();
             }
 
             // Redirect to the home page with success menu
