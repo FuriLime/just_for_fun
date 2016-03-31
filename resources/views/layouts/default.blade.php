@@ -72,7 +72,7 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 @if(Sentinel::getUser()->image)
-                                    <img src="{!! url('/').'/uploads/users/'.Sentinel::getUser()->image !!}" alt="img" class="img-circle img-responsive pull-left" height="35px" width="35px"/>
+                                    <img src="{!! Sentinel::getUser()->image !!}" alt="img" class="img-circle img-responsive pull-left" height="35px" width="35px"/>
                                 @else
                                     <img src="{!! asset('assets/img/authors/avatar3.jpg') !!} " width="35" class="img-circle img-responsive pull-left" height="35" alt="riot">
                                 @endif

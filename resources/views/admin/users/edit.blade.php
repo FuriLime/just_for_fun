@@ -132,7 +132,7 @@ Edit User
                                             <div class="fileinput fileinput-new" data-provides="fileinput">
                                                 <div class="fileinput-new thumbnail" style="width: 200px; height: 200px;">
                                                     @if($user_profile->image)
-                                                        <img src="{!! url('/').'/uploads/users/'.$user_profile->image !!}" alt="profile image">
+                                                        <img src="{!!$user_profile->image !!}" alt="profile image">
                                                     @else
                                                         <img src="http://placehold.it/200x200" alt="profile image">
                                                     @endif

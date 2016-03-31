@@ -335,18 +335,6 @@ class UsersController extends JoshController
             // Ooops.. something went wrong
             return Redirect::back()->withInput()->withErrors($validator);
         }
-
-        //upload image
-        if ($file = Input::file('image'))
-        {
-            $fileName        = $file->getClientOriginalName();
-            $extension       = $file->getClientOriginalExtension() ?: 'png';
-            $folderName      = '/uploads/users/';
-            $destinationPath = public_path() . $folderName;
-            $safeName        = str_random(10).'.'.$extension;
-            $file->move($destinationPath, $safeName);
-        }
-
         //check whether use should be activated by default or not
 //        $activate = Input::get('activate')?true:false;
 
@@ -388,9 +376,21 @@ class UsersController extends JoshController
             $account_profile->account_id = $account_user->id;
             $account_profile->save();
 
+            if (Input::file('image'))
+            {
+                $destinationPath = base_path().'/public/'; // upload path
+                $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
 
-            $selectedRoles = Input::get('groups', array());
-            $roles = Sentinel::getRoleRepository()->all();
+                $fileName = rand(11111,99999).'.'.$extension; // renameing image
+                Input::file('image')->move($destinationPath, $fileName);
+                //save new file path into db
+                $user_profile->image   = $fileName;
+                $s3 = \Storage::disk('user_data');
+                $filePath = '/ef-test-userdata/' . $fileName;
+                $s3->put($filePath, file_get_contents($user_profile->image), 'public');
+                $user_profile->image=NULL;
+                $user_profile->image ='http://sergey-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
+            }
             $role = Role::find(2);
             $rolew = [
                 0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
@@ -468,6 +468,12 @@ class UsersController extends JoshController
 
                 // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
                 \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
+            }else{
+                $user->verified ="1";
+                $user->status = "Verified";
+                $user->save();
+                $user_profile->image ='http://sergey-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
+                $user_profile->save();
             }
 
             // Redirect to the home page with success menu
@@ -590,19 +596,6 @@ class UsersController extends JoshController
             // is new image uploaded?
             if (Input::file('image'))
             {
-//                $file= Input::file('image');
-//                $fileName        = $file->getClientOriginalName();
-//                $extension       = $file->getClientOriginalExtension();
-//                $folderName      = '/uploads/users/';
-//                $destinationPath = base_path().'/public/uploads/users/';
-//                $safeName        = $user->id.'.'.$extension;
-//                $file->move($destinationPath, $safeName);
-
-//                $image = $request->file('image');
-//                $stream = fopen($image->getRealPath(), 'r+');
-//                $filesystem->writeStream(base_path().'/public/uploads/users/'.$image->getClientOriginalName(), $stream);
-//                fclose($stream);
-
 
                 $destinationPath = base_path().'/public/'; // upload path
                 $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
@@ -618,11 +611,13 @@ class UsersController extends JoshController
 
                 //save new file path into db
                 $user_profile->image   = $fileName;
-
+                $s3 = \Storage::disk('user_data');
+                $filePath = '/ef-test-userdata/' . $fileName;
+                $s3->put($filePath, file_get_contents($user_profile->image), 'public');
+                $user_profile->image=NULL;
+                $user_profile->image ='http://sergey-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
             }
-            $s3 = \Storage::disk('user_data');
-            $filePath = '/ef-test-userdata/' . $fileName;
-            $s3->put($filePath, file_get_contents($user_profile->image), 'public');
+
 
             // Get the current user groups
             $userRoles = $user->roles()->lists('id')->all();
