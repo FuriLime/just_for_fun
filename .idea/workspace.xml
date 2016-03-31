@@ -51,7 +51,7 @@
       <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-38.333332" vertical-offset="4915" max-vertical-offset="10875">
+            <state vertical-scroll-proportion="-47.708332" vertical-offset="4690" max-vertical-offset="10875">
               <caret line="661" column="49" selection-start-line="661" selection-start-column="49" selection-end-line="661" selection-end-column="49" />
               <folding>
                 <element signature="e#39#52#0#PHP" expanded="true" />
@@ -66,8 +66,18 @@
       <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26785713" vertical-offset="945" max-vertical-offset="6540">
-              <caret line="73" column="46" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.91071427" vertical-offset="585" max-vertical-offset="6540">
+              <caret line="73" column="55" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserProfile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/UserProfile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="510">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -278,6 +288,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -353,12 +377,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-04042" summary="readable url">
-      <created>1458914485167</created>
-      <option name="number" value="04042" />
-      <option name="project" value="LOCAL" />
-      <updated>1458914485167</updated>
     </task>
     <task id="LOCAL-04043" summary="readable url">
       <created>1458914738013</created>
@@ -648,7 +666,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459413013539</updated>
     </task>
-    <option name="localTasksCounter" value="4091" />
+    <task id="LOCAL-04091" summary="readable url">
+      <created>1459413037827</created>
+      <option name="number" value="04091" />
+      <option name="project" value="LOCAL" />
+      <updated>1459413037827</updated>
+    </task>
+    <option name="localTasksCounter" value="4092" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -708,13 +732,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/emails/register-activate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5992949" vertical-offset="2107" max-vertical-offset="5236">
-          <caret line="204" column="83" selection-start-line="204" selection-start-column="83" selection-end-line="204" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/emails/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2023">
@@ -1070,9 +1087,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/UserProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-38.333332" vertical-offset="4915" max-vertical-offset="10875">
+        <state vertical-scroll-proportion="-47.708332" vertical-offset="4690" max-vertical-offset="10875">
           <caret line="661" column="49" selection-start-line="661" selection-start-column="49" selection-end-line="661" selection-end-column="49" />
           <folding>
             <element signature="e#39#52#0#PHP" expanded="true" />
@@ -1085,8 +1110,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26785713" vertical-offset="945" max-vertical-offset="6540">
-          <caret line="73" column="46" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.91071427" vertical-offset="585" max-vertical-offset="6540">
+          <caret line="73" column="55" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
           <folding />
         </state>
       </provider>
