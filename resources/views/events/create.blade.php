@@ -34,7 +34,7 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-10" id="add_event">
             <div class="panel panel-primary ">
-                <div class="panel-heading">
+                <!-- <div class="panel-heading">
                     <h4 class="panel-title"> <i class="livicon" data-name="plus-alt" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
                         @if (isset($event))
                             @lang('frontend.edit_event_header')
@@ -45,7 +45,7 @@
                         @endif
 
                     </h4>
-                </div>
+                </div> -->
                 <div class="panel-body">
                     @if (isset($event))
                         <h3 class="primary add_event_section_link">@lang('frontend.edit_event_text')</h3>
@@ -116,6 +116,7 @@
                                 {{--</span>--}}
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
+                                    <span class="fa fa-calendar"></span>
                                 </span>
                                 @if (isset($event_clone))
                                     <input class="form-control" size="16" id="start" name="start" type="datetime" value="{{$event_clone['start']}}">
@@ -141,6 +142,7 @@
                                             {{--</span>--}}
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
+                                                <span class="fa fa-calendar"></span>
                                             </span>
                                             @if(isset($event_clone))
                                                 <input class="form-control" size="16" id="finish" name="finish" type="text" value="{{$event_clone['finish']}}">
