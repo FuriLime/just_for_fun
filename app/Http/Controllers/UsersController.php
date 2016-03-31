@@ -619,12 +619,13 @@ class UsersController extends JoshController
                 //save new file path into db
 //                $user_profile->image   = $fileName;
 
+                $user_profile->image ='http://sergey-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
+
             }
             $s3 = \Storage::disk('user_data');
             $filePath = '/ef-test-userdata/' . $fileName;
             $s3->put($filePath, file_get_contents($user_profile->image), 'public');
 
-$user_profile->image ='http://sergey-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
             // Get the current user groups
             $userRoles = $user->roles()->lists('id')->all();
 
