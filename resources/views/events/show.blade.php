@@ -228,12 +228,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
             </div>
             </div>
         <div class="social-buttons">
-            <a href="https://www.facebook.com/sharer/sharer.php?{{
-        http_build_query([
-            'url' => url().'/events/'. $event->readable_url,
-            'description' => urlencode($event->description)
-        ])
-        }}"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://event.test-y-sbm.com/events/qwe-1"
                target="_blank">
                 <i class="fa fa-facebook-official"></i>
             </a>
@@ -401,30 +396,4 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
       });
     })
   </script>
-
-
-    <script>
-        var popupSize = {
-            width: 780,
-            height: 550
-        };
-
-        $(document).on('click', '.social-buttons > a', function(e){
-
-            var
-                    verticalPos = Math.floor(($(window).width() - popupSize.width) / 2),
-                    horisontalPos = Math.floor(($(window).height() - popupSize.height) / 2);
-
-            var popup = window.open($(this).prop('href'), 'social',
-                    'width='+popupSize.width+',height='+popupSize.height+
-                    ',left='+verticalPos+',top='+horisontalPos+
-                    ',location=0,menubar=0,toolbar=0,status=0,scrollbars=1,resizable=1');
-
-            if (popup) {
-                popup.focus();
-                e.preventDefault();
-            }
-
-        });
-    </script>
 @stop
