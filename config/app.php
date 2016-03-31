@@ -168,7 +168,6 @@ return [
         Artdarek\OAuth\OAuthServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         Rolies106\EloquentSluggable\SluggableServiceProvider::class,
-        Tshafer\SocialShare\ServiceProvider::class,
 
 //        Laravel\Cashier\CashierServiceProvider::class,
     ],
@@ -242,7 +241,6 @@ return [
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
         'SEOMeta'   => Artesaos\SEOTools\Facades\SEOMeta::class,
         'OpenGraph' => Artesaos\SEOTools\Facades\OpenGraph::class,
-        'Share' => Tshafer\SocialShare\Facades\SocialShare::class,
     ],
 
 ];
