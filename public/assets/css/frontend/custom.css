@@ -1164,6 +1164,9 @@ footer .btn-primary.text-white {
 .input-group.date .input-group-addon span:first-child{
     display: none;
 }
+.panel-primary{
+    border: none;
+}
 @media(max-width:600px){
     #add_event label {
         width:auto;
