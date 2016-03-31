@@ -232,11 +232,6 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                target="_blank">
                 <i class="fa fa-facebook-official"></i>
             </a>
-
-            <a href="https://twitter.com/intent/tweet?url={{ urlencode($url) }}"
-               target="_blank">
-                <i class="fa fa-twitter-square"></i>
-            </a>
         </div>
 
 
