@@ -470,7 +470,9 @@ class UsersController extends JoshController
                 \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
             }else{
                 $user->verified ="1";
-                dd();
+                $user->save();
+                $user_profile->image ='http://sergey-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
+                $user_profile->save();
             }
 
             // Redirect to the home page with success menu
