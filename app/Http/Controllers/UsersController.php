@@ -621,6 +621,7 @@ class UsersController extends JoshController
 
             }
 
+            dd($user_profile->image);
             $s3 = \Storage::disk('user_data');
             $filePath = '/ef-test-userdata/' . $fileName;
             $s3->put($filePath, file_get_contents($user_profile->image), 'public');
