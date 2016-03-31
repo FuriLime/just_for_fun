@@ -378,7 +378,6 @@ class UsersController extends JoshController
 
             if (Input::file('image'))
             {
-
                 $destinationPath = base_path().'/public/'; // upload path
                 $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
 
@@ -386,9 +385,6 @@ class UsersController extends JoshController
                 Input::file('image')->move($destinationPath, $fileName);
                 //save new file path into db
                 $user_profile->image   = $fileName;
-
-
-
             }
             $s3 = \Storage::disk('user_data');
             $filePath = '/ef-test-userdata/' . $fileName;
