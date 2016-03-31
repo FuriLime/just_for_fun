@@ -231,7 +231,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
             <a href="https://www.facebook.com/sharer/sharer.php?{{
         http_build_query([
             'url' => url().'/events/'. $event->readable_url,
-            'description' => $event->description
+            'description' => urlencode($event->description)
         ])
         }}"
                target="_blank">
