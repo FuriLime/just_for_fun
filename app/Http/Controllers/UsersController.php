@@ -604,7 +604,7 @@ class UsersController extends JoshController
 //                fclose($stream);
 
 
-                $destinationPath = base_path().'/public/uploads/users/'; // upload path
+                $destinationPath = base_path().'/public/'; // upload path
                 $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
 
                 $fileName = rand(11111,99999).'.'.$extension; // renameing image
@@ -620,8 +620,6 @@ class UsersController extends JoshController
                 $user_profile->image   = $fileName;
 
             }
-
-            dd($user_profile->image);
             $s3 = \Storage::disk('user_data');
             $filePath = '/ef-test-userdata/' . $fileName;
             $s3->put($filePath, file_get_contents($user_profile->image), 'public');
