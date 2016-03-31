@@ -361,6 +361,7 @@ class EventsController extends Controller {
 
         $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
         $share = new Share();
+        dd($share);
         $share->delicious(route('events.show', $event->readable_url), $event->title, $event->discription);
         // Is the user logged in?
         if (Sentinel::check()) {
