@@ -384,13 +384,6 @@ class UsersController extends JoshController
 
                 $fileName = rand(11111,99999).'.'.$extension; // renameing image
                 Input::file('image')->move($destinationPath, $fileName);
-
-                //delete old pic if exists
-                if(File::exists(public_path() . $destinationPath.$user_profile->image))
-                {
-                    File::delete(public_path() . $destinationPath.$user_profile->image);
-                }
-
                 //save new file path into db
                 $user_profile->image   = $fileName;
 
