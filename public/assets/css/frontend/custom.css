@@ -948,7 +948,8 @@ footer .btn-primary.text-white {
 	width: 100%;
 }
 .form_datetime .input-group-addon {
-	padding: 8px 12px;
+	padding: 6px 12px;
+    border: none;
 }
 #add_event label {
     text-align: right;
@@ -1154,6 +1155,11 @@ footer .btn-primary.text-white {
 }
 #btn_group > .add_event_section_link:first-child{
     float: left;
+}
+.input-group.date .input-group-addon span{
+    width: auto;
+    height: auto;
+    color: #545353;
 }
 @media(max-width:600px){
     #add_event label {
