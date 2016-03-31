@@ -193,6 +193,32 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                         <img src="{{ asset('assets/img/calendar.jpg')}}">
                     </div>
                 </div>
+                {{--<div class="input-group">--}}
+                    {{--<button id="register_but" class="btn btn-primary text-white">--}}
+                        {{--<i class="fa fa-pencil-square-o"></i>--}}
+                        {{--<span>&nbsp;Register&nbsp;</span>--}}
+                        {{--<span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three"--}}
+                                                                       {{--data-size="20" data-c="#fff" data-hc="#fff"--}}
+                                                                       {{--data-loop="true"></i></span>--}}
+                    {{--</button>--}}
+
+                    {{--<button id="add-to-calendar-btn" class="btn btn-primary text-white">--}}
+                        {{--<i class="fa fa-calendar"></i>--}}
+                        {{--<span>&nbsp;Add to Calendar&nbsp;</span>--}}
+                        {{--<span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three"--}}
+                                                                       {{--data-size="20" data-c="#fff" data-hc="#fff"--}}
+                                                                       {{--data-loop="true"></i></span>--}}
+                        {{--<i class="fa fa-caret-down"></i>--}}
+                    {{--</button>--}}
+
+                    {{--<button id="follow_but" class="btn btn-primary text-white">--}}
+                        {{--<i class="fa fa-bookmark-o"></i>--}}
+                        {{--<span>&nbsp;Follow&nbsp;</span>--}}
+                        {{--<span class="toggle" style="display: none;"><i class="livicon" data-name="spinner-three"--}}
+                                                                       {{--data-size="20" data-c="#fff" data-hc="#fff"--}}
+                                                                       {{--data-loop="true"></i></span>--}}
+                    {{--</button>--}}
+                {{--</div>--}}
                 <div class="input-group" id="learn_more" style="display:none">
                     <button id="learn-more-btn" class="btn btn-default">
                         <i class="fa fa-key"></i>
@@ -202,18 +228,15 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
             </div>
             </div>
         <div class="social-buttons">
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{
-            http_build_query([
-                'url' => "http://event.test-y-sbm.com/events/qwe-1",
-            ])}}"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://event.test-y-sbm.com/events/qwe-1?description=sdfsdfsdfds"
                target="_blank">
                 <i class="fa fa-facebook-official"></i>
             </a>
 
-            {{--<a href="https://twitter.com/intent/tweet?url={{ urlencode($url) }}"--}}
-               {{--target="_blank">--}}
-                {{--<i class="fa fa-twitter-square"></i>--}}
-            {{--</a>--}}
+            <a href="https://twitter.com/intent/tweet?url={{ urlencode($url) }}"
+               target="_blank">
+                <i class="fa fa-twitter-square"></i>
+            </a>
         </div>
 
 
