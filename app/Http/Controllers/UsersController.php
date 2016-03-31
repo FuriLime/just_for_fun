@@ -335,19 +335,6 @@ class UsersController extends JoshController
             // Ooops.. something went wrong
             return Redirect::back()->withInput()->withErrors($validator);
         }
-
-        //upload image
-        if ($file = Input::file('image'))
-        {
-            dd();
-            $fileName        = $file->getClientOriginalName();
-            $extension       = $file->getClientOriginalExtension() ?: 'png';
-            $folderName      = '/uploads/users/';
-            $destinationPath = public_path() . $folderName;
-            $safeName        = str_random(10).'.'.$extension;
-            $file->move($destinationPath, $safeName);
-        }
-
         //check whether use should be activated by default or not
 //        $activate = Input::get('activate')?true:false;
 
