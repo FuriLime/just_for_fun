@@ -385,12 +385,13 @@ class UsersController extends JoshController
                 Input::file('image')->move($destinationPath, $fileName);
                 //save new file path into db
                 $user_profile->image   = $fileName;
+                $s3 = \Storage::disk('user_data');
+                $filePath = '/ef-test-userdata/' . $fileName;
+                $s3->put($filePath, file_get_contents($user_profile->image), 'public');
+                $user_profile->image=NULL;
+                $user_profile->image ='http://sergey-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
             }
-            $s3 = \Storage::disk('user_data');
-            $filePath = '/ef-test-userdata/' . $fileName;
-            $s3->put($filePath, file_get_contents($user_profile->image), 'public');
-            $user_profile->image=NULL;
-            $user_profile->image ='http://sergey-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
+
 
 
             $selectedRoles = Input::get('groups', array());
@@ -472,6 +473,8 @@ class UsersController extends JoshController
 
                 // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
                 \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
+            }else{
+                $user->verified ="1";
             }
 
             // Redirect to the home page with success menu
