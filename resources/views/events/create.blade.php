@@ -115,7 +115,7 @@
                                     {{--<span class="glyphicon glyphicon-remove"></span>--}}
                                 {{--</span>--}}
                                 <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
+                                    <span class="fa fa-calendar"></span>
                                 </span>
                                 @if (isset($event_clone))
                                     <input class="form-control" size="16" id="start" name="start" type="datetime" value="{{$event_clone['start']}}">
