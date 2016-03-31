@@ -229,7 +229,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
             </div>
             <div class="text-center col-xs-12 share-event">Share this event</div>
             <div class="col-xs-12 text-center share42init"></div>
-        <div class="col-xs-12">{{Share::delicious(route('events.show', $event->readable_url), $event->title, $event->discription)}}<div>
+        <div class="col-xs-12"><div>
         </div>
     </div>
 </div>
