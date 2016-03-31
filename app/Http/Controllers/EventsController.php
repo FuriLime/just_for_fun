@@ -329,7 +329,6 @@ class EventsController extends Controller {
         SEOMeta::addMeta('article:slug', $event->readable_url, 'property');
         SEOMeta::addKeyword(['event', $event->title, $event->status]);
 
-        OpenGraph::setDescription($event->resume);
         OpenGraph::setTitle($event->title);
         OpenGraph::setDescription($event->description);
         OpenGraph::setUrl(url().'/events/'. $event->readable_url);
