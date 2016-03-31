@@ -368,8 +368,6 @@ class EventsController extends Controller {
             //$event = Event::findOrFail($uuid);
             return view('events.show', compact('event'));
         }
-//    }
-//
         else {
             //show event for unregister user
             return view('events.show', compact('event'));

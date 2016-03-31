@@ -227,6 +227,20 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                 </div>
             </div>
             </div>
+
+        @include('components.share', [
+            'url' => request()->fullUrl(),
+            'description' => 'This is really cool link',
+            'image' => 'http://placehold.it/300x300?text=Cool+link'
+        ])
+        <div class="social-buttons">
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode($url) }}"
+               target="_blank">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </div>
+
+
             <div class="text-center col-xs-12 share-event">Share this event</div>
             <div class="col-xs-12 text-center share42init"></div>
         </div>
