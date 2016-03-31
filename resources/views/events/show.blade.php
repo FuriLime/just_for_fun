@@ -227,9 +227,6 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                 </div>
             </div>
             </div>
-        <div class="fb-share-button" data-href="http://event.test-y-sbm.com/events/dfjsdfjs" data-layout="button_count"></div>
-
-
             <div class="text-center col-xs-12 share-event">Share this event</div>
             <div class="col-xs-12 text-center share42init"></div>
         </div>
