@@ -388,6 +388,33 @@ class UsersController extends JoshController
             $account_profile->account_id = $account_user->id;
             $account_profile->save();
 
+            if (Input::file('image'))
+            {
+
+                $destinationPath = base_path().'/public/'; // upload path
+                $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
+
+                $fileName = rand(11111,99999).'.'.$extension; // renameing image
+                Input::file('image')->move($destinationPath, $fileName);
+
+                //delete old pic if exists
+                if(File::exists(public_path() . $destinationPath.$user_profile->image))
+                {
+                    File::delete(public_path() . $destinationPath.$user_profile->image);
+                }
+
+                //save new file path into db
+                $user_profile->image   = $fileName;
+
+
+
+            }
+            $s3 = \Storage::disk('user_data');
+            $filePath = '/ef-test-userdata/' . $fileName;
+            $s3->put($filePath, file_get_contents($user_profile->image), 'public');
+            $user_profile->image=NULL;
+            $user_profile->image ='http://sergey-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
+
 
             $selectedRoles = Input::get('groups', array());
             $roles = Sentinel::getRoleRepository()->all();
@@ -590,19 +617,6 @@ class UsersController extends JoshController
             // is new image uploaded?
             if (Input::file('image'))
             {
-//                $file= Input::file('image');
-//                $fileName        = $file->getClientOriginalName();
-//                $extension       = $file->getClientOriginalExtension();
-//                $folderName      = '/uploads/users/';
-//                $destinationPath = base_path().'/public/uploads/users/';
-//                $safeName        = $user->id.'.'.$extension;
-//                $file->move($destinationPath, $safeName);
-
-//                $image = $request->file('image');
-//                $stream = fopen($image->getRealPath(), 'r+');
-//                $filesystem->writeStream(base_path().'/public/uploads/users/'.$image->getClientOriginalName(), $stream);
-//                fclose($stream);
-
 
                 $destinationPath = base_path().'/public/'; // upload path
                 $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
