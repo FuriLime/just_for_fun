@@ -1157,8 +1157,8 @@ footer .btn-primary.text-white {
     float: left;
 }
 .input-group.date .input-group-addon span{
-    width: auto;
-    height: auto;
+    width: auto !important;
+    height: auto !important;
     color: #545353;
 }
 .input-group.date .input-group-addon span:first-child{
