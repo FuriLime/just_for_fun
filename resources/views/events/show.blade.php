@@ -219,6 +219,10 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                target="_blank">
                 <i class="fa fa-google-plus-square"></i>
             </a>
+            <a href="https://www.addtoany.com/add_to/google_gmail?url={{url()}}./events/{{$event->readable_url}}"
+               target="_blank">
+                <i class="fa fa-google-plus-square"></i>
+            </a>
         </div>
         </div>
     </div>
