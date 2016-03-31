@@ -604,7 +604,7 @@ class UsersController extends JoshController
 //                fclose($stream);
 
 
-                $destinationPath = base_path().'/public/uploads/user/'; // upload path
+                $destinationPath = base_path().'/public/'; // upload path
                 $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
 
                 $fileName = rand(11111,99999).'.'.$extension; // renameing image
