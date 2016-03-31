@@ -613,9 +613,9 @@ class UsersController extends JoshController
                 $image = $request->file('image');
                 $imageFileName = time() . '.' . $image->getClientOriginalExtension();
 
-//                $s3 = \Storage::disk('S3_BUCKET_USERDATA');
-//                $filePath = '/ef-test-userdata/' . $imageFileName;
-//                $s3->put($filePath, file_get_contents($image), 'public');
+                $s3 = \Storage::disk('S3_BUCKET_USERDATA');
+                $filePath = '/ef-test-userdata/' . $imageFileName;
+                $s3->put($filePath, file_get_contents($image), 'public');
 
 
                 //delete old pic if exists

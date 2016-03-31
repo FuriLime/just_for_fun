@@ -849,14 +849,24 @@ class EventsController extends Controller {
         $dec_title = "This calendar entry has been created with a Free Personal Account from EventFellows";
         $dec_footer = "Powered by EventFellows - start creating calendar entries for your own event now. https://eventfellows.com/referrer/{$event->uuid} ";
         $link_event = "Link to the EventPage:\r\n".$event->event_url;
-
-
         $loc = urlencode($event['location']);
+        $title = urlencode($event['title']);
+
         $desc = urlencode($dec_title."\r\n")."-------------------------------------------------------------------------------------------------------".
             urlencode("\r\n".$event['title']."\r\n".$event['description']."\r\n". $text_twit ."\r\n". $link_event."\r\n".
-                "-------------------------------------------------------------------------------------------------------\r\n".
-                $dec_footer);
-        $title = urlencode($event['title']);
+                "-------------------------------------------------------------------------------------------------------\r\n". $dec_footer);
+
+
+        $event_ical_desc = urlencode($event['description']);
+
+        $desc_ical = $dec_title.'\r\n'.
+        "-------------------------------------------------------------------------------------------------------". '\r\n'.
+        $title.'\r\n'.
+        $event['description'].'\r\n'.
+        $text_twit .'\r\n'.
+        $link_event.'\r\n'.
+        "-------------------------------------------------------------------------------------------------------".'\r\n'.
+        $dec_footer;
 
         switch ($calendar) {
 
@@ -902,24 +912,24 @@ class EventsController extends Controller {
 
             case 'Outloock':
                 $result = 'success_load';
-                $calendar_link = '/assets/ical.php?name='. $event['title'] .
+                $calendar_link = '/assets/ical.php?name='. $title .
                     '&sd='. $event_start_zero->format('Ymd') .
                     '&st='. $event_start_zero->format('His') .
                     '&fd='. $event_finish_zero->format('Ymd') .
                     '&ft='. $event_finish_zero->format('His') .
                     '&loc='. $event['location'] .
-                    '&desc='. $event['description'];
+                    '&desc='. $desc_ical;
                 break;
 
             case 'iCal':
                 $result = 'success_load';
-                $calendar_link = '/assets/ical.php?name='. $event['title'] .
+                $calendar_link = '/assets/ical.php?name='. $title .
                     '&sd='. $event_start_zero->format('Ymd') .
                     '&st='. $event_start_zero->format('His') .
                     '&fd='. $event_finish_zero->format('Ymd') .
                     '&ft='. $event_finish_zero->format('His') .
                     '&loc='. $event['location'] .
-                    '&desc='. $event['description'];
+                    '&desc='. $desc_ical;
                 break;
 
             default:

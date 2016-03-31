@@ -1,6 +1,6 @@
 <?php 
 
-$ID =  strip_tags($_GET['name']);
+$ID =  $_GET['name'];
 $file_name = str_replace(" ", "_", $ID);
 
 if (isset($ID) && $ID != "") {
@@ -27,8 +27,8 @@ if (isset($ID) && $ID != "") {
     $file .= "DTSTAMP:".$date . "T" . $time ."Z\r\n";
     $file .= "DTSTART:".$date . "T" . $time ."Z\r\n";
     $file .= "DTEND:". $date_end . "T" . $time_end ."Z\r\n";
-    $file .= "SUMMARY:".strip_tags($_GET['name'])."\r\n";
-    $file .= "DESCRIPTION:".strip_tags($_GET['desc'])."\r\n";
+    $file .= "SUMMARY:".$_GET['name']."\r\n";
+    $file .= "DESCRIPTION:".$_GET['desc']."\r\n";
     $file .= "LOCATION:" . strip_tags($_GET['loc']) . "\r\n";
     $file .= "END:VEVENT\r\n";
     $file .= "END:VCALENDAR\r\n";
