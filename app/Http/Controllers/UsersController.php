@@ -645,6 +645,7 @@ class UsersController extends JoshController
 
             }
 
+
             // Assign the user to groups
             foreach ($selectedRoles as $roleId) {
 
