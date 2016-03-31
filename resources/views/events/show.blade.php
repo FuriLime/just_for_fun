@@ -227,14 +227,8 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                 </div>
             </div>
             </div>
-
-        @include('events.show', [
-            'url' => request()->fullUrl(),
-            'description' => 'This is really cool link',
-            'image' => 'http://placehold.it/300x300?text=Cool+link'
-        ])
         <div class="social-buttons">
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode($url) }}"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://event.test-y-sbm.com/events/qwe-1"
                target="_blank">
                 <i class="fa fa-facebook-official"></i>
             </a>
