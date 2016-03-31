@@ -24,7 +24,7 @@ use DB;
 use OpenGraph;
 use Twitter;
 use SEOMeta;
-use Share;
+use SocialShare;
 
 class EventsController extends Controller {
 
