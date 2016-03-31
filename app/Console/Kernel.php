@@ -41,14 +41,6 @@ class Kernel extends ConsoleKernel
        $schedule->command('backup:run')->dailyAt('03:00')->when(function () {
             return "DOneDDDDD";
         });
-//
-//        $schedule->command('backupfiles:run')->weekly()->mondays()->at('03:00')->when(function () {
-//            return "DOneDDDDD";
-//        });
-//
-//        $schedule->command('userdata:run')->weekly()->mondays()->at('03:00')->when(function () {
-//            return "DOneDDDDD";
-//        });
 
     }
 
