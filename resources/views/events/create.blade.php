@@ -861,9 +861,9 @@
 		threshold: 500,
 		warningClass: "label label-success",
 		limitReachedClass: "label label-danger",
-		preText: '@lang('frontend.you_typed') ',
-		separator: ' @lang('frontend.chars_out_of') ',
-		postText: ' @lang('frontend.chars')',
+		{{--preText: '@lang('frontend.you_typed') ',--}}
+		separator: '/',
+		{{--postText: ' @lang('frontend.chars')',--}}
 		validate: true
 	});
 	$('#url, #location').maxlength({
