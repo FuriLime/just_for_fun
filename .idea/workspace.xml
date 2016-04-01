@@ -41,9 +41,11 @@
       <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/register.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21428572" vertical-offset="2250" max-vertical-offset="2850">
-              <caret line="158" column="113" selection-start-line="158" selection-start-column="113" selection-end-line="158" selection-end-column="113" />
-              <folding />
+            <state vertical-scroll-proportion="0.33270678" vertical-offset="513" max-vertical-offset="2850">
+              <caret line="46" column="103" selection-start-line="46" selection-start-column="103" selection-end-line="46" selection-end-column="103" />
+              <folding>
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#5;n#form#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,7 +63,7 @@
       <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/css/pages/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.04522613" vertical-offset="1293" max-vertical-offset="1890">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1293" max-vertical-offset="1890">
               <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
               <folding />
             </state>
@@ -250,6 +252,28 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -326,18 +350,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-04155" summary="social buttons">
-      <created>1459488310744</created>
-      <option name="number" value="04155" />
-      <option name="project" value="LOCAL" />
-      <updated>1459488310744</updated>
-    </task>
-    <task id="LOCAL-04156" summary="social buttons">
-      <created>1459489164150</created>
-      <option name="number" value="04156" />
-      <option name="project" value="LOCAL" />
-      <updated>1459489164150</updated>
     </task>
     <task id="LOCAL-04157" summary="social buttons">
       <created>1459489256313</created>
@@ -621,7 +633,19 @@
       <option name="project" value="LOCAL" />
       <updated>1459505562179</updated>
     </task>
-    <option name="localTasksCounter" value="4204" />
+    <task id="LOCAL-04204" summary="social buttons">
+      <created>1459509574379</created>
+      <option name="number" value="04204" />
+      <option name="project" value="LOCAL" />
+      <updated>1459509574379</updated>
+    </task>
+    <task id="LOCAL-04205" summary="social buttons">
+      <created>1459509865307</created>
+      <option name="number" value="04205" />
+      <option name="project" value="LOCAL" />
+      <updated>1459509865307</updated>
+    </task>
+    <option name="localTasksCounter" value="4206" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -851,13 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10714286" vertical-offset="765" max-vertical-offset="13245">
-          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/uploads/users/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
@@ -1020,18 +1037,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/pages/custom.css">
+    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04522613" vertical-offset="1293" max-vertical-offset="1890">
-          <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
+        <state vertical-scroll-proportion="-5.8076925" vertical-offset="1603" max-vertical-offset="6450">
+          <caret line="128" column="58" selection-start-line="128" selection-start-column="58" selection-end-line="128" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/assets/css/pages/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="6570">
-          <caret line="13" column="120" selection-start-line="13" selection-start-column="120" selection-end-line="13" selection-end-column="120" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1293" max-vertical-offset="1890">
+          <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1044,19 +1061,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8076925" vertical-offset="1603" max-vertical-offset="6450">
-          <caret line="128" column="58" selection-start-line="128" selection-start-column="58" selection-end-line="128" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.33270678" vertical-offset="1533" max-vertical-offset="13275">
+          <caret line="114" column="62" selection-start-line="114" selection-start-column="53" selection-end-line="114" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="6570">
+          <caret line="13" column="120" selection-start-line="13" selection-start-column="120" selection-end-line="13" selection-end-column="120" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21428572" vertical-offset="2250" max-vertical-offset="2850">
-          <caret line="158" column="113" selection-start-line="158" selection-start-column="113" selection-end-line="158" selection-end-column="113" />
-          <folding />
+        <state vertical-scroll-proportion="0.33270678" vertical-offset="513" max-vertical-offset="2850">
+          <caret line="46" column="103" selection-start-line="46" selection-start-column="103" selection-end-line="46" selection-end-column="103" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#5;n#form#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

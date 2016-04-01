@@ -44,7 +44,7 @@
                 <div class="panel-heading">Your Plan</div>
                 <div class="panel-body">
                     You have selected the <strong>Lite</strong> ($0/monthly) plan
-                    <button class="btn btn-primary pull-right"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Change Plan</button>
+                    <button class="btn btn-primary pull-right"><i class="fa fa-arrow-circle-left"></i> Change Plan</button>
                 </div>
             </div>
             <div class="panel panel-default">
