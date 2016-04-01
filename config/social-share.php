@@ -4,7 +4,7 @@ return [
     'separator' => '&',
     'services' => [
         'delicious' => [ 'uri' => 'https://delicious.com/post' ],
-        'pocket' => [ 'uri' => 'https://pocket.com/shared' ],
+        'pocket' => [ 'uri' => 'https://getpocket.com/shared' ],
         'digg' => [ 'uri' => 'http://www.digg.com/submit' ],
         'email' => [ 'view' => 'social-share::email' ],
         'evernote' => [ 'uri' => 'http://www.evernote.com/clip.action' ],
