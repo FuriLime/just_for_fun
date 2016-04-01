@@ -286,7 +286,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                 {{--<div data-type="xing/share" data-shape="square"></div>--}}
 
                 <!-- AddToAny BEGIN -->
-                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                {{--<div class="a2a_kit a2a_kit_size_32 a2a_default_style">--}}
                     <a class="a2a_button_facebook"></a>
                     <a class="a2a_button_twitter"></a>
                     <a class="a2a_button_google_plus"></a>
@@ -305,7 +305,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 
                     <a class="a2a_button_tumblr"></a>
                     <a class="a2a_button_reddit"></a>
-                </div>
+                {{--</div>--}}
                 <script async src="https://static.addtoany.com/menu/page.js"></script>
                 <!-- AddToAny END -->
             </div>
