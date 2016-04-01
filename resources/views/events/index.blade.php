@@ -6,7 +6,7 @@ Events List
 @parent
 @stop
 @section('header_styles')
-    <link href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
     <link href="{{ asset('assets/css/pages/custom.css') }}" rel="stylesheet" type="text/css" />
 @stop
 {{-- Page content --}}
