@@ -360,7 +360,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                 mapTypeId:google.maps.MapTypeId.ROADMAP
             };
 
-            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            var map=new google.maps.Map(document.getElementById("map_canvas"),mapProp);
 
             var marker=new google.maps.Marker({
                 position:myCenter,
