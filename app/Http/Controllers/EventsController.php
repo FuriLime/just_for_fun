@@ -360,26 +360,7 @@ class EventsController extends Controller {
 
         $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
 
-        //share to social networks
-        $event['facebook']=Share::load(url().'/events/'. $event->readable_url, $event->title."\r\n".$event->description."\r\n")->facebook();
-        $event['twitter']=Share::load(url().'/events/'. $event->readable_url, $event->title."\r\n".$event->description."\r\n")->twitter();
-        $event['gplus']=Share::load(url().'/events/'. $event->readable_url, $event->title."\r\n".$event->description."\r\n")->gplus();
-        $event['linkedin']=Share::load(url().'/events/'. $event->readable_url, $event->title."\r\n".$event->description."\r\n")->linkedin();
-        $event['pocket']=Share::load(url().'/events/'. $event->readable_url, $event->title."\r\n".$event->description."\r\n")->pocket();
-
-
-        $event['email']=Share::load(url().'/events/'. $event->readable_url, $event->title)->email();
-        $event['gmail']=Share::load(url().'/events/'. $event->readable_url, $event->title."\r\n".$event->description."\r\n")->gmail();
-
-
-        $event['tumblr']=Share::load(url().'/events/'. $event->readable_url, $event->title."\r\n".$event->description."\r\n")->tumblr();
-        $event['digg']=Share::load(url().'/events/'. $event->readable_url, $event->title."\r\n".$event->description."\r\n")->digg();
-
-
-        $event['evernote']=Share::load(url().'/events/'. $event->readable_url, $event->title)->evernote();
-
-
-                // Is the user logged in?
+        // Is the user logged in?
         if (Sentinel::check()) {
 //      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
             //$event = Event::findOrFail($uuid);
