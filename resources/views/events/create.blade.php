@@ -559,14 +559,7 @@
     $('#location').change(function () {
 
 
-        var geocoder = new google.maps.Geocoder();
-        geocoder.geocode({'latLng': $('#location').val()}, function(results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
-                if (results[1]) {
-                    var loc = getCityState(results);
-                }
-            }
-        });
+
 
 
         $('.publish').focus();
@@ -591,7 +584,6 @@
                 if (status == google.maps.places.PlacesServiceStatus.OK) {
                     for (var i = 0; i < results.length; i++) {
                         var place = results[i];
-                        console.log(place.address_components);
                         break;
                     }
                     var locale = ($('#location').val());
@@ -679,6 +671,17 @@
                     location_lng = place["geometry"]["location"].lng();
                     $('#lat').val(location_lat);
                     $('#lng').val(location_lng);
+
+
+                    var geocoder = new google.maps.Geocoder();
+                    var address = document.getElementById('address').value;
+                    geocoder.geocode({'address': address}, function(results, status) {
+                        if (status == google.maps.GeocoderStatus.OK) {
+                            if (results[1]) {
+                                var loc = getCityState(results);
+                            }
+                        }
+                    });
 
 
                     var pyrmont = new google.maps.LatLng(location_lat, location_lng);
