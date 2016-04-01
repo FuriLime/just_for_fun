@@ -81,9 +81,10 @@
                         {!! Honeypot::generate('my_name', 'my_time') !!}
                         <div class="form-group">
                             <div class="col-sm-offset-4 col-sm-8">
-                                <a href="{{ URL::to('facebook') }}"> <i class="btn-facebook" data-name="facebook" data-size="22" data-loop="true" data-c="#3a5795" data-hc="#3a5795"></i>
+                                <a href="{{ URL::to('facebook') }}" class="btn btn-block btn-social btn-facebook">
+                                    <i class="fa fa-facebook"></i>
                                 </a>
-                                <a href="{{ URL::to('twitter') }}"> <i class="livicon" data-name="twitter" data-size="22" data-loop="true" data-c="#55acee" data-hc="#55acee"></i>
+                                <a href="{{ URL::to('twitter') }}"> <i class="fa fa-facebook"></i>
                                 </a>
                                 <a href="{{ URL::to('google') }}"> <i class="livicon" data-name="google-plus" data-size="22" data-loop="true" data-c="#d73d32" data-hc="#d73d32"></i>
                                 </a>
