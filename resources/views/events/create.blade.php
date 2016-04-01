@@ -678,8 +678,13 @@
                     geocoder.geocode({'address': address}, function(results, status) {
                         if (status == google.maps.GeocoderStatus.OK) {
                             if (results[0]) {
-                                var loc = results[0].address_components;
-                                console.log(loc.types);
+                                var components={};
+                                jQuery.each(address_components, function(k,v1) {
+                                    jQuery.each(v1.types, function(k2, v2){
+                                        components[v2]=v1.long_name
+                                    });
+                                })
+                                console.log(components);
                             }
                             else{
 
