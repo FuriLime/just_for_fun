@@ -865,7 +865,7 @@
 		separator: '/',
 		{{--postText: ' @lang('frontend.chars')',--}}
 		validate: true,
-        placement: right
+        placement: "bottom-right"
 	});
 	$('#url, #location').maxlength({
 		threshold: 60,
