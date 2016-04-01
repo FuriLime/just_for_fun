@@ -573,7 +573,7 @@
                 };
                 service = new google.maps.places.PlacesService(map);
                 service.textSearch(request, callback);
-                var address_components = results[0].address_components;
+                var address_components = request.address_components;
                 console.log(address_components);
             }
 
