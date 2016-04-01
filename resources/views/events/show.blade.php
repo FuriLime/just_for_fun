@@ -287,10 +287,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 
                 <!-- AddToAny BEGIN -->
                 <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-                    <a class="a2a_button_facebook"></a>
-                    <a class="a2a_button_twitter"></a>
-                    <a class="a2a_button_google_plus"></a>
+                    <a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_google_plus"></a><a class="a2a_button_linkedin"></a><a class="a2a_button_google_gmail"></a><a class="a2a_button_wordpress"></a><a class="a2a_button_digg"></a><a class="a2a_button_evernote"></a><a class="a2a_button_outlook_com"></a><a class="a2a_button_pocket"></a><a class="a2a_button_xing"></a><a class="a2a_button_yahoo_mail"></a><a class="a2a_button_tumblr"></a><a class="a2a_button_reddit"></a>
                 </div>
                 <script async src="https://static.addtoany.com/menu/page.js"></script>
                 <!-- AddToAny END -->
