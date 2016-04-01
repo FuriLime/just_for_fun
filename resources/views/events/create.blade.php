@@ -572,9 +572,10 @@
                     query: $('#location').val()
                 };
                 service = new google.maps.places.PlacesService(map);
+                console.log(service);
                 service.textSearch(request, callback);
                 var address_components = request.formatted_address;
-                console.log(callback);
+
             }
 
             function callback(results, status) {
