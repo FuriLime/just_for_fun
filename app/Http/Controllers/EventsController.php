@@ -364,6 +364,7 @@ class EventsController extends Controller {
         $event['gplus']=Share::load(url().'/events/'. $event->readable_url, $event->title."\r\n".$event->description."\r\n")->gplus();
         $event['facebook']=Share::load(url().'/events/'. $event->readable_url, $event->title."\r\n".$event->description."\r\n")->facebook();
         $event['evernote']=Share::load(url().'/events/'. $event->readable_url, $event->title)->evernote();
+        $event['linkedin']=Share::load(url().'/events/'. $event->readable_url, $event->title."\r\n".$event->description."\r\n")->linkedin();
 
                 // Is the user logged in?
         if (Sentinel::check()) {
