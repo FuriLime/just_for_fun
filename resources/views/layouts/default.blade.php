@@ -11,6 +11,7 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <link href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
     <![endif]-->
 
     <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}" type="image/vnd.microsoft.icon" />
@@ -64,7 +65,7 @@
                     @if(!Sentinel::check())
                         <li><a href="{{ URL::to('signin') }}" class="fa fa-sign-in" data-toggle="modal">@lang('frontend.sign_in')</a></li>
                         {{--<li><a href="#auth" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'#toregister'">@lang('frontend.sign_up')</a></li>--}}
-                        <li><a href="{{ URL::to('signup') }}" data-toggle="modal" >@lang('frontend.sign_up')</a></li>
+                        <li><a href="{{ URL::to('signup') }}"  data-toggle="modal" >@lang('frontend.sign_up')</a></li>
                     @endif
 
                     <li><a href="{{ URL::to('events') }}" data-toggle="modal">Events</a></li>

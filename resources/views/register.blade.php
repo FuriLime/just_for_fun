@@ -108,7 +108,7 @@
                         <div class="form-group">
                             <div class="col-sm-offset-4 col-sm-8">
                                 <button type="submit" class="btn btn-success btn-primary">
-                                    <span class="fa fa-sign-in" aria-hidden="true"></span> Register</button>
+                                    <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Register</button>
                             </div>
                         </div>
                     </form>
