@@ -573,6 +573,8 @@
                 };
                 service = new google.maps.places.PlacesService(map);
                 service.textSearch(request, callback);
+                var address_components = results[0].address_components;
+                console.log(address_components);
             }
 
             function callback(results, status) {
@@ -596,8 +598,6 @@
                         splits = locale.replace(/-/g,",");
 
                         splits = splits.split(',');
-                        var address_components = results[0].address_components;
-console.log(address_components);
                         if (splits.length == 2) {
                             sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
                             $('#city').val(sity);
