@@ -574,7 +574,7 @@
                 service = new google.maps.places.PlacesService(map);
                 service.textSearch(request, callback);
                 var address_components = request.formatted_address;
-                console.log(address_components);
+                console.log(callback);
             }
 
             function callback(results, status) {
