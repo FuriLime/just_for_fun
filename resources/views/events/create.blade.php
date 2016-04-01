@@ -677,7 +677,7 @@
                     var address = document.getElementById('location').value;
                     geocoder.geocode({'address': address}, function(results, status) {
                         if (status == google.maps.GeocoderStatus.OK) {
-                            if (results[0]) {
+                            if (results[1]) {
                                 var loc = getCityState(results);
                                 console.log(loc);
                             }
