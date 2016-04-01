@@ -5,7 +5,10 @@
 Events List
 @parent
 @stop
-
+@section('header_styles')
+    <link href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/pages/custom.css') }}" rel="stylesheet" type="text/css" />
+@stop
 {{-- Page content --}}
 @section('content')
 
