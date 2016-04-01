@@ -63,7 +63,7 @@
                     <li {!! (Request::is('advancedfeatures') ? 'class="active"' : '') !!}><a href="{{ URL::to('advancedfeatures') }}">@lang('frontend.features')</a></li>
 
                     @if(!Sentinel::check())
-                        <li><a href="{{ URL::to('signin') }}" class="fa fa-sign-in" data-toggle="modal">@lang('frontend.sign_in')</a></li>
+                        <li><a href="{{ URL::to('signin') }}" data-toggle="modal">@lang('frontend.sign_in')</a></li>
                         {{--<li><a href="#auth" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'#toregister'">@lang('frontend.sign_up')</a></li>--}}
                         <li><a href="{{ URL::to('signup') }}"  data-toggle="modal" >@lang('frontend.sign_up')</a></li>
                     @endif
