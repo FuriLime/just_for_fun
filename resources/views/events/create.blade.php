@@ -90,7 +90,7 @@
 
                     <div class="form-group add_event_section_link" id="add_dicription">
                         <i class="fa fa-fw fa-comment"></i>
-                        <a >Add Description</a>
+                        <a class="add_disc_link">Add Description</a>
                     </div>
 
 					<div class="form-group" id="descprip" style="display: none">
@@ -794,9 +794,6 @@
                                         country = splits[3];
                                         $('#country').val(country);
                                     }
-
-
-
                                     $('#country').attr('style', 'display:block');
                                     $('#state').attr('style', 'display:block');
                                     $('#city').attr('style', 'display:block');
