@@ -285,8 +285,10 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 
                 <div data-type="xing/share" data-shape="square"></div>
 
-
+                <a class="a2a_button_wordpress"></a>
+                <a class="a2a_button_pocket"></a><a class="a2a_button_yahoo_mail"></a>
             </div>
+
         {{--<div class="social-buttons">--}}
             {{--<a href="https://www.facebook.com/sharer/sharer.php?u={{url()}}./events/{{$event->readable_url}}"--}}
                {{--target="_blank">--}}
