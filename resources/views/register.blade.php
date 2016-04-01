@@ -108,7 +108,7 @@
                         <div class="form-group">
                             <div class="col-sm-offset-4 col-sm-8">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-check-circle"></i>Register</button>
+                                    <i class="fa fa-check-circle"></i> Register</button>
                             </div>
                         </div>
                     </form>
