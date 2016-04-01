@@ -212,15 +212,15 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                 </a>
                 <a href="{{$event['facebook']}}"
                    target="_blank">
-                    <i class="fa fa-twitter-square"></i>
+                    <i class="fa fa-facebook-square"></i>
                 </a>
                 <a href="{{$event['gplus']}}"
                    target="_blank">
-                    <i class="fa fa-twitter-square"></i>
+                    <i class="fa fa-gplus-square"></i>
                 </a>
                 <a href="{{$event['evernote']}}"
                    target="_blank">
-                    <i class="fa fa-twitter-square"></i>
+                    <i class="fa fa-evernote-square"></i>
                 </a>
                 <a href="{{$event['linkedin']}}"
                    target="_blank">
