@@ -852,9 +852,9 @@
 		threshold: 25,
 		warningClass: "label label-success",
 		limitReachedClass: "label label-danger",
-		preText: '@lang('frontend.you_typed') ',
+		{{--preText: '@lang('frontend.you_typed') ',--}}
 		separator: '/',
-		postText: ' @lang('frontend.chars')',
+		{{--postText: ' @lang('frontend.chars')',--}}
 		validate: true
 	});
 	$('textarea#description').maxlength({
