@@ -85,15 +85,23 @@
                             <div class="col-sm-offset-4 col-sm-8">
                                 <a href="{{ URL::to('facebook') }}" class="btn btn-block btn-social btn-facebook">
                                     <i class="fa fa-facebook"></i>
+                                    Sign in with Facebook
                                 </a>
                                 <a href="{{ URL::to('twitter') }}" class="btn btn-block btn-social btn-twitter">
                                 <i class="fa fa-twitter"></i>
+                                  Sign in with Twitter
                                 </a>
-                                <a href="{{ URL::to('google') }}"> <i class="livicon" data-name="google-plus" data-size="22" data-loop="true" data-c="#d73d32" data-hc="#d73d32"></i>
+                                <a href="{{ URL::to('google') }}" class="btn btn-block btn-social btn-google-plus">
+                                    <i class="fa fa-google-plus"></i>
+                                    Sign in with Google
                                 </a>
-                                <a href="{{ URL::to('linked') }}"> <i class="livicon" data-name="linkedin" data-size="22" data-loop="true" data-c="#1b86bd" data-hc="#1b86bd"></i>
+                                <a href="{{ URL::to('linked') }}" class="btn btn-block btn-social btn-linkedin">
+                                    <i class="fa fa-linkedin"></i>
+                                    Sign in with LinkedIn
                                 </a>
-                                <a href="{{ URL::to('oauthwindows') }}"> <i class="livicon" data-name="microsoft" data-size="22" data-loop="true" data-c="#1b86bd" data-hc="#1b86bd"></i>
+                                <a href="{{ URL::to('oauthwindows') }}" class="btn btn-block btn-social btn-linkedin">
+                                    <i class="fa fa-linkedin"></i>
+                                    Sign in with Microsoft
                                 </a>
                             </div>
                         </div>
