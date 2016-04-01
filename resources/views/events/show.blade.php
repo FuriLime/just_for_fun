@@ -227,6 +227,11 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                     <i class="fa fa-linkedin-square"></i>
                 </a>
 
+                <a href="{{$event['gmail']}}"
+                   target="_blank">
+                    <i class="fa fa-linkedin-square"></i>
+                </a>
+
                 <a href="{{$event['evernote']}}"
                    target="_blank">
                     <i class="fa fa-twitter-square"></i>

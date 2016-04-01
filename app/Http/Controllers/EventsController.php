@@ -368,6 +368,7 @@ class EventsController extends Controller {
 
 
         $event['email']=Share::load(url().'/events/'. $event->readable_url, $event->title)->email();
+        $event['gmail']=Share::load(url().'/events/'. $event->readable_url, $event->title)->gmail();
 
 
         $event['evernote']=Share::load(url().'/events/'. $event->readable_url, $event->title)->evernote();
