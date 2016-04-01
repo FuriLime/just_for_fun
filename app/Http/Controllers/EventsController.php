@@ -365,6 +365,7 @@ class EventsController extends Controller {
         $event['twitter']=Share::load(url().'/events/'. $event->readable_url, $event->title."\r\n".$event->description."\r\n")->twitter();
         $event['gplus']=Share::load(url().'/events/'. $event->readable_url, $event->title."\r\n".$event->description."\r\n")->gplus();
         $event['linkedin']=Share::load(url().'/events/'. $event->readable_url, $event->title."\r\n".$event->description."\r\n")->linkedin();
+        $event['pocket']=Share::load(url().'/events/'. $event->readable_url, $event->title."\r\n".$event->description."\r\n")->pocket();
 
 
         $event['email']=Share::load(url().'/events/'. $event->readable_url, $event->title)->email();
