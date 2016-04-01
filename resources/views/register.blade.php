@@ -100,7 +100,7 @@
                                     Sign in with LinkedIn
                                 </a>
                                 <a href="{{ URL::to('oauthwindows') }}" class="btn btn-block btn-social btn-linkedin">
-                                    <i class="fa fa-linkedin"></i>
+                                    <i class="fa fa-microsoft"></i>
                                     Sign in with Microsoft
                                 </a>
                             </div>
