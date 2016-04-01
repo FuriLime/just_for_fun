@@ -855,7 +855,8 @@
 		{{--preText: '@lang('frontend.you_typed') ',--}}
 		separator: '/',
 		{{--postText: ' @lang('frontend.chars')',--}}
-		validate: true
+		validate: true,
+        placement: "bottom-right"
 	});
 	$('textarea#description').maxlength({
 		threshold: 500,
