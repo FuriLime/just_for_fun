@@ -86,7 +86,8 @@
                                 <a href="{{ URL::to('facebook') }}" class="btn btn-block btn-social btn-facebook">
                                     <i class="fa fa-facebook"></i>
                                 </a>
-                                <a href="{{ URL::to('twitter') }}"> <i class="fa fa-facebook"></i>
+                                <a href="{{ URL::to('twitter') }}" class="btn btn-block btn-social btn-twitter">
+                                <i class="fa fa-twitter"></i>
                                 </a>
                                 <a href="{{ URL::to('google') }}"> <i class="livicon" data-name="google-plus" data-size="22" data-loop="true" data-c="#d73d32" data-hc="#d73d32"></i>
                                 </a>
