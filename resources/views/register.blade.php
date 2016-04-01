@@ -72,7 +72,7 @@
                             </div>
                             </div>
                         <div class="form-group">
-                            <div class="col-sm-offset-4 col-sm-8">
+                            <div class="col-sm-offset-4 col-sm-6">
                                 <div class="checkbox">
                                     <label>
                                         <input type="checkbox"> I Accept The <a href="#">Terms Of Service</a>
@@ -106,7 +106,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-sm-offset-4 col-sm-8">
+                            <div class="col-sm-offset-4 col-sm-6">
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-check-circle"></i> Register</button>
                             </div>
