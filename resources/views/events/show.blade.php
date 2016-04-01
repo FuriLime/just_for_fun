@@ -206,26 +206,32 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 
             {{--<div class="text-center col-xs-12 share-event">Share this event</div>--}}
             <div class="col-xs-12 text-center">
-                <a href="{{$event['twitter']}}"
-                   target="_blank">
-                    <i class="fa fa-twitter-square"></i>
-                </a>
                 <a href="{{$event['facebook']}}"
                    target="_blank">
                     <i class="fa fa-facebook-square"></i>
                 </a>
+                <a href="{{$event['twitter']}}"
+                   target="_blank">
+                    <i class="fa fa-twitter-square"></i>
+                </a>
                 <a href="{{$event['gplus']}}"
                    target="_blank">
-                    <i class="fa fa-gplus-square"></i>
-                </a>
-                <a href="{{$event['evernote']}}"
-                   target="_blank">
-                    <i class="fa fa-evernote-square"></i>
+                    <i class="fa fa-twitter-square"></i>
                 </a>
                 <a href="{{$event['linkedin']}}"
                    target="_blank">
                     <i class="fa fa-linkedin-square"></i>
                 </a>
+                <a href="{{$event['email']}}"
+                   target="_blank">
+                    <i class="fa fa-linkedin-square"></i>
+                </a>
+
+                <a href="{{$event['evernote']}}"
+                   target="_blank">
+                    <i class="fa fa-twitter-square"></i>
+                </a>
+
             </div>
         {{--<div class="social-buttons">--}}
             {{--<a href="https://www.facebook.com/sharer/sharer.php?u={{url()}}./events/{{$event->readable_url}}"--}}
