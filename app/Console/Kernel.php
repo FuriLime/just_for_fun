@@ -15,8 +15,6 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         \App\Console\Commands\Inspire::class,
         \App\Console\Commands\RemoveEvent::class,
-        \App\Console\Commands\BackUp::class,
-        \App\Console\Commands\UserData::class,
     ];
 
     /**
