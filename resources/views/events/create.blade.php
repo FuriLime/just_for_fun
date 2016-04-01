@@ -596,7 +596,7 @@
                         splits = locale.replace(/-/g,",");
 
                         splits = splits.split(',');
-console.log(results.types);
+console.log(locale.types);
                         if (splits.length == 2) {
                             sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
                             $('#city').val(sity);
