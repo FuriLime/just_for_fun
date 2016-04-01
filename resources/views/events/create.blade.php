@@ -679,7 +679,7 @@
                         if (status == google.maps.GeocoderStatus.OK) {
                             if (results[0]) {
                                 var loc = results[0].address_components;
-                                console.log(loc);
+                                console.log(loc.types);
                             }
                             else{
 
