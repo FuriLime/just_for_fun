@@ -63,8 +63,48 @@
         <div class="text-left share-text">
           Please update <b>Your Profile</b> so we can add the relevant information to your events. You can set the visibility of your details in your <a href="#">Profile Settings</a>.
         </div>
-        <div class="col-xs-12 text-left share42init"></div>
-        <input type="text" id="shortlink">
+        <div class="col-xs-12 text-left">
+            <a href="{{$event['facebook']}}"
+               target="_blank">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+            <a href="{{$event['twitter']}}"
+               target="_blank">
+                <i class="fa fa-twitter-square"></i>
+            </a>
+            <a href="{{$event['gplus']}}"
+               target="_blank">
+                <i class="fa fa-twitter-square"></i>
+            </a>
+            <a href="{{$event['linkedin']}}"
+               target="_blank">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
+            <a href="{{$event['email']}}"
+               target="_blank">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
+
+            <a href="{{$event['gmail']}}"
+               target="_blank">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
+
+            <a href="{{$event['evernote']}}"
+               target="_blank">
+                <i class="fa fa-twitter-square"></i>
+            </a>
+            <a href="{{$event['tumblr']}}"
+               target="_blank">
+                <i class="fa fa-twitter-square"></i>
+            </a>
+            <a href="{{$event['digg']}}"
+                   target="_blank">
+                <i class="fa fa-twitter-square"></i>
+            </a>
+
+        </div>
+
       </div>
       <img src="http://event.test-y-sbm.com/assets/images/exit-show-details.png" class="exit-show-details">
     </div>
