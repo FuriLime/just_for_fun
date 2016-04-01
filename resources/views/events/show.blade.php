@@ -222,7 +222,10 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                    target="_blank">
                     <i class="fa fa-twitter-square"></i>
                 </a>
-
+                <a href="{{$event['linkedin']}}"
+                   target="_blank">
+                    <i class="fa fa-linkedin-square"></i>
+                </a>
             </div>
         {{--<div class="social-buttons">--}}
             {{--<a href="https://www.facebook.com/sharer/sharer.php?u={{url()}}./events/{{$event->readable_url}}"--}}
