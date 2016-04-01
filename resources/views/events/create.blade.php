@@ -557,6 +557,18 @@
 	// Get timezone of the place
 	// 3 steps: get entered place, find it`s location (coordinates), find its timezone
     $('#location').change(function () {
+
+
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({'latLng': foundLoc}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                if (results[1]) {
+                    var loc = getCityState(results);
+                }
+            }
+        });
+
+
         $('.publish').focus();
         $('.draft').focus();
         $('.locale').attr('style', 'display:none');
