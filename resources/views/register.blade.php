@@ -156,7 +156,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-4 col-sm-8">
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-check-circle"></i> Begin 7 Day Trial</button>
+                                <button type="submit" class="btn btn-primary" style="width:145px"><i class="fa fa-check-circle"></i> Begin 7 Day Trial</button>
                             </div>
                         </div>
                     </form>
