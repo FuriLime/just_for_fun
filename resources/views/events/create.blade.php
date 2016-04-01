@@ -685,7 +685,7 @@
                                         components[v2]=v1.long_name
                                     });
                                 })
-                                console.log(components);
+                                console.log(components.country);
                             }
                             else{
 
