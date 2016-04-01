@@ -283,6 +283,9 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                     <i class="fa fa-twitter-square"></i>
                 </a>
 
+                <div data-type="xing/share" data-shape="square"></div>
+
+
             </div>
         {{--<div class="social-buttons">--}}
             {{--<a href="https://www.facebook.com/sharer/sharer.php?u={{url()}}./events/{{$event->readable_url}}"--}}
@@ -382,7 +385,14 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 		//initialize();
     });
 	</script>
-
+    <script>
+        ;(function (d, s) {
+            var x = d.createElement(s),
+                    s = d.getElementsByTagName(s)[0];
+            x.src = "https://www.xing-share.com/plugins/share.js";
+            s.parentNode.insertBefore(x, s);
+        })(document, "script");
+    </script>
 	<script type="text/javascript">
 	$('#add-to-calendar-btn').daterangepicker({
 			ranges: {

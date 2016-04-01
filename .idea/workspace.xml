@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/social-share.php" afterPath="$PROJECT_DIR$/config/social-share.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -28,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.208333" vertical-offset="3730" max-vertical-offset="6975">
-              <caret line="265" column="41" selection-start-line="265" selection-start-column="41" selection-end-line="265" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.6785714" vertical-offset="5530" max-vertical-offset="7125">
+              <caret line="394" column="13" selection-start-line="394" selection-start-column="13" selection-end-line="394" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -54,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="social-share.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="social-share.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/social-share.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15706806" vertical-offset="0" max-vertical-offset="600">
+            <state vertical-scroll-proportion="-2.625" vertical-offset="27" max-vertical-offset="600">
               <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
               <folding />
             </state>
@@ -141,8 +141,8 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
-        <option value="$PROJECT_DIR$/resources/views/events/show.blade.php" />
         <option value="$PROJECT_DIR$/config/social-share.php" />
+        <option value="$PROJECT_DIR$/resources/views/events/show.blade.php" />
       </list>
     </option>
   </component>
@@ -292,12 +292,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-04121" summary="readable url">
-      <created>1459429289148</created>
-      <option name="number" value="04121" />
-      <option name="project" value="LOCAL" />
-      <updated>1459429289148</updated>
     </task>
     <task id="LOCAL-04122" summary="readable url">
       <created>1459429516531</created>
@@ -587,7 +581,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459491127308</updated>
     </task>
-    <option name="localTasksCounter" value="4170" />
+    <task id="LOCAL-04170" summary="social buttons">
+      <created>1459491297474</created>
+      <option name="number" value="04170" />
+      <option name="project" value="LOCAL" />
+      <updated>1459491297474</updated>
+    </task>
+    <option name="localTasksCounter" value="4171" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1011,18 +1011,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
+    <entry file="file://$PROJECT_DIR$/config/social-share.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.208333" vertical-offset="3730" max-vertical-offset="6975">
-          <caret line="265" column="41" selection-start-line="265" selection-start-column="41" selection-end-line="265" selection-end-column="41" />
+        <state vertical-scroll-proportion="-2.625" vertical-offset="27" max-vertical-offset="600">
+          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/social-share.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15706806" vertical-offset="0" max-vertical-offset="600">
-          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.6785714" vertical-offset="5530" max-vertical-offset="7125">
+          <caret line="394" column="13" selection-start-line="394" selection-start-column="13" selection-end-line="394" selection-end-column="13" />
           <folding />
         </state>
       </provider>
