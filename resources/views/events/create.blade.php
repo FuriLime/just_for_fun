@@ -591,7 +591,7 @@
                     var num_house = '';
                     var asdas = '';
                     var test = place.address_components;
-                    console.log(place.country);
+                    console.log(place.formatted_address);
                     if (results[0]) {
                         locale = results[0].formatted_address;
 
