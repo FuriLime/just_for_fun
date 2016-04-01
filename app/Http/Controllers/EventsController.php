@@ -360,7 +360,7 @@ class EventsController extends Controller {
 
         $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
 
-        $event['social']=Share::load(url().'/events/'. $event->readable_url, $event->description)->twitter();
+        $event['social']=Share::load(url().'/events/'. $event->readable_url."\r\n", $event->description)->twitter();
 
                 // Is the user logged in?
         if (Sentinel::check()) {
