@@ -239,8 +239,6 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                     <a class="a2a_button_wordpress"></a>
                     <a class="a2a_button_digg"></a>
                     <a class="a2a_button_evernote"></a>
-                    <a class="a2a_button_tumblr"></a>
-                    <a class="a2a_button_blogger_post"></a>
                 </div>
             </div>
 
