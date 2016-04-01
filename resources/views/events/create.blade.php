@@ -679,6 +679,7 @@
                         if (status == google.maps.GeocoderStatus.OK) {
                             if (results[1]) {
                                 var loc = getCityState(results);
+                                console.log(loc);
                             }
                         }
                     });
