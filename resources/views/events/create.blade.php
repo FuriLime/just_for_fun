@@ -332,7 +332,7 @@
 
     </script>
 
-    {{--<script type="text/javascript" src="{{ asset('assets/vendors/tags/dist/bootstrap-tagsinput.js') }}"></script>--}}
+    <script type="text/javascript" src="{{ asset('assets/vendors/tags/dist/bootstrap-tagsinput.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/vendors/modal/js/classie.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/vendors/modal/js/modalEffects.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/vendors/switchery/switchery.js') }}"></script>
