@@ -864,7 +864,8 @@
 		{{--preText: '@lang('frontend.you_typed') ',--}}
 		separator: '/',
 		{{--postText: ' @lang('frontend.chars')',--}}
-		validate: true
+		validate: true,
+        placement: bottom-right
 	});
 	$('#url, #location').maxlength({
 		threshold: 60,
