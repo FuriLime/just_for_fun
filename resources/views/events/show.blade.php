@@ -80,7 +80,9 @@
                 <a class="a2a_button_evernote"></a>
                 <a class="a2a_button_tumblr"></a>
                 <a class="a2a_button_blogger_post"></a>
-                <a href="http://www.skyrock.com/m/blog/share.php?js=0" class="skysocial-s skyrocksocialshare_square38" title="Share on Skyrock" style="display:inline-block;text-indent:-999em;overflow:hidden;width:38px;height:38px;background:url(http://share.static.skyrock.net/img/api/skyrocksocialshare_square38.png) no-repeat 0 0 transparent;"><p style="display:none;">Share on Skyrock</p></a>
+                <a href="http://www.skyrock.com/m/blog/share.php?js=0" class="skysocial-s skyrocksocialshare_square38" title="Share on Skyrock"
+                   style="display:inline-block;text-indent:-999em;overflow:hidden;width:32px;height:32px;
+                   background:url(http://share.static.skyrock.net/img/api/skyrocksocialshare_square38.png) no-repeat 0 0 transparent;"><p style="display:none;">Share on Skyrock</p></a>
                 <script>(function(){var d=document,id='skyrock-fxlebpx'; if(d.getElementById(id)) return;var e=d.createElement('script');e.id=id;e.async=true;e.src='http://share.static.skyrock.net/js/skyrock_social.min.js';d.getElementsByTagName('body')[0].appendChild(e);}());</script>
             </div>
 
