@@ -82,7 +82,7 @@
                         </div>
                         {!! Honeypot::generate('my_name', 'my_time') !!}
                         <div class="form-group">
-                            <div class="col-sm-offset-4 col-sm-8">
+                            <div class="col-sm-offset-4 col-sm-6">
                                 <a href="{{ URL::to('facebook') }}" class="btn btn-block btn-social btn-facebook">
                                     <i class="fa fa-facebook"></i>
                                     Sign in with Facebook
