@@ -262,6 +262,12 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
                    target="_blank">
                     <i class="fa fa-linkedin-square"></i>
                 </a>
+
+                <a href="{{$event['pocket']}}"
+                   target="_blank">
+                    <i class="fa fa-linkedin-square"></i>
+                </a>
+
                 <a href="{{$event['email']}}"
                    target="_blank">
                     <i class="fa fa-linkedin-square"></i>
