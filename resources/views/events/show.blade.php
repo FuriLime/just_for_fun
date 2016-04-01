@@ -64,44 +64,23 @@
           Please update <b>Your Profile</b> so we can add the relevant information to your events. You can set the visibility of your details in your <a href="#">Profile Settings</a>.
         </div>
         <div class="col-xs-12 text-left">
-            <a href="{{$event['facebook']}}"
-               target="_blank">
-                <i class="fa fa-facebook-square"></i>
-            </a>
-            <a href="{{$event['twitter']}}"
-               target="_blank">
-                <i class="fa fa-twitter-square"></i>
-            </a>
-            <a href="{{$event['gplus']}}"
-               target="_blank">
-                <i class="fa fa-twitter-square"></i>
-            </a>
-            <a href="{{$event['linkedin']}}"
-               target="_blank">
-                <i class="fa fa-linkedin-square"></i>
-            </a>
-            <a href="{{$event['email']}}"
-               target="_blank">
-                <i class="fa fa-linkedin-square"></i>
-            </a>
-
-            <a href="{{$event['gmail']}}"
-               target="_blank">
-                <i class="fa fa-linkedin-square"></i>
-            </a>
-
-            <a href="{{$event['evernote']}}"
-               target="_blank">
-                <i class="fa fa-twitter-square"></i>
-            </a>
-            <a href="{{$event['tumblr']}}"
-               target="_blank">
-                <i class="fa fa-twitter-square"></i>
-            </a>
-            <a href="{{$event['digg']}}"
-                   target="_blank">
-                <i class="fa fa-twitter-square"></i>
-            </a>
+            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                <a class="a2a_button_facebook"></a>
+                <a class="a2a_button_twitter"></a>
+                <a class="a2a_button_google_plus"></a>
+                <a class="a2a_button_linkedin"></a>
+                <a class="a2a_button_pocket"></a>
+                <a class="a2a_button_xing"></a>
+                <a class="a2a_button_email"></a>
+                <a class="a2a_button_google_gmail"></a>
+                <a class="a2a_button_outlook_com"></a>
+                <a class="a2a_button_yahoo_mail"></a>
+                <a class="a2a_button_wordpress"></a>
+                <a class="a2a_button_digg"></a>
+                <a class="a2a_button_evernote"></a>
+                <a class="a2a_button_tumblr"></a>
+                <a class="a2a_button_blogger_post"></a>
+            </div>
 
         </div>
 
