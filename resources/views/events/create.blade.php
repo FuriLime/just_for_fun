@@ -557,6 +557,28 @@
 	// Get timezone of the place
 	// 3 steps: get entered place, find it`s location (coordinates), find its timezone
     $('#location').change(function () {
+        source: function(request, response) {
+            geocoder.geocode( {'address': request.term }, function(results, status) {
+                response($.map(results, function(item) {
+                    // Get address_components
+                    for (var i = 0; i < item.address_components.length; i++)
+                    {
+                        var addr = item.address_components[i];
+                        var getCountry;
+                        if (addr.types[0] == 'country')
+                            getCountry = addr.long_name;
+                    }
+                    return {
+                        label: item.formatted_address,
+                        value: item.formatted_address,
+                        latitude: item.geometry.location.lat(),
+                        longitude: item.geometry.location.lng(),
+                        country: getCountry
+                    }
+                }));
+            })
+        }
+
         $('.publish').focus();
         $('.draft').focus();
         $('.locale').attr('style', 'display:none');
@@ -572,10 +594,7 @@
                     query: $('#location').val()
                 };
                 service = new google.maps.places.PlacesService(map);
-                console.log(service);
                 service.textSearch(request, callback);
-                var address_components = request.formatted_address;
-
             }
 
             function callback(results, status) {
