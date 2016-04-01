@@ -124,6 +124,10 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
             <div class="even-date-holder pull-right">{{date("d",strtotime($event->start))}}</div>
             <div class="event-name event-show">{{$event->title}}</div>
             <div class="event_period event-show">{{date("F dS, Y", strtotime($event->start))}} - {{$event['start_time_event']}}</div>
+            <div class="event_period event-show">{{$event->location}}</div>
+            <div class="event_period event-show">
+                <a>{{url()."/events/".$event->readable_url}}</a>
+            </div>
             <div class="input-group">
                 <button id="register_but" class="btn btn-primary text-white">
                     <i class="fa fa-pencil-square-o"></i>
