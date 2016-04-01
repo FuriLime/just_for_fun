@@ -590,15 +590,15 @@
                     var country = '';
                     var num_house = '';
                     var asdas = '';
-
+                    var test = place.address_components;
+                    console.log(test);
                     if (results[0]) {
                         locale = results[0].formatted_address;
 
                         splits = locale.replace(/-/g,",");
 
                         splits = splits.split(',');
-                        var test = results[0].address_components;
-                        console.log(test);
+
                         if (splits.length == 2) {
                             sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
                             $('#city').val(sity);
