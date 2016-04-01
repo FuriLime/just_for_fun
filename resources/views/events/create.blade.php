@@ -89,7 +89,7 @@
                     </div>
 
                     <div class="form-group add_event_section_link" id="add_dicription">
-                        <i class="fa fa-fw fa-comment"></i>
+                        {{--<i class="fa fa-fw fa-comment"></i>--}}
                         <a class="add_disc_link">Add Description</a>
                     </div>
 
@@ -104,7 +104,7 @@
                         {{--<button type="button" class="btn btn-warning " title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title">!</button>--}}
                     </div>
                          <div id="hide_dicription" class="add_event_section_link" style="display: none">
-                            <i class="fa fa-fw fa-stop"></i>
+                            {{--<i class="fa fa-fw fa-stop"></i>--}}
                             <a class="show_hide" >Hide Description</a>
                          </div>
 					<div class="form-group">
