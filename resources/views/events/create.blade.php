@@ -579,6 +579,7 @@
                 if (status == google.maps.places.PlacesServiceStatus.OK) {
                     for (var i = 0; i < results.length; i++) {
                         var place = results[i];
+                        console.log(place.address_components);
                         break;
                     }
                     var locale = ($('#location').val());
@@ -594,7 +595,7 @@
                         locale = results[0].formatted_address;
 
                         splits = locale.replace(/-/g,",");
-console.log(locale.address_components);
+
                         splits = splits.split(',');
                         if (splits.length == 2) {
                             sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
