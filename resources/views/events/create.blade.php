@@ -851,7 +851,7 @@ console.log(address_components);
 		separator: '/',
 		{{--postText: ' @lang('frontend.chars')',--}}
 		validate: true,
-        placement: "bottom-right"
+        placement: "bottom-right-inside"
 	});
 	$('textarea#description').maxlength({
 		threshold: 500,
@@ -861,7 +861,7 @@ console.log(address_components);
 		separator: '/',
 		{{--postText: ' @lang('frontend.chars')',--}}
 		validate: true,
-        placement: "bottom-right"
+        placement: "bottom-right-inside"
 	});
 	$('#url, #location').maxlength({
 		threshold: 60,
