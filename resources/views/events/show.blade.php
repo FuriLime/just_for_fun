@@ -15,11 +15,7 @@
 		.daterangepicker .range_inputs, .daterangepicker .calendar { display: none !important; }
 		.daterangepicker .ranges li:last-child { display: none; }
 		#events_details { display: none; }
-		#hidden_address { position: absolute; left: -9000px; }
-    .share42init {
-      margin-top: 10px; 
-      margin-bottom: 5px
-    }
+		#hidden_address { position: static; left: -9000px; }
 	</style>
 @stop
 @section('top')
@@ -365,7 +361,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
             var marker=new google.maps.Marker({
                 position:myCenter,
             });
-
+            $('#hidden_address').appendTo( $('#address_wr') ).css('position', 'static');
             marker.setMap(map);
         }
 
