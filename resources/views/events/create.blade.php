@@ -598,7 +598,7 @@
 
                         splits = splits.split(',');
 //
-                        console.log(results[0].types);
+                        console.log(results[0].address_components);
                         if (splits.length == 2) {
                             sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
                             $('#city').val(sity);
