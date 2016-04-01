@@ -681,6 +681,10 @@
                                 var loc = getCityState(results);
                                 console.log(loc);
                             }
+                            else{
+
+                                alert('sdsdsdsd');
+                            }
                         }
                     });
 
