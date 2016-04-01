@@ -202,7 +202,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
             </div>
             </div>
 
-        <a href="$event['social']"
+        <a href="{{$event['social']}}"
         target="_blank">
         <i class="fa fa-twitter-square"></i>
         </a>
