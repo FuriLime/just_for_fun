@@ -597,7 +597,7 @@
                         splits = locale.replace(/-/g,",");
 
                         splits = splits.split(',');
-                        var test = results.getPlace();
+                        var test = results.address_components;
                         console.log(test);
                         if (splits.length == 2) {
                             sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
