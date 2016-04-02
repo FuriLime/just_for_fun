@@ -15,28 +15,6 @@
     <!--end of page level css-->
 @stop
 
-{{-- breadcrumb --}}
-{{--@section('top')--}}
-    {{--<div class="breadcum">--}}
-        {{--<div class="container">--}}
-            {{--<ol class="breadcrumb">--}}
-                {{--<li>--}}
-                    {{--<a href="{{ route('home') }}"> <i class="livicon icon3 icon4" data-name="home" data-size="18" data-loop="true" data-c="#3d3d3d" data-hc="#3d3d3d"></i>Dashboard--}}
-                    {{--</a>--}}
-                {{--</li>--}}
-                {{--<li class="hidden-xs">--}}
-                    {{--<i class="livicon icon3" data-name="angle-double-right" data-size="18" data-loop="true" data-c="#01bc8c" data-hc="#01bc8c"></i>--}}
-                    {{--<a href="#">Single Product</a>--}}
-                {{--</li>--}}
-            {{--</ol>--}}
-            {{--<div class="pull-right">--}}
-                {{--<i class="livicon icon3" data-name="edit" data-size="20" data-loop="true" data-c="#3d3d3d" data-hc="#3d3d3d"></i> Single Product--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--@stop--}}
-
-
 {{-- Page content --}}
 @section('content')
     <!-- Container Section Start -->
@@ -45,7 +23,7 @@
             <div class="row">
                 <div class="col-xs-10 col-xs-offset-1 popup-content">
                     <div class="popup-head">
-                        @lang('frontend.confirm_head')<span>Eventname</span> @lang('frontend.confirm_head_cont')
+                        @lang('frontend.confirm_head')<span>{{$event->title}}</span> @lang('frontend.confirm_head_cont')
                     </div>
                     <div class="estimated-time">
                         @lang('frontend.confirm_time') <span>10</span> @lang('frontend.confirm_time_cont')
@@ -67,7 +45,7 @@
                             @lang('frontend.creating_ical')
                         </li>
                         <li>
-                            @lang('frontend.creating_eventpage') Event
+                            @lang('frontend.creating_eventpage') {{$event->title}}
                         </li>
                         <li>
                             @lang('frontend.adding_links')
@@ -135,11 +113,11 @@
 
                         <!-- Left and right controls -->
                         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                            <span class="" aria-hidden="true"><</span>
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
                         <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                            <span class="" aria-hidden="true">></span>
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
                     </div>

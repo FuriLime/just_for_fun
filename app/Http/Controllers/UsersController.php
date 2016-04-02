@@ -15,12 +15,14 @@ use App\Account;
 use App\User;
 use App\UserProfile;
 use App\AccountProfile;
-//use App\Activation;
 use App\Role;
 use DB;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Hash;
 use Mailchimp\Mailchimp;
+use Illuminate\Http\Request;
+use Storage;
+
 
 class UsersController extends JoshController
 {
@@ -274,7 +276,7 @@ class UsersController extends JoshController
         'email'            => 'required|email|unique:users',
         'password'         => 'required|between:3,32',
         'password_confirm' => 'required|same:password',
-        'pic' => 'mimes:jpg,jpeg,bmp,png|max:10000'
+        'image' => 'mimes:jpg,jpeg,bmp,png|max:10000'
     );
 
        // Id of newsletter list
@@ -322,7 +324,7 @@ class UsersController extends JoshController
             'password'         => 'required|between:3,32',
             'password_confirm' => 'required|same:password',
             'group'            => 'required|numeric',
-            'pic'              => 'mimes:jpg,jpeg,bmp,png|max:10000'
+            'image'              => 'mimes:jpg,jpeg,bmp,png|max:10000'
         );
 
         // Create a new validator instance from our validation rules
@@ -333,18 +335,6 @@ class UsersController extends JoshController
             // Ooops.. something went wrong
             return Redirect::back()->withInput()->withErrors($validator);
         }
-
-        //upload image
-        if ($file = Input::file('pic'))
-        {
-            $fileName        = $file->getClientOriginalName();
-            $extension       = $file->getClientOriginalExtension() ?: 'png';
-            $folderName      = '/uploads/users/';
-            $destinationPath = public_path() . $folderName;
-            $safeName        = str_random(10).'.'.$extension;
-            $file->move($destinationPath, $safeName);
-        }
-
         //check whether use should be activated by default or not
 //        $activate = Input::get('activate')?true:false;
 
@@ -357,7 +347,7 @@ class UsersController extends JoshController
                 'password'   => Input::get('password'),
                 'dob'   => Input::get('dob'),
                 'bio'   => Input::get('bio'),
-                'pic'   => isset($safeName)?$safeName:'',
+                'image'   => isset($safeName)?$safeName:'',
                 'gender'   => Input::get('gender'),
                 'country'   => Input::get('country'),
                 'state'   => Input::get('state'),
@@ -386,9 +376,21 @@ class UsersController extends JoshController
             $account_profile->account_id = $account_user->id;
             $account_profile->save();
 
+            if (Input::file('image'))
+            {
+                $destinationPath = base_path().'/public/'; // upload path
+                $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
 
-            $selectedRoles = Input::get('groups', array());
-            $roles = Sentinel::getRoleRepository()->all();
+                $fileName = rand(11111,99999).'.'.$extension; // renameing image
+                Input::file('image')->move($destinationPath, $fileName);
+                //save new file path into db
+                $user_profile->image   = $fileName;
+                $s3 = \Storage::disk('user_data');
+                $filePath = '/ef-test-userdata/' . $fileName;
+                $s3->put($filePath, file_get_contents($user_profile->image), 'public');
+                $user_profile->image=NULL;
+                $user_profile->image ='http://sergey-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
+            }
             $role = Role::find(2);
             $rolew = [
                 0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
@@ -466,6 +468,12 @@ class UsersController extends JoshController
 
                 // Quick setup -> Mail should always be pushed to Queue and send as a background job!!!
                 \MandrillMail::messages()->sendTemplate('test-template', $template_content, $message);
+            }else{
+                $user->verified ="1";
+                $user->status = "Verified";
+                $user->save();
+                $user_profile->image ='http://sergey-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
+                $user_profile->save();
             }
 
             // Redirect to the home page with success menu
@@ -525,7 +533,7 @@ class UsersController extends JoshController
      * @param  int      $id
      * @return Redirect
      */
-    public function postEdit($id = null)
+    public function postEdit($id = null, Request $request)
     {
 
 
@@ -553,7 +561,7 @@ class UsersController extends JoshController
         $this->validationRules['email'] = "required|email|unique:users,email,{$user->email},email";
 
         // Do we want to update the user password?
-        if ( ! $password = Input::get('password')) {
+        if (!$password = Input::get('password')) {
             unset($this->validationRules['password']);
             unset($this->validationRules['password_confirm']);
         }
@@ -586,25 +594,30 @@ class UsersController extends JoshController
             }
 
             // is new image uploaded?
-            if ($file = Input::file('pic'))
+            if (Input::file('image'))
             {
-                $fileName        = $file->getClientOriginalName();
-                $extension       = $file->getClientOriginalExtension() ?: 'png';
-                $folderName      = '/uploads/users/';
-                $destinationPath = public_path() . $folderName;
-                $safeName        = str_random(10).'.'.$extension;
-                $file->move($destinationPath, $safeName);
+
+                $destinationPath = base_path().'/public/'; // upload path
+                $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
+
+                $fileName = rand(11111,99999).'.'.$extension; // renameing image
+                Input::file('image')->move($destinationPath, $fileName);
 
                 //delete old pic if exists
-                if(File::exists(public_path() . $folderName.$user->pic))
+                if(File::exists(public_path() . $destinationPath.$user_profile->image))
                 {
-                    File::delete(public_path() . $folderName.$user->pic);
+                    File::delete(public_path() . $destinationPath.$user_profile->image);
                 }
 
                 //save new file path into db
-                $user->pic   = $safeName;
-
+                $user_profile->image   = $fileName;
+                $s3 = \Storage::disk('user_data');
+                $filePath = '/ef-test-userdata/' . $fileName;
+                $s3->put($filePath, file_get_contents($user_profile->image), 'public');
+                $user_profile->image=NULL;
+                $user_profile->image ='http://sergey-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
             }
+
 
             // Get the current user groups
             $userRoles = $user->roles()->lists('id')->all();
@@ -613,8 +626,6 @@ class UsersController extends JoshController
             $selectedRoles = Input::get('groups', array());
             // Groups comparison between the groups the user currently
             // have and the groups the user wish to have.
-            $rolesToAdd    = array_diff($selectedRoles, $userRoles);;
-            $rolesToRemove = array_diff($userRoles, $selectedRoles);
             $acc_id = $user->accounts()->first()->id;
             // Remove the user from groups
             foreach ($userRoles as $roleId) {
@@ -623,6 +634,7 @@ class UsersController extends JoshController
                     ->where('role_id', '=', $roleId)->delete();
 
             }
+
 
             // Assign the user to groups
             foreach ($selectedRoles as $roleId) {
@@ -633,15 +645,14 @@ class UsersController extends JoshController
                 ];
 
                 $role->users()->attach($rolew);
-//                $role->users()->attach();
             }
 
-$new_email = md5(Input::get('email'));
-    $mc->put("lists/$listId/members/$new_email", [
-        'email_address' => $user->email,
-        'merge_fields' => ['FNAME' => $user->first_name, 'LNAME' => $user->last_name, 'CHENGED' => $us_email],
-        'status_if_new' => 'subscribed',
-    ]);
+//$new_email = md5(Input::get('email'));
+//    $mc->put("lists/$listId/members/$new_email", [
+//        'email_address' => $user->email,
+//        'merge_fields' => ['FNAME' => $user->first_name, 'LNAME' => $user->last_name, 'CHENGED' => $us_email],
+//        'status_if_new' => 'subscribed',
+//    ]);
 
             // Was the user updated?
             if ($user->save() && $user_profile->save()) {

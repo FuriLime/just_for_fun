@@ -24,7 +24,7 @@ use DB;
 use OpenGraph;
 use Twitter;
 use SEOMeta;
-
+use Share;
 class EventsController extends Controller {
 
     /**
@@ -67,6 +67,19 @@ class EventsController extends Controller {
             return view('events.index', compact('events'));
         }
     }
+
+    /*Confirm page*/
+    public function confirm($readable_url)
+    {
+        $event = Event::whereReadable_url($readable_url)->first();
+
+        return view('confirm', compact('event'));
+
+
+    }
+
+    /*End Confirm page*/
+
     /**
      * Show the form for creating a new resource.
      *
@@ -213,6 +226,8 @@ class EventsController extends Controller {
             'timezone' => 'required',
             'start' => 'required',
             'finish' => 'required',
+            'my_title'   => 'honeypot',
+            'my_time'   => 'required|honeytime:5',
         ]);
         $store_info = new Event();
         $store_info->uuid = Uuid::uuid4(4);
@@ -242,7 +257,7 @@ class EventsController extends Controller {
             $store_info->account_id = NULL;
         }
         $store_info->permanent_url = Uuid::uuid4();
-//        $store_info->readable_url = Uuid::uuid4();
+        $store_info->event_url = url().'/events/'. $store_info->readable_url;
         $store_info->status = Input::get('active');
 
         if(Sentinel::check()) {
@@ -269,14 +284,18 @@ class EventsController extends Controller {
             Session::forget('timezone');
             Session::forget('start');
             Session::forget('finish');
+            $store_info->event_url = url().'/events/'. $store_info->readable_url;
+            $store_info->update();
 
-            return redirect('confirm');
+            return redirect('confirm/'.$store_info->readable_url);
         } else {
             $store_info->save();
             Session::forget('timezone');
             Session::forget('start');
             Session::forget('finish');
-            return redirect('confirm');
+            $store_info->event_url = url().'/events/'. $store_info->readable_url;
+            $store_info->update();
+            return redirect('confirm/'.$store_info->readable_url);
         }
     }
     /**
@@ -298,6 +317,7 @@ class EventsController extends Controller {
         else{
             $my_time_zone = 'UTC';
         }
+
         $event = Event::whereReadable_url($readable_url)->first();
         SEOMeta::setTitle($event->title);
         SEOMeta::setDescription($event->description);
@@ -309,8 +329,8 @@ class EventsController extends Controller {
         SEOMeta::addMeta('article:slug', $event->readable_url, 'property');
         SEOMeta::addKeyword(['event', $event->title, $event->status]);
 
-        OpenGraph::setDescription($event->resume);
         OpenGraph::setTitle($event->title);
+        OpenGraph::setDescription($event->description);
         OpenGraph::setUrl(url().'/events/'. $event->readable_url);
         OpenGraph::addProperty('type', 'article');
         OpenGraph::addProperty('locale', 'en-us');
@@ -322,14 +342,30 @@ class EventsController extends Controller {
         $date->setTimezone(new \DateTimeZone($my_time_zone));
         $event_finish_zero = $date;
         $event['period'] = date($event_start_zero->format('Y-m-d H:i')).' - '.date($event_finish_zero->format('Y-m-d H:i'));
+
+        $event['user_time_zone'] = $my_time_zone;
+        $event['start_time_user'] = date($event_start_zero->format('H:i'));
+        $event['finish_time_user'] = date($event_finish_zero->format('H:i'));
+
+
+        $dateEvent = new \DateTime($event->start, new \DateTimeZone('UTC'));
+        $dateEvent->setTimezone(new \DateTimeZone($event->timezone));
+        $event_start_event = $dateEvent;
+        $dateEvent = new \DateTime($event->finish, new \DateTimeZone('UTC'));
+        $dateEvent->setTimezone(new \DateTimeZone($event->timezone));
+        $event_finish_event = $dateEvent;
+
+        $event['start_time_event'] = date($event_start_event->format('H:i'));
+        $event['finish_time_event'] = date($event_finish_event->format('H:i'));
+
+        $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
+
         // Is the user logged in?
         if (Sentinel::check()) {
 //      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
             //$event = Event::findOrFail($uuid);
             return view('events.show', compact('event'));
         }
-//    }
-//
         else {
             //show event for unregister user
             return view('events.show', compact('event'));
@@ -470,6 +506,8 @@ class EventsController extends Controller {
             'timezone' => 'required',
             'start' => 'required',
             'finish' => 'required',
+            'my_title'   => 'honeypot',
+            'my_time'   => 'required|honeytime:5',
         ]);
         //$event = Event::findOrFail($uuid);
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
@@ -647,6 +685,8 @@ class EventsController extends Controller {
             'timezone' => 'required',
             'start' => 'required',
             'finish' => 'required',
+            'my_title'   => 'honeypot',
+            'my_time'   => 'required|honeytime:5',
         ]);
         //$event = Event::findOrFail($uuid);
         // for bootstrap-datepicker perform "08/10/2015 19:00" to "2015-10-08 19:00"
@@ -759,19 +799,7 @@ class EventsController extends Controller {
      */
     public function addToCalendar(Request $request)
     {
-        //get account type
-//        if (Sentinel::check()){
-//            $user_id = Sentinel::getUser()->id;
-//        $acc = DB::table('account_user')->where('user_id', '=', $user_id)->get(['account_id']);
-//        $acc_id = $acc[0]->account_id;
-//        $acc_type = DB::table('accounts')->where('id', '=', $acc_id)->get(['account_type_id']);
-//        $acc_type_id = $acc_type[0]->account_type_id;
-//
-//        $acc_type_name = DB::table('account_types')->where('id', '=', $acc_type_id)->get(['name']);
-//        $acc_type_name = $acc_type_name[0]->name;
-//    }
 
-        //end
 
 
         $info = $request->all();
@@ -780,10 +808,25 @@ class EventsController extends Controller {
         $calendar = $info['calendar'];
 
         $event = Event::whereUuid($uuid)->first();
+
+
         // perform events time to 00.00 timezone
         $date = new \DateTime($event['start'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone($event->timezone));
         $event_start_zero = $date;
+        if($event->author_id!=NULL) {
+            $author_event = DB::table('users')->where('id', '=', $event->author_id)->first();
+            if($author_event->twit_nick!=NULL){
+                $user_twit = $author_event->twit_nick;
+                $text_twit = "Twitter Handle: ".$user_twit;
+            }
+            else{
+                $text_twit = "";
+            }
+
+        }else {
+            $text_twit = "";
+        }
 
         $date = new \DateTime($event['finish'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone($event->timezone));
@@ -803,13 +846,25 @@ class EventsController extends Controller {
         $result = $error_massage = $calendar_link = '';
         $dec_title = "This calendar entry has been created with a Free Personal Account from EventFellows";
         $dec_footer = "Powered by EventFellows - start creating calendar entries for your own event now. https://eventfellows.com/referrer/{$event->uuid} ";
-
-
+        $link_event = "Link to the EventPage:\r\n".$event->event_url;
         $loc = urlencode($event['location']);
-        $desc = urlencode($dec_title."\r\n")."-------------------------------------------------------------------------------------------------------".
-            urlencode("\r\n".$event['description']."\r\n".
-                "-------------------------------------------------------------------------------------------------------\r\n".$dec_footer);
         $title = urlencode($event['title']);
+
+        $desc = urlencode($dec_title."\r\n")."-------------------------------------------------------------------------------------------------------".
+            urlencode("\r\n".$event['title']."\r\n".$event['description']."\r\n". $text_twit ."\r\n". $link_event."\r\n".
+                "-------------------------------------------------------------------------------------------------------\r\n". $dec_footer);
+
+
+        $event_ical_desc = urlencode($event['description']);
+
+        $desc_ical = $dec_title.'\r\n'.
+        "-------------------------------------------------------------------------------------------------------". '\r\n'.
+        $title.'\r\n'.
+        $event['description'].'\r\n'.
+        $text_twit .'\r\n'.
+        $link_event.'\r\n'.
+        "-------------------------------------------------------------------------------------------------------".'\r\n'.
+        $dec_footer;
 
         switch ($calendar) {
 
@@ -855,24 +910,24 @@ class EventsController extends Controller {
 
             case 'Outloock':
                 $result = 'success_load';
-                $calendar_link = '/assets/ical.php?name='. $event['title'] .
+                $calendar_link = '/assets/ical.php?name='. $title .
                     '&sd='. $event_start_zero->format('Ymd') .
                     '&st='. $event_start_zero->format('His') .
                     '&fd='. $event_finish_zero->format('Ymd') .
                     '&ft='. $event_finish_zero->format('His') .
                     '&loc='. $event['location'] .
-                    '&desc='. $event['description'];
+                    '&desc='. $desc_ical;
                 break;
 
             case 'iCal':
                 $result = 'success_load';
-                $calendar_link = '/assets/ical.php?name='. $event['title'] .
+                $calendar_link = '/assets/ical.php?name='. $title .
                     '&sd='. $event_start_zero->format('Ymd') .
                     '&st='. $event_start_zero->format('His') .
                     '&fd='. $event_finish_zero->format('Ymd') .
                     '&ft='. $event_finish_zero->format('His') .
                     '&loc='. $event['location'] .
-                    '&desc='. $event['description'];
+                    '&desc='. $desc_ical;
                 break;
 
             default:

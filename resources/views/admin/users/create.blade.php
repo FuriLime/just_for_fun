@@ -124,7 +124,7 @@ Add User
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="pic" class="col-sm-2 control-label">Profile picture</label>
+                                        <label for="image" class="col-sm-2 control-label">Profile picture</label>
                                         <div class="col-sm-10">
                                             <div class="fileinput fileinput-new" data-provides="fileinput">
                                                 <div class="fileinput-new thumbnail" style="width: 200px; height: 200px;">
@@ -135,7 +135,7 @@ Add User
                                                     <span class="btn btn-default btn-file">
                                                         <span class="fileinput-new">Select image</span>
                                                         <span class="fileinput-exists">Change</span>
-                                                        <input id="pic" name="pic" type="file" class="form-control" />
+                                                        <input id="image" name="image" type="file" class="form-control" />
                                                     </span>
                                                     <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
                                                 </div>

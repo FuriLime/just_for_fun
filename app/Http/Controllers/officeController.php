@@ -1,16 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
-use App\Account;
-use App\Role;
-use App\UserProfile;
-use App\AccountProfile;
 use Auth;
 use Redirect;
 use Lang;
@@ -21,7 +14,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUser;
 use Sentinel;
 use Activation;
 
-class LinkedController extends Controller
+class officeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -38,40 +31,23 @@ class LinkedController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-
-    public function linked()
+    public function office()
     {
-        return Socialite::driver('linkedin')->redirect();
+        return Socialite::driver('microsoft')->redirect();
     }
 
-    public function oauthlinked()
+    public function oauthoffice()
     {
 
-        $userFace = Socialite::driver('linkedin')->user();
+        $userFace = Socialite::driver('microsoft')->user();
         $user = User::whereemail($userFace->getEmail(), $userFace->getName())->first();
         if(!$user){
             $user = new User;
             $user->first_name = $userFace->getName();
             $user->email = $userFace->getEmail();
             $user->save();
-            $account_user = new Account();
-            $account_user->	account_type_id = '1';
-            $account_user->name = $user->uuid;
-            $account_user->slug = $user->uuid;
-            $account_user->save();
-            $account_profile = new AccountProfile();
-            $account_profile->account_id = $account_user->id;
-            $account_profile->save();
-            $role = Role::find(2);
-            $rolew = [
-                0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
-            ];
-
-            $role->users()->attach($rolew);
-            $user_profile = new UserProfile();
-            $user_profile->user_id = $user->id;
-            $user_profile->save();
+            $role = Sentinel::findRoleById(2);
+            $role->users()->attach($user);
             $user = Sentinel::findById($user->id);
             $activation = Activation::create($user);
 
@@ -80,7 +56,10 @@ class LinkedController extends Controller
                 Sentinel::authenticate($user);
                 if(Sentinel::authenticate($user))
                 {
-                    if(Sentinel::check()) {
+                    $user = Sentinel::check();
+                    if (Sentinel::inRole('admin')) {
+                        return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
+                    } else if (Sentinel::inRole('user'))  {
                         return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
                     }
                 }
@@ -94,12 +73,15 @@ class LinkedController extends Controller
             Sentinel::authenticate($user);
             if(Sentinel::authenticate($user))
             {
-               if(Sentinel::check()) {
-                   return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-               }
-               }
+                $user = Sentinel::check();
+                if (Sentinel::inRole('admin')) {
+                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
+                } else if (Sentinel::inRole('user'))  {
 
+                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
+                }
+            }
         }
-        return Redirect::route("home")->with('error', Lang::get('auth/message.signin.error'));
+        return Redirect::route("home")->with('success', Lang::get('auth/message.signin.fail'));
     }
 }

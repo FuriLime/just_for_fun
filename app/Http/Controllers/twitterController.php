@@ -100,12 +100,10 @@ class twitterController extends Controller
 
                     $role->users()->attach($rolew);
                     $member_email = md5($user->email);
-                    if(!$mc->get("lists/$listId/members/$member_email")){
-                        $mc->post("lists/$listId/members", [
+                        $mc->put("lists/$listId/members/$member_email", [
                             'email_address' => $user->email,
                             'status'        => 'subscribed',
                         ]);
-                    }
 
                     $data = array(
                         'user'          => $user,

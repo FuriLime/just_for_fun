@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c21d1e70d0d36c3668d8603c4e875138",
-    "content-hash": "8a198bcf0da10b36fa395bf3a03a3cba",
+    "hash": "0ff528a5ac1bfcf511a9dd3aee776a50",
+    "content-hash": "9736bc1fb6c11fc4e41d3f08e8b484b3",
     "packages": [
         {
             "name": "artesaos/seotools",
@@ -199,7 +199,7 @@
             "version": "v2.0.9",
             "source": {
                 "type": "git",
-                "url": "https://github.com/cartalyst/sentinel.git",
+                "url": "git@github.com:cartalyst/sentinel.git",
                 "reference": "a4921f9195835a7bc701a391e5379ef79b8837df"
             },
             "dist": {
@@ -288,7 +288,7 @@
             "version": "v1.1.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/cartalyst/support.git",
+                "url": "git@github.com:cartalyst/support.git",
                 "reference": "c90931d25e89734ba89875a769af6b2e050593a5"
             },
             "dist": {
@@ -5458,6 +5458,67 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2016-02-23 15:16:06"
+        },
+        {
+            "name": "tshafer/laravel-service-provider",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tshafer/laravel-service-provider.git",
+                "reference": "f3cc541e862566f6c1a6f478316bf355ceebf6f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tshafer/laravel-service-provider/zipball/f3cc541e862566f6c1a6f478316bf355ceebf6f6",
+                "reference": "f3cc541e862566f6c1a6f478316bf355ceebf6f6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0|~5.1|~5.2",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tshafer\\ServiceProvider\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "DRY Service Provider for Laravel 5 Packages",
+            "time": "2015-12-29 02:43:53"
+        },
+        {
+            "name": "tshafer/laravel-social-share",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tshafer/laravel-social-share.git",
+                "reference": "35210585f05d42e58c809b8d6298b640c344f011"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tshafer/laravel-social-share/zipball/35210585f05d42e58c809b8d6298b640c344f011",
+                "reference": "35210585f05d42e58c809b8d6298b640c344f011",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "tshafer/laravel-service-provider": "1.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tshafer\\SocialShare\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2015-12-29 04:06:53"
         }
     ],
     "aliases": [],

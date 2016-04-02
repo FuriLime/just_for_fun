@@ -33,9 +33,4 @@ class Kernel extends HttpKernel
 //        'invite' => \App\Http\Middleware\InviteMiddleware::class,
     ];
 
-    protected function schedule(Schedule $schedule)
-    {
-        $schedule->command('backup:run')->daily()->at('03:00');
-    }
-
 }

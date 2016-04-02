@@ -30,3 +30,100 @@
     color: #6D6767;
     cursor: pointer;
 }
+.login-logo-holder {
+    max-width: 265px;
+}
+.login-logo-holder img {
+    max-width: 100%;
+}
+.login-top-bar {
+    margin: 0 25px;
+}
+.login-sign-up-btn {
+    font-size: 18px;
+    color: #000000;
+    border: 1px solid #337ab7;
+    border-radius: 3px;
+    padding: 3px 20px;
+    margin-top: 20px;
+    transition: 0.2s;
+}
+.login-sign-up-btn:hover {
+    text-decoration: none;
+    background: #337ab7;
+    color: #ffffff;
+}
+.container .row.new-event-holder {
+    background: none;
+}
+.content.event-show {
+    border-radius: 10px;
+    background: white;
+    padding: 40px;
+}
+.test-event-line {
+    background: red;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 0 100px 0;
+}
+.marg-bot-30 {
+    margin-bottom: 30px;
+}
+.marg-bot-50 {
+    margin-bottom: 50px;
+}
+#see-details-btn #show-event {
+    color: rgb(51, 122, 183);
+    cursor: pointer;
+}
+#see-details-btn #hide-event {
+    color: #757b87;
+    cursor: pointer;
+}
+.even-date-holder {
+    background: #dfdfdf;
+    color: #000000;
+    font-size: 48px;
+    padding: 15px;
+    margin-right: 25px;
+    border-radius: 5px;
+    border: 1px solid #bebebe;
+}
+.details_item_header {
+    font-size: 28px;
+    color: #000000;
+}
+.event-details-image img {
+    max-width: 100%;
+    height: auto;
+}
+.event-date {
+    font-size: 34px;
+    font-weight: bold;
+}
+.event-time {
+    font-size: 22px;
+}
+.event-timezone select {
+    max-width: 170px;
+}
+
+.details_item{
+    overflow: hidden;
+}
+
+.social-holder .a2a_default_style a {
+    display:inline-block;
+    float:none;
+}
+
+.add_disc_link{
+    cursor: pointer;
+}
+
+#time_change{
+    cursor: pointer;
+}

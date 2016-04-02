@@ -11,6 +11,7 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <link href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
     <![endif]-->
 
     <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}" type="image/vnd.microsoft.icon" />
@@ -30,6 +31,7 @@
 </head>
 
 <body>
+<div id="fb-root"></div>
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id={{env('GTM_ID')}}"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -61,9 +63,9 @@
                     <li {!! (Request::is('advancedfeatures') ? 'class="active"' : '') !!}><a href="{{ URL::to('advancedfeatures') }}">@lang('frontend.features')</a></li>
 
                     @if(!Sentinel::check())
-                        <li><a href="{{ URL::to('signin') }}" class="fa fa-sign-in" data-toggle="modal">@lang('frontend.sign_in')</a></li>
+                        <li><a href="{{ URL::to('signin') }}" data-toggle="modal">@lang('frontend.sign_in')</a></li>
                         {{--<li><a href="#auth" data-toggle="modal" onclick="javascript: window.location.href = window.location.pathname+'#toregister'">@lang('frontend.sign_up')</a></li>--}}
-                        <li><a href="{{ URL::to('signup') }}" data-toggle="modal" >@lang('frontend.sign_up')</a></li>
+                        <li><a href="{{ URL::to('signup') }}"  data-toggle="modal" >@lang('frontend.sign_up')</a></li>
                     @endif
 
                     <li><a href="{{ URL::to('events') }}" data-toggle="modal">Events</a></li>
@@ -71,8 +73,8 @@
                     @if(Sentinel::check())
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                @if(Sentinel::getUser()->pic)
-                                    <img src="{!! url('/').'/uploads/users/'.Sentinel::getUser()->pic !!}" alt="img" class="img-circle img-responsive pull-left" height="35px" width="35px"/>
+                                @if(Sentinel::getUser()->image)
+                                    <img src="{!! Sentinel::getUser()->image !!}" alt="img" class="img-circle img-responsive pull-left" height="35px" width="35px"/>
                                 @else
                                     <img src="{!! asset('assets/img/authors/avatar3.jpg') !!} " width="35" class="img-circle img-responsive pull-left" height="35" alt="riot">
                                 @endif
@@ -89,8 +91,8 @@
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
-                                    @if(Sentinel::getUser()->pic)
-                                        <img src="{!! url('/').'/uploads/users/'.Sentinel::getUser()->pic !!}" alt="img" class="img-circle img-bor"/>
+                                    @if(Sentinel::getUser()->image)
+                                        <img src="{!! url('/').'/uploads/users/'.Sentinel::getUser()->image !!}" alt="img" class="img-circle img-bor"/>
                                     @else
                                         <img src="{!! asset('assets/img/authors/avatar3.jpg') !!}" class="img-responsive img-circle" alt="User Image">
                                     @endif

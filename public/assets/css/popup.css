@@ -12,7 +12,7 @@ html{
 }
 div.item{
 	height: 127px;
-	background-color: blue;
+	background: url(../images/event-slider-bg.jpg);
 	border: 1px solid rgba(255,255,255, 0.5);
 	border-radius: 3px;	
 }
@@ -117,6 +117,19 @@ div.item{
 }
 .carousel-indicators{
 	top: 110px;
+}
+.carousel-control .glyphicon{
+	width: 56px;
+	height: 56px;
+	padding: 10px;
+	border: 3px solid white;
+	margin-top: -28px;
+	right: 20px;
+	color: white;
+	border-radius: 50%;
+}
+.carousel-control .glyphicon.glyphicon-chevron-left{
+	left: 20px;
 }
 @media(min-width: 992px) and (max-width: 1200px){
 	.popup-events-list,

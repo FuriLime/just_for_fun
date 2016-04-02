@@ -53,7 +53,7 @@ Edit User
                         {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
                         {!! $errors->first('password_confirm', '<span class="help-block">:message</span>') !!}
                         {!! $errors->first('group', '<span class="help-block">:message</span>') !!}
-                        {!! $errors->first('pic', '<span class="help-block">:message</span>') !!}
+                        {!! $errors->first('image', '<span class="help-block">:message</span>') !!}
                     </div>
 
                     <!--main content-->
@@ -127,14 +127,14 @@ Edit User
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="pic" class="col-sm-2 control-label">Profile picture</label>
+                                        <label for="image" class="col-sm-2 control-label">Profile picture</label>
                                         <div class="col-sm-10">
                                             <div class="fileinput fileinput-new" data-provides="fileinput">
                                                 <div class="fileinput-new thumbnail" style="width: 200px; height: 200px;">
                                                     @if($user_profile->image)
-                                                        <img src="{!! url('/').'/uploads/users/'.$user_profile->image !!}" alt="profile pic">
+                                                        <img src="{!!$user_profile->image !!}" alt="profile image">
                                                     @else
-                                                        <img src="http://placehold.it/200x200" alt="profile pic">
+                                                        <img src="http://placehold.it/200x200" alt="profile image">
                                                     @endif
                                                 </div>
                                                 <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 200px;"></div>
@@ -142,7 +142,7 @@ Edit User
                                                     <span class="btn btn-default btn-file">
                                                         <span class="fileinput-new">Select image</span>
                                                         <span class="fileinput-exists">Change</span>
-                                                        <input id="pic" name="pic" type="file" class="form-control" />
+                                                        <input id="image" name="image" type="file" class="form-control" />
                                                     </span>
                                                     <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
                                                 </div>

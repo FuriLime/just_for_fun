@@ -183,6 +183,9 @@ Route::post('events/{readable_url}/clone', array('as' => 'events.clone', 'uses' 
 Route::get('events/{uuid}/confirm-delete', array('as' => 'events.confirm-delete', 'uses' => 'EventsController@getModalDelete'));
 Route::post('event/addtocalendar', array('as' => 'event.addtocalendar', 'uses' => 'EventsController@addToCalendar'));
 
+Route::get('confirm/{readable_url}', array('as' => 'confirm', 'uses' => 'EventsController@confirm'));
+
+
 Route::get('/', array('as' => 'home', function () {
     return View::make('index');
 }));

@@ -21,7 +21,7 @@ return array(
     'add_event_header'	=> 'Create a new event',
     'edit_event_header'	=> 'Edit an event',
     'clone_event_header'	=> 'Clone an event',
-    'add_event_text'  	=> 'Please add the details for your event',
+    'add_event_text'  	=> 'Add your event',
     'edit_event_text'  	=> 'Please edit the details for your event',
     'clone_event_text'  => 'Please edit the details for your event',
 
@@ -65,7 +65,7 @@ return array(
     'creating_google' =>  'Creating Google Calendar integration', 
     'creating_yahoo' =>  'Creating Yahoo Calendar integration', 
     'creating_ical' => 'Creating iCal integration', 
-    'creating_eventpage' =>  'Creating EventPage for Your', 
+    'creating_eventpage' =>  'Creating EventPage for',
     'adding_links' =>  'Adding links to calendar integrations',
     'optimizing_for_mobile' =>  'Optimizing for mobile access ',
     'adding_to_profile' =>  'Adding to your user profile ',
