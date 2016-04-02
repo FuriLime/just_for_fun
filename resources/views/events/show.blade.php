@@ -287,77 +287,77 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
-	{{--<script>--}}
-	{{--$(document).ready(function(){--}}
-        {{--var geocoder;--}}
-        {{--var map;--}}
-        {{--var address = $('#address').html();--}}
-        {{--function initialize() {--}}
-            {{--geocoder = new google.maps.Geocoder();--}}
-            {{--var latlng = new google.maps.LatLng(-34.397, 150.644);--}}
-            {{--var myOptions = {--}}
-                {{--zoom: 12,--}}
-                {{--center: latlng,--}}
-                {{--mapTypeControl: true,--}}
-                {{--mapTypeControlOptions: {--}}
-                    {{--style: google.maps.MapTypeControlStyle.DROPDOWN_MENU--}}
-                {{--},--}}
-                {{--navigationControl: true,--}}
-                {{--mapTypeId: google.maps.MapTypeId.ROADMAP--}}
-            {{--};--}}
-            {{--map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);--}}
-            {{--if (geocoder) {--}}
-                {{--geocoder.geocode({--}}
-                    {{--'address': address--}}
-                {{--}, function(results, status) {--}}
-                    {{--if (status == google.maps.GeocoderStatus.OK) {--}}
-                        {{--if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {--}}
-                            {{--map.setCenter(results[0].geometry.location);--}}
- {{----}}
-                            {{--var infowindow = new google.maps.InfoWindow({--}}
-                                {{--content: '<b>' + address + '</b>',--}}
-                                {{--size: new google.maps.Size(750, 400)--}}
-                            {{--});--}}
- {{----}}
-                            {{--var marker = new google.maps.Marker({--}}
-                                {{--position: results[0].geometry.location,--}}
-                                {{--map: map,--}}
-                                {{--title: address--}}
-                            {{--});--}}
-                            {{--google.maps.event.addListener(marker, 'click', function() {--}}
-                                {{--infowindow.open(map, marker);--}}
-                            {{--});--}}
-							{{--// MAP has a big problem: it won`t work when it`s hidden. Need some fix--}}
-							{{--// when map is ready--}}
-							{{--$('#hidden_address').appendTo( $('#address_wr') ).css('position', 'static');--}}
- {{----}}
-                        {{--} else {--}}
-                            {{--console.log("No results found");--}}
-                        {{--}--}}
-                    {{--} else {--}}
-                        {{--console.log("Geocode was not successful for the following reason: " + status);--}}
-                    {{--}--}}
-                {{--});--}}
-            {{--}--}}
-        {{--}--}}
-        {{--google.maps.event.addDomListener(window, 'load', initialize);--}}
-		{{--//initialize();--}}
-    {{--});--}}
-	{{--</script>--}}
+	<script>
+	$(document).ready(function(){
+        var geocoder;
+        var map;
+        var address = $('#address').html();
+        function initialize() {
+            geocoder = new google.maps.Geocoder();
+            var latlng = new google.maps.LatLng(-34.397, 150.644);
+            var myOptions = {
+                zoom: 12,
+                center: latlng,
+                mapTypeControl: true,
+                mapTypeControlOptions: {
+                    style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+                },
+                navigationControl: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+            if (geocoder) {
+                geocoder.geocode({
+                    'address': address
+                }, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
+                            map.setCenter(results[0].geometry.location);
 
-    <script>
-        $(document).ready(function() {
-            var myCenter = new google.maps.LatLng('{{$event->lat}}', '{{$event->lng}}');
-            var map;
+                            var infowindow = new google.maps.InfoWindow({
+                                content: '<b>' + address + '</b>',
+                                size: new google.maps.Size(750, 400)
+                            });
 
-            function initMap() {
-                map = new google.maps.Map(document.getElementById('map_canvas'), {
-                    center: {lat: -34.397, lng: 150.644},
-                    zoom: 8
+                            var marker = new google.maps.Marker({
+                                position: results[0].geometry.location,
+                                map: map,
+                                title: address
+                            });
+                            google.maps.event.addListener(marker, 'click', function() {
+                                infowindow.open(map, marker);
+                            });
+							// MAP has a big problem: it won`t work when it`s hidden. Need some fix
+							// when map is ready
+							$('#hidden_address').appendTo( $('#address_wr') ).css('position', 'static');
+
+                        } else {
+                            console.log("No results found");
+                        }
+                    } else {
+                        console.log("Geocode was not successful for the following reason: " + status);
+                    }
                 });
             }
-        });
-    </script>
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+		//initialize();
+    });
+	</script>
+
+    {{--<script>--}}
+        {{--$(document).ready(function() {--}}
+            {{--var myCenter = new google.maps.LatLng('{{$event->lat}}', '{{$event->lng}}');--}}
+            {{--var map;--}}
+
+            {{--function initMap() {--}}
+                {{--map = new google.maps.Map(document.getElementById('map_canvas'), {--}}
+                    {{--center: {lat: -34.397, lng: 150.644},--}}
+                    {{--zoom: 8--}}
+                {{--});--}}
+            {{--}--}}
+        {{--});--}}
+    {{--</script>--}}
 
 
 
