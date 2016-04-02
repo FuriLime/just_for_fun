@@ -346,14 +346,17 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 	{{--</script>--}}
 
     <script>
-        var myCenter=new google.maps.LatLng('{{$event->lat}}','{{$event->lng}}');
-        var map;
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map_canvas'), {
-                center: myCenter,
-                zoom: 8
-            });
-        }
+        $(document).ready(function() {
+            var myCenter = new google.maps.LatLng('{{$event->lat}}', '{{$event->lng}}');
+            var map;
+
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map_canvas'), {
+                    center: myCenter,
+                    zoom: 8
+                });
+            }
+        });
     </script>
 
 
