@@ -715,6 +715,10 @@
                                         if(components.street_number != undefined && components.route!= undefined
                                                 && components.locality!=undefined && components.administrative_area_level_1 !=undefined
                                                 && components.country!=undefined ){
+                                            $('#street').attr('style', 'display:block');
+                                            $('#city').attr('style', 'display:block');
+                                            $('#state').attr('style', 'display:block');
+                                            $('#country').attr('style', 'display:block');
                                             $('#street').attr('value', components.route + ' ' + components.street_number);
                                             $('#city').attr('value', components.locality);
                                             $('#state').attr('value', components.administrative_area_level_1);
