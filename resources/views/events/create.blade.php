@@ -548,8 +548,11 @@
             $('#street').attr('value', '');
             $('#street').attr('style', 'display: inline-block');
             $('#state').attr('value', '');
+            $('#state').attr('style', 'display: inline-block');
             $('#city').attr('value', '');
+            $('#city').attr('style', 'display: inline-block');
             $('#country').attr('value', '');
+            $('#country').attr('style', 'display: inline-block');
             $('.fields_map').attr('style', 'display:none');
         });
 
@@ -714,10 +717,6 @@
                                         if(components.street_number != undefined && components.route!= undefined
                                                 && components.locality!=undefined && components.administrative_area_level_1 !=undefined
                                                 && components.country!=undefined ){
-                                            $('#street').attr('style', 'display:block');
-                                            $('#city').attr('style', 'display:block');
-                                            $('#state').attr('style', 'display:block');
-                                            $('#country').attr('style', 'display:block');
                                             $('#street').attr('value', components.route + ' ' + components.street_number);
                                             $('#city').attr('value', components.locality);
                                             $('#state').attr('value', components.administrative_area_level_1);
@@ -725,11 +724,6 @@
                                         }else if(components.street_number == undefined && components.route!= undefined
                                                 && components.locality!=undefined && components.administrative_area_level_1 !=undefined
                                                 && components.country!=undefined ){
-                                            alert('sdsd');
-                                            $('#street').attr('style', 'display:block');
-                                            $('#city').attr('style', 'display:block');
-                                            $('#state').attr('style', 'display:block');
-                                            $('#country').attr('style', 'display:block');
                                             $('#street').attr('value', components.route);
                                             $('#city').attr('value', components.locality);
                                             $('#state').attr('value', components.administrative_area_level_1);
@@ -738,7 +732,6 @@
                                         }else if(components.street_number == undefined && components.route == undefined
                                                 && components.locality!=undefined && components.administrative_area_level_1 !=undefined
                                                 && components.country!=undefined ){
-                                            $('#street').attr('style', 'display:block');
                                             $('#city').attr('value', components.locality);
                                             $('#state').attr('value', components.administrative_area_level_1);
                                             $('#country').attr('value', components.country);
