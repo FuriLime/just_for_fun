@@ -544,7 +544,7 @@
         }//]]>
         $('#reset_loc').click(function(){
             $('.locale').attr('style', 'display:block');
-            $('#location').attr('value', '');
+            $('#location').val('');
             $('#street').attr('value', '');
             $('#state').attr('value', '');
             $('#city').attr('value', '');
