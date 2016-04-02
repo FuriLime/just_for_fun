@@ -739,7 +739,7 @@
                                         }else if(components.street_number == undefined && components.route == undefined
                                                 && components.locality!=undefined && components.administrative_area_level_1 !=undefined
                                                 && components.country!=undefined ){
-                                            $('#street').attr('style', 'display:none');
+                                            $('#street').attr('style', 'display:block');
                                             $('#city').attr('value', components.locality);
                                             $('#state').attr('value', components.administrative_area_level_1);
                                             $('#country').attr('value', components.country);
