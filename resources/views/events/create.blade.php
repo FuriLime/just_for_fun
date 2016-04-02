@@ -544,10 +544,10 @@
         }//]]>
         $('#reset_loc').click(function(){
             $('.locale').attr('style', 'display:block');
-            $('#location').val('');
-            $('#street').val('');
-            $('#state').val('');
-            $('#city').val('');
+            $('#location').attr('value', '');
+            $('#street').attr('value', '');
+            $('#state').attr('value', '');
+            $('#city').attr('value', '');
             $('#country').attr('value', '');
             $('.fields_map').attr('style', 'display:none');
         });
