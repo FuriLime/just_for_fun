@@ -752,6 +752,9 @@
                                             $('#state').attr('value', components.administrative_area_level_1);
                                             $('#country').attr('value', components.country);
                                         }
+                                        else{
+                                            alert('nothing');
+                                        }
                                     }
                                     else{
                                         alert('sdsdsdsd');
