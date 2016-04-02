@@ -690,7 +690,6 @@
                                 var place = results[i];
                                 break;
                             }
-
                             var place_id = place["place_id"];
                             location_lat = place["geometry"]["location"].lat();
                             location_lng = place["geometry"]["location"].lng();
@@ -765,6 +764,9 @@
                                 map: map
                             });
                             service = new google.maps.places.PlacesService(map);
+                        }
+                        else {
+                            alert();
                         }
                     }
 
