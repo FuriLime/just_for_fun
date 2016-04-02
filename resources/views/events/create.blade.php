@@ -557,11 +557,6 @@
         // Get timezone of the place
         // 3 steps: get entered place, find it`s location (coordinates), find its timezone
         $('#location').change(function () {
-
-
-
-
-
             $('.publish').focus();
             $('.draft').focus();
             $('.locale').attr('style', 'display:none');
