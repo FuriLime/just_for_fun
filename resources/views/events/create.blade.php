@@ -502,7 +502,6 @@
     });
 
     $('#finish').on('change', function() {
-
         var start_date = new Date($('#start').val());
         var end_date = new Date($('#finish').val());
 
@@ -552,8 +551,6 @@
             $('#country').val('');
 
         });
-
-
 	// Get timezone of the place
 	// 3 steps: get entered place, find it`s location (coordinates), find its timezone
     $('#location').change(function () {
@@ -562,13 +559,25 @@
         $('.locale').attr('style', 'display:none');
         $('.fields_map').attr('style', 'display:block');
 
-        var map;
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -34.397, lng: 150.644},
-                zoom: 8
+        var myCenter=new google.maps.LatLng(-34.397, 150.644);
+
+        function initialize()
+        {
+            var mapProp = {
+                center:myCenter,
+                zoom:5,
+                mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+
+            var map=new google.maps.Map(document.getElementById("map"),mapProp);
+
+            var marker=new google.maps.Marker({
+                position:myCenter,
             });
+            marker.setMap(map);
         }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
 
      });
 
