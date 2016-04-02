@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/create.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -28,21 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33960047" vertical-offset="4658" max-vertical-offset="7548">
+            <state vertical-scroll-proportion="4.576923" vertical-offset="5066" max-vertical-offset="7548">
               <caret line="292" column="16" selection-start-line="292" selection-start-column="16" selection-end-line="292" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.963636" vertical-offset="9922" max-vertical-offset="14450">
-              <caret line="645" column="82" selection-start-line="645" selection-start-column="82" selection-end-line="645" selection-end-column="82" />
+            <state vertical-scroll-proportion="0.73114353" vertical-offset="10092" max-vertical-offset="14603">
+              <caret line="629" column="52" selection-start-line="629" selection-start-column="52" selection-end-line="629" selection-end-column="52" />
               <folding>
                 <element signature="e#4933#4954#0#HTML" expanded="true" />
                 <element signature="e#6117#6138#0#HTML" expanded="true" />
@@ -179,8 +179,8 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/register.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/frontend/custom.css" />
-        <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/events/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
       </list>
     </option>
   </component>
@@ -436,12 +436,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-04283" summary="social buttons">
-      <created>1459580944989</created>
-      <option name="number" value="04283" />
-      <option name="project" value="LOCAL" />
-      <updated>1459580944989</updated>
     </task>
     <task id="LOCAL-04284" summary="social buttons">
       <created>1459581016407</created>
@@ -731,7 +725,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459589653587</updated>
     </task>
-    <option name="localTasksCounter" value="4332" />
+    <task id="LOCAL-04332" summary="social buttons">
+      <created>1459589691737</created>
+      <option name="number" value="04332" />
+      <option name="project" value="LOCAL" />
+      <updated>1459589691737</updated>
+    </task>
+    <option name="localTasksCounter" value="4333" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1153,10 +1153,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.576923" vertical-offset="5066" max-vertical-offset="7548">
+          <caret line="292" column="16" selection-start-line="292" selection-start-column="16" selection-end-line="292" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.963636" vertical-offset="9922" max-vertical-offset="14450">
-          <caret line="645" column="82" selection-start-line="645" selection-start-column="82" selection-end-line="645" selection-end-column="82" />
+        <state vertical-scroll-proportion="0.73114353" vertical-offset="10092" max-vertical-offset="14603">
+          <caret line="629" column="52" selection-start-line="629" selection-start-column="52" selection-end-line="629" selection-end-column="52" />
           <folding>
             <element signature="e#4933#4954#0#HTML" expanded="true" />
             <element signature="e#6117#6138#0#HTML" expanded="true" />
@@ -1167,14 +1175,6 @@
             <element signature="e#15863#15883#0#HTML" expanded="true" />
             <element signature="e#16535#16595#0#HTML" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33960047" vertical-offset="4658" max-vertical-offset="7548">
-          <caret line="292" column="16" selection-start-line="292" selection-start-column="16" selection-end-line="292" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
