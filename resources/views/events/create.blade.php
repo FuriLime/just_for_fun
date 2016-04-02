@@ -679,13 +679,11 @@
                         if (status == google.maps.GeocoderStatus.OK) {
                             if (results[0]) {
                                 var address_components = results[0].address_components;
-                                var components={};
-                                jQuery.each(address_components, function(k,v1) {
-                                    jQuery.each(v1.types, function(k2, v2){
-                                        components[v2]=v1.long_name
-                                    });
-                                })
-                                console.log(components.route);
+                                console.log(address_components.street_number);
+                                console.log(address_components.route);
+                                console.log(address_components.locality);
+                                console.log(address_components.administrative_area_level_1);
+                                console.log(address_components.country);
                             }
                             else{
 
