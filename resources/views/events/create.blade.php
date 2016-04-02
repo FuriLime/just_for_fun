@@ -687,6 +687,7 @@
                                     });
                                     console.log(components.route);
                                     console.log(components.country);
+                                    console.log(components.street_number);
                                 })
                             }
                             else{
