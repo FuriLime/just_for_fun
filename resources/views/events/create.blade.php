@@ -544,12 +544,13 @@
         }//]]>
         $('#reset_loc').click(function(){
             $('.locale').attr('style', 'display:block');
-            $('.fields_map').attr('style', 'display:none');
             $('#location').val('');
             $('#street').val('');
             $('#state').val('');
             $('#city').val('');
             $('#country').val('');
+            $('.fields_map').attr('style', 'display:none');
+
 
         });
 
@@ -587,8 +588,6 @@
                         location_lng = place["geometry"]["location"].lng();
                         $('#lat').val(location_lat);
                         $('#lng').val(location_lng);
-
-
                         var geocoder = new google.maps.Geocoder();
                         var address = document.getElementById('location').value;
                         geocoder.geocode({'address': address}, function(results, status) {
@@ -624,7 +623,7 @@
                                     }else if(components.street_number == undefined && components.route == undefined
                                             && components.locality!=undefined && components.administrative_area_level_1 !=undefined
                                             && components.country!=undefined ){
-                                        $('#street').attr('style', 'display:none !important');
+                                        $('#street').attr('style', 'display:none');
                                         $('#city').attr('value', components.locality);
                                         $('#state').attr('value', components.administrative_area_level_1);
                                         $('#country').attr('value', components.country);
