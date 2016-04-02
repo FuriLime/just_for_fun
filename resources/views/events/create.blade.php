@@ -685,7 +685,10 @@
                                             components[v2]=v1.long_name
                                         });
                                     })
-                                    console.log(results[0]);
+                                    console.log(address_components.route);
+                                    console.log(address_components.locality);
+                                    console.log(address_components.administrative_area_level_1);
+                                    console.log(address_components.country);
                                 }
                                 else{
 
