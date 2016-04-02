@@ -638,6 +638,14 @@
                                         $('#state').attr('value', components.administrative_area_level_1);
                                         $('#country').attr('value', components.country);
                                     }
+                                    else if(components.street_number == undefined && components.route== undefined
+                                            && components.locality==undefined && components.administrative_area_level_1 ==undefined
+                                            && components.country!=undefined ){
+                                        $('#street').attr('style', 'display:none');
+                                        $('#city').attr('style', 'display:none');
+                                        $('#state').attr('style', 'display:none');
+                                        $('#country').attr('value', components.country);
+                                    }
                                 }
                                 else{
 
