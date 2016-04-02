@@ -685,7 +685,7 @@
                                             components[v2]=v1.long_name
                                         });
                                     })
-                                    console.log(components.route);
+                                    console.log(results[0]);
                                 }
                                 else{
 
