@@ -685,6 +685,7 @@
                                             components[v2]=v1.long_name
                                         });
                                     })
+                                    console.log(components);
                                     console.log(components.route);
                                     console.log(components.locality);
                                     console.log(components.administrative_area_level_1);
