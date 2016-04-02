@@ -557,166 +557,20 @@
 	// Get timezone of the place
 	// 3 steps: get entered place, find it`s location (coordinates), find its timezone
     $('#location').change(function () {
-
-
-
-
-
         $('.publish').focus();
         $('.draft').focus();
         $('.locale').attr('style', 'display:none');
         $('.fields_map').attr('style', 'display:block');
-        setTimeout(function get_timezone() {
-            var map;
-            var service;
-            var infowindow;
 
-            function initialize2() {
-                map = new google.maps.Map(document.getElementById('map'));
-                var request = {
-                    query: $('#location').val()
-                };
-                service = new google.maps.places.PlacesService(map);
-                service.textSearch(request, callback);
-            }
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+            });
+        }
 
-            function callback(results, status) {
-                if (status == google.maps.places.PlacesServiceStatus.OK) {
-                    for (var i = 0; i < results.length; i++) {
-                        var place = results[i];
-                        break;
-                    }
-                    var locale = ($('#location').val());
-                    var splits = '';
-                    var sity = '';
-                    var city='0;'
-                    var street = '';
-                    var state = '';
-                    var country = '';
-                    var num_house = '';
-                    var asdas = '';
-                    if (results[0]) {
-                        locale = results[0].formatted_address;
-
-                        splits = locale.replace(/-/g,",");
-
-                        splits = splits.split(',');
-                        if (splits.length == 2) {
-                            sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
-                            $('#city').val(sity);
-                            country = splits[1];
-                            $('#country').val(country);
-                            $('#street').val('');
-                            $('#state').val('');
-                            $('#street').attr('style', 'display:none');
-                            $('#state').attr('style', 'display:none');
-                            $('#city').attr('style', 'display:block');
-                            $('#country').attr('style', 'display:block');
-                        }
-
-                        if (splits.length == 3) {
-                            street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
-                            $('#street').val(num_house + ' ' + street);
-                            sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                            $('#city').val(sity);
-                            country = splits[2];
-                            $('#country').val(country);
-                            $('#state').val('');
-                            $('#state').attr('style', 'display:none');
-                            $('#city').attr('style', 'display:block');
-                            $('#street').attr('style', 'display:block');
-                            $('#country').attr('style', 'display:block');
-                        }
-
-                        if (splits.length >= 4) {
-
-                            if($.isNumeric(splits[1])){
-                                street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                                $('#street').val(street);
-
-//                                street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                                sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
-                                $('#city').val(sity);
-
-                                state = splits[3].replace(/(^\s*)|(\s*)$/g, '');
-                                $('#state').val(state);
-
-                                country = splits[4];
-                                $('#country').val(country);
-                            }else{
-                                street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
-                                $('#street').val(street);
-                                sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                                $('#city').val(sity);
-
-                                state = splits[2].replace(/(^\s*)|(\s*)$/g, '');
-                                $('#state').val(state);
-
-                                country = splits[3];
-                                $('#country').val(country);
-                            }
-
-
-
-                            $('#country').attr('style', 'display:block');
-                            $('#state').attr('style', 'display:block');
-                            $('#city').attr('style', 'display:block');
-                            $('#street').attr('style', 'display:block');
-
-                        }
-                    }
-
-                    var place_id = place["place_id"];
-                    location_lat = place["geometry"]["location"].lat();
-                    location_lng = place["geometry"]["location"].lng();
-                    $('#lat').val(location_lat);
-                    $('#lng').val(location_lng);
-
-
-                    var geocoder = new google.maps.Geocoder();
-                    var address = document.getElementById('location').value;
-                    geocoder.geocode({'address': address}, function(results, status) {
-                        if (status == google.maps.GeocoderStatus.OK) {
-                            if (results[0]) {
-                                var address_components = results[0].address_components;
-                                var components={};
-                                jQuery.each(address_components, function(k,v1) {
-                                    jQuery.each(v1.types, function(k2, v2){
-                                        components[v2]=v1.long_name;
-
-                                    });
-                                    console.log(components.route);
-                                    console.log(components.country);
-                                    console.log(address_components);
-                                })
-                            }
-                            else{
-
-                                alert('sdsdsdsd');
-                            }
-                        }
-                    });
-
-
-                    var pyrmont = new google.maps.LatLng(location_lat, location_lng);
-                    map = new google.maps.Map(document.getElementById('map'), {
-                        center: pyrmont,
-                        zoom: 15
-                    });
-                    var request = {
-                        query: $('#location').val()
-                    };
-                    var marker = new google.maps.Marker({
-                        position: pyrmont,
-                        map: map
-                    });
-                    service = new google.maps.places.PlacesService(map);
-                }
-            }
-
-            initialize2();
-        }, 200);
-                    });
+     });
 
         $( document ).ready(function() {
             if($('#location').val()) {
