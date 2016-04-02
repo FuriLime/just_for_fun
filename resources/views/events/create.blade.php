@@ -542,17 +542,17 @@
             var autocomplete = new google.maps.places.Autocomplete(document.getElementById('location'), {
             });
         }//]]>
-        $('#reset_loc').click(function(){
-            $('.locale').attr('style', 'display:block');
-            $('#location').val('');
-            $('#street').val('');
-            $('#state').val('');
-            $('#city').val('');
-            $('#country').val('fgdfg');
-            $('.fields_map').attr('style', 'display:none');
-
-
-        });
+//        $('#reset_loc').click(function(){
+//            $('.locale').attr('style', 'display:block');
+//            $('#location').val('');
+//            $('#street').val('');
+//            $('#state').val('');
+//            $('#city').val('');
+//            $('#country').val('fgdfg');
+//            $('.fields_map').attr('style', 'display:none');
+//
+//
+//        });
 
 
         // Get timezone of the place
