@@ -687,7 +687,9 @@
                                     })
                                     console.log(components);
                                     console.log(components.route);
+                                    console.log(components.street_number);
                                     console.log(components.locality);
+                                    console.log(components.administrative_area_level_2);
                                     console.log(components.administrative_area_level_1);
                                     console.log(components.country);
                                 }
