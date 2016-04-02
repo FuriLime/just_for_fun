@@ -196,7 +196,7 @@
                             <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
 
-                        <div class="fields_map" style="display: none">
+                        <div class="fields_map" style="display: block">
                          <div class="map_event_loc" id="map"></div>
                          <div class="form-group fields_loc">
                              @if(isset($event_clone))
