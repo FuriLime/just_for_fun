@@ -573,7 +573,7 @@
                         query: $('#location').val()
                     };
                     service = new google.maps.places.PlacesService(map);
-                    service.textSearch(request, callback);
+//                    service.textSearch(request, callback);
                 }
 //
 //                function callback(results, status) {
