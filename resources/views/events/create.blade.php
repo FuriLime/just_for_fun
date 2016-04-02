@@ -586,85 +586,6 @@
                             var place = results[i];
                             break;
                         }
-                        var locale = ($('#location').val());
-                        var splits = '';
-                        var sity = '';
-                        var city='0;'
-                        var street = '';
-                        var state = '';
-                        var country = '';
-                        var num_house = '';
-                        var asdas = '';
-                        if (results[0]) {
-                            locale = results[0].formatted_address;
-
-                            splits = locale.replace(/-/g,",");
-
-                            splits = splits.split(',');
-                            if (splits.length == 2) {
-                                sity = splits[0].replace(/(^\s*)|(\s*)$/g, '');
-                                $('#city').val(sity);
-                                country = splits[1];
-                                $('#country').val(country);
-                                $('#street').val('');
-                                $('#state').val('');
-                                $('#street').attr('style', 'display:none');
-                                $('#state').attr('style', 'display:none');
-                                $('#city').attr('style', 'display:block');
-                                $('#country').attr('style', 'display:block');
-                            }
-
-                            if (splits.length == 3) {
-                                street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
-                                $('#street').val(num_house + ' ' + street);
-                                sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                                $('#city').val(sity);
-                                country = splits[2];
-                                $('#country').val(country);
-                                $('#state').val('');
-                                $('#state').attr('style', 'display:none');
-                                $('#city').attr('style', 'display:block');
-                                $('#street').attr('style', 'display:block');
-                                $('#country').attr('style', 'display:block');
-                            }
-
-                            if (splits.length >= 4) {
-
-                                if($.isNumeric(splits[1])){
-                                    street = splits[0] + ' ' +splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                                    $('#street').val(street);
-
-//                                street = splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                                    sity = splits[2].replace(/(^\s*)|(\s*)$/g, '');
-                                    $('#city').val(sity);
-
-                                    state = splits[3].replace(/(^\s*)|(\s*)$/g, '');
-                                    $('#state').val(state);
-
-                                    country = splits[4];
-                                    $('#country').val(country);
-                                }else{
-                                    street = splits[0].replace(/(^\s*)|(\s*)$/g, '');
-                                    $('#street').val(street);
-                                    sity = splits[1].replace(/(^\s*)|(\s*)$/g, '');
-                                    $('#city').val(sity);
-
-                                    state = splits[2].replace(/(^\s*)|(\s*)$/g, '');
-                                    $('#state').val(state);
-
-                                    country = splits[3];
-                                    $('#country').val(country);
-                                }
-
-
-
-                                $('#country').attr('style', 'display:block');
-                                $('#state').attr('style', 'display:block');
-                                $('#city').attr('style', 'display:block');
-                                $('#street').attr('style', 'display:block');
-
-                            }
-                        }
 
                         var place_id = place["place_id"];
                         location_lat = place["geometry"]["location"].lat();
@@ -692,6 +613,10 @@
                                     console.log(components.administrative_area_level_2);
                                     console.log(components.administrative_area_level_1);
                                     console.log(components.country);
+                                    $('#state').attr('value', components.administrative_area_level_1);
+                                    $('#city').attr('value', components.country);
+                                    $('#street').attr('value', components.street_number);
+                                    $('#country').attr('value', components.country);
                                 }
                                 else{
 
