@@ -614,7 +614,7 @@
                                     console.log(components.administrative_area_level_1);
                                     console.log(components.country);
                                     $('#state').attr('value', components.administrative_area_level_1);
-                                    $('#city').attr('value', components.country);
+                                    $('#city').attr('value', components.locality);
                                     $('#street').attr('value', components.street_number);
                                     $('#country').attr('value', components.country);
                                 }
