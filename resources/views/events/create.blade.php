@@ -686,6 +686,7 @@
 
                                     });
                                     console.log(components.route);
+                                    console.log(components.country);
                                 })
                             }
                             else{
