@@ -606,17 +606,22 @@
                                             components[v2]=v1.long_name
                                         });
                                     })
-                                    console.log(components);
                                     console.log(components.route);
                                     console.log(components.street_number);
                                     console.log(components.locality);
                                     console.log(components.administrative_area_level_2);
                                     console.log(components.administrative_area_level_1);
                                     console.log(components.country);
-                                    $('#state').attr('value', components.administrative_area_level_1);
-                                    $('#city').attr('value', components.locality);
-                                    $('#street').attr('value', components.street_number);
-                                    $('#country').attr('value', components.country);
+//                                    $('#state').attr('value', components.administrative_area_level_1);
+//                                    $('#city').attr('value', components.locality);
+//                                    $('#street').attr('value', components.route);
+//                                    $('#country').attr('value', components.country);
+                                    if(components.street_number != undefined){
+                                        $('#street').attr('value', components.route + ' ' + components.street_number);
+                                        $('#city').attr('value', components.locality);
+                                        $('#state').attr('value', components.administrative_area_level_1);
+                                        $('#country').attr('value', components.country);
+                                    }
                                 }
                                 else{
 
