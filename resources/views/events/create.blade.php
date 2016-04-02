@@ -546,6 +546,7 @@
             $('.locale').attr('style', 'display:block');
             $('#location').val('');
             $('#street').attr('value', '');
+            $('#street').attr('style', 'display: inline-block');
             $('#state').attr('value', '');
             $('#city').attr('value', '');
             $('#country').attr('value', '');
