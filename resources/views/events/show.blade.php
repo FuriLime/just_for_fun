@@ -347,25 +347,13 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 
     <script>
         var myCenter=new google.maps.LatLng('{{$event->lat}}','{{$event->lng}}');
-console.log(myCenter);
-        function initialize()
-        {
-            var mapProp = {
-                center:myCenter,
-                zoom:5,
-                mapTypeId:google.maps.MapTypeId.ROADMAP
-            };
-
-            var map=new google.maps.Map(document.getElementById("map_canvas"),mapProp);
-
-            var marker=new google.maps.Marker({
-                position:myCenter
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map_canvas'), {
+                center: myCenter,
+                zoom: 8
             });
-            $('#hidden_address').appendTo( $('#address_wr') ).css('position', 'static');
-            marker.setMap(map);
         }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
 
