@@ -575,13 +575,13 @@
                     service = new google.maps.places.PlacesService(map);
                     service.textSearch(request, callback);
                 }
-
-                function callback(results, status) {
-                    if (status == google.maps.places.PlacesServiceStatus.OK) {
-                        for (var i = 0; i < results.length; i++) {
-                            var place = results[i];
-                            break;
-                        }
+//
+//                function callback(results, status) {
+//                    if (status == google.maps.places.PlacesServiceStatus.OK) {
+//                        for (var i = 0; i < results.length; i++) {
+//                            var place = results[i];
+//                            break;
+//                        }
 
                         var place_id = place["place_id"];
                         location_lat = place["geometry"]["location"].lat();
@@ -659,11 +659,11 @@
                         });
                         service = new google.maps.places.PlacesService(map);
                     }
-                }
+//                }
 
-                initialize2();
-            }, 200);
-        });
+//                initialize2();
+//            }, 200);
+  });
 
         $( document ).ready(function() {
             if($('#location').val()) {
