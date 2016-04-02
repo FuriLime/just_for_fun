@@ -685,10 +685,10 @@
                                             components[v2]=v1.long_name
                                         });
                                     })
-                                    console.log(address_components.route);
-                                    console.log(address_components.locality);
-                                    console.log(address_components.administrative_area_level_1);
-                                    console.log(address_components.country);
+                                    console.log(components.route);
+                                    console.log(components.locality);
+                                    console.log(components.administrative_area_level_1);
+                                    console.log(components.country);
                                 }
                                 else{
 
