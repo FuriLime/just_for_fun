@@ -726,6 +726,7 @@
                                         }else if(components.street_number == undefined && components.route!= undefined
                                                 && components.locality!=undefined && components.administrative_area_level_1 !=undefined
                                                 && components.country!=undefined ){
+                                            alert('sdsd');
                                             $('#street').attr('style', 'display:block');
                                             $('#city').attr('style', 'display:block');
                                             $('#state').attr('style', 'display:block');
