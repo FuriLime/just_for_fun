@@ -352,7 +352,7 @@ Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href=
 
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map_canvas'), {
-                    center: myCenter,
+                    center: {lat: -34.397, lng: 150.644},
                     zoom: 8
                 });
             }
