@@ -679,7 +679,7 @@
                         if (status == google.maps.GeocoderStatus.OK) {
                             if (results[0]) {
                                 var address_components = results[0].address_components;
-                                console.log(address_components);
+                                console.log(address_components[0].route);
                                 console.log(address_components.route);
                                 console.log(address_components.locality);
                                 console.log(address_components.administrative_area_level_1);
