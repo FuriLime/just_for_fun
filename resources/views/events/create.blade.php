@@ -548,7 +548,7 @@
             $('#street').val('');
             $('#state').val('');
             $('#city').val('');
-            $('#country').val('');
+            $('#country').val('fgdfg');
             $('.fields_map').attr('style', 'display:none');
 
 
