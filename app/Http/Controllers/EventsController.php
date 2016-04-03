@@ -848,7 +848,8 @@ class EventsController extends Controller {
         $dec_footer = "Powered by EventFellows - start creating calendar entries for your own event now. https://eventfellows.com/referrer/{$event->uuid} ";
         $link_event = "Link to the EventPage:\r\n ".$event->event_url;
         $loc = urlencode($event['location']);
-        $title = urlencode($event['title']);
+//        $title = urlencode($event['title']);
+        $title = "dfsdfsdfsdfsdfsdf";
 
         $desc = urlencode($dec_title."\r\n")."-------------------------------------------------------------------------------------------------------".
             urlencode("\r\n".$event['title']."\r\n".$event['description']."\r\n". $text_twit ."\r\n". $link_event."\r\n".
