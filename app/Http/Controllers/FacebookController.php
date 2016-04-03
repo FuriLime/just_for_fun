@@ -71,12 +71,10 @@ class FacebookController extends Controller
                 0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
             ];
             $member_email = md5($user->email);
-            if(!$mc->get("lists/$listId/members/$member_email")){
-                $mc->post("lists/$listId/members", [
-                    'email_address' => $user->email,
-                    'status'        => 'subscribed',
-                ]);
-            }
+            $mc->put("lists/$listId/members/$member_email", [
+                'email_address' => $user->email,
+                'status'        => 'subscribed',
+            ]);
             $role->users()->attach($rolew);
             $user_profile = new UserProfile();
             $user_profile->user_id = $user->id;
