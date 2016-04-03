@@ -799,9 +799,6 @@ class EventsController extends Controller {
      */
     public function addToCalendar(Request $request)
     {
-
-
-
         $info = $request->all();
 
         $uuid = $info['uuid'];

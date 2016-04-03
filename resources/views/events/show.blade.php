@@ -18,25 +18,6 @@
 		#hidden_address { position: static; left: -9000px; }
 	</style>
 @stop
-{{--@section('top')--}}
-    {{--<div class="breadcum">--}}
-        {{--<div class="container">--}}
-            {{--<ol class="breadcrumb">--}}
-                {{--<li>--}}
-                    {{--<a href="{{ route('home') }}"> <i class="livicon icon3 icon4" data-name="home" data-size="18" data-loop="true" data-c="#3d3d3d" data-hc="#3d3d3d"></i>Dashboard--}}
-                    {{--</a>--}}
-                {{--</li>--}}
-                {{--<li class="hidden-xs">--}}
-                    {{--<i class="livicon icon3" data-name="angle-double-right" data-size="18" data-loop="true" data-c="#01bc8c" data-hc="#01bc8c"></i>--}}
-                    {{--<a href="{{ URL::to('events') }}">Events</a>--}}
-                {{--</li>--}}
-            {{--</ol>--}}
-            {{--<div class="pull-right">--}}
-                {{--<i class="livicon icon3" data-name="doc-landscape" data-size="20" data-loop="true" data-c="#3d3d3d" data-hc="#3d3d3d"></i> {{ $event['title'] }}--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--@stop--}}
 
 <div class="share-event-top">
   <div class="container share-container">
@@ -89,15 +70,15 @@
     </div>
     
   </div>
-@if(Sentinel::check() && $event->author_id == Sentinel::getUser()->id)
+{{--@if(Sentinel::check() && $event->author_id == Sentinel::getUser()->id)--}}
         <div class="show-details" id="show_detail">
             Share this event
         </div>
-    @else
-        <div class="show-details disabled">
-            Share this event
-        </div>
-@endif
+    {{--@else--}}
+        {{--<div class="show-details disabled">--}}
+            {{--Share this event--}}
+        {{--</div>--}}
+{{--@endif--}}
 </div>
 {{-- breadcrumb --}}
 
