@@ -846,7 +846,7 @@ class EventsController extends Controller {
         $result = $error_massage = $calendar_link = '';
         $dec_title = "This calendar entry has been created with a Free Personal Account from EventFellows";
         $dec_footer = "Powered by EventFellows - start creating calendar entries for your own event now. https://eventfellows.com/referrer/{$event->uuid} ";
-        $link_event = "Link to the EventPage:\r\n".$event->event_url;
+        $link_event = "Link to the EventPage:\r\n ".$event->event_url;
         $loc = urlencode($event['location']);
         $title = urlencode($event['title']);
 
