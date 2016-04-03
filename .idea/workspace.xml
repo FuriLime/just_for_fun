@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+    <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="social buttons">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/events/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/events/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -32,13 +31,14 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55934197" vertical-offset="765" max-vertical-offset="7242">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.65922445" vertical-offset="748" max-vertical-offset="7242">
+              <caret line="77" column="54" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
               <folding>
                 <element signature="e#1133#1155#0#HTML" expanded="true" />
                 <element signature="e#1440#1462#0#HTML" expanded="true" />
                 <element signature="e#1747#1769#0#HTML" expanded="true" />
                 <element signature="e#3219#3440#0#HTML" expanded="true" />
+                <element signature="e#4171#4192#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -317,12 +317,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-04293" summary="social buttons">
-      <created>1459583482400</created>
-      <option name="number" value="04293" />
-      <option name="project" value="LOCAL" />
-      <updated>1459583482400</updated>
     </task>
     <task id="LOCAL-04294" summary="social buttons">
       <created>1459583571658</created>
@@ -612,7 +606,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459679751359</updated>
     </task>
-    <option name="localTasksCounter" value="4342" />
+    <task id="LOCAL-04342" summary="social buttons">
+      <created>1459684184127</created>
+      <option name="number" value="04342" />
+      <option name="project" value="LOCAL" />
+      <updated>1459684184127</updated>
+    </task>
+    <option name="localTasksCounter" value="4343" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1035,13 +1035,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55934197" vertical-offset="765" max-vertical-offset="7242">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.65922445" vertical-offset="748" max-vertical-offset="7242">
+          <caret line="77" column="54" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
           <folding>
             <element signature="e#1133#1155#0#HTML" expanded="true" />
             <element signature="e#1440#1462#0#HTML" expanded="true" />
             <element signature="e#1747#1769#0#HTML" expanded="true" />
             <element signature="e#3219#3440#0#HTML" expanded="true" />
+            <element signature="e#4171#4192#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

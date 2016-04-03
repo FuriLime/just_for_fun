@@ -70,15 +70,15 @@
     </div>
     
   </div>
-{{--@if(Sentinel::check() && $event->author_id == Sentinel::getUser()->id)--}}
+@if(Sentinel::check() && $event->author_id == Sentinel::getUser()->id)
         <div class="show-details" id="show_detail">
             Share this event
         </div>
-    {{--@else--}}
-        {{--<div class="show-details disabled">--}}
-            {{--Share this event--}}
-        {{--</div>--}}
-{{--@endif--}}
+    @else
+        <div class="show-details" style="display: none">
+            Share this event
+        </div>
+@endif
 </div>
 {{-- breadcrumb --}}
 
