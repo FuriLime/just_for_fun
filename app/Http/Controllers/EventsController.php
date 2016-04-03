@@ -854,13 +854,10 @@ class EventsController extends Controller {
             urlencode("\r\n".$event['title']."\r\n".$event['description']."\r\n". $text_twit ."\r\n". $link_event."\r\n".
                 "-------------------------------------------------------------------------------------------------------\r\n". $dec_footer);
 
-
-        $event_ical_desc = urlencode($event['description']);
-
         $desc_ical = $dec_title.'\r\n'.
         "-------------------------------------------------------------------------------------------------------". '\r\n'.
         $title.'\r\n'.
-        $event['description'].'\r\n'.
+        $event->description.'\r\n'.
         $text_twit .'\r\n'.
         $link_event.'\r\n'.
         "-------------------------------------------------------------------------------------------------------".'\r\n'.
