@@ -22,9 +22,9 @@
 <div class="share-event-top">
     <div class="container-fluid share-container">
         <div class="row content">
-            <img src="http://event.test-y-sbm.com/assets/images/exit-show-details.png" class="exit-show-details">
             <div class="col-md-12">
-                <div class="top-bar-tabs">
+                <div class="top-bar-tabs clearfix">
+                    <img src="http://event.test-y-sbm.com/assets/images/exit-show-details.png" class="exit-show-details">
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#social-tab" aria-controls="social-tab" role="tab" data-toggle="tab">Social</a></li>
                         <li role="presentation"><a href="#embed-tab" aria-controls="embed-tab" role="tab" data-toggle="tab">Embed</a></li>
