@@ -23,8 +23,8 @@
     <div class="container-fluid share-container">
         <div class="row content">
             <div class="col-md-12">
+                <img src="http://event.test-y-sbm.com/assets/images/exit-show-details.png" class="exit-show-details">
                 <div class="top-bar-tabs clearfix">
-                    {{--<img src="http://event.test-y-sbm.com/assets/images/exit-show-details.png" class="exit-show-details">--}}
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#social-tab" aria-controls="social-tab" role="tab" data-toggle="tab">Social</a></li>
                         <li role="presentation"><a href="#embed-tab" aria-controls="embed-tab" role="tab" data-toggle="tab">Embed</a></li>
@@ -54,7 +54,6 @@
                    background:url(http://share.static.skyrock.net/img/api/skyrocksocialshare_square38.png) no-repeat 0 0 transparent;"><p style="display:none;">Share on Skyrock</p></a>
                                     <script>(function(){var d=document,id='skyrock-fxlebpx'; if(d.getElementById(id)) return;var e=d.createElement('script');e.id=id;e.async=true;e.src='http://share.static.skyrock.net/js/skyrock_social.min.js';d.getElementsByTagName('body')[0].appendChild(e);}());</script>
                                 </div>
-
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="embed-tab">
