@@ -23,7 +23,6 @@
     <div class="container-fluid share-container">
         <div class="row content">
             <div class="col-md-12">
-                <img src="http://event.test-y-sbm.com/assets/images/exit-show-details.png" class="exit-show-details">
                 <i class="fa fa-times-circle-o exit-show-details"></i>
                 <div class="top-bar-tabs clearfix">
                     <ul class="nav nav-tabs" role="tablist">

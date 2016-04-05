@@ -1129,7 +1129,9 @@ footer .btn-primary.text-white {
 .exit-show-details{
     float: right;
     transition: all ease 0.5s;
-    cursor: pointer
+    cursor: pointer;
+    color: #808080;
+    font-size: 36px;
 }
 .exit-show-details:hover{
     transform:rotate(90deg);
