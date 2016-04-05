@@ -166,7 +166,9 @@
     font-size: 14px;
     margin-right: 15px;
 }
-
+.top-bar-tabs .nav-tabs>li>a:last-child {
+    margin-right: 0;
+}
 .snippet-text {
     color: #777;
     font-size: 14px;
