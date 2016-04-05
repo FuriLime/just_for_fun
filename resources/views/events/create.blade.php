@@ -116,7 +116,7 @@
                                     {{--<span class="glyphicon glyphicon-remove"></span>--}}
                                     {{--</span>--}}
                                     <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
+                                    {{--<span class="glyphicon glyphicon-calendar"></span>--}}
                                     <span class="fa fa-calendar"></span>
                                 </span>
                                     @if (isset($event_clone))
