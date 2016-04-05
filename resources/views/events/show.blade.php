@@ -66,7 +66,9 @@
                                         <a href=""target="_blank">Yahoo</a> |
                                         <a href=""target="_blank">Microsoft</a> |
                                         <a href="">Outlook</a> |
-                                        <a href="">iCal</a></p>
+                                        <a href="">iCal</a>
+                                    </p>
+                                <!-- End of EventFellows Integration code snippet -->
                                 </textarea>
                             </div>
                         </div>
