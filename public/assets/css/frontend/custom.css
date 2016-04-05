@@ -1217,3 +1217,11 @@ footer .btn-primary.text-white {
         padding-bottom: 10px;
     }
 }
+@media (max-width: 370px) {
+    .share-event-top .show-details {
+        width: 100%;
+        margin: auto;
+        background-color: #0073A7;
+        background-image: none;
+    }
+}
