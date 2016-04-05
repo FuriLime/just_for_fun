@@ -166,7 +166,7 @@
     font-size: 14px;
     margin-right: 15px;
 }
-.top-bar-tabs .nav-tabs>li>a:last-child {
+.top-bar-tabs .nav-tabs:last-child>li>a {
     margin-right: 0;
 }
 .snippet-text {
