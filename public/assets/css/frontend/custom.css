@@ -1224,9 +1224,11 @@ footer .btn-primary.text-white {
 @media (max-width: 370px) {
     .share-event-top .show-details {
         width: 100%;
-        /*margin: auto;*/
-        margin-left: 0;
+        margin: auto;
         background-color: #0073A7;
         background-image: none;
+    }
+    .share-event-top.opened .show-details {
+        margin-left: 0;
     }
 }
