@@ -20,10 +20,9 @@
 @stop
 
 <div class="share-event-top">
-    <div class="container share-container">
+    <div class="container-fluid share-container">
         <div class="row content">
-            <div class="col-sm-7 col-md-7 ">
-                fgdfgdfg
+            <div class="col-sm-7 col-md-7">
                 <div class="top-bar-tabs">
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#social-tab" aria-controls="social-tab" role="tab" data-toggle="tab">Social</a></li>
