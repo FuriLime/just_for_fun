@@ -127,3 +127,62 @@
 #time_change{
     cursor: pointer;
 }
+
+@media (max-width:480px) {
+    #register_but,
+    #add-to-calendar-btn,
+    #follow_but {
+        display: block;
+        margin: 0 0 15px 0;
+    }
+}
+
+
+.top-bar-tabs .nav-tabs {
+    border-bottom: none
+}
+.top-bar-tabs .tab-content {
+    color: #000;
+    margin: 15px 0;
+    text-align: left;
+}
+.top-bar-tabs .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.top-bar-tabs .nav-tabs>li>a:hover {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+.top-bar-tabs .nav-tabs>li>a {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+    border-radius: 4px;
+    padding: 6px 15px;
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.snippet-text {
+    color: #777;
+    font-size: 14px;
+}
+.snippet-textarea {
+    width:99%;
+    resize:none;
+    cursor:pointer;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+    border-radius: 4px;
+    vertical-align: middle;
+    height: 115px;
+}
+
+
+body{
+    background: #dfdfdf;
+}

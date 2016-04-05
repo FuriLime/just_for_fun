@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/custom.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/advbuttons.css') }}" />
     <link href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+
     <!-- end of page level css -->
 
 </head>

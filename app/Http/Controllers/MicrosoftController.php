@@ -62,10 +62,17 @@ class MicrosoftController extends Controller {
 
           $role->users()->attach($rolew);
           $member_email = md5($user->email);
-          $mc->put("lists/$listId/members/$member_email", [
-              'email_address' => $user->email,
-              'status'        => 'subscribed',
-          ]);
+          if(!$mc->get("/lists/$listId/members/$member_email")){
+              $mc->post("/lists/$listId/members", [
+                  'email_address' => $user->email,
+                  'status'        => 'subscribed',
+              ]);
+          }else{
+              $mc->put("/lists/$listId/members/$member_email", [
+                  'email_address' => $user->email,
+                  'status'        => 'subscribed',
+              ]);
+          }
 
         $user = Sentinel::findById($user->id);
         $activation = Activation::create($user);
@@ -75,9 +82,24 @@ class MicrosoftController extends Controller {
           
           if(Sentinel::authenticate($user)) {
             $user = Sentinel::check();
+              $user->verified = 1;
+              $user->status = "Verified";
+              $count = $user->login_count;
+              $count = $count+1;
+              $user->login_count = $count;
+              $user->save();
               return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
           }
         }
+      }else{
+          $count = $user->login_count;
+          $count = $count+1;
+          $user->login_count = $count;
+          $user->save();
+          $member_email = md5($user->email);
+          $mc->patch("/lists/$listId/members/$member_email", [
+              'merge_fields' => ['LOGINCOUNT' => $user->login_count],
+          ]);
       }
 
       if (Activation::completed($user)) {

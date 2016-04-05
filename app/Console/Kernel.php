@@ -15,6 +15,8 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         \App\Console\Commands\Inspire::class,
         \App\Console\Commands\RemoveEvent::class,
+        \App\Console\Commands\BackUp::class,
+        \App\Console\Commands\UserData::class,
     ];
 
     /**
@@ -39,6 +41,14 @@ class Kernel extends ConsoleKernel
        $schedule->command('backup:run')->dailyAt('03:00')->when(function () {
             return "DOneDDDDD";
         });
+//
+//        $schedule->command('backupfiles:run')->weekly()->mondays()->at('03:00')->when(function () {
+//            return "DOneDDDDD";
+//        });
+//
+//        $schedule->command('userdata:run')->weekly()->mondays()->at('03:00')->when(function () {
+//            return "DOneDDDDD";
+//        });
 
     }
 

@@ -70,11 +70,18 @@ class FacebookController extends Controller
             $rolew = [
                 0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
             ];
-//            $member_email = md5($user->email);
-//            $mc->put("lists/$listId/members/$member_email", [
-//                'email_address' => $user->email,
-//                'status'        => 'subscribed',
-//            ]);
+            $member_email = md5($user->email);
+            if(!$mc->get("/lists/$listId/members/$member_email")){
+                $mc->post("/lists/$listId/members", [
+                    'email_address' => $user->email,
+                    'status'        => 'subscribed',
+                ]);
+            }else{
+                $mc->put("/lists/$listId/members/$member_email", [
+                    'email_address' => $user->email,
+                    'status'        => 'subscribed',
+                ]);
+            }
             $role->users()->attach($rolew);
             $user_profile = new UserProfile();
             $user_profile->user_id = $user->id;
@@ -92,6 +99,15 @@ class FacebookController extends Controller
             }
         }
 
+        }else{
+            $count = $user->login_count;
+            $count = $count+1;
+            $user->login_count = $count;
+            $user->save();
+            $member_email = md5($user->email);
+            $mc->patch("/lists/$listId/members/$member_email", [
+                'merge_fields' => ['LOGINCOUNT' => $user->login_count],
+            ]);
         }
 
 

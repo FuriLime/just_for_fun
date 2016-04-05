@@ -20,6 +20,9 @@ use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUser;
 use Sentinel;
 use Activation;
+use Mailchimp\Mailchimp;
+use Config;
+
 
 class LinkedController extends Controller
 {
@@ -47,7 +50,9 @@ class LinkedController extends Controller
 
     public function oauthlinked()
     {
-
+        $apiKey = Config::get('mailchimp.apikey');
+        $mc = new Mailchimp($apiKey);
+        $listId = Config::get('mailchimp.listId');
         $userFace = Socialite::driver('linkedin')->user();
         $user = User::whereemail($userFace->getEmail(), $userFace->getName())->first();
         if(!$user){
@@ -67,7 +72,18 @@ class LinkedController extends Controller
             $rolew = [
                 0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
             ];
-
+            $member_email = md5($user->email);
+            if(!$mc->get("/lists/$listId/members/$member_email")){
+                $mc->post("/lists/$listId/members", [
+                    'email_address' => $user->email,
+                    'status'        => 'subscribed',
+                ]);
+            }else{
+                $mc->put("/lists/$listId/members$member_email", [
+                    'email_address' => $user->email,
+                    'status'        => 'subscribed',
+                ]);
+            }
             $role->users()->attach($rolew);
             $user_profile = new UserProfile();
             $user_profile->user_id = $user->id;
@@ -86,6 +102,15 @@ class LinkedController extends Controller
                 }
             }
 
+        }else{
+            $count = $user->login_count;
+            $count = $count+1;
+            $user->login_count = $count;
+            $user->save();
+            $member_email = md5($user->email);
+            $mc->patch("/lists/$listId/members/$member_email", [
+                'merge_fields' => ['LOGINCOUNT' => $user->login_count],
+            ]);
         }
 
 
@@ -94,10 +119,10 @@ class LinkedController extends Controller
             Sentinel::authenticate($user);
             if(Sentinel::authenticate($user))
             {
-               if(Sentinel::check()) {
-                   return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
-               }
-               }
+                if(Sentinel::check()) {
+                    return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
+                }
+            }
 
         }
         return Redirect::route("home")->with('error', Lang::get('auth/message.signin.error'));

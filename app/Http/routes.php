@@ -183,6 +183,9 @@ Route::post('events/{readable_url}/clone', array('as' => 'events.clone', 'uses' 
 Route::get('events/{uuid}/confirm-delete', array('as' => 'events.confirm-delete', 'uses' => 'EventsController@getModalDelete'));
 Route::post('event/addtocalendar', array('as' => 'event.addtocalendar', 'uses' => 'EventsController@addToCalendar'));
 
+
+Route::get('event/googlecal/{uuid}', array('as' => 'event.addtocalendar', 'uses' => 'EventsController@getCal'));
+
 Route::get('confirm/{readable_url}', array('as' => 'confirm', 'uses' => 'EventsController@confirm'));
 
 
@@ -225,8 +228,8 @@ Route::get('twitter',array('as' => 'twitter','uses' =>   'twitterController@twit
 Route::get('oauthtwitter',array('as' => 'oauthtwitter','uses' =>  'twitterController@oauthtwitter'));
 Route::post('oauthtwitter',array('as' => 'oauthtwitter','uses' =>  'twitterController@oauthtwitter'));
 
-Route::get('/linked', 'LinkedController@linked');
-Route::get('/oauthlinked','LinkedController@oauthlinked');
+Route::get('/linked', 'linkedController@linked');
+Route::get('/oauthlinkedin','linkedController@oauthlinked');
 
 Route::get('blog', array('as' => 'blog', 'uses' => 'BlogController@getIndexFrontend'));
 Route::get('blog/{slug}/tag', 'BlogController@getBlogTagFrontend');

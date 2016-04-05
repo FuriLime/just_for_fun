@@ -279,7 +279,7 @@ class UsersController extends JoshController
         'image' => 'mimes:jpg,jpeg,bmp,png|max:10000'
     );
 
-       // Id of newsletter list
+    // Id of newsletter list
 
     /**
      * Show a list of all the users.
@@ -355,6 +355,8 @@ class UsersController extends JoshController
                 'address'   => Input::get('address'),
                 'timezone'   => Input::get('timezone'),
             ));
+
+            //create user profile
             $user_profile = new UserProfile();
             $user_profile->user_id = $user['id'];
             $user_profile->dob = Input::get('dob');
@@ -365,31 +367,34 @@ class UsersController extends JoshController
             $user_profile->city =  Input::get('city');
             $user_profile->address =  Input::get('address');
             $user_profile->timezone =  Input::get('timezone');
-
             $user_profile->save();
+
+            //create account
             $account_user = new Account();
             $account_user->	account_type_id = '1';
             $account_user->name = $user['uuid'];
             $account_user->slug = $user['uuid'];
             $account_user->save();
+            //create account profile
             $account_profile = new AccountProfile();
             $account_profile->account_id = $account_user->id;
             $account_profile->save();
 
             if (Input::file('image'))
             {
+
                 $destinationPath = base_path().'/public/'; // upload path
                 $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
 
-                $fileName = rand(11111,99999).'.'.$extension; // renameing image
+                $fileName = $user['id'].'.'.$extension; // renameing image
                 Input::file('image')->move($destinationPath, $fileName);
                 //save new file path into db
                 $user_profile->image   = $fileName;
-                $s3 = \Storage::disk('user_data');
+                $s3 = \Storage::disk('S3_BUCKET_USERDATA');
                 $filePath = '/ef-test-userdata/' . $fileName;
                 $s3->put($filePath, file_get_contents($user_profile->image), 'public');
                 $user_profile->image=NULL;
-                $user_profile->image ='http://sergey-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
+                $user_profile->image ='http://ef-test-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
             }
             $role = Role::find(2);
             $rolew = [
@@ -472,7 +477,7 @@ class UsersController extends JoshController
                 $user->verified ="1";
                 $user->status = "Verified";
                 $user->save();
-                $user_profile->image ='http://sergey-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
+                $user_profile->image ='http://ef-test-userdata.s3.amazonaws.com/ef-test-userdata/'. $fileName;
                 $user_profile->save();
             }
 
@@ -499,25 +504,25 @@ class UsersController extends JoshController
      */
     public function getEdit($id = null)
     {
-            // Get the user information
-            if($user = Sentinel::findById($id))
-            {
-                // Get this user groups
-                $userRoles = $user->getRoles()->lists('name', 'id')->all();
-                $user_profile = $user->user_profile()->first();
+        // Get the user information
+        if($user = Sentinel::findById($id))
+        {
+            // Get this user groups
+            $userRoles = $user->getRoles()->lists('name', 'id')->all();
+            $user_profile = $user->user_profile()->first();
 
-                // Get a list of all the available groups
-                $roles = Sentinel::getRoleRepository()->all();
+            // Get a list of all the available groups
+            $roles = Sentinel::getRoleRepository()->all();
 
-            }
-            else
-            {
-                // Prepare the error message
-                $error = Lang::get('users/message.user_not_found', compact('id'));
+        }
+        else
+        {
+            // Prepare the error message
+            $error = Lang::get('users/message.user_not_found', compact('id'));
 
-                // Redirect to the user management page
-                return Redirect::route('users')->with('error', $error);
-            }
+            // Redirect to the user management page
+            return Redirect::route('users')->with('error', $error);
+        }
 
         $countries = $this->countries;
         $status = Activation::completed($user);
@@ -547,8 +552,11 @@ class UsersController extends JoshController
             $apiKey = Config::get('mailchimp.apikey');
             $mc = new Mailchimp($apiKey);
             $listId = Config::get('mailchimp.listId');
-//            dd( $mc->get("lists/$listId/members/$us_email"));
-//            $mc->delete("lists/$listId/members/$email");
+            $result1 = $mc->get("/lists/$listId/members/$email", [
+                'fields' => 'id,interests,email_address'
+            ]);
+
+            $mc->delete("/lists/$listId/members/$email");
         } catch (UserNotFoundException $e) {
             // Prepare the error message
             $error = Lang::get('users/message.user_not_found', compact('id'));
@@ -600,7 +608,7 @@ class UsersController extends JoshController
                 $destinationPath = base_path().'/public/'; // upload path
                 $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
 
-                $fileName = rand(11111,99999).'.'.$extension; // renameing image
+                $fileName = $user['id'].'.'.$extension; // renameing image
                 Input::file('image')->move($destinationPath, $fileName);
 
                 //delete old pic if exists
@@ -611,11 +619,11 @@ class UsersController extends JoshController
 
                 //save new file path into db
                 $user_profile->image   = $fileName;
-                $s3 = \Storage::disk('user_data');
+                $s3 = \Storage::disk('S3_BUCKET_USERDATA');
                 $filePath = '/ef-test-userdata/' . $fileName;
                 $s3->put($filePath, file_get_contents($user_profile->image), 'public');
                 $user_profile->image=NULL;
-                $user_profile->image ='http://sergey-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
+                $user_profile->image ='http://ef-test-userdata.s3.amazonaws.com/ef-test-userdata/'.$fileName;
             }
 
 
@@ -647,13 +655,13 @@ class UsersController extends JoshController
                 $role->users()->attach($rolew);
             }
 
-//$new_email = md5(Input::get('email'));
-//    $mc->put("lists/$listId/members/$new_email", [
-//        'email_address' => $user->email,
-//        'merge_fields' => ['FNAME' => $user->first_name, 'LNAME' => $user->last_name, 'CHENGED' => $us_email],
-//        'status_if_new' => 'subscribed',
-//    ]);
-
+            $new_email = md5(Input::get('email'));
+            $mc->put("/lists/$listId/members/$new_email", [
+                'email_address' => Input::get('email'),
+                'merge_fields' => ['FNAME' => $user->first_name, 'LNAME' => $user->last_name, 'OLDEMAIL'=>$us_email],
+                'interests'=>$result1['interests'],
+                'status' => 'subscribed'
+            ]);
             // Was the user updated?
             if ($user->save() && $user_profile->save()) {
 
@@ -734,17 +742,17 @@ class UsersController extends JoshController
                 $data = array(
 //                        'user'          => $user,
 //                    'deleteUrl' => URL::route('delete', array('user_id' => $user->id, '?delete_code' => $delete_code)),
-                        'deleteUrl' => 'http://event.test-y-sbm.com/admin/users/'.$user->id.'/delete?delete_code='.$delete_code,
+                    'deleteUrl' => url().'/admin/users/'.$user->id.'/delete?delete_code='.$delete_code,
                 );
                 if($_GET) {
                     if ($_GET['delete_code'] == $delete_code) {
                         User::destroy($id);
                         return Redirect::route('home')->with('success', 'You account was delete');
-                }
-                    }else {
+                    }
+                }else {
                     Mail::send('emails.register-activate', $data, function ($m) use ($user) {
-                    $m->to($user->email, $user->first_name . ' ' . $user->last_name);
-                    $m->subject('Hello ' . $user->first_name);
+                        $m->to($user->email, $user->first_name . ' ' . $user->last_name);
+                        $m->subject('Hello ' . $user->first_name);
                     });
                     return Redirect::route('home')->with('success', 'Message with confirmation link has been sent to ' . $user->email . '. Please click on the link in the letter that would delete your account.');
                 }
@@ -909,20 +917,17 @@ class UsersController extends JoshController
         $listId = Config::get('mailchimp.listId');
         $mc = new Mailchimp($apiKey);
 
-        $result_member = $mc->get("lists/$listId/members");
-        $categories = $mc->get("lists/$listId/interest-categories");
+        $result_member = $mc->get("/lists/$listId/members/$email");
+        $categories = $mc->get("/lists/$listId/interest-categories");
         foreach($categories['categories'] as $cat_id){
-                $new_cat_id[] = $cat_id->id;
+            $new_cat_id[] = $cat_id->id;
         }
-        foreach($result_member['members'] as $email_user){
-            $member_user[] = $email_user->email_address;
-        }
-        if (in_array($user_email, $member_user)){
-            $result1 = $mc->get("lists/$listId/members/$email", [
+        if ($result_member){
+            $result1 = $mc->get("/lists/$listId/members/$email", [
                 'fields' => 'id,interests,email_address'
             ]);
 
-            $result = $mc->get("lists/$listId/interest-categories/$new_cat_id[0]/interests", [
+            $result = $mc->get("/lists/$listId/interest-categories/$new_cat_id[0]/interests", [
                 'fields' => ['interests' => ['name']]
             ]);
 
@@ -940,7 +945,7 @@ class UsersController extends JoshController
         }
         else{
             try {
-                $mc->post("lists/$listId/members", [
+                $mc->post("/lists/$listId/members", [
                     'email_address' => $user_email,
                     'status'        => 'subscribed',
                 ]);
@@ -981,7 +986,7 @@ class UsersController extends JoshController
         $mc = new Mailchimp($apiKey);
         $listId = Config::get('mailchimp.listId');
         $mc->patch("lists/$listId/members/$email", [
-            'merge_fields' => ['FNAME'=>$user_name, 'LNAME'=>$user_last],
+//            'merge_fields' => ['FNAME'=>$user_name, 'LNAME'=>$user_last],
             'interests'    => $data
         ]);
         return redirect('admin/notisfaction')->with('success', Lang::get('message.success.update'));

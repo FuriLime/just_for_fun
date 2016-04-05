@@ -13,17 +13,9 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <link href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
     <![endif]-->
-
-    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}" type="image/vnd.microsoft.icon" />
-
-    <title>
-        @section('title')
-        @show
-    </title>
     <!--global css starts-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/custom.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/login.css') }}" />
     <!--end of global css-->
     <!--page level css-->
     @yield('header_styles')

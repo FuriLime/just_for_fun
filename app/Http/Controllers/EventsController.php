@@ -24,7 +24,7 @@ use DB;
 use OpenGraph;
 use Twitter;
 use SEOMeta;
-use Share;
+
 class EventsController extends Controller {
 
     /**
@@ -68,6 +68,12 @@ class EventsController extends Controller {
         }
     }
 
+
+public function getCal($uuid){
+   return redirect ('google.com');
+
+}
+
     /*Confirm page*/
     public function confirm($readable_url)
     {
@@ -77,7 +83,6 @@ class EventsController extends Controller {
 
 
     }
-
     /*End Confirm page*/
 
     /**
@@ -329,8 +334,8 @@ class EventsController extends Controller {
         SEOMeta::addMeta('article:slug', $event->readable_url, 'property');
         SEOMeta::addKeyword(['event', $event->title, $event->status]);
 
-        OpenGraph::setTitle($event->title);
         OpenGraph::setDescription($event->description);
+        OpenGraph::setTitle($event->title);
         OpenGraph::setUrl(url().'/events/'. $event->readable_url);
         OpenGraph::addProperty('type', 'article');
         OpenGraph::addProperty('locale', 'en-us');
@@ -366,6 +371,8 @@ class EventsController extends Controller {
             //$event = Event::findOrFail($uuid);
             return view('events.show', compact('event'));
         }
+//    }
+//
         else {
             //show event for unregister user
             return view('events.show', compact('event'));
@@ -405,6 +412,7 @@ class EventsController extends Controller {
         OpenGraph::setUrl(url().'/events/'. $event->readable_url);
         OpenGraph::addProperty('type', 'article');
         OpenGraph::addProperty('locale', 'en-us');
+
 
         $date = new \DateTime($event['start'], new \DateTimeZone('UTC'));
         $date->setTimezone(new \DateTimeZone($event['timezone']));
@@ -825,6 +833,17 @@ class EventsController extends Controller {
             $text_twit = "";
         }
 
+        if($event->author_id!=NULL){
+            $acc_type_id = DB::table('accounts')->where('id', '=', $event->account_id)->first();
+            $acc_type_nomer = $acc_type_id->account_type_id;
+            $acc_type_name = DB::table('account_types')->where('id', '=', $acc_type_nomer)->first();
+            $account_type_name = $acc_type_name->name;
+        }else{
+            $account_type_name = "Free";
+        }
+
+
+
         $date = new \DateTime($event['finish'], new \DateTimeZone($event['timezone']));
         $date->setTimezone(new \DateTimeZone($event->timezone));
         $event_finish_zero = $date;
@@ -841,7 +860,7 @@ class EventsController extends Controller {
             $duration = $hourDifference.$minutesLeft;
         }
         $result = $error_massage = $calendar_link = '';
-        $dec_title = "This calendar entry has been created with a Free Personal Account from EventFellows";
+        $dec_title = "This calendar entry has been created with a ".$account_type_name." Personal Account from EventFellows";
         $dec_footer = "Powered by EventFellows - start creating calendar entries for your own event now. https://eventfellows.com/referrer/{$event->uuid} ";
         $link_event = "Link to the EventPage:\r\n ".$event->event_url;
         $loc = urlencode($event['location']);
@@ -852,13 +871,13 @@ class EventsController extends Controller {
                 "-------------------------------------------------------------------------------------------------------\r\n". $dec_footer);
 
         $desc_ical = $dec_title.'\n'.
-        "-------------------------------------------------------------------------------------------------------". '\n'.
-        $title.'\n'.
-        $event->description.'\n'.
-        $text_twit .'\n'.
-        $link_event.'\n'.
-        "-------------------------------------------------------------------------------------------------------".'\n'.
-        $dec_footer;
+            "-------------------------------------------------------------------------------------------------------". '\n'.
+            $title.'\n'.
+            $event->description.'\n'.
+            $text_twit .'\n'.
+            $link_event.'\n'.
+            "-------------------------------------------------------------------------------------------------------".'\n'.
+            $dec_footer;
 
         switch ($calendar) {
 
@@ -891,7 +910,6 @@ class EventsController extends Controller {
                 break;
 
             case 'Microsoft':
-
                 $result = 'success';
                 $calendar_link = 'https://calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart='.
                     $event_start_zero->format('Ymd').'T'.
@@ -937,7 +955,6 @@ class EventsController extends Controller {
         ));
         exit(0);
     }
-
     /**
      * Timezone select - generator.
      *

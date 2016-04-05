@@ -100,10 +100,17 @@ class twitterController extends Controller
 
                     $role->users()->attach($rolew);
                     $member_email = md5($user->email);
-                        $mc->put("lists/$listId/members/$member_email", [
+                    if(!$mc->get("/lists/$listId/members/$member_email")){
+                        $mc->post("/lists/$listId/members", [
                             'email_address' => $user->email,
                             'status'        => 'subscribed',
                         ]);
+                    }else{
+                        $mc->put("/lists/$listId/members/$member_email", [
+                            'email_address' => $user->email,
+                            'status'        => 'subscribed',
+                        ]);
+                    }
 
                     $data = array(
                         'user'          => $user,
@@ -179,6 +186,15 @@ class twitterController extends Controller
                     $this->messageBag->add('email', Lang::get('auth/message.account_already_exists'));
                 }
             }
+        }else{
+            $count = $user->login_count;
+            $count = $count+1;
+            $user->login_count = $count;
+            $user->save();
+            $member_email = md5($user->email);
+            $mc->patch("/lists/$listId/members/$member_email", [
+                'merge_fields' => ['LOGINCOUNT' => $user->login_count],
+            ]);
         }
         if (Activation::completed($user) && $user->verified==1)
         {

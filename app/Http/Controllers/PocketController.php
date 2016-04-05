@@ -106,6 +106,9 @@ class PocketController extends Controller {
 
                   if(Sentinel::authenticate($user)) {
                       $user = Sentinel::check();
+                      $user->verified = 1;
+                      $user->status = "Verified";
+                      $user->save();
                       return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
                   }
               }

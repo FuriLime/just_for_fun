@@ -51,6 +51,10 @@ class AuthController extends JoshController
      */
     public function postSignin()
     {
+
+        $apiKey = Config::get('mailchimp.apikey');
+        $mc = new Mailchimp($apiKey);
+        $listId = Config::get('mailchimp.listId');
         // Declare the rules for the form validation
         $rules = array(
             'email'    => 'required|email',
@@ -89,7 +93,14 @@ class AuthController extends JoshController
 
 
                 $user = Sentinel::check();
-
+                $count = $user->login_count;
+                $count = $count+1;
+                $user->login_count = $count;
+                $user->save();
+                $member_email = md5($user->email);
+                $mc->patch("/lists/$listId/members/$member_email", [
+                    'merge_fields' => ['LOGINCOUNT' => $user->login_count],
+                ]);
                 $user_email = $user["attributes"]["email"];
                 return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
             }
@@ -270,11 +281,11 @@ class AuthController extends JoshController
         $listId = Config::get('mailchimp.listId');
         if ($activate->isUserHasCode($userId, $activationCode)){
             $activate->activateUser($userId);
-            $result_member = $mc->get("lists/$listId/members");
+            $result_member = $mc->get("lists/$listId/members/$hash_email");
             foreach($result_member['members'] as $email_user){
                 $member_user[] = $email_user->email_address;
             }
-            if (in_array($email, $member_user)) {
+            if ($result_member) {
                 $mc->patch("lists/$listId/members/$hash_email", [
                     'email_address' => $email,
                     'status' => 'subscribed',

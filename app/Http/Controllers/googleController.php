@@ -50,7 +50,7 @@ class googleController extends Controller
         $mc = new Mailchimp($apiKey);
         $listId = Config::get('mailchimp.listId');
         $userFace = Socialite::driver('google')->user();
-        $user = User::whereemail($userFace->getEmail(), $userFace->getName())->first();
+        $user = User::whereemail($userFace->getEmail())->first();
         if(!$user){
             $user = new User;
             $user->first_name = $userFace->getName();
@@ -68,10 +68,20 @@ class googleController extends Controller
             $rolew = [
                 0 => ['account_id' => $account_user->id, 'user_id' => $user->id],
             ];
-            $mc->post("lists/$listId/members", [
-                'email_address' => $user->email,
-                'status'        => 'subscribed',
-            ]);
+
+            $member_email = md5($user->email);
+            if(!$mc->get("/lists/$listId/members/$member_email")){
+                $mc->post("/lists/$listId/members", [
+                    'email_address' => $user->email,
+                    'status'        => 'subscribed',
+                ]);
+            }else{
+                $mc->put("/lists/$listId/members/$member_email", [
+                    'email_address' => $user->email,
+                    'status'        => 'subscribed',
+                ]);
+            }
+
             $role->users()->attach($rolew);
             $user_profile = new UserProfile();
             $user_profile->user_id = $user->id;
@@ -85,10 +95,23 @@ class googleController extends Controller
                 if(Sentinel::authenticate($user))
                 {
                     $user = Sentinel::check();
+                    $user->verified = 1;
+                    $user->status = "Verified";
+                    $user->save();
                         return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
 
                 }
             }
+
+        }else{
+            $count = $user->login_count;
+            $count = $count+1;
+            $user->login_count = $count;
+            $user->save();
+            $member_email = md5($user->email);
+            $mc->patch("/lists/$listId/members/$member_email", [
+                'merge_fields' => ['LOGINCOUNT' => $user->login_count],
+            ]);
 
         }
 

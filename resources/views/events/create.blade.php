@@ -19,6 +19,7 @@
     <link href="{{ asset('assets/css/font-awesome.css') }}" rel="stylesheet" type="text/css" media="screen"  />
     <link href="{{ asset('assets/vendors/datetimepicker/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" type="text/css" media="screen"  />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+    <link href="{{ asset('assets/css/pages/add_event.css') }}" rel="stylesheet" type="text/css" />
     <style>
         .pac-logo::after {
             display: none !important;
@@ -33,7 +34,7 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10" id="add_event">
-                <div class="panel panel-primary ">
+                {{--<div class="panel panel-primary ">--}}
                     <!-- <div class="panel-heading">
                     <h4 class="panel-title"> <i class="livicon" data-name="plus-alt" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
                         @if (isset($event))
@@ -46,7 +47,7 @@
 
                             </h4>
                         </div> -->
-                    <div class="panel-body">
+                    {{--<div class="panel-body">--}}
                         @if (isset($event))
                             <h3 class="primary add_event_section_link">@lang('frontend.edit_event_text')</h3>
                         @elseif(isset($event_clone))
@@ -76,7 +77,7 @@
                             @else
                                 {!! Form::text('title', null, ['class' => 'tinymce_basic form-control', 'maxlength' => '25', 'id' => 'title']) !!}
                             @endif
-                            <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="@lang('pop_over.content')" data-original-title="@lang('pop_over.title')"></i>
+                            <i class="fa fa-fw fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="@lang('pop_over.content')" data-original-title="@lang('pop_over.title')"></i>
                             <div class="form-group">
                                 @if ($errors->first('title'))
                                     <ul class="alert alert-danger myalert">
@@ -100,7 +101,7 @@
                             @else
                                 {!! Form::textarea('description', null, ['class' => 'form-control textarea', 'maxlength' => '500', 'id' => 'description']) !!}
                             @endif
-                            <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                            <i class="fa fa-fw fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                             {{--<button type="button" class="btn btn-warning " title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title">!</button>--}}
                         </div>
                         <div id="hide_dicription" class="add_event_section_link" style="display: none">
@@ -130,7 +131,7 @@
                                     </ul>
                                 @endif
                             </div>
-                            <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                            <i class="fa fa-fw fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         </div>
 
                         <div class="form-group" id="end_time_event" style="display:none" >
@@ -156,7 +157,7 @@
                                     </ul>
                                 @endif
                             </div>
-                            <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                            <i class="fa fa-fw fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         </div>
 
                         <div class="form-group add_event_section_link" id="change_time_zone">
@@ -180,7 +181,7 @@
                                 {!!@isset($event)?  $event->timezone_select : $timezone_select !!}
                             @endif
 
-                            <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                            <i class="fa fa-fw fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         </div>
 
 
@@ -193,7 +194,7 @@
                             @else
                                 {!! Form::text('location', null, ['class' => 'form-control', 'maxlength' => '255', 'id' => 'location']) !!}
                             @endif
-                            <i class="fa fa-fw fa-info-circle" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                            <i class="fa fa-fw fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         </div>
 
                         <div class="fields_map" style="display: none">
@@ -274,9 +275,9 @@
 
                         {{--<input type="hidden" name="_token" value="{{csrf_token()}}"/>--}}
                         {!! Form::close() !!}
-                    </div>
+                    {{--</div>--}}
 
-                </div>
+                {{--</div>--}}
             </div>
             <div class="col-md-1"></div>
         </div>
@@ -350,7 +351,9 @@
 
     <script>
         $(document).ready(function() {
-
+            $('.infopoint').popover({
+                placement: wheretoplace()
+            });
             $('.form-control').keydown(function (e) {
                 if(e.shiftKey==1){
                     if (e.which == 13) {
@@ -381,6 +384,7 @@
                             case 0:
                                 $('#add_dicription').trigger('click');
                                 $('#description').focus();
+                                $('#description').attr("style", "display: inline-block");
                                 break;
                             case 2:
                                 $('#end_time_event').attr("style", "display: block");
@@ -518,15 +522,36 @@
     <script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
     <script type="text/javascript">//<![CDATA[
 
+        function wheretoplace(){
+            var width = window.innerWidth;
+            if (width <= 900) {
+                return 'left';
+            } else {
+                return 'right';
+            }
+        }
+
         $("#add_dicription").click(function () {
             $('#descprip').attr('style', 'display:block');
             $('#add_dicription').attr('style', 'display:none');
-            $('#hide_dicription').attr('style', 'display:block');
+            $('#hide_dicription').attr('style', 'display:inline-block');
         });
 
         $("#hide_dicription").click(function () {
             $('#descprip').attr('style', 'display:none');
-            $('#add_dicription').attr('style', 'display:block');
+            $('#add_dicription').attr('style', 'display:inline-block');
+            $('#hide_dicription').attr('style', 'display:none');
+        });
+
+        $("#add_dicription").on('mouseenter', function () {
+            $('#descprip').attr('style', 'display:block');
+            $('#add_dicription').attr('style', 'display:none');
+            $('#hide_dicription').attr('style', 'display:inline-block');
+        });
+
+        $("#hide_dicription").on('mouseenter', function () {
+            $('#descprip').attr('style', 'display:none');
+            $('#add_dicription').attr('style', 'display:inline-block');
             $('#hide_dicription').attr('style', 'display:none');
         });
 
@@ -602,14 +627,14 @@
                                             components[v2]=v1.long_name
                                         });
                                     })
-                                    console.log(components.route);
                                     console.log(components.street_number);
+                                    console.log(components.route);
                                     console.log(components.locality);
                                     console.log(components.administrative_area_level_1);
                                     console.log(components.country);
                                     if(components.street_number != undefined && components.route!= undefined
-                                    && components.locality!=undefined && components.administrative_area_level_1 !=undefined
-                                    && components.country!=undefined ){
+                                            && components.locality!=undefined && components.administrative_area_level_1 !=undefined
+                                            && components.country!=undefined ){
                                         $('#street').attr('value', components.route + ' ' + components.street_number);
                                         $('#city').attr('value', components.locality);
                                         $('#state').attr('value', components.administrative_area_level_1);
@@ -655,10 +680,18 @@
                                         $('#state').attr('style', 'display:none');
                                         $('#country').attr('value', components.country);
                                     }
+                                    else if(components.street_number == undefined && components.route!= undefined
+                                            && components.locality==undefined && components.administrative_area_level_1 !=undefined
+                                            && components.country!=undefined ) {
+                                        $('#street').attr('value', components.route);
+                                        $('#city').attr('style', 'display:none');
+                                        $('#state').attr('value', components.administrative_area_level_1);
+                                        $('#country').attr('value', components.country);
+                                    }
                                 }
                                 else{
 
-                                    alert('sdsdsdsd');
+                                    console.log('sdsdsdsd');
                                 }
                             }
                         });
@@ -767,6 +800,14 @@
                                             $('#street').attr('style', 'display:none');
                                             $('#city').attr('style', 'display:none');
                                             $('#state').attr('style', 'display:none');
+                                            $('#country').attr('value', components.country);
+                                        }
+                                        else if(components.street_number == undefined && components.route!= undefined
+                                                && components.locality==undefined && components.administrative_area_level_1 !=undefined
+                                                && components.country!=undefined ) {
+                                            $('#street').attr('value', components.route);
+                                            $('#city').attr('style', 'display:none');
+                                            $('#state').attr('value', components.state);
                                             $('#country').attr('value', components.country);
                                         }
                                         else{
