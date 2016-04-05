@@ -22,7 +22,8 @@
 <div class="share-event-top">
     <div class="container-fluid share-container">
         <div class="row content">
-            <div class="col-sm-7 col-md-7">
+            <img src="http://event.test-y-sbm.com/assets/images/exit-show-details.png" class="exit-show-details">
+            <div class="col-md-12">
                 <div class="top-bar-tabs">
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#social-tab" aria-controls="social-tab" role="tab" data-toggle="tab">Social</a></li>
@@ -84,12 +85,8 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
-            <img src="http://event.test-y-sbm.com/assets/images/exit-show-details.png" class="exit-show-details">
         </div>
-
     </div>
     <div class="show-details" id="show_detail">
         Share this event
