@@ -1127,7 +1127,8 @@ footer .btn-primary.text-white {
     height: 31px;
 }
 .exit-show-details{
-    float: right;
+    /*float: right;*/
+    position: relative;
     top: 20px;
     margin-right: 20px;
     transition: all ease 0.5s;
