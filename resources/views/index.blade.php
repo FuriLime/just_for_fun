@@ -46,12 +46,26 @@ Home
             <div class="row">
                 <div class="col-xs-10">
                     {{--<img alt="Works with Microsoft Outlook Calendar, Google Calendar, Apple Calendar, Yahoo Calendar, Mozilla Thunderbird Calandar, Lotus Notes Calendar and many others"  src="assets/img/All-Calendars-970x75.png" title="">--}}
-                    <img src="assets/img/outlook.png" alt="" title="">
-                    <img src="assets/img/google-calendar.png" alt="" title="">
-                    <img src="assets/img/apple-calendar.png" alt="" title="">
-                    <img src="assets/img/yahoo.png" alt="" title="">
-                    <img src="assets/img/mozilla-thunderbird.png" alt="" title="">
-                    <img src="assets/img/lotus-notes.png" alt="" title="">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="assets/img/outlook.png" alt="" title="">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="assets/img/google-calendar.png" alt="" title="">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="assets/img/apple-calendar.png" alt="" title="">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="assets/img/yahoo.png" alt="" title="">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="assets/img/mozilla-thunderbird.png" alt="" title="">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="assets/img/lotus-notes.png" alt="" title="">
+                        </div>
+                    </div>
                 </div>
                 <div class="col-xs-2">
                     <p class="lead">
