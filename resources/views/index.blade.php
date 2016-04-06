@@ -92,7 +92,7 @@ Home
             </div>
             <div class="col-md-8">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-6">
                         <div class="hiw-image-holder">
                             <img src="assets/img/letter.jpg">
                         </div>
@@ -101,7 +101,7 @@ Home
                             It takes only seconds to get started.
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-6">
                         <div class="hiw-image-holder">
                             <img src="assets/img/letter.jpg">
                         </div>
