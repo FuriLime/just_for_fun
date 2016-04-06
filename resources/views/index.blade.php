@@ -45,30 +45,30 @@ Home
     <div class="content calendars">
         <div class="container">
             <div class="row">
-                <div class="col-xs-10">
+                <div class="col-md-10 col-sm-10 col-xs-12">
                     {{--<img alt="Works with Microsoft Outlook Calendar, Google Calendar, Apple Calendar, Yahoo Calendar, Mozilla Thunderbird Calandar, Lotus Notes Calendar and many others"  src="assets/img/All-Calendars-970x75.png" title="">--}}
                     <div class="row calendars-holder">
-                        <div class="col-md-2 col-sm-4 single-calendar">
+                        <div class="col-md-2 col-sm-4 col-xs-6 single-calendar">
                             <img src="assets/img/outlook.png" alt="" title="">
                         </div>
-                        <div class="col-md-2 col-sm-4 single-calendar">
+                        <div class="col-md-2 col-sm-4 col-xs-6 single-calendar">
                             <img src="assets/img/google-calendar.png" alt="" title="">
                         </div>
-                        <div class="col-md-2 col-sm-4 single-calendar">
+                        <div class="col-md-2 col-sm-4 col-xs-6 single-calendar">
                             <img src="assets/img/apple-calendar.png" alt="" title="">
                         </div>
-                        <div class="col-md-2 col-sm-4 single-calendar">
+                        <div class="col-md-2 col-sm-4 col-xs-6 single-calendar">
                             <img src="assets/img/yahoo.png" alt="" title="">
                         </div>
-                        <div class="col-md-2 col-sm-4 single-calendar">
+                        <div class="col-md-2 col-sm-4 col-xs-6 single-calendar">
                             <img src="assets/img/mozilla-thunderbird.png" alt="" title="">
                         </div>
-                        <div class="col-md-2 col-sm-4 single-calendar">
+                        <div class="col-md-2 col-sm-4 col-xs-6 single-calendar">
                             <img src="assets/img/lotus-notes.png" alt="" title="">
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-2">
+                <div class="col-md-2 col-sm-2 col-xs-12">
                     <p class="lead">
                         <strong>and many<br>more...</strong>
                     </p>
