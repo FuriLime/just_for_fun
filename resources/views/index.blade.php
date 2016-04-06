@@ -82,7 +82,7 @@ Home
                 <div class="how-it-works-title">How it works</div>
             </div>
             <div class="col-md-4">
-                <div>
+                <div class="hiw-text">
                     Enter your event details to
                     your free
                     EventFellows.com account
