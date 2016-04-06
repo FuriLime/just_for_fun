@@ -161,10 +161,19 @@ Home
     <div class="home-slider-holder">
         <div class="home-slider">
             <div class="slide">
-                1
+                <div class="home-slider-image-holder">
+                    <img src="assets/img/authors/avatar.jpg">
+                </div>
             </div>
             <div class="slide">
-                2
+                <div class="home-slider-image-holder">
+                    <img src="assets/img/authors/avatar1.jpg">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="home-slider-image-holder">
+                    <img src="assets/img/authors/avatar3.jpg">
+                </div>
             </div>
         </div>
         <div class="home-slider-prev"><i class="fa fa-chevron-circle-left"></i></div>
