@@ -336,7 +336,9 @@ Home
                 check=false;
             };
         });
-       
+        $('#home-carousel').carousel({
+            interval: 2000
+        })
        
        
     </script>
