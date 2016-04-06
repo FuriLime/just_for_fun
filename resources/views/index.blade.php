@@ -221,7 +221,7 @@ Home
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="assets/img/90-image.png">
+                    <img src="assets/img/90-image.jpg">
                 </div>
                 <div class="col-md-8">
                     <div class="most-title">
