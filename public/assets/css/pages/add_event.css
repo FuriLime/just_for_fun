@@ -112,6 +112,19 @@ a#reset_loc:hover {
     }
 }
 @media (max-width: 600px) {
+    .map_event_loc {
+        width: calc(100% - 30px);
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 15px;
+        float: none;
+    }
+    .fields_loc_holder {
+        width: calc(100% - 30px);
+        padding: 0;
+        margin-left: 0;
+        float: none;
+    }
     #add_event .form-control, #add_event .form_datetime {
         width: calc(100% - 30px);
     }
