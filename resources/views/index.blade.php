@@ -361,7 +361,8 @@ Home
             };
         });
         $('.home-slider').slick({
-            arrows: false
+            arrows: false,
+            fade: true
         });
         $('.home-slider-prev').click(function () {
             $('.home-slider').slick('slickPrev');
