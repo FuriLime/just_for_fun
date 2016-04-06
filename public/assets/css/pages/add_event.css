@@ -99,10 +99,15 @@ a#reset_loc:hover {
 @media (max-width: 767px) {
     .map_event_loc {
         width: 70%;
+        margin-left: 24%;
+        margin-right: 0;
+        float: none;
     }
     .fields_loc_holder {
-       width: 70%;
-       padding: 0;
+        width: 70%;
+        padding: 0;
+        margin-left: 24%;
+        float: none;
     }
 }
 @media (max-width: 600px) {
