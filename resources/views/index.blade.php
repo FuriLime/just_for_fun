@@ -217,7 +217,7 @@ Home
         <div class="home-slider-prev"><i class="fa fa-chevron-circle-left"></i></div>
         <div class="home-slider-next"><i class="fa fa-chevron-circle-right"></i></div>
     </div>
-    <div class="most-calender-block">
+    <div class="most-calendar-block">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
