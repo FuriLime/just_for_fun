@@ -93,10 +93,14 @@ Home
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="assets/img/letter.jpg">
+                        <div class="hiw-image-holder">
+                            <img src="assets/img/letter.jpg">
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <img src="assets/img/letter.jpg">
+                        <div class="hiw-image-holder">
+                            <img src="assets/img/letter.jpg">
+                        </div>
                     </div>
                 </div>
             </div>
