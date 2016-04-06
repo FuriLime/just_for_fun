@@ -51,19 +51,19 @@ Home
                         <div class="col-md-2 single-calendar">
                             <img src="assets/img/outlook.png" alt="" title="">
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 single-calendar">
                             <img src="assets/img/google-calendar.png" alt="" title="">
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 single-calendar">
                             <img src="assets/img/apple-calendar.png" alt="" title="">
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 single-calendar">
                             <img src="assets/img/yahoo.png" alt="" title="">
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 single-calendar">
                             <img src="assets/img/mozilla-thunderbird.png" alt="" title="">
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 single-calendar">
                             <img src="assets/img/lotus-notes.png" alt="" title="">
                         </div>
                     </div>
