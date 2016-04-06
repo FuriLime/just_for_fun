@@ -236,15 +236,17 @@ Home
                                 Nam a orci malesuada elit rutrum sagittis. Cras vitae rhoncus magna.
                                 Nulla tincidunt efficitur sapien eget imperdiet. Sed egestas tincidunt posuere.
                                 Pellentesque sit amet quam justo. Mauris eu tristique sem.
-                                Cras fermentum vel tortor lacinia tristique. Fusce non enim lacus.
-                                Donec massa augue, posuere sed diam vitae, rhoncus tincidunt mauris.
-                                Ut consectetur nulla eget nisl convallis, in scelerisque elit convallis.
-                                Duis eu tortor non libero aliquet varius. Sed congue enim a dolor auctor tristique.
                                 Maecenas fermentum est urna, at luctus libero lobortis nec.
                                 Nullam ut neque vitae augue consequat feugiat non id risus. Nulla nec varius justo,
                                 vitae cursus purus. Maecenas ornare facilisis magna et maximus.
                             </p>
-                            Pellentesque bibendum porttitor sapien. Donec id est in lectus pellentesque tincidunt a in dui. Cras eget commodo odio. Donec fermentum blandit tempus. Donec vel quam dictum, porta risus at, porta turpis. Integer auctor lorem eu pellentesque bibendum. Proin tincidunt placerat ipsum, a dapibus ipsum luctus ac. Fusce nec magna odio.
+                            <p>
+                                Pellentesque bibendum porttitor sapien.
+                                Donec id est in lectus pellentesque tincidunt a in dui. Cras eget commodo odio.
+                                Donec fermentum blandit tempus. Donec vel quam dictum, porta risus at, porta turpis.
+                                Integer auctor lorem eu pellentesque bibendum. Proin tincidunt placerat ipsum,
+                                a dapibus ipsum luctus ac. Fusce nec magna odio.
+                            </p>
                         </div>
                     </div>
                 </div>
