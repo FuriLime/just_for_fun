@@ -310,7 +310,10 @@ Home
                 check=false;
             };
         });
-        $('.home-slider').slick();
+        $('.home-slider').slick({
+            arrows: false,
+            dots: false
+        });
        
        
     </script>
