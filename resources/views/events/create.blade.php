@@ -195,53 +195,55 @@
                             <i class="fa fa-fw fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         </div>
 
-                        <div class="fields_map" style="display: none">
+                        <div class="fields_map clearfix" style="display: none">
                             <div class="map_event_loc" id="map"></div>
-                            <div class="form-group fields_loc">
+                            <div class="fields_loc_holder">
+                                <div class="form-group fields_loc">
+                                    @if(isset($event_clone))
+                                        <input class="form-control" size="16" id="street" name="Street" type="Street", readonly="readonly", maxlength="255", value="{{$event_clone['Street']}}">
+                                    @else
+                                        {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street','readonly']) !!}
+                                    @endif
+                                </div>
+
+                                <div class="form-group fields_loc">
+                                    @if(isset($event_clone))
+                                        <input class="form-control" size="16" id="city" name="City" type="City", readonly="readonly", maxlength="255", value="{{$event_clone['City']}}">
+                                    @else
+                                        {!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city','readonly']) !!}
+                                    @endif
+                                </div>
+
+                                <div class="form-group fields_loc">
+                                    @if(isset($event_clone))
+                                        <input class="form-control" size="16" id="state" name="State" type="State", readonly="readonly", maxlength="255", value="{{$event_clone['State']}}">
+
+                                    @else
+                                        {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}
+                                    @endif
+                                </div>
+
+                                <div class="form-group fields_loc">
+                                    @if(isset($event_clone))
+                                        <input class="form-control" size="16" id="country" name="Country" type="Country", readonly="readonly", maxlength="255", value="{{$event_clone['Country']}}">
+                                    @else
+                                        {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}
+                                    @endif
+                                </div>
+
                                 @if(isset($event_clone))
-                                    <input class="form-control" size="16" id="street" name="Street" type="Street", readonly="readonly", maxlength="255", value="{{$event_clone['Street']}}">
+                                    <input style="display:none" size="16" id="lat" name="lat" type="lat", maxlength="255", value="{{$event_clone['lat']}}">
                                 @else
-                                    {!! Form::text('Street', null, ['class' => 'form-control country', 'maxlength' => '255', 'id' => 'street','readonly']) !!}
+                                    {!! Form::text('lat', null, ['style' => 'display:none', 'maxlength' => '255', 'id' => 'lat']) !!}
                                 @endif
-                            </div>
-
-                            <div class="form-group fields_loc">
                                 @if(isset($event_clone))
-                                    <input class="form-control" size="16" id="city" name="City" type="City", readonly="readonly", maxlength="255", value="{{$event_clone['City']}}">
+                                    <input style="display:none", size="16" id="lng" name="lng" type="lng", readonly="readonly", maxlength="255", value="{{$event_clone['lng']}}">
                                 @else
-                                    {!! Form::text('City', null, ['class' => 'form-control city', 'maxlength' => '255', 'id' => 'city','readonly']) !!}
+                                    {!! Form::text('lng', null, ['style' => 'display:none', 'maxlength' => '255', 'id' => 'lng']) !!}
                                 @endif
-                            </div>
-
-                            <div class="form-group fields_loc">
-                                @if(isset($event_clone))
-                                    <input class="form-control" size="16" id="state" name="State" type="State", readonly="readonly", maxlength="255", value="{{$event_clone['State']}}">
-
-                                @else
-                                    {!! Form::text('State', null, ['class' => 'form-control street', 'maxlength' => '255', 'id' => 'state', 'readonly']) !!}
-                                @endif
-                            </div>
-
-                            <div class="form-group fields_loc">
-                                @if(isset($event_clone))
-                                    <input class="form-control" size="16" id="country" name="Country" type="Country", readonly="readonly", maxlength="255", value="{{$event_clone['Country']}}">
-                                @else
-                                    {!! Form::text('Country', null, ['class' => 'form-control state', 'maxlength' => '255', 'id' => 'country','readonly']) !!}
-                                @endif
-                            </div>
-
-                            @if(isset($event_clone))
-                                <input style="display:none" size="16" id="lat" name="lat" type="lat", maxlength="255", value="{{$event_clone['lat']}}">
-                            @else
-                                {!! Form::text('lat', null, ['style' => 'display:none', 'maxlength' => '255', 'id' => 'lat']) !!}
-                            @endif
-                            @if(isset($event_clone))
-                                <input style="display:none", size="16" id="lng" name="lng" type="lng", readonly="readonly", maxlength="255", value="{{$event_clone['lng']}}">
-                            @else
-                                {!! Form::text('lng', null, ['style' => 'display:none', 'maxlength' => '255', 'id' => 'lng']) !!}
-                            @endif
-                            <div class="form-group fields_loc">
-                                <a id="reset_loc">Reset Address</a>
+                                <div class="form-group fields_loc">
+                                    <a id="reset_loc">Reset Address</a>
+                                </div>
                             </div>
                         </div>
 
@@ -260,6 +262,7 @@
                                     </button>
                                 @endif
                                 <button class="btn btn-primary text-white test publish submit" name="publish">
+                                    <i class="fa fa-bullhorn"></i>
                                     @lang('frontend.save_and_publish')
                                 </button>
 
@@ -286,17 +289,6 @@
 <style>
     .fa{
         font-size:20px !important;
-    }
-    .map_event_loc{
-        height: 250px;
-        width: 370px;
-        float: right;
-        left: -5%;
-    }
-    .fields_loc{
-        width: 35% !important;
-        position: relative;
-        float: right;
     }
     .myalert{
         width: 70%;

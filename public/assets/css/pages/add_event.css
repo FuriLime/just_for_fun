@@ -29,7 +29,7 @@ a#reset_loc:hover {
     position: relative;
     vertical-align: middle;
     margin-bottom: 15px;
-    width: 70% !important;
+    width: 35% !important;
 }
 #time_zone_change .select2-container .select2-selection--single {
     height: 34px;
@@ -57,6 +57,17 @@ a#reset_loc:hover {
     top: 0;
     right: 1px;
     width: 20px;
+}
+.map_event_loc{
+    height: 250px;
+    width: 370px;
+    float: right;
+    left: -5%;
+}
+.fields_loc{
+    width: 35% !important;
+    position: relative;
+    float: right;
 }
 @media (max-width: 629px) {
     #map {
