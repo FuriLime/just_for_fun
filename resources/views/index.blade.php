@@ -226,8 +226,10 @@ Home
                     </div>
                 </div>
                 <div class="col-md-7">
-                    <div class="most-title">
-                        Most people use a calendar
+                    <div class="most-text-holder">
+                        <div class="most-title">
+                            Most people use a calendar
+                        </div>
                     </div>
                 </div>
             </div>
