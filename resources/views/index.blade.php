@@ -47,8 +47,8 @@ Home
             <div class="row">
                 <div class="col-xs-10">
                     {{--<img alt="Works with Microsoft Outlook Calendar, Google Calendar, Apple Calendar, Yahoo Calendar, Mozilla Thunderbird Calandar, Lotus Notes Calendar and many others"  src="assets/img/All-Calendars-970x75.png" title="">--}}
-                    <div class="row">
-                        <div class="col-md-2">
+                    <div class="row calendars-holder">
+                        <div class="col-md-2 single-calendar">
                             <img src="assets/img/outlook.png" alt="" title="">
                         </div>
                         <div class="col-md-2">
