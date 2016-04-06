@@ -549,7 +549,13 @@
             $('#time_zone_change').attr('style', 'display:block');
             $('#end_time_event').attr('style', 'display:block');
             $('#change_time_zone').attr('style', 'display:none');
-            $('.select2-container--default').attr('style', 'width:70%');
+//            $('.select2-container--default').attr('style', 'width:70%');
+        });
+        $('#time_change').on('mouseenter',function(){
+            $('#time_zone_change').attr('style', 'display:block');
+            $('#end_time_event').attr('style', 'display:block');
+            $('#change_time_zone').attr('style', 'display:none');
+//            $('.select2-container--default').attr('style', 'width:70%');
 
         });
 
