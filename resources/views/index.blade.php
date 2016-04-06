@@ -14,7 +14,6 @@ Home
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/owl-carousel/owl.carousel.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/owl-carousel/owl.theme.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jQueryUI/jquery-ui.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/index_page.css') }}">
     <!--end of page level css-->
 @stop
@@ -157,48 +156,7 @@ Home
             </div>
         </div>
     </div>
-    <div id="home-carousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#home-carousel" data-slide-to="1"></li>
-            <li data-target="#home-carousel" data-slide-to="2"></li>
-        </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <div>
-                    <img src="assets/img/authors/avatar.jpg" alt="...">
-                </div>
-                <div class="carousel-caption">
-                    ...
-                </div>
-            </div>
-            <div class="item">
-                <img src="assets/img/authors/avatar1.jpg" alt="...">
-                <div class="carousel-caption">
-                    ...
-                </div>
-            </div>
-            <div class="item">
-                <img src="assets/img/authors/avatar2.jpg" alt="...">
-                <div class="carousel-caption">
-                    ...
-                </div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
     <div class="container">
        
         <!-- Service Section Start-->
@@ -338,9 +296,7 @@ Home
                 check=false;
             };
         });
-        $('#home-carousel').carousel({
-            interval: 10000
-        })
+
        
        
     </script>
