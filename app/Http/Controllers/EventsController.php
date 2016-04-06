@@ -69,10 +69,10 @@ class EventsController extends Controller {
     }
 
 
-public function getCal($uuid){
-   return redirect ('google.com');
-
-}
+//public function getCal(){
+//   return redirect ('google.com');
+//
+//}
 
     /*Confirm page*/
     public function confirm($readable_url)
