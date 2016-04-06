@@ -76,6 +76,25 @@ Home
             </div>
         </div>
     </div>
+    <div class="how-it-works-block">
+        <div class="container">
+            <div class="col-md-12">
+                How it works
+            </div>
+            <div class="col-md-4">
+                <div>
+                    Enter your event details to
+                    your free
+                    EventFellows.com account
+                    and use our "add to calendar options"
+                    anywhere you like within minutes.
+                </div>
+            </div>
+            <div class="col-md-8">
+
+            </div>
+        </div>
+    </div>
     <div class="container">
        
         <!-- Service Section Start-->
