@@ -163,7 +163,7 @@ Home
             <div class="home-slider">
                 <div class="slide clearfix">
                     <div class="home-slider-image-holder">
-                        <img src="assets/img/authors/avatar.jpg">
+                        <img src="assets/img/authors/avatar-man.png">
                     </div>
                     <div class="home-slider-text-holder">
                         <div class="home-slider-text">
@@ -181,7 +181,7 @@ Home
                 </div>
                 <div class="slide clearfix">
                     <div class="home-slider-image-holder">
-                        <img src="assets/img/authors/avatar1.jpg">
+                        <img src="assets/img/authors/avatar-woman.png">
                     </div>
                     <div class="home-slider-text-holder">
                         <div class="home-slider-text">
@@ -199,7 +199,7 @@ Home
                 </div>
                 <div class="slide clearfix">
                     <div class="home-slider-image-holder">
-                        <img src="assets/img/authors/avatar3.jpg">
+                        <img src="assets/img/authors/avatar-man.png">
                     </div>
                     <div class="home-slider-text-holder">
                         <div class="home-slider-text">
