@@ -251,7 +251,7 @@
                         <input type="hidden" value="" name="active" id="active" readonly>
                         <div class="form-group" style="text-align: right; margin-right: 3%; margin-top: 9%;">
 
-                            <div id="btn_group">
+                            <div class="col-sm-offset-0 col-sm-12" id="btn_group">
                                 <div class="add_event_section_link">
                                     <i class="fa fa-fw fa-gears"></i>
                                     <a data-toggle="tooltip" title="Option not available">Advansed Options</a>
