@@ -5,9 +5,11 @@
 .calendars-holder .single-calendar {
     height: 65px;
     line-height: 65px;
+    text-align: center;
 }
 .calendars-holder .single-calendar img {
     max-width: 100%;
+    width: auto;
     height: auto;
     vertical-align: middle;
 }
