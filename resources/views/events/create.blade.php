@@ -112,9 +112,6 @@
                             <label for="start">@lang('frontend.date')</label>
                             <div class="form-group form_datetime">
                                 <div class="input-group date form_datetime3 col-md-12"  id="datestart">
-                                    {{--<span class="input-group-addon">--}}
-                                    {{--<span class="glyphicon glyphicon-remove"></span>--}}
-                                    {{--</span>--}}
                                     <span class="input-group-addon">
                                         <span class="fa fa-calendar"></span>
                                     </span>
@@ -137,9 +134,6 @@
                             <label for="start">@lang('frontend.enddate')</label>
                             <div class="form-group form_datetime">
                                 <div class="input-group date form_datetime3 col-md-12" id="datefinish">
-                                    {{--<span class="input-group-addon">--}}
-                                    {{--<span class="glyphicon glyphicon-remove"></span>--}}
-                                    {{--</span>--}}
                                     <span class="input-group-addon">
                                         <span class="fa fa-calendar"></span>
                                     </span>
@@ -549,14 +543,11 @@
             $('#time_zone_change').attr('style', 'display:block');
             $('#end_time_event').attr('style', 'display:block');
             $('#change_time_zone').attr('style', 'display:none');
-//            $('.select2-container--default').attr('style', 'width:70%');
         });
         $('#time_change').on('mouseenter',function(){
             $('#time_zone_change').attr('style', 'display:block');
             $('#end_time_event').attr('style', 'display:block');
             $('#change_time_zone').attr('style', 'display:none');
-//            $('.select2-container--default').attr('style', 'width:70%');
-
         });
 
         window.onload=function(){
@@ -844,13 +835,6 @@
     </script>
     <script type="text/javascript">
         $('#timezone').select2();
-        //	$("#datestart").on("dp.change", function (e) {
-        //		$('#datefinish').data("DateTimePicker").minDate(e.date);
-        //	});
-        //	// run second calendar after closing of first
-        //	$("#datestart").on("dp.hide", function (e) {
-        //		$('#datefinish .glyphicon-calendar').click();
-        //	});
 
         $("#datestart").on("dp.change", function (e) {
             $('#datefinish').data("DateTimePicker").minDate(e.date);
