@@ -29,7 +29,9 @@
 .hiw-text {
     font-size: 22px
 }
-.hiw-image-holder {
+.hiw-text,
+.hiw-image-holder,
+.hiw-image-text {
     margin-bottom: 15px;
 }
 .hiw-image-holder img {
