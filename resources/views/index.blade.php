@@ -117,8 +117,8 @@ Home
     <div class="benefits-block">
         <div class="container">
             <div class="row">
-                <div class="text-center col-md-12 col-sm-12 col-xs-12">
-                    <span class="slide-head">Benefits</span>
+                <div class="benefits-title col-md-12 col-sm-12 col-xs-12">
+                    Benefits
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="benefits-image-holder">
