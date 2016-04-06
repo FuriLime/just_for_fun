@@ -76,6 +76,9 @@
     overflow: hidden;
     padding: 50px 0;
 }
+.home-slider-holder .slide:focus {
+    outline: none;
+}
 .home-slider-prev,
 .home-slider-next {
     position: absolute;
