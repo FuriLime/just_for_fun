@@ -80,12 +80,12 @@ a#reset_loc:hover {
     width: 100%;
     background: #fff;
 }
-@media (max-width: 629px) {
-    #map {
-        width: calc(100% - 30px);
-        margin-bottom: 15px;
-        float: none;
-        left: 0;
+@media (max-width: 1200px) {
+    .map_event_loc {
+        margin-right: 45px;
+    }
+    .fields_loc_holder {
+        padding-left: 179px;
     }
 }
 @media (max-width: 600px) {
