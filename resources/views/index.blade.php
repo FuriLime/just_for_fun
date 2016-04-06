@@ -35,21 +35,6 @@ Home
                 </button>
             </div>
         </div>
-        <div class="item">
-            <div class="slide-content">
-                <div class="slide-head">
-                    It’s like a digital butler service for event invitations...
-                </div>
-                <div class="slide-text">
-                    90% of people today use a kind of digital calendar. EventFellows helps your event make it into these calendar as a means of great service.
-                    <br><br>Your chance of higher attendance rates have never been better.
-                </div>
-                <button class="add-test-event">
-                    Create Test Event
-                </button>
-            </div>
-        </div>
-        
     </div>
     <!-- //Carousel End -->
 @stop
@@ -57,17 +42,21 @@ Home
 {{-- content --}}
 @section('content')
     <div class="content calendars">
-        <div style="background-color:#eee;">
-            <div class="container">
-                <div class="row" style="margin-bottom:50px; margin-top:50px;">
-                    <div class="col-xs-10">
-                        <img alt="Works with Microsoft Outlook Calendar, Google Calendar, Apple Calendar, Yahoo Calendar, Mozilla Thunderbird Calandar, Lotus Notes Calendar and many others"  src="assets/img/All-Calendars-970x75.png" title="">
-                    </div>
-
-                    <div class="col-xs-2">
-                        <p class="lead"><strong>and many<br>
-                        more...</strong></p>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10">
+                    {{--<img alt="Works with Microsoft Outlook Calendar, Google Calendar, Apple Calendar, Yahoo Calendar, Mozilla Thunderbird Calandar, Lotus Notes Calendar and many others"  src="assets/img/All-Calendars-970x75.png" title="">--}}
+                    <img src="assets/img/outlook.png" alt="" title="">
+                    <img src="assets/img/google-calendar.png" alt="" title="">
+                    <img src="assets/img/apple-calendar.png" alt="" title="">
+                    <img src="assets/img/yahoo.png" alt="" title="">
+                    <img src="assets/img/mozilla-thunderbird.png" alt="" title="">
+                    <img src="assets/img/lotus-notes.png" alt="" title="">
+                </div>
+                <div class="col-xs-2">
+                    <p class="lead">
+                        <strong>and many<br>more...</strong>
+                    </p>
                 </div>
             </div>
         </div>
