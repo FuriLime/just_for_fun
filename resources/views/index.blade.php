@@ -35,6 +35,20 @@ Home
                 </button>
             </div>
         </div>
+        <div class="item">
+            <div class="slide-content">
+                <div class="slide-head">
+                    It’s like a digital butler service for event invitations...
+                </div>
+                <div class="slide-text">
+                    90% of people today use a kind of digital calendar. EventFellows helps your event make it into these calendar as a means of great service.
+                    <br><br>Your chance of higher attendance rates have never been better.
+                </div>
+                <button class="add-test-event">
+                    Create Test Event
+                </button>
+            </div>
+        </div>
         
     </div>
     <!-- //Carousel End -->
