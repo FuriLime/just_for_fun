@@ -81,7 +81,7 @@ Home
             <div class="col-md-12">
                 <div class="how-it-works-title">How it works</div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="hiw-text">
                     Enter your event details to
                     your free
@@ -90,7 +90,7 @@ Home
                     anywhere you like within minutes.
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 col-sm-8 col-xs-12">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="hiw-image-holder">
