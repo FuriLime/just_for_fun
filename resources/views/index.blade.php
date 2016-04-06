@@ -138,7 +138,9 @@ Home
                     <div class="benefits-text">
                         Use anywhere solaordaf ölaisdpfoia psfdüa sfüa üofiasdü fijaüosud fü
                     </div>
-                    <a href="#" class="benefits-btn">Learn more...</a>
+                    <div class="benefits-btn-holder">
+                        <a href="#" class="benefits-btn">Learn more...</a>
+                    </div>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="benefits-image-holder">
@@ -147,7 +149,9 @@ Home
                     <div class="benefits-text">
                         Instant results solaordaf ölaisdpfoia psfdüa sfüa üofiasdü fijaüosud fü
                     </div>
-                    <a href="#" class="benefits-btn">Learn more...</a>
+                    <div class="benefits-btn-holder">
+                        <a href="#" class="benefits-btn">Learn more...</a>
+                    </div>
                 </div>
             </div>
         </div>
