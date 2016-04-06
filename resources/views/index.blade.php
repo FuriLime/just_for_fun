@@ -358,6 +358,9 @@ Home
             };
         });
         $('.home-slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            adaptiveHeight: true,
             arrows: false,
             fade: true
         });
