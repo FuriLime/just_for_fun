@@ -314,6 +314,12 @@ Home
             arrows: false,
             dots: false
         });
+        $('.home-slider-prev').click(function () {
+            $('.home-slider').slick('slickPrev');
+        });
+        $('.home-slider-next').click(function () {
+            $('.home-slider').slick('slickNext');
+        });
        
        
     </script>
