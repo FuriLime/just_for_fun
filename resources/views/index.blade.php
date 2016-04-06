@@ -187,10 +187,8 @@ Home
                         <div class="home-slider-text">
                             "...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et metus in tellus
                             ultrices placerat et ut lectus. Proin sollicitudin sollicitudin efficitur.
-                            Nam scelerisque eros sapien, id imperdiet massa semper nec. Aliquam commodo,
-                            libero sollicitudin commodo lacinia, tortor mi posuere lectus,
-                            vel finibus nulla mi sed lacus. Nulla lobortis rutrum dolor, tempus auctor turpis
-                            . Nullam finibus condimentum libero nec venenatis. Nunc consectetur ultricies enim..."
+                            Nam scelerisque eros sapien, id imperdiet massa semper nec.
+                            Nunc consectetur ultricies enim..."
                         </div>
                         <div class="home-slider-company">
                             Name Lastname, Company - City, Country
@@ -203,8 +201,7 @@ Home
                     </div>
                     <div class="home-slider-text-holder">
                         <div class="home-slider-text">
-                            "...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et metus in tellus
-                            ultrices placerat et ut lectus. Proin sollicitudin sollicitudin efficitur.
+                            "...Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Nam scelerisque eros sapien, id imperdiet massa semper nec. Aliquam commodo,
                             libero sollicitudin commodo lacinia, tortor mi posuere lectus,
                             vel finibus nulla mi sed lacus. Nulla lobortis rutrum dolor, tempus auctor turpis
