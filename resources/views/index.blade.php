@@ -165,15 +165,24 @@ Home
                     <div class="home-slider-image-holder">
                         <img src="assets/img/authors/avatar.jpg">
                     </div>
+                    <div class="home-slider-text-holder">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et metus in tellus ultrices placerat et ut lectus. Proin sollicitudin sollicitudin efficitur. Nam scelerisque eros sapien, id imperdiet massa semper nec. Aliquam commodo, libero sollicitudin commodo lacinia, tortor mi posuere lectus, vel finibus nulla mi sed lacus. Nulla lobortis rutrum dolor, tempus auctor turpis. Nullam finibus condimentum libero nec venenatis. Nunc consectetur ultricies enim.
+                    </div>
                 </div>
                 <div class="slide">
                     <div class="home-slider-image-holder">
                         <img src="assets/img/authors/avatar1.jpg">
                     </div>
+                    <div class="home-slider-text-holder">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et metus in tellus ultrices placerat et ut lectus. Proin sollicitudin sollicitudin efficitur. Nam scelerisque eros sapien, id imperdiet massa semper nec. Aliquam commodo, libero sollicitudin commodo lacinia, tortor mi posuere lectus, vel finibus nulla mi sed lacus. Nulla lobortis rutrum dolor, tempus auctor turpis. Nullam finibus condimentum libero nec venenatis. Nunc consectetur ultricies enim.
+                    </div>
                 </div>
                 <div class="slide">
                     <div class="home-slider-image-holder">
                         <img src="assets/img/authors/avatar3.jpg">
+                    </div>
+                    <div class="home-slider-text-holder">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et metus in tellus ultrices placerat et ut lectus. Proin sollicitudin sollicitudin efficitur. Nam scelerisque eros sapien, id imperdiet massa semper nec. Aliquam commodo, libero sollicitudin commodo lacinia, tortor mi posuere lectus, vel finibus nulla mi sed lacus. Nulla lobortis rutrum dolor, tempus auctor turpis. Nullam finibus condimentum libero nec venenatis. Nunc consectetur ultricies enim.
                     </div>
                 </div>
             </div>
