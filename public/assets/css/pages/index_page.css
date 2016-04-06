@@ -84,12 +84,18 @@
     font-size: 50px;
     line-height: 1;
     margin-top: -25px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 .home-slider-prev {
     left: 10px;
 }
 .home-slider-next {
     right: 10px;
+}
+.home-slider-prev:hover,
+.home-slider-next:hover {
+    color: #bebebe;
 }
 .home-slider-image-holder {
     width: 150px;
