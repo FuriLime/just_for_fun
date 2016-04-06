@@ -231,17 +231,13 @@ Home
                             Most people use a calendar
                         </div>
                         <div class="most-text">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Nam a orci malesuada elit rutrum sagittis. Cras vitae rhoncus magna.
-                                Nulla tincidunt efficitur sapien eget imperdiet. Sed egestas tincidunt posuere.
-                                Pellentesque sit amet quam justo. Mauris eu tristique sem.
-                            </p>
-                            <p>
-                                Pellentesque bibendum porttitor sapien.
-                                Donec id est in lectus pellentesque tincidunt a in dui. Cras eget commodo odio.
-                                Donec fermentum blandit tempus. Donec vel quam dictum, porta risus at, porta turpis.
-                            </p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Nam a orci malesuada elit rutrum sagittis. Cras vitae rhoncus magna.
+                            Nulla tincidunt efficitur sapien eget imperdiet. Sed egestas tincidunt posuere.
+                            Pellentesque sit amet quam justo. Mauris eu tristique sem.
+                        </div>
+                        <div class="most-btn-holder">
+                            <a href="#" class="most-btn">Learn more...</a>
                         </div>
                     </div>
                 </div>
