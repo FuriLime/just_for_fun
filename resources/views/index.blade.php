@@ -14,7 +14,8 @@ Home
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/owl-carousel/owl.carousel.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/owl-carousel/owl.theme.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jQueryUI/jquery-ui.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/index_page.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jQueryUI/jquery-ui.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/slick/slick.css') }}">
     <!--end of page level css-->
 @stop
 
@@ -156,7 +157,14 @@ Home
             </div>
         </div>
     </div>
-
+    <div class="home-slider">
+        <div class="slide">
+            1
+        </div>
+        <div class="slide">
+            1
+        </div>
+    </div>
     <div class="container">
        
         <!-- Service Section Start-->
@@ -276,6 +284,7 @@ Home
     <script type="text/javascript" src="{{ asset('assets/js/frontend/carousel.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/frontend/index.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/jquery-ui.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/vendors/slick/slick.js') }}"></script>
     <script>
         var check =false; 
         $("#slider").slider({ 
@@ -296,7 +305,7 @@ Home
                 check=false;
             };
         });
-
+        $('.home-slider').slick();
        
        
     </script>

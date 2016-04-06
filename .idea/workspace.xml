@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/vendors/slick/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/vendors/slick/fonts/slick.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/vendors/slick/fonts/slick.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/vendors/slick/fonts/slick.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/vendors/slick/config.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/vendors/slick/fonts/slick.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/vendors/slick/slick-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/vendors/slick/slick-theme.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/vendors/slick/slick-theme.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/vendors/slick/slick.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/vendors/slick/slick.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/vendors/slick/slick.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/vendors/slick/slick.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/vendors/slick/slick.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/pages/index_page.css" afterPath="$PROJECT_DIR$/public/assets/css/pages/index_page.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" />
     </list>
     <ignored path="test-ef.iws" />
@@ -28,8 +43,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29776248">
-              <caret line="158" column="4" selection-start-line="158" selection-start-column="4" selection-end-line="158" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.8007246">
+              <caret line="164" column="13" selection-start-line="164" selection-start-column="13" selection-end-line="164" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -38,8 +53,8 @@
       <file leaf-file-name="index_page.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/css/pages/index_page.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.6538463">
-              <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+            <state vertical-scroll-proportion="-4.6923075">
+              <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -259,7 +274,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="vendors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -281,33 +296,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-ef" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event.test-y-sbm.loc" />
+              <option name="myItemId" value="vendors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="authors" />
+              <option name="myItemId" value="slick" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -345,6 +338,7 @@
       <recent name="$PROJECT_DIR$/resources/views/user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\domains\event.test-y-sbm.loc\public\assets\vendors" />
       <recent name="D:\OpenServer\domains\event.test-y-sbm.loc\public\assets\img" />
       <recent name="$PROJECT_DIR$/resources/views/admin" />
       <recent name="$PROJECT_DIR$/resources/views/admin/layouts" />
@@ -394,12 +388,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-04419" summary="social buttons">
-      <created>1459932527918</created>
-      <option name="number" value="04419" />
-      <option name="project" value="LOCAL" />
-      <updated>1459932527919</updated>
     </task>
     <task id="LOCAL-04420" summary="social buttons">
       <created>1459932673114</created>
@@ -689,7 +677,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459948100529</updated>
     </task>
-    <option name="localTasksCounter" value="4468" />
+    <task id="LOCAL-04468" summary="social buttons">
+      <created>1459948173966</created>
+      <option name="number" value="04468" />
+      <option name="project" value="LOCAL" />
+      <updated>1459948173966</updated>
+    </task>
+    <option name="localTasksCounter" value="4469" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1050,14 +1044,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/pages/index_page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.6538463">
-          <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/img/authors/avatar1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1073,10 +1059,18 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/pages/index_page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6923075">
+          <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29776248">
-          <caret line="158" column="4" selection-start-line="158" selection-start-column="4" selection-end-line="158" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.8007246">
+          <caret line="164" column="13" selection-start-line="164" selection-start-column="13" selection-end-line="164" selection-end-column="13" />
           <folding />
         </state>
       </provider>
