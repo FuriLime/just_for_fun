@@ -80,6 +80,13 @@ a#reset_loc:hover {
     width: 100%;
     background: #fff;
 }
+#btn_group {
+    margin-left: 24%;
+    width: 70%;
+    text-align: right;
+    margin-top: 9%;
+}
+
 @media (max-width: 1199px) {
     .map_event_loc {
         margin-right: 45px;

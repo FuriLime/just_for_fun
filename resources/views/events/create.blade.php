@@ -249,7 +249,7 @@
 
 
                         <input type="hidden" value="" name="active" id="active" readonly>
-                        <div class="form-group" style="text-align: right; margin-right: 3%; margin-top: 9%;">
+                        <div class="form-group">
 
                             <div id="btn_group">
                                 <div class="add_event_section_link">
