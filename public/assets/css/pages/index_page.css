@@ -7,6 +7,8 @@
     line-height: 65px;
 }
 .calendars-holder .single-calendar img {
+    max-width: 100%;
+    height: auto;
     vertical-align: middle;
 }
 .calendars-holder .single-calendar:nth-of-type(2n) {
