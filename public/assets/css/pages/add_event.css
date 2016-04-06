@@ -122,6 +122,10 @@ a#reset_loc:hover {
     }
 }
 @media (max-width: 600px) {
+    #btn_group {
+        width: calc(100% - 30px);
+        margin-left: 0;
+    }
     .map_event_loc {
         width: calc(100% - 30px);
         margin-left: 0;
