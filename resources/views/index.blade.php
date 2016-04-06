@@ -14,8 +14,8 @@ Home
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/owl-carousel/owl.carousel.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/owl-carousel/owl.theme.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jQueryUI/jquery-ui.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jQueryUI/jquery-ui.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/slick/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/index-page.css') }}">
     <!--end of page level css-->
 @stop
 
@@ -162,7 +162,7 @@ Home
             1
         </div>
         <div class="slide">
-            1
+            2
         </div>
     </div>
     <div class="container">
