@@ -217,6 +217,20 @@ Home
         <div class="home-slider-prev"><i class="fa fa-chevron-circle-left"></i></div>
         <div class="home-slider-next"><i class="fa fa-chevron-circle-right"></i></div>
     </div>
+    <div class="most-calender-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="assets/img/authors/90-image.png">
+                </div>
+                <div class="col-md-12">
+                    <div class="most-title">
+                        Most people use a calendar
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
        
         <!-- Service Section Start-->
