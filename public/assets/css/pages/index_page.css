@@ -1,6 +1,8 @@
 .content.calendars {
     background: #eee;
     padding: 15px 0;
+}
+.calendars-holder .single-calendar {
     height: 65px;
 }
 .calendars-holder .single-calendar:nth-of-type(2n) {
