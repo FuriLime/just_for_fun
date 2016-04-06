@@ -78,7 +78,7 @@ Home
     </div>
     <div class="how-it-works-block">
         <div class="container">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="how-it-works-title">How it works</div>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12">
@@ -117,8 +117,35 @@ Home
     <div class="benefits-block">
         <div class="container">
             <div class="row">
-                <div class="text-center">
+                <div class="text-center col-md-12 col-sm-12 col-xs-12">
                     <span class="slide-head">Benefits</span>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="benefits-image-holder">
+                        <img src="assets/img/benefits.jpg">
+                    </div>
+                    <div class="benefits-text">
+                        EASY ipsum solaordaf ölaisdpfoia psfdüa sfüa üofiasdü fijaüosud fü
+                    </div>
+                    <a href="#" class="benefits-btn">Learn more...</a>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="benefits-image-holder">
+                        <img src="assets/img/benefits.jpg">
+                    </div>
+                    <div class="benefits-text">
+                        Use anywhere solaordaf ölaisdpfoia psfdüa sfüa üofiasdü fijaüosud fü
+                    </div>
+                    <a href="#" class="benefits-btn">Learn more...</a>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="benefits-image-holder">
+                        <img src="assets/img/benefits.jpg">
+                    </div>
+                    <div class="benefits-text">
+                        Instant results solaordaf ölaisdpfoia psfdüa sfüa üofiasdü fijaüosud fü
+                    </div>
+                    <a href="#" class="benefits-btn">Learn more...</a>
                 </div>
             </div>
         </div>
