@@ -144,3 +144,9 @@
         padding: 50px;
     }
 }
+@media (max-width: 450px) {
+    .home-slider-image-holder {
+        float: none;
+        margin: 0 auto 15px;
+    }
+}
