@@ -252,7 +252,7 @@
                         <div class="form-group">
 
                             <div id="btn_group">
-                                <div class="add_event_section_link">
+                                <div class="advvanced-option-link">
                                     <i class="fa fa-fw fa-gears"></i>
                                     <a data-toggle="tooltip" title="Option not available">Advansed Options</a>
                                 </div>
