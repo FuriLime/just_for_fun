@@ -168,19 +168,19 @@ Home
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="..." alt="...">
+                <img src="assets/img/authors/avatar.jpg" alt="...">
                 <div class="carousel-caption">
                     ...
                 </div>
             </div>
             <div class="item">
-                <img src="..." alt="...">
+                <img src="assets/img/authors/avatar1.jpg" alt="...">
                 <div class="carousel-caption">
                     ...
                 </div>
             </div>
             <div class="item">
-                <img src="..." alt="...">
+                <img src="assets/img/authors/avatar2.jpg" alt="...">
                 <div class="carousel-caption">
                     ...
                 </div>
@@ -337,7 +337,7 @@ Home
             };
         });
         $('#home-carousel').carousel({
-            interval: 2000
+            interval: 10000
         })
        
        
