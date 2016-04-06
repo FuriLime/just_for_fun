@@ -79,7 +79,7 @@ Home
     <div class="how-it-works-block">
         <div class="container">
             <div class="col-md-12">
-                How it works
+                <div class="how-it-works-title">How it works</div>
             </div>
             <div class="col-md-4">
                 <div>
