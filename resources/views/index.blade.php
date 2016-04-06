@@ -96,10 +96,18 @@ Home
                         <div class="hiw-image-holder">
                             <img src="assets/img/letter.jpg">
                         </div>
+                        <div class="hiw-image-text">
+                            No installation. No programming.
+                            It takes only seconds to get started.
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="hiw-image-holder">
                             <img src="assets/img/letter.jpg">
+                        </div>
+                        <div class="hiw-image-text">
+                            No installation. No programming.
+                            It takes only seconds to get started.
                         </div>
                     </div>
                 </div>
