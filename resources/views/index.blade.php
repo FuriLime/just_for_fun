@@ -157,13 +157,17 @@ Home
             </div>
         </div>
     </div>
-    <div class="home-slider">
-        <div class="slide">
-            1
+    <div class="home-slider-holder">
+        <div class="home-slider">
+            <div class="slide">
+                1
+            </div>
+            <div class="slide">
+                2
+            </div>
         </div>
-        <div class="slide">
-            2
-        </div>
+        <div class="home-slider-prev"><i class="fa fa-chevron-circle-left"></i></div>
+        <div class="home-slider-next"><i class="fa fa-chevron-circle-right"></i></div>
     </div>
     <div class="container">
        
