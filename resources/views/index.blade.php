@@ -114,6 +114,15 @@ Home
             </div>
         </div>
     </div>
+    <div class="benefits-block">
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <span class="slide-head">Benefits</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
        
         <!-- Service Section Start-->
