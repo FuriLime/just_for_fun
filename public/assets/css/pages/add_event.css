@@ -96,6 +96,15 @@ a#reset_loc:hover {
         padding-left: 160px;
     }
 }
+@media (max-width: 767px) {
+    .map_event_loc {
+        width: 70%;
+    }
+    .fields_loc_holder {
+       width: 70%;
+       padding: 0;
+    }
+}
 @media (max-width: 600px) {
     #add_event .form-control, #add_event .form_datetime {
         width: calc(100% - 30px);
