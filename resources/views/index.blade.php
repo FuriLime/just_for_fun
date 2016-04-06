@@ -357,8 +357,7 @@ Home
             };
         });
         $('.home-slider').slick({
-            arrows: false,
-            dots: false
+            arrows: false
         });
         $('.home-slider-prev').click(function () {
             $('.home-slider').slick('slickPrev');
