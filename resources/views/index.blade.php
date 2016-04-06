@@ -168,7 +168,9 @@ Home
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="assets/img/authors/avatar.jpg" alt="...">
+                <div>
+                    <img src="assets/img/authors/avatar.jpg" alt="...">
+                </div>
                 <div class="carousel-caption">
                     ...
                 </div>
