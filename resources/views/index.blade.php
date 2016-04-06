@@ -69,7 +69,7 @@ Home
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-12">
-                    <p class="lead">
+                    <p class="lead calendars-text">
                         <strong>and many<br>more...</strong>
                     </p>
                 </div>
