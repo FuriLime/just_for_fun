@@ -97,7 +97,6 @@
     border: 1px solid #fff;
     border-radius: 50%;
     overflow: hidden;
-    line-height: 150px;
     text-align: center;
     float: left;
     margin-right: 15px;
@@ -106,6 +105,7 @@
 .home-slider-image-holder img {
     display: inline-block;
     vertical-align: middle;
+    max-width: 100%;
 }
 .home-slider-text-holder {
     color: #fff;
