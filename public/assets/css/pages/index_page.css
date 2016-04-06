@@ -72,6 +72,20 @@
 }
 .home-slider-holder {
     background: #1f487c;
+    position: relative;
+}
+.home-slider-prev,
+.home-slider-next {
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    font-size: 20px;
+}
+.home-slider-prev {
+    left: 10px;
+}
+.home-slider-next {
+    right: 10px;
 }
 .home-slider-image-holder {
     width: 150px;
