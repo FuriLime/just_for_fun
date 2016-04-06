@@ -16,6 +16,9 @@
 .calendars-holder .single-calendar:nth-of-type(2n) {
     margin-top: 30px;
 }
+#prices-page {
+    margin-top: 30px;
+}
 @media (max-width: 992px) {
     .calendars-holder .single-calendar:nth-of-type(2n) {
         margin-top: 0;
