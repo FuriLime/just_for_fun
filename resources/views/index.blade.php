@@ -253,7 +253,7 @@ Home
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="feature-image-holder">
+                    <div class="features-image-holder">
                         <img src="assets/img/responsive.jpg">
                     </div>
                 </div>
