@@ -248,9 +248,17 @@
     margin-right: -250px;
 }
 /*//////////////////////////////////For You block/////////////////////////////////////////////////*/
+.for-you-block-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1f487c;
+    margin-bottom: 40px;
+    text-align: center;
+}
 #prices-page {
     margin-top: 30px;
 }
+/*/////////////////////////////////Media/////////////////////////////////////////////////*/
 @media (max-width: 992px) {
     .calendars-holder .single-calendar:nth-of-type(2n) {
         margin-top: 0;
