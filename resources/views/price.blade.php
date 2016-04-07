@@ -10,13 +10,7 @@ Price
 @section('header_styles')
     <!--page level css starts-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/price.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/tabbular.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/jquery.circliful.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/owl-carousel/owl.carousel.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/owl-carousel/owl.theme.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jQueryUI/jquery-ui.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/index_page.css') }}">
     <!--end of page level css-->
 @stop
@@ -282,33 +276,28 @@ Price
 
 {{-- page level scripts --}}
 @section('footer_scripts')
-    <script type="text/javascript" src="{{ asset('assets/js/frontend/jquery.circliful.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/vendors/owl-carousel/owl.carousel.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/frontend/carousel.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/jquery-ui.js') }}"></script>
     <script>
-//        $(document).ready(function() {
-            var check = false;
-            $("#slider").slider({
-                max: 1,
-                min: 0
-            });
-            //$("selector").slider();
-            $("#slider").mousedown(function () {
-                check = true
-            });
-            $(".ui-slider-container").mousedown(function () {
-                if (check == false) {
-                    if ($("#slider").slider('value') == 0) {
-                        $("#slider").slider('value', 1);
-                    } else {
-                        $("#slider").slider('value', 0);
-                    }
+        var check = false;
+        $("#slider").slider({
+            max: 1,
+            min: 0
+        });
+        //$("selector").slider();
+        $("#slider").mousedown(function () {
+            check = true
+        });
+        $(".ui-slider-container").mousedown(function () {
+            if (check == false) {
+                if ($("#slider").slider('value') == 0) {
+                    $("#slider").slider('value', 1);
                 } else {
-                    check = false;
+                    $("#slider").slider('value', 0);
                 }
-                ;
-            });
-//        });
+            } else {
+                check = false;
+            }
+            ;
+        });
     </script>
 @stop
