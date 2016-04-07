@@ -219,28 +219,25 @@
                         </button>
                     </div>
                 </div>
-            </div>
-
-
-
-            <div class="text-center col-xs-12 share-event">Share this event</div>
-            <div class="col-xs-12 social-holder text-center">
-                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                    <a class="a2a_button_facebook"></a>
-                    <a class="a2a_button_twitter"></a>
-                    <a class="a2a_button_google_plus"></a>
-                    <a class="a2a_button_linkedin"></a>
-                    <a class="a2a_button_pocket"></a>
-                    <a class="a2a_button_xing"></a>
-                    <a class="a2a_button_email"></a>
-                    <a class="a2a_button_google_gmail"></a>
-                    <a class="a2a_button_outlook_com"></a>
-                    <a class="a2a_button_yahoo_mail"></a>
-                    <a class="a2a_button_wordpress"></a>
-                    <a class="a2a_button_digg"></a>
-                    <a class="a2a_button_evernote"></a>
+                <div class="text-center col-xs-12 share-event">Share this event</div>
+                <div class="col-xs-12 social-holder text-center">
+                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                        <a class="a2a_button_facebook"></a>
+                        <a class="a2a_button_twitter"></a>
+                        <a class="a2a_button_google_plus"></a>
+                        <a class="a2a_button_linkedin"></a>
+                        <a class="a2a_button_pocket"></a>
+                        <a class="a2a_button_xing"></a>
+                        <a class="a2a_button_email"></a>
+                        <a class="a2a_button_google_gmail"></a>
+                        <a class="a2a_button_outlook_com"></a>
+                        <a class="a2a_button_yahoo_mail"></a>
+                        <a class="a2a_button_wordpress"></a>
+                        <a class="a2a_button_digg"></a>
+                        <a class="a2a_button_evernote"></a>
+                    </div>
+                    <script src="//static.addtoany.com/js/prettify-mar-2013/prettify.js"></script>
                 </div>
-                <script src="//static.addtoany.com/js/prettify-mar-2013/prettify.js"></script>
             </div>
         </div>
     </div>
