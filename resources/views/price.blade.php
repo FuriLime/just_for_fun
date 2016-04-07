@@ -57,6 +57,7 @@ Price
                     <div class="panel-heading">
                         <div class="price-panel-title">Startup / Freelancer</div>
                         <div class="price-panel-price">38&euro;</div>
+                        <div class="price-panel-sub-title">Forever Free</div>
                     </div>
                     <div class="panel-body text-center">
                         <div class="box_round_symboll">
