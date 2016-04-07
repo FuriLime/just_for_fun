@@ -184,7 +184,7 @@ Route::get('events/{uuid}/confirm-delete', array('as' => 'events.confirm-delete'
 Route::post('event/addtocalendar', array('as' => 'event.addtocalendar', 'uses' => 'EventsController@addToCalendar'));
 
 
-Route::get('event/googlecal/{uuid}', array('as' => 'event.addtocalendar', 'uses' => 'EventsController@getCal'));
+
 
 Route::get('confirm/{readable_url}', array('as' => 'confirm', 'uses' => 'EventsController@confirm'));
 
