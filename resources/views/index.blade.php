@@ -583,14 +583,14 @@ Home
                             </div>
                         </div>
                         <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingThree">
+                            <div class="panel-heading" role="tab" id="headingSeven">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
                                         I don't know how many people will use it, what should I do?
                                     </a>
                                 </h4>
                             </div>
-                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
                                 <div class="panel-body">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Vestibulum ipsum odio, fringilla quis mauris in, finibus vehicula elit.
