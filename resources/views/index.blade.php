@@ -354,7 +354,11 @@ Home
                         Prices
                     </div>
                 </div>
-                <img src="assets/img/free-plan.jpg">
+                <div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3">
+                    <div class="hom-prices-sub-block">
+                        <img src="assets/img/free-plan.jpg">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
