@@ -55,7 +55,7 @@ Price
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default price-panel">
                     <div class="panel-heading">
-                        <h3 class="text-white">Vestibulizzle</h3>
+                        <div class="price-panel">Suscipizzle</div>
                     </div>
                     <div class="panel-body text-center">
                         <div class="box_round_symboll">
@@ -84,7 +84,7 @@ Price
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default price-panel">
                     <div class="panel-heading">
-                        <h3 class="text-white">Best Package</h3>
+                        <div class="price-panel">Suscipizzle</div>
                     </div>
                     <div class="panel-body">
                         <div class="box_round_symboll">
@@ -112,7 +112,7 @@ Price
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default price-panel">
                     <div class="panel-heading">
-                        <h3 class="text-white">Suscipizzle</h3>
+                        <div class="price-panel">Suscipizzle</div>
                     </div>
                     <div class="panel-body">
                         <div class="box_round_symboll">
@@ -142,7 +142,7 @@ Price
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default price-panel">
                     <div class="panel-heading">
-                        <h3 class="text-white">Pretium</h3>
+                        <div class="price-panel">Suscipizzle</div>
                     </div>
                     <div class="panel-body">
                         <div class="box_round_symboll">
