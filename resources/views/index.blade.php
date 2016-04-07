@@ -619,14 +619,13 @@ Home
         </div>
     </div>
     <div class="container">
+</div>
 
-{{--</div>--}}
-    {{----}}
-            {{--<!-- Our skills Section End -->--}}
-        {{--</div>--}}
-        {{--<!-- //Our Skills End -->--}}
-    {{--</div>--}}
-    {{--<!-- //Container End -->--}}
+            <!-- Our skills Section End -->
+        </div>
+        <!-- //Our Skills End -->
+    </div>
+    <!-- //Container End -->
 @stop
 
 {{-- footer scripts --}}
