@@ -55,74 +55,8 @@ Price
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3">
-                <div class="box">
-
-                    <div class="info">
-                        <h3 class="success text-center">Lite</h3>
-                        <p>Free</p>
-                        <div class="text-right primary lite"><a href="#">Read more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- //Responsive Section End -->
-            <!-- Easy to Use Section Start -->
-            <div class="col-sm-6 col-md-3">
-                <!-- Box Start -->
-                <div class="box">
-
-                    <div class="info">
-                        <h3 class="primary text-center">Small</h3>
-                        <p>$7</p>
-                        <div class="text-center">
-                            Paid monthly
-                        </div>
-                        <div class="text-right primary">
-                            <a href="#">Read more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- //Easy to Use Section End -->
-            <!-- Clean Design Section Start -->
-            <div class="col-sm-6 col-md-3">
-                <div class="box">
-
-                    <div class="info">
-                        <h3 class="warning text-center">Basic</h3>
-                        <p>$18</p>
-                        <div class="text-center">
-                            Paid monthly
-                        </div>
-                        <div class="text-right primary">
-                            <a href="#">Read more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- //Clean Design Section End -->
-            <!-- 20+ Page Section Start -->
-            <div class="col-sm-6 col-md-3">
-                <div class="box">
-                    <div class="info">
-                        <h3 class="yellow text-center">Business</h3>
-                        <p>$79</p>
-                        <div class="text-center">
-                            Paid monthly
-                        </div>
-                        <div class="text-right primary">
-                            <a href="#">Read more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- //20+ Page Section End -->
-        </div>
-        <!-- //Services Section End -->
 
 
-        <div class="row">
             <h2> PRICING TABLES</h2>
             <!-- Vestibulizzle Section Start -->
             <div class="col-md-3 col-sm-6">
@@ -248,7 +182,7 @@ Price
                 </div>
             </div>
             <!-- //Pretium Section End -->
-        </div>
+
     </div>
 @stop
 
