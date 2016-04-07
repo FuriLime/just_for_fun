@@ -407,6 +407,9 @@ Home
                             </p>
                             <p>Give it a free try and find out!</p>
                         </div>
+                        <div class="for-you-sub-block-btn-holder">
+                            <a href="#" class="for-you-sub-block-btn">Create a Test Event</a>
+                        </div>
                     </div>
                 </div>
             </div>
