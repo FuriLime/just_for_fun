@@ -288,6 +288,9 @@ Home
                     </div>
                 </div>
                 <div class="col-md-6">
+                    <div class="features-image-holder">
+                        <img src="assets/img/timezone.jpg">
+                    </div>
                 </div>
                 <div class="col-md-6">
                 </div>
