@@ -2,25 +2,25 @@
 /* ---------- Price Box Round Symboll Css ---------- */
 .box_round_symboll{
 	background-color: #ef6f6c;
-  text-align: center;
-  font-size: 40px;
-  color: #fff;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  padding: 21px 1px 1px 0px;
-  margin: auto;
+	  text-align: center;
+	  font-size: 40px;
+	  color: #fff;
+	  border-radius: 50%;
+	  width: 100px;
+	  height: 100px;
+	  padding: 21px 1px 1px 0px;
+	  margin: auto;
 }
 /* ---------- //Price Box Round Symboll Css End---------- */
 /* ---------- Price Box Panel heading Css ---------- */
-.panel-heading{
-	background-color: #418bca !important;
+.price-panel .panel-heading{
+	background-color: #d9d9d9;
 	border: none;
 	margin-top: 10px;
 }
 /* ---------- //Price Box panel heading Css End ---------- */
 /* ---------- Price Box panel body Css ---------- */
-.panel-body {
+.price-panel .panel-body {
 	background-color: #f7f7f7;
 }
 /* ---------- //Price Box panel body css End ---------- */

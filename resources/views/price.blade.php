@@ -53,7 +53,7 @@ Price
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
-                <div class="panel panel-default text-center">
+                <div class="panel panel-default text-center price-panel">
                     <div class="panel-heading">
                         <h3 class="text-white">Vestibulizzle</h3>
                     </div>
