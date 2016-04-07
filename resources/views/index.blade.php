@@ -339,7 +339,7 @@ Home
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <div class="">
+                    <div class="full-feature">
                         Or check out our full feature list <a href="#">here</a>
                     </div>
                 </div>
