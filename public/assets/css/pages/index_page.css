@@ -306,10 +306,15 @@
 .common-questions-block #accordion a {
     padding: 10px 20px 10px 15px;
     display: block;
+    font-size: 18px;
+    font-weight: bold;
 }
 .common-questions-block #accordion .panel-heading,
 .common-questions-block #accordion .panel-body {
     background: url("../../img/accordion-bg.jpg");
+}
+.common-questions-block #accordion .panel-body {
+    font-size: 16px;
 }
 .common-questions-block #accordion .panel-heading {
     padding: 0;
@@ -317,7 +322,7 @@
 }
 .common-questions-block #accordion .panel-heading a:after {
     display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
+    font: normal normal normal 18px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
