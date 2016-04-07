@@ -838,8 +838,13 @@ public function getCal($uuid){
             $acc_type_nomer = $acc_type_id->account_type_id;
             $acc_type_name = DB::table('account_types')->where('id', '=', $acc_type_nomer)->first();
             $account_type_name = $acc_type_name->name;
+            if($account_type_name=="Free") {
+                $dec_title = "This calendar entry has been created with a Free Personal Account from EventFellows";
+            }else{
+                $dec_title = "This calendar entry has been created with a Business Personal Account from EventFellows";
+            }
         }else{
-            $account_type_name = "Free";
+            $dec_title = "This is a TEST event that has been created with EventFellows by an unregistred user for testing purposes.";
         }
 
 
@@ -860,7 +865,7 @@ public function getCal($uuid){
             $duration = $hourDifference.$minutesLeft;
         }
         $result = $error_massage = $calendar_link = '';
-        $dec_title = "This calendar entry has been created with a ".$account_type_name." Personal Account from EventFellows";
+
         $dec_footer = "Powered by EventFellows - start creating calendar entries for your own event now. https://eventfellows.com/referrer/{$event->uuid} ";
         $link_event = "Link to the EventPage:\r\n ".$event->event_url;
         $loc = urlencode($event['location']);
