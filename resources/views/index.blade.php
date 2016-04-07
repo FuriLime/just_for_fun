@@ -363,6 +363,14 @@ Home
                             Whether you're a business or an individual,<br>
                             there's an EventFellows plan for you.
                         </div>
+                        <a class="credits-btn" href="#">
+                            <span class="credits-btn-text"></span>
+                            <span class="credits-btn-sub-text"></span>
+                        </a>
+                        <a class="plans-btn" href="#">
+                            <span class="plans-btn-text"></span>
+                            <span class="plans-btn-sub-text"></span>
+                        </a>
                         <img class="pull-right" src="assets/img/free-plan.jpg">
                     </div>
                 </div>
