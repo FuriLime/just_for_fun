@@ -287,7 +287,7 @@ Price
     <script type="text/javascript" src="{{ asset('assets/js/frontend/carousel.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/jquery-ui.js') }}"></script>
     <script>
-        $(document).ready(function() {
+//        $(document).ready(function() {
             var check = false;
             $("#slider").slider({
                 max: 1,
@@ -309,6 +309,6 @@ Price
                 }
                 ;
             });
-        });
+//        });
     </script>
 @stop
