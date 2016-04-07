@@ -248,6 +248,9 @@ Home
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    <div class="home-features-block-title">
+                        Features
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="home-features-text-block">
