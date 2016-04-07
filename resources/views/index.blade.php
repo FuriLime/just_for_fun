@@ -339,6 +339,9 @@ Home
                     </div>
                 </div>
                 <div class="col-md-12">
+                    <div class="">
+                        Or check out our full feature list <a href="#">here</a>
+                    </div>
                 </div>
             </div>
         </div>
