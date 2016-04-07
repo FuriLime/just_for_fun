@@ -271,8 +271,7 @@ Price
         </div>
     </div>
 <script>
-$("document").ready(function() {
-    $(document).ready
+$(document).ready(function() {
     var check = false;
     $("#slider").slider({
         max: 1,
