@@ -318,7 +318,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transform: translate(0, 0);
-
+    transition: 0.3s;
+    position: absolute;
+    right: 6px;
+    top: calc(50% - 8px);
 }
 .common-questions-block #accordion .panel-heading a:after {
     content: "\f0d7";
