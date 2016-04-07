@@ -409,6 +409,7 @@ Home
                         </div>
                         <div class="for-you-sub-block-btn-holder">
                             <a href="#" class="for-you-sub-block-btn">Create a Test Event</a>
+                            <img class="for-you-sub-block-image" src="assets/img/for-you-text.jpg">
                         </div>
                     </div>
                 </div>
