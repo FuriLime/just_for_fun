@@ -105,7 +105,7 @@
     </div>
     <div class="container">
         <div class="row new-event-holder">
-            <div class="col-sm-8 col-md-8 col-md-offset-2 col-sm-offset-2 content event-show">
+            <div class="col-sm-8 col-md-8 col-xs-12 col-md-offset-2 col-sm-offset-2 content event-show">
                 @if($event->test=="1")
                     <div class="test-event-cont">
                         <div class="test-event-red-line">
