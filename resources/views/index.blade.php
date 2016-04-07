@@ -260,6 +260,7 @@ Home
                 <div class="col-md-6">
                     <div class="home-features-text-block">
                         <div class="features-text-block-title">
+                            Mobile optimized
                         </div>
                         <div class="features-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
