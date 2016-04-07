@@ -346,6 +346,13 @@ Home
             </div>
         </div>
     </div>
+    <div class="home-prices-block">
+        <div class="container">
+            <div class="row">
+                <img src="assets/img/free-plan.jpg">
+            </div>
+        </div>
+    </div>
     <div class="container">
        
         <!-- Service Section Start-->
