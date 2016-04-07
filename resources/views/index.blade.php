@@ -355,8 +355,15 @@ Home
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3">
-                    <div class="hom-prices-sub-block">
-                        <img src="assets/img/free-plan.jpg">
+                    <div class="home-prices-sub-block">
+                        <div class="prices-sub-block-title">
+                            Flexible plans with no surprises
+                        </div>
+                        <div class="prices-sub-block-text">
+                            Whether you're a business or an individual,<br>
+                            there's an EventFellows plan for you.
+                        </div>
+                        <img class="pull-right" src="assets/img/free-plan.jpg">
                     </div>
                 </div>
             </div>
