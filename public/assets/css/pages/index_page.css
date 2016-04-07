@@ -280,7 +280,12 @@
     display: inline-block;
 }
 .for-you-sub-block-image {
-
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    padding-left: 20px;
+    margin-top: 10px;
+    box-sizing: border-box;
 }
 #prices-page {
     margin-top: 30px;
