@@ -273,6 +273,8 @@ Home
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-md-6">
                     <div class="features-text-block-title">
                     </div>
@@ -292,6 +294,8 @@ Home
                         <img src="assets/img/timezone.jpg">
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-md-6">
                 </div>
                 <div class="col-md-6">
@@ -308,6 +312,8 @@ Home
                         Ut aliquam pulvinar tellus in tempor.
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-md-6">
                     <div class="features-text-block-title">
                     </div>
