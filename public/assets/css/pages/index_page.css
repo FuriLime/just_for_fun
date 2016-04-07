@@ -290,7 +290,7 @@
 /*/////////////////////////////////Common Questions Block/////////////////////////////////////////////////*/
 .common-questions-block {
     padding: 50px 0;
-    background: #e7e7e7;
+    background: #d9d9d9;
 }
 .common-questions-block-title {
     font-size: 26px;
@@ -298,6 +298,9 @@
     color: #1f487c;
     margin-bottom: 40px;
     text-align: center;
+}
+.common-questions-block #accordion {
+    background: url("../../img/accordion-bg.jpg");
 }
 #prices-page {
     margin-top: 30px;
