@@ -6,7 +6,7 @@
 return array(
 
 	# base
-	'add_event_link'	=> '+ Add Event',
+	'add_event_link'	=> 'Create test event',
 	'prices'	=> 'Prices',
 	'features'	=> 'Features',
 	'sign_in'	=> 'Sign in',
@@ -21,7 +21,7 @@ return array(
     'add_event_header'	=> 'Create a new event',
     'edit_event_header'	=> 'Edit an event',
     'clone_event_header'	=> 'Clone an event',
-    'add_event_text'  	=> 'Create test event',
+    'add_event_text'  	=> 'Add your event',
     'edit_event_text'  	=> 'Please edit the details for your event',
     'clone_event_text'  => 'Please edit the details for your event',
 
