@@ -60,10 +60,6 @@ Price
                         <div class="price-panel-sub-title">Forever Free</div>
                     </div>
                     <div class="panel-body text-center">
-                        <div class="box_round_symboll">
-                            $19
-                        </div>
-                        <h4 class="success">Per Month</h4>
                         <ul>
                             <li>
                                 Lorem Ipsum Dolor
@@ -91,10 +87,6 @@ Price
                         <div class="price-panel-sub-title">Paid Monthly</div>
                     </div>
                     <div class="panel-body">
-                        <div class="box_round_symboll">
-                            $25
-                        </div>
-                        <h4 class="success">Per Month</h4>
                         <ul>
                             <li>
                                 Lorem Ipsum Dolor
@@ -121,10 +113,6 @@ Price
                         <div class="price-panel-sub-title">Paid Monthly</div>
                     </div>
                     <div class="panel-body">
-                        <div class="box_round_symboll">
-                            $38
-                        </div>
-                        <h4 class="success">Per Month</h4>
                         <ul>
                             <li>
                                 Lorem Ipsum Dolor
@@ -153,10 +141,6 @@ Price
                         <div class="price-panel-sub-title">Paid Monthly</div>
                     </div>
                     <div class="panel-body">
-                        <div class="box_round_symboll">
-                            $42
-                        </div>
-                        <h4 class="success">Per Month</h4>
                         <ul>
                             <li>
                                 Lorem Ipsum Dolor
