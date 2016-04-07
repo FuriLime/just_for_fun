@@ -258,20 +258,18 @@ Home
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="home-features-text-block">
-                        <div class="features-text-block-title">
-                            Mobile optimized
-                        </div>
-                        <div class="features-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Maecenas elit velit, auctor sed ante id, euismod mollis arcu.
-                            Phasellus elit leo, pellentesque id suscipit sit amet, eleifend vitae enim.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Suspendisse ornare, justo quis rutrum venenatis, leo elit fermentum quam,
-                            at vehicula nulla nibh quis erat. Morbi vitae nisl odio. Proin sed erat suscipit,
-                            luctus nisl vehicula, ornare arcu. Donec purus felis, varius id tempor eget, consequat et dui.
-                            Ut aliquam pulvinar tellus in tempor.
-                        </div>
+                    <div class="features-text-block-title">
+                        Mobile optimized
+                    </div>
+                    <div class="features-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Maecenas elit velit, auctor sed ante id, euismod mollis arcu.
+                        Phasellus elit leo, pellentesque id suscipit sit amet, eleifend vitae enim.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Suspendisse ornare, justo quis rutrum venenatis, leo elit fermentum quam,
+                        at vehicula nulla nibh quis erat. Morbi vitae nisl odio. Proin sed erat suscipit,
+                        luctus nisl vehicula, ornare arcu. Donec purus felis, varius id tempor eget, consequat et dui.
+                        Ut aliquam pulvinar tellus in tempor.
                     </div>
                 </div>
             </div>
