@@ -20,67 +20,69 @@
 @stop
 
 <div class="share-event-top">
-    <div class="container-fluid share-container">
-        <div class="row content">
-            <div class="col-md-12">
-                <i class="fa fa-times-circle-o exit-show-details"></i>
-                <div class="top-bar-tabs clearfix">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#social-tab" aria-controls="social-tab" role="tab" data-toggle="tab">Social</a></li>
-                        <li role="presentation"><a href="#embed-tab" aria-controls="embed-tab" role="tab" data-toggle="tab">Embed</a></li>
-                        <li role="presentation"><a href="#email-tab" aria-controls="email-tab" role="tab" data-toggle="tab">Email</a></li>
-                    </ul>
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="social-tab">
-                            <div class="text-left share-text">
-                                Please update <b>Your Profile</b> so we can add the relevant information to your events. You can set the visibility of your details in your <a href="#">Profile Settings</a>.
-                            </div>
-                            <div class="col-xs-12 text-left">
-                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                                    <a class="a2a_button_facebook"></a>
-                                    <a class="a2a_button_twitter"></a>
-                                    <a class="a2a_button_google_plus"></a>
-                                    <a class="a2a_button_linkedin"></a>
-                                    <a class="a2a_button_pocket"></a>
-                                    <a class="a2a_button_xing"></a>
-                                    <a class="a2a_button_wordpress"></a>
-                                    <a class="a2a_button_digg"></a>
-                                    <a class="a2a_button_evernote"></a>
-                                    <a class="a2a_button_tumblr"></a>
-                                    <a class="a2a_button_blogger_post"></a>
-                                    <a href="http://www.skyrock.com/m/blog/share.php?js=0" class="skysocial-s skyrocksocialshare_square38" title="Share on Skyrock"
-                                       style="display:inline-block;text-indent:-999em;overflow:hidden;width:32px;height:32px;
-                   background:url(http://share.static.skyrock.net/img/api/skyrocksocialshare_square38.png) no-repeat 0 0 transparent;"><p style="display:none;">Share on Skyrock</p></a>
-                                    <script>(function(){var d=document,id='skyrock-fxlebpx'; if(d.getElementById(id)) return;var e=d.createElement('script');e.id=id;e.async=true;e.src='http://share.static.skyrock.net/js/skyrock_social.min.js';d.getElementsByTagName('body')[0].appendChild(e);}());</script>
+    <div class="share-container">
+        <div class="container">
+            <div class="row content">
+                <div class="col-md-12">
+                    <i class="fa fa-times-circle-o exit-show-details"></i>
+                    <div class="top-bar-tabs clearfix">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#social-tab" aria-controls="social-tab" role="tab" data-toggle="tab">Social</a></li>
+                            <li role="presentation"><a href="#embed-tab" aria-controls="embed-tab" role="tab" data-toggle="tab">Embed</a></li>
+                            <li role="presentation"><a href="#email-tab" aria-controls="email-tab" role="tab" data-toggle="tab">Email</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="social-tab">
+                                <div class="text-left share-text">
+                                    Please update <b>Your Profile</b> so we can add the relevant information to your events. You can set the visibility of your details in your <a href="#">Profile Settings</a>.
+                                </div>
+                                <div class="col-xs-12 text-left">
+                                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                                        <a class="a2a_button_facebook"></a>
+                                        <a class="a2a_button_twitter"></a>
+                                        <a class="a2a_button_google_plus"></a>
+                                        <a class="a2a_button_linkedin"></a>
+                                        <a class="a2a_button_pocket"></a>
+                                        <a class="a2a_button_xing"></a>
+                                        <a class="a2a_button_wordpress"></a>
+                                        <a class="a2a_button_digg"></a>
+                                        <a class="a2a_button_evernote"></a>
+                                        <a class="a2a_button_tumblr"></a>
+                                        <a class="a2a_button_blogger_post"></a>
+                                        <a href="http://www.skyrock.com/m/blog/share.php?js=0" class="skysocial-s skyrocksocialshare_square38" title="Share on Skyrock"
+                                           style="display:inline-block;text-indent:-999em;overflow:hidden;width:32px;height:32px;
+                       background:url(http://share.static.skyrock.net/img/api/skyrocksocialshare_square38.png) no-repeat 0 0 transparent;"><p style="display:none;">Share on Skyrock</p></a>
+                                        <script>(function(){var d=document,id='skyrock-fxlebpx'; if(d.getElementById(id)) return;var e=d.createElement('script');e.id=id;e.async=true;e.src='http://share.static.skyrock.net/js/skyrock_social.min.js';d.getElementsByTagName('body')[0].appendChild(e);}());</script>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="embed-tab">
-                            <div class="well">
-                                <div class="snippet-text">Copy this HTML snippet:</div>
-                                <textarea class="snippet-textarea" title="You need to be able to use html code" onclick="this.focus(); this.select()" spellcheck="false" readonly="1"><!-- EventFellows Integration code snippet -->
-                                    <p>Add event {{$event->title}} to your calendar:<br/>
-                                        <a href="{{$event->readable_url}}" target="_blank" >Google</a> |
-                                        <a href=""target="_blank">Yahoo</a> |
-                                        <a href=""target="_blank">Microsoft</a> |
-                                        <a href="">Outlook</a> |
-                                        <a href="">iCal</a>
-                                    </p>
-                                <!-- End of EventFellows Integration code snippet -->
-                                </textarea>
+                            <div role="tabpanel" class="tab-pane" id="embed-tab">
+                                <div class="well">
+                                    <div class="snippet-text">Copy this HTML snippet:</div>
+                                    <textarea class="snippet-textarea" title="You need to be able to use html code" onclick="this.focus(); this.select()" spellcheck="false" readonly="1"><!-- EventFellows Integration code snippet -->
+                                        <p>Add event {{$event->title}} to your calendar:<br/>
+                                            <a href="{{$event->readable_url}}" target="_blank" >Google</a> |
+                                            <a href=""target="_blank">Yahoo</a> |
+                                            <a href=""target="_blank">Microsoft</a> |
+                                            <a href="">Outlook</a> |
+                                            <a href="">iCal</a>
+                                        </p>
+                                    <!-- End of EventFellows Integration code snippet -->
+                                    </textarea>
+                                </div>
                             </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="email-tab">
-                            <div class="col-xs-12 text-left">
-                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                                    <div class="text-left share-text">
-                                        Send this event to your frinds email
+                            <div role="tabpanel" class="tab-pane" id="email-tab">
+                                <div class="col-xs-12 text-left">
+                                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                                        <div class="text-left share-text">
+                                            Send this event to your frinds email
+                                        </div>
+                                        <a class="a2a_button_email"></a>
+                                        <a class="a2a_button_google_gmail"></a>
+                                        <a class="a2a_button_outlook_com"></a>
+                                        <a class="a2a_button_yahoo_mail"></a>
                                     </div>
-                                    <a class="a2a_button_email"></a>
-                                    <a class="a2a_button_google_gmail"></a>
-                                    <a class="a2a_button_outlook_com"></a>
-                                    <a class="a2a_button_yahoo_mail"></a>
                                 </div>
                             </div>
                         </div>
