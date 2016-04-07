@@ -307,6 +307,13 @@
 .common-questions-block #accordion .panel-body {
     background: url("../../img/accordion-bg.jpg");
 }
+.common-questions-block #accordion .panel-heading {
+    padding-right: 20px;
+}
+.common-questions-block #accordion .panel-heading:after {
+    content: "";
+
+}
 .common-questions-block #accordion.panel-group .panel+.panel {
     margin-top: -1px;
 }

@@ -431,6 +431,8 @@ Home
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         How much does it cost?
+                                        <i class="fa fa-caret-down"></i>
+                                        <i class="fa fa-caret-right"></i>
                                     </a>
                                 </h4>
                             </div>
