@@ -55,9 +55,6 @@ Price
                     </div>
                 </div>
             </div>
-
-
-            <h2> PRICING TABLES</h2>
             <!-- Vestibulizzle Section Start -->
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
