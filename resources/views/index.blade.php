@@ -389,6 +389,14 @@ Home
                         Is EventFellows for you?
                     </div>
                 </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="for-you-block-image-holder">
+                        <img class="free-plan-text" src="assets/img/queck-list.jpg">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+
+                </div>
             </div>
         </div>
     </div>
