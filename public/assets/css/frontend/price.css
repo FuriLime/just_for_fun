@@ -18,9 +18,12 @@
 	border: none;
 	margin-top: 10px;
 	text-align: center;
+	padding: 0;
 }
 .price-panel-title {
 	font-size: 26px;
+	border-bottom: 1px solid black;
+	padding: 10px 15px;
 }
 /* ---------- //Price Box panel heading Css End ---------- */
 /* ---------- Price Box panel body Css ---------- */
