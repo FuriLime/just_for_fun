@@ -270,6 +270,7 @@ Price
             <!-- //Pretium Section End -->
         </div>
     </div>
+<script type="text/javascript" src="{{ asset('assets/js/jquery-ui.js') }}"></script>
 <script>
 $(document).ready(function() {
     var check = false;
