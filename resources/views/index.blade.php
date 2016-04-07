@@ -638,25 +638,6 @@ Home
     <script type="text/javascript" src="{{ asset('assets/js/jquery-ui.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/vendors/slick/slick.js') }}"></script>
     <script>
-        var check =false; 
-        $("#slider").slider({ 
-            max: 1,
-            min:0});
-        //$("selector").slider();
-        $("#slider").mousedown(function(){
-            check = true
-        });
-        $(".ui-slider-container").mousedown(function(){
-            if (check==false){
-                if ($( "#slider").slider('value')==0){
-                    $( "#slider").slider('value', 1);
-                } else{
-                    $( "#slider" ).slider('value',0);
-                }           
-            } else{
-                check=false;
-            };
-        });
         $('.home-slider').slick({
             infinite: true,
             slidesToShow: 1,

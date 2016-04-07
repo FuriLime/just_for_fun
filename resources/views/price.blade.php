@@ -270,7 +270,32 @@ Price
             <!-- //Pretium Section End -->
         </div>
     </div>
-    
+<script>
+$("document").ready(function() {
+    $(document).ready
+    var check = false;
+    $("#slider").slider({
+        max: 1,
+        min: 0
+    });
+    //$("selector").slider();
+    $("#slider").mousedown(function () {
+        check = true
+    });
+    $(".ui-slider-container").mousedown(function () {
+        if (check == false) {
+            if ($("#slider").slider('value') == 0) {
+                $("#slider").slider('value', 1);
+            } else {
+                $("#slider").slider('value', 0);
+            }
+        } else {
+            check = false;
+        }
+        ;
+    });
+});
+</script>
 @stop
 
 {{-- page level scripts --}}
