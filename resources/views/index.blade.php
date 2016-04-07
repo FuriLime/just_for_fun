@@ -247,17 +247,17 @@ Home
     <div class="home-features-block">
         <div class="container">
             <div class="row home-features-sub-block">
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="home-features-block-title">
                         Features
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="features-image-holder">
                         <img src="assets/img/responsive.jpg">
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="features-text-block-title">
                         Mobile optimized
                     </div>
@@ -274,7 +274,7 @@ Home
                 </div>
             </div>
             <div class="row home-features-sub-block">
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="features-text-block-title">
                         Timezone & DST handling
                     </div>
@@ -289,19 +289,19 @@ Home
                         Ut aliquam pulvinar tellus in tempor.
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="features-image-holder">
                         <img src="assets/img/timezone.jpg">
                     </div>
                 </div>
             </div>
             <div class="row home-features-sub-block">
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="features-image-holder">
                         <img src="assets/img/audience.jpg">
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="features-text-block-title">
                         Any Audience
                     </div>
@@ -318,7 +318,7 @@ Home
                 </div>
             </div>
             <div class="row home-features-sub-block">
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="features-text-block-title">
                         Fair Billing
                     </div>
@@ -333,12 +333,12 @@ Home
                         Ut aliquam pulvinar tellus in tempor.
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="features-image-holder">
                         <img src="assets/img/fair-billing.jpg">
                     </div>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="full-feature">
                         Or check out our full feature list <a href="#">here</a>
                     </div>
