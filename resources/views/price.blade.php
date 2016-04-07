@@ -270,35 +270,34 @@ Price
             <!-- //Pretium Section End -->
         </div>
     </div>
-<script type="text/javascript" src="{{ asset('assets/js/jquery-ui.js') }}"></script>
-<script>
-$(document).ready(function() {
-    var check = false;
-    $("#slider").slider({
-        max: 1,
-        min: 0
-    });
-    //$("selector").slider();
-    $("#slider").mousedown(function () {
-        check = true
-    });
-    $(".ui-slider-container").mousedown(function () {
-        if (check == false) {
-            if ($("#slider").slider('value') == 0) {
-                $("#slider").slider('value', 1);
-            } else {
-                $("#slider").slider('value', 0);
-            }
-        } else {
-            check = false;
-        }
-        ;
-    });
-});
-</script>
 @stop
 
 {{-- page level scripts --}}
 @section('footer_scripts')
-
+    <script type="text/javascript" src="{{ asset('assets/js/jquery-ui.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            var check = false;
+            $("#slider").slider({
+                max: 1,
+                min: 0
+            });
+            //$("selector").slider();
+            $("#slider").mousedown(function () {
+                check = true
+            });
+            $(".ui-slider-container").mousedown(function () {
+                if (check == false) {
+                    if ($("#slider").slider('value') == 0) {
+                        $("#slider").slider('value', 1);
+                    } else {
+                        $("#slider").slider('value', 0);
+                    }
+                } else {
+                    check = false;
+                }
+                ;
+            });
+        });
+    </script>
 @stop
