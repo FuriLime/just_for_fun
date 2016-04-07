@@ -321,6 +321,9 @@
 
 }
 .common-questions-block #accordion .panel-heading a:after {
+    content: "\f0d7";
+}
+.common-questions-block #accordion .panel-heading a.collapsed:after {
     content: "\f0da";
 }
 .common-questions-block #accordion.panel-group .panel+.panel {
