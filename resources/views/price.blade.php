@@ -60,6 +60,7 @@ Price
                         <div class="price-panel-sub-title">Forever Free</div>
                     </div>
                     <div class="panel-body text-center">
+                        <div class="price-panel-body-heading">Ideal for testing</div>
                         <ul>
                             <li>
                                 Lorem Ipsum Dolor
@@ -74,8 +75,7 @@ Price
                                 Lorem Ipsum Dolor
                             </li>
                         </ul>
-                        <a class="btn price-btn" href="#">Sign up
-                        </a>
+                        <a class="btn btn-primary" href="#">Sign up</a>
                     </div>
                 </div>
             </div>
@@ -113,6 +113,7 @@ Price
                         <div class="price-panel-sub-title">Paid Monthly</div>
                     </div>
                     <div class="panel-body">
+                        <div class="price-panel-body-heading"></div>
                         <ul>
                             <li>
                                 Lorem Ipsum Dolor
@@ -127,7 +128,7 @@ Price
                                 Lorem Ipsum Dolor
                             </li>
                         </ul>
-                        <a class="btn price-btn " href="#">
+                        <a class="btn btn-primary" href="#">
                             Sign up
                         </a>
                     </div>
