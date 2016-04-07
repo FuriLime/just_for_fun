@@ -86,9 +86,9 @@ Price
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default price-panel">
                     <div class="panel-heading">
-                        <div class="price-panel-title">Suscipizzle</div>
+                        <div class="price-panel-title">SME</div>
                         <div class="price-panel-price">87&euro;</div>
-                        <div class="price-panel-sub-title">Forever Free</div>
+                        <div class="price-panel-sub-title">Paid Monthly</div>
                     </div>
                     <div class="panel-body">
                         <div class="box_round_symboll">
@@ -118,7 +118,7 @@ Price
                     <div class="panel-heading">
                         <div class="price-panel-title">Suscipizzle</div>
                         <div class="price-panel-price">140&euro;</div>
-                        <div class="price-panel-sub-title">Forever Free</div>
+                        <div class="price-panel-sub-title">Paid Monthly</div>
                     </div>
                     <div class="panel-body">
                         <div class="box_round_symboll">
@@ -150,7 +150,7 @@ Price
                     <div class="panel-heading">
                         <div class="price-panel-title">Suscipizzle</div>
                         <div class="price-panel-price">489&euro;</div>
-                        <div class="price-panel-sub-title">Forever Free</div>
+                        <div class="price-panel-sub-title">Paid Monthly</div>
                     </div>
                     <div class="panel-body">
                         <div class="box_round_symboll">
