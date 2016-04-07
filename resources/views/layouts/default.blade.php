@@ -22,7 +22,7 @@
     <!--end of page level css-->
 </head>
 
-<body>
+<body class="clearfix">
 <div id="fb-root"></div>
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id={{env('GTM_ID')}}"
