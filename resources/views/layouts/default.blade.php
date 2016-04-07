@@ -50,7 +50,6 @@
 
             <div class="collapse navbar-collapse" id="collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ URL::to('event/add') }}" id="addevent" data-toggle="modal">@lang('frontend.add_event_link')</a></li>
                     <li {!! (Request::is('price') ? 'class="active"' : '') !!}><a href="{{ URL::to('price') }}">@lang('frontend.prices')</a></li>
                     <li {!! (Request::is('advancedfeatures') ? 'class="active"' : '') !!}><a href="{{ URL::to('advancedfeatures') }}">@lang('frontend.features')</a></li>
 
