@@ -395,7 +395,19 @@ Home
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-
+                    <div class="for-you-sub-block">
+                        <div class="for-you-sub-block-title">
+                            Great Service + Better Attendance
+                        </div>
+                        <div class="for-you-sub-block-text">
+                            <p>EventFellows is not for everyone...</p>
+                            <p>
+                                But with most people using digital calendars today
+                                chances are - you event will also benefit from it.
+                            </p>
+                            <p>Give it a free try and find out!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
