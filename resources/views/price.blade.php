@@ -55,7 +55,7 @@ Price
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default price-panel">
                     <div class="panel-heading">
-                        <div class="price-panel">Suscipizzle</div>
+                        <div class="price-panel">Startup / Freelancer</div>
                     </div>
                     <div class="panel-body text-center">
                         <div class="box_round_symboll">
