@@ -375,7 +375,7 @@ Home
                                 <div class="plans-btn-sub-text">for regular users</div>
                             </a>
                         </div>
-                        <img class="free-plan-text" src="assets/img/free-plan.jpg">
+                        <img class="free-plan-text hidden-xs" src="assets/img/free-plan.jpg">
                     </div>
                 </div>
             </div>
