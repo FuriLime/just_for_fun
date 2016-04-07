@@ -618,13 +618,13 @@ Home
             </div>
         </div>
     </div>
-    <div class="container">
-</div>
+    {{--<div class="container">--}}
+    {{--</div>--}}
 
-            <!-- Our skills Section End -->
-        </div>
-        <!-- //Our Skills End -->
-    </div>
+            {{--<!-- Our skills Section End -->--}}
+        {{--</div>--}}
+        {{--<!-- //Our Skills End -->--}}
+    {{--</div>--}}
     <!-- //Container End -->
 @stop
 
