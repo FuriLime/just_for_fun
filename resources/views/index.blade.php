@@ -34,7 +34,7 @@ Home
                     <br><br>Your chance of higher attendance rates have never been better.
                 </div>
                 <button class="add-test-event">
-                    Create Test Event
+                    <a href="{{ URL::to('event/add') }}" id="addevent" data-toggle="modal">@lang('frontend.add_event_link')</a>
                 </button>
             </div>
         </div>

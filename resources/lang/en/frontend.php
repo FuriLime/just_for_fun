@@ -21,7 +21,7 @@ return array(
     'add_event_header'	=> 'Create a new event',
     'edit_event_header'	=> 'Edit an event',
     'clone_event_header'	=> 'Clone an event',
-    'add_event_text'  	=> 'Add your event',
+    'add_event_text'  	=> 'Create test event',
     'edit_event_text'  	=> 'Please edit the details for your event',
     'clone_event_text'  => 'Please edit the details for your event',
 
