@@ -354,7 +354,7 @@ Home
                         Prices
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3">
+                <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2">
                     <div class="home-prices-sub-block">
                         <div class="prices-sub-block-title">
                             Flexible plans with no surprises
