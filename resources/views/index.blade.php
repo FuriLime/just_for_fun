@@ -246,7 +246,7 @@ Home
     </div>
     <div class="home-features-block">
         <div class="container">
-            <div class="row">
+            <div class="row home-features-sub-block">
                 <div class="col-md-12">
                     <div class="home-features-block-title">
                         Features
@@ -274,7 +274,7 @@ Home
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row home-features-sub-block">
                 <div class="col-md-6">
                     <div class="features-text-block-title">
                     </div>
@@ -295,7 +295,7 @@ Home
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row home-features-sub-block">
                 <div class="col-md-6">
                     <div class="features-image-holder">
                         <img src="assets/img/audience.jpg">
@@ -316,7 +316,7 @@ Home
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row home-features-sub-block">
                 <div class="col-md-6">
                     <div class="features-text-block-title">
                     </div>
