@@ -307,6 +307,9 @@
 .common-questions-block #accordion .panel-body {
     background: url("../../img/accordion-bg.jpg");
 }
+.common-questions-block #accordion.panel-group .panel+.panel {
+    margin-top: -1px;
+}
 #prices-page {
     margin-top: 30px;
 }
