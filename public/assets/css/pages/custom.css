@@ -56,6 +56,7 @@
 .container .row.new-event-holder {
     background: none;
     overflow: hidden;
+    margin-bottom: 50px;
 }
 .content.event-show {
     border-radius: 10px;
@@ -184,8 +185,6 @@
     vertical-align: middle;
     height: 115px;
 }
-
-
 body{
     background: #dfdfdf;
 }
