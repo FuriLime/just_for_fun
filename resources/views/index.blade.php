@@ -297,6 +297,9 @@ Home
             </div>
             <div class="row">
                 <div class="col-md-6">
+                    <div class="features-image-holder">
+                        <img src="assets/img/audience.jpg">
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="features-text-block-title">
