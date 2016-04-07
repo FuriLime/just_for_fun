@@ -39,6 +39,109 @@ Price
 @section('content')
     <!-- Container Section Start -->
     <div class="container">
+
+        <!-- Service Section Start-->
+        <div class="row">
+            <!-- Responsive Section Start -->
+            <div class="text-center" id="prices-page">
+                <span class="slide-head">Flexible plans with no surprises</span>
+            </div>
+
+            <div class="col-xs-12">
+                <div class="text-center col-xs-4 col-xs-offset-4">
+                    <span class="slide-text ">Whether you’re a business or an individual,there’s an EventFellows plan for you.Or simply start with our Free Plan.</span>
+                </div>
+            </div>
+            <div class="col-xs-12 ui-slider">
+                <div class="monthly">
+                    Monthly
+                </div>
+                <div class="ui-slider-container">
+                    <div id="slider"></div>
+                </div>
+                <div class="yearly">
+                    Yearly
+                </div>
+            </div>
+            <div class="col-xs-12 businesses">
+                <div class="text-center">
+                    <div class="plans-for">Plans for</div>
+                    <span class="slide-head">Businesses</span>
+                    <div class="plans-for-business">
+                        <div class="plans-for">
+                            Plans for Businesses
+                        </div>
+                        These plans are made to support professional event inviations also for private events at an affordable price.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="box">
+
+                    <div class="info">
+                        <h3 class="success text-center">Lite</h3>
+                        <p>Free</p>
+                        <div class="text-right primary lite"><a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Responsive Section End -->
+            <!-- Easy to Use Section Start -->
+            <div class="col-sm-6 col-md-3">
+                <!-- Box Start -->
+                <div class="box">
+
+                    <div class="info">
+                        <h3 class="primary text-center">Small</h3>
+                        <p>$7</p>
+                        <div class="text-center">
+                            Paid monthly
+                        </div>
+                        <div class="text-right primary">
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Easy to Use Section End -->
+            <!-- Clean Design Section Start -->
+            <div class="col-sm-6 col-md-3">
+                <div class="box">
+
+                    <div class="info">
+                        <h3 class="warning text-center">Basic</h3>
+                        <p>$18</p>
+                        <div class="text-center">
+                            Paid monthly
+                        </div>
+                        <div class="text-right primary">
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Clean Design Section End -->
+            <!-- 20+ Page Section Start -->
+            <div class="col-sm-6 col-md-3">
+                <div class="box">
+                    <div class="info">
+                        <h3 class="yellow text-center">Business</h3>
+                        <p>$79</p>
+                        <div class="text-center">
+                            Paid monthly
+                        </div>
+                        <div class="text-right primary">
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //20+ Page Section End -->
+        </div>
+        <!-- //Services Section End -->
+
+
         <div class="row">
             <h2> PRICING TABLES</h2>
             <!-- Vestibulizzle Section Start -->
