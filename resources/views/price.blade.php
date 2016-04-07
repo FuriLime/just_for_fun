@@ -19,10 +19,7 @@ Price
 @section('content')
     <!-- Container Section Start -->
     <div class="container">
-
-        <!-- Service Section Start-->
         <div class="row">
-            <!-- Responsive Section Start -->
             <div class="text-center" id="prices-page">
                 <span class="slide-head">Flexible plans with no surprises</span>
             </div>
@@ -55,7 +52,6 @@ Price
                     </div>
                 </div>
             </div>
-            <!-- Vestibulizzle Section Start -->
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
@@ -85,8 +81,6 @@ Price
                     </div>
                 </div>
             </div>
-            <!-- //Vestibulizzle Section End -->
-            <!-- Best Package Section Start -->
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
@@ -115,8 +109,6 @@ Price
                     </div>
                 </div>
             </div>
-            <!-- Best Package Section End -->
-            <!-- Suscipizzle Section Start -->
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
@@ -147,8 +139,6 @@ Price
                     </div>
                 </div>
             </div>
-            <!-- //Suscipizzle Section End -->
-            <!-- Pretium Section Start -->
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
@@ -178,8 +168,7 @@ Price
                     </div>
                 </div>
             </div>
-            <!-- //Pretium Section End -->
-
+        </div>
     </div>
 @stop
 
