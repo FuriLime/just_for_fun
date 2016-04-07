@@ -10,6 +10,7 @@ Price
 @section('header_styles')
     <!--page level css starts-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/price.css') }}">
+    <link rel="stylesheet" type="text/css" href="http://event.test-y-sbm.com/assets/css/jQueryUI/jquery-ui.css">
     <!--end of page level css-->
 @stop
 
