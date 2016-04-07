@@ -364,12 +364,12 @@ Home
                             there's an EventFellows plan for you.
                         </div>
                         <a class="credits-btn" href="#">
-                            <span class="credits-btn-text"></span>
-                            <span class="credits-btn-sub-text"></span>
+                            <span class="credits-btn-text">Pay-as-you-Go Credits</span>
+                            <span class="credits-btn-sub-text">for occasional users</span>
                         </a>
                         <a class="plans-btn" href="#">
-                            <span class="plans-btn-text"></span>
-                            <span class="plans-btn-sub-text"></span>
+                            <span class="plans-btn-text">Subscription Plans</span>
+                            <span class="plans-btn-sub-text">for regular users</span>
                         </a>
                         <img class="pull-right" src="assets/img/free-plan.jpg">
                     </div>
