@@ -276,6 +276,7 @@ Home
             <div class="row home-features-sub-block">
                 <div class="col-md-6">
                     <div class="features-text-block-title">
+                        Timezone & DST handling
                     </div>
                     <div class="features-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -302,6 +303,7 @@ Home
                 </div>
                 <div class="col-md-6">
                     <div class="features-text-block-title">
+                        Any Audience
                     </div>
                     <div class="features-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -318,6 +320,7 @@ Home
             <div class="row home-features-sub-block">
                 <div class="col-md-6">
                     <div class="features-text-block-title">
+                        Fair Billing
                     </div>
                     <div class="features-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
