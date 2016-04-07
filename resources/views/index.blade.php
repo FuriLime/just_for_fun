@@ -381,6 +381,17 @@ Home
             </div>
         </div>
     </div>
+    <div class="for-you-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="for-you-block-title">
+                        Is EventFellows for you?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
        
         <!-- Service Section Start-->

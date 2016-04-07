@@ -1,3 +1,4 @@
+/*//////////////////////////////////Calendars block/////////////////////////////////////////////////*/
 .content.calendars {
     background: #eee;
     padding: 15px 0;
@@ -16,6 +17,7 @@
 .calendars-holder .single-calendar:nth-of-type(2n) {
     margin-top: 30px;
 }
+/*//////////////////////////////////How it works block/////////////////////////////////////////////////*/
 .how-it-works-block {
     background: #3090CD;
     color: #fff;
@@ -39,6 +41,7 @@
     width: auto;
     height: auto;
 }
+/*//////////////////////////////////Benefits block/////////////////////////////////////////////////*/
 .benefits-block {
     padding: 40px 0;
 }
@@ -70,6 +73,7 @@
     color: #23527c;
     display: inline-block;
 }
+/*//////////////////////////////////Slider block/////////////////////////////////////////////////*/
 .home-slider-holder {
     background: #1f487c;
     position: relative;
@@ -127,6 +131,7 @@
 .home-slider-company {
     font-size: 16px;
 }
+/*//////////////////////////////////Most calendar block/////////////////////////////////////////////////*/
 .most-calendar-block {
     background: #D9D9D9;
     padding: 50px 0;
@@ -155,6 +160,7 @@
     background: #DBE9F4;
     color: #4B6E96;
 }
+/*//////////////////////////////////Features block/////////////////////////////////////////////////*/
 .home-features-block {
     padding-top: 50px;
 }
@@ -191,6 +197,7 @@
 .full-feature a {
     color: #0094DA;
 }
+/*//////////////////////////////////Prices block/////////////////////////////////////////////////*/
 .home-prices-block {
     padding: 50px 0;
     background: #1F487C;
@@ -240,6 +247,7 @@
 .free-plan-text {
     margin-right: -250px;
 }
+/*//////////////////////////////////For You block/////////////////////////////////////////////////*/
 #prices-page {
     margin-top: 30px;
 }
