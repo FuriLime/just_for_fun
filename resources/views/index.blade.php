@@ -34,7 +34,7 @@ Home
                     <br><br>Your chance of higher attendance rates have never been better.
                 </div>
                 <button class="add-test-event">
-                    <a href="{{ URL::to('event/add') }}" id="addevent" data-toggle="modal">@lang('frontend.add_event_link')</a>
+                    <a href="{{ URL::to('event/add') }}" class="for-you-sub-block-btn" id="addevent" data-toggle="modal">@lang('frontend.add_event_link')</a>
                 </button>
             </div>
         </div>
@@ -408,7 +408,7 @@ Home
                             <p>Give it a free try and find out!</p>
                         </div>
                         <div class="for-you-sub-block-btn-holder">
-                            <a href="{{ URL::to('event/add')}}" class="for-you-sub-block-btn">@lang('frontend.add_event_link')</a>
+                            <a href="{{ URL::to('event/add')}}" class="for-you-sub-block-btn" id="addevent" data-toggle="modal">@lang('frontend.add_event_link')</a>
                             <img class="for-you-sub-block-image" src="assets/img/for-you-text.jpg">
                         </div>
                     </div>
