@@ -336,6 +336,7 @@
     <script>
         $(document).ready(function() {
             $('.infopoint').popover({
+                trigger: "hover",
                 placement: wheretoplace()
             });
             $('.form-control').keydown(function (e) {
