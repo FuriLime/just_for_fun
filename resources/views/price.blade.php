@@ -55,7 +55,8 @@ Price
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default price-panel">
                     <div class="panel-heading">
-                        <div class="price-panel">Startup / Freelancer</div>
+                        <div class="price-panel-title">Startup / Freelancer</div>
+                        <div class="price-panel-price">38&euro;</div>
                     </div>
                     <div class="panel-body text-center">
                         <div class="box_round_symboll">
@@ -84,7 +85,7 @@ Price
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default price-panel">
                     <div class="panel-heading">
-                        <div class="price-panel">Suscipizzle</div>
+                        <div class="price-panel-title">Suscipizzle</div>
                     </div>
                     <div class="panel-body">
                         <div class="box_round_symboll">
@@ -112,7 +113,7 @@ Price
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default price-panel">
                     <div class="panel-heading">
-                        <div class="price-panel">Suscipizzle</div>
+                        <div class="price-panel-title">Suscipizzle</div>
                     </div>
                     <div class="panel-body">
                         <div class="box_round_symboll">
@@ -142,7 +143,7 @@ Price
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default price-panel">
                     <div class="panel-heading">
-                        <div class="price-panel">Suscipizzle</div>
+                        <div class="price-panel-title">Suscipizzle</div>
                     </div>
                     <div class="panel-body">
                         <div class="box_round_symboll">
