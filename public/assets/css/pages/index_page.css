@@ -215,13 +215,18 @@
     margin-bottom: 50px;
 }
 .home-prices-sub-block .credits-btn,
-.home-prices-sub-block .plans-btn{
+.home-prices-sub-block .plans-btn {
     display: inline-block;
     background: #DBE9F4;
     color: #4B6E96;
-    padding: 5px 30px;
     border-radius: 5px;
+}
+.home-prices-sub-block .credits-btn {
+    padding: 5px 50px;
     margin-bottom: 20px;
+}
+.home-prices-sub-block .plans-btn {
+    padding: 5px 30px;
 }
 .credits-btn-text,
 .plans-btn-text {
