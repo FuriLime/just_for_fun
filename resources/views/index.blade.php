@@ -365,14 +365,14 @@ Home
                         </div>
                         <div class="">
                             <a class="credits-btn" href="#">
-                                <span class="credits-btn-text">Pay-as-you-Go Credits</span>
-                                <span class="credits-btn-sub-text">for occasional users</span>
+                                <div class="credits-btn-text">Pay-as-you-Go Credits</div>
+                                <div class="credits-btn-sub-text">for occasional users</div>
                             </a>
                         </div>
                         <div class="">
                             <a class="plans-btn" href="#">
-                                <span class="plans-btn-text">Subscription Plans</span>
-                                <span class="plans-btn-sub-text">for regular users</span>
+                                <div class="plans-btn-text">Subscription Plans</div>
+                                <div class="plans-btn-sub-text">for regular users</div>
                             </a>
                         </div>
                         <img class="pull-right" src="assets/img/free-plan.jpg">
