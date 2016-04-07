@@ -332,6 +332,9 @@ Home
                     </div>
                 </div>
                 <div class="col-md-6">
+                    <div class="features-image-holder">
+                        <img src="assets/img/fair-billing.jpg">
+                    </div>
                 </div>
                 <div class="col-md-12">
                 </div>
