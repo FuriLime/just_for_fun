@@ -241,6 +241,11 @@
             </div>
         </div>
     </div>
+    @if($event->test=="1")
+        <div class="test-event-line">
+            Test Event - do not share
+        </div>
+    @endif
     </div>
 
     <input type="hidden" name="_token" id="token_for_ajax" value="{{ csrf_token() }}" />
