@@ -10,7 +10,14 @@ Price
 @section('header_styles')
     <!--page level css starts-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/price.css') }}">
-    <link rel="stylesheet" type="text/css" href="http://event.test-y-sbm.com/assets/css/jQueryUI/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/tabbular.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/jquery.circliful.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/owl-carousel/owl.carousel.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/owl-carousel/owl.theme.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jQueryUI/jquery-ui.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/slick/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/index_page.css') }}">
     <!--end of page level css-->
 @stop
 
