@@ -610,6 +610,11 @@ Home
                         </div>
                     </div>
                 </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="common-questions-contact-block">
+                        Have another questions? <a href="#">Contact us!</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
