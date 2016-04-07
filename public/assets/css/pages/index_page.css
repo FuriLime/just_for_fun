@@ -310,9 +310,18 @@
 .common-questions-block #accordion .panel-heading {
     padding-right: 20px;
 }
-.common-questions-block #accordion .panel-heading:after {
-    content: "";
+.common-questions-block #accordion .panel-heading a:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
 
+}
+.common-questions-block #accordion .panel-heading a:after {
+    content: "\f0da";
 }
 .common-questions-block #accordion.panel-group .panel+.panel {
     margin-top: -1px;
