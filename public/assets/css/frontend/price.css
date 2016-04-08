@@ -123,6 +123,7 @@
 .feature-comparison-block {
     padding: 40px 0;
 }
-.feature-comparison-table {
+.feature-comparison-table,
+.feature-comparison-table thead th {
     text-align: center;
 }
