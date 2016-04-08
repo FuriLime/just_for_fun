@@ -33,9 +33,9 @@ Home
                     90% of people today use a kind of digital calendar. EventFellows helps your event make it into these calendar as a means of great service.
                     <br><br>Your chance of higher attendance rates have never been better.
                 </div>
-                {{--<button class="add-test-event">--}}
-                    <a href="{{ URL::to('event/add') }}" class="add-test-event" id="addevent" data-toggle="modal">@lang('frontend.add_event_link')</a>
-                {{--</button>--}}
+                <button class="add-test-event">
+                    <a href="{{ URL::to('event/add') }}" class="for-you-sub-block-btn" id="addevent" data-toggle="modal">@lang('frontend.add_event_link')</a>
+                </button>
             </div>
         </div>
     </div>
