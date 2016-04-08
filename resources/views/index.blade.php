@@ -34,7 +34,7 @@ Home
                     <br><br>Your chance of higher attendance rates have never been better.
                 </div>
                 {{--<button class="add-test-event">--}}
-                    <a href="{{ URL::to('event/add') }}" class="for-you-sub-block-btn" id="addevent" data-toggle="modal">@lang('frontend.add_event_link')</a>
+                    <a href="{{ URL::to('event/add') }}" class="add-test-event" id="addevent" data-toggle="modal">@lang('frontend.add_event_link')</a>
                 {{--</button>--}}
             </div>
         </div>
