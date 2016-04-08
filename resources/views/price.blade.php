@@ -174,7 +174,7 @@ Price
                         <span class="title-popover" data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Individuals</span>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 test">
+                <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-holder">
                     <div class="panel panel-default price-panel">
                         <div class="price-panel-badge price-panel-badge-orange">Great Start</div>
                         <div class="panel-heading">
@@ -215,7 +215,7 @@ Price
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 test">
+                <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-holder">
                     <div class="panel panel-default price-panel">
                         <div class="panel-heading">
                             <div class="price-panel-title">Lite</div>
@@ -242,7 +242,7 @@ Price
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 test">
+                <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-holder">
                     <div class="panel panel-default price-panel">
                         <div class="price-panel-badge price-panel-badge-blue">Most popular</div>
                         <div class="panel-heading">
@@ -270,7 +270,7 @@ Price
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 test">
+                <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-holder">
                     <div class="panel panel-default price-panel">
                         <div class="panel-heading">
                             <div class="price-panel-title">Proffesional</div>
@@ -522,8 +522,8 @@ Price
 @section('footer_scripts')
     <script type="text/javascript" src="{{ asset('assets/js/jquery-ui.js') }}"></script>
     <script>
-        var height = Math.max($(".test").height());
-        $(".test").height(height);
+        var height = Math.max($(".individual-plan-holder").height());
+        $(".individual-plan-holder").height(height);
 
         function wheretoplace(){
             var width = window.innerWidth;
