@@ -54,7 +54,7 @@ Price
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="panel panel-default price-panel">
-                        <div class="price-panel-badge">For you?</div>
+                        <div class="price-panel-badge price-panel-badge-orange">For you?</div>
                         <div class="panel-heading">
                             <div class="price-panel-title">Startup / Freelancer</div>
                             <div class="price-panel-price">38&euro;</div>
@@ -109,7 +109,7 @@ Price
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="panel panel-default price-panel">
-                        <div class="price-panel-badge">For you?</div>
+                        <div class="price-panel-badge price-panel-badge-blue">For you?</div>
                         <div class="panel-heading">
                             <div class="price-panel-title">Company</div>
                             <div class="price-panel-price">140&euro;</div>
