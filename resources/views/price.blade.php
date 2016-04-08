@@ -423,7 +423,7 @@ Price
     </div>
     <div class="feature-comparison-block">
         <div class="container">
-            <div class="feature-comparison-block-title">Commonly asked questions</div>
+            <div class="feature-comparison-block-title">Feature comparison</div>
             <div class="table-responsive">
                 <table class="table feature-comparison-table">
                     <thead>
