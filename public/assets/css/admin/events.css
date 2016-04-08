@@ -5,3 +5,6 @@
     border-top: none;
     border-radius: 0 0 4px 4px;
 }
+.events-table thead th:last-child {
+    min-width: 150px;
+}
