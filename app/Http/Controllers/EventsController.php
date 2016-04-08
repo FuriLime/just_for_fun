@@ -880,7 +880,7 @@ public function getCal($uuid){
         $result = $error_massage = $calendar_link = '';
 
         $dec_footer = "Powered by EventFellows - start creating calendar entries for your own event now. https://eventfellows.com/referrer/{$event->uuid} ";
-        $link_event = "Link to the EventPage:\n ".$event->event_url;
+        $link_event = "Link to the EventPage: ".$event->event_url;
         $loc = urlencode($event['location']);
         $title = urlencode($event->title);
 
