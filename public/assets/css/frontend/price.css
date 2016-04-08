@@ -134,6 +134,15 @@
 .table-plan-title {
     color: #fda556;
     text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.price-table-btn {
+    background: #fff;
+    color: #5a5a5a;
+}
+.price-table-btn:hover {
+    background: #e1e1e1;
+    text-decoration: none;
 }
 .table.feature-comparison-table>thead>tr>th {
     border-bottom: 1px solid #fff;
@@ -161,12 +170,4 @@
 }
 .feature-comparison-table strong {
     color: #5e6166;
-}
-.price-table-btn {
-    background: #fff;
-    color: #5e6166;
-}
-.price-table-btn:hover {
-    background: #7f7f7f;
-    text-decoration: none;
 }
