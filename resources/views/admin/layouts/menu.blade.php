@@ -19,8 +19,8 @@
             {{--</a>--}}
         {{--</li> -->--}}
 
-         <li {!! (Request::is('events') ? 'class="active" id="active"' : '') !!} >
-            <a href="{{ URL::to('admin/events') }}">
+         <li >
+            <a href="{{ URL::to('admin/events/favorite') }}">
                 {{--<a href="{{ URL::to('admin/events') }}">--}}
                 <i class="fa fa-angle-right"></i>
                 Favorite events
