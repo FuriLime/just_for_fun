@@ -44,12 +44,6 @@ Price
                     <div class="text-center">
                         <div class="plans-for">Plans for</div>
                         <span class="slide-head title-popover" data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Businesses</span>
-                        {{--<div class="plans-for-business">--}}
-                            {{--<div class="plans-for">--}}
-                                {{--Plans for Businesses--}}
-                            {{--</div>--}}
-                            {{--These plans are made to support professional event inviations also for private events at an affordable price.--}}
-                        {{--</div>--}}
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
@@ -176,7 +170,7 @@ Price
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="individual-plans-block-sup-title">Plans for</div>
-                    <div class="individual-plans-block-title">Businesses</div>
+                    <div class="individual-plans-block-title title-popover" data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Individuals</div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="panel panel-default price-panel">
@@ -314,7 +308,7 @@ Price
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="commonly-questions-block-title">Commonly asked questions</div>
+                    <div class="commonly-questions-block-title title-popover" data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Commonly asked questions</div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="question-title">
@@ -423,7 +417,7 @@ Price
     </div>
     <div class="feature-comparison-block">
         <div class="container">
-            <div class="feature-comparison-block-title">Feature comparison</div>
+            <div class="feature-comparison-block-title title-popover" data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Feature comparison</div>
             <div class="table-responsive">
                 <table class="table feature-comparison-table">
                     <thead>
