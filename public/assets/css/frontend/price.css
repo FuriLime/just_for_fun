@@ -75,10 +75,17 @@
 }
 .individual-plans-block {
     padding: 40px 0;
-    background: aquamarine;
+    background: #dbeef4;
 }
 .individual-plans-block-title,
 .individual-plans-block-sup-title {
     color: #1f487c;
     text-align: center;
+}
+.individual-plans-block-sup-title {
+    font-size: 18px;
+}
+.individual-plans-block-title {
+    font-size: 26px;
+    font-weight: bold;
 }
