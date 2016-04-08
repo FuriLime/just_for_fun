@@ -1206,6 +1206,14 @@ footer .btn-primary.text-white {
         margin-bottom: 30px;
     }
 }
+@media (max-width: 767px) {
+    body {
+        margin-bottom: 90px;
+    }
+    .footer {
+        height: 90px;
+    }
+}
 @media (max-width: 370px) {
     .share-event-top .show-details {
         width: 100%;
