@@ -180,17 +180,20 @@ Price
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="panel panel-default price-panel">
-                        <div class="price-panel-badge price-panel-badge-orange">For you?</div>
+                        <div class="price-panel-badge price-panel-badge-orange">Great Start</div>
                         <div class="panel-heading">
-                            <div class="price-panel-title">Startup / Freelancer</div>
-                            <div class="price-panel-price">38&euro;</div>
+                            <div class="price-panel-title">FREE</div>
+                            <div class="price-panel-price">0&euro;</div>
                             <div class="price-panel-sub-title">Forever Free</div>
                         </div>
                         <div class="panel-body">
                             <div class="price-panel-body-heading">Ideal for testing</div>
                             <ul>
                                 <li>
-                                    10 Events / 500 Downloads
+                                    3 events
+                                </li>
+                                <li>
+                                    50 Event Downloads
                                 </li>
                                 <li>
                                     Basic Event Features
@@ -201,8 +204,14 @@ Price
                                 <li>
                                     Event Dashboard
                                 </li>
+                                <li>
+                                    No Credit Card
+                                </li>
                             </ul>
-                            <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">Start 14-day trial</a>
+                            <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">
+                                <i class="fa fa-user"></i>
+                                FREE Signup
+                            </a>
                         </div>
                     </div>
                 </div>
