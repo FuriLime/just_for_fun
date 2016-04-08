@@ -55,9 +55,9 @@ events List
                                     <tr>
                                         <td>
                                             @if ($event->status == 'Publish')
-                                                +
+                                                <i class="fa fa-eye"></i>
                                             @else
-                                                -
+                                                <i class="fa fa-eye-slash"></i>
                                             @endif
                                         </td>
                                         <td>Airi Satou</td>
