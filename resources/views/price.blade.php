@@ -523,7 +523,7 @@ Price
     <script type="text/javascript" src="{{ asset('assets/js/jquery-ui.js') }}"></script>
     <script>
         var width = window.innerWidth;
-        if (width <= 768) {
+        if (width >= 768) {
             var height = Math.max($(".individual-plan-holder").height());
             $(".individual-plan-holder").height(height);
         }
