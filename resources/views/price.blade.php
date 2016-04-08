@@ -174,8 +174,8 @@ Price
                         <span class="title-popover" data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Individuals</span>
                     </div>
                 </div>
-                <div class="plan-holder">
-                    <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-holder">
+                <div class="individual-plan-holder">
+                    <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-panel-holder">
                         <div class="panel panel-default price-panel">
                             <div class="price-panel-badge price-panel-badge-orange">Great Start</div>
                             <div class="panel-heading">
@@ -216,7 +216,7 @@ Price
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-holder">
+                    <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-panel-holder">
                         <div class="panel panel-default price-panel">
                             <div class="panel-heading">
                                 <div class="price-panel-title">Lite</div>
@@ -243,7 +243,7 @@ Price
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-holder">
+                    <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-panel-holder">
                         <div class="panel panel-default price-panel">
                             <div class="price-panel-badge price-panel-badge-blue">Most popular</div>
                             <div class="panel-heading">
@@ -271,7 +271,7 @@ Price
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-holder">
+                    <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-panel-holder">
                         <div class="panel panel-default price-panel">
                             <div class="panel-heading">
                                 <div class="price-panel-title">Proffesional</div>
@@ -298,9 +298,6 @@ Price
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 col-md-offset-9 col-sm-offset-6 vat-text">
-                    All prices include applicable VAT
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 help-text">
                     All plans can be upgraded, downgraded or canceled at any time.
