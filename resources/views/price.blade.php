@@ -162,6 +162,12 @@ Price
                         </div>
                     </div>
                 </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    All prices include applicable VAT
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    All plans can be upgraded, downgraded or canceled at any time.
+                </div>
             </div>
         </div>
     </div>
