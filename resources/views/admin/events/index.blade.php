@@ -69,8 +69,8 @@ events List
                                             <div class="btn-group">
                                                 <button type="button" class="btn btn-default">Action</button>
                                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="fa fa-caret-down">dfg</i>
-                                                    <span class="caret"></span>
+                                                    <i class="fa fa-caret-down"></i>
+                                                    {{--<span class="caret"></span>--}}
                                                     <span class="sr-only">Toggle Dropdown</span>
                                                 </button>
                                                 <ul class="dropdown-menu">
