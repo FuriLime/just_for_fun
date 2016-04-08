@@ -470,10 +470,10 @@ Price
                         </tr>
                         <tr>
                             <th scope="row">Total Agents</th>
-                            <td>only 1</td>
-                            <td>Unlimited</td>
-                            <td>Unlimited</td>
-                            <td>Unlimited</td>
+                            <td class="td-colored">only 1</td>
+                            <td class="td-colored">Unlimited</td>
+                            <td class="td-colored">Unlimited</td>
+                            <td class="td-colored">Unlimited</td>
                         </tr>
                         <tr>
                             <th scope="row"><strong>SUPPORT</strong></th>
