@@ -120,3 +120,19 @@
 .question-text {
     font-size: 16px;
 }
+.feature-comparison-block {
+    padding: 40px 0;
+}
+.feature-comparison-table,
+.feature-comparison-table thead th {
+    text-align: center;
+}
+.feature-comparison-table thead th {
+    background: #f1f1f1;
+}
+.feature-comparison-table thead th:first-child {
+    background: none;
+}
+.table-plan-title {
+    color: #fda556;
+}

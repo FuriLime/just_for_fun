@@ -421,10 +421,10 @@ Price
             </div>
         </div>
     </div>
-    <div class="feature-comparsion-block">
+    <div class="feature-comparison-block">
         <div class="container">
             <div class="table-responsive">
-                <table class="table">
+                <table class="table feature-comparison-table">
                     <thead>
                         <tr>
                             <th></th>
@@ -446,7 +446,71 @@ Price
                             </th>
                         </tr>
                     </thead>
-                    <tbody> <tr> <th scope="row">1</th> <td>Mark</td> <td>Otto</td> <td>@mdo</td> </tr> <tr> <th scope="row">2</th> <td>Jacob</td> <td>Thornton</td> <td>@fat</td> </tr> <tr> <th scope="row">3</th> <td>Larry</td> <td>the Bird</td> <td>@twitter</td> </tr> </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><strong>PRICING</strong></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Monthly pricing (billing annually)</th>
+                            <td>Free</td>
+                            <td>$11.20 USD per month/agent</td>
+                            <td>$20.00 USD per month/agent</td>
+                            <td>$44.00 USD per month/agent</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Monthly pricing (billing annually)</th>
+                            <td>Free</td>
+                            <td>$14.00 USD per month/agent</td>
+                            <td>$25.00 USD per month/agent</td>
+                            <td>$55.00 USD per month/agent</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Total Agents</th>
+                            <td>only 1</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><strong>SUPPORT</strong></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Email support</th>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Setup Assistance</th>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Knowledge base</th>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Live chat support</th>
+                            <td>only 24x5</td>
+                            <td>only 24x5</td>
+                            <td>only 24x5</td>
+                            <td>24x7</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
