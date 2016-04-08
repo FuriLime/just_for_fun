@@ -222,8 +222,8 @@ Price
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="panel panel-default price-panel">
                         <div class="panel-heading">
-                            <div class="price-panel-title">SME</div>
-                            <div class="price-panel-price">87&euro;</div>
+                            <div class="price-panel-title">Lite</div>
+                            <div class="price-panel-price">7&euro;</div>
                             <div class="price-panel-sub-title">Paid Monthly</div>
                         </div>
                         <div class="panel-body">
@@ -248,10 +248,10 @@ Price
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="panel panel-default price-panel">
-                        <div class="price-panel-badge price-panel-badge-blue">Great Value</div>
+                        <div class="price-panel-badge price-panel-badge-blue">Most popular</div>
                         <div class="panel-heading">
-                            <div class="price-panel-title">Company</div>
-                            <div class="price-panel-price">140&euro;</div>
+                            <div class="price-panel-title">Standart</div>
+                            <div class="price-panel-price">18&euro;</div>
                             <div class="price-panel-sub-title">Paid Monthly</div>
                         </div>
                         <div class="panel-body">
@@ -277,8 +277,8 @@ Price
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="panel panel-default price-panel">
                         <div class="panel-heading">
-                            <div class="price-panel-title">Enterprise</div>
-                            <div class="price-panel-price">489&euro;</div>
+                            <div class="price-panel-title">Proffesional</div>
+                            <div class="price-panel-price">49&euro;</div>
                             <div class="price-panel-sub-title">Paid Monthly</div>
                         </div>
                         <div class="panel-body">
