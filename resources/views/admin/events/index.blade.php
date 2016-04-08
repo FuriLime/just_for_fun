@@ -1,11 +1,11 @@
 @extends('admin/layouts/default')
-<link rel="stylesheet" href="{{ asset('assets/css/admin/events.css') }}" />
+
 {{-- Page title --}}
 @section('title')
 events List
 @parent
 @stop
-
+<link rel="stylesheet" href="{{ asset('assets/css/admin/events.css') }}" />
 {{-- Page content --}}
 @section('content')
 <section class="content-header">
