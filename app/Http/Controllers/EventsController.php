@@ -880,7 +880,7 @@ public function getCal($uuid){
         $result = $error_massage = $calendar_link = '';
 
         $dec_footer = "Powered by EventFellows - start creating calendar entries for your own event now. https://eventfellows.com/referrer/{$event->uuid} ";
-        $link_event = "Link to the EventPage:\r\n ".$event->event_url;
+        $link_event = "Link to the EventPage: ".$event->event_url;
         $loc = urlencode($event['location']);
         $title = urlencode($event->title);
 
@@ -889,10 +889,12 @@ public function getCal($uuid){
                 "-------------------------------------------------------------------------------------------------------\r\n". $dec_footer);
 
         $desc_ical = $dec_title.'\n'.
+            "-------------------------------------------------------------------------------------------------------". '\n'.
             $title.'\n'.
             $event->description.'\n'.
             $text_twit .'\n'.
             $link_event.'\n'.
+            "-------------------------------------------------------------------------------------------------------".'\n'.
             $dec_footer;
         
 
