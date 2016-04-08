@@ -208,7 +208,7 @@ Price
                                     No Credit Card
                                 </li>
                             </ul>
-                            <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">
+                            <a class="btn btn-warning btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">
                                 <i class="fa fa-user"></i>
                                 FREE Signup
                             </a>
