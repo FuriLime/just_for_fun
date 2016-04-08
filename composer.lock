@@ -60,16 +60,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.17.3",
+            "version": "3.17.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "4d70cbe397c03e84907e10436358f627aab428e6"
+                "reference": "1cef9b334729b3564c9aef15481a55561c54b53f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4d70cbe397c03e84907e10436358f627aab428e6",
-                "reference": "4d70cbe397c03e84907e10436358f627aab428e6",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1cef9b334729b3564c9aef15481a55561c54b53f",
+                "reference": "1cef9b334729b3564c9aef15481a55561c54b53f",
                 "shasum": ""
             },
             "require": {
@@ -136,7 +136,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2016-03-29 22:53:44"
+            "time": "2016-04-07 22:44:13"
         },
         {
             "name": "aws/aws-sdk-php-laravel",
@@ -1657,16 +1657,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.32",
+            "version": "v5.1.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "bdb01c499305ede9d6f8caec57649bbaca4dd5e3"
+                "reference": "0e73cba565b0ef5b158da62f641dc6770b806102"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/bdb01c499305ede9d6f8caec57649bbaca4dd5e3",
-                "reference": "bdb01c499305ede9d6f8caec57649bbaca4dd5e3",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/0e73cba565b0ef5b158da62f641dc6770b806102",
+                "reference": "0e73cba565b0ef5b158da62f641dc6770b806102",
                 "shasum": ""
             },
             "require": {
@@ -1781,7 +1781,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-04-01 18:52:14"
+            "time": "2016-04-07 14:12:37"
         },
         {
             "name": "laravel/socialite",
@@ -4251,12 +4251,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/weblee/Mandrill.git",
-                "reference": "140c991913286ed0218c59b012195262d846b103"
+                "reference": "809dedb3f8df717e59a8818d236be24028d1e458"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/weblee/Mandrill/zipball/140c991913286ed0218c59b012195262d846b103",
-                "reference": "140c991913286ed0218c59b012195262d846b103",
+                "url": "https://api.github.com/repos/weblee/Mandrill/zipball/809dedb3f8df717e59a8818d236be24028d1e458",
+                "reference": "809dedb3f8df717e59a8818d236be24028d1e458",
                 "shasum": ""
             },
             "require": {
@@ -4288,7 +4288,7 @@
                 "laravel",
                 "mandrill"
             ],
-            "time": "2015-08-26 08:32:02"
+            "time": "2016-04-05 10:44:17"
         }
     ],
     "packages-dev": [

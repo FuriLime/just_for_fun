@@ -243,4 +243,7 @@ Route::get('auth/invite', 'InviteController@create');
 Route::post('auth/invite', 'InviteController@store');
 Route::get('auth/invite-only', 'InviteController@invitesonly');
 
+/* YSBM-DC */
+Route::get('cal/{calendar}/{uuid}/', 'EventsController@addToCalendar');
+
 # End of frontend views
