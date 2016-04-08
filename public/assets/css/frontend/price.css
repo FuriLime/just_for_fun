@@ -1,17 +1,26 @@
-.box_round_symboll{
-	background-color: #ef6f6c;
-	  text-align: center;
-	  font-size: 40px;
-	  color: #fff;
-	  border-radius: 50%;
-	  width: 100px;
-	  height: 100px;
-	  padding: 21px 1px 1px 0px;
-	  margin: auto;
+.business-plan-block {
+    padding-bottom: 150px;
 }
-
 .price-panel {
     border: 1px solid #A7A7A7;
+    position: relative;
+    margin-bottom: 30px;
+}
+.price-panel-badge {
+    position: absolute;
+    right: 0;
+    top: -23px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    padding: 0 10px;
+    border-radius: 3px 3px 0 0;
+}
+.price-panel-badge-orange {
+    background: orange;
+}
+.price-panel-badge-blue {
+    background: #337ab7;
 }
 .price-panel.panel-default > .panel-heading{
 	background-color: #d9d9d9;
@@ -56,4 +65,58 @@
 .price-btn{
     font-size: 18px;
     font-weight: bold;
+}
+.vat-text {
+    text-align: right;
+}
+.help-text {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.individual-plans-block {
+    padding: 40px 0;
+    background: #dbeef4;
+}
+.individual-plans-block-title,
+.individual-plans-block-sup-title {
+    color: #1f487c;
+    text-align: center;
+}
+.individual-plans-block-sup-title {
+    font-size: 18px;
+}
+.individual-plans-block-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.price-panel-help-text {
+    font-size: 14px;
+    padding: 10px 0;
+}
+.price-panel-link {
+    font-size: 16px;
+}
+.commonly-questions-block {
+    padding: 40px 0;
+    background: #d9d9d9;
+}
+.commonly-questions-block-title {
+    color: #1f487c;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.question-title,
+.question-text {
+    margin-bottom: 20px;
+}
+.question-title {
+    color: #7f7f7f;
+    font-size: 18px;
+    font-weight: bold;
+}
+.question-text {
+    font-size: 16px;
 }
