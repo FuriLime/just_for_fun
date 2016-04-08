@@ -9,9 +9,9 @@ Price
 {{-- page level styles --}}
 @section('header_styles')
     <!--page level css starts-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/price.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jQueryUI/jquery-ui.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/index_page.css') }}">
     <!--end of page level css-->
 @stop
 
