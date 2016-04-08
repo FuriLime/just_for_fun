@@ -311,10 +311,10 @@ Price
         </div>
     </div>
     <div class="commonly-questions-block">
-        <div>
-            <div>
-                <div>
-                    <div></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="commonly-questions-block-title">Commonly asked questions</div>
                 </div>
             </div>
         </div>
