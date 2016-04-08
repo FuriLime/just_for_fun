@@ -280,9 +280,9 @@
 
 <!-- Footer Section Start -->
 <!-- //Footer Section End -->
-<div class="footer">
+<div class="footer copyright">
     <div class="container">
-        <div class="copyright">Copyright &copy; Josh Admin Template, 2015</div>
+        <p>Copyright &copy; Josh Admin Template, 2015</p>
     </div>
 </div>
 <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Return to top" data-toggle="tooltip" data-placement="left">
