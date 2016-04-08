@@ -131,6 +131,12 @@
 .feature-comparison-table thead th {
     background: #f1f1f1;
 }
+.feature-comparison-table thead th.th-colored {
+    background: #5ec4d3;
+}
+.feature-comparison-table thead th.th-colored .table-plan-title {
+    color: #fff;
+}
 .table-plan-title {
     color: #fda556;
     text-transform: uppercase;
