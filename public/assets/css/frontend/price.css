@@ -188,7 +188,7 @@
 .feature-comparison-table strong {
     color: #5e6166;
 }
-.plan-holder .individual-plan-holder:last-child {
+.plan-holder .individual-plan-holder:last-child:after {
     content: "All prices include applicable VAT";
     display: block;
 }
