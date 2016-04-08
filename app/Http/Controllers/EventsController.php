@@ -888,7 +888,7 @@ public function getCal($uuid){
             urlencode("\r\n".$event['title']."\r\n".$event['description']."\r\n". $text_twit ."\r\n". $link_event."\r\n".
                 "-------------------------------------------------------------------------------------------------------\r\n". $dec_footer);
 
-        $desc_ical = $dec_title.'\n'.
+       /* $desc_ical = $dec_title.'\n'.
             "-------------------------------------------------------------------------------------------------------". '\n'.
             $title.'\n'.
             $event->description.'\n'.
@@ -896,7 +896,7 @@ public function getCal($uuid){
             $link_event.'\n'.
             "-------------------------------------------------------------------------------------------------------".'\n'.
             $dec_footer;
-
+*/
         switch ($calendar) {
 
             case 'Google':
