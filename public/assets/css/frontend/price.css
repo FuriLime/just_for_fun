@@ -123,6 +123,13 @@
 .feature-comparison-block {
     padding: 40px 0;
 }
+.feature-comparison-block-title {
+    color: #1f487c;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
+}
 .feature-comparison-table,
 .feature-comparison-table thead th {
     text-align: center;
@@ -131,13 +138,32 @@
 .feature-comparison-table thead th {
     background: #f1f1f1;
 }
+.feature-comparison-table thead th.th-colored {
+    background: #5ec4d3;
+}
+.feature-comparison-table tbody td.td-colored {
+    background: #d6f1f3;
+}
+.feature-comparison-table thead th.th-colored .table-plan-title {
+    color: #fff;
+}
 .table-plan-title {
     color: #fda556;
     text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.price-table-btn {
+    background: #fff;
+    color: #5a5a5a;
+    padding: 6px 25px;
+}
+.price-table-btn:hover {
+    background: #e1e1e1;
+    text-decoration: none;
 }
 .table.feature-comparison-table>thead>tr>th {
     border-bottom: 1px solid #fff;
-    border-right: 2px solid #fff;
+    border-right: 3px solid #fff;
 }
 .table.feature-comparison-table>thead>tr>th:first-child {
     border-bottom: 1px solid #ddd;
@@ -146,7 +172,7 @@
 }
 .table.feature-comparison-table>tbody>tr>td {
     border-top: 1px solid #fff;
-    border-right: 2px solid #fff;
+    border-right: 3px solid #fff;
 }
 .table.feature-comparison-table>tbody>tr>td,
 .table.feature-comparison-table>tbody>tr>th,
@@ -158,4 +184,13 @@
 }
 .feature-comparison-table i.fa {
     color: #5ac4d3;
+}
+.feature-comparison-table strong {
+    color: #5e6166;
+}
+.business-plan-holder .business-plan-panel-holder:last-child:after,
+.individual-plan-holder .individual-plan-panel-holder:last-child:after {
+    content: "All prices include applicable VAT";
+    display: block;
+    text-align: right;
 }
