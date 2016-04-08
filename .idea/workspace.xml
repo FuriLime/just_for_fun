@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/frontend/custom.css" afterPath="$PROJECT_DIR$/public/assets/css/frontend/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
     </list>
     <ignored path="test-ef.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,20 +25,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="default.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.076923">
-              <caret line="286" column="63" selection-start-line="286" selection-start-column="53" selection-end-line="286" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.7607573">
+              <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/css/frontend/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61962134">
+            <state vertical-scroll-proportion="-13.846154">
               <caret line="1265" column="25" selection-start-line="1265" selection-start-column="25" selection-end-line="1265" selection-end-column="25" />
               <folding />
             </state>
@@ -109,8 +109,8 @@
         <option value="$PROJECT_DIR$/public/assets/css/frontend/price.css" />
         <option value="$PROJECT_DIR$/public/assets/css/pages/login.css" />
         <option value="$PROJECT_DIR$/public/assets/css/pages/custom.css" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/frontend/custom.css" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
       </list>
     </option>
   </component>
@@ -411,12 +411,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-04725" summary="social buttons">
-      <created>1460110720051</created>
-      <option name="number" value="04725" />
-      <option name="project" value="LOCAL" />
-      <updated>1460110720051</updated>
-    </task>
     <task id="LOCAL-04726" summary="social buttons">
       <created>1460110885641</created>
       <option name="number" value="04726" />
@@ -705,7 +699,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460118407559</updated>
     </task>
-    <option name="localTasksCounter" value="4774" />
+    <task id="LOCAL-04774" summary="social buttons">
+      <created>1460118611379</created>
+      <option name="number" value="04774" />
+      <option name="project" value="LOCAL" />
+      <updated>1460118611379</updated>
+    </task>
+    <option name="localTasksCounter" value="4775" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1087,18 +1087,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/assets/css/frontend/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
-          <caret line="286" column="63" selection-start-line="286" selection-start-column="53" selection-end-line="286" selection-end-column="63" />
+        <state vertical-scroll-proportion="-13.846154">
+          <caret line="1265" column="25" selection-start-line="1265" selection-start-column="25" selection-end-line="1265" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/frontend/custom.css">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61962134">
-          <caret line="1265" column="25" selection-start-line="1265" selection-start-column="25" selection-end-line="1265" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.7607573">
+          <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
           <folding />
         </state>
       </provider>
