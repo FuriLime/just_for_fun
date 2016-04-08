@@ -9,7 +9,7 @@ events List
 {{-- Page content --}}
 @section('content')
 <section class="content-header">
-    <h1>Events</h1>
+    <h1>Events sdfsdf</h1>
     <ol class="breadcrumb">
         <li>
             <a href="{{ route('dashboard') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
