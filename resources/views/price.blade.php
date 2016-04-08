@@ -43,7 +43,7 @@ Price
                 <div class="col-md-12 col-sm-12 col-xs-12 businesses">
                     <div class="text-center">
                         <div class="plans-for">Plans for</div>
-                        <span class="slide-head"  data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Businesses</span>
+                        <span class="slide-head title-popover" data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Businesses</span>
                         {{--<div class="plans-for-business">--}}
                             {{--<div class="plans-for">--}}
                                 {{--Plans for Businesses--}}
