@@ -1,5 +1,5 @@
 @extends('admin/layouts/default')
-
+<link rel="stylesheet" href="{{ asset('assets/css/admin/events.css') }}" />
 {{-- Page title --}}
 @section('title')
 events List
@@ -36,7 +36,7 @@ events List
                 </li>
             </ul>
 
-            <div class="tab-content">
+            <div class="tab-content events-tab-content">
                 <div class="tab-pane active" id="tab_1">
                     <table class="table table-bordered " id="table">
                         <thead>
