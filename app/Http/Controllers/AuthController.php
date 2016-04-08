@@ -52,9 +52,9 @@ class AuthController extends JoshController
     public function postSignin()
     {
 
-        $apiKey = Config::get('mailchimp.apikey');
-        $mc = new Mailchimp($apiKey);
-        $listId = Config::get('mailchimp.listId');
+//        $apiKey = Config::get('mailchimp.apikey');
+//        $mc = new Mailchimp($apiKey);
+//        $listId = Config::get('mailchimp.listId');
         // Declare the rules for the form validation
         $rules = array(
             'email'    => 'required|email',
@@ -97,10 +97,10 @@ class AuthController extends JoshController
                 $count = $count+1;
                 $user->login_count = $count;
                 $user->save();
-                $member_email = md5($user->email);
-                $mc->patch("/lists/$listId/members/$member_email", [
-                    'merge_fields' => ['LOGINCOUNT' => $user->login_count],
-                ]);
+//                $member_email = md5($user->email);
+//                $mc->patch("/lists/$listId/members/$member_email", [
+//                    'merge_fields' => ['LOGINCOUNT' => $user->login_count],
+//                ]);
                 $user_email = $user["attributes"]["email"];
                 return Redirect::route("dashboard")->with('success', Lang::get('auth/message.signin.success'));
             }

@@ -59,7 +59,7 @@ class EventsController extends Controller {
         if (Sentinel::check()) {
 //            if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
 
-            return view('events.index', compact('events'));
+            return view('admin.events.index', compact('events'));
 //                }
         }
         else {
@@ -69,10 +69,10 @@ class EventsController extends Controller {
     }
 
 
-public function getCal($uuid){
-   return redirect ('google.com');
-
-}
+//public function getCal(){
+//   return redirect ('google.com');
+//
+//}
 
     /*Confirm page*/
     public function confirm($readable_url)
