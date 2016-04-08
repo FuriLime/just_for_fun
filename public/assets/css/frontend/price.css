@@ -39,7 +39,10 @@
 	font-size: 18px;
 }
 .price-panel ul {
-    padding: 0;
+    padding: 20px 0;
+}
+.price-panel ul li {
+    margin-bottom: 10px;
 }
 .price-panel-body-heading {
     font-style: italic;
