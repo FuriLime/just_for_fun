@@ -71,7 +71,7 @@ class EventsController extends Controller {
     public function favorite() 
     {
 
-        return view('admin/events/favorite');
+        return view('admin/favorite');
     }
     
     public function getCal($uuid)

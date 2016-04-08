@@ -185,7 +185,7 @@ Route::post('event/addtocalendar', array('as' => 'event.addtocalendar', 'uses' =
 
 
 
-Route::get('favorite', 'EventsController@favorite');
+Route::get('admin/favorite', 'EventsController@favorite');
 
 Route::get('confirm/{readable_url}', array('as' => 'confirm', 'uses' => 'EventsController@confirm'));
 
