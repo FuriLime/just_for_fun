@@ -417,7 +417,9 @@ Price
     </div>
     <div class="feature-comparison-block">
         <div class="container">
-            <div class="feature-comparison-block-title title-popover" data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Feature comparison</div>
+            <div class="feature-comparison-block-title">
+                <span class="title-popover" data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Feature comparison</span>
+            </div>
             <div class="table-responsive">
                 <table class="table feature-comparison-table">
                     <thead>
