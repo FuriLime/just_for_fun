@@ -69,10 +69,9 @@ class EventsController extends Controller {
     }
 
     public function favorite() 
-    {   
-        $this->layout = null;
-        $this->autoRender = false;
-        return 121223;
+    {
+
+        return view('admin/events/favorite');
     }
     
     public function getCal($uuid)
@@ -309,6 +308,8 @@ class EventsController extends Controller {
             return redirect('confirm/'.$store_info->readable_url);
         }
     }
+
+
     /**
      * Display the specified resource.
      *
