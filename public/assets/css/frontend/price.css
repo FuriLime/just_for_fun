@@ -136,8 +136,8 @@
 }
 .table-plan-title {
     color: #fda556;
+    text-transform: uppercase;
 }
-
 .table.feature-comparison-table>thead>tr>th {
     border-bottom: 1px solid #fff;
     border-right: 2px solid #fff;
@@ -145,4 +145,7 @@
 .table.feature-comparison-table>tbody>tr>td {
     border-top: 1px solid #fff;
     border-right: 2px solid #fff;
+}
+.feature-comparison-table i.fa {
+    color: #5ac4d3;
 }
