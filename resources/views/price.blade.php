@@ -168,6 +168,9 @@ Price
 @section('footer_scripts')
     <script type="text/javascript" src="{{ asset('assets/js/jquery-ui.js') }}"></script>
     <script>
+        $('.price-btn').popover({
+            trigger: "hover"
+        });
         var check = false;
         $("#slider").slider({
             max: 1,
