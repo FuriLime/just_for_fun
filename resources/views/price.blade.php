@@ -24,12 +24,12 @@ Price
                     <span class="slide-head">Flexible plans with no surprises</span>
                 </div>
 
-                <div class="col-xs-12">
+                <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="text-center col-xs-4 col-xs-offset-4">
                         <span class="slide-text ">Whether you’re a business or an individual,there’s an EventFellows plan for you.Or simply start with our Free Plan.</span>
                     </div>
                 </div>
-                <div class="col-xs-12 ui-slider">
+                <div class="col-md-12 col-sm-12 col-xs-12 ui-slider">
                     <div class="monthly">
                         Monthly
                     </div>
@@ -40,7 +40,7 @@ Price
                         Yearly
                     </div>
                 </div>
-                <div class="col-xs-12 businesses">
+                <div class="col-md-12 col-sm-12 col-xs-12 businesses">
                     <div class="text-center">
                         <div class="plans-for">Plans for</div>
                         <span class="slide-head">Businesses</span>
@@ -52,7 +52,7 @@ Price
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="panel panel-default price-panel">
                         <div class="price-panel-badge price-panel-badge-orange">For you?</div>
                         <div class="panel-heading">
@@ -80,7 +80,7 @@ Price
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="panel panel-default price-panel">
                         <div class="panel-heading">
                             <div class="price-panel-title">SME</div>
@@ -107,7 +107,7 @@ Price
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="panel panel-default price-panel">
                         <div class="price-panel-badge price-panel-badge-blue">Great Value</div>
                         <div class="panel-heading">
@@ -135,7 +135,7 @@ Price
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="panel panel-default price-panel">
                         <div class="panel-heading">
                             <div class="price-panel-title">Enterprise</div>
@@ -162,7 +162,7 @@ Price
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="col-md-4 col-sm-6 col-xs-12 col-md-offset-9 col-sm-offset-6">
                     All prices include applicable VAT
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
