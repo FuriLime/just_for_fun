@@ -450,65 +450,65 @@ Price
                         <tr>
                             <th scope="row"><strong>PRICING</strong></th>
                             <td></td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Monthly pricing (billing annually)</th>
                             <td></td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>@fat</td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
                             <th scope="row">Monthly pricing (billing annually)</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
+                            <td>Free</td>
+                            <td>$11.20 USD per month/agent</td>
+                            <td>$20.00 USD per month/agent</td>
+                            <td>$44.00 USD per month/agent</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Monthly pricing (billing annually)</th>
+                            <td>Free</td>
+                            <td>$14.00 USD per month/agent</td>
+                            <td>$25.00 USD per month/agent</td>
+                            <td>$55.00 USD per month/agent</td>
                         </tr>
                         <tr>
                             <th scope="row">Total Agents</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
+                            <td>only 1</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
                         </tr>
                         <tr>
                             <th scope="row"><strong>SUPPORT</strong></th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
                             <th scope="row">Email support</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
                         </tr>
                         <tr>
                             <th scope="row">Setup Assistance</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
                         </tr>
                         <tr>
                             <th scope="row">Knowledge base</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
+                            <td><i class="fa fa-check"></i></td>
                         </tr>
                         <tr>
                             <th scope="row">Live chat support</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
+                            <td>only 24x5</td>
+                            <td>only 24x5</td>
+                            <td>only 24x5</td>
+                            <td>24x7</td>
                         </tr>
                     </tbody>
                 </table>
