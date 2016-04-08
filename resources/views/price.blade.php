@@ -109,7 +109,7 @@ Price
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="panel panel-default price-panel">
-                        <div class="price-panel-badge price-panel-badge-blue">For you?</div>
+                        <div class="price-panel-badge price-panel-badge-blue">Great Value</div>
                         <div class="panel-heading">
                             <div class="price-panel-title">Company</div>
                             <div class="price-panel-price">140&euro;</div>
