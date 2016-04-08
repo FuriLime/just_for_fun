@@ -21,9 +21,15 @@ body {
 }
 .footer .copyright,
 .footer .footer-menu {
-    color: #fff;
     height: 45px;
     line-height: 45px;
+}
+.footer .copyright {
+    color: #39544e;
+}
+.footer .footer-menu,
+.footer .footer-menu a {
+    color: #fff;
 }
 .icon-section{
     line-height: 7px;
