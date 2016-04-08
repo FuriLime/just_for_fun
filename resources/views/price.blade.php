@@ -430,7 +430,7 @@ Price
                             <th></th>
                             <th>
                                 <div class="table-plan-title">Lite</div>
-                                <a href="#" class="btn btn-block">Try</a>
+                                <a href="#" class="btn price-table-btn btn-block">Try</a>
                             </th>
                             <th>
                                 <div class="table-plan-title">Basic</div>
