@@ -1259,10 +1259,11 @@ footer .btn-primary.text-white {
     }
     .collapse.in{
         display:block !important;
-        z-index: 111;
+        z-index: 1;
         position: relative;
         background: #fff;
-        border: 1px solid;
+        border: 1px solid #e7e7e7;
+        margin-top: 20px;
     }
     .navbar-nav .open .dropdown-menu {
         position: static;
