@@ -64,6 +64,7 @@ events List
                                         <td>{{ $event->title }}</td>
                                         <td>{{ $event->location }}</td>
                                         <td>{{ $event->startt }} - {{$event->finisht }}</td>
+                                        <td></td>
                                         <td>
                                             <div class="btn-group">
                                                 <button type="button" class="btn btn-default">Action</button>
