@@ -60,9 +60,9 @@ events List
                                                 <i class="fa fa-eye-slash"></i>
                                             @endif
                                         </td>
-                                        <td>Airi Satou</td>
-                                        <td>Kelly</td>
-                                        <td>Satou124</td>
+                                        <td>{{ $event->title }}</td>
+                                        <td>{{ $event->location }}</td>
+                                        <td>{{ $event->startt }} - {{$event->finisht }}</td>
                                         <td></td>
                                     </tr>
                                 @endif
