@@ -316,6 +316,120 @@ Price
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="commonly-questions-block-title">Commonly asked questions</div>
                 </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="question-title">
+                        Is your free plan really free?
+                    </div>
+                    <div class="question-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla cursus,
+                        metus quis rhoncus sodales, nunc eros luctus diam, auctor imperdiet tortor lacus elementum dui.
+                        Donec lacinia erat tellus, in dictum neque lobortis id. Nullam congue nec mauris ac tempor.
+                        In sit amet nisi facilisis, sollicitudin tortor in, ultricies massa.
+                        In viverra lacus in vestibulum hendrerit. Donec non felis tristique, commodo lorem vitae,
+                        porta diam. Donec facilisis orci non quam varius, eget hendrerit purus scelerisque.
+                        Nulla in viverra ex, vitae pharetra dui. Integer risus ipsum, hendrerit non lacus ac,
+                        venenatis feugiat arcu. Integer diam nisi, ullamcorper eget nunc auctor,
+                        luctus ullamcorper eros. Proin vitae urna congue, iaculis massa sit amet, auctor purus.
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="question-title">
+                        Is your free plan really free?
+                    </div>
+                    <div class="question-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla cursus,
+                        metus quis rhoncus sodales, nunc eros luctus diam, auctor imperdiet tortor lacus elementum dui.
+                        Phasellus vitae arcu id nisi tincidunt semper et ut elit. Fusce tempor tristique mi at tempor.
+                        Suspendisse dignissim leo lectus. Vivamus interdum dictum nisi in imperdiet.
+                        In sit amet nisi facilisis, sollicitudin tortor in, ultricies massa.
+                        In viverra lacus in vestibulum hendrerit. Donec non felis tristique, commodo lorem vitae,
+                        porta diam. Donec facilisis orci non quam varius, eget hendrerit purus scelerisque.
+                        Nulla in viverra ex, vitae pharetra dui. Integer risus ipsum, hendrerit non lacus ac,
+                        venenatis feugiat arcu. Integer diam nisi, ullamcorper eget nunc auctor,
+                        luctus ullamcorper eros. Proin vitae urna congue, iaculis massa sit amet, auctor purus.
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="question-title">
+                        Is your free plan really free?
+                    </div>
+                    <div class="question-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla cursus,
+                        metus quis rhoncus sodales, nunc eros luctus diam, auctor imperdiet tortor lacus elementum dui.
+                        Donec lacinia erat tellus, in dictum neque lobortis id. Nullam congue nec mauris ac tempor.
+                        Phasellus vitae arcu id nisi tincidunt semper et ut elit. Fusce tempor tristique mi at tempor.
+                        Suspendisse dignissim leo lectus. Vivamus interdum dictum nisi in imperdiet.
+                        In sit amet nisi facilisis, sollicitudin tortor in, ultricies massa.
+                        Nulla in viverra ex, vitae pharetra dui. Integer risus ipsum, hendrerit non lacus ac,
+                        venenatis feugiat arcu. Integer diam nisi, ullamcorper eget nunc auctor,
+                        luctus ullamcorper eros. Proin vitae urna congue, iaculis massa sit amet, auctor purus.
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="question-title">
+                        Is your free plan really free?
+                    </div>
+                    <div class="question-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla cursus,
+                        metus quis rhoncus sodales, nunc eros luctus diam, auctor imperdiet tortor lacus elementum dui.
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="question-title">
+                        Is your free plan really free?
+                    </div>
+                    <div class="question-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla cursus,
+                        metus quis rhoncus sodales, nunc eros luctus diam, auctor imperdiet tortor lacus elementum dui.
+                        Suspendisse dignissim leo lectus. Vivamus interdum dictum nisi in imperdiet.
+                        In sit amet nisi facilisis, sollicitudin tortor in, ultricies massa.
+                        In viverra lacus in vestibulum hendrerit. Donec non felis tristique, commodo lorem vitae,
+                        porta diam. Donec facilisis orci non quam varius, eget hendrerit purus scelerisque.
+                        Nulla in viverra ex, vitae pharetra dui. Integer risus ipsum, hendrerit non lacus ac,
+                        venenatis feugiat arcu. Integer diam nisi, ullamcorper eget nunc auctor,
+                        luctus ullamcorper eros. Proin vitae urna congue, iaculis massa sit amet, auctor purus.
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="question-title">
+                        Is your free plan really free?
+                    </div>
+                    <div class="question-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla cursus,
+                        metus quis rhoncus sodales, nunc eros luctus diam, auctor imperdiet tortor lacus elementum dui.
+                        Donec lacinia erat tellus, in dictum neque lobortis id. Nullam congue nec mauris ac tempor.
+                        Phasellus vitae arcu id nisi tincidunt semper et ut elit. Fusce tempor tristique mi at tempor.
+                        Suspendisse dignissim leo lectus. Vivamus interdum dictum nisi in imperdiet.
+                        In sit amet nisi facilisis, sollicitudin tortor in, ultricies massa.
+                        In viverra lacus in vestibulum hendrerit. Donec non felis tristique, commodo lorem vitae,
+                        porta diam. Donec facilisis orci non quam varius, eget hendrerit purus scelerisque.
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="question-title">
+                        Is your free plan really free?
+                    </div>
+                    <div class="question-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla cursus,
+                        metus quis rhoncus sodales, nunc eros luctus diam, auctor imperdiet tortor lacus elementum dui.
+                        Donec lacinia erat tellus, in dictum neque lobortis id. Nullam congue nec mauris ac tempor.
+                        Phasellus vitae arcu id nisi tincidunt semper et ut elit. Fusce tempor tristique mi at tempor.
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="question-title">
+                        Is your free plan really free?
+                    </div>
+                    <div class="question-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla cursus,
+                        metus quis rhoncus sodales, nunc eros luctus diam, auctor imperdiet tortor lacus elementum dui.
+                        In viverra lacus in vestibulum hendrerit. Donec non felis tristique, commodo lorem vitae,
+                        porta diam. Donec facilisis orci non quam varius, eget hendrerit purus scelerisque.
+                        Nulla in viverra ex, vitae pharetra dui. Integer risus ipsum, hendrerit non lacus ac,
+                        venenatis feugiat arcu. Integer diam nisi, ullamcorper eget nunc auctor,
+                        luctus ullamcorper eros. Proin vitae urna congue, iaculis massa sit amet, auctor purus.
+                    </div>
+                </div>
             </div>
         </div>
     </div>
