@@ -522,6 +522,9 @@ Price
 @section('footer_scripts')
     <script type="text/javascript" src="{{ asset('assets/js/jquery-ui.js') }}"></script>
     <script>
+        var height = Math.max($(".test").height());
+        $(".test").height(height);
+
         function wheretoplace(){
             var width = window.innerWidth;
             if (width <= 900) {
