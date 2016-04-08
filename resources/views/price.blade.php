@@ -430,19 +430,19 @@ Price
                             <th></th>
                             <th>
                                 <div class="table-plan-title">Lite</div>
-                                <a href="#" class="btn price-table-btn btn-block">Try</a>
+                                <a href="#" class="btn price-table-btn">Try</a>
                             </th>
                             <th>
                                 <div class="table-plan-title">Basic</div>
-                                <a href="#" class="btn price-table-btn btn-block">Try</a>
+                                <a href="#" class="btn price-table-btn">Try</a>
                             </th>
                             <th class="th-colored">
                                 <div class="table-plan-title">Advanced</div>
-                                <a href="#" class="btn price-table-btn btn-block">Try</a>
+                                <a href="#" class="btn price-table-btn">Try</a>
                             </th>
                             <th>
                                 <div class="table-plan-title">Premium</div>
-                                <a href="#" class="btn price-table-btn btn-block">Try</a>
+                                <a href="#" class="btn price-table-btn">Try</a>
                             </th>
                         </tr>
                     </thead>
