@@ -365,6 +365,15 @@ public function getCal($uuid){
 
         $event['timezone_select'] = self::getTimeZoneSelect($event['timezone']);
 
+        $calendar_shorts = [];
+        $calendars_available = ['Google', 'Yahoo', 'Microsoft', 'Outlook', 'iCal'];
+
+        foreach ($calendars_available as $calendar) {
+            $calendar_shorts[$calendar] = url().'/cal/'.$calendar.'/'.$event->uuid;
+        }
+
+        $event['calendar_shorts'] = $calendar_shorts;
+
         // Is the user logged in?
         if (Sentinel::check()) {
 //      if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
@@ -805,15 +814,19 @@ public function getCal($uuid){
      * @param  char36 $uuid, string $calendar
      * @return Url
      */
-    public function addToCalendar(Request $request)
-    {
+    public function addToCalendar(Request $request, $calendar = false, $uuid = false)
+    {   
         $info = $request->all();
 
-        $uuid = $info['uuid'];
-        $calendar = $info['calendar'];
+        if (!$uuid) {
+            $uuid = $info['uuid'];    
+        }
+        
+        if (!$calendar) {
+            $calendar = $info['calendar'];
+        }
 
         $event = Event::whereUuid($uuid)->first();
-
 
         // perform events time to 00.00 timezone
         $date = new \DateTime($event['start'], new \DateTimeZone($event['timezone']));
@@ -925,17 +938,7 @@ public function getCal($uuid){
                     '&description='. $desc;
                 break;
 
-            case 'Outloock':
-                $result = 'success_load';
-                $calendar_link = '/assets/ical.php?name='. $title .
-                    '&sd='. $event_start_zero->format('Ymd') .
-                    '&st='. $event_start_zero->format('His') .
-                    '&fd='. $event_finish_zero->format('Ymd') .
-                    '&ft='. $event_finish_zero->format('His') .
-                    '&loc='. $event['location'] .
-                    '&desc='. $desc_ical;
-                break;
-
+            case 'Outlook':
             case 'iCal':
                 $result = 'success_load';
                 $calendar_link = '/assets/ical.php?name='. $title .
@@ -951,6 +954,10 @@ public function getCal($uuid){
                 $result = 'error';
                 $error_massage = 'Not supported for now';
                 break;
+        }
+
+        if ($request->method() == 'GET') {
+            return redirect($calendar_link);
         }
 
         echo json_encode(array(

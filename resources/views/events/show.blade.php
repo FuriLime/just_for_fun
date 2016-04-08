@@ -62,11 +62,11 @@
                                     <div class="snippet-text">Copy this HTML snippet:</div>
                                     <textarea class="snippet-textarea" title="You need to be able to use html code" onclick="this.focus(); this.select()" spellcheck="false" readonly="1"><!-- EventFellows Integration code snippet -->
                                         <p>Add event {{$event->title}} to your calendar:<br/>
-                                            <a href="{{$event->readable_url}}" target="_blank" >Google</a> |
-                                            <a href=""target="_blank">Yahoo</a> |
-                                            <a href=""target="_blank">Microsoft</a> |
-                                            <a href="">Outlook</a> |
-                                            <a href="">iCal</a>
+                                            <a href="{{ $event['calendar_shorts']['Google'] }}" target="_blank" >Google</a> |
+                                            <a href="{{ $event['calendar_shorts']['Yahoo'] }}"target="_blank">Yahoo</a> |
+                                            <a href="{{ $event['calendar_shorts']['Microsoft'] }}"target="_blank">Microsoft</a> |
+                                            <a href="{{ $event['calendar_shorts']['Outlook'] }}">Outlook</a> |
+                                            <a href="{{ $event['calendar_shorts']['iCal'] }}">iCal</a>
                                         </p>
                                     <!-- End of EventFellows Integration code snippet -->
                                     </textarea>
@@ -342,7 +342,7 @@
                         'Yahoo': [moment().subtract('days', 1), moment().subtract('days', 1)],
                         'Microsoft': [moment().subtract('days', 2), moment().subtract('days', 2)],
                         'iCal': [moment().subtract('days', 2), moment().subtract('days', 2)],
-                        'Outloock': [moment().subtract('days', 2), moment().subtract('days', 2)],
+                        'Outlook': [moment().subtract('days', 2), moment().subtract('days', 2)],
                     },
                     startDate: moment().subtract('days', 29),
                     endDate: moment()
