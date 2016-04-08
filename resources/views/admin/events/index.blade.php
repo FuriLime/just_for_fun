@@ -41,51 +41,32 @@ events List
                     <div class="table-scrollable">
                         <table class="table table-hover">
                             <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Username</th>
-                                <th>Status</th>
-                            </tr>
+                                <tr>
+                                    <th>Status</th>
+                                    <th>Event Title</th>
+                                    <th>Location</th>
+                                    <th>Event Date</th>
+                                    <th>Downloads</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Airi Satou</td>
-                                <td>Kelly</td>
-                                <td>Satou124</td>
-                                <td>
-                                    <span class="label label-sm label-success">Approved</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Angelica</td>
-                                <td>Ramos</td>
-                                <td>Angelica343</td>
-                                <td>
-                                    <span class="label label-sm label-info">Pending</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Ashton</td>
-                                <td>Cox</td>
-                                <td>Cox111</td>
-                                <td>
-                                    <span class="label label-sm label-warning">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Bradley</td>
-                                <td>Greer</td>
-                                <td>Bradley</td>
-                                <td>
-                                    <span class="label label-sm label-danger">Blocked</span>
-                                </td>
-                            </tr>
+                            @foreach ($events as $event)
+                                @if(($event->status!='Draft' && (!Sentinel::check())) || Sentinel::check())
+                                    <tr>
+                                        <td>
+                                            @if ($event->status == 'Publish')
+                                                +
+                                            @else
+                                                -
+                                            @endif
+                                        </td>
+                                        <td>Airi Satou</td>
+                                        <td>Kelly</td>
+                                        <td>Satou124</td>
+                                        <td></td>
+                                    </tr>
+                                @endif
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
