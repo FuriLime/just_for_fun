@@ -63,16 +63,16 @@ Price
                         <div class="price-panel-body-heading">Ideal for testing</div>
                         <ul>
                             <li>
-                                Lorem Ipsum Dolor
+                                10 Events / 500 Downloads
                             </li>
                             <li>
-                                Lorem Ipsum Dolor
+                                Basic Event Features
                             </li>
                             <li>
-                                Lorem Ipsum Dolor
+                                Personal EventPage
                             </li>
                             <li>
-                                Lorem Ipsum Dolor
+                                Event Dashboard
                             </li>
                         </ul>
                         <a class="btn btn-primary btn-block price-btn" href="#">Start 14-day trial</a>
@@ -87,19 +87,19 @@ Price
                         <div class="price-panel-sub-title">Paid Monthly</div>
                     </div>
                     <div class="panel-body">
-                        <div class="price-panel-body-heading">Ideal for testing</div>
+                        <div class="price-panel-body-heading">Ideal for small groups</div>
                         <ul>
                             <li>
-                                Lorem Ipsum Dolor
+                                All from "FREE"
                             </li>
                             <li>
-                                Lorem Ipsum Dolor
+                                + Social Sharing
                             </li>
                             <li>
-                                Lorem Ipsum Dolor
+                                + Basic Tracking
                             </li>
                             <li>
-                                Lorem Ipsum Dolor
+                                + Email Support
                             </li>
                         </ul>
                         <a class="btn btn-primary btn-block price-btn" href="#">Start 14-day trial</a>
@@ -109,24 +109,24 @@ Price
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default price-panel">
                     <div class="panel-heading">
-                        <div class="price-panel-title">Suscipizzle</div>
+                        <div class="price-panel-title">Company</div>
                         <div class="price-panel-price">140&euro;</div>
                         <div class="price-panel-sub-title">Paid Monthly</div>
                     </div>
                     <div class="panel-body">
-                        <div class="price-panel-body-heading">Ideal for testing</div>
+                        <div class="price-panel-body-heading">Ideal for ...</div>
                         <ul>
                             <li>
-                                Lorem Ipsum Dolor
+                                All from "Lite"
                             </li>
                             <li>
-                                Lorem Ipsum Dolor
+                                + ...
                             </li>
                             <li>
-                                Lorem Ipsum Dolor
+                                + ...
                             </li>
                             <li>
-                                Lorem Ipsum Dolor
+                                + ...
                             </li>
                         </ul>
                         <a class="btn btn-primary btn-block price-btn" href="#">Start 14-day trial</a>
@@ -136,24 +136,24 @@ Price
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default price-panel">
                     <div class="panel-heading">
-                        <div class="price-panel-title">Suscipizzle</div>
+                        <div class="price-panel-title">Enterprise</div>
                         <div class="price-panel-price">489&euro;</div>
                         <div class="price-panel-sub-title">Paid Monthly</div>
                     </div>
                     <div class="panel-body">
-                        <div class="price-panel-body-heading">Ideal for testing</div>
+                        <div class="price-panel-body-heading">Ideal for ...</div>
                         <ul>
                             <li>
-                                Lorem Ipsum Dolor
+                                All from "Standart"
                             </li>
                             <li>
-                                Lorem Ipsum Dolor
+                                + ...
                             </li>
                             <li>
-                                Lorem Ipsum Dolor
+                                + ...
                             </li>
                             <li>
-                                Lorem Ipsum Dolor
+                                + ...
                             </li>
                         </ul>
                         <a class="btn btn-primary btn-block price-btn" href="#">Start 14-day trial</a>
