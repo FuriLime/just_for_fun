@@ -12,7 +12,7 @@ events List
     <h1>Events</h1>
 </section>
 
-<div class="container">
+<section class="content">
     <div class="panel-heading clearfix">
         <h4 class="panel-title pull-left"> <i class="livicon" data-name="list-ul" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
             Events List
@@ -79,7 +79,7 @@ events List
             </tbody>
         </table>
     </div>
-</div>
+</section>
 @stop
 
 {{-- Body Bottom confirm modal --}}
