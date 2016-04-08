@@ -46,8 +46,8 @@ Price
                         <span class="slide-head title-popover" data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Businesses</span>
                     </div>
                 </div>
-                <div class="businesses-plan-holder">
-                    <div class="col-md-3 col-sm-6 col-xs-12 businesses-plan-panel-holder">
+                <div class="business-plan-holder">
+                    <div class="col-md-3 col-sm-6 col-xs-12 business-plan-panel-holder">
                         <div class="panel panel-default price-panel">
                             <div class="price-panel-badge price-panel-badge-orange">For you?</div>
                             <div class="panel-heading">
@@ -75,7 +75,7 @@ Price
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 businesses-plan-panel-holder">
+                    <div class="col-md-3 col-sm-6 col-xs-12 business-plan-panel-holder">
                         <div class="panel panel-default price-panel">
                             <div class="panel-heading">
                                 <div class="price-panel-title">SME</div>
@@ -102,7 +102,7 @@ Price
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 businesses-plan-panel-holder">
+                    <div class="col-md-3 col-sm-6 col-xs-12 business-plan-panel-holder">
                         <div class="panel panel-default price-panel">
                             <div class="price-panel-badge price-panel-badge-blue">Great Value</div>
                             <div class="panel-heading">
@@ -130,7 +130,7 @@ Price
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 businesses-plan-panel-holder">
+                    <div class="col-md-3 col-sm-6 col-xs-12 business-plan-panel-holder">
                         <div class="panel panel-default price-panel">
                             <div class="panel-heading">
                                 <div class="price-panel-title">Enterprise</div>
