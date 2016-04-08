@@ -421,10 +421,10 @@ Price
             </div>
         </div>
     </div>
-    <div class="feature-comparsion-block">
+    <div class="feature-comparison-block">
         <div class="container">
             <div class="table-responsive">
-                <table class="table">
+                <table class="table feature-comparison-table">
                     <thead>
                         <tr>
                             <th></th>
