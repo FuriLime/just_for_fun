@@ -59,7 +59,7 @@ class EventsController extends Controller {
         if (Sentinel::check()) {
 //            if (Sentinel::inRole('admin') || Sentinel::inRole('user')) {
 
-            return view('admin.events.index', compact('events'));
+            return view('events.index', compact('events'));
 //                }
         }
         else {
@@ -68,11 +68,17 @@ class EventsController extends Controller {
         }
     }
 
-
-//public function getCal(){
-//   return redirect ('google.com');
-//
-//}
+    public function favorite() 
+    {   
+        $this->layout = null;
+        $this->autoRender = false;
+        return 121223;
+    }
+    
+    public function getCal($uuid)
+    {
+       return redirect('google.com');
+    }
 
     /*Confirm page*/
     public function confirm($readable_url)
@@ -1107,5 +1113,4 @@ class EventsController extends Controller {
 
         return $zones;
     }
-
 }

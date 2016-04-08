@@ -13,7 +13,6 @@ Josh Admin Template
     <link href="{{ asset('assets/css/pages/calendar_custom.css') }}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" media="all" href="{{ asset('assets/vendors/jvectormap/jquery-jvectormap.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/vendors/animate/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/only_dashboard.css') }}" />
     
 @stop
 

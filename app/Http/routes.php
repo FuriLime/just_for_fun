@@ -182,12 +182,9 @@ Route::get('events/{readable_url}/clone', array('as' => 'events.clone', 'uses' =
 Route::post('events/{readable_url}/clone', array('as' => 'events.clone', 'uses' => 'EventsController@clonne'));
 Route::get('events/{uuid}/confirm-delete', array('as' => 'events.confirm-delete', 'uses' => 'EventsController@getModalDelete'));
 Route::post('event/addtocalendar', array('as' => 'event.addtocalendar', 'uses' => 'EventsController@addToCalendar'));
-
-
-
+Route::get('events/favorite', 'EventsController@favorite');
 
 Route::get('confirm/{readable_url}', array('as' => 'confirm', 'uses' => 'EventsController@confirm'));
-
 
 Route::get('/', array('as' => 'home', function () {
     return View::make('index');
@@ -243,7 +240,6 @@ Route::get('auth/invite', 'InviteController@create');
 Route::post('auth/invite', 'InviteController@store');
 Route::get('auth/invite-only', 'InviteController@invitesonly');
 
-/* YSBM-DC */
 Route::get('cal/{calendar}/{uuid}/', 'EventsController@addToCalendar');
 
 # End of frontend views
