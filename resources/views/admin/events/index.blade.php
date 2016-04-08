@@ -78,6 +78,24 @@ events List
                                                     <li><a href="#">Separated link</a></li>
                                                 </ul>
                                             </div>
+
+                                            <div class="button-dropdown" data-buttons="dropdown">
+                                                <a href="#" class="button button-rounded button-flat-primary">
+                                                    button
+                                                    <i class="fa fa-caret-down"></i>
+                                                </a>
+                                                <ul class="button-dropdown-menu-below" style="display: none;">
+                                                    <li>
+                                                        <a href="#">Option 1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Option 2</a>
+                                                    </li>
+                                                    <li class="button-dropdown-divider">
+                                                        <a href="#">Option 3</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endif
