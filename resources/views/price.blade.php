@@ -331,8 +331,6 @@ Price
                         venenatis feugiat arcu. Integer diam nisi, ullamcorper eget nunc auctor,
                         luctus ullamcorper eros. Proin vitae urna congue, iaculis massa sit amet, auctor purus.
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="question-title">
                         Is your free plan really free?
                     </div>
@@ -348,8 +346,6 @@ Price
                         venenatis feugiat arcu. Integer diam nisi, ullamcorper eget nunc auctor,
                         luctus ullamcorper eros. Proin vitae urna congue, iaculis massa sit amet, auctor purus.
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="question-title">
                         Is your free plan really free?
                     </div>
@@ -364,8 +360,6 @@ Price
                         venenatis feugiat arcu. Integer diam nisi, ullamcorper eget nunc auctor,
                         luctus ullamcorper eros. Proin vitae urna congue, iaculis massa sit amet, auctor purus.
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="question-title">
                         Is your free plan really free?
                     </div>
@@ -389,8 +383,6 @@ Price
                         venenatis feugiat arcu. Integer diam nisi, ullamcorper eget nunc auctor,
                         luctus ullamcorper eros. Proin vitae urna congue, iaculis massa sit amet, auctor purus.
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="question-title">
                         Is your free plan really free?
                     </div>
@@ -404,8 +396,6 @@ Price
                         In viverra lacus in vestibulum hendrerit. Donec non felis tristique, commodo lorem vitae,
                         porta diam. Donec facilisis orci non quam varius, eget hendrerit purus scelerisque.
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="question-title">
                         Is your free plan really free?
                     </div>
@@ -415,8 +405,6 @@ Price
                         Donec lacinia erat tellus, in dictum neque lobortis id. Nullam congue nec mauris ac tempor.
                         Phasellus vitae arcu id nisi tincidunt semper et ut elit. Fusce tempor tristique mi at tempor.
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="question-title">
                         Is your free plan really free?
                     </div>
