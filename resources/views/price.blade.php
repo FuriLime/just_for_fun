@@ -448,21 +448,63 @@ Price
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
+                            <th scope="row"><strong>PRICING</strong></th>
+                            <td></td>
                             <td>Otto</td>
                             <td>@mdo</td>
                             <td>@mdo</td>
                         </tr>
                         <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
+                            <th scope="row">Monthly pricing (billing annually)</th>
+                            <td></td>
                             <td>Thornton</td>
                             <td>@fat</td>
                             <td>@fat</td>
                         </tr>
                         <tr>
-                            <th scope="row">3</th>
+                            <th scope="row">Monthly pricing (billing annually)</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Total Agents</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><strong>SUPPORT</strong></th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Email support</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Setup Assistance</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Knowledge base</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Live chat support</th>
                             <td>Larry</td>
                             <td>the Bird</td>
                             <td>@twitter</td>
