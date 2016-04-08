@@ -212,6 +212,10 @@ Price
                                 <i class="fa fa-user"></i>
                                 FREE Signup
                             </a>
+                            <div class="price-panel-help-text">
+                                You can change or cancel your subscription at any time!
+                            </div>
+                            <a href="#" class="price-panel-link">Questions?</a>
                         </div>
                     </div>
                 </div>
