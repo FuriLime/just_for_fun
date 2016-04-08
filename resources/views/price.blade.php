@@ -310,6 +310,15 @@ Price
             </div>
         </div>
     </div>
+    <div class="commonly-questions-block">
+        <div>
+            <div>
+                <div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
 @stop
 
 {{-- page level scripts --}}
