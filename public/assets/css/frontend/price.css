@@ -137,3 +137,10 @@
 .table-plan-title {
     color: #fda556;
 }
+
+.table.feature-comparison-table>thead>tr>th {
+    border-bottom: 1px solid #fff;
+}
+.table.feature-comparison-table>tbody>tr>td {
+    border-top: 1px solid #fff;
+}
