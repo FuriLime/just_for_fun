@@ -131,9 +131,6 @@
 .feature-comparison-table thead th {
     background: #f1f1f1;
 }
-/*.feature-comparison-table thead th:first-child {*/
-    /**/
-/*}*/
 .table-plan-title {
     color: #fda556;
     text-transform: uppercase;
@@ -142,15 +139,23 @@
     border-bottom: 1px solid #fff;
     border-right: 2px solid #fff;
 }
-.table.feature-comparison-table>tbody>tr>td {
-    border-top: 1px solid #fff;
-    border-right: 2px solid #fff;
-}
-.feature-comparison-table i.fa {
-    color: #5ac4d3;
-}
 .table.feature-comparison-table>thead>tr>th:first-child {
     border-bottom: 1px solid #ddd;
     border-right: none;
     background: none;
+}
+.table.feature-comparison-table>tbody>tr>td {
+    border-top: 1px solid #fff;
+    border-right: 2px solid #fff;
+}
+.table.feature-comparison-table>tbody>tr>td,
+.table.feature-comparison-table>tbody>tr>th,
+.table.feature-comparison-table>tfoot>tr>td,
+.table.feature-comparison-table>tfoot>tr>th,
+.table.feature-comparison-table>thead>tr>td,
+.table.feature-comparison-table>thead>tr>th {
+    padding: 20px 8px;
+}
+.feature-comparison-table i.fa {
+    color: #5ac4d3;
 }
