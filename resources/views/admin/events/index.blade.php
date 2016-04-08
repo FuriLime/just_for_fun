@@ -13,12 +13,9 @@ events List
 </section>
 
 <section class="content">
-    <div class="panel-heading clearfix">
-        <h1 class="panel-title pull-left"> <i class="fa fa-columns"></i>
-            All Events of MeKai
-        </h1>
-    </div>
-    <br />
+    <h1 class="pull-left"> <i class="fa fa-columns"></i>
+        All Events of MeKai
+    </h1>
     <div class="panel-body">
         <table class="table table-bordered " id="table">
             <thead>
