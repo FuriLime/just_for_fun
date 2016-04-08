@@ -25,6 +25,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-22.0">
+              <caret line="248" column="6" selection-start-line="248" selection-start-column="6" selection-end-line="248" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.346154">
+              <caret line="511" column="31" selection-start-line="510" selection-start-column="11" selection-end-line="511" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="price.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/css/frontend/price.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -38,8 +58,8 @@
       <file leaf-file-name="price.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/price.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6729776">
-              <caret line="524" column="56" selection-start-line="524" selection-start-column="56" selection-end-line="524" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.43889844">
+              <caret line="525" column="27" selection-start-line="525" selection-start-column="27" selection-end-line="525" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -389,12 +409,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-04691" summary="social buttons">
-      <created>1460102847269</created>
-      <option name="number" value="04691" />
-      <option name="project" value="LOCAL" />
-      <updated>1460102847269</updated>
-    </task>
     <task id="LOCAL-04692" summary="social buttons">
       <created>1460102916216</created>
       <option name="number" value="04692" />
@@ -683,7 +697,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460113108549</updated>
     </task>
-    <option name="localTasksCounter" value="4740" />
+    <task id="LOCAL-04740" summary="social buttons">
+      <created>1460113252807</created>
+      <option name="number" value="04740" />
+      <option name="project" value="LOCAL" />
+      <updated>1460113252807</updated>
+    </task>
+    <option name="localTasksCounter" value="4741" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1021,34 +1041,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9414802">
-          <caret line="248" column="6" selection-start-line="248" selection-start-column="6" selection-end-line="248" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/frontend/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3321859">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="2" selection-end-line="34" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.638554">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41480207">
-          <caret line="339" column="25" selection-start-line="339" selection-start-column="16" selection-end-line="339" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1061,10 +1057,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.024096">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.346154">
+          <caret line="511" column="31" selection-start-line="510" selection-start-column="11" selection-end-line="511" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.0">
+          <caret line="248" column="6" selection-start-line="248" selection-start-column="6" selection-end-line="248" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/price.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6729776">
-          <caret line="524" column="56" selection-start-line="524" selection-start-column="56" selection-end-line="524" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.43889844">
+          <caret line="525" column="27" selection-start-line="525" selection-start-column="27" selection-end-line="525" selection-end-column="27" />
           <folding />
         </state>
       </provider>
