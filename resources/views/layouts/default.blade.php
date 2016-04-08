@@ -283,8 +283,8 @@
 <div class="footer">
     <div class="container">
         <div class="row">
-            <div class="copyright col-md-6">&copy; 2011 - <?php echo date('Y'); ?> Copyright by EventFellows | BrainFactor GmbH. All Rights Reserved.</div>
-            <div class="footer-menu col-md-6"><a href="#">How EventFellows works</a> | <a href="#">EventFellows Impressum</a> | <a href="#">EventFellows Datenschutz</a></div>
+            <div class="col-md-6 col-sm-12 col-xs-12 copyright">&copy; 2011 - <?php echo date('Y'); ?> Copyright by EventFellows | BrainFactor GmbH. All Rights Reserved.</div>
+            <div class="col-md-6 col-sm-12 col-xs-12 footer-menu"><a href="#">How EventFellows works</a> | <a href="#">EventFellows Impressum</a> | <a href="#">EventFellows Datenschutz</a></div>
         </div>
     </div>
 </div>
