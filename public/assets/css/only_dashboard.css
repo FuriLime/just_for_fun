@@ -1140,3 +1140,38 @@ Chart tooltips
     margin: 15px;
      border-radius: 5px;
 }
+
+/* YSBM-DC */
+.page-sidebar-menu li {
+    padding-left: 5px;
+}
+
+.page-sidebar-menu li:hover {
+    background: #02567E !important;
+}
+
+.page-sidebar-menu li .fa-angle-double-down {
+    float: right;
+    line-height: 1.2;
+    margin-right: -7px;
+}
+
+.skin-josh .sidebar a .title {
+    padding-left: 5px;
+}
+
+.left-side .permament-links {
+    color: #FFF;
+    margin-top: 50px;
+    text-align: right;
+}
+
+.left-side .permament-links li {
+    margin-bottom: 8px;
+}
+
+.left-side .permament-links li a {
+    padding-right: 15px;
+    font-size: 15px;
+}
+/* end */

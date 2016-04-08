@@ -24,6 +24,7 @@
     <link href="{{ asset('assets/css/styles/black.css') }}" rel="stylesheet" type="text/css" id="colorscheme" />
     <link href="{{ asset('assets/css/panel.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('assets/css/metisMenu.css') }}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="{{ asset('assets/css/only_dashboard.css') }}" />
 
     <!-- end of global css -->
     <!--page level css-->
@@ -33,8 +34,8 @@
 
 <body class="skin-josh">
     <header class="header">
-        <a href="{{ route('home') }}" class="logo">
-            <img src="{{ asset('assets/img/logo.png') }}" alt="logo">
+        <a href="/admin" class="logo">
+            <img src="{{ asset('assets/img/logo_white.png') }}" alt="logo">
         </a>
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
@@ -114,101 +115,35 @@
             <section class="sidebar ">
                 <div class="page-sidebar  sidebar-nav">
                     <!-- BEGIN SIDEBAR MENU -->
-                    <ul id="menu" class="page-sidebar-menu">
-                        <li {!! (Request::is('user') ? 'class="active"' : '') !!}>
+                        <!-- <li {!! (Request::is('user') ? 'class="active"' : '') !!}>
                             <a href="{{ route('dashboard') }}">
                                 <i class="livicon" data-name="home" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>
                                 <span class="title">Dashboard</span>
                             </a>
-                        </li>
-                        <li {!! (Request::is('admin/users') || Request::is('admin/users/create') || Request::is('admin/users/*') || Request::is('admin/deleted_users') ? 'class="active"' : '') !!}>
-                            <a href="#">
-                                <i class="livicon" data-name="user" data-size="18" data-c="#6CC66C" data-hc="#6CC66C" data-loop="true"></i>
-                                <span class="title">You</span>
-                                <span class="fa arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                               {{--<!--  <li {!! (Request::is('admin/users') ? 'class="active" id="active"' : '') !!}>--}}
-                                    {{--<a href="{{ URL::to('admin/users') }}">--}}
-                                        {{--<i class="fa fa-angle-double-right"></i>--}}
-                                        {{--Users--}}
-                                    {{--</a>--}}
-                                {{--</li> -->--}}
-                                {{--<!-- <li {!! (Request::is('admin/users/create') ? 'class="active" id="active"' : '') !!}>--}}
-                                    {{--<a href="{{ URL::to('admin/users/create') }}">--}}
-                                        {{--<i class="fa fa-angle-double-right"></i>--}}
-                                        {{--Add New User--}}
-                                    {{--</a>--}}
-                                {{--</li> -->--}}
-
-                                 <li {!! (Request::is('events') ? 'class="active" id="active"' : '') !!} >
-                                    <a href="{{ URL::to('admin/events') }}">
-                                        {{--<a href="{{ URL::to('admin/events') }}">--}}
-                                        <i class="fa fa-angle-double-right"></i>
-                                        Favorite events
-                                    </a>
-                                </li>
-                                <li {!! ((Request::is('admin/users/*')) && !(Request::is('admin/users/create')) ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::route('users.show',Sentinel::getUser()->id) }}">
-                                        <i class="fa fa-angle-double-right"></i>
-                                        Personal profile
-                                    </a>
-                                </li>
-                                <li >
-                                    <a href="{{ URL::to('admin/notisfaction') }}">
-                                        <i class="fa fa-angle-double-right"></i>
-                                        Notisfaction
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li {!! (Request::is('admin/groups') || Request::is('admin/groups/create') || Request::is('admin/groups/*') ? 'class="active"' : '') !!}>
-                            <a href="#">
-                                <i class="livicon" data-name="users" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>
-                                <span class="title">Groups</span>
-                                <span class="fa arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li {!! (Request::is('admin/groups') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('admin/groups') }}">
-                                        <i class="fa fa-angle-double-right"></i>
-                                        Groups
-                                    </a>
-                                </li>
-                                <li {!! (Request::is('admin/groups/create') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('admin/groups/create') }}">
-                                        <i class="fa fa-angle-double-right"></i>
-                                        Add New Group
-                                    </a>
-                                </li>
-                                <li {!! (Request::is('admin/groups/any_user') ? 'class="active" id="active"' : '') !!}>
-                                    <a href="{{ URL::to('admin/groups/any_user') }}">
-                                        <i class="fa fa-angle-double-right"></i>
-                                        Any User Access
-                                    </a>
-                                </li>
-
-                                {{--<!-- @if (Sentinel::getUser()->inRole('admin')) -->--}}
-                                    <li {!! (Request::is('admin/groups/admin_only') ? 'class="active" id="active"' : '') !!}>
-                                        <a href="{{ URL::to('admin/groups/admin_only') }}">
-                                            <i class="fa fa-angle-double-right"></i>
-                                            Admin Only Access
-                                        </a>
-                                    </li>
-                                {{--<!-- @endif -->--}}
-                            </ul>
-                        </li>
+                        </li> -->
+                        
+                        
                         <!-- Menus generated by CRUD generator -->
+
                         @include('admin/layouts/menu')
-                    </ul>
+                    
                     <!-- END SIDEBAR MENU -->
 
                 </div>
             </section>
             <div class="permament-links">
-                <li class="permanent-link" id="faq"><i class="livicon" data-name="question" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i><a href="">FAQ</a></li>
-                <li class="permanent-link" id="support"><i class="livicon" data-name="mail" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i><a href="">Support</a></li>
-                <li class="permanent-link" id="account"><i class="livicon" data-name="user" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i><a href="">Account</a></li>
+                <li class="permanent-link" id="faq">
+                  <a href="">FAQ</a>
+                  <i class="fa fa-question-circle fa-lg"></i>
+                </li>
+                <li class="permanent-link" id="support">
+                  <a href="">Support</a>
+                  <i class="fa fa-envelope-o fa-lg"></i>
+                </li>
+                <li class="permanent-link" id="account">
+                  <a href="">Account</a>
+                  <i class="fa fa-user fa-lg"></i>
+                </li>
             </div>
         </aside>
         <aside class="right-side">

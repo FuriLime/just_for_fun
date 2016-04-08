@@ -68,11 +68,17 @@ class EventsController extends Controller {
         }
     }
 
-
-public function getCal($uuid){
-   return redirect ('google.com');
-
-}
+    public function favorite() 
+    {   
+        $this->layout = null;
+        $this->autoRender = false;
+        return 121223;
+    }
+    
+    public function getCal($uuid)
+    {
+       return redirect('google.com');
+    }
 
     /*Confirm page*/
     public function confirm($readable_url)
@@ -1107,5 +1113,4 @@ public function getCal($uuid){
 
         return $zones;
     }
-
 }
