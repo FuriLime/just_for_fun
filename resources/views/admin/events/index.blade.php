@@ -14,9 +14,9 @@ events List
 
 <section class="content">
     <div class="panel-heading clearfix">
-        <h4 class="panel-title pull-left"> <i class="livicon" data-name="list-ul" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-            Events List
-        </h4>
+        <h1 class="panel-title pull-left"> <i class="fa fa-columns"></i>
+            All Events of MeKai
+        </h1>
     </div>
     <br />
     <div class="panel-body">
