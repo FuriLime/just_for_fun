@@ -156,7 +156,7 @@ Price
                                 + ...
                             </li>
                         </ul>
-                        <a class="btn btn-primary btn-block price-btn" href="#"  data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title">Start 14-day trial</a>
+                        <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title">Start 14-day trial</a>
                     </div>
                 </div>
             </div>
@@ -168,6 +168,9 @@ Price
 @section('footer_scripts')
     <script type="text/javascript" src="{{ asset('assets/js/jquery-ui.js') }}"></script>
     <script>
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
         $('.price-btn').popover({
             trigger: "hover"
         });
