@@ -43,13 +43,13 @@ Price
                 <div class="col-md-12 col-sm-12 col-xs-12 businesses">
                     <div class="text-center">
                         <div class="plans-for">Plans for</div>
-                        <span class="slide-head">Businesses</span>
-                        <div class="plans-for-business">
-                            <div class="plans-for">
-                                Plans for Businesses
-                            </div>
-                            These plans are made to support professional event inviations also for private events at an affordable price.
-                        </div>
+                        <span class="slide-head"  data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Businesses</span>
+                        {{--<div class="plans-for-business">--}}
+                            {{--<div class="plans-for">--}}
+                                {{--Plans for Businesses--}}
+                            {{--</div>--}}
+                            {{--These plans are made to support professional event inviations also for private events at an affordable price.--}}
+                        {{--</div>--}}
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
@@ -522,8 +522,21 @@ Price
 @section('footer_scripts')
     <script type="text/javascript" src="{{ asset('assets/js/jquery-ui.js') }}"></script>
     <script>
+        function wheretoplace(){
+            var width = window.innerWidth;
+            if (width <= 900) {
+                return 'left';
+            } else {
+                return 'right';
+            }
+        }
         $('.price-btn').popover({
             trigger: "hover"
+
+        });
+        $('.title-popover').popover({
+            trigger: "hover",
+            placement: wheretoplace
         });
         var check = false;
         $("#slider").slider({
