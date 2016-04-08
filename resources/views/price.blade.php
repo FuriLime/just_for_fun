@@ -43,127 +43,120 @@ Price
                 <div class="col-md-12 col-sm-12 col-xs-12 businesses">
                     <div class="text-center">
                         <div class="plans-for">Plans for</div>
-                        <span class="slide-head">Businesses</span>
-                        <div class="plans-for-business">
-                            <div class="plans-for">
-                                Plans for Businesses
+                        <span class="slide-head title-popover" data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Businesses</span>
+                    </div>
+                </div>
+                <div class="business-plan-holder">
+                    <div class="col-md-3 col-sm-6 col-xs-12 business-plan-panel-holder">
+                        <div class="panel panel-default price-panel">
+                            <div class="price-panel-badge price-panel-badge-orange">For you?</div>
+                            <div class="panel-heading">
+                                <div class="price-panel-title">Startup / Freelancer</div>
+                                <div class="price-panel-price">38&euro;</div>
+                                <div class="price-panel-sub-title">Forever Free</div>
                             </div>
-                            These plans are made to support professional event inviations also for private events at an affordable price.
+                            <div class="panel-body">
+                                <div class="price-panel-body-heading">Ideal for testing</div>
+                                <ul>
+                                    <li>
+                                        10 Events / 500 Downloads
+                                    </li>
+                                    <li>
+                                        Basic Event Features
+                                    </li>
+                                    <li>
+                                        Personal EventPage
+                                    </li>
+                                    <li>
+                                        Event Dashboard
+                                    </li>
+                                </ul>
+                                <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">Start 14-day trial</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="panel panel-default price-panel">
-                        <div class="price-panel-badge price-panel-badge-orange">For you?</div>
-                        <div class="panel-heading">
-                            <div class="price-panel-title">Startup / Freelancer</div>
-                            <div class="price-panel-price">38&euro;</div>
-                            <div class="price-panel-sub-title">Forever Free</div>
-                        </div>
-                        <div class="panel-body">
-                            <div class="price-panel-body-heading">Ideal for testing</div>
-                            <ul>
-                                <li>
-                                    10 Events / 500 Downloads
-                                </li>
-                                <li>
-                                    Basic Event Features
-                                </li>
-                                <li>
-                                    Personal EventPage
-                                </li>
-                                <li>
-                                    Event Dashboard
-                                </li>
-                            </ul>
-                            <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">Start 14-day trial</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="panel panel-default price-panel">
-                        <div class="panel-heading">
-                            <div class="price-panel-title">SME</div>
-                            <div class="price-panel-price">87&euro;</div>
-                            <div class="price-panel-sub-title">Paid Monthly</div>
-                        </div>
-                        <div class="panel-body">
-                            <div class="price-panel-body-heading">Ideal for small groups</div>
-                            <ul>
-                                <li>
-                                    All from "FREE"
-                                </li>
-                                <li>
-                                    + Social Sharing
-                                </li>
-                                <li>
-                                    + Basic Tracking
-                                </li>
-                                <li>
-                                    + Email Support
-                                </li>
-                            </ul>
-                            <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">Start 14-day trial</a>
+                    <div class="col-md-3 col-sm-6 col-xs-12 business-plan-panel-holder">
+                        <div class="panel panel-default price-panel">
+                            <div class="panel-heading">
+                                <div class="price-panel-title">SME</div>
+                                <div class="price-panel-price">87&euro;</div>
+                                <div class="price-panel-sub-title">Paid Monthly</div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="price-panel-body-heading">Ideal for small groups</div>
+                                <ul>
+                                    <li>
+                                        All from "FREE"
+                                    </li>
+                                    <li>
+                                        + Social Sharing
+                                    </li>
+                                    <li>
+                                        + Basic Tracking
+                                    </li>
+                                    <li>
+                                        + Email Support
+                                    </li>
+                                </ul>
+                                <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">Start 14-day trial</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="panel panel-default price-panel">
-                        <div class="price-panel-badge price-panel-badge-blue">Great Value</div>
-                        <div class="panel-heading">
-                            <div class="price-panel-title">Company</div>
-                            <div class="price-panel-price">140&euro;</div>
-                            <div class="price-panel-sub-title">Paid Monthly</div>
-                        </div>
-                        <div class="panel-body">
-                            <div class="price-panel-body-heading">Ideal for ...</div>
-                            <ul>
-                                <li>
-                                    All from "Lite"
-                                </li>
-                                <li>
-                                    + ...
-                                </li>
-                                <li>
-                                    + ...
-                                </li>
-                                <li>
-                                    + ...
-                                </li>
-                            </ul>
-                            <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">Start 14-day trial</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="panel panel-default price-panel">
-                        <div class="panel-heading">
-                            <div class="price-panel-title">Enterprise</div>
-                            <div class="price-panel-price">489&euro;</div>
-                            <div class="price-panel-sub-title">Paid Monthly</div>
-                        </div>
-                        <div class="panel-body">
-                            <div class="price-panel-body-heading">Ideal for ...</div>
-                            <ul>
-                                <li>
-                                    All from "Standart"
-                                </li>
-                                <li>
-                                    + ...
-                                </li>
-                                <li>
-                                    + ...
-                                </li>
-                                <li>
-                                    + ...
-                                </li>
-                            </ul>
-                            <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">Start 14-day trial</a>
+                    <div class="col-md-3 col-sm-6 col-xs-12 business-plan-panel-holder">
+                        <div class="panel panel-default price-panel">
+                            <div class="price-panel-badge price-panel-badge-blue">Great Value</div>
+                            <div class="panel-heading">
+                                <div class="price-panel-title">Company</div>
+                                <div class="price-panel-price">140&euro;</div>
+                                <div class="price-panel-sub-title">Paid Monthly</div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="price-panel-body-heading">Ideal for ...</div>
+                                <ul>
+                                    <li>
+                                        All from "Lite"
+                                    </li>
+                                    <li>
+                                        + ...
+                                    </li>
+                                    <li>
+                                        + ...
+                                    </li>
+                                    <li>
+                                        + ...
+                                    </li>
+                                </ul>
+                                <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">Start 14-day trial</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 col-md-offset-9 col-sm-offset-6 vat-text">
-                    All prices include applicable VAT
+                    <div class="col-md-3 col-sm-6 col-xs-12 business-plan-panel-holder">
+                        <div class="panel panel-default price-panel">
+                            <div class="panel-heading">
+                                <div class="price-panel-title">Enterprise</div>
+                                <div class="price-panel-price">489&euro;</div>
+                                <div class="price-panel-sub-title">Paid Monthly</div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="price-panel-body-heading">Ideal for ...</div>
+                                <ul>
+                                    <li>
+                                        All from "Standart"
+                                    </li>
+                                    <li>
+                                        + ...
+                                    </li>
+                                    <li>
+                                        + ...
+                                    </li>
+                                    <li>
+                                        + ...
+                                    </li>
+                                </ul>
+                                <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">Start 14-day trial</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 help-text">
                     All plans can be upgraded, downgraded or canceled at any time.
@@ -176,133 +169,134 @@ Price
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="individual-plans-block-sup-title">Plans for</div>
-                    <div class="individual-plans-block-title">Businesses</div>
+                    <div class="individual-plans-block-title">
+                        <span class="title-popover" data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Individuals</span>
+                    </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="panel panel-default price-panel">
-                        <div class="price-panel-badge price-panel-badge-orange">Great Start</div>
-                        <div class="panel-heading">
-                            <div class="price-panel-title">FREE</div>
-                            <div class="price-panel-price">0&euro;</div>
-                            <div class="price-panel-sub-title">Forever Free</div>
-                        </div>
-                        <div class="panel-body">
-                            <div class="price-panel-body-heading">Ideal for testing</div>
-                            <ul>
-                                <li>
-                                    3 events
-                                </li>
-                                <li>
-                                    50 Event Downloads
-                                </li>
-                                <li>
-                                    Basic Event Features
-                                </li>
-                                <li>
-                                    Personal EventPage
-                                </li>
-                                <li>
-                                    Event Dashboard
-                                </li>
-                                <li>
-                                    No Credit Card
-                                </li>
-                            </ul>
-                            <a class="btn btn-warning btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">
-                                <i class="fa fa-user"></i>
-                                FREE Signup
-                            </a>
-                            <div class="price-panel-help-text">
-                                You can change or cancel your subscription at any time!
+                <div class="individual-plan-holder">
+                    <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-panel-holder">
+                        <div class="panel panel-default price-panel">
+                            <div class="price-panel-badge price-panel-badge-orange">Great Start</div>
+                            <div class="panel-heading">
+                                <div class="price-panel-title">FREE</div>
+                                <div class="price-panel-price">0&euro;</div>
+                                <div class="price-panel-sub-title">Forever Free</div>
                             </div>
-                            <a href="#" class="price-panel-link">Questions?</a>
+                            <div class="panel-body">
+                                <div class="price-panel-body-heading">Ideal for testing</div>
+                                <ul>
+                                    <li>
+                                        3 events
+                                    </li>
+                                    <li>
+                                        50 Event Downloads
+                                    </li>
+                                    <li>
+                                        Basic Event Features
+                                    </li>
+                                    <li>
+                                        Personal EventPage
+                                    </li>
+                                    <li>
+                                        Event Dashboard
+                                    </li>
+                                    <li>
+                                        No Credit Card
+                                    </li>
+                                </ul>
+                                <a class="btn btn-warning btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">
+                                    <i class="fa fa-user"></i>
+                                    FREE Signup
+                                </a>
+                                <div class="price-panel-help-text">
+                                    You can change or cancel your subscription at any time!
+                                </div>
+                                <a href="#" class="price-panel-link">Questions?</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="panel panel-default price-panel">
-                        <div class="panel-heading">
-                            <div class="price-panel-title">Lite</div>
-                            <div class="price-panel-price">7&euro;</div>
-                            <div class="price-panel-sub-title">Paid Monthly</div>
-                        </div>
-                        <div class="panel-body">
-                            <div class="price-panel-body-heading">Ideal for small groups</div>
-                            <ul>
-                                <li>
-                                    All from "FREE"
-                                </li>
-                                <li>
-                                    + Social Sharing
-                                </li>
-                                <li>
-                                    + Basic Tracking
-                                </li>
-                                <li>
-                                    + Email Support
-                                </li>
-                            </ul>
-                            <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">Start 14-day trial</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="panel panel-default price-panel">
-                        <div class="price-panel-badge price-panel-badge-blue">Most popular</div>
-                        <div class="panel-heading">
-                            <div class="price-panel-title">Standart</div>
-                            <div class="price-panel-price">18&euro;</div>
-                            <div class="price-panel-sub-title">Paid Monthly</div>
-                        </div>
-                        <div class="panel-body">
-                            <div class="price-panel-body-heading">Ideal for ...</div>
-                            <ul>
-                                <li>
-                                    All from "Lite"
-                                </li>
-                                <li>
-                                    + ...
-                                </li>
-                                <li>
-                                    + ...
-                                </li>
-                                <li>
-                                    + ...
-                                </li>
-                            </ul>
-                            <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">Start 14-day trial</a>
+                    <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-panel-holder">
+                        <div class="panel panel-default price-panel">
+                            <div class="panel-heading">
+                                <div class="price-panel-title">Lite</div>
+                                <div class="price-panel-price">7&euro;</div>
+                                <div class="price-panel-sub-title">Paid Monthly</div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="price-panel-body-heading">Ideal for small groups</div>
+                                <ul>
+                                    <li>
+                                        All from "FREE"
+                                    </li>
+                                    <li>
+                                        + Social Sharing
+                                    </li>
+                                    <li>
+                                        + Basic Tracking
+                                    </li>
+                                    <li>
+                                        + Email Support
+                                    </li>
+                                </ul>
+                                <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">Start 14-day trial</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="panel panel-default price-panel">
-                        <div class="panel-heading">
-                            <div class="price-panel-title">Proffesional</div>
-                            <div class="price-panel-price">49&euro;</div>
-                            <div class="price-panel-sub-title">Paid Monthly</div>
-                        </div>
-                        <div class="panel-body">
-                            <div class="price-panel-body-heading">Ideal for ...</div>
-                            <ul>
-                                <li>
-                                    All from "Standart"
-                                </li>
-                                <li>
-                                    + ...
-                                </li>
-                                <li>
-                                    + ...
-                                </li>
-                                <li>
-                                    + ...
-                                </li>
-                            </ul>
-                            <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">Start 14-day trial</a>
+                    <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-panel-holder">
+                        <div class="panel panel-default price-panel">
+                            <div class="price-panel-badge price-panel-badge-blue">Most popular</div>
+                            <div class="panel-heading">
+                                <div class="price-panel-title">Standart</div>
+                                <div class="price-panel-price">18&euro;</div>
+                                <div class="price-panel-sub-title">Paid Monthly</div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="price-panel-body-heading">Ideal for ...</div>
+                                <ul>
+                                    <li>
+                                        All from "Lite"
+                                    </li>
+                                    <li>
+                                        + ...
+                                    </li>
+                                    <li>
+                                        + ...
+                                    </li>
+                                    <li>
+                                        + ...
+                                    </li>
+                                </ul>
+                                <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">Start 14-day trial</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 col-md-offset-9 col-sm-offset-6 vat-text">
-                    All prices include applicable VAT
+                    <div class="col-md-3 col-sm-6 col-xs-12 individual-plan-panel-holder">
+                        <div class="panel panel-default price-panel">
+                            <div class="panel-heading">
+                                <div class="price-panel-title">Proffesional</div>
+                                <div class="price-panel-price">49&euro;</div>
+                                <div class="price-panel-sub-title">Paid Monthly</div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="price-panel-body-heading">Ideal for ...</div>
+                                <ul>
+                                    <li>
+                                        All from "Standart"
+                                    </li>
+                                    <li>
+                                        + ...
+                                    </li>
+                                    <li>
+                                        + ...
+                                    </li>
+                                    <li>
+                                        + ...
+                                    </li>
+                                </ul>
+                                <a class="btn btn-primary btn-block price-btn" href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We will not charge you card before the end your trial period!" data-original-title="Try 100% risk-free">Start 14-day trial</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 help-text">
                     All plans can be upgraded, downgraded or canceled at any time.
@@ -314,7 +308,9 @@ Price
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="commonly-questions-block-title">Commonly asked questions</div>
+                    <div class="commonly-questions-block-title">
+                        <span class="title-popover" data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Commonly asked questions</span>
+                    </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="question-title">
@@ -423,6 +419,9 @@ Price
     </div>
     <div class="feature-comparison-block">
         <div class="container">
+            <div class="feature-comparison-block-title">
+                <span class="title-popover" data-container="body" data-toggle="popover" data-placement="right" data-content="These plans are made to support professional event inviations also for private events at an affordable price." data-original-title="Plans for Businesses">Feature comparison</span>
+            </div>
             <div class="table-responsive">
                 <table class="table feature-comparison-table">
                     <thead>
@@ -430,19 +429,19 @@ Price
                             <th></th>
                             <th>
                                 <div class="table-plan-title">Lite</div>
-                                <a href="#">Try</a>
+                                <a href="#" class="btn price-table-btn">Try</a>
                             </th>
                             <th>
                                 <div class="table-plan-title">Basic</div>
-                                <a href="#">Try</a>
+                                <a href="#" class="btn price-table-btn">Try</a>
                             </th>
-                            <th>
+                            <th class="th-colored">
                                 <div class="table-plan-title">Advanced</div>
-                                <a href="#">Try</a>
+                                <a href="#" class="btn price-table-btn">Try</a>
                             </th>
                             <th>
                                 <div class="table-plan-title">Premium</div>
-                                <a href="#">Try</a>
+                                <a href="#" class="btn price-table-btn">Try</a>
                             </th>
                         </tr>
                     </thead>
@@ -470,10 +469,10 @@ Price
                         </tr>
                         <tr>
                             <th scope="row">Total Agents</th>
-                            <td>only 1</td>
-                            <td>Unlimited</td>
-                            <td>Unlimited</td>
-                            <td>Unlimited</td>
+                            <td class="td-colored">only 1</td>
+                            <td class="td-colored">Unlimited</td>
+                            <td class="td-colored">Unlimited</td>
+                            <td class="td-colored">Unlimited</td>
                         </tr>
                         <tr>
                             <th scope="row"><strong>SUPPORT</strong></th>
@@ -521,8 +520,27 @@ Price
 @section('footer_scripts')
     <script type="text/javascript" src="{{ asset('assets/js/jquery-ui.js') }}"></script>
     <script>
+        var width = window.innerWidth;
+        if (width >= 768) {
+            var height = Math.max($(".individual-plan-holder").height());
+            $(".individual-plan-holder").height(height);
+        }
+
+        function wheretoplace(){
+            var width = window.innerWidth;
+            if (width <= 900) {
+                return 'left';
+            } else {
+                return 'right';
+            }
+        }
         $('.price-btn').popover({
             trigger: "hover"
+
+        });
+        $('.title-popover').popover({
+            trigger: "hover",
+            placement: wheretoplace
         });
         var check = false;
         $("#slider").slider({

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/frontend/price.css" afterPath="$PROJECT_DIR$/public/assets/css/frontend/price.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/events/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/events/index.blade.php" />
     </list>
     <ignored path="test-ef.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,21 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="price.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/frontend/price.css">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/events/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8537005">
-              <caret line="146" column="33" selection-start-line="146" selection-start-column="33" selection-end-line="146" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.40963855">
+              <caret line="57" column="67" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="price.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/price.blade.php">
+      <file leaf-file-name="events.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/admin/events.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0769231">
-              <caret line="423" column="16" selection-start-line="423" selection-start-column="16" selection-end-line="423" selection-end-column="40" />
+            <state vertical-scroll-proportion="-3.2692308">
+              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -55,13 +55,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/assets/ical.php" />
-        <option value="$PROJECT_DIR$/app/Activation.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/events/edit.blade.php" />
         <option value="$PROJECT_DIR$/bootstrap/app.php" />
@@ -74,7 +73,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/confirm.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/JoshController.php" />
-        <option value="$PROJECT_DIR$/public/assets/css/pages/login.css" />
         <option value="$PROJECT_DIR$/resources/views/admin/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/app/Event.php" />
@@ -100,17 +98,20 @@
         <option value="$PROJECT_DIR$/public/assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js" />
         <option value="$PROJECT_DIR$/public/assets/css/pages/add_event.css" />
         <option value="$PROJECT_DIR$/resources/views/events/create.blade.php" />
-        <option value="$PROJECT_DIR$/public/assets/css/pages/custom.css" />
         <option value="$PROJECT_DIR$/resources/views/events/show.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/pages/index_page.css" />
         <option value="$PROJECT_DIR$/resources/lang/en/frontend.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
-        <option value="$PROJECT_DIR$/public/assets/css/frontend/custom.css" />
         <option value="$PROJECT_DIR$/resources/views/price.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/frontend/price.css" />
+        <option value="$PROJECT_DIR$/public/assets/css/pages/login.css" />
+        <option value="$PROJECT_DIR$/public/assets/css/pages/custom.css" />
+        <option value="$PROJECT_DIR$/public/assets/css/frontend/custom.css" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/admin/events.css" />
+        <option value="$PROJECT_DIR$/resources/views/admin/events/index.blade.php" />
       </list>
     </option>
   </component>
@@ -211,6 +212,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-ef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event.test-y-sbm.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="events" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -305,7 +332,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -350,6 +377,116 @@
       <recent name="$PROJECT_DIR$/resources/views/user" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/admin/events/index.blade.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
@@ -377,6 +514,12 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -389,301 +532,301 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-04669" summary="social buttons">
-      <created>1460098835242</created>
-      <option name="number" value="04669" />
+    <task id="LOCAL-04745" summary="social buttons">
+      <created>1460113719549</created>
+      <option name="number" value="04745" />
       <option name="project" value="LOCAL" />
-      <updated>1460098835242</updated>
+      <updated>1460113719549</updated>
     </task>
-    <task id="LOCAL-04670" summary="social buttons">
-      <created>1460099004351</created>
-      <option name="number" value="04670" />
+    <task id="LOCAL-04746" summary="social buttons">
+      <created>1460113865526</created>
+      <option name="number" value="04746" />
       <option name="project" value="LOCAL" />
-      <updated>1460099004351</updated>
+      <updated>1460113865526</updated>
     </task>
-    <task id="LOCAL-04671" summary="social buttons">
-      <created>1460099041774</created>
-      <option name="number" value="04671" />
+    <task id="LOCAL-04747" summary="social buttons">
+      <created>1460113895557</created>
+      <option name="number" value="04747" />
       <option name="project" value="LOCAL" />
-      <updated>1460099041774</updated>
+      <updated>1460113895557</updated>
     </task>
-    <task id="LOCAL-04672" summary="social buttons">
-      <created>1460099077869</created>
-      <option name="number" value="04672" />
+    <task id="LOCAL-04748" summary="social buttons">
+      <created>1460113929647</created>
+      <option name="number" value="04748" />
       <option name="project" value="LOCAL" />
-      <updated>1460099077869</updated>
+      <updated>1460113929647</updated>
     </task>
-    <task id="LOCAL-04673" summary="social buttons">
-      <created>1460099209275</created>
-      <option name="number" value="04673" />
+    <task id="LOCAL-04749" summary="social buttons">
+      <created>1460114056285</created>
+      <option name="number" value="04749" />
       <option name="project" value="LOCAL" />
-      <updated>1460099209275</updated>
+      <updated>1460114056285</updated>
     </task>
-    <task id="LOCAL-04674" summary="social buttons">
-      <created>1460099266464</created>
-      <option name="number" value="04674" />
+    <task id="LOCAL-04750" summary="social buttons">
+      <created>1460114209578</created>
+      <option name="number" value="04750" />
       <option name="project" value="LOCAL" />
-      <updated>1460099266464</updated>
+      <updated>1460114209578</updated>
     </task>
-    <task id="LOCAL-04675" summary="social buttons">
-      <created>1460099554235</created>
-      <option name="number" value="04675" />
+    <task id="LOCAL-04751" summary="social buttons">
+      <created>1460114308168</created>
+      <option name="number" value="04751" />
       <option name="project" value="LOCAL" />
-      <updated>1460099554235</updated>
+      <updated>1460114308168</updated>
     </task>
-    <task id="LOCAL-04676" summary="social buttons">
-      <created>1460099685872</created>
-      <option name="number" value="04676" />
+    <task id="LOCAL-04752" summary="social buttons">
+      <created>1460114480886</created>
+      <option name="number" value="04752" />
       <option name="project" value="LOCAL" />
-      <updated>1460099685872</updated>
+      <updated>1460114480886</updated>
     </task>
-    <task id="LOCAL-04677" summary="social buttons">
-      <created>1460100240530</created>
-      <option name="number" value="04677" />
+    <task id="LOCAL-04753" summary="social buttons">
+      <created>1460115223044</created>
+      <option name="number" value="04753" />
       <option name="project" value="LOCAL" />
-      <updated>1460100240530</updated>
+      <updated>1460115223044</updated>
     </task>
-    <task id="LOCAL-04678" summary="social buttons">
-      <created>1460100368797</created>
-      <option name="number" value="04678" />
+    <task id="LOCAL-04754" summary="social buttons">
+      <created>1460115288631</created>
+      <option name="number" value="04754" />
       <option name="project" value="LOCAL" />
-      <updated>1460100368797</updated>
+      <updated>1460115288631</updated>
     </task>
-    <task id="LOCAL-04679" summary="social buttons">
-      <created>1460101037210</created>
-      <option name="number" value="04679" />
+    <task id="LOCAL-04755" summary="social buttons">
+      <created>1460115651564</created>
+      <option name="number" value="04755" />
       <option name="project" value="LOCAL" />
-      <updated>1460101037210</updated>
+      <updated>1460115651564</updated>
     </task>
-    <task id="LOCAL-04680" summary="social buttons">
-      <created>1460101106281</created>
-      <option name="number" value="04680" />
+    <task id="LOCAL-04756" summary="social buttons">
+      <created>1460115713780</created>
+      <option name="number" value="04756" />
       <option name="project" value="LOCAL" />
-      <updated>1460101106281</updated>
+      <updated>1460115713780</updated>
     </task>
-    <task id="LOCAL-04681" summary="social buttons">
-      <created>1460101306497</created>
-      <option name="number" value="04681" />
+    <task id="LOCAL-04757" summary="social buttons">
+      <created>1460116232195</created>
+      <option name="number" value="04757" />
       <option name="project" value="LOCAL" />
-      <updated>1460101306497</updated>
+      <updated>1460116232195</updated>
     </task>
-    <task id="LOCAL-04682" summary="social buttons">
-      <created>1460101578446</created>
-      <option name="number" value="04682" />
+    <task id="LOCAL-04758" summary="social buttons">
+      <created>1460116275459</created>
+      <option name="number" value="04758" />
       <option name="project" value="LOCAL" />
-      <updated>1460101578446</updated>
+      <updated>1460116275459</updated>
     </task>
-    <task id="LOCAL-04683" summary="social buttons">
-      <created>1460101840530</created>
-      <option name="number" value="04683" />
+    <task id="LOCAL-04759" summary="social buttons">
+      <created>1460116383900</created>
+      <option name="number" value="04759" />
       <option name="project" value="LOCAL" />
-      <updated>1460101840530</updated>
+      <updated>1460116383900</updated>
     </task>
-    <task id="LOCAL-04684" summary="social buttons">
-      <created>1460101861233</created>
-      <option name="number" value="04684" />
+    <task id="LOCAL-04760" summary="social buttons">
+      <created>1460116427373</created>
+      <option name="number" value="04760" />
       <option name="project" value="LOCAL" />
-      <updated>1460101861233</updated>
+      <updated>1460116427373</updated>
     </task>
-    <task id="LOCAL-04685" summary="social buttons">
-      <created>1460102125110</created>
-      <option name="number" value="04685" />
+    <task id="LOCAL-04761" summary="social buttons">
+      <created>1460116710638</created>
+      <option name="number" value="04761" />
       <option name="project" value="LOCAL" />
-      <updated>1460102125110</updated>
+      <updated>1460116710638</updated>
     </task>
-    <task id="LOCAL-04686" summary="social buttons">
-      <created>1460102150587</created>
-      <option name="number" value="04686" />
+    <task id="LOCAL-04762" summary="social buttons">
+      <created>1460116735469</created>
+      <option name="number" value="04762" />
       <option name="project" value="LOCAL" />
-      <updated>1460102150587</updated>
+      <updated>1460116735469</updated>
     </task>
-    <task id="LOCAL-04687" summary="social buttons">
-      <created>1460102163771</created>
-      <option name="number" value="04687" />
+    <task id="LOCAL-04763" summary="social buttons">
+      <created>1460116959267</created>
+      <option name="number" value="04763" />
       <option name="project" value="LOCAL" />
-      <updated>1460102163771</updated>
+      <updated>1460116959267</updated>
     </task>
-    <task id="LOCAL-04688" summary="social buttons">
-      <created>1460102419088</created>
-      <option name="number" value="04688" />
+    <task id="LOCAL-04764" summary="social buttons">
+      <created>1460117095330</created>
+      <option name="number" value="04764" />
       <option name="project" value="LOCAL" />
-      <updated>1460102419089</updated>
+      <updated>1460117095330</updated>
     </task>
-    <task id="LOCAL-04689" summary="social buttons">
-      <created>1460102490720</created>
-      <option name="number" value="04689" />
+    <task id="LOCAL-04765" summary="social buttons">
+      <created>1460117230094</created>
+      <option name="number" value="04765" />
       <option name="project" value="LOCAL" />
-      <updated>1460102490720</updated>
+      <updated>1460117230094</updated>
     </task>
-    <task id="LOCAL-04690" summary="social buttons">
-      <created>1460102539554</created>
-      <option name="number" value="04690" />
+    <task id="LOCAL-04766" summary="social buttons">
+      <created>1460117265480</created>
+      <option name="number" value="04766" />
       <option name="project" value="LOCAL" />
-      <updated>1460102539554</updated>
+      <updated>1460117265480</updated>
     </task>
-    <task id="LOCAL-04691" summary="social buttons">
-      <created>1460102847269</created>
-      <option name="number" value="04691" />
+    <task id="LOCAL-04767" summary="social buttons">
+      <created>1460117318340</created>
+      <option name="number" value="04767" />
       <option name="project" value="LOCAL" />
-      <updated>1460102847269</updated>
+      <updated>1460117318340</updated>
     </task>
-    <task id="LOCAL-04692" summary="social buttons">
-      <created>1460102916216</created>
-      <option name="number" value="04692" />
+    <task id="LOCAL-04768" summary="social buttons">
+      <created>1460117460167</created>
+      <option name="number" value="04768" />
       <option name="project" value="LOCAL" />
-      <updated>1460102916216</updated>
+      <updated>1460117460167</updated>
     </task>
-    <task id="LOCAL-04693" summary="social buttons">
-      <created>1460102953824</created>
-      <option name="number" value="04693" />
+    <task id="LOCAL-04769" summary="social buttons">
+      <created>1460117617538</created>
+      <option name="number" value="04769" />
       <option name="project" value="LOCAL" />
-      <updated>1460102953824</updated>
+      <updated>1460117617538</updated>
     </task>
-    <task id="LOCAL-04694" summary="social buttons">
-      <created>1460103130696</created>
-      <option name="number" value="04694" />
+    <task id="LOCAL-04770" summary="social buttons">
+      <created>1460117667941</created>
+      <option name="number" value="04770" />
       <option name="project" value="LOCAL" />
-      <updated>1460103130696</updated>
+      <updated>1460117667941</updated>
     </task>
-    <task id="LOCAL-04695" summary="social buttons">
-      <created>1460103223722</created>
-      <option name="number" value="04695" />
+    <task id="LOCAL-04771" summary="social buttons">
+      <created>1460117835172</created>
+      <option name="number" value="04771" />
       <option name="project" value="LOCAL" />
-      <updated>1460103223722</updated>
+      <updated>1460117835172</updated>
     </task>
-    <task id="LOCAL-04696" summary="social buttons">
-      <created>1460103322240</created>
-      <option name="number" value="04696" />
+    <task id="LOCAL-04772" summary="social buttons">
+      <created>1460118251974</created>
+      <option name="number" value="04772" />
       <option name="project" value="LOCAL" />
-      <updated>1460103322240</updated>
+      <updated>1460118251974</updated>
     </task>
-    <task id="LOCAL-04697" summary="social buttons">
-      <created>1460103558326</created>
-      <option name="number" value="04697" />
+    <task id="LOCAL-04773" summary="social buttons">
+      <created>1460118407559</created>
+      <option name="number" value="04773" />
       <option name="project" value="LOCAL" />
-      <updated>1460103558326</updated>
+      <updated>1460118407559</updated>
     </task>
-    <task id="LOCAL-04698" summary="social buttons">
-      <created>1460103660419</created>
-      <option name="number" value="04698" />
+    <task id="LOCAL-04774" summary="social buttons">
+      <created>1460118611379</created>
+      <option name="number" value="04774" />
       <option name="project" value="LOCAL" />
-      <updated>1460103660419</updated>
+      <updated>1460118611379</updated>
     </task>
-    <task id="LOCAL-04699" summary="social buttons">
-      <created>1460103691959</created>
-      <option name="number" value="04699" />
+    <task id="LOCAL-04775" summary="social buttons">
+      <created>1460118765263</created>
+      <option name="number" value="04775" />
       <option name="project" value="LOCAL" />
-      <updated>1460103691959</updated>
+      <updated>1460118765263</updated>
     </task>
-    <task id="LOCAL-04700" summary="social buttons">
-      <created>1460103737743</created>
-      <option name="number" value="04700" />
+    <task id="LOCAL-04776" summary="social buttons">
+      <created>1460118815469</created>
+      <option name="number" value="04776" />
       <option name="project" value="LOCAL" />
-      <updated>1460103737743</updated>
+      <updated>1460118815469</updated>
     </task>
-    <task id="LOCAL-04701" summary="social buttons">
-      <created>1460104061891</created>
-      <option name="number" value="04701" />
+    <task id="LOCAL-04777" summary="social buttons">
+      <created>1460118847969</created>
+      <option name="number" value="04777" />
       <option name="project" value="LOCAL" />
-      <updated>1460104061891</updated>
+      <updated>1460118847969</updated>
     </task>
-    <task id="LOCAL-04702" summary="social buttons">
-      <created>1460104128194</created>
-      <option name="number" value="04702" />
+    <task id="LOCAL-04778" summary="social buttons">
+      <created>1460118874271</created>
+      <option name="number" value="04778" />
       <option name="project" value="LOCAL" />
-      <updated>1460104128194</updated>
+      <updated>1460118874271</updated>
     </task>
-    <task id="LOCAL-04703" summary="social buttons">
-      <created>1460104262791</created>
-      <option name="number" value="04703" />
+    <task id="LOCAL-04779" summary="social buttons">
+      <created>1460118935994</created>
+      <option name="number" value="04779" />
       <option name="project" value="LOCAL" />
-      <updated>1460104262791</updated>
+      <updated>1460118935994</updated>
     </task>
-    <task id="LOCAL-04704" summary="social buttons">
-      <created>1460104320903</created>
-      <option name="number" value="04704" />
+    <task id="LOCAL-04780" summary="social buttons">
+      <created>1460120984343</created>
+      <option name="number" value="04780" />
       <option name="project" value="LOCAL" />
-      <updated>1460104320903</updated>
+      <updated>1460120984343</updated>
     </task>
-    <task id="LOCAL-04705" summary="social buttons">
-      <created>1460104370031</created>
-      <option name="number" value="04705" />
+    <task id="LOCAL-04781" summary="social buttons">
+      <created>1460121055143</created>
+      <option name="number" value="04781" />
       <option name="project" value="LOCAL" />
-      <updated>1460104370031</updated>
+      <updated>1460121055143</updated>
     </task>
-    <task id="LOCAL-04706" summary="social buttons">
-      <created>1460105572991</created>
-      <option name="number" value="04706" />
+    <task id="LOCAL-04782" summary="social buttons">
+      <created>1460121335549</created>
+      <option name="number" value="04782" />
       <option name="project" value="LOCAL" />
-      <updated>1460105572991</updated>
+      <updated>1460121335549</updated>
     </task>
-    <task id="LOCAL-04707" summary="social buttons">
-      <created>1460105786202</created>
-      <option name="number" value="04707" />
+    <task id="LOCAL-04783" summary="social buttons">
+      <created>1460121451486</created>
+      <option name="number" value="04783" />
       <option name="project" value="LOCAL" />
-      <updated>1460105786202</updated>
+      <updated>1460121451486</updated>
     </task>
-    <task id="LOCAL-04708" summary="social buttons">
-      <created>1460105911262</created>
-      <option name="number" value="04708" />
+    <task id="LOCAL-04784" summary="social buttons">
+      <created>1460121525987</created>
+      <option name="number" value="04784" />
       <option name="project" value="LOCAL" />
-      <updated>1460105911262</updated>
+      <updated>1460121525987</updated>
     </task>
-    <task id="LOCAL-04709" summary="social buttons">
-      <created>1460106259581</created>
-      <option name="number" value="04709" />
+    <task id="LOCAL-04785" summary="social buttons">
+      <created>1460121834156</created>
+      <option name="number" value="04785" />
       <option name="project" value="LOCAL" />
-      <updated>1460106259581</updated>
+      <updated>1460121834156</updated>
     </task>
-    <task id="LOCAL-04710" summary="social buttons">
-      <created>1460106647704</created>
-      <option name="number" value="04710" />
+    <task id="LOCAL-04786" summary="social buttons">
+      <created>1460122122082</created>
+      <option name="number" value="04786" />
       <option name="project" value="LOCAL" />
-      <updated>1460106647704</updated>
+      <updated>1460122122082</updated>
     </task>
-    <task id="LOCAL-04711" summary="social buttons">
-      <created>1460106855504</created>
-      <option name="number" value="04711" />
+    <task id="LOCAL-04787" summary="social buttons">
+      <created>1460122185313</created>
+      <option name="number" value="04787" />
       <option name="project" value="LOCAL" />
-      <updated>1460106855504</updated>
+      <updated>1460122185313</updated>
     </task>
-    <task id="LOCAL-04712" summary="social buttons">
-      <created>1460106956091</created>
-      <option name="number" value="04712" />
+    <task id="LOCAL-04788" summary="social buttons">
+      <created>1460122269758</created>
+      <option name="number" value="04788" />
       <option name="project" value="LOCAL" />
-      <updated>1460106956091</updated>
+      <updated>1460122269758</updated>
     </task>
-    <task id="LOCAL-04713" summary="social buttons">
-      <created>1460107147642</created>
-      <option name="number" value="04713" />
+    <task id="LOCAL-04789" summary="social buttons">
+      <created>1460122599730</created>
+      <option name="number" value="04789" />
       <option name="project" value="LOCAL" />
-      <updated>1460107147643</updated>
+      <updated>1460122599730</updated>
     </task>
-    <task id="LOCAL-04714" summary="social buttons">
-      <created>1460107193390</created>
-      <option name="number" value="04714" />
+    <task id="LOCAL-04790" summary="social buttons">
+      <created>1460122709737</created>
+      <option name="number" value="04790" />
       <option name="project" value="LOCAL" />
-      <updated>1460107193390</updated>
+      <updated>1460122709737</updated>
     </task>
-    <task id="LOCAL-04715" summary="social buttons">
-      <created>1460107248835</created>
-      <option name="number" value="04715" />
+    <task id="LOCAL-04791" summary="social buttons">
+      <created>1460122834199</created>
+      <option name="number" value="04791" />
       <option name="project" value="LOCAL" />
-      <updated>1460107248835</updated>
+      <updated>1460122834199</updated>
     </task>
-    <task id="LOCAL-04716" summary="social buttons">
-      <created>1460107330947</created>
-      <option name="number" value="04716" />
+    <task id="LOCAL-04792" summary="social buttons">
+      <created>1460122943839</created>
+      <option name="number" value="04792" />
       <option name="project" value="LOCAL" />
-      <updated>1460107330947</updated>
+      <updated>1460122943839</updated>
     </task>
-    <task id="LOCAL-04717" summary="social buttons">
-      <created>1460107569900</created>
-      <option name="number" value="04717" />
+    <task id="LOCAL-04793" summary="social buttons">
+      <created>1460123281817</created>
+      <option name="number" value="04793" />
       <option name="project" value="LOCAL" />
-      <updated>1460107569900</updated>
+      <updated>1460123281817</updated>
     </task>
-    <option name="localTasksCounter" value="4718" />
+    <option name="localTasksCounter" value="4794" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -742,48 +885,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="46" selection-start-line="122" selection-start-column="46" selection-end-line="122" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.375">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5968586">
-          <caret line="169" column="68" selection-start-line="169" selection-start-column="68" selection-end-line="169" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/social-share.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.109947644">
-          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9685864">
-          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0732143">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/frontend/custom_.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -949,13 +1050,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/pages/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.979346">
-          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/frontend/404.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -998,13 +1092,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26556993">
-          <caret line="152" column="56" selection-start-line="152" selection-start-column="56" selection-end-line="152" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029259896">
@@ -1021,50 +1108,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9414802">
-          <caret line="248" column="6" selection-start-line="248" selection-start-column="6" selection-end-line="248" selection-end-column="6" />
+        <state vertical-scroll-proportion="-16.024096">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="118" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42572463">
-          <caret line="340" column="15" selection-start-line="337" selection-start-column="12" selection-end-line="340" selection-end-column="15" />
+        <state vertical-scroll-proportion="-10.346154">
+          <caret line="511" column="31" selection-start-line="510" selection-start-column="11" selection-end-line="511" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/frontend/custom.css">
+    <entry file="file://$PROJECT_DIR$/resources/views/events/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3321859">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="2" selection-end-line="34" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.115385">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="118" />
+        <state vertical-scroll-proportion="-22.0">
+          <caret line="248" column="6" selection-start-line="248" selection-start-column="6" selection-end-line="248" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/price.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0769231">
-          <caret line="423" column="16" selection-start-line="423" selection-start-column="16" selection-end-line="423" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.42168674">
+          <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
+          <folding>
+            <element signature="e#2235#4003#0#HTML" expanded="false" />
+            <element signature="e#4024#5665#0#HTML" expanded="false" />
+            <element signature="e#5686#7391#0#HTML" expanded="false" />
+            <element signature="e#7412#9024#0#HTML" expanded="false" />
+            <element signature="e#10006#12434#0#HTML" expanded="false" />
+            <element signature="e#12455#14098#0#HTML" expanded="false" />
+            <element signature="e#14119#15827#0#HTML" expanded="false" />
+            <element signature="e#15848#17463#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/pages/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6781411">
+          <caret line="183" column="19" selection-start-line="183" selection-start-column="19" selection-end-line="183" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/pages/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05851979">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/frontend/price.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8537005">
-          <caret line="146" column="33" selection-start-line="146" selection-start-column="33" selection-end-line="146" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.79518074">
+          <caret line="193" column="19" selection-start-line="193" selection-start-column="19" selection-end-line="193" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/frontend/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61962134">
+          <caret line="1265" column="25" selection-start-line="1265" selection-start-column="25" selection-end-line="1265" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14629948">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/events/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.08777969">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43889844">
+          <caret line="15" column="81" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/events.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/events/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40963855">
+          <caret line="57" column="67" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
           <folding />
         </state>
       </provider>
