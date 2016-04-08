@@ -888,12 +888,12 @@ public function getCal($uuid){
             urlencode("\r\n".$event['title']."\r\n".$event['description']."\r\n". $text_twit ."\r\n". $link_event."\r\n".
                 "-------------------------------------------------------------------------------------------------------\r\n". $dec_footer);
 
-        $desc_ical = $dec_title.'\n'.
+        $desc_ical = $dec_title.
             "-------------------------------------------------------------------------------------------------------". '\n'.
-            $title.'\n'.
-            $event->description.'\n'.
-            $text_twit .'\n'.
-            $link_event.'\n'.
+            $title.
+            $event->description.
+            $text_twit .
+            $link_event.
             "-------------------------------------------------------------------------------------------------------".'\n'.
             $dec_footer;
         
