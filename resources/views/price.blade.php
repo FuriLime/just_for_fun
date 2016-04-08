@@ -169,10 +169,9 @@ Price
     <script type="text/javascript" src="{{ asset('assets/js/jquery-ui.js') }}"></script>
     <script>
         $(function () {
-            $('[data-toggle="popover"]').popover()
-        })
-        $('.price-btn').popover({
-            trigger: "hover"
+            $('[data-toggle="popover"]').popover({
+                trigger: "hover"
+            })
         });
         var check = false;
         $("#slider").slider({
