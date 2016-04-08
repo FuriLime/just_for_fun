@@ -12,11 +12,12 @@ body {
     color: #757b87;
     margin-bottom: 45px;
 }
-.copyright {
+.footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 45px;
+    background-color: #1F487C;
 }
 .icon-section{
     line-height: 7px;
@@ -867,9 +868,7 @@ footer .btn-primary.text-white {
 /* ---------- //Back to top Section Icon Css End---------- */
 /* ---------- Copy Right Section Css  ---------- */
 
-.copyright {
-    background-color: #1F487C;
-}
+
 
 .copyright p {
     color: #fff;
