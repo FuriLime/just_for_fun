@@ -10,86 +10,76 @@ events List
 @section('content')
 <section class="content-header">
     <h1>Events</h1>
-    <ol class="breadcrumb">
-        <li>
-            <a href="{{ route('dashboard') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
-                Dashboard
-            </a>
-        </li>
-        <li>events</li>
-        <li class="active">events</li>
-    </ol>
 </section>
 
-<section class="content paddingleft_right15">
-    <div class="row">
-        <div class="panel panel-primary ">
-            <div class="panel-heading clearfix">
-                <h4 class="panel-title pull-left"> <i class="livicon" data-name="list-ul" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-                    Events List
-                </h4>
-                <div class="pull-right">
-                    <a href="{{ route('admin.events.create') }}" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-plus"></span> @lang('button.create')</a>
-                </div>
-            </div>
-            <br />
-            <div class="panel-body">
-                <table class="table table-bordered " id="table">
+<div class="container">
+    <div class="panel-heading clearfix">
+        <h4 class="panel-title pull-left"> <i class="livicon" data-name="list-ul" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
+            Events List
+        </h4>
+    </div>
+    <br />
+    <div class="panel-body">
+        <table class="table table-bordered " id="table">
+            <thead>
+            <tr class="filters">
+                <th>@lang('frontend.title')</th>
+                <th>@lang('frontend.type')</th>
+                <th>@lang('frontend.location')</th>
+                <th>Event Time Zone</th>
+                <th>@lang('frontend.start')</th>
+                <th>@lang('frontend.finish')</th>
+                <th>@lang('frontend.published')</th>
+                <th>@lang('frontend.actions')</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach ($events as $event)
+                @if(($event->status!='Draft' && (!Sentinel::check())) || Sentinel::check())
+                    <tr>
+                        <td>{{ $event->title }}</td>
+                        <td>
+                            @if ($event->type === 1)
+                                Online
+                            @elseif ($event->type === 2)
+                                Offline
+                            @elseif ($event->type === 3)
+                                Online & Offline
+                            @endif
+                        </td>
+                        <td>{{ $event->location }}</td>
+                        <td>{{ $event->timezone }}</td>
+                        <td>{{ $event->startt }}</td>
+                        <td>{{$event->finisht }}</td>
+                        <td>
+                            @if ($event->status == 'Publish')
+                                +
+                            @else
+                                -
+                            @endif
+                        </td>
+                        <td>
+                            <a href="{{ route('events.show', $event->readable_url) }}">
+                                <i class="fa fa-info-circle" data-name="info" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="view event"></i>
+                            </a>
+                            <a href="{{ route('events.edit', $event->readable_url) }}">
+                                <i class="fa fa-pencil-square-o" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="edit event"></i>
+                            </a>
+                            <a href="{{ route('events.clone', $event->readable_url) }}">
+                                <i class="fa fa-clone" data-name="clone" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="clone event"></i>
+                            </a>
+                            <a href="{{ route('events.confirm-delete', $event->uuid) }}" data-toggle="modal" data-target="#delete_confirm">
+                                <i class="fa fa-trash-o" data-name="remove-alt" data-size="18" data-loop="true" data-c="#f56954" data-hc="#f56954" title="delete event"></i>
+                            </a>
+                        </td>
+                    </tr>
+                @endif
+            @endforeach
 
-                    <thead>
-                        <tr class="filters">
-                            <th>Status</th>
-                            <th>Event Title</th>
-								{{--<th>Type</th>--}}
-								{{--<th>Description</th>--}}
-								<th>Location</th>
-                                <th>Event Date</th>
-                                <th>Downloads</th>
-								{{--<th>Url</th>--}}
-								{{--<th>Timezone</th>--}}
-								{{--<th>Event Date</th>--}}
-								{{--<th>Time</th>--}}
-								{{--<th>Enddate</th>--}}
-								{{--<th>Endtime</th>--}}
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    @foreach ($events as $event)
-                        <tr>
-                            {{--{{dd($event->start)}}--}}
-                            <td>{{{ $event->id }}}</td>
-                            <td>{{{ $event->title }}}</td>
-{{--								<td>{{{ $event->type }}}</td>--}}
-                                <td>{{{ $event->location }}}</td>
-								{{--<td>{{{ $event->description }}}</td>--}}
-
-								{{--<td>{{{ $event->url }}}</td>--}}
-{{--								<td>{{{ $event->timezone }}}</td>--}}
-								<td>{{ $event->start }}</td>
-								<td>{{ $event->finish }}</td>
-								{{--<td>{{{ $event->enddate }}}</td>--}}
-								{{--<td>{{{ $event->endtime }}}</td>--}}
-                            <td>
-                                <a href="{{ route('admin.events.show', $event->id) }}">
-                                    <i class="livicon" data-name="info" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="view event"></i>
-                                </a>
-                                <a href="{{ route('admin.events.edit', $event->id) }}">
-                                    <i class="livicon" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="edit event"></i>
-                                </a>
-                                <a href="{{ route('admin.events.confirm-delete', $event->id) }}" data-toggle="modal" data-target="#delete_confirm">
-                                    <i class="livicon" data-name="remove-alt" data-size="18" data-loop="true" data-c="#f56954" data-hc="#f56954" title="delete event"></i>
-                                </a>
-                            </td>
-                        </tr>
-                    @endforeach
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>    <!-- row-->
-</section>
+            </tbody>
+        </table>
+    </div>
+</div>
 @stop
 
 {{-- Body Bottom confirm modal --}}
