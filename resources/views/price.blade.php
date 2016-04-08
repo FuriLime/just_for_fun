@@ -17,7 +17,7 @@ Price
 
 {{-- Page content --}}
 @section('content')
-    <div class="businesses-plan-block">
+    <div class="business-plan-block">
         <div class="container">
             <div class="row">
                 <div class="text-center" id="prices-page">
