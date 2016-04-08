@@ -38,6 +38,11 @@
 	background-color: #fff;
 	font-size: 18px;
 }
+.price-panel-body-heading {
+    font-style: italic;
+    border-bottom: 1px solid #757B87;
+    padding-bottom: 5px;
+}
 .price-panel ul {
     padding: 20px 0;
 }
@@ -47,14 +52,7 @@
 .price-panel ul li:last-child {
     margin-bottom: 0;
 }
-.price-panel-body-heading {
-    font-style: italic;
-    border-bottom: 1px solid #757B87;
-    padding-bottom: 5px;
-}
 .price-btn{
-	background-color: #01bc8c;
-	width: 100%;
-	color:#fff !important;
-	font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
 }

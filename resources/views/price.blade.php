@@ -75,7 +75,7 @@ Price
                                 Lorem Ipsum Dolor
                             </li>
                         </ul>
-                        <a class="btn btn-primary btn-block" href="#">Start 14-day trial</a>
+                        <a class="btn btn-primary btn-block price-btn" href="#">Start 14-day trial</a>
                     </div>
                 </div>
             </div>
