@@ -896,7 +896,10 @@ public function getCal($uuid){
             $link_event.'\n'.
             "-------------------------------------------------------------------------------------------------------".'\n'.
             $dec_footer;
-*/
+        */
+
+        $desc_ical = 'DESC';
+
         switch ($calendar) {
 
             case 'Google':
