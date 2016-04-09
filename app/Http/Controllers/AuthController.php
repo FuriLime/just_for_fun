@@ -319,7 +319,7 @@ class AuthController extends JoshController
      */
 
     public function getForgotPassword(){
-        return View('forgot_pass');
+        return View('admin.forgot_pass');
     }
 
 
