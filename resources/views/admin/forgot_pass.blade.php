@@ -26,6 +26,7 @@
     <div class="row vertical-offset-100">
         @include('notifications')
         <div class="sign-up-form col-md-6 col-md-offset-3">
+            <h1>Please enter your email</h1>
             <div class="panel panel-default">
                 <div class="panel-heading">Forgot password</div>
                 <div class="panel-body">
