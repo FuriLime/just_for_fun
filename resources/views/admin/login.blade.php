@@ -33,6 +33,8 @@
                     <a class="hiddenanchor" id="tologin"></a>
                     <a class="hiddenanchor" id="toforgot"></a>
                     <div id="wrapper">
+                        <div class="panel-heading">Basics</div>
+                        <div class="panel-body">
                         <div id="login" class="animate form">
                             <form action="{{ route('signin') }}" autocomplete="on" method="post" role="form">
                                 <h3 class="black_bg">
@@ -78,7 +80,8 @@
                                 </p>
                             </form>
                         </div>
-
+</div>
+                        </div>
                         <div id="forgot" class="animate form">
                             <form action="{{ route('forgot-password') }}" autocomplete="on" method="post" role="form">
                                 <h3 class="black_bg">
