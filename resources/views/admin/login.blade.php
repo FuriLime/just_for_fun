@@ -32,37 +32,50 @@
                     <a class="hiddenanchor" id="toregister"></a>
                     <a class="hiddenanchor" id="tologin"></a>
                     <a class="hiddenanchor" id="toforgot"></a>
-                    <div id="wrapper">
                         <div class="panel-heading">Basics</div>
                         <div class="panel-body">
-                        <div id="login" class="animate form">
                             <form action="{{ route('signin') }}" autocomplete="on" method="post" role="form">
-                                <h3 class="black_bg">
-                                    <img src="{{ asset('assets/img/logo.png') }}" alt="josh logo">
-                                    <br>Log in</h3>
                                     <!-- CSRF Token -->
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
                                 <div class="form-group {{ $errors->first('email', 'has-error') }}">
-                                    <label style="margin-bottom:0px;" for="email" class="uname control-label"> <i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
-                                        E-mail
-                                    </label>
-                                    <input id="email" name="email" required type="email" placeholder="E-mail" value="{!! Input::old('email') !!}" />
-                                    <div class="col-sm-12">
+                                    <label for="email" class="col-sm-4 control-label">E-Mail Address</label>
+                                    <div class="col-sm-6">
+                                        <input type="email" name="email" required class="form-control" type="email" autocomplete="off" id="email-address" value="{!! Input::old('email') !!}">
                                         {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
+                                        {!! $errors->first('my_name', '<span class="help-block">:message</span>') !!}
                                     </div>
                                 </div>
-                                {!! Honeypot::generate('my_name', 'my_time') !!}
-                                {!! $errors->first('my_name', '<span class="help-block">:message</span>') !!}
+
+
                                 <div class="form-group {{ $errors->first('password', 'has-error') }}">
-                                    <label style="margin-bottom:0px;" for="password" class="youpasswd"> <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
-                                        Password
-                                    </label>
-                                    <input id="password" name="password" required type="password" placeholder="eg. X8df!90EO" />
-                                    <div class="col-sm-12">
+                                    <label for="password" class="col-sm-4 control-label">Password</label>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" id="password" name="password" autocomplete="off" required type="password" placeholder="eg. X8df!90EO">
                                         {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
                                     </div>
                                 </div>
+                                {{----}}
+                                {{--<div class="form-group {{ $errors->first('email', 'has-error') }}">--}}
+                                    {{--<label style="margin-bottom:0px;" for="email" class="uname control-label"> <i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>--}}
+                                        {{--E-mail--}}
+                                    {{--</label>--}}
+                                    {{--<input id="email" name="email" required type="email" placeholder="E-mail" value="{!! Input::old('email') !!}" />--}}
+                                    {{--<div class="col-sm-12">--}}
+                                        {{--{!! $errors->first('email', '<span class="help-block">:message</span>') !!}--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--{!! Honeypot::generate('my_name', 'my_time') !!}--}}
+                                {{--{!! $errors->first('my_name', '<span class="help-block">:message</span>') !!}--}}
+                                {{--<div class="form-group {{ $errors->first('password', 'has-error') }}">--}}
+                                    {{--<label style="margin-bottom:0px;" for="password" class="youpasswd"> <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>--}}
+                                        {{--Password--}}
+                                    {{--</label>--}}
+                                    {{--<input id="password" name="password" required type="password" placeholder="eg. X8df!90EO" />--}}
+                                    {{--<div class="col-sm-12">--}}
+                                        {{--{!! $errors->first('password', '<span class="help-block">:message</span>') !!}--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
                                 <p class="keeplogin">
                                     <input type="checkbox" name="remember-me" id="remember-me" value="remember-me" />
                                     <label for="remember-me">Keep me logged in</label>

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/register.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test-ef.iws" />
@@ -72,13 +71,12 @@
       <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/register.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.307693" vertical-offset="258" max-vertical-offset="1122">
-              <caret line="51" column="19" selection-start-line="51" selection-start-column="15" selection-end-line="52" selection-end-column="40" />
+            <state vertical-scroll-proportion="-12.884615" vertical-offset="311" max-vertical-offset="2159">
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="73" selection-end-column="34" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#form#0;n#div#1;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#4;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
@@ -88,11 +86,9 @@
       <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34430084" vertical-offset="404" max-vertical-offset="1581">
-              <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
-              <folding>
-                <element signature="n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.59694475" vertical-offset="427" max-vertical-offset="2516">
+              <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -360,12 +356,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-04766" summary="social buttons">
-      <created>1460117265480</created>
-      <option name="number" value="04766" />
-      <option name="project" value="LOCAL" />
-      <updated>1460117265480</updated>
     </task>
     <task id="LOCAL-04767" summary="social buttons">
       <created>1460117318340</created>
@@ -655,7 +645,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460191375538</updated>
     </task>
-    <option name="localTasksCounter" value="4815" />
+    <task id="LOCAL-04815" summary="social buttons">
+      <created>1460191695609</created>
+      <option name="number" value="04815" />
+      <option name="project" value="LOCAL" />
+      <updated>1460191695610</updated>
+    </task>
+    <option name="localTasksCounter" value="4816" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1029,13 +1025,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.307693" vertical-offset="258" max-vertical-offset="1122">
-          <caret line="51" column="19" selection-start-line="51" selection-start-column="15" selection-end-line="52" selection-end-column="40" />
+        <state vertical-scroll-proportion="-12.884615" vertical-offset="311" max-vertical-offset="2159">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="73" selection-end-column="34" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#form#0;n#div#1;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#4;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
@@ -1043,11 +1038,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34430084" vertical-offset="404" max-vertical-offset="1581">
-          <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
-          <folding>
-            <element signature="n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.59694475" vertical-offset="427" max-vertical-offset="2516">
+          <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
