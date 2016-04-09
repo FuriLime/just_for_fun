@@ -27,7 +27,7 @@
         @include('notifications')
         <div class="sign-up-form col-md-6 col-md-offset-3">
             <div class="panel-heading">Forgot password</div>
-            <div id="forgot" class="panel-body">
+            <div class="panel-body">
                 <form action="{{ route('forgot-password') }}" autocomplete="on" method="post" role="form">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                     <div class="form-group {{ $errors->first('email', 'has-error') }}">
