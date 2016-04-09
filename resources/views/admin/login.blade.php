@@ -55,6 +55,7 @@
                                         {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
                                     </div>
                                 </div>
+
                                 <div class="form-group">
                                     <div class="col-sm-offset-4 col-sm-6">
                                         <div class="checkbox">
@@ -63,27 +64,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                {{----}}
-                                {{--<div class="form-group {{ $errors->first('email', 'has-error') }}">--}}
-                                    {{--<label style="margin-bottom:0px;" for="email" class="uname control-label"> <i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>--}}
-                                        {{--E-mail--}}
-                                    {{--</label>--}}
-                                    {{--<input id="email" name="email" required type="email" placeholder="E-mail" value="{!! Input::old('email') !!}" />--}}
-                                    {{--<div class="col-sm-12">--}}
-                                        {{--{!! $errors->first('email', '<span class="help-block">:message</span>') !!}--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                                {{--{!! Honeypot::generate('my_name', 'my_time') !!}--}}
-                                {{--{!! $errors->first('my_name', '<span class="help-block">:message</span>') !!}--}}
-                                {{--<div class="form-group {{ $errors->first('password', 'has-error') }}">--}}
-                                    {{--<label style="margin-bottom:0px;" for="password" class="youpasswd"> <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>--}}
-                                        {{--Password--}}
-                                    {{--</label>--}}
-                                    {{--<input id="password" name="password" required type="password" placeholder="eg. X8df!90EO" />--}}
-                                    {{--<div class="col-sm-12">--}}
-                                        {{--{!! $errors->first('password', '<span class="help-block">:message</span>') !!}--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
+
+
                                 <div class="form-group">
                                     <div class="col-sm-offset-4 col-sm-6">
                                         <a href="{{ URL::to('facebook') }}" class="btn btn-block btn-social btn-facebook">
@@ -126,7 +108,7 @@
                             </form>
                         </div>
 </div>
-                        </div>
+
                         {{--<div id="forgot" class="animate form">--}}
                             {{--<form action="{{ route('forgot-password') }}" autocomplete="on" method="post" role="form">--}}
                                 {{--<h3 class="black_bg">--}}
