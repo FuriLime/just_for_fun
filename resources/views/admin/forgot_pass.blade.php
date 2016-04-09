@@ -26,34 +26,32 @@
     <div class="row vertical-offset-100">
         @include('notifications')
         <div class="sign-up-form col-md-6 col-md-offset-3">
-            <div class="panel-heading">Forgot password</div>
-            <div class="panel-body">
-                <form action="{{ route('forgot-password') }}" autocomplete="on" method="post" role="form">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-                    <div class="form-group {{ $errors->first('email', 'has-error') }}">
-                        <label for="email" class="col-sm-4 control-label">E-Mail Address</label>
-                        <div class="col-sm-6">
-                            <input type="email" name="email" required class="form-control" type="email" autocomplete="off" id="email-address" value="{!! Input::old('email') !!}">
-                            {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
+            <div class="panel panel-default">
+                <div class="panel-heading">Forgot password</div>
+                <div class="panel-body">
+                    <form action="{{ route('forgot-password') }}" autocomplete="on" method="post" role="form">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                        <div class="form-group {{ $errors->first('email', 'has-error') }}">
+                            <label for="email" class="col-sm-4 control-label">E-Mail Address</label>
+                            <div class="col-sm-6">
+                                <input type="email" name="email" required class="form-control" type="email" autocomplete="off" id="email-address" value="{!! Input::old('email') !!}">
+                                {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
+                            </div>
                         </div>
-                    </div>
-
-
-                    <p class="login button">
-                        <input type="submit" value="Submit" class="btn btn-success" />
-                    </p>
-
-                    <p class="change_link">
-                        <a href="{{ URL::to('signin') }}" class="to_register">
-                            <button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Back</button>
-                        </a>
-                    </p>
-                </form>
+                        <p class="login button">
+                            <input type="submit" value="Submit" class="btn btn-success" />
+                        </p>
+                        <p class="change_link">
+                            <a href="{{ URL::to('signin') }}" class="to_register">
+                                <button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Back</button>
+                            </a>
+                        </p>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
 
 
 <!-- global js -->
