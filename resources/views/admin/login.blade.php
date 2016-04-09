@@ -108,31 +108,7 @@
                             </form>
                         </div>
 </div>
-<div class="panel-heading">Forgot password</div>
-     <div id="forgot" class="panel-body">
-        <form action="{{ route('forgot-password') }}" autocomplete="on" method="post" role="form">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-                <div class="form-group {{ $errors->first('email', 'has-error') }}">
-                    <label style="margin-bottom:0px;" for="emailsignup1" class="youmai">
-                                <i class="livicon" data-name="mail" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
-                                Your email
-                            </label>
-                            <input id="email" name="email" required type="email" placeholder="your@mail.com" value="{!! Input::old('email') !!}" />
-                            <div class="col-sm-12">
-                                {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
-                            </div>
-                </div>
-                        <p class="login button">
-                            <input type="submit" value="Submit" class="btn btn-success" />
-                        </p>
-                        <p class="change_link">
-                            <a href="{{ URL::to('signin') }}" class="to_register">
-                                <button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Back</button>
-                            </a>
-                        </p>
-        </form>
-      </div>
-</div>
+
 
 
     <!-- global js -->

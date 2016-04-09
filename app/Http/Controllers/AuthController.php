@@ -317,6 +317,12 @@ class AuthController extends JoshController
      *
      * @return Redirect
      */
+
+    public function getForgotPassword(){
+        return View('forgot_pass');
+    }
+
+
     public function postForgotPassword()
     {
         // Declare the rules for the validator

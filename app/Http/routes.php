@@ -160,6 +160,7 @@ Route::post('signin','AuthController@postSignin');
 Route::get('signup', array('as' => 'signup','uses' => 'AuthController@getSignup'));
 Route::post('signup',array('as' => 'signup','uses' => 'AuthController@postSignup'));
 Route::post('forgot-password',array('as' => 'forgot-password','uses' => 'AuthController@postForgotPassword'));
+Route::get('forgot-password', array('as' => 'forgot-password','uses' => 'AuthController@getForgotPassword'));
 
 # Forgot Password Confirmation
 Route::get('forgot-password/{userId}/{passwordResetCode}', array('as' => 'forgot-password-confirm', 'uses' => 'AuthController@getForgotPasswordConfirm'));
