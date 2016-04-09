@@ -55,6 +55,14 @@
                                         {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-4 col-sm-6">
+                                        <div class="checkbox">
+                                                <input type="checkbox" name="remember-me" id="remember-me" value="remember-me">
+                                                <label for="remember-me">Keep me logged in</label>
+                                        </div>
+                                    </div>
+                                </div>
                                 {{----}}
                                 {{--<div class="form-group {{ $errors->first('email', 'has-error') }}">--}}
                                     {{--<label style="margin-bottom:0px;" for="email" class="uname control-label"> <i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>--}}
@@ -100,13 +108,13 @@
                                         </a>
                                     </div>
                                 </div>
-                                <p class="keeplogin">
-                                    <input type="checkbox" name="remember-me" id="remember-me" value="remember-me" />
-                                    <label for="remember-me">Keep me logged in</label>
-                                </p>
-                                <p class="login button">
-                                    <input type="submit" value="Login" class="btn btn-success" />
-                                </p>
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-4 col-sm-6">
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fa fa-check-circle"></i>Log In</button>
+                                    </div>
+                                </div>
                                 <p class="change_link">
                                     <a href="#toforgot">
                                         <button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Forgot password</button>
