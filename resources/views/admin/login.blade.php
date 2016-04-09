@@ -46,7 +46,7 @@
                                         {!! $errors->first('my_name', '<span class="help-block">:message</span>') !!}
                                     </div>
                                 </div>
-
+                                {!! Honeypot::generate('my_name', 'my_time') !!}
 
                                 <div class="form-group {{ $errors->first('password', 'has-error') }}">
                                     <label for="password" class="col-sm-4 control-label">Password</label>
