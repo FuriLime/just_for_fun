@@ -20,7 +20,7 @@
 <body>
 <div class="login-top-bar clearfix">
     <a href="/" class="login-logo-holder pull-left"><img src="/assets/images/logo.png"></a>
-    <a href="/" class="login-sign-up-btn pull-right">Forgot Password</a>
+    <a href="/" class="login-sign-up-btn pull-right">Sign Up</a>
 </div>
 <div class="container">
     <div class="row vertical-offset-100">
