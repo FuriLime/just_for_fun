@@ -76,61 +76,59 @@
                                         {{--{!! $errors->first('password', '<span class="help-block">:message</span>') !!}--}}
                                     {{--</div>--}}
                                 {{--</div>--}}
-                                <p class="keeplogin">
-                                    <input type="checkbox" name="remember-me" id="remember-me" value="remember-me" />
-                                    <label for="remember-me">Keep me logged in</label>
-                                </p>
-                                <p class="login button">
-                                    <input type="submit" value="Login" class="btn btn-success" />
-                                </p>
-                                <p class="change_link">
-                                    <a href="#toforgot">
-                                        <button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Forgot password</button>
-                                    </a>
-                                    <a href="{{ URL::to('signup') }}">
-                                        <button type="button" class="btn btn-responsive botton-alignment btn-success btn-sm" style="float:right;">Sign up</button>
-                                    </a>
-                                </p>
+                                {{--<p class="keeplogin">--}}
+                                    {{--<input type="checkbox" name="remember-me" id="remember-me" value="remember-me" />--}}
+                                    {{--<label for="remember-me">Keep me logged in</label>--}}
+                                {{--</p>--}}
+                                {{--<p class="login button">--}}
+                                    {{--<input type="submit" value="Login" class="btn btn-success" />--}}
+                                {{--</p>--}}
+                                {{--<p class="change_link">--}}
+                                    {{--<a href="#toforgot">--}}
+                                        {{--<button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Forgot password</button>--}}
+                                    {{--</a>--}}
+                                    {{--<a href="{{ URL::to('signup') }}">--}}
+                                        {{--<button type="button" class="btn btn-responsive botton-alignment btn-success btn-sm" style="float:right;">Sign up</button>--}}
+                                    {{--</a>--}}
+                                {{--</p>--}}
                             </form>
                         </div>
 </div>
                         </div>
-                        <div id="forgot" class="animate form">
-                            <form action="{{ route('forgot-password') }}" autocomplete="on" method="post" role="form">
-                                <h3 class="black_bg">
-                                    <img src="{{ asset('assets/img/logo.png') }}" alt="josh logo">Password</h3>
-                                <p>
-                                    Enter your email address below and we'll send a special reset password link to your inbox.
-                                </p>
+                        {{--<div id="forgot" class="animate form">--}}
+                            {{--<form action="{{ route('forgot-password') }}" autocomplete="on" method="post" role="form">--}}
+                                {{--<h3 class="black_bg">--}}
+                                    {{--<img src="{{ asset('assets/img/logo.png') }}" alt="josh logo">Password</h3>--}}
+                                {{--<p>--}}
+                                    {{--Enter your email address below and we'll send a special reset password link to your inbox.--}}
+                                {{--</p>--}}
 
-                                <!-- CSRF Token -->
-                                <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                                {{--<!-- CSRF Token -->--}}
+                                {{--<input type="hidden" name="_token" value="{{ csrf_token() }}" />--}}
 
-                                <div class="form-group {{ $errors->first('email', 'has-error') }}">
-                                    <label style="margin-bottom:0px;" for="emailsignup1" class="youmai">
-                                        <i class="livicon" data-name="mail" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
-                                        Your email
-                                    </label>
-                                    <input id="email" name="email" required type="email" placeholder="your@mail.com" value="{!! Input::old('email') !!}" />
-                                    <div class="col-sm-12">
-                                        {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
-                                    </div>
-                                </div>
-                                <p class="login button">
-                                    <input type="submit" value="Submit" class="btn btn-success" />
-                                </p>
-                                <p class="change_link">
-                                    <a href="{{ URL::to('signin') }}" class="to_register">
-                                        <button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Back</button>
-                                    </a>
-                                </p>
-                            </form>
-                        </div>
+                                {{--<div class="form-group {{ $errors->first('email', 'has-error') }}">--}}
+                                    {{--<label style="margin-bottom:0px;" for="emailsignup1" class="youmai">--}}
+                                        {{--<i class="livicon" data-name="mail" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>--}}
+                                        {{--Your email--}}
+                                    {{--</label>--}}
+                                    {{--<input id="email" name="email" required type="email" placeholder="your@mail.com" value="{!! Input::old('email') !!}" />--}}
+                                    {{--<div class="col-sm-12">--}}
+                                        {{--{!! $errors->first('email', '<span class="help-block">:message</span>') !!}--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<p class="login button">--}}
+                                    {{--<input type="submit" value="Submit" class="btn btn-success" />--}}
+                                {{--</p>--}}
+                                {{--<p class="change_link">--}}
+                                    {{--<a href="{{ URL::to('signin') }}" class="to_register">--}}
+                                        {{--<button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Back</button>--}}
+                                    {{--</a>--}}
+                                {{--</p>--}}
+                            {{--</form>--}}
+                        {{--</div>--}}
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+
     <!-- global js -->
     <script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
     <!-- Bootstrap -->
