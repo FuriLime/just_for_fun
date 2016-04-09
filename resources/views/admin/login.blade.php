@@ -29,10 +29,7 @@
 
             <div class="sign-up-form col-md-6 col-md-offset-3">
                 <div class="panel panel-default">
-                    <a class="hiddenanchor" id="toregister"></a>
-                    <a class="hiddenanchor" id="tologin"></a>
-                    <a class="hiddenanchor" id="toforgot"></a>
-                        <div class="panel-heading">Basics</div>
+                        <div class="panel-heading">Login</div>
                         <div class="panel-body">
                             <form action="{{ route('signin') }}" autocomplete="on" method="post" role="form">
                                     <!-- CSRF Token -->
@@ -98,7 +95,7 @@
                                     </div>
                                 </div>
                                 <p class="change_link">
-                                    <a href="#toforgot">
+                                    <a href="{{ URL::to('forgot-password') }}">
                                         <button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Forgot password</button>
                                     </a>
                                     <a href="{{ URL::to('signup') }}">
