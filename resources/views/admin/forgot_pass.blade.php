@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0034)http://event.test-y-sbm.com/signup -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Register</title>
+    <title>Forgot Password</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- global level css -->
     <!-- global level css -->
@@ -20,7 +20,7 @@
 <body>
 <div class="login-top-bar clearfix">
     <a href="/" class="login-logo-holder pull-left"><img src="/assets/images/logo.png"></a>
-    <a href="/" class="login-sign-up-btn pull-right">Sign Up</a>
+    <a href="/" class="login-sign-up-btn pull-right">Forgot Password</a>
 </div>
 <div class="container">
     <div class="row vertical-offset-100">
@@ -31,18 +31,18 @@
                 <form action="{{ route('forgot-password') }}" autocomplete="on" method="post" role="form">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                     <div class="form-group {{ $errors->first('email', 'has-error') }}">
-                        <label style="margin-bottom:0px;" for="emailsignup1" class="youmai">
-                            <i class="livicon" data-name="mail" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>
-                            Your email
-                        </label>
-                        <input id="email" name="email" required type="email" placeholder="your@mail.com" value="{!! Input::old('email') !!}" />
-                        <div class="col-sm-12">
+                        <label for="email" class="col-sm-4 control-label">E-Mail Address</label>
+                        <div class="col-sm-6">
+                            <input type="email" name="email" required class="form-control" type="email" autocomplete="off" id="email-address" value="{!! Input::old('email') !!}">
                             {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
                         </div>
                     </div>
+
+
                     <p class="login button">
                         <input type="submit" value="Submit" class="btn btn-success" />
                     </p>
+
                     <p class="change_link">
                         <a href="{{ URL::to('signin') }}" class="to_register">
                             <button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Back</button>
@@ -61,8 +61,6 @@
 <!-- Bootstrap -->
 <script src="{{ asset('assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
 <!--livicons-->
-<script src="{{ asset('assets/vendors/livicons/minified/raphael-min.js') }}"></script>
-<script src="{{ asset('assets/vendors/livicons/minified/livicons-1.4.min.js') }}"></script>
 <!-- end of global js -->
 </body>
 </html>
