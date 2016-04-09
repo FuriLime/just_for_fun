@@ -76,21 +76,45 @@
                                         {{--{!! $errors->first('password', '<span class="help-block">:message</span>') !!}--}}
                                     {{--</div>--}}
                                 {{--</div>--}}
-                                {{--<p class="keeplogin">--}}
-                                    {{--<input type="checkbox" name="remember-me" id="remember-me" value="remember-me" />--}}
-                                    {{--<label for="remember-me">Keep me logged in</label>--}}
-                                {{--</p>--}}
-                                {{--<p class="login button">--}}
-                                    {{--<input type="submit" value="Login" class="btn btn-success" />--}}
-                                {{--</p>--}}
-                                {{--<p class="change_link">--}}
-                                    {{--<a href="#toforgot">--}}
-                                        {{--<button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Forgot password</button>--}}
-                                    {{--</a>--}}
-                                    {{--<a href="{{ URL::to('signup') }}">--}}
-                                        {{--<button type="button" class="btn btn-responsive botton-alignment btn-success btn-sm" style="float:right;">Sign up</button>--}}
-                                    {{--</a>--}}
-                                {{--</p>--}}
+                                <div class="form-group">
+                                    <div class="col-sm-offset-4 col-sm-6">
+                                        <a href="{{ URL::to('facebook') }}" class="btn btn-block btn-social btn-facebook">
+                                            <i class="fa fa-facebook"></i>
+                                            Sign in with Facebook
+                                        </a>
+                                        <a href="{{ URL::to('twitter') }}" class="btn btn-block btn-social btn-twitter">
+                                            <i class="fa fa-twitter"></i>
+                                            Sign in with Twitter
+                                        </a>
+                                        <a href="{{ URL::to('google') }}" class="btn btn-block btn-social btn-google-plus">
+                                            <i class="fa fa-google-plus"></i>
+                                            Sign in with Google
+                                        </a>
+                                        <a href="{{ URL::to('linked') }}" class="btn btn-block btn-social btn-linkedin">
+                                            <i class="fa fa-linkedin"></i>
+                                            Sign in with LinkedIn
+                                        </a>
+                                        <a href="{{ URL::to('oauthwindows') }}" class="btn btn-block btn-social btn-linkedin">
+                                            <i class="fa fa-microsoft"></i>
+                                            Sign in with Microsoft
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="keeplogin">
+                                    <input type="checkbox" name="remember-me" id="remember-me" value="remember-me" />
+                                    <label for="remember-me">Keep me logged in</label>
+                                </p>
+                                <p class="login button">
+                                    <input type="submit" value="Login" class="btn btn-success" />
+                                </p>
+                                <p class="change_link">
+                                    <a href="#toforgot">
+                                        <button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Forgot password</button>
+                                    </a>
+                                    <a href="{{ URL::to('signup') }}">
+                                        <button type="button" class="btn btn-responsive botton-alignment btn-success btn-sm" style="float:right;">Sign up</button>
+                                    </a>
+                                </p>
                             </form>
                         </div>
 </div>
