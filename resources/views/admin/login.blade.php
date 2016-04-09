@@ -1,26 +1,34 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Login</title>
+<!-- saved from url=(0034)http://event.test-y-sbm.com/signup -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Sign In</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- global level css -->
     <!-- global level css -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" />
     <!-- end of global level css -->
     <!-- page level css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/login.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/custom.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/advbuttons.css') }}" />
+    <link href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+
     <!-- end of page level css -->
 
 </head>
 
 <body>
-    <div class="container">
+<div class="login-top-bar clearfix">
+    <a href="/" class="login-logo-holder pull-left"><img src="/assets/images/logo.png"></a>
+    <a href="/" class="login-sign-up-btn pull-right">Sign Up</a>
+</div>
+
+<div class="container">
         <div class="row vertical-offset-100">
             <!-- Notifications -->
             @include('notifications')
- 
-            <div class="col-sm-6 col-sm-offset-3  col-md-5 col-md-offset-4 col-lg-4 col-lg-offset-4">
-                <div id="container_demo">
+
+            <div class="sign-up-form col-md-6 col-md-offset-3">
+                <div class="panel panel-default">
                     <a class="hiddenanchor" id="toregister"></a>
                     <a class="hiddenanchor" id="tologin"></a>
                     <a class="hiddenanchor" id="toforgot"></a>
