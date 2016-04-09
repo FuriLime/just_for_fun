@@ -38,9 +38,12 @@
                                 {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
                             </div>
                         </div>
-                        <p class="login button">
-                            <input type="submit" value="Submit" class="btn btn-success" />
-                        </p>
+                        <div class="form-group">
+                            <div class="col-sm-offset-4 col-sm-6">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-check-circle"></i>Submit</button>
+                            </div>
+                        </div>
                         <p class="change_link">
                             <a href="{{ URL::to('signin') }}" class="to_register">
                                 <button type="button" class="btn btn-responsive botton-alignment btn-warning btn-sm">Back</button>
