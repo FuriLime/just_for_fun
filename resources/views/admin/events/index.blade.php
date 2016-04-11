@@ -8,9 +8,9 @@ events List
 <link rel="stylesheet" href="{{ asset('assets/css/admin/events.css') }}" />
 {{-- Page content --}}
 @section('content')
-<section class="content-header">
-    <h1>Events</h1>
-</section>
+{{--<section class="content-header">--}}
+    {{--<h1>Events</h1>--}}
+{{--</section>--}}
 
 <section class="content">
     <div class="panel-heading clearfix">
@@ -38,7 +38,7 @@ events List
 
             <div class="tab-content events-tab-content">
                 <div class="tab-pane active" id="tab_1">
-                    <div class="table-scrollable">
+                    <div class="table-scrollable table-responsive events-table">
                         <table class="table table-hover">
                             <thead>
                                 <tr>
@@ -56,29 +56,31 @@ events List
                                     <tr>
                                         <td>
                                             @if ($event->status == 'Publish')
-                                                <i class="fa fa-eye"></i>
+                                                <i class="fa fa-eye" data-toggle="tooltip" data-placement="bottom" title="Status: published"></i>
                                             @else
-                                                <i class="fa fa-eye-slash"></i>
+                                                <i class="fa fa-eye-slash" data-toggle="tooltip" data-placement="bottom" title="Status: draft"></i>
                                             @endif
                                         </td>
                                         <td>{{ $event->title }}</td>
                                         <td>{{ $event->location }}</td>
-                                        <td>{{ $event->startt }} - {{$event->finisht }}</td>
+                                        <td class="event-popover" data-container="body" data-toggle="popover" data-placement="bottom" title="{{ $event->startt }}" data-content="Event starts: {{ $event->startt }}<br>Last Update: <br>Event Created: <br><br>Timezone: {{ $event->timezone }}">{{ $event->startt }}</td>
                                         <td></td>
                                         <td>
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-default">Action</button>
+                                                <button type="button" class="btn btn-default"><i class="fa fa-cog"></i> Actions</button>
                                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="fa fa-caret-down">dfg</i>
-                                                    <span class="caret"></span>
+                                                    <i class="fa fa-caret-down"></i>
                                                     <span class="sr-only">Toggle Dropdown</span>
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Action</a></li>
-                                                    <li><a href="#">Another action</a></li>
-                                                    <li><a href="#">Something else here</a></li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li><a href="#">Separated link</a></li>
+                                                    <li><a href="#"><i class="fa fa-share-alt"></i> Share Event</a></li>
+                                                    <li><a href="{{ route('events.show', $event->readable_url) }}"><i class="fa fa-desktop"></i> Open EventPage</a></li>
+                                                    <li><a href="#"><i class="fa fa-signal"></i> View Statistics</a></li>
+                                                    <li><a href="{{ route('events.edit', $event->readable_url) }}"><i class="fa fa-edit"></i> Edit Event</a></li>
+                                                    <li><a href="{{ route('events.clone', $event->readable_url) }}"><i class="fa fa-copy"></i> Duplicate Event</a></li>
+                                                    <li><a href="#"><i class="fa fa-eye"></i> Publish Event</a></li>
+                                                    <li><a href="#"><i class="fa fa-eye-slash"></i> Unpublish Event</a></li>
+                                                    <li><a href="{{ route('events.confirm-delete', $event->uuid) }}"><i class="fa fa-trash-o"></i> Delete Event</a></li>
                                                 </ul>
                                             </div>
                                         </td>
@@ -88,64 +90,87 @@ events List
                             </tbody>
                         </table>
                     </div>
-                    <table class="table table-bordered " id="table">
-                        <thead>
-                        <tr class="filters">
-                            <th>@lang('frontend.title')</th>
-                            <th>@lang('frontend.type')</th>
-                            <th>@lang('frontend.location')</th>
-                            <th>Event Time Zone</th>
-                            <th>@lang('frontend.start')</th>
-                            <th>@lang('frontend.finish')</th>
-                            <th>@lang('frontend.published')</th>
-                            <th>@lang('frontend.actions')</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach ($events as $event)
-                            @if(($event->status!='Draft' && (!Sentinel::check())) || Sentinel::check())
-                                <tr>
-                                    <td>{{ $event->title }}</td>
-                                    <td>
-                                        @if ($event->type === 1)
-                                            Online
-                                        @elseif ($event->type === 2)
-                                            Offline
-                                        @elseif ($event->type === 3)
-                                            Online & Offline
-                                        @endif
-                                    </td>
-                                    <td>{{ $event->location }}</td>
-                                    <td>{{ $event->timezone }}</td>
-                                    <td>{{ $event->startt }}</td>
-                                    <td>{{$event->finisht }}</td>
-                                    <td>
-                                        @if ($event->status == 'Publish')
-                                            +
-                                        @else
-                                            -
-                                        @endif
-                                    </td>
-                                    <td>
-                                        <a href="{{ route('events.show', $event->readable_url) }}">
-                                            <i class="fa fa-info-circle" data-name="info" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="view event"></i>
-                                        </a>
-                                        <a href="{{ route('events.edit', $event->readable_url) }}">
-                                            <i class="fa fa-pencil-square-o" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="edit event"></i>
-                                        </a>
-                                        <a href="{{ route('events.clone', $event->readable_url) }}">
-                                            <i class="fa fa-clone" data-name="clone" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="clone event"></i>
-                                        </a>
-                                        <a href="{{ route('events.confirm-delete', $event->uuid) }}" data-toggle="modal" data-target="#delete_confirm">
-                                            <i class="fa fa-trash-o" data-name="remove-alt" data-size="18" data-loop="true" data-c="#f56954" data-hc="#f56954" title="delete event"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            @endif
-                        @endforeach
+                    <div class="table-bottom-holder">
+                        <div class="col-md-4">
+                            <div class="event-page-count">
+                                Showing 1-4 of 4 events.
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkbox"><label> <input type="checkbox"> Include past events.</label></div>
+                        </div>
+                        <div class="col-md-4 pagination-holder">
+                            <nav>
+                                <ul class="pagination pagination-sm">
+                                    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">Previous</span></a></li>
+                                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                    <li class=""><a href="#">2 <span class="sr-only">(current)</span></a></li>
+                                    <li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                                    <li class=""><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                                    <li><a href="#" aria-label="Next"><span aria-hidden="true">Next</span></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-plus"></i> Add New Event</a>
+                    {{--<table class="table table-bordered " id="table">--}}
+                        {{--<thead>--}}
+                        {{--<tr class="filters">--}}
+                            {{--<th>@lang('frontend.title')</th>--}}
+                            {{--<th>@lang('frontend.type')</th>--}}
+                            {{--<th>@lang('frontend.location')</th>--}}
+                            {{--<th>Event Time Zone</th>--}}
+                            {{--<th>@lang('frontend.start')</th>--}}
+                            {{--<th>@lang('frontend.finish')</th>--}}
+                            {{--<th>@lang('frontend.published')</th>--}}
+                            {{--<th>@lang('frontend.actions')</th>--}}
+                        {{--</tr>--}}
+                        {{--</thead>--}}
+                        {{--<tbody>--}}
+                        {{--@foreach ($events as $event)--}}
+                            {{--@if(($event->status!='Draft' && (!Sentinel::check())) || Sentinel::check())--}}
+                                {{--<tr>--}}
+                                    {{--<td>{{ $event->title }}</td>--}}
+                                    {{--<td>--}}
+                                        {{--@if ($event->type === 1)--}}
+                                            {{--Online--}}
+                                        {{--@elseif ($event->type === 2)--}}
+                                            {{--Offline--}}
+                                        {{--@elseif ($event->type === 3)--}}
+                                            {{--Online & Offline--}}
+                                        {{--@endif--}}
+                                    {{--</td>--}}
+                                    {{--<td>{{ $event->location }}</td>--}}
+                                    {{--<td>{{ $event->timezone }}</td>--}}
+                                    {{--<td>{{ $event->startt }}</td>--}}
+                                    {{--<td>{{$event->finisht }}</td>--}}
+                                    {{--<td>--}}
+                                        {{--@if ($event->status == 'Publish')--}}
+                                            {{--+--}}
+                                        {{--@else--}}
+                                            {{-----}}
+                                        {{--@endif--}}
+                                    {{--</td>--}}
+                                    {{--<td>--}}
+                                        {{--<a href="{{ route('events.show', $event->readable_url) }}">--}}
+                                            {{--<i class="fa fa-info-circle" data-name="info" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="view event"></i>--}}
+                                        {{--</a>--}}
+                                        {{--<a href="{{ route('events.edit', $event->readable_url) }}">--}}
+                                            {{--<i class="fa fa-pencil-square-o" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="edit event"></i>--}}
+                                        {{--</a>--}}
+                                        {{--<a href="{{ route('events.clone', $event->readable_url) }}">--}}
+                                            {{--<i class="fa fa-clone" data-name="clone" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="clone event"></i>--}}
+                                        {{--</a>--}}
+                                        {{--<a href="{{ route('events.confirm-delete', $event->uuid) }}" data-toggle="modal" data-target="#delete_confirm">--}}
+                                            {{--<i class="fa fa-trash-o" data-name="remove-alt" data-size="18" data-loop="true" data-c="#f56954" data-hc="#f56954" title="delete event"></i>--}}
+                                        {{--</a>--}}
+                                    {{--</td>--}}
+                                {{--</tr>--}}
+                            {{--@endif--}}
+                        {{--@endforeach--}}
 
-                        </tbody>
-                    </table>
+                        {{--</tbody>--}}
+                    {{--</table>--}}
                 </div>
                 <!-- /.tab-pane -->
                 <div class="tab-pane" id="tab_2">
@@ -173,5 +198,15 @@ events List
     </div>
   </div>
 </div>
-<script>$(function () {$('body').on('hidden.bs.modal', '.modal', function () {$(this).removeData('bs.modal');});});</script>
+<script>
+    $('.event-popover').popover({
+        trigger: "hover",
+        html:true
+    });
+    $(function () {
+        $('body').on('hidden.bs.modal', '.modal', function () {
+            $(this).removeData('bs.modal');
+        });
+    });
+</script>
 @stop

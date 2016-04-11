@@ -317,13 +317,17 @@ class AuthController extends JoshController
      *
      * @return Redirect
      */
+
+    public function getForgotPassword(){
+        return View('admin.forgot_pass');
+    }
+
+
     public function postForgotPassword()
     {
         // Declare the rules for the validator
         $rules = array(
             'email' => 'required|email',
-            'my_email'   => 'honeypot',
-            'my_time'   => 'required|honeytime:5',
         );
 
         // Create a new validator instance from our dynamic rules

@@ -1,7 +1,37 @@
+.nav-tabs-custom .nav-tabs>li>a {
+    font-size: 18px;
+    font-weight: bold;
+}
 .events-tab-content {
     padding: 10px;
     background: #fff;
     border: 1px solid #ddd;
     border-top: none;
     border-radius: 0 0 4px 4px;
+}
+.events-table thead th:last-child {
+    min-width: 130px;
+}
+.events-table .btn-group .fa {
+    line-height: 1.42857143;
+}
+.events-table .btn-group .dropdown-menu {
+    right: 0;
+    left: inherit;
+}
+.table-bottom-holder .checkbox,
+.table-bottom-holder .pagination {
+    margin: 0;
+}
+.table-bottom-holder .checkbox,
+.table-bottom-holder .event-page-count{
+    line-height: 29px;
+}
+.table-bottom-holder .checkbox,
+.table-bottom-holder .event-page-count,
+.table-bottom-holder .pagination {
+    margin-bottom: 25px;
+}
+.table-bottom-holder .pagination-holder {
+    text-align: right;
 }
