@@ -1,6 +1,11 @@
 .form-horizontal.edit-profile-form {
     padding: 20px;
 }
+.form-horizontal.edit-profile-form .fileinput .thumbnail{
+    width: 200px;
+    height: 200px;
+    float: left;
+}
 .edit-profile-form input,
 .edit-profile-form textarea {
     width: calc(100% - 30px);
