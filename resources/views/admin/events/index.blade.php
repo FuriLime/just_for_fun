@@ -92,7 +92,9 @@ events List
                     </div>
                     <div class="table-bottom-holder">
                         <div class="col-md-4">
-                            Showing 1-4 of 4 events.
+                            <div class="event-page-count">
+                                Showing 1-4 of 4 events.
+                            </div>
                         </div>
                         <div class="col-md-4">
                             <div class="checkbox"><label> <input type="checkbox"> Include past events.</label></div>
@@ -108,7 +110,7 @@ events List
                             </ul>
                         </nav>
                     </div>
-                    <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add New Event</a>
+                    <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-plus"></i> Add New Event</a>
                     {{--<table class="table table-bordered " id="table">--}}
                         {{--<thead>--}}
                         {{--<tr class="filters">--}}
