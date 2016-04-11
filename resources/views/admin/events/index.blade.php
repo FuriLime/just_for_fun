@@ -91,6 +91,12 @@ events List
                         </table>
                     </div>
                     <div>
+                        <div>
+                            Showing 1-4 of 4 events.
+                        </div>
+                        <div>
+                            <div class="checkbox"><label> <input type="checkbox"> Check me out </label></div>
+                        </div>
                         <nav>
                             <ul class="pagination pagination-sm">
                                 <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">Previous</span></a></li>
