@@ -115,19 +115,19 @@ View User Details
                                 <table class="table table-hover">
                                     <tr>
                                         <td>Timezone</td>
-                                        <td><i class="fa fa-globe"></i> </td>
+                                        <td><i class="fa fa-globe"></i> Europe / Berlin (+02:00)</td>
                                     </tr>
                                     <tr>
                                         <td>Date Format</td>
-                                        <td><i class="fa fa-calendar"></i> </td>
+                                        <td><i class="fa fa-calendar"></i> dd-mm-yyyy (e.g. 12-15-2015)</td>
                                     </tr>
                                     <tr>
                                         <td>Time Format</td>
-                                        <td><i class="fa fa-clock-o"></i> </td>
+                                        <td><i class="fa fa-clock-o"></i> HH:MM (e.g 17:15)</td>
                                     </tr>
                                     <tr>
                                         <td>Visibility Profile Page</td>
-                                        <td><i class="fa fa-check"></i> </td>
+                                        <td><i class="fa fa-check"></i> published</td>
                                     </tr>
                                 </table>
                             </div>
