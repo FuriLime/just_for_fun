@@ -53,38 +53,62 @@ Favorite
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
                         <li class="active">
-                            <a href="#tab1" data-toggle="tab">User Profile</a>
+                            <a href="#tab1" data-toggle="tab">Events</a>
                         </li>
                         <li>
-                            <a href="#tab2" data-toggle="tab">Profile Settings</a>
+                            <a href="#tab2" data-toggle="tab">Event Channels</a>
                         </li>
                     </ul>
-                    <div  class="tab-content mar-top">
+                    <div class="tab-content mar-top">
                         <div id="tab1" class="tab-pane fade active in">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="panel">
-                                        <div class="panel-body">
+                                        <div class="panel-body xTableWrap">
                                             <div class="col-md-12">
                                                 <div class="panel-body">
-                                                    <table class="table table-bordered " id="table">
+                                                    <table class="table xTable" id="table">
 																	                    <thead>
 																	                        <tr class="filters">
-																                            <th>Event name</th>
-																                            <th>Location</th>
-																                            <th>Date</th>
-																                            <th></th>
+																                            <th style="width: 116px;">Event name</th>
+																                            <th style="width: 388px;">Location</th>
+																                            <th style="width: 138px;">Date</th>
+																                            <th style="width: 290px;"></th>
 																	                        </tr>
 																	                    </thead>
 																	                    <tbody>
 																	                    	<tr>
-																	                        <td>1one</td>
-																	                    		<td>6two</td>
-																	            						<td>3three</td>
-																	            						<td></td>
+																	                        <td>Loc test</td>
+																	                    		<td>Qwerty Интернет-магазин, Армейская улица, Одесса, Украина</td>
+																	            						<td>2016-04-02 19:00</td>
+																	            						<td>
+																	            							<button class="btn btn-default">
+																	            								<i class="fa fa-times-circle-o"></i> Unfollow Event
+																	            							</button>
+																	            							<button class="btn btn-default">
+																	            								<i class="fa fa-eye"></i> View Event
+																	            							</button>
+																	            						</td>
+																	            					</tr>
+																	            					<tr>
+																	                        <td>Social test</td>
+																	                    		<td>Sadfat Al Bahar Elect Ware Trading - Sharjah - United Arab Emirates</td>
+																	            						<td>2016-03-31 19:00</td>
+																	            						<td>
+																	            							<button class="btn btn-default">
+																	            								<i class="fa fa-times-circle-o"></i> Unfollow Event
+																	            							</button>
+																	            							<button class="btn btn-default">
+																	            								<i class="fa fa-eye"></i> View Event
+																	            							</button>
+																	            						</td>
 																	            					</tr>
 																	                    </tbody>
 																	                </table>
+
+																	                <div>
+																	                	<a href="#" class="btn btn-primary btn-lg"><i class="fa fa-plus"></i> Create Your own Event</a>
+																	                </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -93,48 +117,54 @@ Favorite
                             </div>
                         </div>
                         <div id="tab2" class="tab-pane fade">
-                            <div class="row">
-                                <div class="col-md-12 pd-top">
-                                    <form action="#" class="form-horizontal">
-                                        <div class="form-body">
-                                            <div class="form-group">
-                                                <label for="inputpassword" class="col-md-3 control-label">
-                                                    Password
-                                                    <span class='require'>*</span>
-                                                </label>
-                                                <div class="col-md-9">
-                                                    <div class="input-group">
-                                                                <span class="input-group-addon">
-                                                                    <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>
-                                                                </span>
-                                                        <input type="password"  id="inputpassword" placeholder="Password" class="form-control"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputnumber" class="col-md-3 control-label">
-                                                    Confirm Password
-                                                    <span class='require'>*</span>
-                                                </label>
-                                                <div class="col-md-9">
-                                                    <div class="input-group">
-                                                                <span class="input-group-addon">
-                                                                    <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>
-                                                                </span>
-                                                        <input type="password"  id="inputnumber"placeholder="Password" class="form-control"/>
-                                                    </div>
+                           <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="panel">
+                                        <div class="panel-body xTableWrap">
+                                            <div class="col-md-12">
+                                                <div class="panel-body">
+                                                    <table class="table xTable" id="table_ch">
+																	                    <thead>
+																	                        <tr class="filters">
+																                            <th style="width: 166px;">Event Publisher</th>
+																                            <th style="width: 288px;">Event Channel</th>
+																                            <th style="width: 138px;"># Events</th>
+																                            <th style="width: 290px;"></th>
+																	                        </tr>
+																	                    </thead>
+																	                    <tbody>
+																	                    	<tr>
+																	                        <td>Random channel</td>
+																	                    		<td>Party</td>
+																	            						<td>36</td>
+																	            						<td>
+																	            							<button class="btn btn-default">
+																	            								<i class="fa fa-times-circle-o"></i> Unfollow Event
+																	            							</button>
+																	            							<button class="btn btn-default">
+																	            								<i class="fa fa-eye"></i> View Event
+																	            							</button>
+																	            						</td>
+																	            					</tr>
+																	            					<tr>
+																	                        <td>Live channel</td>
+																	                    		<td>Webcam</td>
+																	            						<td>12</td>
+																	            						<td>
+																	            							<button class="btn btn-default">
+																	            								<i class="fa fa-times-circle-o"></i> Unfollow Event
+																	            							</button>
+																	            							<button class="btn btn-default">
+																	            								<i class="fa fa-eye"></i> View Event
+																	            							</button>
+																	            						</td>
+																	            					</tr>
+																	                    </tbody>
+																	                </table>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-actions">
-                                            <div class="col-md-offset-3 col-md-9">
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                                &nbsp;
-                                                <button type="button" class="btn btn-danger">Cancel</button>
-                                                &nbsp;
-                                                <input type="reset" class="btn btn-default hidden-xs" value="Reset"></div>
-                                        </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -156,6 +186,17 @@ Favorite
 <script>
 $(document).ready(function() {
 	$('#table').DataTable({
+		"columns": [
+	    null,
+	   	null,
+	    null,
+	    { 
+	    	"orderable": false
+	    },
+	  ]
+	});
+
+	$('#table_ch').DataTable({
 		"columns": [
 	    null,
 	   	null,
