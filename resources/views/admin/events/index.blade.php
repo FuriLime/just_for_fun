@@ -21,7 +21,7 @@ events List
         </h1>
     </div>
     <br />
-    {{--<div class="panel-body">--}}
+    <div class="panel-body">
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
                 <li class="active">
@@ -40,7 +40,7 @@ events List
 
             <div class="tab-content events-tab-content">
                 <div class="tab-pane active" id="tab_1">
-                    <div class="panel-body table-responsive events-table">
+                    <div class="table-responsive events-table">
                         <table class="table table-hover" id="table-events">
                             <thead>
                                 <tr>
@@ -188,7 +188,7 @@ events List
             </div>
             <!-- /.tab-content -->
         </div>
-    {{--</div>--}}
+    </div>
 </section>
 @stop
 
