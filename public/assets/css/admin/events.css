@@ -19,3 +19,12 @@
 .table-bottom-holder .pagination {
     margin: 0;
 }
+.table-bottom-holder .checkbox,
+.table-bottom-holder .event-page-count{
+    line-height: 29px;
+}
+.table-bottom-holder .checkbox,
+.table-bottom-holder .event-page-count,
+.table-bottom-holder .pagination {
+    margin-bottom: 15px;
+}
