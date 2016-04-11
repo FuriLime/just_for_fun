@@ -70,6 +70,7 @@ Edit User
                                 <input id="image" name="image" type="file" class="form-control" />
                             </span>
                             <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                            <p class="help-block">Allowed file formats: .jpg, .png, .gif, .bmp</p>
                         </div>
                     </div>
                 </div>
