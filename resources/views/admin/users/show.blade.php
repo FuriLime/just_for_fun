@@ -97,12 +97,12 @@ View User Details
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td>EventFellows URL</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
                                         <td>Type Account</td>
-                                        <td>
-                                            {{ $user->password }}
-
-                                        </td>
-
+                                        <td></td>
                                     </tr>
 
                                 </table>
