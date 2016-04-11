@@ -63,7 +63,7 @@ events List
                                         </td>
                                         <td>{{ $event->title }}</td>
                                         <td>{{ $event->location }}</td>
-                                        <td class="event-popover" data-container="body" data-toggle="popover" data-placement="bottom" title="{{ $event->startt }}" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">{{ $event->startt }} - {{$event->finisht }}</td>
+                                        <td class="event-popover" data-container="body" data-toggle="popover" data-placement="bottom" title="{{ $event->startt }}" data-content="Event starts: {{ $event->startt }}<br>Last Update: <br>Event Created: <br><br>Timezone: {{ $event->timezone }}">{{ $event->startt }}</td>
                                         <td></td>
                                         <td>
                                             <div class="btn-group">
@@ -177,7 +177,8 @@ events List
 </div>
 <script>
     $('.event-popover').popover({
-        trigger: "hover"
+        trigger: "hover",
+        html:true
     });
     $(function () {
         $('body').on('hidden.bs.modal', '.modal', function () {
