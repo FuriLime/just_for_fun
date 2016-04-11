@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/admin/edit-profile.css" afterPath="$PROJECT_DIR$/public/assets/css/admin/edit-profile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
     </list>
     <ignored path="test-ef.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,25 +25,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/users/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.6363637">
-              <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.30072463">
+              <caret line="112" column="141" selection-start-line="112" selection-start-column="141" selection-end-line="112" selection-end-column="141" />
               <folding>
                 <element signature="e#2647#2683#0#HTML" expanded="true" />
                 <element signature="e#3105#3149#0#HTML" expanded="true" />
-                <element signature="e#16074#16110#0#HTML" expanded="true" />
-                <element signature="e#16700#16744#0#HTML" expanded="true" />
+                <element signature="e#15921#15957#0#HTML" expanded="true" />
+                <element signature="e#16547#16591#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit-profile.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edit-profile.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/css/admin/edit-profile.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.08777969">
+            <state vertical-scroll-proportion="-1.9615384">
               <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
               <folding />
             </state>
@@ -115,8 +115,8 @@
         <option value="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/admin/events.css" />
         <option value="$PROJECT_DIR$/resources/views/admin/events/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/admin/edit-profile.css" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
       </list>
     </option>
   </component>
@@ -475,12 +475,6 @@
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
     </task>
-    <task id="LOCAL-04906" summary="social buttons">
-      <created>1460373998410</created>
-      <option name="number" value="04906" />
-      <option name="project" value="LOCAL" />
-      <updated>1460373998410</updated>
-    </task>
     <task id="LOCAL-04907" summary="social buttons">
       <created>1460374165060</created>
       <option name="number" value="04907" />
@@ -769,7 +763,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460380603088</updated>
     </task>
-    <option name="localTasksCounter" value="4955" />
+    <task id="LOCAL-04955" summary="social buttons">
+      <created>1460380662083</created>
+      <option name="number" value="04955" />
+      <option name="project" value="LOCAL" />
+      <updated>1460380662083</updated>
+    </task>
+    <option name="localTasksCounter" value="4956" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1155,24 +1155,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/edit.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/edit-profile.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6363637">
-          <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
-          <folding>
-            <element signature="e#2647#2683#0#HTML" expanded="true" />
-            <element signature="e#3105#3149#0#HTML" expanded="true" />
-            <element signature="e#16074#16110#0#HTML" expanded="true" />
-            <element signature="e#16700#16744#0#HTML" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-1.9615384">
+          <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/edit-profile.css">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08777969">
-          <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
-          <folding />
+        <state vertical-scroll-proportion="0.30072463">
+          <caret line="112" column="141" selection-start-line="112" selection-start-column="141" selection-end-line="112" selection-end-column="141" />
+          <folding>
+            <element signature="e#2647#2683#0#HTML" expanded="true" />
+            <element signature="e#3105#3149#0#HTML" expanded="true" />
+            <element signature="e#15921#15957#0#HTML" expanded="true" />
+            <element signature="e#16547#16591#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

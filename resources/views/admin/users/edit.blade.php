@@ -110,13 +110,7 @@ Edit User
             <div class="form-group">
                 <label class="col-sm-2 control-label">Country</label>
                 <div class="col-sm-8">
-                    <select class="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
+                    {!! Form::select('country', $countries,Input::old('country',$user_profile->country),array('class' => 'form-control')) !!}
                     <i class="fa fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                 </div>
             </div>
