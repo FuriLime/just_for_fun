@@ -79,13 +79,13 @@ Edit User
             <div class="form-group">
                 <label class="col-sm-2 control-label">Last Name</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control required" value="{!! Input::old('last_name', $user->last_name) !!}" >
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Email Address</label>
                 <div class="col-sm-8">
-                    <input type="email" class="form-control">
+                    <input type="text" class="form-control required email" value="{!! Input::old('email', $user->email) !!}">
                     <i class="fa fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                 </div>
             </div>
