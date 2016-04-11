@@ -20,8 +20,7 @@
         {{--</li> -->--}}
 
          <li >
-            <a href="{{ URL::to('admin/events/favorite') }}">
-                {{--<a href="{{ URL::to('admin/events') }}">--}}
+            <a href="{{ URL::to('admin/favorite') }}">
                 <i class="fa fa-angle-right"></i>
                 Favorite events
             </a>
