@@ -16,10 +16,10 @@ View User Details
 
 {{-- Page content --}}
 @section('content')
-    <section class="content-header">
+    {{--<section class="content-header">--}}
         <!--section starts-->
 
-        <h1><i class="livicon" data-name="user" data-size="16" data-c="#000" data-hc="#000" data-loop="true"></i>My Personal Profile</h1>
+        {{--<h1><i class="livicon" data-name="user" data-size="16" data-c="#000" data-hc="#000" data-loop="true"></i>My Personal Profile</h1>--}}
         {{--<ol class="breadcrumb">--}}
             {{--<li>--}}
                 {{--<a href="{{ route('dashboard') }}">--}}
@@ -32,9 +32,15 @@ View User Details
             {{--</li>--}}
             {{--<li class="active">User Profile</li>--}}
         {{--</ol>--}}
-    </section>
+    {{--</section>--}}
     <!--section ends-->
     <section class="content">
+        <div class="panel-heading clearfix">
+            <h1 class="pull-left"> <i class="fa fa-user"></i>
+                My Personal Profile
+            </h1>
+        </div>
+        <br />
         <div class="row">
             <div class="col-lg-12">
                 <ul class="nav  nav-tabs ">
