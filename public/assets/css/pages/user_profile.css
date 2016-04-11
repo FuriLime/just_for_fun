@@ -168,3 +168,6 @@ tr td a {
     font-size: 16px;
     font-weight: bold;
 }
+.table>tbody>tr:first-child>td {
+    border: none;
+}
