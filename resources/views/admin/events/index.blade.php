@@ -95,7 +95,7 @@ events List
                             Showing 1-4 of 4 events.
                         </div>
                         <div>
-                            <div class="checkbox"><label> <input type="checkbox"> Check me out </label></div>
+                            <div class="checkbox"><label> <input type="checkbox"> Include past events.</label></div>
                         </div>
                         <nav>
                             <ul class="pagination pagination-sm">
