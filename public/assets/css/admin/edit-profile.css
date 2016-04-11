@@ -1,5 +1,9 @@
 .close-profile {
-    color: #ddd;
+    color: #4E4E4E;
+    transition: 0.3s;
+}
+.close-profile:hover {
+    color: #7B7B7B;
 }
 .form-horizontal.edit-profile-form {
     padding: 20px;
