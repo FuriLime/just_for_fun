@@ -67,7 +67,7 @@ View User Details
                                                         <img src="{!! asset('assets/img/authors/avatar3.jpg') !!}" class="img-responsive img-circle" alt="User Image">
                                                     @endif
                                                 </div>
-                                                <div class="username-holder">MeKai</div>
+                                                <div class="username-holder" data-toggle="tooltip" data-placement="right" title="Your EventFellows Name">MeKai</div>
                                             </td>
                                         </tr>
                                     <tr>
