@@ -50,7 +50,7 @@ Edit User
             {!! $errors->first('group', '<span class="help-block">:message</span>') !!}
             {!! $errors->first('image', '<span class="help-block">:message</span>') !!}
         </div>
-        <form class="form-horizontal edit-profile-form">
+        <form class="form-horizontal edit-profile-form" action="" method="POST" id="wizard-validation" enctype="multipart/form-data">
             <div class="form-group">
                 <label class="col-sm-2 control-label">Profile Image</label>
                 <div class="col-sm-8">
@@ -73,26 +73,26 @@ Edit User
             <div class="form-group">
                 <label class="col-sm-2 control-label">First Name</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control required" value="{!! Input::old('first_name', $user->first_name) !!}">
+                    <input type="text" name="first_name" class="form-control required" value="{!! Input::old('first_name', $user->first_name) !!}">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Last Name</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control required" value="{!! Input::old('last_name', $user->last_name) !!}" >
+                    <input type="text" name="last_name" class="form-control required" value="{!! Input::old('last_name', $user->last_name) !!}" >
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Email Address</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control required email" value="{!! Input::old('email', $user->email) !!}">
+                    <input type="text" name="email" class="form-control required email" value="{!! Input::old('email', $user->email) !!}">
                     <i class="fa fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">About you</label>
                 <div class="col-sm-8">
-                    <textarea class="form-control"></textarea>
+                    <textarea class="form-control" name="bio">{!! Input::old('bio', $user_profile->bio) !!}</textarea>
                 </div>
             </div>
             <div class="form-group">
@@ -118,20 +118,20 @@ Edit User
                 <label class="col-sm-2 control-label">Gender</label>
                 <div class="col-sm-8">
                     <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Male
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male" @if($user->gender === 'male') selected="selected" @endif > Male
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Female
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="female" @if($user->gender === 'female') selected="selected" @endif > Female
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Other
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="other"> Other
                     </label>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Date of Birth</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control date-of-birth">
+                    <input type="text" name="dob" class="form-control date-of-birth" data-mask="9999-99-99" value="{!! Input::old('dob', $user_profile->dob) !!}" placeholder="yyyy-mm-dd">
                 </div>
             </div>
             <div class="form-group">
