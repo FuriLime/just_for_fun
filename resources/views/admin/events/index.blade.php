@@ -91,13 +91,13 @@ events List
                         </table>
                     </div>
                     <div>
-                        <div>
+                        <div class="col-md-4">
                             Showing 1-4 of 4 events.
                         </div>
-                        <div>
+                        <div class="col-md-4">
                             <div class="checkbox"><label> <input type="checkbox"> Include past events.</label></div>
                         </div>
-                        <nav>
+                        <nav class="col-md-4">
                             <ul class="pagination pagination-sm">
                                 <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">Previous</span></a></li>
                                 <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
