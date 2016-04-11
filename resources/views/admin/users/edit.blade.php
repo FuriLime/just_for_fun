@@ -430,11 +430,18 @@ Edit User
     <script>
         $(document).ready(function() {
             $('.infopoint').popover({
-                trigger: "hover",
-
+//                trigger: "hover",
+                placement: wheretoplace()
             });
         });
-
+        function wheretoplace(){
+            var width = window.innerWidth;
+            if (width <= 900) {
+                return 'left';
+            } else {
+                return 'right';
+            }
+        }
         $(function () {
             $('body').on('hidden.bs.modal', '.modal', function () {
                 $(this).removeData('bs.modal');
