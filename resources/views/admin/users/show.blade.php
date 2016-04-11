@@ -70,6 +70,7 @@ View User Details
                                                                         @else
                                                                             <img src="{!! asset('assets/img/authors/avatar3.jpg') !!}" class="img-responsive img-circle" alt="User Image">
                                                                         @endif
+                                                                        <div class="">MeKai</div>
                                                                     </td>
                                                                 </tr>
                                                             <tr>
