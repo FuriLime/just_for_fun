@@ -65,6 +65,7 @@ Edit User
                         <label class="col-sm-2 control-label">Username</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control">
+                            <i class="fa fa-fw fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         </div>
                     </div>
                     <div class="form-group">
@@ -425,6 +426,18 @@ Edit User
         </div>
     </div>
     <script>
+        function wheretoplace(){
+            var width = window.innerWidth;
+            if (width <= 900) {
+                return 'left';
+            } else {
+                return 'right';
+            }
+        }
+        $('.infopoint').popover({
+            trigger: "hover",
+            placement: wheretoplace()
+        });
         $(function () {
             $('body').on('hidden.bs.modal', '.modal', function () {
                 $(this).removeData('bs.modal');
