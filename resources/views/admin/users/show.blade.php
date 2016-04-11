@@ -123,7 +123,7 @@ View User Details
                                     </tr>
                                     <tr>
                                         <td>Time Format</td>
-                                        <td><i class="fa fa-clock"></i> </td>
+                                        <td><i class="fa fa-clock-o"></i> </td>
                                     </tr>
                                     <tr>
                                         <td>Visibility Profile Page</td>
