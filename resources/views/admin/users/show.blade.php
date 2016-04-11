@@ -44,14 +44,12 @@ View User Details
         <div class="row">
             <div class="col-lg-12">
                 <div class="nav-tabs-custom">
-                    <ul class="nav  nav-tabs ">
+                    <ul class="nav nav-tabs">
                         <li class="active">
                             <a href="#tab1" data-toggle="tab">User Profile</a>
                         </li>
                         <li>
-                            <a href="#tab2" data-toggle="tab">
-                                {{--<i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>--}}
-                                Profile Settings</a>
+                            <a href="#tab2" data-toggle="tab">Profile Settings</a>
                         </li>
                     </ul>
                     <div  class="tab-content mar-top">
