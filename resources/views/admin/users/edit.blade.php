@@ -52,9 +52,33 @@ Edit User
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">Email</label>
+                        <label class="col-sm-2 control-label">Username</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">First Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Last Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Email Address</label>
                         <div class="col-sm-8">
                             <input type="email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">About you</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
