@@ -90,7 +90,7 @@ events List
                             </tbody>
                         </table>
                     </div>
-                    <div>
+                    <div class="table-bottom-holder">
                         <div class="col-md-4">
                             Showing 1-4 of 4 events.
                         </div>
