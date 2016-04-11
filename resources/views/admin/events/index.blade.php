@@ -39,7 +39,7 @@ events List
             <div class="tab-content events-tab-content">
                 <div class="tab-pane active" id="tab_1">
                     <div class="table-scrollable table-responsive events-table">
-                        <table class="table table-hover">
+                        <table class="table table-hover" id="table-events">
                             <thead>
                                 <tr>
                                     <th>Status</th>
@@ -198,7 +198,12 @@ events List
     </div>
   </div>
 </div>
+<script type="text/javascript" src="{{ asset('assets/vendors/datatables/js/jquery.dataTables.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/vendors/datatables/extensions/bootstrap/dataTables.bootstrap.js') }}"></script>
 <script>
+    $(document).ready(function() {
+        $('#table-events').DataTable();
+    });
     $('.event-popover').popover({
         trigger: "hover",
         html:true
