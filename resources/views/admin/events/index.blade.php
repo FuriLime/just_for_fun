@@ -5,6 +5,8 @@
 events List
 @parent
 @stop
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/datatables/extensions/bootstrap/dataTables.bootstrap.css') }}" />
+<link href="{{ asset('assets/css/pages/tables.css') }}" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="{{ asset('assets/css/admin/events.css') }}" />
 {{-- Page content --}}
 @section('content')
