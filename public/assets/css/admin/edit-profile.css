@@ -3,8 +3,12 @@
     width: calc(100% - 30px);
     display: inline-block;
 }
+.edit-profile-form select {
+    width: calc(50% - 30px);
+    display: inline-block;
+}
 .edit-profile-form .radio-inline input[type=radio] {
-    width: 100%;
+    width: auto;
 }
 .edit-profile-form .infopoint {
     color: #A2A2A2;
