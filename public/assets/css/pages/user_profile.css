@@ -2,12 +2,14 @@
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
     color: #555;
     background-color: #fff;
-    border-top: 3px solid #418bca;
     border-bottom-color: transparent;
     cursor: default;
     margin-top: -2px;
 }
-
+.nav-tabs-custom .nav-tabs>li>a {
+    font-size: 18px;
+    font-weight: bold;
+}
 .striped-col {
     background-color: #f9f9f9;
 }
