@@ -52,7 +52,7 @@ Edit User
                     {!! $errors->first('group', '<span class="help-block">:message</span>') !!}
                     {!! $errors->first('image', '<span class="help-block">:message</span>') !!}
                 </div>
-                <form class="form-horizontal">
+                <form class="form-horizontal edit-profile-form">
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Profile Image</label>
                         <div class="col-sm-8">
@@ -65,7 +65,7 @@ Edit User
                         <label class="col-sm-2 control-label">Username</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control">
-                            <i class="fa fa-fw fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                            <i class="fa fa-fw infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         </div>
                     </div>
                     <div class="form-group">
