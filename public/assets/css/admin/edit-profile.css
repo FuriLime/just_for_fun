@@ -5,6 +5,11 @@
     width: 200px;
     height: 200px;
     float: left;
+    margin-right: 25px;
+}
+.uploader-holder {
+    float: left;
+    padding-top: 40px;
 }
 .edit-profile-form input,
 .edit-profile-form textarea {
@@ -24,18 +29,6 @@
 .edit-profile-form .infopoint {
     color: #A2A2A2;
     font-size: 20px;
-}
-.image-holder {
-    width: 128px;
-    height: 128px;
-    border-radius: 5px;
-    overflow: hidden;
-    float: left;
-    margin-right: 25px;
-}
-.uploader-holder {
-    float: left;
-    padding-top: 40px;
 }
 @media screen and (max-width: 992px) {
     .edit-profile-form select,
