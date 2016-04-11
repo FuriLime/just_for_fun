@@ -18,20 +18,24 @@ Edit User
 
 {{-- Page content --}}
 @section('content')
-<section class="content-header">
-    <h1>Edit user</h1>
-    <ol class="breadcrumb">
-        <li>
-            <a href="{{ route('dashboard') }}">
-                <i class="livicon" data-name="home" data-size="14" data-color="#000"></i>
-                Dashboard
-            </a>
-        </li>
-        <li>Users</li>
-        <li class="active">Add New User</li>
-    </ol>
-</section>
+{{--<section class="content-header">--}}
+    {{--<h1>Edit user</h1>--}}
+    {{--<ol class="breadcrumb">--}}
+        {{--<li>--}}
+            {{--<a href="{{ route('dashboard') }}">--}}
+                {{--<i class="livicon" data-name="home" data-size="14" data-color="#000"></i>--}}
+                {{--Dashboard--}}
+            {{--</a>--}}
+        {{--</li>--}}
+        {{--<li>Users</li>--}}
+        {{--<li class="active">Add New User</li>--}}
+    {{--</ol>--}}
+{{--</section>--}}
 <section class="content">
+    <div class="panel-heading clearfix">
+        <h1><i class="fa fa-edit"></i> Edit Profile</h1>
+    </div>
+    <br />
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-primary">
