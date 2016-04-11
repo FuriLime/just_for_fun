@@ -63,7 +63,7 @@ events List
                                         </td>
                                         <td>{{ $event->title }}</td>
                                         <td>{{ $event->location }}</td>
-                                        <td data-container="body" data-toggle="popover" data-placement="bottom" title="{{ $event->startt }}" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">{{ $event->startt }} - {{$event->finisht }}</td>
+                                        <td class="event-popover" data-container="body" data-toggle="popover" data-placement="bottom" title="{{ $event->startt }}" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">{{ $event->startt }} - {{$event->finisht }}</td>
                                         <td></td>
                                         <td>
                                             <div class="btn-group">
