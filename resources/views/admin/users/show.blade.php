@@ -39,6 +39,7 @@ View User Details
             <h1 class="pull-left"> <i class="fa fa-user"></i>
                 My Personal Profile
             </h1>
+            <div class="user-profile-sub-heading"></div>
         </div>
         <br />
         <div class="row">
@@ -54,68 +55,60 @@ View User Details
                     </ul>
                     <div  class="tab-content mar-top">
                         <div id="tab1" class="tab-pane fade active in">
-                            <div class="row">
-                                <div class="panel">
-                                    <div class="panel-body">
-                                        <div class="panel-body">
-                                            <div class="table-responsive">
-                                                <table class="table table-hover" id="users">
-                                                        <tr>
-                                                            <td>Profile Image</td>
-                                                            <td>
-                                                                <div class="user-image-holder">
-                                                                    @if($user->pic)
-                                                                        <img src="{!! url('/').'/uploads/users/'.Sentinel::getUser()->pic !!}" alt="img" class="img-circle img-bor"/>
-                                                                    @else
-                                                                        <img src="{!! asset('assets/img/authors/avatar3.jpg') !!}" class="img-responsive img-circle" alt="User Image">
-                                                                    @endif
-                                                                </div>
-                                                                <div class="username-holder">MeKai</div>
-                                                            </td>
-                                                        </tr>
-                                                    <tr>
-                                                        <td>@lang('users/title.first_name')</td>
-                                                        <td>
-                                                            {{ $user->first_name }}
-                                                        </td>
+                            <div class="table-responsive">
+                                <table class="table table-hover" id="users">
+                                        <tr>
+                                            <td>Profile Image</td>
+                                            <td>
+                                                <div class="user-image-holder">
+                                                    @if($user->pic)
+                                                        <img src="{!! url('/').'/uploads/users/'.Sentinel::getUser()->pic !!}" alt="img" class="img-circle img-bor"/>
+                                                    @else
+                                                        <img src="{!! asset('assets/img/authors/avatar3.jpg') !!}" class="img-responsive img-circle" alt="User Image">
+                                                    @endif
+                                                </div>
+                                                <div class="username-holder">MeKai</div>
+                                            </td>
+                                        </tr>
+                                    <tr>
+                                        <td>@lang('users/title.first_name')</td>
+                                        <td>
+                                            {{ $user->first_name }}
+                                        </td>
 
-                                                    </tr>
-                                                    <tr>
-                                                        <td>@lang('users/title.last_name')</td>
-                                                        <td>
-                                                            {{ $user->last_name }}
-                                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>@lang('users/title.last_name')</td>
+                                        <td>
+                                            {{ $user->last_name }}
+                                        </td>
 
-                                                    </tr>
-                                                    <tr>
-                                                        <td>@lang('users/title.email')</td>
-                                                        <td>
-                                                            {{ $user->email }}
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Password</td>
-                                                        <td>
-                                                            {{ $user->password }}
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Type Account</td>
-                                                        <td>
-                                                            {{ $user->password }}
+                                    </tr>
+                                    <tr>
+                                        <td>@lang('users/title.email')</td>
+                                        <td>
+                                            {{ $user->email }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Password</td>
+                                        <td>
+                                            {{ $user->password }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Type Account</td>
+                                        <td>
+                                            {{ $user->password }}
 
-                                                        </td>
+                                        </td>
 
-                                                    </tr>
+                                    </tr>
 
-                                                </table>
-                                            </div>
-                                            <a href="#" class="btn btn-primary"><i class="fa fa-edit"></i> Edit Profile</a>
-                                            <a href="#" class="btn btn-default">Change Password</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                </table>
                             </div>
+                            <a href="#" class="btn btn-primary"><i class="fa fa-edit"></i> Edit Profile</a>
+                            <a href="#" class="btn btn-default">Change Password</a>
                         </div>
                         <div id="tab2" class="tab-pane fade">
                             <div class="row">
