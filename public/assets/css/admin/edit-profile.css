@@ -1,0 +1,44 @@
+.close-profile {
+    color: #4E4E4E;
+    transition: 0.3s;
+}
+.close-profile:hover,
+.close-profile:focus {
+    color: #7B7B7B;
+}
+.form-horizontal.edit-profile-form {
+    padding: 20px;
+}
+.form-horizontal.edit-profile-form .fileinput .thumbnail{
+    float: left;
+    margin-right: 25px;
+}
+.uploader-holder {
+    float: left;
+    padding-top: 65px;
+}
+.edit-profile-form input,
+.edit-profile-form textarea {
+    width: calc(100% - 30px);
+    display: inline-block;
+}
+.edit-profile-form select {
+    width: calc(50% - 30px);
+    display: inline-block;
+}
+.edit-profile-form .date-of-birth {
+    width: calc(25% - 30px);
+}
+.edit-profile-form .radio-inline input[type=radio] {
+    width: auto;
+}
+.edit-profile-form .infopoint {
+    color: #A2A2A2;
+    font-size: 20px;
+}
+@media screen and (max-width: 992px) {
+    .edit-profile-form select,
+    .edit-profile-form .date-of-birth {
+        width: calc(100% - 30px);
+    }
+}
