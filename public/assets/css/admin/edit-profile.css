@@ -26,6 +26,10 @@
     border-radius: 5px;
     overflow: hidden;
     float: left;
+    margin-right: 25px;
+}
+.uploader-holder {
+    float: left;
 }
 @media screen and (max-width: 992px) {
     .edit-profile-form select,
