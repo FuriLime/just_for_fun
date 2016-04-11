@@ -204,7 +204,9 @@ events List
 <script type="text/javascript" src="{{ asset('assets/vendors/datatables/extensions/bootstrap/dataTables.bootstrap.js') }}"></script>
 <script>
     $(document).ready(function() {
-        $('#table-events').DataTable();
+        $('#table-events').DataTable({
+            searching: false
+        });
     });
     $('.event-popover').popover({
         trigger: "hover",
