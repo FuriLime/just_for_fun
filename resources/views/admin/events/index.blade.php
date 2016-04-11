@@ -90,6 +90,7 @@ events List
                             </tbody>
                         </table>
                     </div>
+                    <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add New Event</a>
                     {{--<table class="table table-bordered " id="table">--}}
                         {{--<thead>--}}
                         {{--<tr class="filters">--}}
