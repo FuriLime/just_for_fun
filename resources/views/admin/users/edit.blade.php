@@ -35,7 +35,7 @@ Edit User
 {{--</section>--}}
 <section class="content">
     <div class="panel-heading clearfix">
-        <h1><i class="fa fa-edit"></i> Edit Profile <a href="#" class="pull-right close-profile"><i class="fa fa-times-circle-o"></i></a></h1>
+        <h1><i class="fa fa-edit"></i> Edit Profile <a href="#" class="pull-right close-profile" data-toggle="tooltip" data-placement="left" title="Cancel without saving"><i class="fa fa-times-circle-o"></i></a></h1>
         <div class="user-profile-sub-heading">Please update <strong>Your Profile</strong> so we can add the relevant information to you events. You can set the visibility of your details in your <a href="#">Profile Settings</a></div>
     </div>
     <br />
