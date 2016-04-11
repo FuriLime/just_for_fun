@@ -65,21 +65,14 @@ Edit User
                             </div>
                             <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 200px;"></div>
                             <div>
-                                                    <span class="btn btn-default btn-file">
-                                                        <span class="fileinput-new">Select image</span>
-                                                        <span class="fileinput-exists">Change</span>
-                                                        <input id="image" name="image" type="file" class="form-control" />
-                                                    </span>
+                                <span class="btn btn-default btn-file">
+                                    <span class="fileinput-new">Select image</span>
+                                    <span class="fileinput-exists">Change</span>
+                                    <input id="image" name="image" type="file" class="form-control" />
+                                </span>
                                 <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="image-holder">
-                        <img src="http://event.test-y-sbm.com/assets/img/authors/avatar3.jpg">
-                    </div>
-                    <div class="uploader-holder">
-                        <input type="file">
-                        <p class="help-block">Allowed file formats: .jpg, .png, .gif, .bmp</p>
                     </div>
                 </div>
             </div>
