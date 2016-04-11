@@ -115,19 +115,19 @@ View User Details
                                 <table class="table table-hover">
                                     <tr>
                                         <td>Timezone</td>
-                                        <td></td>
+                                        <td><i class="fa fa-globe"></i> </td>
                                     </tr>
                                     <tr>
                                         <td>Date Format</td>
-                                        <td></td>
+                                        <td><i class="fa fa-calendar"></i> </td>
                                     </tr>
                                     <tr>
                                         <td>Time Format</td>
-                                        <td></td>
+                                        <td><i class="fa fa-clock"></i> </td>
                                     </tr>
                                     <tr>
                                         <td>Visibility Profile Page</td>
-                                        <td></td>
+                                        <td><i class="fa fa-check"></i> </td>
                                     </tr>
                                 </table>
                             </div>
