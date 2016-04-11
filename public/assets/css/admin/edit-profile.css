@@ -7,6 +7,9 @@
     width: calc(50% - 30px);
     display: inline-block;
 }
+.edit-profile-form .date-of-birth {
+    width: calc(25% - 30px);
+}
 .edit-profile-form .radio-inline input[type=radio] {
     width: auto;
 }

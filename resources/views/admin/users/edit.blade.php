@@ -129,7 +129,7 @@ Edit User
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Date of Birth</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control date-of-birth">
                         </div>
                     </div>
                     <div class="form-group">
