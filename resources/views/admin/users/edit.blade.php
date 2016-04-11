@@ -428,12 +428,10 @@ Edit User
         </div>
     </div>
     <script>
-
-            $('.infopoint').popover({
-////                trigger: "hover",
-//                placement: wheretoplace()
-            });
-
+        $('.infopoint').popover({
+            trigger: "hover",
+            placement: wheretoplace()
+        });
         function wheretoplace(){
             var width = window.innerWidth;
             if (width <= 900) {
@@ -447,4 +445,5 @@ Edit User
                 $(this).removeData('bs.modal');
             });
         });
+    </script>
 @stop
