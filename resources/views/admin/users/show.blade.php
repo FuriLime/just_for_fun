@@ -39,7 +39,7 @@ View User Details
             <h1 class="pull-left"> <i class="fa fa-user"></i>
                 My Personal Profile
             </h1>
-            <div class="user-profile-sub-heading"></div>
+            <div class="user-profile-sub-heading">Lorem <strong>Ipsum Dolor</strong> sit amet can also have <a href="#">links</a> that link some other place</div>
         </div>
         <br />
         <div class="row">
