@@ -2,7 +2,8 @@
     color: #4E4E4E;
     transition: 0.3s;
 }
-.close-profile:hover {
+.close-profile:hover,
+.close-profile:focus {
     color: #7B7B7B;
 }
 .form-horizontal.edit-profile-form {
