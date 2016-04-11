@@ -20,3 +20,9 @@
     color: #A2A2A2;
     font-size: 20px;
 }
+@media screen and (max-width: 992px) {
+    .edit-profile-form select,
+    .edit-profile-form .date-of-birth {
+        width: calc(100% - 30px);
+    }
+}
