@@ -39,132 +39,128 @@ Edit User
         <div class="user-profile-sub-heading">Please update <strong>Your Profile</strong> so we can add the relevant information to you events. You can set the visibility of your details in your <a href="#">Profile Settings</a></div>
     </div>
     <br />
-    <div class="row">
-        <div class="col-md-12">
-            <div class="panel">
-                <!-- errors -->
-                <div class="has-error">
-                    {!! $errors->first('first_name', '<span class="help-block">:message</span>') !!}
-                    {!! $errors->first('last_name', '<span class="help-block">:message</span>') !!}
-                    {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
-                    {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
-                    {!! $errors->first('password_confirm', '<span class="help-block">:message</span>') !!}
-                    {!! $errors->first('group', '<span class="help-block">:message</span>') !!}
-                    {!! $errors->first('image', '<span class="help-block">:message</span>') !!}
-                </div>
-                <form class="form-horizontal edit-profile-form">
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Profile Image</label>
-                        <div class="col-sm-8">
-                            <img src="">
-                            <input type="file">
-                            <p class="help-block">Allowed file formats: .jpg, .png, .gif, .bmp</p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Username</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control">
-                            <i class="fa fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">First Name</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control required" value="{!! Input::old('first_name', $user->first_name) !!}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Last Name</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Email Address</label>
-                        <div class="col-sm-8">
-                            <input type="email" class="form-control">
-                            <i class="fa fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">About you</label>
-                        <div class="col-sm-8">
-                            <textarea class="form-control"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Country</label>
-                        <div class="col-sm-8">
-                            <select class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                            <i class="fa fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Job Title</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Gender</label>
-                        <div class="col-sm-8">
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Male
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Female
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Other
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Date of Birth</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control date-of-birth">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Linkedin URL</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Twitter Username</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Facebook Username</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Google+ URL</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-8">
-                            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Update Profile</button>
-                            <button class="btn btn-default">Cancel</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+    <div class="panel">
+        <!-- errors -->
+        <div class="has-error">
+            {!! $errors->first('first_name', '<span class="help-block">:message</span>') !!}
+            {!! $errors->first('last_name', '<span class="help-block">:message</span>') !!}
+            {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
+            {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
+            {!! $errors->first('password_confirm', '<span class="help-block">:message</span>') !!}
+            {!! $errors->first('group', '<span class="help-block">:message</span>') !!}
+            {!! $errors->first('image', '<span class="help-block">:message</span>') !!}
         </div>
+        <form class="form-horizontal edit-profile-form">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Profile Image</label>
+                <div class="col-sm-8">
+                    <img src="">
+                    <input type="file">
+                    <p class="help-block">Allowed file formats: .jpg, .png, .gif, .bmp</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Username</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                    <i class="fa fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">First Name</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control required" value="{!! Input::old('first_name', $user->first_name) !!}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Last Name</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Email Address</label>
+                <div class="col-sm-8">
+                    <input type="email" class="form-control">
+                    <i class="fa fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">About you</label>
+                <div class="col-sm-8">
+                    <textarea class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Country</label>
+                <div class="col-sm-8">
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <i class="fa fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Job Title</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Gender</label>
+                <div class="col-sm-8">
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Male
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Female
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Other
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Date of Birth</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control date-of-birth">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Linkedin URL</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Twitter Username</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Facebook Username</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Google+ URL</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Update Profile</button>
+                    <button class="btn btn-default">Cancel</button>
+                </div>
+            </div>
+        </form>
     </div>
     <div class="row">
         <div class="col-md-12">
