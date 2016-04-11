@@ -49,7 +49,7 @@ events List
                                     <th>Location</th>
                                     <th>Event Date</th>
                                     <th>Downloads</th>
-                                    <th></th>
+                                    <th class="no-sort"></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -205,7 +205,12 @@ events List
 <script>
     $(document).ready(function() {
         $('#table-events').DataTable({
-            searching: false
+            searching: false,
+            "order": [],
+            "columnDefs": [ {
+                "targets"  : 'no-sort',
+                "orderable": false,
+            }]
         });
     });
     $('.event-popover').popover({
