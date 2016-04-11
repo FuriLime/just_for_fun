@@ -14,7 +14,7 @@ events List
 
 <section class="content">
     <div class="panel-heading clearfix">
-        <h1 class="pull-left"> <i class="fa fa-columns"></i>
+        <h1> <i class="fa fa-columns"></i>
             All Events of MeKai
         </h1>
     </div>

@@ -36,7 +36,7 @@ View User Details
     <!--section ends-->
     <section class="content">
         <div class="panel-heading clearfix">
-            <h1 class="pull-left"> <i class="fa fa-user"></i>
+            <h1> <i class="fa fa-user"></i>
                 My Personal Profile
             </h1>
             <div class="user-profile-sub-heading">Lorem <strong>Ipsum Dolor</strong> sit amet can also have <a href="#">links</a> that link some other place</div>
