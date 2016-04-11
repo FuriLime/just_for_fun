@@ -5,6 +5,8 @@
 events List
 @parent
 @stop
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/datatables/extensions/bootstrap/dataTables.bootstrap.css') }}" />
+<link href="{{ asset('assets/css/pages/tables.css') }}" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="{{ asset('assets/css/admin/events.css') }}" />
 {{-- Page content --}}
 @section('content')
@@ -14,7 +16,7 @@ events List
 
 <section class="content">
     <div class="panel-heading clearfix">
-        <h1 class="pull-left"> <i class="fa fa-columns"></i>
+        <h1> <i class="fa fa-columns"></i>
             All Events of MeKai
         </h1>
     </div>
@@ -38,8 +40,8 @@ events List
 
             <div class="tab-content events-tab-content">
                 <div class="tab-pane active" id="tab_1">
-                    <div class="table-scrollable table-responsive events-table">
-                        <table class="table table-hover">
+                    <div class="panel-body table-responsive events-table">
+                        <table class="table table-hover" id="table-events">
                             <thead>
                                 <tr>
                                     <th>Status</th>
@@ -47,7 +49,7 @@ events List
                                     <th>Location</th>
                                     <th>Event Date</th>
                                     <th>Downloads</th>
-                                    <th></th>
+                                    <th class="no-sort"></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -90,28 +92,28 @@ events List
                             </tbody>
                         </table>
                     </div>
-                    <div class="table-bottom-holder">
-                        <div class="col-md-4">
-                            <div class="event-page-count">
-                                Showing 1-4 of 4 events.
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="checkbox"><label> <input type="checkbox"> Include past events.</label></div>
-                        </div>
-                        <div class="col-md-4 pagination-holder">
-                            <nav>
-                                <ul class="pagination pagination-sm">
-                                    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">Previous</span></a></li>
-                                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                                    <li class=""><a href="#">2 <span class="sr-only">(current)</span></a></li>
-                                    <li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>
-                                    <li class=""><a href="#">4 <span class="sr-only">(current)</span></a></li>
-                                    <li><a href="#" aria-label="Next"><span aria-hidden="true">Next</span></a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
+                    {{--<div class="table-bottom-holder">--}}
+                        {{--<div class="col-md-4">--}}
+                            {{--<div class="event-page-count">--}}
+                                {{--Showing 1-4 of 4 events.--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="col-md-4">--}}
+                            {{--<div class="checkbox"><label> <input type="checkbox"> Include past events.</label></div>--}}
+                        {{--</div>--}}
+                        {{--<div class="col-md-4 pagination-holder">--}}
+                            {{--<nav>--}}
+                                {{--<ul class="pagination pagination-sm">--}}
+                                    {{--<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">Previous</span></a></li>--}}
+                                    {{--<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>--}}
+                                    {{--<li class=""><a href="#">2 <span class="sr-only">(current)</span></a></li>--}}
+                                    {{--<li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>--}}
+                                    {{--<li class=""><a href="#">4 <span class="sr-only">(current)</span></a></li>--}}
+                                    {{--<li><a href="#" aria-label="Next"><span aria-hidden="true">Next</span></a></li>--}}
+                                {{--</ul>--}}
+                            {{--</nav>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                     <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-plus"></i> Add New Event</a>
                     {{--<table class="table table-bordered " id="table">--}}
                         {{--<thead>--}}
@@ -198,7 +200,19 @@ events List
     </div>
   </div>
 </div>
+<script type="text/javascript" src="{{ asset('assets/vendors/datatables/js/jquery.dataTables.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/vendors/datatables/extensions/bootstrap/dataTables.bootstrap.js') }}"></script>
 <script>
+    $(document).ready(function() {
+        $('#table-events').DataTable({
+            searching: false,
+            "order": [],
+            "columnDefs": [ {
+                "targets"  : 'no-sort',
+                "orderable": false,
+            }]
+        });
+    });
     $('.event-popover').popover({
         trigger: "hover",
         html:true

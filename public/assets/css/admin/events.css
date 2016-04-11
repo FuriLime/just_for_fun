@@ -35,3 +35,33 @@
 .table-bottom-holder .pagination-holder {
     text-align: right;
 }
+.btn-group>.btn:first-child {
+    margin-right: 0;
+}
+
+table.dataTable thead th {
+    position: relative;
+    background-image: none !important;
+}
+
+table.dataTable thead th.sorting:after,
+table.dataTable thead th.sorting_asc:after,
+table.dataTable thead th.sorting_desc:after {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: block;
+    font-family: FontAwesome;
+    opacity: 1;
+}
+
+table.dataTable thead th.sorting:after {
+    content: "\f0dc";
+    color: #000;
+}
+table.dataTable thead th.sorting_asc:after {
+    content: "\f0de";
+}
+table.dataTable thead th.sorting_desc:after {
+    content: "\f0dd";
+}

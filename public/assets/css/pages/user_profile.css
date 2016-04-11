@@ -4,7 +4,6 @@
     background-color: #fff;
     border-bottom-color: transparent;
     cursor: default;
-    margin-top: -2px;
 }
 .nav-tabs-custom .nav-tabs>li>a {
     font-size: 18px;
@@ -155,4 +154,25 @@ tr td a {
 .img-max {
     max-width: 200px;
     max-height: 150px;
+}
+.user-image-holder {
+    float: left;
+    margin-right: 25px;
+}
+.username-holder {
+    line-height: 128px;
+    font-size: 36px;
+    font-weight: bold;
+}
+.table>tbody>tr>td:first-child {
+    font-size: 16px;
+    font-weight: bold;
+}
+.table>tbody>tr:last-child>td {
+    border-bottom: 1px solid #ddd;
+}
+
+.table>tbody>tr:first-child>td,
+#tab1 .table>tbody>tr:nth-child(2)>td {
+    border: none;
 }

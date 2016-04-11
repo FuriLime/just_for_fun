@@ -12,26 +12,157 @@ Edit User
 <link rel="stylesheet" href="{{ asset('assets/vendors/wizard/jquery-steps/css/wizard.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/vendors/wizard/jquery-steps/css/jquery.steps.css') }}">
 <link href="{{ asset('assets/vendors/jasny-bootstrap/css/jasny-bootstrap.css') }}" rel="stylesheet" />
+<link rel="stylesheet" href="{{ asset('assets/css/admin/edit-profile.css') }}" />
+
 <!--end of page level css-->
 @stop
 
 
 {{-- Page content --}}
 @section('content')
-<section class="content-header">
-    <h1>Edit user</h1>
-    <ol class="breadcrumb">
-        <li>
-            <a href="{{ route('dashboard') }}">
-                <i class="livicon" data-name="home" data-size="14" data-color="#000"></i>
-                Dashboard
-            </a>
-        </li>
-        <li>Users</li>
-        <li class="active">Add New User</li>
-    </ol>
-</section>
+{{--<section class="content-header">--}}
+    {{--<h1>Edit user</h1>--}}
+    {{--<ol class="breadcrumb">--}}
+        {{--<li>--}}
+            {{--<a href="{{ route('dashboard') }}">--}}
+                {{--<i class="livicon" data-name="home" data-size="14" data-color="#000"></i>--}}
+                {{--Dashboard--}}
+            {{--</a>--}}
+        {{--</li>--}}
+        {{--<li>Users</li>--}}
+        {{--<li class="active">Add New User</li>--}}
+    {{--</ol>--}}
+{{--</section>--}}
 <section class="content">
+    <div class="panel-heading clearfix">
+        <h1><i class="fa fa-edit"></i> Edit Profile</h1>
+        <div class="user-profile-sub-heading">Please update <strong>Your Profile</strong> so we can add the relevant information to you events. You can set the visibility of your details in your <a href="#">Profile Settings</a></div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <!-- errors -->
+                <div class="has-error">
+                    {!! $errors->first('first_name', '<span class="help-block">:message</span>') !!}
+                    {!! $errors->first('last_name', '<span class="help-block">:message</span>') !!}
+                    {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
+                    {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
+                    {!! $errors->first('password_confirm', '<span class="help-block">:message</span>') !!}
+                    {!! $errors->first('group', '<span class="help-block">:message</span>') !!}
+                    {!! $errors->first('image', '<span class="help-block">:message</span>') !!}
+                </div>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Profile Image</label>
+                        <div class="col-sm-8">
+                            <img src="">
+                            <input type="file">
+                            <p class="help-block">Allowed file formats: .jpg, .png, .gif, .bmp</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Username</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">First Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control required" value="{!! Input::old('first_name', $user->first_name) !!}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Last Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Email Address</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">About you</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Country</label>
+                        <div class="col-sm-8">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Job Title</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Gender</label>
+                        <div class="col-sm-8">
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Male
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Female
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Other
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Date of Birth</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Linkedin URL</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Twitter Username</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Facebook Username</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Google+ URL</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-8">
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Update Profile</button>
+                            <button class="btn btn-default">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-primary">
