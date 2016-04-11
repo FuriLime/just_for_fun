@@ -8,9 +8,9 @@ events List
 <link rel="stylesheet" href="{{ asset('assets/css/admin/events.css') }}" />
 {{-- Page content --}}
 @section('content')
-<section class="content-header">
-    <h1>Events</h1>
-</section>
+{{--<section class="content-header">--}}
+    {{--<h1>Events</h1>--}}
+{{--</section>--}}
 
 <section class="content">
     <div class="panel-heading clearfix">
