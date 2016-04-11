@@ -169,6 +169,6 @@ tr td a {
     font-weight: bold;
 }
 .table>tbody>tr:first-child>td,
-.table>tbody>tr:nth-child(2)>td {
+#tab1 .table>tbody>tr:nth-child(2)>td {
     border: none;
 }
