@@ -47,7 +47,8 @@ Edit User
                         <label class="col-sm-2 control-label">Profile Image</label>
                         <div class="col-sm-8">
                             <img src="">
-                            <input type="file" class="form-control">
+                            <input type="file">
+                            <p class="help-block">Allowed file formats: .jpg, .png, .gif, .bmp</p>
                         </div>
                     </div>
                     <div class="form-group">
