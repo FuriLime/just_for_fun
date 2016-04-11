@@ -57,8 +57,10 @@ Edit User
                     <div class="image-holder">
                         <img src="http://event.test-y-sbm.com/assets/img/authors/avatar3.jpg">
                     </div>
-                    <input type="file">
-                    <p class="help-block">Allowed file formats: .jpg, .png, .gif, .bmp</p>
+                    <div class="uploader-holder">
+                        <input type="file">
+                        <p class="help-block">Allowed file formats: .jpg, .png, .gif, .bmp</p>
+                    </div>
                 </div>
             </div>
             <div class="form-group">
