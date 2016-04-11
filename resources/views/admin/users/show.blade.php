@@ -127,7 +127,7 @@ View User Details
                                     </tr>
                                     <tr>
                                         <td>Visibility Profile Page</td>
-                                        <td><i class="fa fa-check"></i> published</td>
+                                        <td><i class="fa fa-check"></i> published <a href="#" class="btn btn-default pull-right"><i class="fa fa-desktop"></i> View Profile Page</a></td>
                                     </tr>
                                 </table>
                             </div>
