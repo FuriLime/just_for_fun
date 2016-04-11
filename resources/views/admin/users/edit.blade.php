@@ -54,24 +54,22 @@ Edit User
             <div class="form-group">
                 <label class="col-sm-2 control-label">Profile Image</label>
                 <div class="col-sm-8">
-                    <div class="col-sm-10">
-                        <div class="fileinput fileinput-new" data-provides="fileinput">
-                            <div class="fileinput-new thumbnail" style="width: 200px; height: 200px;">
-                                @if($user_profile->image)
-                                    <img src="{!!$user_profile->image !!}" alt="profile image">
-                                @else
-                                    <img src="http://placehold.it/200x200" alt="profile image">
-                                @endif
-                            </div>
-                            <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 200px;"></div>
-                            <div>
-                                <span class="btn btn-default btn-file">
-                                    <span class="fileinput-new">Select image</span>
-                                    <span class="fileinput-exists">Change</span>
-                                    <input id="image" name="image" type="file" class="form-control" />
-                                </span>
-                                <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                            </div>
+                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                        <div class="fileinput-new thumbnail" style="width: 200px; height: 200px;">
+                            @if($user_profile->image)
+                                <img src="{!!$user_profile->image !!}" alt="profile image">
+                            @else
+                                <img src="http://placehold.it/200x200" alt="profile image">
+                            @endif
+                        </div>
+                        <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 200px;"></div>
+                        <div>
+                            <span class="btn btn-default btn-file">
+                                <span class="fileinput-new">Select image</span>
+                                <span class="fileinput-exists">Change</span>
+                                <input id="image" name="image" type="file" class="form-control" />
+                            </span>
+                            <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
                         </div>
                     </div>
                 </div>
