@@ -428,9 +428,11 @@ Edit User
         </div>
     </div>
     <script>
-        $('.infopoint').popover({
-            trigger: "hover",
-            placement: wheretoplace()
+        $(document).ready(function() {
+            $('.infopoint').popover({
+                trigger: "hover",
+                placement: wheretoplace()
+            });
         });
         function wheretoplace(){
             var width = window.innerWidth;
