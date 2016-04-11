@@ -182,7 +182,10 @@ Route::get('events/{readable_url}/clone', array('as' => 'events.clone', 'uses' =
 Route::post('events/{readable_url}/clone', array('as' => 'events.clone', 'uses' => 'EventsController@clonne'));
 Route::get('events/{uuid}/confirm-delete', array('as' => 'events.confirm-delete', 'uses' => 'EventsController@getModalDelete'));
 Route::post('event/addtocalendar', array('as' => 'event.addtocalendar', 'uses' => 'EventsController@addToCalendar'));
-Route::get('events/favorite', 'EventsController@favorite');
+
+
+
+Route::get('admin/favorite', 'EventsController@favorite');
 
 Route::get('confirm/{readable_url}', array('as' => 'confirm', 'uses' => 'EventsController@confirm'));
 

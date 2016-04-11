@@ -70,10 +70,7 @@ class EventsController extends Controller {
 
     public function favorite() 
     {   
-        $events = [];
-        return view('events.index', compact('events'));
-
-        return 121223;
+        return view('admin/favorite');
     }
 
     public function getCal($uuid)
