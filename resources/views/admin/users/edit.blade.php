@@ -42,6 +42,16 @@ Edit User
     <div class="row">
         <div class="col-md-12">
             <div class="panel">
+                <!-- errors -->
+                <div class="has-error">
+                    {!! $errors->first('first_name', '<span class="help-block">:message</span>') !!}
+                    {!! $errors->first('last_name', '<span class="help-block">:message</span>') !!}
+                    {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
+                    {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
+                    {!! $errors->first('password_confirm', '<span class="help-block">:message</span>') !!}
+                    {!! $errors->first('group', '<span class="help-block">:message</span>') !!}
+                    {!! $errors->first('image', '<span class="help-block">:message</span>') !!}
+                </div>
                 <form class="form-horizontal">
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Profile Image</label>
@@ -60,7 +70,7 @@ Edit User
                     <div class="form-group">
                         <label class="col-sm-2 control-label">First Name</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control required" value="{!! Input::old('first_name', $user->first_name) !!}">
                         </div>
                     </div>
                     <div class="form-group">
