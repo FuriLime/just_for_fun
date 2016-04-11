@@ -39,7 +39,7 @@ Edit User
         <div class="user-profile-sub-heading">Please update <strong>Your Profile</strong> so we can add the relevant information to you events. You can set the visibility of your details in your <a href="#">Profile Settings</a></div>
     </div>
     <br />
-    <div class="">
+    <div class="panel">
         <form class="form-horizontal">
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
