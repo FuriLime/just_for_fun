@@ -44,21 +44,22 @@ Edit User
             <div class="panel">
                 <form class="form-horizontal">
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">Email</label>
+                        <label class="col-sm-2 control-label">Profile Image</label>
                         <div class="col-sm-8">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            <img src="">
+                            <input type="file" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Email</label>
                         <div class="col-sm-8">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            <input type="email" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Password</label>
                         <div class="col-sm-8">
-                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                            <input type="password" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
