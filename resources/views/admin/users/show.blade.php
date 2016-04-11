@@ -46,7 +46,7 @@ View User Details
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
                         <li class="active">
-                            <a href="#tab1" data-toggle="tab">User Profile</a>
+                            <a href="#tab1" data-toggle="tab">Profile Overview</a>
                         </li>
                         <li>
                             <a href="#tab2" data-toggle="tab">Profile Settings</a>
