@@ -69,11 +69,10 @@ class EventsController extends Controller {
     }
 
     public function favorite() 
-    {
-
-        return view('admin/favorite');
+    {   
+        return view('admin.favorite');
     }
-    
+
     public function getCal($uuid)
     {
        return redirect('google.com');
@@ -308,8 +307,6 @@ class EventsController extends Controller {
             return redirect('confirm/'.$store_info->readable_url);
         }
     }
-
-
     /**
      * Display the specified resource.
      *

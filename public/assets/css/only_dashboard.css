@@ -1174,4 +1174,36 @@ Chart tooltips
     padding-right: 15px;
     font-size: 15px;
 }
+
+.panel-heading h1.pull-left {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+section.content {
+    padding: 2% 6%;
+}
+
+.panel-heading h1.pull-left .fa {
+    color: #7F7F7F;
+    padding-right: 12px;
+}
+
+.admin_section_desc {
+    padding: 0px;
+    font-size: 14px;
+    margin: 26px 0px 0px;
+}
+
+.nav-tabs > li > a {
+    border-radius: 6px 6px 0 0;
+}
+
+.nav-tabs-custom .nav-tabs > li > a {
+    font-size: 16px !important;
+}
+
+.nav-tabs > li.active > a {
+    color: #000 !important;
+}
 /* end */
