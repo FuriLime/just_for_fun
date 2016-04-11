@@ -130,6 +130,7 @@ View User Details
                                         <td><i class="fa fa-check"></i> published <a href="#" class="btn btn-default pull-right"><i class="fa fa-desktop"></i> View Profile Page</a></td>
                                     </tr>
                                 </table>
+                                <a href="btn btn-primary"><i class="fa fa-edit"></i> Edit Profile Settings</a>
                             </div>
                             {{--<div class="row">--}}
                                 {{--<div class="col-md-12 pd-top">--}}
