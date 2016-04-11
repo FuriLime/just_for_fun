@@ -12,6 +12,8 @@ Edit User
 <link rel="stylesheet" href="{{ asset('assets/vendors/wizard/jquery-steps/css/wizard.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/vendors/wizard/jquery-steps/css/jquery.steps.css') }}">
 <link href="{{ asset('assets/vendors/jasny-bootstrap/css/jasny-bootstrap.css') }}" rel="stylesheet" />
+<link rel="stylesheet" href="{{ asset('assets/css/admin/edit-profile.css') }}" />
+
 <!--end of page level css-->
 @stop
 
@@ -34,6 +36,7 @@ Edit User
 <section class="content">
     <div class="panel-heading clearfix">
         <h1><i class="fa fa-edit"></i> Edit Profile</h1>
+        <div class="user-profile-sub-heading">Please update <strong>Your Profile</strong> so we can add the relevant information to you events. You can set the visibility of your details in your <a href="#">Profile Settings</a></div>
     </div>
     <br />
     <div class="row">
