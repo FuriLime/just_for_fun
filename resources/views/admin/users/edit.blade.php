@@ -54,7 +54,9 @@ Edit User
             <div class="form-group">
                 <label class="col-sm-2 control-label">Profile Image</label>
                 <div class="col-sm-8">
-                    <img src="http://event.test-y-sbm.com/assets/img/authors/avatar3.jpg">
+                    <div class="image-holder">
+                        <img src="http://event.test-y-sbm.com/assets/img/authors/avatar3.jpg">
+                    </div>
                     <input type="file">
                     <p class="help-block">Allowed file formats: .jpg, .png, .gif, .bmp</p>
                 </div>

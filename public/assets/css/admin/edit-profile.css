@@ -20,6 +20,13 @@
     color: #A2A2A2;
     font-size: 20px;
 }
+.image-holder {
+    width: 128px;
+    height: 128px;
+    border-radius: 5px;
+    overflow: hidden;
+    float: left;
+}
 @media screen and (max-width: 992px) {
     .edit-profile-form select,
     .edit-profile-form .date-of-birth {
