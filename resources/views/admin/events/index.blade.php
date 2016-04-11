@@ -92,7 +92,7 @@ events List
                     </div>
                     <div>
                         <nav>
-                            <ul class="pagination">
+                            <ul class="pagination pagination-sm">
                                 <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">Previous</span></a></li>
                                 <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
                                 <li class=""><a href="#">2 <span class="sr-only">(current)</span></a></li>
