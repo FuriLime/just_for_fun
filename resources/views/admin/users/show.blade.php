@@ -57,17 +57,11 @@ View User Details
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="panel">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title">
-                                                User Profile
-                                            </h3>
-
-                                        </div>
                                         <div class="panel-body">
                                             <div class="col-md-12">
                                                 <div class="panel-body">
                                                     <div class="table-responsive">
-                                                        <table class="table table-bordered table-striped" id="users">
+                                                        <table class="table table-hover" id="users">
                                                                 <tr>
                                                                     <td>Profile Image</td>
                                                                     <td>
