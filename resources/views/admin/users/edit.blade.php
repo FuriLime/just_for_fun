@@ -84,7 +84,7 @@ Edit User
                         <label class="col-sm-2 control-label">Email Address</label>
                         <div class="col-sm-8">
                             <input type="email" class="form-control">
-                            <i class="fa fa-fw infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                            <i class="fa fa fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         </div>
                     </div>
                     <div class="form-group">
@@ -103,7 +103,7 @@ Edit User
                                 <option>4</option>
                                 <option>5</option>
                             </select>
-                            <i class="fa fa-fw infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                            <i class="fa fa fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                         </div>
                     </div>
                     <div class="form-group">
