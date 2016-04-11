@@ -38,7 +38,7 @@ events List
 
             <div class="tab-content events-tab-content">
                 <div class="tab-pane active" id="tab_1">
-                    <div class="table-scrollable events-table">
+                    <div class="table-scrollable table-responsive events-table">
                         <table class="table table-hover">
                             <thead>
                                 <tr>
