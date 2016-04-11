@@ -62,7 +62,7 @@ Edit User
                                 <img src="http://placehold.it/200x200" alt="profile image">
                             @endif
                         </div>
-                        <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                        <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 200px;"></div>
                         <div class="uploader-holder">
                             <span class="btn btn-default btn-file">
                                 <span class="fileinput-new">Select image</span>
