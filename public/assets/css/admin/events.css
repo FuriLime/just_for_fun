@@ -52,7 +52,7 @@ table.dataTable thead th.sorting_desc:after {
     right: 8px;
     display: block;
     font-family: FontAwesome;
-    color: #000;
+    opacity: 1;
 }
 
 table.dataTable thead th.sorting:after {
