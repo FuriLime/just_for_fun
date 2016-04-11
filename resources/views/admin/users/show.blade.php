@@ -65,12 +65,14 @@ View User Details
                                                                 <tr>
                                                                     <td>Profile Image</td>
                                                                     <td>
-                                                                        @if($user->pic)
-                                                                            <img src="{!! url('/').'/uploads/users/'.Sentinel::getUser()->pic !!}" alt="img" class="img-circle img-bor"/>
-                                                                        @else
-                                                                            <img src="{!! asset('assets/img/authors/avatar3.jpg') !!}" class="img-responsive img-circle" alt="User Image">
-                                                                        @endif
-                                                                        <div class="">MeKai</div>
+                                                                        <div class="user-image-holder">
+                                                                            @if($user->pic)
+                                                                                <img src="{!! url('/').'/uploads/users/'.Sentinel::getUser()->pic !!}" alt="img" class="img-circle img-bor"/>
+                                                                            @else
+                                                                                <img src="{!! asset('assets/img/authors/avatar3.jpg') !!}" class="img-responsive img-circle" alt="User Image">
+                                                                            @endif
+                                                                        </div>
+                                                                        <div class="username-holder">MeKai</div>
                                                                     </td>
                                                                 </tr>
                                                             <tr>
