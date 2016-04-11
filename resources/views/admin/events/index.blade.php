@@ -74,9 +74,13 @@ events List
                                                 </button>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="#"><i class="fa fa-share-alt"></i> Share Event</a></li>
-                                                    <li><a href="#">Another action</a></li>
-                                                    <li><a href="#">Something else here</a></li>
-                                                    <li><a href="#">Separated link</a></li>
+                                                    <li><a href="#"><i class="fa fa-desktop"></i> Open EventPage</a></li>
+                                                    <li><a href="#"><i class="fa fa-share-alt"></i> View Statistics</a></li>
+                                                    <li><a href="#"><i class="fa fa-edit"></i> Edit Event</a></li>
+                                                    <li><a href="#"><i class="fa fa-copy"></i> Duplicate Event</a></li>
+                                                    <li><a href="#"><i class="fa fa-eye"></i> Publish Event</a></li>
+                                                    <li><a href="#"><i class="fa fa-eye-slash"></i> Unpublish Event</a></li>
+                                                    <li><a href="#"><i class="fa fa-trash-o"></i> Delete Event</a></li>
                                                 </ul>
                                             </div>
                                         </td>
