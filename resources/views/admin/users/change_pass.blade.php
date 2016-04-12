@@ -42,7 +42,7 @@
                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                 <div class="form-group">
                     <label for="password" class="col-sm-2 control-label">Current Password</label>
-                    <div class="col-sm-10">
+                    <div class="col-sm-8">
                         <input id="password" name="password" type="password" class="form-control" value="{!! Input::old('password') !!}" />
                         <i class="fa fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
@@ -50,13 +50,13 @@
                 <br>
                 <div class="form-group">
                     <label for="password" class="col-sm-2 control-label">New Password</label>
-                    <div class="col-sm-10">
+                    <div class="col-sm-8">
                         <input id="password" name="password" type="password" class="form-control" value="{!! Input::old('password') !!}" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="password_confirm" class="col-sm-2 control-label">Confirm Password</label>
-                    <div class="col-sm-10">
+                    <div class="col-sm-8">
                         <input id="password_confirm" name="password_confirm" type="password" class="form-control" value="{!! Input::old('password_confirm') !!}" />
                     </div>
                 </div>
