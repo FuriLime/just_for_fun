@@ -21,6 +21,7 @@
     <div class="important-popup">
         <div class="container">
             <div class="row">
+                dfgdfg
                 <div class="col-xs-10 col-xs-offset-1 popup-content">
                     <div class="popup-head">
                         @lang('frontend.confirm_head')<span>{{$event->title}}</span> @lang('frontend.confirm_head_cont')
