@@ -9,10 +9,8 @@
 {{-- page level styles --}}
 @section('header_styles')
     <!--page level css starts-->
-    {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}">--}}
-    {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/popup.css') }}">--}}
-
-
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/popup.css') }}">
 
     <!--end of page level css-->
 @stop
