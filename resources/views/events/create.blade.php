@@ -240,7 +240,7 @@
                                 </div>
                             </div>
                         </div>
-sdfsdfsdf
+
 
                         <input type="hidden" value="" name="active" id="active" readonly>
                         <div class="form-group">
@@ -294,7 +294,7 @@ sdfsdfsdf
 @section('footer_scripts')
     {{--<script type="text/javascript" src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>--}}
     <script src="{{ asset('assets/vendors/colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
-    <script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
+    {{--<script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>--}}
     <script src="{{ asset('assets/js/bootbox.js') }}"></script>
     <script>
         $('html').on("click", ".submit", function(e) {
@@ -487,7 +487,6 @@ sdfsdfsdf
                 minDate: minutes_end,
                 minuteStep: 10,
                 fontAwesome: true
-
             });
 
         });
