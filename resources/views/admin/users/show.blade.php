@@ -16,24 +16,6 @@ View User Details
 
 {{-- Page content --}}
 @section('content')
-    {{--<section class="content-header">--}}
-        <!--section starts-->
-
-        {{--<h1><i class="livicon" data-name="user" data-size="16" data-c="#000" data-hc="#000" data-loop="true"></i>My Personal Profile</h1>--}}
-        {{--<ol class="breadcrumb">--}}
-            {{--<li>--}}
-                {{--<a href="{{ route('dashboard') }}">--}}
-                    {{--<i class="livicon" data-name="home" data-size="14" data-loop="true"></i>--}}
-                    {{--Dashboard--}}
-                {{--</a>--}}
-            {{--</li>--}}
-            {{--<li>--}}
-                {{--<a href="#">Users</a>--}}
-            {{--</li>--}}
-            {{--<li class="active">User Profile</li>--}}
-        {{--</ol>--}}
-    {{--</section>--}}
-    <!--section ends-->
     <section class="content">
         <div class="panel-heading clearfix">
             <h1> <i class="fa fa-user"></i>
@@ -132,50 +114,6 @@ View User Details
                                 </table>
                                 <a href="" class="btn btn-primary"><i class="fa fa-edit"></i> Edit Profile Settings</a>
                             </div>
-                            {{--<div class="row">--}}
-                                {{--<div class="col-md-12 pd-top">--}}
-                                    {{--<form action="#" class="form-horizontal">--}}
-                                        {{--<div class="form-body">--}}
-                                            {{--<div class="form-group">--}}
-                                                {{--<label for="inputpassword" class="col-md-3 control-label">--}}
-                                                    {{--Password--}}
-                                                    {{--<span class='require'>*</span>--}}
-                                                {{--</label>--}}
-                                                {{--<div class="col-md-9">--}}
-                                                    {{--<div class="input-group">--}}
-                                                                {{--<span class="input-group-addon">--}}
-                                                                    {{--<i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>--}}
-                                                                {{--</span>--}}
-                                                        {{--<input type="password"  id="inputpassword" placeholder="Password" class="form-control"/>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                            {{--<div class="form-group">--}}
-                                                {{--<label for="inputnumber" class="col-md-3 control-label">--}}
-                                                    {{--Confirm Password--}}
-                                                    {{--<span class='require'>*</span>--}}
-                                                {{--</label>--}}
-                                                {{--<div class="col-md-9">--}}
-                                                    {{--<div class="input-group">--}}
-                                                                {{--<span class="input-group-addon">--}}
-                                                                    {{--<i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>--}}
-                                                                {{--</span>--}}
-                                                        {{--<input type="password"  id="inputnumber"placeholder="Password" class="form-control"/>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                        {{--<div class="form-actions">--}}
-                                            {{--<div class="col-md-offset-3 col-md-9">--}}
-                                                {{--<button type="submit" class="btn btn-primary">Submit</button>--}}
-                                                {{--&nbsp;--}}
-                                                {{--<button type="button" class="btn btn-danger">Cancel</button>--}}
-                                                {{--&nbsp;--}}
-                                                {{--<input type="reset" class="btn btn-default hidden-xs" value="Reset"></div>--}}
-                                        {{--</div>--}}
-                                    {{--</form>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
                         </div>
                     </div>
                 </div>

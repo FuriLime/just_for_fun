@@ -55,6 +55,7 @@
                        background:url(http://share.static.skyrock.net/img/api/skyrocksocialshare_square38.png) no-repeat 0 0 transparent;"><p style="display:none;">Share on Skyrock</p></a>
                                         <script>(function(){var d=document,id='skyrock-fxlebpx'; if(d.getElementById(id)) return;var e=d.createElement('script');e.id=id;e.async=true;e.src='http://share.static.skyrock.net/js/skyrock_social.min.js';d.getElementsByTagName('body')[0].appendChild(e);}());</script>
                                     </div>
+                                    <input type="text" id="shortlink">
                                 </div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="embed-tab">
