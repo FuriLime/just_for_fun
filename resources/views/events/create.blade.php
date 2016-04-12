@@ -437,7 +437,9 @@
                     time: "fa fa-clock-o",
                     date: "fa fa-calendar",
                     up: "fa fa-arrow-up",
-                    down: "fa fa-arrow-down"
+                    down: "fa fa-arrow-down",
+                    left: "fa fa-arrow-left",
+                    right: "fa fa-arrow-right"
                 }
             });
             $("#datefinish").datetimepicker("remove");
@@ -458,7 +460,9 @@
                     time: "fa fa-clock-o",
                     date: "fa fa-calendar",
                     up: "fa fa-arrow-up",
-                    down: "fa fa-arrow-down"
+                    down: "fa fa-arrow-down",
+                    left: "fa fa-arrow-left",
+                    right: "fa fa-arrow-right"
                 }
 
             });
@@ -501,7 +505,9 @@
                     time: "fa fa-clock-o",
                     date: "fa fa-calendar",
                     up: "fa fa-arrow-up",
-                    down: "fa fa-arrow-down"
+                    down: "fa fa-arrow-down",
+                    left: "fa fa-arrow-left",
+                    right: "fa fa-arrow-right"
                 }
 
             });
