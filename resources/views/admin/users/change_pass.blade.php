@@ -41,18 +41,22 @@
                 <!-- CSRF Token -->
                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                 <div class="form-group">
-                <p class="text-warning">If you don't want to change password... please leave them empty</p>
-                <label for="password" class="col-sm-2 control-label">Password *</label>
-                <div class="col-sm-10">
-                <input id="password" name="password" type="password" placeholder="Password" class="form-control" value="{!! Input::old('password') !!}" />
+                    <label for="password" class="col-sm-2 control-label">Current Password</label>
+                    <div class="col-sm-10">
+                        <input id="password" name="password" type="password" class="form-control" value="{!! Input::old('password') !!}" />
+                    </div>
                 </div>
-                </div>
-
                 <div class="form-group">
-                <label for="password_confirm" class="col-sm-2 control-label">Confirm Password *</label>
-                <div class="col-sm-10">
-                <input id="password_confirm" name="password_confirm" type="password" placeholder="Confirm Password " class="form-control" value="{!! Input::old('password_confirm') !!}" />
+                    <label for="password" class="col-sm-2 control-label">New Password</label>
+                    <div class="col-sm-10">
+                        <input id="password" name="password" type="password" class="form-control" value="{!! Input::old('password') !!}" />
+                    </div>
                 </div>
+                <div class="form-group">
+                    <label for="password_confirm" class="col-sm-2 control-label">Confirm Password</label>
+                    <div class="col-sm-10">
+                        <input id="password_confirm" name="password_confirm" type="password" class="form-control" value="{!! Input::old('password_confirm') !!}" />
+                    </div>
                 </div>
             </form>
         </div>
