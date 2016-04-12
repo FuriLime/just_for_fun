@@ -29,5 +29,17 @@
     <a href="/" class="login-sign-up-btn pull-right">Sign Up</a>
 </div>
 @yield('content')
+
+        <!--global js starts-->
+<script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
+<!--livicons-->
+<script src="{{ asset('assets/vendors/livicons/minified/raphael-min.js') }}"></script>
+<script src="{{ asset('assets/vendors/livicons/minified/livicons-1.4.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/frontend/josh_frontend.js') }}"></script>
+
+<script src="{{ asset('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
+<script type="text/javascript" src="{{ asset('assets/js/jstz.min.js') }}"></script>
+@yield('footer_scripts')
 </body>
 </html>
