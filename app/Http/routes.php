@@ -76,6 +76,7 @@ Route::group(array('prefix' => 'admin'), function () {
                 Route::get('{userId}/restore', array('as' => 'restore/user', 'uses' => 'UsersController@getRestore'));
                 Route::get('{userId}', array('as' => 'users.show', 'uses' => 'UsersController@show'));
                 Route::get('index', 'UsersController@getBillingAndInvoices');
+                Route::get('{userId}/change_pass', array('as' => 'users.change_pass', 'uses' => 'UsersController@getPass'));
             });
 
     Route::get('deleted_users', array('as' => 'deleted_users', 'before' => 'Sentinel', 'uses' => 'UsersController@getDeletedUsers'));

@@ -682,6 +682,15 @@ class UsersController extends JoshController
         return Redirect::route('users.update', $id)->withInput()->with('error', $error);
     }
 
+
+
+
+    public function getPass(){
+
+        return View('admin/users/change_pass');
+    }
+
+
     /**
      * Show a list of all the deleted users.
      *

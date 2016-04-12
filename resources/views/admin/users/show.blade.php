@@ -90,7 +90,7 @@ View User Details
                                 </table>
                             </div>
                             <a href="#" class="btn btn-primary"><i class="fa fa-edit"></i> Edit Profile</a>
-                            <a href="#" class="btn btn-default">Change Password</a>
+                            <a href="{{URL::route('users.change_pass',Sentinel::getUser()->id) }}" class="btn btn-default">Change Password</a>
                         </div>
                         <div id="tab2" class="tab-pane fade">
                             <div class="table-responsive">
