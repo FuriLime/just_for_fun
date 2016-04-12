@@ -1197,6 +1197,7 @@ section.content {
 
 .nav-tabs > li > a {
     border-radius: 6px 6px 0 0;
+    padding: 10px 28px
 }
 
 .nav-tabs-custom .nav-tabs > li > a {
@@ -1205,5 +1206,60 @@ section.content {
 
 .nav-tabs > li.active > a {
     color: #000 !important;
+}
+
+table.dataTable thead th::after {
+    display: none;
+}
+
+.xTable thead tr th {
+    border-bottom: 0px;
+    text-align: left;
+    color: #595959;
+}
+
+.xTable tr {
+    border-bottom: 1px solid #ddd
+}
+
+.xTable tbody tr:last-child {
+    border-bottom: 0px;
+}
+
+.xTable td,
+.xTable th {
+    padding: 10px 6px !important;
+}
+
+.xTableWrap .dataTables_wrapper {
+    margin: 20px -33px;
+}
+
+.xTableWrap .dataTables_length,
+.xTableWrap .dataTables_filter {
+    display: none;
+}
+
+.table.xTable > tbody > tr > td:first-child {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.xTable .btn {
+    padding: 4px 12px;
+    font-size: 13px;
+    color: #415B7C;
+}
+
+.xTable .btn .fa {
+    color: #CCC;
+    font-size: 16px;
+    padding-top: 1px;
+    padding-right: 2px;
+}
+
+.xTable .btn:hover,
+.xTable .btn:hover .fa {
+    color: #FFF
 }
 /* end */
