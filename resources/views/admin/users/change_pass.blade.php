@@ -44,6 +44,7 @@
                     <label for="password" class="col-sm-2 control-label">Current Password</label>
                     <div class="col-sm-10">
                         <input id="password" name="password" type="password" class="form-control" value="{!! Input::old('password') !!}" />
+                        <i class="fa fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
                 </div>
                 <br>
