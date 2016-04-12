@@ -1,4 +1,4 @@
-@extends('layouts/default')
+@extends('layouts/modal_confirmation')
 
 {{-- Page title --}}
 @section('title')
