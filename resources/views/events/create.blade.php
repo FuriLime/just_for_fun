@@ -433,7 +433,7 @@
                 minuteStep: 10,
                 controlType: 'select',
                 minDate: nowtimedate,
-                fontawesome: true
+                fontAwesome: true
             });
             $("#datefinish").datetimepicker("remove");
             var start_date = new Date($('#start').val());
@@ -449,7 +449,7 @@
                 startDate: end_date,
                 minDate: end_date,
                 minuteStep: 10,
-                fontawesome: true
+                fontAwesome: true
             });
 
         });
@@ -486,7 +486,7 @@
                 startDate: minutes_end,
                 minDate: minutes_end,
                 minuteStep: 10,
-                fontawesome: true
+                fontAwesome: true
             });
 
         });
