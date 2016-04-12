@@ -190,7 +190,7 @@
     background: #dfdfdf;
 }
 .events-table-unbordered,
-.events-table-unbordered th,
-.events-table-unbordered td {
+.events-table-unbordered.table>tbody>tr>th,
+.events-table-unbordered.table>tbody>tr>td {
     border: none;
 }
