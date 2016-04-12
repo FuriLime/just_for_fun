@@ -60,7 +60,18 @@ Favorite
                         </li>
                     </ul>
                     <div class="tab-content mar-top">
-                        <div id="tab1" class="tab-pane fade active in">
+                        <div id="tab1" class="tab-pane fade active in xTab">
+                        		<div class="icons">
+                        			<div class="icon_wrap">
+                        				<i class="fa fa-gear"></i>
+                        				<div class="gear">
+                        					Show <span class="gear_wrap"></span> events
+                        				</div>
+                        			</div>
+                        			<div class="icon_wrap">
+                        				<i class="fa fa-search"></i>
+                        			</div>
+                        		</div>
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="panel">
@@ -205,6 +216,19 @@ $(document).ready(function() {
 	    	"orderable": false
 	    },
 	  ]
+	});
+
+	$('.xTab .fa-gear').click(function() {
+		var gear = $(this).parents('.xTab').find('.gear');
+		var gear_inp =  $(this).parents('.xTab').find('#table_length select');
+
+		gear_inp.appendTo(gear.find('.gear_wrap'));
+
+		if (gear.is(':visible')) {
+			$(this).parents('.xTab').find('.gear').css('display', 'none');
+		} else {
+			$(this).parents('.xTab').find('.gear').css('display', 'inline-block');
+		}
 	});
 });
 </script>

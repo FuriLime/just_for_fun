@@ -1262,4 +1262,29 @@ table.dataTable thead th::after {
 .xTable .btn:hover .fa {
     color: #FFF
 }
+
+.xTab .icons {
+    float: right;
+    margin: 5px 13px 0px 0px;
+    color: #7F7F7F;
+}
+
+.xTab .icon_wrap {
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.xTab .icon_wrap .fa {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.xTab .gear {
+    display: none;
+}
+
+.xTab .gear select {
+    display: inline;
+    width: 70px;
+}
 /* end */
