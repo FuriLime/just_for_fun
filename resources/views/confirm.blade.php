@@ -1,4 +1,4 @@
-@extends('layouts/test')
+@extends('layouts/without_menu')
 
 {{-- Page title --}}
 @section('title')
