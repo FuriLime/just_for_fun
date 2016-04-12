@@ -279,7 +279,6 @@
 @yield('content')
 
 <!-- Footer Section Start -->
-<!-- //Footer Section End -->
 <div class="footer">
     <div class="container">
         <div class="row">
@@ -291,6 +290,7 @@
 <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Return to top" data-toggle="tooltip" data-placement="left">
     <i class="fa fa-chevron-up"></i>
 </a>
+<!-- //Footer Section End -->
 <!--global js starts-->
 <script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
