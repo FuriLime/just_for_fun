@@ -191,6 +191,7 @@
 }
 .events-table-unbordered,
 .events-table-unbordered.table>tbody>tr>th,
-.events-table-unbordered.table>tbody>tr>td {
+.events-table-unbordered.table>tbody>tr>td,
+.events-table-unbordered.table>thead>tr>th{
     border: none;
 }
