@@ -432,7 +432,13 @@
                 startDate: nowtimedate,
                 minuteStep: 10,
                 controlType: 'select',
-                minDate: nowtimedate
+                minDate: nowtimedate,
+                icons: {
+                    time: "fa fa-clock-o",
+                    date: "fa fa-calendar",
+                    up: "fa fa-arrow-up",
+                    down: "fa fa-arrow-down"
+                }
             });
             $("#datefinish").datetimepicker("remove");
             var start_date = new Date($('#start').val());
@@ -447,7 +453,13 @@
                 controlType: 'select',
                 startDate: end_date,
                 minDate: end_date,
-                minuteStep: 10
+                minuteStep: 10,
+                icons: {
+                    time: "fa fa-clock-o",
+                    date: "fa fa-calendar",
+                    up: "fa fa-arrow-up",
+                    down: "fa fa-arrow-down"
+                }
 
             });
 
@@ -484,7 +496,13 @@
                 controlType: 'select',
                 startDate: minutes_end,
                 minDate: minutes_end,
-                minuteStep: 10
+                minuteStep: 10,
+                icons: {
+                    time: "fa fa-clock-o",
+                    date: "fa fa-calendar",
+                    up: "fa fa-arrow-up",
+                    down: "fa fa-arrow-down"
+                }
 
             });
 
