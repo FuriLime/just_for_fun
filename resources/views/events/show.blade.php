@@ -100,7 +100,7 @@
 
 
 @section('content')
-<div>
+<div class="clearfix event-container-holder">
     <!-- Container Section Start -->
     <div class="text-center event-show">
         Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href="#">Start here!</a>
