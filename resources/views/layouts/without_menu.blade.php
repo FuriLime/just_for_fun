@@ -14,7 +14,7 @@
     <link href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--global css starts-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    {{--<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">--}}
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/frontend/custom.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/custom.css') }}" />
     <!--end of global css-->
