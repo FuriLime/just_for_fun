@@ -189,3 +189,8 @@
 .event-container-holder {
     background: #dfdfdf;
 }
+.events-table-unbordered,
+.events-table-unbordered th,
+.events-table-unbordered td {
+    border: none;
+}

@@ -20,7 +20,7 @@ Events List
 	</div>
 	<br />
 	<div class="panel-body">
-		<table class="table table-bordered " id="table">
+		<table class="table table-bordered events-table-unbordered" id="table">
 			<thead>
 				<tr class="filters">
 					<th>@lang('frontend.title')</th>
