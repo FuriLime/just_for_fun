@@ -30,6 +30,19 @@
 </div>
 @yield('content')
 
+<!-- Footer Section Start -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12 copyright">&copy; 2011 - <?php echo date('Y'); ?> Copyright by EventFellows | BrainFactor GmbH. All Rights Reserved.</div>
+            <div class="col-md-6 col-sm-12 col-xs-12 hidden-sm hidden-xs footer-menu"><a href="#">How EventFellows works</a> | <a href="#">EventFellows Impressum</a> | <a href="#">EventFellows Datenschutz</a></div>
+        </div>
+    </div>
+</div>
+<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Return to top" data-toggle="tooltip" data-placement="left">
+    <i class="fa fa-chevron-up"></i>
+</a>
+<!-- //Footer Section End -->
 <!--global js starts-->
 <script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
