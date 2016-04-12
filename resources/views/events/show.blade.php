@@ -100,6 +100,7 @@
 
 
 @section('content')
+<div>
     <!-- Container Section Start -->
     <div class="text-center event-show">
         Try Event Fellows for your own events. Event Fellows Accounts are FREE. <a href="#">Start here!</a>
@@ -250,7 +251,7 @@
     </div>
 
     <input type="hidden" name="_token" id="token_for_ajax" value="{{ csrf_token() }}" />
-
+</div>
 @stop
 
 {{-- page level scripts --}}
