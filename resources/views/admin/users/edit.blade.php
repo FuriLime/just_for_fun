@@ -39,7 +39,7 @@ Edit User
             {!! $errors->first('group', '<span class="help-block">:message</span>') !!}
             {!! $errors->first('image', '<span class="help-block">:message</span>') !!}
         </div>
-        <form class="form-horizontal" action="" method="POST" enctype="multipart/form-data">
+        <form class="form-horizontal edit-profile-form" action="" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label class="col-sm-2 col-sm-offset-2 control-label">Timezone</label>
                 <div class="col-sm-6">
