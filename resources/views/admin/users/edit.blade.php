@@ -43,7 +43,13 @@ Edit User
             <div class="form-group">
                 <label class="col-sm-2 col-sm-offset-2 control-label">Timezone</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control">
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group">
