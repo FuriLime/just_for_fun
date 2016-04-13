@@ -1,4 +1,4 @@
-@extends('admin/layouts/default')
+@extends('admin/layouts/without_menu')
 
 {{-- Page title --}}
 @section('title')
