@@ -21,7 +21,7 @@
 {{-- Page content --}}
 @section('content')
     <section class="content">
-        <div class="panel-heading clearfix">
+        <div class="panel-heading col-sm-10 col-sm-offset-2 clearfix">
             <h1><i class="fa fa-edit"></i> Change Password <a href="#" class="pull-right close-profile" data-toggle="tooltip" data-placement="left" title="Cancel without saving"><i class="fa fa-times-circle-o"></i></a></h1>
             <div class="user-profile-sub-heading">If you have forgotten your current password you can also <a href="#">Reset your Password</a></div>
         </div>
