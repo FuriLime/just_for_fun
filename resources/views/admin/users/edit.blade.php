@@ -88,7 +88,7 @@ Edit User
                     <label class="radio-inline">
                         <input type="radio"> Published
                     </label>
-                    <i class="fa fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
+                    <i class="fa fa-info-circle infopoint radio-infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                 </div>
             </div>
             <div class="form-group">
