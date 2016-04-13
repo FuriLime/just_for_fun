@@ -30,7 +30,7 @@
 
 <body>
 <div class="top-line">EventFellows</div>
-    <div class="container">
+    <div class="container without-menu-holder">
         @yield('content')
     </div>
     <!-- global js -->

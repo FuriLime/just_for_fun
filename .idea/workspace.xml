@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa381a3-5bc7-4698-a2de-63201d4cdc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/admin/without-menu.css" afterPath="$PROJECT_DIR$/public/assets/css/admin/without-menu.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js" afterPath="$PROJECT_DIR$/public/assets/vendors/datetimepicker/js/bootstrap-datetimepicker.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/vendors/datetimepicker/js/bootstrap-datetimepicker.min.js" afterPath="$PROJECT_DIR$/public/assets/vendors/datetimepicker/js/bootstrap-datetimepicker.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/users/change_pass.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/users/change_pass.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/layouts/without_menu.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/without_menu.blade.php" />
     </list>
     <ignored path="test-ef.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,28 +41,28 @@
       <file leaf-file-name="without_menu.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/without_menu.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+            <state vertical-scroll-proportion="-13.076923">
+              <caret line="32" column="45" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="change_pass.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="change_pass.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/users/change_pass.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="without-menu.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="without-menu.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/css/admin/without-menu.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384">
-              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.11703958">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -141,9 +142,9 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
-        <option value="$PROJECT_DIR$/public/assets/css/admin/without-menu.css" />
-        <option value="$PROJECT_DIR$/resources/views/admin/layouts/without_menu.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/change_pass.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/layouts/without_menu.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/admin/without-menu.css" />
       </list>
     </option>
   </component>
@@ -407,12 +408,6 @@
       <created>1452685494957</created>
       <option name="number" value="Default" />
       <updated>1452685494957</updated>
-    </task>
-    <task id="LOCAL-04973" summary="social buttons">
-      <created>1460448863487</created>
-      <option name="number" value="04973" />
-      <option name="project" value="LOCAL" />
-      <updated>1460448863487</updated>
     </task>
     <task id="LOCAL-04974" summary="social buttons">
       <created>1460449038768</created>
@@ -702,7 +697,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460536841691</updated>
     </task>
-    <option name="localTasksCounter" value="5022" />
+    <task id="LOCAL-05022" summary="social buttons">
+      <created>1460536953699</created>
+      <option name="number" value="05022" />
+      <option name="project" value="LOCAL" />
+      <updated>1460536953699</updated>
+    </task>
+    <option name="localTasksCounter" value="5023" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1011,6 +1012,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="194" column="24" selection-start-line="194" selection-start-column="24" selection-end-line="194" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1101,26 +1103,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/without-menu.css">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/change_pass.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/without_menu.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="32" column="45" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/change_pass.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/assets/css/admin/without-menu.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.11703958">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
           <folding />
         </state>
       </provider>
