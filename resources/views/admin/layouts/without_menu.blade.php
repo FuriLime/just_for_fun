@@ -21,7 +21,7 @@
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- font Awesome -->
     <link href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
-
+    <link href="{{ asset('assets/css/admin/without-menu.css') }}" rel="stylesheet" type="text/css" />
     <!-- end of global css -->
     <!--page level css-->
     @yield('header_styles')
