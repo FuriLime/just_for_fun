@@ -1,4 +1,4 @@
-@extends('admin/layouts/default')
+@extends('admin/layouts/without_menu')
 
 {{-- Page title --}}
 @section('title')
@@ -20,19 +20,6 @@ Edit User
 
 {{-- Page content --}}
 @section('content')
-{{--<section class="content-header">--}}
-    {{--<h1>Edit user</h1>--}}
-    {{--<ol class="breadcrumb">--}}
-        {{--<li>--}}
-            {{--<a href="{{ route('dashboard') }}">--}}
-                {{--<i class="livicon" data-name="home" data-size="14" data-color="#000"></i>--}}
-                {{--Dashboard--}}
-            {{--</a>--}}
-        {{--</li>--}}
-        {{--<li>Users</li>--}}
-        {{--<li class="active">Add New User</li>--}}
-    {{--</ol>--}}
-{{--</section>--}}
 <section class="content">
     <div class="panel-heading clearfix">
         <h1><i class="fa fa-edit"></i> Edit Profile <a href="#" class="pull-right close-profile" data-toggle="tooltip" data-placement="left" title="Cancel without saving"><i class="fa fa-times-circle-o"></i></a></h1>
