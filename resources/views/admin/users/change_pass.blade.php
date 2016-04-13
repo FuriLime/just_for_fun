@@ -41,27 +41,27 @@
                 <!-- CSRF Token -->
                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                 <div class="form-group">
-                    <label for="password" class="col-sm-2 control-label">Current Password</label>
-                    <div class="col-sm-8">
+                    <label for="password" class="col-sm-2 col-sm-offset-2 control-label">Current Password</label>
+                    <div class="col-sm-6">
                         <input id="password" name="password" type="password" class="form-control" value="{!! Input::old('password') !!}" />
                         <i class="fa fa-info-circle infopoint" title="" data-container="body" data-toggle="popover" data-placement="right" data-content="Some content in Popover on right" data-original-title="Popover title"></i>
                     </div>
                 </div>
                 <br>
                 <div class="form-group">
-                    <label for="password" class="col-sm-2 control-label">New Password</label>
-                    <div class="col-sm-8">
+                    <label for="password" class="col-sm-2 col-sm-offset-2 control-label">New Password</label>
+                    <div class="col-sm-6">
                         <input id="password" name="password" type="password" class="form-control" value="{!! Input::old('password') !!}" />
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="password_confirm" class="col-sm-2 control-label">Confirm Password</label>
-                    <div class="col-sm-8">
+                    <label for="password_confirm" class="col-sm-2 col-sm-offset-2 control-label">Confirm Password</label>
+                    <div class="col-sm-6">
                         <input id="password_confirm" name="password_confirm" type="password" class="form-control" value="{!! Input::old('password_confirm') !!}" />
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-8">
+                    <div class="col-sm-offset-4 col-sm-6">
                         <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Update Password</button> <a href="#" class="btn btn-default">Cancel</a>
                     </div>
                 </div>
