@@ -29,6 +29,7 @@
 </head>
 
 <body>
+<div class="">EventFellows</div>
     <div class="container">
         @yield('content')
     </div>
